@@ -1,0 +1,32 @@
+{% extends "bright.html" %}
+
+{% block title %}Blog{% endblock title %}
+	
+{% block content %}
+    {% for post in new_posts %}
+		  <h2 class="postTitle"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+		
+		  <div class="postMeta">
+		    <span class="date">{{ post.date|date:"d.m.Y" }}, <b>{{ post.author }}</b>, {{ post.category }}</span>
+		  </div>
+		
+		  <div class="postContent">
+		    {{ post.post|safe }}
+		    
+		    {% if post.more  %}
+		        {% if single %}
+		            {{ post.more|safe }}
+		        {% else %}    
+		            <p> <a href="{{ post.get_absolute_url }}">Czytaj dalej</a> </p>
+		        {% endif %}
+		    {% endif %}
+		  </div>
+		<br />
+	{% endfor %}
+
+	
+{% endblock content %}
+
+{% block rightmenu %}
+	{% include "blog_menu.html" %}
+{% endblock rightmenu %}

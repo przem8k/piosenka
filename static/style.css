@@ -1,0 +1,299 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,blockquote {
+	margin: 0;
+	padding: 5px;
+}
+
+h1 {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0px 20px 0px;
+    padding: 0px 5px 0px 5px;
+}
+
+h2 {
+    font-size: 16px;
+    text-align: left;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 5px 0px 5px;
+}
+
+a {
+	
+	display: block;
+	color: #215679;
+	text-decoration: none;
+	display: inline;
+}
+
+a:hover {
+	color: #0F92BC;
+	text-decoration: underline !important;
+}
+
+blockquote {
+	border: 1px dotted silver;
+	display: block;
+	margin: 0px;
+	padding: 10px;
+	quotes: "\201C" "\201D";
+}
+
+body {
+    font-family:"Trebuchet MS",sans-serif;
+	font-size: 10pt;
+	background: white;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.indented {
+	padding-left:10px;
+}
+
+
+h2.postTitle {
+    margin: 0px;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #05546C;
+}
+
+h2.postTitle a {
+	font-size: 14pt;
+	font-weight: bold;
+	text-decoration: none;
+	color: #05546C;
+	letter-spacing: -1px;
+}
+
+h2.postTitle a:hover {
+	color: #215679;
+}
+
+.postMeta {
+	padding: 2px 10px 4px 5px;
+	font-size: 9pt;
+	color: #333;
+}
+
+.date {
+	background: url("/site_media/native/images/date.gif") left no-repeat;
+	padding: 0 0 0 15px;
+}
+
+
+.postContent {
+    width: 100%;
+    text-align: justify;
+}
+
+.postContent img {
+	margin: 10px;
+	border: 3px solid #CCC;
+}
+
+
+/* jquery-based toggling */
+
+.extra-chords-trigger {
+    cursor: pointer;
+    color: #215679;
+    font-size: 9pt;    
+}
+
+.extra-chords {
+    display: none;
+}
+
+
+.sidebar h2 {
+    margin: 0px;
+	padding: 3px 7px;
+	font-size: 11pt;
+	color: #fff !important;
+	font-weight: normal;
+	background: transparent url("/site_media/native/images/header-bg2.jpg")
+		no-repeat scroll left top;
+	margin-bottom: 3px;
+}
+
+.sidebar li {
+	list-style: none;
+}
+
+.sidebar ul {
+    	margin-bottom: 10px;
+}
+
+.sidebar li li {
+	list-style: none;
+	padding-left: 10px;
+}
+
+.sidebar a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+	display: inline;
+}
+
+.sidebar a:hover {
+	color: #4C82A6;
+	text-decoration: underline;
+}
+
+#nav ul {
+	position: relative;
+	padding: 7px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	height: 30px;
+}
+
+#nav li {
+    float: left;
+    list-style: none;
+    margin-left: 10px;
+}
+
+#nav ul li a,#nav ul li a:link,#nav ul li a:visited, #nav ul li a:hover{
+	text-decoration: none;
+	color: #444444;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+#nav ul li a:hover{
+	text-decoration: none !important;
+}
+
+
+#pagetitle {
+    color: white;
+    text-align: left;
+    font-size: 27px;
+    padding: 25px 0px 0px 200px;
+    margin: 0px 0px 0px 0px;
+}
+
+#pagemotto {
+    color: white;
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 0px 0px 0px 250px;
+    margin: 0px 0px 0px 0px;
+}
+
+#content-left,#content-both,#content-none ul {
+    margin-left: 30px;
+}
+
+#stripe {
+    background: black;
+}
+
+#header-container {
+	width: 941px;
+    margin: auto;
+}
+
+
+#page-container {
+	width: 941px;
+    margin: auto;
+}
+
+#nav-container {
+    background: url("/site_media/native/images/nav-bg.png");
+    height: 30px;
+}
+
+#nav {
+    background: url("/site_media/native/images/nav.png");
+    height: 30px;
+    margin: auto;
+    width: 941px;
+}
+
+#header {
+		background: transparent url("/site_media/native/images/logo.jpg");
+	height: 102px;
+}
+
+#header a {
+    color: white;
+}
+
+#header a:hover{
+    text-decoration: none !important;
+}
+
+#footer {
+	background: white;
+	height: 50px;
+	clear: both;
+	font-size: 8pt;
+	text-align: center;
+	color: black;
+	padding-top: 15px;
+}
+
+#sidebar-left {
+	background: white;
+    float: left;
+    width: 160px;
+    padding: 10px 10px 10px 10px;
+}
+
+#sidebar-right {
+	background: white;
+	float: right;
+	width: 160px;
+    padding: 10px 10px 10px 10px;
+}
+
+#sidebar-soloright {
+	background: white;
+	float: right;
+	width: 300px;
+    padding: 10px 10px 10px 10px;
+}
+
+#content-both {
+	background: white;
+	margin-left: 180px;
+	margin-right: 180px;
+	padding: 10px 10px 10px 10px;
+}
+
+#content-left {
+	background: white;
+	margin-left: 180px;
+	padding: 10px 10px 10px 10px;
+}
+
+#content-right {
+	background: white;
+	margin-right: 320px;
+	padding: 10px 10px 10px 10px;
+}
+
+#content-none {
+	background: white;
+	padding: 10px 10px 10px 10px;
+}
+
+#hull {
+    background: white;
+}

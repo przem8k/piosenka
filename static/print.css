@@ -1,0 +1,95 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,blockquote {
+	margin: 0;
+	padding: 5px;
+}
+
+h1 {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0px 20px 0px;
+    padding: 0px 5px 0px 5px;
+}
+
+h2 {
+    font-size: 16px;
+    text-align: left;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 5px 0px 5px;
+}
+a {
+	color: #215679;
+}
+
+a:hover {
+	color: #0F92BC;
+	text-decoration: underline !important;
+}
+
+blockquote {
+	border: 1px dotted silver;
+	display: block;
+	margin: 0px;
+	padding: 10px;
+	quotes: "\201C" "\201D";
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body {	
+	font-family:"Trebuchet MS",sans-serif;
+	font-size: 10pt;
+	margin:0 auto 10px;
+}
+
+
+.indented {
+	padding-left:10px;
+}
+
+a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+	display: inline;
+}
+
+a:hover {
+	color: #4C82A6;
+	text-decoration: underline;
+}
+
+h2, h3, h4, h5, h6 {
+	padding: 0 0px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 14pt;
+}
+
+h3 {
+	font-size: 12pt;
+	padding-top: 5px;
+}
+
+h4, h5, h6 {
+	font-size: 11pt;
+}

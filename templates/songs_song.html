@@ -1,0 +1,96 @@
+{% extends "bboth.html" %}
+
+{% block title %}{{ song.title }}{% endblock title %}
+
+{% load dxthumbnail %}
+
+{% block description %}Opracowanie piosenki {{song.title}}{% endblock description %}
+
+{% block content %}
+	{% include 'songs_song_base.html' %}
+{% endblock content %}
+
+{% block leftmenu %}
+	{% include "songs_menu.html" %}
+{% endblock leftmenu %}
+
+{% block rightmenu %}	
+	<li>
+    <h2>Wersja do druku</h2>
+    <ul>
+        {% if extra %}
+        <li><a href="{% url print-song-basic-chords artist_slug song_slug %}" title="Wersja do druku - podstawowe akordy">Podstawowe akordy</a></li>
+        <li><a href="{% url print-song-all-chords artist_slug song_slug %}" title="Wersja do druku - wszystkie akordy">Wszystkie akordy</a></li>
+        {% else %}
+        <li><a href="{% url print-song-basic-chords artist_slug song_slug %}" title="Wersja do druku - podstawowe akordy">Tekst i akordy</a></li>
+        {% endif %}
+        <li><a href="{% url print-song-text-only artist_slug song_slug %}" title="Wersja do druku - tylko tekst">Tylko tekst</a></li>
+    </ul>
+    <br /> 
+    </li> 	
+    
+	{% if song.score1 or song.score2 or song.score3 %}
+	    <li>
+		<h2>Nuty</h2>
+	    <ul>
+	        {% if song.score1 %}
+            <li><a href="{{song.score1.url}}"><img src='{{ song.score1.path|thumbnail:"140w,scores" }}' alt="{{ song.score1.title }}" title="{{ song.score1.title }}" /></a></li>
+            {% endif %}	
+	        {% if song.score2 %}
+            <li><a href="{{song.score2.url}}"><img src='{{ song.score2.path|thumbnail:"140w,scores" }}' alt="{{ song.score2.title }}" title="{{ song.score2.title }}" /></a></li>
+            {% endif %}	
+	        {% if song.score3 %}
+            <li><a href="{{song.score3.url}}"><img src='{{ song.score3.path|thumbnail:"140w,scores" }}' alt="{{ song.score3.title }}" title="{{ song.score1.title }}" /></a></li>
+            {% endif %}	
+	    </ul>
+	    <br />
+	    </li>
+	{% endif %}
+
+    {% if song.link_youtube or song.link_wrzuta or external_links %}
+	    <li>
+	    <h2>Linki</h2>
+	    <ul>
+	        {% if song.link_youtube %}
+	        <li><a href="{{song.link_youtube}}" target="_blank">Nagranie (Youtube)</a></li>
+	        {% endif %}
+	        {% if song.link_wrzuta %}
+	        <li><a href="{{song.link_wrzuta}}" target="_blank">Nagranie (Wrzuta)</a></li>
+	        {% endif %}
+	        {% for link in external_links %}
+	        <li><a href="{{link.1}}" target="_blank">{{link.0}}</a></li>
+	        {% endfor %}
+	    </ul> 
+	    <br />
+	    </li>   
+	{% endif %}    
+
+	    <li>
+	    <h2>Poleć piosenkę</h2>
+	    <table>
+	    	<tr><td>
+	<g:plusone size="medium" annotation="none" width="20" href="{{ request.build_absolute_uri }}"></g:plusone>
+</td>
+	    		<td valign="top">
+	<div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-send="false" data-layout="button_count" data-width="20" data-show-faces="false"></div>
+</td>
+</tr>
+</table>
+	    <br />
+	    </li>   
+
+
+    
+    {% if user.is_staff %}
+	    <li>
+	    <h2>Administracja</h2>
+	    <ul>
+	        <li><a href="/admin/songs/song/{{song.id}}/">Edytuj piosenkę</a></li>
+	    </ul> 
+	    <br />
+	    </li>   
+	{% endif %}
+	
+{% endblock rightmenu %}
+
+

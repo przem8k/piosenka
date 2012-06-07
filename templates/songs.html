@@ -1,0 +1,13 @@
+{% extends "bleft.html" %}
+
+
+{% block title %}Śpiewnik{% endblock %}
+
+{% block content %}
+	<h1>Śpiewnik</h1>
+	Wybierz artystę z menu po lewej lub zobacz <a href="/songs/all">wszystkie piosenki</a>.
+{% endblock content %}
+
+{% block leftmenu %}
+	{% include "songs_menu.html" %}
+{% endblock leftmenu %}

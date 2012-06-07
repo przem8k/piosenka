@@ -1,0 +1,118 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<meta name="robots" content="index,follow" />
+	<link rel="index" title="Piosenka z tekstem" href="http://www.piosenkaztekstem.pl" />
+	<title>{% block title %}Piosenka literacka{% endblock title %} - Piosenka z tekstem</title>
+	
+	<meta name="description" content="{% block description %}Śpiewnik piosenki literackiej, wydarzenia, koncerty{% endblock description %}" />
+	<meta name="keywords" content="Śpiewnik, chwyty, akordy, Kaczmarski, Gintrowski, Czajkowski" />
+	
+	<meta name="author" content="Przemysław Pietrzkiewicz" />
+	
+	<link rel="stylesheet" href="{{ STATIC_URL }}style.css?stamp=9" type="text/css" media="screen" /> 
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-23138480-1']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+	<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'pl'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}jquery.js"></script> 
+    <script type="text/javascript" src="{{ STATIC_URL }}block-toggle.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
+<div id="stripe">
+    <div id="header-container">
+	    <div id="header">
+	        <h1 id="pagetitle"><a href="/">Piosenka z tekstem</a></h1>
+	        <h2 id="pagemotto">Zła – być może. Dobra – a czemu?</h2>
+	    </div>
+	</div>
+</div>
+<div id="nav-container">
+    <div id="nav" class="navi">
+		<ul>
+			{% if section == 'blog' %}
+			<li class="current"><a href="/blog/" title="Blog"><span>Blog</span></a></li>
+			{% else %}
+			<li><a href="/blog/" title="Blog"><span>Blog</span></a></li>
+			{% endif %}
+
+			{% if section == 'songs' %}
+			<li class="current"><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
+			{% else %}
+			<li><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
+			{% endif %}
+			
+			{% if section == 'events' %}
+			<li class="current"><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
+			{% else %}
+			<li><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
+			{% endif %}
+			
+			{% if section == 'about' %}
+			<li class="current"><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
+			{% else %}
+			<li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
+			{% endif %}
+        </ul>
+    </div>
+</div>
+
+
+<div id="page-container">
+	<div id="hull">
+	    {% block hull %}
+
+	    {% endblock hull %}
+	</div>
+	
+	<div id="footer">© 2011 Piosenka z tekstem
+<center>
+<table>
+	    	<tr><td>
+	<g:plusone size="medium" annotation="none" width="20" href="http://www.piosenkaztekstem.pl"></g:plusone>
+</td>
+	    		<td valign="top">
+	<div class="fb-like" data-href="http://www.facebook.com/piosenkaztekstem" data-send="false" data-layout="button_count" data-width="20" data-show-faces="false"></div>
+</td>
+</tr>
+</table>
+</center>
+	</div>
+
+</div>
+
+</body>
+</html>

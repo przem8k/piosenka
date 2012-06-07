@@ -1,0 +1,8 @@
+<li>
+  <h2>Starsze posty</h2>
+  <ul>
+    {% for post in previous_posts %}
+        <li><a href="/blog/post/{{ post.id }}"><b>{{post.category}}:</b> {{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</li>

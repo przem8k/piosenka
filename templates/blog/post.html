@@ -1,0 +1,19 @@
+{% extends "bnone.html" %}
+
+{% block title %} {{ post.title }} {% endblock %}
+
+{% block content %}
+    <a href="{% url blog %}">Powrót</a>
+		  <h2 class="postTitle"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+		
+		  <div class="postMeta">
+		    <span class="date">{{ post.date|date:"d.m.Y" }}, <b>{{ post.author }}</b>, {{ post.category }}</span>
+		  </div>
+		
+		  <div class="postContent">
+		    {{ post.post|safe }}
+		    
+		    {{ post.more|safe }}
+		  </div>
+		<br />
+{% endblock content %}

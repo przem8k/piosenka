@@ -1,0 +1,57 @@
+    <h1>{{ song.title }}</h1>
+	{% if song.disambig.count > 0 %}
+		<h4 align="center">{{song.disambig}}</h4>
+	{% endif %}
+	
+	<table width="100%">
+	<tr><td valign="top" width="60%">
+	
+	<b>Tekst: </b>
+	{% for contribution in textContributions %}
+		<a href="{{contribution.artist.get_absolute_url}}">{{ contribution.artist }}</a>
+	{% endfor %}
+	<br />
+	
+	{% if translationContributions.count > 0 %}
+		<b>Tłumaczenie: </b>
+		{% for contribution in translationContributions %}
+			<a href="{{contribution.artist.get_absolute_url}}">{{ contribution.artist }}</a>
+		{% endfor %}
+		<br />
+	
+	{% endif %}
+	
+	<b>Muzyka: </b>
+	{% for contribution in musicContributions %}
+		<a href="{{contribution.artist.get_absolute_url}}">{{ contribution.artist }}</a>
+	{% endfor %}
+	<br />
+	
+	<b>Wykonanie: </b>
+	{% for contribution in performanceContributions %}
+		<a href="{{contribution.artist.get_absolute_url}}">{{ contribution.artist }}</a>
+	{% endfor %}
+	{% for contribution in bandContributions %}
+		<a href="{{contribution.band.get_absolute_url}}">{{ contribution.band }}</a>
+	{% endfor %}
+	</td>
+	<td valign="top" width="40%">
+	{% if song.key %}
+	    <b>Tonacja: </b>
+	    {{ song.key }}
+	    <br />
+	{% endif %}
+	{% if extra %}
+	    <b>Powtórzone akordy: </b>
+	    <span class="extra-chords-trigger">Pokaż / ukryj</span>
+	    <br />
+	{% endif %}
+	
+	</td></tr>
+	</table>
+	
+	<br />
+	
+	<blockquote>
+	{{ lyrics|safe }}
+	</blockquote>

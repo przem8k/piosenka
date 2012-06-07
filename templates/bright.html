@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block hull %}
+	    <div id="sidebar-soloright">
+            <ul class="sidebar"> 
+                {% block rightmenu %}	
+					If You see this message then inheriting template failed to fill the "leftmenu" block. Please contact administration of the site.
+				{% endblock rightmenu %} 
+                
+            </ul> 
+	    </div>
+	    
+	    <div id="content-right">
+			{% block content %}
+				If You see this message then inheriting template failed to fill the "content" block. Please contact administration of the site.
+			{% endblock content %}
+	    </div>
+	    
+{% endblock hull %}

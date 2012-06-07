@@ -1,0 +1,15 @@
+<li>
+	<h2>Artyści</h2>
+	<ul>
+		{% for artist in artists %}
+			<li><a href="/spiewnik/{{artist.slug}}" title="{{artist}}">{{ artist }}</a></li>
+		{% endfor %}
+	</ul>
+	<br />
+	<h2 class="widgettitle">Zespoły</h2>
+	<ul>
+		{% for band in bands %}
+			<li><a href="/spiewnik/{{band.slug}}" title="{{band}}">{{ band }}</a></li>
+		{% endfor %}
+	</ul>
+</li>
