@@ -1,3 +1,5 @@
 *.pyc
 *~
 settings_production.py
+songs/fixtures
+artists/fixtures

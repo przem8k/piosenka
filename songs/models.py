@@ -8,6 +8,14 @@ def validate_capo_fret(value):
     if value < 0 or value > 11:
         raise ValidationError(u'Capo fret has to be in range [0, 11]')
 
+def validate_lyrics(value):
+    try:
+        from songs.views import parse_lyrics;
+        parse_lyrics(value)
+    except SyntaxError, m:
+        raise ValidationError(u'Lyrics syntax is incorrect: ' + m)
+
+
 class Song(models.Model):
     title = models.CharField(max_length=100)
     disambig = models.CharField(max_length=100, null=True,blank=True, help_text="Disambiguation for multiple songs with the same title.")
@@ -29,20 +37,7 @@ class Song(models.Model):
     lyrics_html_all_chords = models.TextField(null=True,blank=True,editable=False)
     lyrics_contain_extra_chords = models.BooleanField(blank=True, editable=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
-    def render(self):
-        from songs.views import parse_lyrics, render_html
-        lyrics_data = parse_lyrics(self.lyrics)
-        extra = False
-        for entry in lyrics_data:
-            if len(entry[2]) > 0:
-                extra = True
-        self.lyrics_html_for_display = render_html(lyrics_data, True, True, True)
-        self.lyrics_html_text_only = render_html(lyrics_data, False, False, False)
-        self.lyrics_html_basic_chords =  render_html(lyrics_data, True, False, False)
-        self.lyrics_html_all_chords = render_html(lyrics_data, True, True, False)
-        self.lyrics_contain_extra_chords = extra
     def save(self, force_insert=False, force_update=False):
-        self.render()
         super(Song, self).save(force_insert, force_update)
     def get_absolute_url(self):
         return "/piosenki/%s" % self.slug
