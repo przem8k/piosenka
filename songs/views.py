@@ -26,6 +26,9 @@ class LyricsParserMode:
     Replaying = 2
 
 def parse_lyrics(lyrics):
+    """
+        returns parsed lyrics as a list of tuples (text, uniqueChords, repeatedChords)
+    """
     result = []
     mode = LyricsParserMode.Regular
     recorded_section = None
@@ -78,7 +81,62 @@ def parse_lyrics(lyrics):
         recorded_section = None
     return result
 
-def render_html(lyrics_data, any_chords, extra_chords, extra_chords_trigger):
+KEYS_TO_ORD = {
+    'c' : 0, 
+    'cis': 1, 
+    'des': 1, 
+    'd': 2, 
+    'dis' : 3, 
+    'e' : 4, 
+    'es' : 4, 
+    'f': 5, 
+    'fis': 6, 
+    'ges': 6, 
+    'g' : 7, 
+    'gis': 8, 
+    'as': 8, 
+    'a': 9, 
+    'b': 10, 
+    'ais': 10, 
+    'h' : 11
+}
+
+ORD_TO_KEY = {
+    0 : 'c',
+    1 : 'cis',
+    2 : 'd',
+    3 : 'dis',
+    4 : 'e',
+    5 : 'f',
+    6 : 'fis',
+    7 : 'g',
+    8 : 'gis',
+    9 : 'a',
+    10 : 'b',
+    11 : 'h'
+}
+
+def transpose(chord_sequence, transposition):
+    """ Transposes a sequence of chords a given number of halftones up """
+    input_chords = [str(x) for x in chord_sequence.split()]
+    output_chords = list()
+    for chord in input_chords:
+        low = chord[0].lower() + chord[1:]
+
+        transposed = "??"
+        for prefix_length in [3,2,1]:
+            if len(low) >= prefix_length and low[:prefix_length] in KEYS_TO_ORD:
+                new_ord = (KEYS_TO_ORD[low[:prefix_length]] + transposition) % 12
+                transposed = ORD_TO_KEY[new_ord] + low[prefix_length:]
+                break
+
+        if chord[0].isupper():
+            output_chords.append(transposed[0].upper() + transposed[1:])
+        else:
+            output_chords.append(transposed)
+    return ' '.join(output_chords)
+
+def render_html(lyrics_data, any_chords, extra_chords, extra_chords_trigger, transposition = 0):
     formatedLines = ["<table>",]
     for entry in lyrics_data:
         textPart = entry[0]
@@ -88,16 +146,18 @@ def render_html(lyrics_data, any_chords, extra_chords, extra_chords_trigger):
         if any_chords:
             if extra_chords and len(extraPart) > 0:
                 if extra_chords_trigger:
-                     renderedChords = "<span class=\"extra-chords\">%s</span>" % (extraPart,)
+                    renderedChords = "<span class=\"extra-chords\">%s</span>" % (
+                        transpose(extraPart, transposition),
+                    )
                 else:
-                    renderedChords = extraPart
+                    renderedChords = transpose(extraPart, transposition)
             elif len(basicPart) > 0:
-                renderedChords = basicPart
+                renderedChords = transpose(basicPart, transposition)
             else:
                 renderedChords = ""
         else:
             renderedChords = ""
-            
+
         if len(textPart) + len(basicPart) + len(extraPart) > 0:
             if len(textPart) > 0 and textPart[0] == ">":
                 formatedLines.append(u"<tr><td class=\"indented\">{0}</td><td class=\"indented\"><b>{1}</b></td></tr>".format(textPart[1:], renderedChords))
