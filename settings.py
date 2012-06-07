@@ -16,18 +16,9 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-if PRODUCTION_SETTINGS:
-    DATABASES = {                   # update this section after production server migration
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME': 'pg_5186',                      # Or path to database file if using sqlite3.
-            'USER': 'pg_5186a',                      # Not used with sqlite3.
-            'PASSWORD': 'swiatlemwoczy9',                  # Not used with sqlite3.
-            'HOST': 'sql.dxhp.megiteam.pl',                      # Set to empty string for localhost. Not used with sqlite3.
-            'PORT': '5435',                      # Set to empty string for default. Not used with sqlite3.
-        }
-    }
-else:
+try:
+    from settings_production import DATABASES
+except ImportError:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
@@ -38,7 +29,6 @@ else:
             'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
         }
     }
-
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
