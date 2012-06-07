@@ -115,7 +115,7 @@ TEMPLATE_DIRS = (
 
 HAYSTACK_SITECONF = 'website.search_sites'
 HAYSTACK_SEARCH_ENGINE = 'whoosh'
-HAYSTACK_WHOOSH_PATH = PROJECT_PATH + 'index'
+HAYSTACK_WHOOSH_PATH = os.path.join(PROJECT_PATH, "index")
 
 INSTALLED_APPS = (
     'django.contrib.auth',
