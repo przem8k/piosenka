@@ -10,10 +10,12 @@ def validate_capo_fret(value):
 
 def validate_lyrics(value):
     try:
-        from songs.views import parse_lyrics;
-        parse_lyrics(value)
+        from songs.parse import parse_lyrics;
+        from songs.transpose import transpose_lyrics;
+        lyrics = parse_lyrics(value)
+        transpose_lyrics(lyrics, 0)
     except SyntaxError, m:
-        raise ValidationError(u'Lyrics syntax is incorrect: ' + m)
+        raise ValidationError(u'Lyrics syntax is incorrect: ' + unicode(m))
 
 
 class Song(models.Model):
@@ -30,7 +32,7 @@ class Song(models.Model):
     score3 = models.ImageField(null=True, blank=True, upload_to='scores')
     key = models.CharField(max_length=100, null=True,blank=True, help_text="Deprecated - use capo_fret instead")
     capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret,], help_text="Set to 0 if no capo")
-    lyrics = models.TextField(null=True,blank=True)
+    lyrics = models.TextField(null=True, validators=[validate_lyrics,])
     lyrics_html_for_display = models.TextField(null=True,blank=True,editable=False)
     lyrics_html_text_only = models.TextField(null=True,blank=True,editable=False)
     lyrics_html_basic_chords = models.TextField(null=True,blank=True,editable=False)
