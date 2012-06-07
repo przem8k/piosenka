@@ -43,11 +43,11 @@ def index(request):
     cc = common_context()
     return HttpResponse(template.render(RequestContext(request, cc)))
 
-def song(request, song, mode, transposition = 0):
+def song(request, song, mode):
     if mode == SongMode.DISPLAY:
-        template_name = 'songs_song.html'
+        template_name = 'songs/song.html'
     else:
-        template_name = 'songs_song_print.html'
+        template_name = 'songs/song_print.html'
 
     external_links = [(x.artist,x.artist.website) for x in 
         ArtistContribution.objects.filter(song=song) if 
@@ -56,6 +56,11 @@ def song(request, song, mode, transposition = 0):
         BandContribution.objects.filter(song=song) if 
         x.band.website != None and len(x.band.website) > 0
     ]
+
+    if request.method == "GET" and "t" in request.GET:
+        transposition = int(request.GET["t"])
+    else:
+        transposition = 0
 
     context = {
         'song' : song,
