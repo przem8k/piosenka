@@ -4,10 +4,12 @@
 		<tr>
 			{% if line.2 %}<td class="indented">{% else %}<td>{% endif %}{{ line.0 }}</td>
 			<td class="indented"><b>
-				{% if line.3 %}
-					<span class="extra-chords">{{ line.1 }}</span>
-				{% else %}
-					{{ line.1 }}
+				{% if any_chords %}
+					{% if line.3 and distinguish_extra_chords %}
+						<span class="extra-chords">{{ line.1 }}</span>
+					{% else %}
+						{{ line.1 }}
+					{% endif %}
 				{% endif %}
 			</b></td>
 		</tr>

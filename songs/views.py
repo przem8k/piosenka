@@ -71,6 +71,7 @@ def song(request, song, mode):
         'song' : song,
         'section' : 'songs',
         'triggers' : mode == SongMode.DISPLAY,
+        'trans' :  transposition,
         'trans_up' : trans_up,
         'trans_down' : trans_down,
         'lyrics' : render_lyrics(

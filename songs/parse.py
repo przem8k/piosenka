@@ -55,7 +55,7 @@ def parse_lyrics(raw_lyrics):
                 textPart = line[0:chordsStart]
                 chordsPart = line[chordsStart+1:len(line)-1]
             elif line.find("{") != -1:
-                chordsStart = line.find("}")
+                chordsStart = line.find("{")
                 textPart = line[0:chordsStart]
                 chordsPart = line[chordsStart+1:len(line)-1]   
                 are_chords_extra = True;
