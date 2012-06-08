@@ -36,7 +36,6 @@
   })();
 </script>
 
-
 </head>
 
 <body>
@@ -49,9 +48,11 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-    <script type="text/javascript" src="{{ STATIC_URL }}jquery.js"></script> 
-    <script type="text/javascript" src="{{ STATIC_URL }}block-toggle.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}jquery.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
+    {% block scripts %}{% endblock scripts %}
+    
+    
 <div id="stripe">
     <div id="header-container">
 	    <div id="header">

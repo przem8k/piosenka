@@ -6,12 +6,16 @@
 
 {% block description %}Opracowanie piosenki {{song.title}}{% endblock description %}
 
+{% block scripts %}
+<script type="text/javascript" src="{{ STATIC_URL }}scripts/song_panel.js"></script>
+{% endblock scripts %}
+
 {% block content %}
-	{% include 'songs_song_base.html' %}
+	{% include 'songs/song_common.html' %}
 {% endblock content %}
 
 {% block leftmenu %}
-	{% include "songs_menu.html" %}
+	{% include "songs/menu.html" %}
 {% endblock leftmenu %}
 
 {% block rightmenu %}	

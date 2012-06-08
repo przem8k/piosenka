@@ -66,6 +66,7 @@ STATIC_URL = '/site_media/native/'
 
 STATICFILES_DIRS = (
     ("", os.path.join(PROJECT_PATH, "static")),
+    ("scripts", os.path.join(PROJECT_PATH, "songs", "scripts")),
 )
 
 # Make this unique, and don't share it with anybody.

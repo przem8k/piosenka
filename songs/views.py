@@ -38,11 +38,6 @@ def render_lyrics(lyrics, mode, template_name="songs/lyrics.html"):
     template = loader.get_template(template_name)
     return template.render(Context(context))
 
-def index(request):
-    template = loader.get_template('songs.html')
-    cc = common_context()
-    return HttpResponse(template.render(RequestContext(request, cc)))
-
 def song(request, song, mode):
     if mode == SongMode.DISPLAY:
         template_name = 'songs/song.html'
@@ -58,14 +53,26 @@ def song(request, song, mode):
     ]
 
     if request.method == "GET" and "t" in request.GET:
-        transposition = int(request.GET["t"])
+        try:
+            t = int(request.GET["t"])
+            if t >= 0 and t < 12:
+                transposition = t
+            else:
+                transposition = 0;
+        except ValueError:
+            transposition = 0
     else:
         transposition = 0
+
+    trans_up = (transposition + 1) % 12;
+    trans_down = (transposition + 11) % 12;
 
     context = {
         'song' : song,
         'section' : 'songs',
-        'extra_trigger' : mode == SongMode.DISPLAY,
+        'triggers' : mode == SongMode.DISPLAY,
+        'trans_up' : trans_up,
+        'trans_down' : trans_down,
         'lyrics' : render_lyrics(
             transpose_lyrics(
                 parse_lyrics(song.lyrics),
@@ -140,7 +147,6 @@ def obsolete_band(request, band_id):
 class SongSearchView(SearchView):
     def __name__(self):
         return "SongSearchView"
-
     #def extra_context(self):
     #    extra = super(SongSearchView, self).extra_context()
     #    return common_context()

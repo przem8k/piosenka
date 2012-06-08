@@ -12,7 +12,7 @@ urlpatterns = patterns('songs.views',
     url(r'^(?P<artist_slug>[-\w]+)/(?P<song_slug>[-\w]+)/drukuj/wszystkie-akordy/$', song_of_artist, { 'mode' : SongMode.PRINT_ALL_CHORDS } , name="print-song-all-chords"),
     url(r'^$', search_view_factory(
         view_class=SongSearchView,
-        template='songs_search.html',
+        template='songs/index.html',
         form_class=SearchForm,
     )),
 )
