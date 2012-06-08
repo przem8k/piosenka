@@ -1,5 +1,0 @@
-ALTER TABLE songs_artistcontribution DROP CONSTRAINT artistcontribution_unique;
-ALTER TABLE songs_artistcontribution DROP CONSTRAINT artistcontribution_not_dummy;
-
-ALTER TABLE songs_bandcontribution DROP CONSTRAINT bandcontribution_unique;
-ALTER TABLE songs_bandcontribution DROP CONSTRAINT bandcontribution_not_dummy;
