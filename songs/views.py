@@ -88,7 +88,7 @@ def song(request, song, mode):
         'trans' :  transposition,
         'trans_up' : trans_up,
         'trans_down' : trans_down,
-        'capo' : song.capo(transposition),
+        'capo' : song.capo(),
         'lyrics' : render_lyrics(
             transpose_lyrics(
                 lyrics,
