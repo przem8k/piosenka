@@ -36,6 +36,7 @@ ORD_TO_KEY = {
 }
 
 def transpose_chord(chord, transposition):
+    """ Transposes a chord >without a base sound< a given number of halftones up """
         low = chord[0].lower() + chord[1:]
 
         transposed = "??"
@@ -51,7 +52,8 @@ def transpose_chord(chord, transposition):
             return transposed   
 
 def transpose_sequence(chord_sequence, transposition):
-    """ Transposes a sequence of chords a given number of halftones up """
+    """ Transposes a sequence of chords a given number of halftones up.
+    Chords with specified base sounds are split and the sound is transposed separately."""
     input_chords = [str(x) for x in chord_sequence.split()]
     output_chords = list()
     for chord in input_chords:
