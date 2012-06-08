@@ -35,11 +35,7 @@ ORD_TO_KEY = {
     11 : 'h'
 }
 
-def transpose_sequence(chord_sequence, transposition):
-    """ Transposes a sequence of chords a given number of halftones up """
-    input_chords = [str(x) for x in chord_sequence.split()]
-    output_chords = list()
-    for chord in input_chords:
+def transpose_chord(chord, transposition):
         low = chord[0].lower() + chord[1:]
 
         transposed = "??"
@@ -50,9 +46,20 @@ def transpose_sequence(chord_sequence, transposition):
                 break
 
         if chord[0].isupper():
-            output_chords.append(transposed[0].upper() + transposed[1:])
+            return transposed[0].upper() + transposed[1:]
         else:
-            output_chords.append(transposed)
+            return transposed   
+
+def transpose_sequence(chord_sequence, transposition):
+    """ Transposes a sequence of chords a given number of halftones up """
+    input_chords = [str(x) for x in chord_sequence.split()]
+    output_chords = list()
+    for chord in input_chords:
+        if chord.find("/") != -1: # for chords with specified base sound
+            transposed = "/".join([transpose_chord(x, transposition) for x in chord.split("/")])
+        else:
+            transposed = transpose_chord(chord, transposition)
+        output_chords.append(transposed)
     return ' '.join(output_chords)
 
 def transpose_lyrics(parsed_lyrics, transposition):
