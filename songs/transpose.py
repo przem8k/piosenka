@@ -36,7 +36,7 @@ ORD_TO_KEY = {
 }
 
 def transpose_chord(chord, transposition):
-    """ Transposes a chord >without a base sound< a given number of halftones up """
+        """ Transposes a chord >without a base sound< a given number of halftones up """
         low = chord[0].lower() + chord[1:]
 
         transposed = "??"
