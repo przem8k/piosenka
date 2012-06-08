@@ -19,6 +19,7 @@ def songs_context(request):
         context["artist_slug"] = url_segments[1]
         context["song_slug"] = url_segments[2]
 
+    context["url"] = request.path
     context["artists"] = Artist.objects.filter(display = True).order_by('lastname')
     context["bands"] = Band.objects.filter(display = True).order_by('name')
     return context
@@ -67,16 +68,30 @@ def song(request, song, mode):
     trans_up = (transposition + 1) % 12;
     trans_down = (transposition + 11) % 12;
 
+    lyrics = parse_lyrics(song.lyrics)
+
+    extra = False
+
+    for paragraph in lyrics:
+        for text, chords, is_indented, are_chords_extra in paragraph:
+            if are_chords_extra:
+                extra = True
+                break
+        if extra:
+            break
+
     context = {
         'song' : song,
         'section' : 'songs',
         'triggers' : mode == SongMode.DISPLAY,
+        'extra' : extra,
         'trans' :  transposition,
         'trans_up' : trans_up,
         'trans_down' : trans_down,
+        'capo' : song.capo(transposition),
         'lyrics' : render_lyrics(
             transpose_lyrics(
-                parse_lyrics(song.lyrics),
+                lyrics,
                 transposition
             ),
             mode

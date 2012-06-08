@@ -19,6 +19,7 @@ def validate_lyrics(value):
 
 
 class Song(models.Model):
+    CAPO_TO_ROMAN = ["~", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
     title = models.CharField(max_length=100)
     disambig = models.CharField(max_length=100, null=True,blank=True, help_text="Disambiguation for multiple songs with the same title.")
     original_title = models.CharField(max_length=100, null=True, blank=True)
@@ -30,7 +31,7 @@ class Song(models.Model):
     score1 = models.ImageField(null=True, blank=True, upload_to='scores')
     score2 = models.ImageField(null=True, blank=True, upload_to='scores')
     score3 = models.ImageField(null=True, blank=True, upload_to='scores')
-    key = models.CharField(max_length=100, null=True,blank=True, help_text="Deprecated - use capo_fret instead")
+    key = models.CharField(max_length=100, null=True,blank=True, help_text="Deprecated - use capo_fret instead", editable=False)
     capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret,], help_text="Set to 0 if no capo")
     lyrics = models.TextField(null=True, validators=[validate_lyrics,])
     lyrics_html_for_display = models.TextField(null=True,blank=True,editable=False)
@@ -39,6 +40,8 @@ class Song(models.Model):
     lyrics_html_all_chords = models.TextField(null=True,blank=True,editable=False)
     lyrics_contain_extra_chords = models.BooleanField(blank=True, editable=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
+    def capo(self, transposition = 0):
+        return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
     def save(self, force_insert=False, force_update=False):
         super(Song, self).save(force_insert, force_update)
     def get_absolute_url(self):
