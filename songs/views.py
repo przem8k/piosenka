@@ -140,17 +140,25 @@ def obsolete_song(request, song_id):
     return redirect_to_song(request, song.slug)
 
 def artist(request, slug, template_name="songs/list.html"):
-    if Artist.objects.filter(slug = slug).count() > 0:
+    try:
         guy = Artist.objects.get(slug = slug)
-        songs = ArtistContribution.objects.filter(artist = guy).order_by('song__title')
-    else:
+        songs = (ArtistContribution.objects.filter(artist = guy)
+                                   .select_related('song')
+                                   .order_by('song__title'))
+    except Artist.DoesNotExist:
         guy = get_object_or_404(Band, slug = slug)
-        songs = BandContribution.objects.filter(band = guy).order_by('song__title')
+        songs = (BandContribution.objects.filter(band = guy)
+                                         .select_related('song')
+                                         .order_by('song__title'))
 
     if not request.user.is_staff:
         songs = songs.filter(song__published = True)
 
-    return render(request, template_name, {'section' : 'songs', 'songs': songs, 'title': guy.__unicode__(), 'artist': guy})
+    return render(request, template_name, 
+                 {'section' : 'songs', 
+                 'songs': songs, 
+                 'title': guy.__unicode__(), 
+                 'artist': guy})
 
 def obsolete_artist(request, artist_id):
     artist = get_object_or_404(Artist, pk = artist_id)
