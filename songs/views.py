@@ -46,10 +46,10 @@ def song(request, song, mode):
         template_name = 'songs/song_print.html'
 
     external_links = [(x.artist,x.artist.website) for x in 
-        ArtistContribution.objects.filter(song=song) if 
+        ArtistContribution.objects.filter(song=song).select_related('artist') if 
         x.artist.website != None and len(x.artist.website) > 0 
     ] + [(x.band,x.band.website) for x in 
-        BandContribution.objects.filter(song=song) if 
+        BandContribution.objects.filter(song=song).select_related('band') if 
         x.band.website != None and len(x.band.website) > 0
     ]
 
@@ -112,10 +112,12 @@ def song_by_unknown(request, slug, mode):
 def song_of_artist(request, artist_slug, song_slug, mode):
     piece = get_object_or_404(Song, slug = song_slug)
     artist = None
-    for entry in ArtistContribution.objects.filter(song = piece):
+    for entry in (ArtistContribution.objects.filter(song = piece)
+                                            .select_related('artist')):
         if entry.artist.slug == artist_slug:
             artist = entry.artist
-    for entry in BandContribution.objects.filter(song = piece):
+    for entry in (BandContribution.objects.filter(song = piece)
+                                          .select_related('band')):
         if entry.band.slug == artist_slug:
             artist = entry.band
     
