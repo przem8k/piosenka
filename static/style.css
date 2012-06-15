@@ -181,8 +181,10 @@ h2.postTitle a:hover {
 #pagetitle {
     color: white;
     text-align: left;
+    display: inline;
     font-size: 27px;
-    padding: 25px 0px 0px 200px;
+    font-family: sans-serif;
+    padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
 }
 
@@ -227,8 +229,7 @@ h2.postTitle a:hover {
 }
 
 #header {
-		background: transparent url("/site_media/native/images/logo.jpg");
-	height: 102px;
+	height: 78px;
 }
 
 #header a {
@@ -237,6 +238,12 @@ h2.postTitle a:hover {
 
 #header a:hover{
     text-decoration: none !important;
+}
+
+#logo {
+	padding: 15px; 
+	display: inline; 
+	vertical-align: middle;
 }
 
 #footer {
