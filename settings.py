@@ -71,6 +71,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
+if DEBUG:
+    MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+
 ROOT_URLCONF = 'urls'
 
 FILE_CHARSET = "utf-8-sig"
@@ -108,3 +111,8 @@ INSTALLED_APPS = (
     'haystack',
     'south',
 )
+
+if DEBUG:
+    INSTALLED_APPS += ('debug_toolbar',)
+
+INTERNAL_IPS = ('127.0.0.1',)

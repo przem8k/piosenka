@@ -46,10 +46,10 @@ def song(request, song, mode):
         template_name = 'songs/song_print.html'
 
     external_links = [(x.artist,x.artist.website) for x in 
-        ArtistContribution.objects.filter(song=song) if 
+        ArtistContribution.objects.filter(song=song).select_related('artist') if 
         x.artist.website != None and len(x.artist.website) > 0 
     ] + [(x.band,x.band.website) for x in 
-        BandContribution.objects.filter(song=song) if 
+        BandContribution.objects.filter(song=song).select_related('band') if 
         x.band.website != None and len(x.band.website) > 0
     ]
 
@@ -112,10 +112,12 @@ def song_by_unknown(request, slug, mode):
 def song_of_artist(request, artist_slug, song_slug, mode):
     piece = get_object_or_404(Song, slug = song_slug)
     artist = None
-    for entry in ArtistContribution.objects.filter(song = piece):
+    for entry in (ArtistContribution.objects.filter(song = piece)
+                                            .select_related('artist')):
         if entry.artist.slug == artist_slug:
             artist = entry.artist
-    for entry in BandContribution.objects.filter(song = piece):
+    for entry in (BandContribution.objects.filter(song = piece)
+                                          .select_related('band')):
         if entry.band.slug == artist_slug:
             artist = entry.band
     
@@ -140,17 +142,25 @@ def obsolete_song(request, song_id):
     return redirect_to_song(request, song.slug)
 
 def artist(request, slug, template_name="songs/list.html"):
-    if Artist.objects.filter(slug = slug).count() > 0:
+    try:
         guy = Artist.objects.get(slug = slug)
-        songs = ArtistContribution.objects.filter(artist = guy).order_by('song__title')
-    else:
+        songs = (ArtistContribution.objects.filter(artist = guy)
+                                   .select_related('song')
+                                   .order_by('song__title'))
+    except Artist.DoesNotExist:
         guy = get_object_or_404(Band, slug = slug)
-        songs = BandContribution.objects.filter(band = guy).order_by('song__title')
+        songs = (BandContribution.objects.filter(band = guy)
+                                         .select_related('song')
+                                         .order_by('song__title'))
 
     if not request.user.is_staff:
         songs = songs.filter(song__published = True)
 
-    return render(request, template_name, {'section' : 'songs', 'songs': songs, 'title': guy.__unicode__(), 'artist': guy})
+    return render(request, template_name, 
+                 {'section' : 'songs', 
+                 'songs': songs, 
+                 'title': guy.__unicode__(), 
+                 'artist': guy})
 
 def obsolete_artist(request, artist_id):
     artist = get_object_or_404(Artist, pk = artist_id)
