@@ -19,6 +19,7 @@ from django.template import Library
 
 register = Library()
 
+
 def rows(thelist, n):
     """
     Break a list into ``n`` rows, filling up each row to the maximum equal
@@ -55,7 +56,8 @@ def rows(thelist, n):
 
     if list_len % n != 0:
         split += 1
-    return [thelist[split*i:split*(i+1)] for i in range(n)]
+    return [thelist[split * i: split * (i + 1)] for i in range(n)]
+
 
 def rows_distributed(thelist, n):
     """
@@ -96,14 +98,15 @@ def rows_distributed(thelist, n):
     rows = []
     for i in range(n):
         if remainder:
-            start, end = (split+1)*i, (split+1)*(i+1)
+            start, end = (split + 1) * i, (split + 1) * (i + 1)
         else:
-            start, end = split*i+offset, split*(i+1)+offset
+            start, end = split * i + offset, split * (i + 1) + offset
         rows.append(thelist[start:end])
         if remainder:
             remainder -= 1
             offset += 1
     return rows
+
 
 def columns(thelist, n):
     """
@@ -149,6 +152,7 @@ def columns(thelist, n):
         split += 1
     return [thelist[i::split] for i in range(split)]
 
+
 def columns_horizontal(thelist, n):
     try:
         n = int(n)
@@ -159,12 +163,13 @@ def columns_horizontal(thelist, n):
     split = list_len // n
     if list_len % n != 0:
         split += 1
-    return [thelist[i*n:(i+1)*n] for i in range(split)]
+    return [thelist[i * n: (i + 1) * n] for i in range(split)]
 
 register.filter(rows)
 register.filter(rows_distributed)
 register.filter(columns)
 register.filter(columns_horizontal)
+
 
 def _test():
     import doctest
