@@ -229,7 +229,7 @@ h2.postTitle a:hover {
 }
 
 #header {
-	height: 78px;
+	height: 70px;
 }
 
 #header a {
@@ -241,7 +241,7 @@ h2.postTitle a:hover {
 }
 
 #logo {
-	padding: 15px; 
+	padding: 0px 15px 15px 15px; 
 	display: inline; 
 	vertical-align: middle;
 }
