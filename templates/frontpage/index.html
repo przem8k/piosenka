@@ -35,7 +35,7 @@
 	{% for song in songs %}
     	<li>
 		    <span class="date">{{ song.0|date:"d.m.Y" }}</span>, 
-		    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:26 }}</a>
+		    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>
 		</li>
 	{% endfor %}
 </div>
@@ -47,7 +47,7 @@
     {% for event in events%}
     	<li>
 		    <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>,
-		    <a href="{{event.get_absolute_url}}">{{ event.name }} ({{ event.venue.town }})</a>
+		    <a href="{{event.get_absolute_url}}">{{ event.venue.town }}: {{ event.name }}</a>
 		</li>
 	{% endfor %}
 	</ul>
