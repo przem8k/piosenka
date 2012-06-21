@@ -78,11 +78,6 @@ body {
 	border: 3px solid #CCC;
 }
 
-li {
-    list-style: none;
-}
-
-
 /* jquery-based toggling */
 
 .extra-chords-trigger {

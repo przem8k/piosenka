@@ -50,7 +50,7 @@ class Song(models.Model):
         super(Song, self).save(force_insert, force_update)
 
     def get_absolute_url(self):
-        return "/piosenki/%s" % self.slug
+        return "/spiewnik/szukaj/%s" % self.slug
 
     def __unicode__(self):
         return self.title
