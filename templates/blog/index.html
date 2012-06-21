@@ -1,32 +1,44 @@
-{% extends "bright.html" %}
+{% extends "base.html" %}
 
 {% block title %}Blog{% endblock title %}
-	
-{% block content %}
+
+{% block hull %}
+<div class="padLeft widget">
+<h1>Nowe posty</h1>
     {% for post in new_posts %}
-		  <h2 class="postTitle"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
-		
-		  <div class="postMeta">
-		    <span class="date">{{ post.date|date:"d.m.Y" }}, <b>{{ post.author }}</b>, {{ post.category }}</span>
+		<div class="post">
+		  <div class="meta">
+		    <span class="date">{{ post.date|date:"d.m.Y" }}</span> - 
+		  	<b><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></b>
+		  	{% if post.more %}
+		  	<img src="{{STATIC_URL}}/images/icons/roll.png" style="display: inline; width: 13px; height: 13px; border: 0; padding: 0; margin: 0; vertical-align: top;" align="center"/>
+		  	{% endif %}
 		  </div>
 		
 		  <div class="postContent">
 		    {{ post.post|safe }}
-		    
-		    {% if post.more  %}
-		        {% if single %}
-		            {{ post.more|safe }}
-		        {% else %}    
-		            <p> <a href="{{ post.get_absolute_url }}">Czytaj dalej</a> </p>
-		        {% endif %}
-		    {% endif %}
+		   
 		  </div>
+		</div>
 		<br />
 	{% endfor %}
 
-	
-{% endblock content %}
+</div>
 
-{% block rightmenu %}
-	{% include "blog_menu.html" %}
-{% endblock rightmenu %}
+<div class="padRight widget">
+<h1>Wszystkie posty</h1>
+  <ul>
+    {% for post in all_posts %}
+    	<li>
+		    <span class="date">{{ post.date|date:"d.m.Y" }}</span> - 
+		  	<b><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></b>
+		  	{% if post.more %}
+		  	<img src="{{STATIC_URL}}/images/icons/roll.png" style="display: inline; width: 13px; height: 13px; border: 0; padding: 0; margin: 0; vertical-align: top;" align="center"/>
+		  	{% endif %}
+		</li>
+    {% endfor %}
+  </ul>
+	
+</div>
+
+{% endblock hull %}

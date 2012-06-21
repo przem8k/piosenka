@@ -113,7 +113,7 @@
 
 .widget h1
 {
-    margin: 0;
+    margin: 0 0 10px 0;
 	font-size: 14pt;
 	font-weight: bold;
 	color: #05546C;
@@ -129,12 +129,20 @@
 	text-align: right;
 }
 
-.half {
+.frontHalf {
 	width: 453px;
 }
 
-.fourth {
+.frontFourth {
 	width: 219px;
+}
+
+.padLeft {
+	width: 453px;
+}
+
+.padRight {
+	width: 453px;
 }
 
 /* end */

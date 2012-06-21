@@ -3,12 +3,11 @@
 {% block hull %}
 
 
-<div class="half widget">
-	<h1><a href="{% url blog %}">Blog</a></h1>
-
+<div class="frontHalf widget">
+<h1>Nowe posty</h1>
     {% for post in posts %}
 		<div class="post">
-		  <div class="postMeta">
+		  <div class="meta">
 		    <span class="date">{{ post.date|date:"d.m.Y" }} - 
 		  	<b><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></b>
 		  	{% if post.more %}
@@ -31,16 +30,21 @@
 
 </div>
 
-<div class="fourth widget">
-	<h1>Śpiewnik</h1>
-	<h2>Ostatnio dodane</h2>
-	<h2>Najpopularniejsze</h2>
-	
+<div class="frontFourth widget">
+	<h1>Nowe piosenki</h1>	
 </div>
 
-<div class="fourth widget">
+<div class="frontFourth widget">
 	<h1>Wydarzenia</h1>
-
+	<ul>
+    {% for event in events%}
+    	<li>
+		    <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>, 
+		    <b>{{ event.venue.town }}</b>, 
+		    <a href="{{event.get_absolute_url}}">{{ event.name }}</a>
+		</li>
+	{% endfor %}
+	</ul>
 </div>
 	    
 {% endblock hull %}

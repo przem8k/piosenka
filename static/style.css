@@ -58,30 +58,8 @@ body {
 	padding-left:10px;
 }
 
-
-h2.postTitle {
-    margin: 0;
-	font-size: 14pt;
-	font-weight: bold;
-	color: #05546C;
-}
-
-h2.postTitle a {
-	font-size: 14pt;
-	font-weight: bold;
-	text-decoration: none;
-	color: #05546C;
-	letter-spacing: -1px;
-}
-
-h2.postTitle a:hover {
-	color: #215679;
-}
-
-.postMeta {
-	padding: 2px 10px 4px 5px;
-	font-size: 9pt;
-	color: #333;
+.post .meta {
+	padding-left: 5px;
 }
 
 .date {
@@ -98,6 +76,10 @@ h2.postTitle a:hover {
 .postContent img {
 	margin: 10px;
 	border: 3px solid #CCC;
+}
+
+li {
+    list-style: none;
 }
 
 
