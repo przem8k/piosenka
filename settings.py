@@ -108,6 +108,7 @@ INSTALLED_APPS = (
     'songs',
     'events',
     'users',
+    'frontpage',
     'dxlibrary',
     'haystack',
     'south',

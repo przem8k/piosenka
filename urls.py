@@ -3,9 +3,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView, RedirectView
 
 import songs.views
-import blog.views
-import django.views.generic.simple
-from songs.views import SongSearchView, SongMode
+import frontpage.views
 
 admin.autodiscover()
 
@@ -18,13 +16,13 @@ urlpatterns = patterns('',
     url(r'^spiewnik/', include('songs.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^wydarzenia/', include('events.urls')),
-    url(r'^o-stronie/$', TemplateView.as_view(template_name = "about.html")),
+    url(r'^o-stronie/$', TemplateView.as_view(template_name="about.html")),
     url(r'^about/$', RedirectView.as_view(url="/o-stronie/")),
     url(r'^facebook/$', RedirectView.as_view(url="/o-stronie/")),
     #admin
     url(r'^admin/', include(admin.site.urls)),
     #index
-    url(r'^$', blog.views.IndexView.as_view()),
+    url(r'^$', frontpage.views.IndexView.as_view()),
 )
 
 from django.conf import settings

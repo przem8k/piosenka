@@ -17,8 +17,8 @@ class IndexView(View):
             request,
             self.template_name,
             {
-                'new_posts': Post.objects.all().order_by('-date')[0:3],
-                'previous_posts': Post.objects.all().order_by('-date')[3:],
+                'new_posts': Post.objects.all().order_by('-date')[0:5],
+                'all_posts': Post.objects.all().order_by('-date')
             }
         )
 
@@ -27,3 +27,8 @@ class PostView(DetailView):
     model = Post
     context_object_name = "post"
     template_name = "blog/post.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(PostView, self).get_context_data(**kwargs)
+        context['all_posts'] = Post.objects.all().order_by('-date')
+        return context

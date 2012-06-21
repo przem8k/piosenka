@@ -12,6 +12,7 @@
 	<meta name="author" content="Przemysław Pietrzkiewicz" />
 	
 	<link rel="stylesheet" href="{{ STATIC_URL }}style.css?stamp=11" type="text/css" media="screen" /> 
+	<link rel="stylesheet" href="{{ STATIC_URL }}layout.css?stamp=1" type="text/css" media="screen" /> 
 	<script type="text/javascript">
 
 		var _gaq = _gaq || [];
@@ -49,6 +50,7 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
     <script type="text/javascript" src="{{ STATIC_URL }}jquery.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}scripts/trigger.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
     {% block scripts %}{% endblock scripts %}
     

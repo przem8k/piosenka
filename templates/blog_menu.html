@@ -1,8 +1,14 @@
 <li>
-  <h2>Starsze posty</h2>
+  <h2>Wszystkie posty</h2>
   <ul>
-    {% for post in previous_posts %}
-        <li><a href="/blog/post/{{ post.id }}"><b>{{post.category}}:</b> {{ post.title }}</a></li>
+    {% for post in all_posts %}
+    	<li>
+		    <span class="date">{{ post.date|date:"d.m.Y" }} - 
+		  	<b><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></b>
+		  	{% if post.more %}
+		  	<img src="{{STATIC_URL}}/images/icons/roll.png" style="display: inline; width: 13px; height: 13px; border: 0; padding: 0; margin: 0; vertical-align: top;" align="center"/>
+		  	{% endif %}
+		</li>
     {% endfor %}
   </ul>
 </li>

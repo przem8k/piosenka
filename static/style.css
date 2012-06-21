@@ -11,23 +11,20 @@ h1,h2,h3,h4,h5,h6,p,blockquote {
 h1 {
     font-size: 18px;
     text-align: center;
-    margin: 10px 0px 20px 0px;
-    padding: 0px 5px 0px 5px;
+    margin: 10px 0 20px 0;
+    padding: 0 5px 0 5px;
 }
 
 h2 {
     font-size: 16px;
     text-align: left;
-    margin: 10px 0px 10px 0px;
-    padding: 0px 5px 0px 5px;
+    margin: 10px 0 10px 0;
+    padding: 0 5px 0 5px;
 }
 
 a {
-	
-	display: block;
 	color: #215679;
 	text-decoration: none;
-	display: inline;
 }
 
 a:hover {
@@ -38,7 +35,7 @@ a:hover {
 blockquote {
 	border: 1px dotted silver;
 	display: block;
-	margin: 0px;
+	margin: 0;
 	padding: 10px;
 	quotes: "\201C" "\201D";
 }
@@ -63,7 +60,7 @@ body {
 
 
 h2.postTitle {
-    margin: 0px;
+    margin: 0;
 	font-size: 14pt;
 	font-weight: bold;
 	color: #05546C;
@@ -143,7 +140,6 @@ h2.postTitle a:hover {
 
 .sidebar a {
 	display: block;
-	color: #333;
 	text-decoration: none;
 	display: inline;
 }
@@ -155,8 +151,8 @@ h2.postTitle a:hover {
 
 #nav ul {
 	position: relative;
-	padding: 7px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+	padding: 7px 0 0 0;
+	margin: 0 0 0 0;
 	height: 30px;
 }
 
@@ -197,41 +193,6 @@ h2.postTitle a:hover {
     margin: 0px 0px 0px 0px;
 }
 
-#content-left,#content-both,#content-none ul {
-    margin-left: 30px;
-}
-
-#stripe {
-    background: black;
-}
-
-#header-container {
-	width: 941px;
-    margin: auto;
-}
-
-
-#page-container {
-	width: 941px;
-    margin: auto;
-}
-
-#nav-container {
-    background: url("/site_media/native/images/nav-bg.png");
-    height: 30px;
-}
-
-#nav {
-    background: url("/site_media/native/images/nav.png");
-    height: 30px;
-    margin: auto;
-    width: 941px;
-}
-
-#header {
-	height: 70px;
-}
-
 #header a {
     color: white;
 }
@@ -244,63 +205,4 @@ h2.postTitle a:hover {
 	padding: 0px 15px 15px 15px; 
 	display: inline; 
 	vertical-align: middle;
-}
-
-#footer {
-	background: white;
-	height: 50px;
-	clear: both;
-	font-size: 8pt;
-	text-align: center;
-	color: black;
-	padding-top: 15px;
-}
-
-#sidebar-left {
-	background: white;
-    float: left;
-    width: 160px;
-    padding: 10px 10px 10px 10px;
-}
-
-#sidebar-right {
-	background: white;
-	float: right;
-	width: 160px;
-    padding: 10px 10px 10px 10px;
-}
-
-#sidebar-soloright {
-	background: white;
-	float: right;
-	width: 300px;
-    padding: 10px 10px 10px 10px;
-}
-
-#content-both {
-	background: white;
-	margin-left: 180px;
-	margin-right: 180px;
-	padding: 10px 10px 10px 10px;
-}
-
-#content-left {
-	background: white;
-	margin-left: 180px;
-	padding: 10px 10px 10px 10px;
-}
-
-#content-right {
-	background: white;
-	margin-right: 320px;
-	padding: 10px 10px 10px 10px;
-}
-
-#content-none {
-	background: white;
-	padding: 10px 10px 10px 10px;
-}
-
-#hull {
-    background: white;
 }

@@ -1,4 +1,4 @@
-{% extends "bnone.html" %}
+{% extends "bright.html" %}
 
 {% block title %} {{ post.title }} {% endblock %}
 
@@ -17,3 +17,7 @@
 		  </div>
 		<br />
 {% endblock content %}
+
+{% block rightmenu %}
+	{% include "blog_menu.html" %}
+{% endblock rightmenu %}
