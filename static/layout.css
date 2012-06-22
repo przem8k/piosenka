@@ -133,6 +133,19 @@
     list-style: none;
 }
 
+.sheet
+{
+	padding: 3px;
+	margin: 5px;
+	float:left;
+	background: #f0f2bf;
+	border: 1px solid #eeef97;
+	box-shadow: 5px 5px 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	-moz-box-shadow: 0 0 5px #ccc;
+}
+
+
 .frontHalf {
 	width: 453px;
 }
