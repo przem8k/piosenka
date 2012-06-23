@@ -41,8 +41,8 @@ blockquote {
 }
 
 body {
-    font-family:"Trebuchet MS",sans-serif;
-	font-size: 13px;
+	font-family: Times, serif;
+	font-size: 14px;
 	background: white;
 }
 
@@ -224,10 +224,11 @@ body {
 .widget h1
 {
     margin: 0 0 10px 0;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: bold;
 	color: slategray ;
 	text-align: left;
+	font-family: Helvetica;
 }
 
 .widget h2
