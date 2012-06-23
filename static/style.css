@@ -23,12 +23,12 @@ h2 {
 }
 
 a {
-	color: steelblue;
+	color:  #266294 ;
 	text-decoration: none;
 }
 
 a:hover {
-	color: steelblue;
+	color:  #266294 ;
 	text-decoration: underline !important;
 }
 
@@ -56,6 +56,10 @@ body {
 
 .indented {
 	padding-left:10px;
+}
+
+.post {
+	margin-top: 10px;
 }
 
 .post .meta {

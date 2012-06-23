@@ -101,8 +101,7 @@
 .widget
 {
 	padding: 3px;
-	margin: 5px;
-	float:left;
+	margin-bottom: 10px;
 	background: #f6f6f6;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -136,8 +135,6 @@
 .sheet
 {
 	padding: 3px;
-	margin: 5px;
-	float:left;
 	background: #f0f2bf;
 	border: 1px solid #eeef97;
 	box-shadow: 5px 5px 5px #ccc;
@@ -150,24 +147,45 @@
 	color: #dda004;
 }
 
-
-.frontHalf {
-	width: 453px;
+.box
+{
+	padding: 3px;
+	background: white;
+	-moz-border-radius: 5px;
+	box-shadow: 5px 5px 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	-moz-box-shadow: 0 0 5px #ccc;
 }
 
-.frontFourth {
-	width: 219px;
-}
 
 .frontThird {
+	float:left;
+	margin: 5px;
+	padding: 0;
+}
+
+.frontThird .widget, .frontThird .box, .frontThird .sheet {
 	width: 297px;
 }
 
 .padLeft {
+	float:left;
+	margin: 5px;
+	padding: 0;
+
+}
+
+.padLeft .widget, .padLeft .sheet  {
 	width: 610px;
 }
 
 .padRight {
+	float:left;
+	margin: 5px;
+	padding: 0;
+}
+
+.padRight .widget {
 	width: 290px;
 }
 

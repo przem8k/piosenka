@@ -1,0 +1,63 @@
+<div class="widget">
+	<h1>Nadchodzące wydarzenia</h1>
+	<ul>
+    {% for event in events%}
+    	<li>
+		    <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>,
+		    <a href="{{event.get_absolute_url}}">{{ event.venue.town }}: {{ event.name }}</a>
+		</li>
+	{% endfor %}
+	</ul>
+	<br />
+
+<script type="text/javascript">
+//<![CDATA[
+    var map_location;
+    
+    function savePosition_location(point)
+    {
+        var input = document.getElementById("id_location");
+        input.value = point.lat().toFixed(6) + "," + point.lng().toFixed(6);
+        map_location.panTo(point);
+    }
+    
+    function load_location() {
+        var point = new google.maps.LatLng(52.04, 19.28);
+
+        var options = {
+            zoom: 5,
+            center: point,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+            // mapTypeControl: true,
+            // navigationControl: true
+        };
+        
+        map_location = new google.maps.Map(document.getElementById("map_location"), options);
+
+        {% for event in events %}
+        
+            var marker_{{forloop.counter}} = new google.maps.Marker({
+                    map: map_location,
+                    position: new google.maps.LatLng({{event.venue.location_lat}}, {{event.venue.location_lng}}),
+                    draggable: false,
+                    url: '{{event.get_absolute_url}}',
+                    title: '{{event}}'
+            
+            });
+            
+            google.maps.event.addListener(marker_{{forloop.counter}}, 'click', function() {
+      window.location.href = marker_{{forloop.counter}}.url;
+    });
+        {% endfor %}
+
+    }
+    
+    $(document).ready(function(){
+        load_location();
+    });
+
+//]]>
+</script>
+<div id="map_location" style="width: 295px; height: 215px"></div>
+    <p align="right" style="padding: 0;"><a href="/wydarzenia/">Wydarzenia</a></p>
+</div>

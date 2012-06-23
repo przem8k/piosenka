@@ -3,7 +3,8 @@
 {% block title %}{{ post.title }} - Blog{% endblock title %}
 
 {% block hull %}
-<div class="padLeft sheet">
+<div class="padLeft">
+	<div class="sheet">
 		  <h1>{{ post.title }}</h1>
 
 		  <div class="postContent">
@@ -14,11 +15,13 @@
 		<br />
 		<hr />
 		<p>Dodany <span class="date">{{ post.date|date:"d.m.Y" }}</span> przez <b>{{ post.author }}</b> w kategorii {{ post.category }}.
-
+</div>
 </div>
 
-<div class="padRight widget">
+<div class="padRight">
+	<div class="widget">
 {% include "blog/all_posts_inc.html" %}
+</div>
 </div>
 
 {% endblock hull %}

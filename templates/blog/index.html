@@ -3,7 +3,8 @@
 {% block title %}Blog{% endblock title %}
 
 {% block hull %}
-<div class="padLeft widget">
+<div class="padLeft">
+	<div class="widget">
 <h1>Nowe posty</h1>
     {% for post in new_posts %}
 		<div class="post">
@@ -22,11 +23,13 @@
 		</div>
 		<br />
 	{% endfor %}
-
+</div>
 </div>
 
-<div class="padRight widget">
+<div class="padRight">
+	<div class="widget">
 {% include "blog/all_posts_inc.html" %}
+</div>
 </div>
 
 {% endblock hull %}
