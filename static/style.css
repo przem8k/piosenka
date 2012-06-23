@@ -152,3 +152,152 @@ body {
 	display: inline; 
 	vertical-align: middle;
 }
+
+/* stripe */
+
+#stripe {
+    background: black;
+}
+
+#header-container {
+	width: 941px;
+    margin: auto;
+}
+
+#header {
+	height: 70px;
+}
+
+/* nav */
+
+#nav-container {
+    background: url("/site_media/native/images/nav-bg.png");
+    height: 30px;
+}
+
+#nav {
+    background: url("/site_media/native/images/nav.png");
+    height: 30px;
+    margin: auto;
+    width: 941px;
+}
+
+/* page */
+
+#page-container {
+	width: 941px;
+    margin: auto;
+}
+
+#hull {
+    background: white;
+}
+
+#footer {
+	background: white;
+	height: 50px;
+	clear: both;
+	font-size: 8pt;
+	text-align: center;
+	color: black;
+	padding-top: 15px;
+}
+
+/* widget & sheet & submenu */
+
+.widget, .sheet, .submenu {
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+	box-shadow: 3px 3px 3px #ccc;
+	padding: 3px;
+	margin-bottom: 10px;
+}
+
+.widget
+{
+	background: #f6f6f6;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.widget h1
+{
+    margin: 0 0 10px 0;
+	font-size: 15px;
+	font-weight: bold;
+	color: slategray ;
+	text-align: left;
+}
+
+.widget h2
+{
+    margin: 5px 0 5px 0;
+    padding: 2px 0 2px 0;
+	font-size: 10pt;
+	border-bottom: 0 double #05546C;
+	text-align: right;
+}
+
+.widget li {
+	padding-left: 5px;
+    list-style: none;
+}
+
+.widget .selected {
+	font-weight: bold;
+}
+
+.widget .selected a {
+
+}
+
+.sheet
+{
+	background: ivory ;
+	border: 1px solid cornsilk;
+}
+
+.sheet ul
+{
+	padding-left: 25px;
+}
+
+.submenu
+{
+	background: white;
+	border: 1px solid #f6f6f6;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+/* division */
+
+.frontThird > div {
+	width: 297px;
+}
+
+.padLeft > div, .padMain > div  {
+	width: 610px;
+}
+
+
+.padRight > div, .padSidebar > div {
+	width: 290px;
+}
+
+.frontThird, .padLeft, .padRight, .padMain, .padSidebar {
+	float:left;
+	margin: 5px;
+	padding: 0;
+}
+
+.menuedLeft > div {
+	width: 200px;
+}
+
+.menuedJoined > div {
+	width: 700px;
+}
+
+/* end */
