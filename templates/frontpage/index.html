@@ -4,47 +4,12 @@
 
 
 <div class="frontThird">
+{% include "frontpage/new_posts_widget.html" %}
 
-<div class="widget">
-<h1>Nowe posty</h1>
-    {% for post in posts %}
-		<div class="post">
-		  <div class="meta">
-		    <span class="date">{{ post.date|date:"d.m.Y" }} - 
-		  	<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-		  	{% if post.more %}
-		  	<img src="{{STATIC_URL}}/images/icons/roll.png" style="display: inline; width: 13px; height: 13px; border: 0; padding: 0; margin: 0; vertical-align: top;" align="center"/>
-		  	{% endif %}
-		  </div>
-		
-		  <div class="postContent">
-		    {{ post.post|safe }}
-		    
-		    {% if post.more  %}
-		    <div style="display: none;">
-		    	{{ post.more|safe }}
-		    </div>
-		    {% endif %}
-		  </div>
-		</div>
-	{% endfor %}
-    <p align="right" style="padding: 0;"><a href="{% url blog %}">Blog</a></p>
-</div>
-
+{% include "frontpage/new_songs_widget.html" %}
 </div>
 
 <div class="frontThird">
-<div class="widget">
-	<h1>Ostatnio dodane piosenki</h1>
-	{% for song in songs %}
-    	<li>
-		    <span class="date">{{ song.0|date:"d.m.Y" }}</span>, 
-		    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>
-		</li>
-	{% endfor %}
-    <p align="right" style="padding: 0;"><a href="/spiewnik/">Śpiewnik</a></p>
-</div>
-
 {% include "frontpage/events_widget.html" %}
 </div>
 
