@@ -200,7 +200,7 @@ def get_or_none(model, **kwargs):
 
 class IndexView(View):
     template_name = "songs/index.html"
-    song_count = 20
+    song_count = 10
 
     def get(self, request):
         song_type = ContentType.objects.get(app_label="songs", model="song")
