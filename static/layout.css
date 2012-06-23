@@ -39,55 +39,6 @@
     background: white;
 }
 
-#content-left,#content-both,#content-none ul {
-    margin-left: 30px;
-}
-
-#sidebar-left {
-	background: white;
-    float: left;
-    width: 160px;
-    padding: 10px 10px 10px 10px;
-}
-
-#sidebar-right {
-	background: white;
-	float: right;
-	width: 160px;
-    padding: 10px 10px 10px 10px;
-}
-
-#sidebar-soloright {
-	background: white;
-	float: right;
-	width: 300px;
-    padding: 10px 10px 10px 10px;
-}
-
-#content-both {
-	background: white;
-	margin-left: 180px;
-	margin-right: 180px;
-	padding: 10px 10px 10px 10px;
-}
-
-#content-left {
-	background: white;
-	margin-left: 180px;
-	padding: 10px 10px 10px 10px;
-}
-
-#content-right {
-	background: white;
-	margin-right: 320px;
-	padding: 10px 10px 10px 10px;
-}
-
-#content-none {
-	background: white;
-	padding: 10px 10px 10px 10px;
-}
-
 #footer {
 	background: white;
 	height: 50px;
@@ -98,22 +49,28 @@
 	padding-top: 15px;
 }
 
-.widget
-{
+/* widget & sheet & submenu */
+
+.widget, .sheet, .submenu {
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+	box-shadow: 3px 3px 3px #ccc;
 	padding: 3px;
 	margin-bottom: 10px;
+}
+
+.widget
+{
 	background: #f6f6f6;
-	border-radius: 5px;
 	-moz-border-radius: 5px;
-	box-shadow: 5px 5px 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 }
 
 .widget h1
 {
     margin: 0 0 10px 0;
-	font-size: 14pt;
+	font-size: 15px;
 	font-weight: bold;
 	color: slategray ;
 	text-align: left;
@@ -129,64 +86,64 @@
 }
 
 .widget li {
+	padding-left: 5px;
     list-style: none;
+}
+
+.widget .selected {
+	font-weight: bold;
+}
+
+.widget .selected a {
+
 }
 
 .sheet
 {
-	padding: 3px;
-	background: #f0f2bf;
-	border: 1px solid #eeef97;
-	box-shadow: 5px 5px 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	-moz-box-shadow: 0 0 5px #ccc;
+	background: ivory ;
+	border: 1px solid cornsilk;
 }
 
-.sheet a 
+.sheet ul
 {
-	color: #dda004;
+	padding-left: 25px;
 }
 
-.box
+.submenu
 {
-	padding: 3px;
 	background: white;
+	border: 1px solid #f6f6f6;
 	-moz-border-radius: 5px;
-	box-shadow: 5px 5px 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 }
+/* division */
 
-
-.frontThird {
-	float:left;
-	margin: 5px;
-	padding: 0;
-}
-
-.frontThird .widget, .frontThird .box, .frontThird .sheet {
+.frontThird > div {
 	width: 297px;
 }
 
-.padLeft {
-	float:left;
-	margin: 5px;
-	padding: 0;
-
-}
-
-.padLeft .widget, .padLeft .sheet  {
+.padLeft > div, .padMain > div  {
 	width: 610px;
 }
 
-.padRight {
+
+.padRight > div, .padSidebar > div {
+	width: 290px;
+}
+
+.frontThird, .padLeft, .padRight, .padMain, .padSidebar {
 	float:left;
 	margin: 5px;
 	padding: 0;
 }
 
-.padRight .widget {
-	width: 290px;
+.menuedLeft > div {
+	width: 200px;
+}
+
+.menuedJoined > div {
+	width: 700px;
 }
 
 /* end */

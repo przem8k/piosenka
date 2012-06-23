@@ -1,15 +1,12 @@
-{% extends "bnone.html" %}
+{% extends "base.html" %}
 
 {% block title %}O stronie{% endblock %}
 
-{% block content %}
+{% block hull %}
+<div class="padMain">
+	<div class="sheet">
 	<h1>O stronie</h1>
 
-	<h2>Wizja</h2>
-	<p>
-		Ten fragment Internetu jest poświęcony piosence literackiej, tj. nurtowi piosenek, w którym wielkość utworu wyznacza przede wszystkim jego wartość literacka. 
-  	</p>
-  	
   	<h2>Dziękujemy</h2>
   	<p>
   	Dziękujemy za pomoc w zgromadzeniu opublikowanych materiałów, w szczególności za nadesłane opracowania, materiały i poprawki a także za pomoc techniczną. Pomogli:
@@ -46,11 +43,6 @@
 	    </ul>
 	</p>
 
-    <h2>Kontakt</h2>
-	<p>
-	    Wszelkie uwagi, sugestie, zapytania prosimy przesyłać na adres <b>redakcja malpa piosenkaztekstem kropka pl</b>.
-	</p>
-	
 	<h2>Technikalia</h2>
 	<p>
 		Strona powstała i jest rozwijana dzięki technologiom open source.
@@ -62,7 +54,17 @@
 		<img src="{{ STATIC_URL }}images/badges/postgres.gif" /> 
 		</center>
 	</p>
+</div>
+</div>
 
-	
-{% endblock content %}
+<div class="padSidebar">
+	<div class="sheet">
+    <h1>Kontakt</h1>
+	<p>
+	    Wszelkie uwagi, sugestie, zapytania, informacje o błędach prosimy przesyłać na adres <b>redakcja malpa piosenkaztekstem kropka pl</b>.
+	</p>
+</div>
+</div>
+
+{% endblock hull %}
 

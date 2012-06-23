@@ -1,34 +1,41 @@
-{% extends "bleft.html" %}
+{% extends "base.html" %}
 
 {% block title %}{{ title }}{% endblock title %}
 	
 {% load dxpartition %}
 	
-{% block content %}
-	
-	<h1>{{ title }}</h1>
-	<table width="100%">
-	<tr>
-    <th width="50%"></th>
-    <th width="50%"></th>
-  	</tr>
-	{% for row in songs|columns:2 %}
-        <tr>
-        {% if artist %}
-            {% for entry in row %}
-                <td><a href="/spiewnik/{{artist.slug}}/{{entry.song.slug}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:50 }}</a></td>
-            {% endfor %}
-        {% else %}
-            {% for entry in row %}
-                <td><a href="{{entry.song.get_absolute_url}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:50 }}</a></td>
-            {% endfor %}
-        {% endif %}
-	    </tr>
-	{% endfor %}
-	</table>
+{% block hull %}
 
-{% endblock content %}
+<div class="padSidebar">
+{% include "songs/menu.html" %}
+</div>
 
-{% block leftmenu %}
-	{% include "songs/menu.html" %}
-{% endblock leftmenu %}
+<div class="padMain">
+
+    <div class="submenu">
+    	
+    	<h1>{{ title }}</h1>
+    	<table width="100%">
+    	<tr>
+        <th width="50%"></th>
+        <th width="50%"></th>
+      	</tr>
+    	{% for row in songs|columns:2 %}
+            <tr>
+            {% if artist %}
+                {% for entry in row %}
+                    <td><a href="/spiewnik/{{artist.slug}}/{{entry.song.slug}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:42 }}</a></td>
+                {% endfor %}
+            {% else %}
+                {% for entry in row %}
+                    <td><a href="{{entry.song.get_absolute_url}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:42 }}</a></td>
+                {% endfor %}
+            {% endif %}
+    	    </tr>
+    	{% endfor %}
+    	</table>
+    </div>
+</div>
+
+{% endblock hull %}
+

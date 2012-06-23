@@ -1,18 +1,19 @@
-{% extends "bright.html" %}
+{% extends "base.html" %}
 
 {% block title %}Koncerty, przeglądy, festiwale{% endblock %}
 
-{% block content %}
+{% block hull %}
+<div class="padMain">
+    <div class="widget">
 <h1>{% block header %}Wydarzenia{% endblock header %}</h1>
 
-<h2>Chronologicznie</h2>
     {% for event in event_list %}
 	    <div style="padding-left: 10px">
 		    <span class="date">{{ event.datetime|date:"d.m.Y" }}, <b>{{ event.venue.town }}</b>, <a href="{{event.get_absolute_url}}">{{ event.name }}</a></span>
 		  </div>
 	{% endfor %}
+    <br />
 
-<h2>Geograficznie</h2>
 <script type="text/javascript">
 //<![CDATA[
     var map_location;
@@ -63,9 +64,14 @@
 </script>
         <div id="map_location" style="width: 610px; height: 420px"></div>
 
-{% endblock content %}
+</div>
+</div>
 
-{% block rightmenu %}
-	{% include "events/menu.html" %}
-{% endblock rightmenu %}
+<div class="padSidebar">
+{% include "events/menu.html" %}
+</div>
+
+{% endblock hull %}
+
+	
 

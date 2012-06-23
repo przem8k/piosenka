@@ -1,8 +1,10 @@
-{% extends "bright.html" %}
+{% extends "base.html" %}
 
 {% block title %}{{ event }}{% endblock title %}
 
-{% block content %}
+{% block hull %}
+<div class="padMain">
+	<div class="sheet">
 	<h1>{{event.name}}</h1>
 	
 <table width="100%">
@@ -44,14 +46,13 @@
 	<p><a href="{{event.website}}" target="_blank">Źrodło informacji</a></p>
 	{% endif %}
 	</blockquote>
-	
-
-	
-{% endblock content %}
+</div>
+</div>
 
 
-{% block rightmenu %}
-  <h2>Mapa</h2>
+<div class="padSidebar">
+	<div class="widget">
+  <h1>Mapa</h1>
 	<script type="text/javascript">
 //<![CDATA[
     var map_location;
@@ -95,16 +96,17 @@
 
 //]]>
 </script>
-<div id="map_location" style="width: 300px; height: 210px"></div>
-<br />
+<div id="map_location" style="width: 290px; height: 210px"></div>
+</div>
 
-
-<h2>Poleć wydarzenie</h2>
+<div class="widget">
+<h1>Poleć wydarzenie</h1>
 <table><tr>
     <td><g:plusone size="medium" annotation="none" width="20" href="{{ request.build_absolute_uri }}"></g:plusone></td>
     <td valign="top"><div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-send="false" data-layout="button_count" data-width="20" data-show-faces="false"></div></td>
 </tr></table>
-	    
-{% endblock rightmenu %}
+</div>
+</div>
+{% endblock hull %}
 
 

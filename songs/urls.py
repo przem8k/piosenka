@@ -10,9 +10,10 @@ urlpatterns = patterns('songs.views',
     url(r'^(?P<artist_slug>[-\w]+)/(?P<song_slug>[-\w]+)/drukuj/tylko-tekst/$', song_of_artist, { 'mode' : SongMode.PRINT_TEXT_ONLY } , name="print-song-text-only"),
     url(r'^(?P<artist_slug>[-\w]+)/(?P<song_slug>[-\w]+)/drukuj/$', song_of_artist, { 'mode' : SongMode.PRINT_BASIC_CHORDS } , name="print-song-basic-chords"),
     url(r'^(?P<artist_slug>[-\w]+)/(?P<song_slug>[-\w]+)/drukuj/wszystkie-akordy/$', song_of_artist, { 'mode' : SongMode.PRINT_ALL_CHORDS } , name="print-song-all-chords"),
-    url(r'^$', search_view_factory(
-        view_class=SongSearchView,
-        template='songs/index.html',
-        form_class=SearchForm,
-    )),
+    url(r'^$', IndexView.as_view()),
+    #url(r'^$', search_view_factory(
+    #    view_class=SongSearchView,
+    #    template='songs/index.html',
+    #    form_class=SearchForm,
+    #)),
 )

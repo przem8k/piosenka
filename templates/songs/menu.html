@@ -1,15 +1,21 @@
-<li>
-	<h2>Artyści</h2>
+<div class="widget">
+	<h1>Artyści</h1>
 	<ul>
-		{% for artist in artists %}
-			<li><a href="/spiewnik/{{artist.slug}}" title="{{artist}}">{{ artist }}</a></li>
+		{% for curartist in artists %}
+			<li {% if curartist == artist %}class="selected"{% endif %}>
+				<a href="/spiewnik/{{curartist.slug}}" title="{{curartist}}">{{ curartist }}</a>
+			</li>
 		{% endfor %}
 	</ul>
-	<br />
-	<h2 class="widgettitle">Zespoły</h2>
+</div>
+
+<div class="widget">
+	<h1>Zespoły</h1>
 	<ul>
-		{% for band in bands %}
-			<li><a href="/spiewnik/{{band.slug}}" title="{{band}}">{{ band }}</a></li>
+		{% for curband in bands %}
+			<li {% if curband == artist %}class="selected"{% endif %}>
+				<a href="/spiewnik/{{curband.slug}}" title="{{curband}}">{{ curband }}</a>
+			</li>
 		{% endfor %}
 	</ul>
-</li>
+</div>

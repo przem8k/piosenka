@@ -95,41 +95,6 @@ body {
 }
 
 
-.sidebar h2 {
-    margin: 0px;
-	padding: 3px 7px;
-	font-size: 11pt;
-	color: #fff !important;
-	font-weight: normal;
-	background: transparent url("/site_media/native/images/header-bg2.jpg")
-		no-repeat scroll left top;
-	margin-bottom: 3px;
-}
-
-.sidebar li {
-	list-style: none;
-}
-
-.sidebar ul {
-    	margin-bottom: 10px;
-}
-
-.sidebar li li {
-	list-style: none;
-	padding-left: 10px;
-}
-
-.sidebar a {
-	display: block;
-	text-decoration: none;
-	display: inline;
-}
-
-.sidebar a:hover {
-	color: #4C82A6;
-	text-decoration: underline;
-}
-
 #nav ul {
 	position: relative;
 	padding: 7px 0 0 0;

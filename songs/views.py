@@ -4,6 +4,9 @@ from artists.models import Artist, Band
 from django.http import HttpResponsePermanentRedirect, Http404
 from haystack.views import SearchView
 from django.shortcuts import get_object_or_404, render
+from django.views.generic import View
+from django.contrib.admin.models import LogEntry, ADDITION
+from django.contrib.contenttypes.models import ContentType
 
 from songs.transpose import transpose_lyrics
 from songs.parse import parse_lyrics
@@ -186,3 +189,27 @@ class SongSearchView(SearchView):
     #def extra_context(self):
     #    extra = super(SongSearchView, self).extra_context()
     #    return common_context()
+
+
+def get_or_none(model, **kwargs):
+    try:
+        return model.objects.get(**kwargs)
+    except model.DoesNotExist:
+        return None
+
+
+class IndexView(View):
+    template_name = "songs/index.html"
+    song_count = 20
+
+    def get(self, request):
+        song_type = ContentType.objects.get(app_label="songs", model="song")
+        entries = LogEntry.objects.filter(content_type=song_type, action_flag=ADDITION).order_by("-action_time")[:IndexView.song_count]
+        songs = [(x.action_time, get_or_none(Song, pk=x.object_id)) for x in entries if get_or_none(Song, pk=x.object_id) != None]
+        return render(
+            request,
+            self.template_name,
+            {
+                'songs': songs,
+            }
+        )

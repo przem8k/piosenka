@@ -1,10 +1,42 @@
-{% extends "bleft.html" %}
+{% extends "base.html" %}
 
-{% block title %}Śpiewnik{% endblock %}
+{% block title %}Śpiewnik{% endblock title %}
+
+{% block hull %}
+<div class="frontThird">
+{% include "songs/menu.html" %}
+</div>
+
+<div class="frontThird">
+<div class="widget">
+    <h1>Ostatnio dodane piosenki</h1>
+    {% for song in songs %}
+        <li>
+            <span class="date">{{ song.0|date:"d.m.Y" }}</span>, 
+            <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>
+        </li>
+    {% endfor %}
+</div>
+</div>
+
+<div class="frontThird">
+    <div class="sheet" style="text-align: justify;">
+        <h1>Śpiewnik</h1>
+
+        <p>Próba zebrania w jednym miejscu materiałów rozrzuconych dotąd w różnych miejscach Internetu i prywatnych zbiorach.</p>
+        <p>Tam gdzie to możliwe, staramy się współpracować z autorami piosenek; za cel stawiając sobie raczej poprawność i czytelność opracowań niż ich dużą ilość.</p>  
+    </div>
+</div>
+
+
+
+{% endblock hull %}
+
+
 
 {% load dxpartition %}
 
-{% block content %}
+{% comment %}
 	<h1>Śpiewnik</h1>
 
     <form method="get" action=".">
@@ -46,9 +78,4 @@
             {# Show some example queries to run, maybe query syntax, something else? #}
         {% endif %}
     </form>
-{% endblock %}
-
-
-{% block leftmenu %}
-	{% include "songs/menu.html" %}
-{% endblock leftmenu %}
+{% endcomment %}
