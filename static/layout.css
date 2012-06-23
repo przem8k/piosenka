@@ -116,7 +116,7 @@
     margin: 0 0 10px 0;
 	font-size: 14pt;
 	font-weight: bold;
-	color: #05546C;
+	color: slategray ;
 	text-align: left;
 }
 
@@ -143,6 +143,11 @@
 	box-shadow: 5px 5px 5px #ccc;
 	-webkit-box-shadow: 0 0 5px #ccc;
 	-moz-box-shadow: 0 0 5px #ccc;
+}
+
+.sheet a 
+{
+	color: #dda004;
 }
 
 

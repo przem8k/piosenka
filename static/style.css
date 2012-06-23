@@ -23,12 +23,12 @@ h2 {
 }
 
 a {
-	color: #0F92BC;
+	color: steelblue;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #0F92BC;
+	color: steelblue;
 	text-decoration: underline !important;
 }
 

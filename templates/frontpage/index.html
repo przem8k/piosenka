@@ -25,19 +25,20 @@
 		    {% endif %}
 		  </div>
 		</div>
-		<br />
 	{% endfor %}
+    <p align="right" style="padding: 0;"><a href="{% url blog %}">Blog</a></p>
 
 </div>
 
 <div class="frontThird widget">
-	<h1>Nowe piosenki</h1>
+	<h1>Ostatnio dodane piosenki</h1>
 	{% for song in songs %}
     	<li>
 		    <span class="date">{{ song.0|date:"d.m.Y" }}</span>, 
 		    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>
 		</li>
 	{% endfor %}
+    <p align="right" style="padding: 0;"><a href="/spiewnik/">Śpiewnik</a></p>
 </div>
 
 <div class="frontThird widget">
@@ -101,7 +102,7 @@
 //]]>
 </script>
 <div id="map_location" style="width: 295px; height: 215px"></div>
-<br />
+    <p align="right" style="padding: 0;"><a href="/wydarzenia/">Wydarzenia</a></p>
 </div>
 	    
 {% endblock hull %}
