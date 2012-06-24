@@ -40,18 +40,15 @@
 	{% if song.score1 or song.score2 or song.score3 %}
 	<div class="widget">
 		<h1>Nuty</h1>
-	    <ul>
-	        {% if song.score1 %}
-            <li><a href="{{song.score1.url}}"><img src='{{ song.score1.path|thumbnail:"280w,scores" }}' alt="{{ song.score1.title }}" title="{{ song.score1.title }}" /></a></li>
-            {% endif %}	
-	        {% if song.score2 %}
-            <li><a href="{{song.score2.url}}"><img src='{{ song.score2.path|thumbnail:"280w,scores" }}' alt="{{ song.score2.title }}" title="{{ song.score2.title }}" /></a></li>
-            {% endif %}	
-	        {% if song.score3 %}
-            <li><a href="{{song.score3.url}}"><img src='{{ song.score3.path|thumbnail:"280w,scores" }}' alt="{{ song.score3.title }}" title="{{ song.score1.title }}" /></a></li>
-            {% endif %}	
-	    </ul>
-
+        {% if song.score1 %}
+        <center><a href="{{song.score1.url}}"><img src='{{ song.score1.path|thumbnail:"180w,scores" }}'/></a></center><br />
+        {% endif %}	
+        {% if song.score2 %}
+        <center><a href="{{song.score2.url}}"><img src='{{ song.score2.path|thumbnail:"180w,scores" }}'/></a></center><br />
+        {% endif %}	
+        {% if song.score3 %}
+        <center><a href="{{song.score3.url}}"><img src='{{ song.score3.path|thumbnail:"180w,scores" }}'/></a></center><br />
+        {% endif %}	
 	</div>
 	{% endif %}
 
