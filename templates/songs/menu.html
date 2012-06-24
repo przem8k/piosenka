@@ -1,21 +1,26 @@
 <div class="widget">
-	<h1>Artyści</h1>
-	<ul>
-		{% for curartist in artists %}
-			<li {% if curartist == artist %}class="selected"{% endif %}>
-				<a href="/spiewnik/{{curartist.slug}}" title="{{curartist}}">{{ curartist }}</a>
-			</li>
-		{% endfor %}
-	</ul>
-</div>
-
-<div class="widget">
-	<h1>Zespoły</h1>
-	<ul>
-		{% for curband in bands %}
-			<li {% if curband == artist %}class="selected"{% endif %}>
-				<a href="/spiewnik/{{curband.slug}}" title="{{curband}}">{{ curband }}</a>
-			</li>
-		{% endfor %}
-	</ul>
+    <table class="splitter">
+        <tr>
+            <td>
+                <h1>Artyści</h1>
+                <ul>
+                    {% for curartist in artists %}
+                        <li {% if curartist == artist %}class="selected"{% endif %}>
+                            <a href="/spiewnik/{{curartist.slug}}" title="{{curartist}}">{{ curartist }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <h1>Zespoły</h1>
+                <ul>
+                    {% for curband in bands %}
+                        <li {% if curband == artist %}class="selected"{% endif %}>
+                            <a href="/spiewnik/{{curband.slug}}" title="{{curband}}">{{ curband }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+    </table>
 </div>

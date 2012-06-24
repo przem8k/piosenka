@@ -3,23 +3,15 @@
 {% block title %}Śpiewnik{% endblock title %}
 
 {% block hull %}
-<div class="frontThird">
+<div class="padMain">
 {% include "songs/menu.html" %}
 </div>
 
-<div class="frontThird">
-<div class="widget">
-    <h1>Ostatnio dodane piosenki</h1>
-    {% for song in songs %}
-        <li>
-            <span class="date">{{ song.0|date:"d.m.Y" }}</span>, 
-            <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>
-        </li>
-    {% endfor %}
-</div>
-</div>
 
-<div class="frontThird">
+
+
+
+<div class="padSidebar">
     <div class="sheet" style="text-align: justify;">
         <h1>Śpiewnik</h1>
 

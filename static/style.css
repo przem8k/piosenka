@@ -126,8 +126,8 @@ body {
     display: inline;
     font-size: 27px;
     font-family: sans-serif;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 
 #pagemotto {
@@ -135,8 +135,8 @@ body {
     text-align: left;
     font-size: 15px;
     font-weight: normal;
-    padding: 0px 0px 0px 250px;
-    margin: 0px 0px 0px 0px;
+    padding: 0 0 0 250px;
+    margin: 0 0 0 0;
 }
 
 #header a {
@@ -148,7 +148,7 @@ body {
 }
 
 #logo {
-	padding: 0px 15px 15px 15px; 
+	padding: 0 15px 15px 15px; 
 	display: inline; 
 	vertical-align: middle;
 }
@@ -250,7 +250,7 @@ body {
 }
 
 .widget .selected a {
-
+	font-weight: bold;
 }
 
 .sheet
@@ -293,12 +293,15 @@ body {
 	padding: 0;
 }
 
-.menuedLeft > div {
-	width: 200px;
+.splitter {
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.menuedJoined > div {
-	width: 700px;
+.splitter th, .splitter td {
+    padding: 0;
+    width: 50%;
+    vertical-align: top;
 }
 
 /* end */
