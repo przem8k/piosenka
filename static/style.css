@@ -255,8 +255,8 @@ body {
 
 .sheet
 {
-	background: ivory ;
-	border: 1px solid cornsilk;
+	background: white;
+	border: 1px solid lightgrey ;
 }
 
 .sheet ul
@@ -266,12 +266,12 @@ body {
 
 .submenu
 {
-	background: white;
-	border: 1px solid #f6f6f6;
+	background: #f6f6f6;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
+
 /* division */
 
 .frontThird > div {
