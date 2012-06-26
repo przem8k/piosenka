@@ -41,8 +41,8 @@ blockquote {
 }
 
 body {
-	font-family: 'Andada', serif;
-	font-size: 15px;
+	font-family: 'Habibi', serif;
+	font-size: 14px;
 	background: white;
 }
 
@@ -116,7 +116,7 @@ body {
 	text-decoration: none;
 	color: #444444;
 	text-transform: uppercase;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 #nav ul li a:hover{
