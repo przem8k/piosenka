@@ -1,9 +1,10 @@
+<div class="lyrics">
 {% for paragraph in lyrics %}
 	<table>
 	{% for line in paragraph %}
 		<tr>
 			{% if line.2 %}<td class="indented">{% else %}<td>{% endif %}{{ line.0 }}</td>
-			<td class="indented"><b>
+			<td class="indented"><b><span class="chords">
 				{% if any_chords %}
 					{% if line.3 and distinguish_extra_chords %}
 						<span class="extra-chords">{{ line.1 }}</span>
@@ -11,7 +12,7 @@
 						{{ line.1 }}
 					{% endif %}
 				{% endif %}
-			</b></td>
+			</span></b></td>
 		</tr>
 	{% endfor %}
 	</table>
@@ -19,3 +20,4 @@
 	<br />
 	{% endif %}
 {% endfor %}
+</div>

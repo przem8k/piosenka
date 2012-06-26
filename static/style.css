@@ -41,9 +41,13 @@ blockquote {
 }
 
 body {
-	font-family: Times, serif;
+	font-family: 'Gentium Basic', serif;
 	font-size: 14px;
 	background: white;
+}
+
+.lyrics {
+	font-family: 'Arial', sans-serif;
 }
 
 .alignright {
@@ -112,7 +116,7 @@ body {
 	text-decoration: none;
 	color: #444444;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 #nav ul li a:hover{
@@ -125,7 +129,6 @@ body {
     text-align: left;
     display: inline;
     font-size: 27px;
-    font-family: sans-serif;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
 }
@@ -228,7 +231,6 @@ body {
 	font-weight: bold;
 	color: slategray ;
 	text-align: left;
-	font-family: Helvetica;
 }
 
 .widget h2
