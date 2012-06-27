@@ -41,9 +41,10 @@ blockquote {
 }
 
 body {
-	font-family: helvetica, sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 14px;
 	background: white;
+	letter-spacing: 0;
 }
 
 .lyrics {
@@ -129,7 +130,6 @@ body {
     text-align: left;
     display: inline;
     font-size: 27px;
-    font-family: 'Gentium Basic', serif;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
 }
@@ -260,7 +260,7 @@ body {
 
 .sheet h1, .widget h1, .submenu h1
 {
-	font-family: 'Gentium Basic', serif;
+
 }
 
 .submenu
