@@ -41,7 +41,7 @@ blockquote {
 }
 
 body {
-	font-family: 'Habibi', serif;
+	font-family: helvetica, sans-serif;
 	font-size: 14px;
 	background: white;
 }
@@ -129,16 +129,8 @@ body {
     text-align: left;
     display: inline;
     font-size: 27px;
+    font-family: 'Gentium Basic', serif;
     padding: 0 0 0 0;
-    margin: 0 0 0 0;
-}
-
-#pagemotto {
-    color: white;
-    text-align: left;
-    font-size: 15px;
-    font-weight: normal;
-    padding: 0 0 0 250px;
     margin: 0 0 0 0;
 }
 
@@ -264,6 +256,11 @@ body {
 .sheet ul
 {
 	padding-left: 25px;
+}
+
+.sheet h1, .widget h1, .submenu h1
+{
+	font-family: 'Gentium Basic', serif;
 }
 
 .submenu
