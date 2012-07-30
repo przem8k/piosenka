@@ -20,6 +20,7 @@ class Post(models.Model):
     date = models.DateTimeField()
     post = models.TextField()
     more = models.TextField(blank=True, null=True)
+    published = models.BooleanField(default=True, help_text="Only admins see not-published posts")
 
     @models.permalink
     def get_absolute_url(self):

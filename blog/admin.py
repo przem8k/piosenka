@@ -5,7 +5,7 @@ from datetime import datetime
 
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ['title']}
-    fields = ('title', 'slug', 'category', 'post', 'more',)
+    fields = ('title', 'slug', 'category', 'published', 'post', 'more',)
 
     def save_model(self, request, obj, form, change):
         if not change:
