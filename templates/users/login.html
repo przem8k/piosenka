@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Logowanie{% endblock title %}
+
+{% block hull %}
+<div class="padMain">
+
+<div class="widget">
+<table width="100%">
+    <tr>
+        <th width="50%"></th>
+        <th width="50%"></th>
+    </tr>
+    <tr>
+    <td valign="top">
+        <h1>Logowanie</h1>
+        <p>Jeśli posiadasz już konto <i>Piosenki z tekstem</i>, zaloguj się przy pomocy formularza poniżej.</p>
+    </td>
+
+    <td valign="top">
+        <h1>Rejestracja</h1>
+        
+        <p>Jeśli nie posiadasz jeszcze konta <i>Piosenki z tekstem</i>, możesz je założyć przy pomocy formularza poniżej.</p>
+    </td>
+</tr>
+<tr>
+    <td valign="top">
+
+        {% if login_form.non_field_errors %}
+            <p>{{ login_form.non_field_errors }}</p>
+        {% endif %}
+        
+        <form action="" method="post">{% csrf_token %}
+        <table>
+        {% for field in login_form %}
+            <tr>
+                <td><b> {{ field.label }}: </b></td>
+                <td> {{ field }} {{ field.errors }} </td>
+            </tr>
+        {% endfor %}
+        </table>
+        <input type="submit" name="login_submit" value="Zaloguj">
+        </form>
+    </td>
+    <td valign="top">
+        
+
+        
+        {% if registration_form.non_field_errors %}
+            <p>{{ registration_form.non_field_errors }}</p>
+        {% endif %}
+        
+        <form action="" method="post">{% csrf_token %}
+        <table>
+        {% for field in registration_form %}
+            <tr>
+                <td><b> {{ field.label }}: </b></td>
+                <td> {{ field }} {{ field.errors }} </td>
+            </tr>
+        {% endfor %}
+        </table>
+        <input type="submit" name="registration_submit" value="Zarejestruj">
+        </form>
+    </td>
+    </tr>
+    </table>
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="padSidebar">
+    <div class="sheet" style="text-align: justify;">
+        <h1>Konto <i>Piosenki z tekstem</i></h1>
+
+        <p>Cała treść zawarta na <i>Piosence z tekstem</i> jest dostępna dla niezarejestrowanych użytkowników.</p>
+
+        <p>Rejestracja jest wymagana do wpływania na zawartość serwisu: zgłaszania błędów i komentowania zawartości.</p>
+    </div>
+</div>
+
+
+
+{% endblock hull %}

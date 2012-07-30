@@ -50,6 +50,7 @@
 
     <script type="text/javascript" src="{{ STATIC_URL }}jquery.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}scripts/trigger.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}scripts/messages.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
     {% block scripts %}{% endblock scripts %}
     
@@ -94,6 +95,11 @@
 
 
 <div id="page-container">
+	{% if messages %}
+    <div class="messagebox">
+        {% for message in messages %} {{ message }} {% endfor %}
+    </div>
+    {% endif %}
 	<div id="hull">
 	    {% block hull %}
 

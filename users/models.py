@@ -9,6 +9,8 @@ class Profile(models.Model):
     user = models.OneToOneField(User, blank=False)
     activation_key = models.CharField(max_length=50)
 
+    hide_real_name = models.BooleanField(default=False)
+
     def email(self):
         return self.user.email
 

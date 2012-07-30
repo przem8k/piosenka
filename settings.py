@@ -30,6 +30,16 @@ except ImportError:
         }
     }
 
+try:
+    from settings_production import EMAIL_HOST
+    from settings_production import EMAIL_HOST_USER
+    from settings_production import EMAIL_HOST_PASSWORD
+    from settings_production import DEFAULT_FROM_EMAIL
+    from settings_production import SERVER_EMAIL
+    from settings_production import EMAIL_USE_TLS
+except ImportError:
+    pass
+
 TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'en-us'
 
