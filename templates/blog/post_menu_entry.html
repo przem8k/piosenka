@@ -10,7 +10,8 @@
 
   <div class="postContent">
     {{ post.post|safe }}
-   
+
+    {% if post.more %}<p><a href="{{ post.get_absolute_url }}">Czytaj dalej</a></p>{% endif %}
   </div>
 </div>
 {% endif %}
