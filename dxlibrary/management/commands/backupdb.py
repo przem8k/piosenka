@@ -26,7 +26,7 @@ class Command(BaseCommand):
 
         backup_name = time.strftime('%y%m%d-%H%M%S')
 
-        backup_root = os.path.join(os.environ['HOME'], 'backup/av_website')
+        backup_root = os.path.join(os.environ['HOME'], 'backup/piosenka')
         directory = os.path.join(backup_root, backup_name)
 
         if not os.path.exists(directory):
