@@ -1,15 +1,5 @@
 import os
 
-# Django settings both for production and developement environment
-
-DEVELOPEMENT_SERVER_USERNAMES = ["dx",] # append your local username if You wish / need to
-
-PRODUCTION_SETTINGS = not (os.getenv("USER") in DEVELOPEMENT_SERVER_USERNAMES)
-
-
-DEBUG = not PRODUCTION_SETTINGS
-TEMPLATE_DEBUG = DEBUG
-
 ADMINS = (
      ('Przemyslaw Pietrzkiewicz', 'pietrzkiewicz@gmail.com'),
 )
@@ -18,27 +8,24 @@ MANAGERS = ADMINS
 
 try:
     from settings_production import DATABASES
-except ImportError:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'playground',
-            'USER': 'playboy',
-            'PASSWORD': 'play',
-            'HOST': '',
-            'PORT': '',
-        }
-    }
+    from settings_production import SECRET_KEY
 
-try:
     from settings_production import EMAIL_HOST
     from settings_production import EMAIL_HOST_USER
     from settings_production import EMAIL_HOST_PASSWORD
     from settings_production import DEFAULT_FROM_EMAIL
     from settings_production import SERVER_EMAIL
     from settings_production import EMAIL_USE_TLS
+
+    from settings_production import S3BUCKET
+    PRODUCTION_SETTINGS = True
 except ImportError:
-    pass
+    from settings_local import DATABASES
+    from settings_local import SECRET_KEY
+    PRODUCTION_SETTINGS = False
+
+DEBUG = not PRODUCTION_SETTINGS
+TEMPLATE_DEBUG = DEBUG
 
 TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'en-us'
@@ -47,7 +34,6 @@ SITE_ID = 1
 USE_I18N = False
 USE_L10N = True
 
-import os
 PROJECT_PATH = os.path.abspath(os.path.split(__file__)[0])
 
 MEDIA_ROOT = os.path.join(PROJECT_PATH, "site_media", "upload")
@@ -64,7 +50,7 @@ STATICFILES_DIRS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'o@c*tih1vzy69-#wv16(^a7sgsv5l^vw7fah&+ttvyjyi@7)jr'
+
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
