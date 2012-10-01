@@ -19,10 +19,6 @@ body
 	padding-left: 20px;
 }
 
-.print .not-for-print
-{
-	display: none;
-}
 
 /* header & footer */
 
@@ -68,6 +64,22 @@ body
 	color: slategray;
 }
 
+/* printing */
+
+.print .not-for-print
+{
+	display: none;
+}
+
+.only-for-print
+{
+	display: none;
+}
+
+.print .only-for-print
+{
+	display: block
+}
 
 
 /* songbook menu */
