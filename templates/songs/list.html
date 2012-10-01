@@ -1,48 +1,55 @@
-{% extends "base.html" %}
+{% extends "base-next.html" %}
 
 {% block title %}{{ title }}{% endblock title %}
 	
 {% load dxpartition %}
 	
-{% block hull %}
+{% block content %}
 
-<div class="padMain">
+{% include "songs/top.html" %}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+
+
+        	<h3 class="underline remove-top-margin">{{ title }}</h3>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 20px;">
+        <div class="span6">
+            <table width="100%">
+            {% for entry in songs|rows:2|first %}
+                
+                {% if artist %}
+                        <tr><td><a href="/spiewnik/{{artist.slug}}/{{entry.song.slug}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:42 }}</a></td></tr>
+                {% else %}
+                        <tr><td><a href="{{entry.song.get_absolute_url}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:42 }}</a></td></tr>
+                {% endif %}
+            {% endfor %}
+            </table>
+        </div>
+        <div class="span6">
+            <table width="100%">
+            {% for entry in songs|rows:2|last %}
+                
+                {% if artist %}
+                        <tr><td><a href="/spiewnik/{{artist.slug}}/{{entry.song.slug}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:42 }}</a></td></tr>
+                {% else %}
+                        <tr><td><a href="{{entry.song.get_absolute_url}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:42 }}</a></td></tr>
+                {% endif %}
+            {% endfor %}
+            </table>
+        </div>
+
+        	
+
+    </div>
+</div>
+
 {% include "songs/menu.html" %}
 
-
-    <div class="submenu">
-    	
-    	<h1>{{ title }}</h1>
-    	<table width="100%">
-    	<tr>
-        <th width="50%"></th>
-        <th width="50%"></th>
-      	</tr>
-    	{% for row in songs|columns:2 %}
-            <tr>
-            {% if artist %}
-                {% for entry in row %}
-                    <td><a href="/spiewnik/{{artist.slug}}/{{entry.song.slug}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:42 }}</a></td>
-                {% endfor %}
-            {% else %}
-                {% for entry in row %}
-                    <td><a href="{{entry.song.get_absolute_url}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:42 }}</a></td>
-                {% endfor %}
-            {% endif %}
-    	    </tr>
-    	{% endfor %}
-    	</table>
-    </div>
-</div>
-
-<div class="padSidebar">
-    <div class="sheet" style="text-align: justify;">
-        <h1>Śpiewnik</h1>
-
-        <p>Próba zebrania w jednym miejscu materiałów rozrzuconych dotąd w różnych miejscach Internetu i prywatnych zbiorach.</p>
-        <p>Tam gdzie to możliwe, staramy się współpracować z autorami piosenek; za cel stawiając sobie raczej poprawność i czytelność opracowań niż ich dużą ilość.</p>  
-    </div>
-</div>
-
-{% endblock hull %}
+{% endblock content %}
 

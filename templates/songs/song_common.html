@@ -1,7 +1,4 @@
-    <h1>{{ song.title }}</h1>
-	{% if song.disambig.count > 0 %}
-		<h4 align="center">{{song.disambig}}</h4>
-	{% endif %}
+    <h3 class="remove-top-margin">{{ song.title }}</h3>
 	
 	<table width="100%">
 	<tr><td valign="top" width="60%">
@@ -82,6 +79,6 @@
 	
 	<br />
 	
-	<blockquote>
+	<blockquote class="custom-blockquote">
 	{{ lyrics|safe }}
 	</blockquote>

@@ -1,0 +1,110 @@
+body {
+	padding-top: 41px;
+	padding-bottom: 40px;
+}
+
+/* navbar */
+
+.feather
+{
+	background: url("/site_media/native/images/feather_40.png") no-repeat left top;
+	padding-left: 20px;
+}
+
+/* header & footer */
+
+.header
+{
+	border-bottom: 1px solid #BBB;
+	background: url("/site_media/native/images/patterns/paper.png");
+}
+
+.header+.container
+{
+	margin-top: 20px;
+}
+
+.footer
+{
+	padding: 20px 0 20px 0;
+	border-top: 1px solid #BBB;
+	background: url("/site_media/native/images/patterns/paper.png");
+}
+
+/* htools */
+
+.remove-top-margin
+{
+	margin-top: 0;
+}
+
+.underline
+{
+	border-bottom: 1px solid #BBB;
+}
+
+
+/* content-widget */
+
+.content-widget h1
+{
+	margin-top: 0;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: bold;
+	color: slategray;
+}
+
+
+
+/* songbook menu */
+
+.thumbnails .selected
+{
+	background-color: #0088cc;
+}
+
+.thumbnails .selected a
+{
+	color: white;
+}
+
+/* lyrics rendering */
+
+.indented {
+	padding-left:10px;
+}
+
+/* chords toggling */
+
+.extra-chords-trigger {
+    cursor: pointer;
+    color: #215679;
+    font-size: 9pt;    
+}
+
+.extra-chords {
+    display: none;
+}
+
+/* customize blockquoute */
+
+.lead-quote
+{
+	padding-top: 20px;
+}
+
+.custom-blockquote {
+  padding: 0 0 0 10px;
+  margin: 0 0 20px 5px;
+  border-left: 3px solid #0088cc;
+}
+
+/* other */
+
+.date {
+	background: url("/site_media/native/images/date.gif") left no-repeat;
+	padding: 0 0 0 15px;
+}
+
+/* ... */

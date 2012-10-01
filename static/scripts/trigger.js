@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	$(".trigger").click(function() {
-		$(this).siblings("div").slideToggle("fast");
+	
+	$(".extra-chords-trigger").click(function() {
+	    $(".extra-chords").toggle();
 	});
 });

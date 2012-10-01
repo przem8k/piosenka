@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base-next.html" %}
 
 {% block title %}{{ song.title }}{% endblock title %}
 
@@ -6,68 +6,77 @@
 
 {% block description %}Opracowanie piosenki {{song.title}}{% endblock description %}
 
-{% block scripts %}
-<script type="text/javascript" src="{{ STATIC_URL }}scripts/song_panel.js"></script>
-{% endblock scripts %}
+{% block content %}
 
-{% block hull %}
-<div class="padMain">
+    {% include "songs/top.html" %}
 
-    <div class="sheet">
-    	
-		{% include 'songs/song_common.html' %}
+    <div class="container main">
+    	<div class="row">
+    		<div class="span8">
+    			{% include 'songs/song_common.html' %}
+    		</div>
+
+    		<div class="span4">
+				<div class="well well-small content-widget">
+	    		<h1>Wersja do druku</h1>
+			    <ul class="unstyled">
+			        {% if extra %}
+			        <li><a href="{% url print-song-basic-chords artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Podstawowe akordy</a></li>
+			        <li><a href="{% url print-song-all-chords artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - wszystkie akordy">Wszystkie akordy</a></li>
+			        {% else %}
+			        <li><a href="{% url print-song-basic-chords artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Tekst i akordy</a></li>
+			        {% endif %}
+			        <li><a href="{% url print-song-text-only artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - tylko tekst">Tylko tekst</a></li>
+			    </ul>
+				</div>
+
+				{% if song.score1 or song.score2 or song.score3 %}
+				<div class="well well-small content-widget">
+					<h1>Nuty</h1>
+			        {% if song.score1 %}
+			        <center><a href="{{song.score1.url}}"><img src='{{ song.score1.path|thumbnail:"180w,scores" }}'/></a></center><br />
+			        {% endif %}	
+			        {% if song.score2 %}
+			        <center><a href="{{song.score2.url}}"><img src='{{ song.score2.path|thumbnail:"180w,scores" }}'/></a></center><br />
+			        {% endif %}	
+			        {% if song.score3 %}
+			        <center><a href="{{song.score3.url}}"><img src='{{ song.score3.path|thumbnail:"180w,scores" }}'/></a></center><br />
+			        {% endif %}	
+				</div>
+				{% endif %}
+
+			    {% if song.link_youtube or song.link_wrzuta or external_links %}
+				<div class="well well-small content-widget">
+				    <h1>Linki</h1>
+				    <ul class="unstyled">
+				        {% if song.link_youtube %}
+				        <li><a href="{{song.link_youtube}}" target="_blank">Nagranie (Youtube)</a></li>
+				        {% endif %}
+				        {% if song.link_wrzuta %}
+				        <li><a href="{{song.link_wrzuta}}" target="_blank">Nagranie (Wrzuta)</a></li>
+				        {% endif %}
+				        {% for link in external_links %}
+				        <li><a href="{{link.1}}" target="_blank">{{link.0}}</a></li>
+				        {% endfor %}
+				    </ul> 
+				</div>  
+				{% endif %} 
+    		</div>
+
+    	</div>
+
     </div>
-</div>
+
+{% endblock content %}
+
+
+{% comment %}
 
 
 <div class="padSidebar">
 
-
-<div class="widget">
-	    <h1>Wersja do druku</h1>
-    <ul>
-        {% if extra %}
-        <li><a href="{% url print-song-basic-chords artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Podstawowe akordy</a></li>
-        <li><a href="{% url print-song-all-chords artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - wszystkie akordy">Wszystkie akordy</a></li>
-        {% else %}
-        <li><a href="{% url print-song-basic-chords artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Tekst i akordy</a></li>
-        {% endif %}
-        <li><a href="{% url print-song-text-only artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - tylko tekst">Tylko tekst</a></li>
-    </ul>
-</div>
-
     
-	{% if song.score1 or song.score2 or song.score3 %}
-	<div class="widget">
-		<h1>Nuty</h1>
-        {% if song.score1 %}
-        <center><a href="{{song.score1.url}}"><img src='{{ song.score1.path|thumbnail:"180w,scores" }}'/></a></center><br />
-        {% endif %}	
-        {% if song.score2 %}
-        <center><a href="{{song.score2.url}}"><img src='{{ song.score2.path|thumbnail:"180w,scores" }}'/></a></center><br />
-        {% endif %}	
-        {% if song.score3 %}
-        <center><a href="{{song.score3.url}}"><img src='{{ song.score3.path|thumbnail:"180w,scores" }}'/></a></center><br />
-        {% endif %}	
-	</div>
-	{% endif %}
-
-    {% if song.link_youtube or song.link_wrzuta or external_links %}
-	<div class="widget">
-	    <h1>Linki</h1>
-	    <ul>
-	        {% if song.link_youtube %}
-	        <li><a href="{{song.link_youtube}}" target="_blank">Nagranie (Youtube)</a></li>
-	        {% endif %}
-	        {% if song.link_wrzuta %}
-	        <li><a href="{{song.link_wrzuta}}" target="_blank">Nagranie (Wrzuta)</a></li>
-	        {% endif %}
-	        {% for link in external_links %}
-	        <li><a href="{{link.1}}" target="_blank">{{link.0}}</a></li>
-	        {% endfor %}
-	    </ul> 
-	</div>  
-	{% endif %}    
+   
 
 	<div class="widget">
 	    <h1>Poleć piosenkę</h1>
@@ -99,7 +108,7 @@
 
 
 
-{% endblock hull %}
+{% endcomment %}
 
 
 

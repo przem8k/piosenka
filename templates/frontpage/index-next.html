@@ -3,14 +3,14 @@
 {% block content %}
 
     <div class="header">
-    	<div class="container">
+    	<div class="container feather-bottom">
     		<div class="row">
 	  			<div class="span6">
 	  				<h2>Piosenka z tekstem</h2>
 	  				<p>Strona poświęcona piosence literackiej. Artykuły, relacje z koncertów i opracowania piosenek, których <i>wymiar między konkretem a przestrzenią jest zupełnie niepojęty</i>.</p>
 	  			</div>
 	  			<div class="span6 lead-quote">
-	  				<blockquote class="custom-blockquote">Tylko się pierwszy raz daj objąć <br />
+	  				<blockquote>Tylko się pierwszy raz daj objąć <br />
 						A niech już sobie krytyk kracze! <br />
 						Choć mnodzy wciąż to z Tobą robią <br />
 						Daj wierzyć - zrobię to inaczej
@@ -25,13 +25,12 @@
     <div class="container">
     	<div class="row">
   			<div class="span4">
-  				<h4 class="remove-top-margin">Blog</h4>
-			    {% for post in posts %}
-					{% include "blog/post_menu_entry.html" %}
-				{% endfor %}
+  				<h4>Blog</h4>
+  				<p>Nowe posty:</p>
+
   			</div>
   			<div class="span8">
-	  			<div id="frontCarousel" class="carousel slide">
+	  			<div id="myCarousel" class="carousel slide">
 				  <!-- Carousel items -->
 				  <div class="carousel-inner">
 				    <div class="active item">
@@ -57,31 +56,27 @@
 				    </div>
 				  </div>
 				  <!-- Carousel nav -->
-				  <a class="carousel-control left" href="#frontCarousel" data-slide="prev">&lsaquo;</a>
-				  <a class="carousel-control right" href="#frontCarousel" data-slide="next">&rsaquo;</a>
+				  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 				</div>
   				
   			</div>
 		</div>
 		<div class="row">
-			<div class="span4"><h4>Nowe opracowania</h4>
-				<ul class="unstyled">
-					{% for song in songs %}
-				    	<li>
-						    <span class="date">{{ song.0|date:"d.m.Y" }}</span>, 
-						    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>
-						</li>
-					{% endfor %}
-				</ul>
+			<div class="span4"><h4>Śpiewnik</h4>
+			<p>Nowe opracowania:</p>
+				<ul>
+  					<li><a href="/">Mury</a></li>
+  					<li><a href="/">Obława</a></li>
+  					<li><a href="/">Z XVI-wiecznym portretem trumiennym rozmowa</a></li>
+  				</ul>				
 			</div>
-			<div class="span4"><h4>Nadchodzące wydarzenia</h4>
-				<ul class="unstyled">
-				    {% for event in events%}
-				    	<li>
-						    <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>,
-						    <a href="{{event.get_absolute_url}}">{{ event.venue.town }}: {{ event.name }}</a>
-						</li>
-					{% endfor %}
+			<div class="span4"><h4>Wydarzenia</h4>
+			<p>Nadchodzące wydarzenia:</p>
+				<ul>
+  					<li><a href="/">Abc</a></li>
+  					<li><a href="/">Cde</a></li>
+  					<li><a href="/">Efg</a></li>
   				</ul>				
 			</div>
 			<div class="span4"><h4>Facebook</h4>
@@ -92,6 +87,5 @@
 
 
     </div> <!-- /container -->
-
 	    
 {% endblock content %}
