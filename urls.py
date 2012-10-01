@@ -26,6 +26,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     #index
     url(r'^$', frontpage.views.IndexView.as_view(), name="index"),
+    #new design development
+    url(r'^bootstrap/$', TemplateView.as_view(template_name="frontpage/index-next.html")),
 )
 
 from django.conf import settings

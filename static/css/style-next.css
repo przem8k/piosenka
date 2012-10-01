@@ -1,7 +1,15 @@
-body {
+body 
+{
 	padding-top: 41px;
 	padding-bottom: 40px;
 }
+
+.print /* navbar is not shown in print versions */
+{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 
 /* navbar */
 
@@ -9,6 +17,11 @@ body {
 {
 	background: url("/site_media/native/images/feather_40.png") no-repeat left top;
 	padding-left: 20px;
+}
+
+.print .not-for-print
+{
+	display: none;
 }
 
 /* header & footer */
@@ -98,6 +111,12 @@ body {
   padding: 0 0 0 10px;
   margin: 0 0 20px 5px;
   border-left: 3px solid #0088cc;
+}
+
+.print .custom-blockquote{
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 /* other */

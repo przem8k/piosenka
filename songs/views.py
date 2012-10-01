@@ -43,12 +43,7 @@ def render_lyrics(lyrics, mode, template_name="songs/lyrics.html"):
     return template.render(Context(context))
 
 
-def song(request, song, mode):
-    if mode == SongMode.DISPLAY:
-        template_name = 'songs/song.html'
-    else:
-        template_name = 'songs/song_print.html'
-
+def song(request, song, mode, template_name = 'songs/song.html'):
     external_links = [(x.artist, x.artist.website) for x in
         ArtistContribution.objects.filter(song=song).select_related('artist') if
         x.artist.website != None and len(x.artist.website) > 0
@@ -87,7 +82,7 @@ def song(request, song, mode):
     context = {
         'song': song,
         'section': 'songs',
-        'triggers': mode == SongMode.DISPLAY,
+        'print': mode != SongMode.DISPLAY,
         'extra': extra,
         'trans':  transposition,
         'trans_up': trans_up,

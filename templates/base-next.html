@@ -2,7 +2,11 @@
 <html>
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-	<meta name="robots" content="index,follow" />
+	{% if not print %}
+		<meta name="robots" content="index,follow" />
+	{% else %}
+		<meta name="robots" content="noindex" />
+	{% endif %}
 	<link rel="index" title="Piosenka z tekstem" href="http://www.piosenkaztekstem.pl" />
 	<title>{% block title %}Piosenka literacka{% endblock title %} - Piosenka z tekstem</title>
 	
@@ -13,14 +17,14 @@
 
 </head>
 
-<body>
+<body {% if print %}class="print"{% endif %}>
 	{% include "plugins/facebook.html" %}
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="{{ STATIC_URL }}scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}scripts/trigger.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top not-for-print">
       <div class="navbar-inner">
         <div class="container">
           <div class="nav-collapse collapse">
