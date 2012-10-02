@@ -16,7 +16,7 @@ def get_or_none(model, **kwargs):
 
 class IndexView(View):
     template_name = "frontpage/index.html"
-    post_count = 2
+    post_count = 1
     song_count = 10
 
     def get(self, request):

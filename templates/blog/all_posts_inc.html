@@ -1,14 +1,9 @@
-<h1>Wszystkie posty</h1>
-  <ul>
-    {% for post in all_posts %}
-    	{% if post.published or user.is_staff %}
-    	<li>
-		    <span class="date">{{ post.date|date:"d.m.Y" }}</span> - 
-		  	<a href="{{ post.get_absolute_url }}">{{ post.title }}{% if not post.published %} - <i>UKRYTY</i>{% endif %}</a>
-		  	{% if post.more %}
-		  	<img src="{{STATIC_URL}}/images/icons/roll.png" style="display: inline; width: 13px; height: 13px; border: 0; padding: 0; margin: 0; vertical-align: top;" align="center"/>
-		  	{% endif %}
-		</li>
-		{% endif %}
-    {% endfor %}
-  </ul>
+<div class="customwell auxwell">
+	<h1>Wszystkie posty</h1>
+	<ul class="unstyled">
+		{% for post in all_posts %}
+		
+			<li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a> <small>{{ post.date|date:"d.m.Y" }}</small></li>
+		{% endfor %}
+	</ul>
+</div>

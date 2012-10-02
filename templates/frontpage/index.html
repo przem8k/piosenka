@@ -28,7 +28,13 @@
   				<div class="customwell auxwell">
 	  				<h1 class="remove-top-margin">Blog</h1>
 				    {% for post in posts %}
-						{% include "blog/post_menu_entry.html" %}
+						<p><a href="{{ post.get_absolute_url }}">{{ post.title }}</a> <small>{{ post.date|date:"d.m.Y" }}</small></p>
+
+						{{ post.post|safe }}
+
+						{% if post.more %}
+		    			<p><a href="{{ post.get_absolute_url }}">Czytaj dalej</a>.</p>
+		    			{% endif %}
 					{% endfor %}
 				</div>
   			</div>
@@ -72,8 +78,7 @@
 					<ul class="unstyled">
 						{% for song in songs %}
 					    	<li>
-							    <span class="date">{{ song.0|date:"d.m.Y" }}</span>, 
-							    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>
+							    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a> <small>{{ song.0|date:"d.m.Y" }}</small>
 							</li>
 						{% endfor %}
 					</ul>
@@ -85,8 +90,7 @@
 					<ul class="unstyled">
 					    {% for event in events%}
 					    	<li>
-							    <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>,
-							    <a href="{{event.get_absolute_url}}">{{ event.venue.town }}: {{ event.name }}</a>
+							    <a href="{{event.get_absolute_url}}">{{ event.venue.town }}: {{ event.name }}</a> <small>{{ event.datetime|date:"d.m.Y" }}</small>
 							</li>
 						{% endfor %}
 	  				</ul>

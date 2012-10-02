@@ -12,6 +12,11 @@
     <div class="span4">
         <div class="customwell auxwell">
             <h1>Kompozytorzy</h1>
+            <ul class="unstyled">
+                {% for person in composers %}
+                  <li><a href="/spiewnik/{{person.slug}}" title="{{person}}">{{ person }}</a></li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
     <div class="span4">

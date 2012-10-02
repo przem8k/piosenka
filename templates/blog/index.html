@@ -1,21 +1,32 @@
-{% extends "base.html" %}
+{% extends "base-next.html" %}
 
 {% block title %}Blog{% endblock title %}
 
-{% block hull %}
-<div class="padLeft">
-	<div class="widget">
-<h1>Nowe posty</h1>
-    {% for post in new_posts %}
-    	{% include "blog/post_menu_entry.html" %}
-	{% endfor %}
-</div>
-</div>
+{% block content %}
 
-<div class="padRight">
-	<div class="widget">
-{% include "blog/all_posts_inc.html" %}
-</div>
-</div>
+    {% include "blog/top.html" %}
+    <div class="container">
+    	<div class="row">
+    		<div class="span8">
+    			<div class="customwell contentwell">
+					<h1 class="remove-top-margin">Nowe posty</h1>
+	    			{% for post in new_posts %}
+		    			<h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a> <small>{{ post.date|date:"d.m.Y" }}</small></h2>
 
-{% endblock hull %}
+		    			{{ post.post|safe }}
+
+		    			{% if post.more %}
+		    			<p><a href="{{ post.get_absolute_url }}">Czytaj dalej</a>.</p>
+		    			{% endif %}
+
+					{% endfor %}
+				</div>
+    		</div>
+
+    		<div class="span4">
+    			{% include "blog/all_posts_inc.html" %}
+    		</div>
+    	</div>
+    </div>
+
+{% endblock content %}

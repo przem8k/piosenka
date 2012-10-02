@@ -41,11 +41,16 @@ body
 	background: url("/site_media/native/images/patterns/paper.png");
 }
 
-/* htools */
+/* margin tools */
 
 .remove-top-margin
 {
 	margin-top: 0;
+}
+
+.remove-bottom-margin
+{
+	margin-bottom: 0;
 }
 
 .underline
@@ -86,10 +91,21 @@ body
 
 .contentwell h1
 {
-
 	font-size: 22px;
 	line-height: 24px;
 	margin-bottom: 20px;
+}
+
+.contentwell h2
+{
+	font-size: 18px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.contentwell h2 small
+{
+	font-size: 14px;
 }
 
 .auxwell h1
@@ -173,6 +189,11 @@ body
 .date {
 	background: url("/site_media/native/images/date.gif") left no-repeat;
 	padding: 0 0 0 15px;
+}
+
+.customwell hr {
+	margin-top: 20px;
+	margin-bottom: 5px;
 }
 
 /* ... */
