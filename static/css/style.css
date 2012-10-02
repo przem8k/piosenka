@@ -89,6 +89,11 @@ body
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
+.customwell hr {
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
 .contentwell h1
 {
 	font-size: 22px;
@@ -134,38 +139,36 @@ body
 	display: block
 }
 
+/* about.html */
 
-/* songbook menu */
-
-.thumbnails .selected
+.badgelist li
 {
-	background-color: #0088cc;
-}
-
-.thumbnails .selected a
-{
-	color: white;
+	text-align: center;
+	padding: 10px;
 }
 
 /* lyrics rendering */
 
-.indented {
+.indented 
+{
 	padding-left:10px;
 }
 
 /* chords toggling */
 
-.extra-chords-trigger {
+.extra-chords-trigger 
+{
     cursor: pointer;
     color: #215679;
     font-size: 9pt;    
 }
 
-.extra-chords {
+.extra-chords 
+{
     display: none;
 }
 
-/* customize blockquoute */
+/* blockquoute */
 
 .lead-quote
 {
@@ -173,15 +176,13 @@ body
 }
 
 .custom-blockquote {
-  padding: 0 0 0 10px;
+  padding: 0 0 0 5px;
   margin: 0 0 20px 5px;
-  border-left: 3px solid #0088cc;
+  border-left: 2px solid #0088cc;
 }
 
 .print .custom-blockquote{
   border-left: 0;
-  margin-left: 0;
-  padding-left: 0;
 }
 
 /* other */
@@ -189,11 +190,6 @@ body
 .date {
 	background: url("/site_media/native/images/date.gif") left no-repeat;
 	padding: 0 0 0 15px;
-}
-
-.customwell hr {
-	margin-top: 20px;
-	margin-bottom: 5px;
 }
 
 /* ... */

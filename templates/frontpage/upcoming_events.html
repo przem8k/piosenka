@@ -1,0 +1,10 @@
+<div class="customwell auxwell">
+	<h1>Nadchodzące wydarzenia</h1>
+	<ul class="unstyled">
+	    {% for event in events%}
+	    	<li>
+			    <a href="{{event.get_absolute_url}}">{{ event.venue.town }}: {{ event.name }}</a> <small>{{ event.datetime|date:"d.m.Y" }}</small>
+			</li>
+		{% endfor %}
+		</ul>
+</div>
