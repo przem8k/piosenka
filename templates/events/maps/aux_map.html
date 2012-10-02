@@ -1,0 +1,44 @@
+<script type="text/javascript">
+//<![CDATA[
+    var map_location;
+    
+    function savePosition_location(point)
+    {
+        var input = document.getElementById("id_location");
+        input.value = point.lat().toFixed(6) + "," + point.lng().toFixed(6);
+        map_location.panTo(point);
+    }
+    
+    function load_location() {
+    	var point = new google.maps.LatLng({{event.venue.location_lat}}, {{event.venue.location_lng}});
+
+        var options = {
+            zoom: 12,
+            center: point,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+            // mapTypeControl: true,
+            // navigationControl: true
+        };
+        
+        map_location = new google.maps.Map(document.getElementById("map_location"), options);
+
+        
+        
+            var marker = new google.maps.Marker({
+                    map: map_location,
+                    position: new google.maps.LatLng({{event.venue.location_lat}}, {{event.venue.location_lng}}),
+                    draggable: false,
+                    url: '{{event.get_absolute_url}}',
+                    title: '{{event}}'
+            
+            });
+            
+    }
+    
+    $(document).ready(function(){
+        load_location();
+    });
+
+//]]>
+</script>
+<div id="map_location" style="width: 280px; height: 210px"></div>

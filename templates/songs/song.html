@@ -13,7 +13,8 @@
     <div class="container main">
     	<div class="row">
     		<div class="span8">
-			    <h3 class="remove-top-margin">{{ song.title }}</h3>
+    			<div class="customwell contentwell">
+			    <h1 class="remove-top-margin">{{ song.title }}</h1>
 				
 				<table width="100%">
 				<tr><td valign="top" width="60%">
@@ -95,11 +96,11 @@
 				<blockquote class="custom-blockquote">
 				{{ lyrics|safe }}
 				</blockquote>
-
+				</div>
     		</div>
 
     		<div class="span4 not-for-print">
-				<div class="well well-small content-widget">
+				<div class="customwell auxwell">
 	    		<h1>Wersja do druku</h1>
 			    <ul class="unstyled">
 			        {% if extra %}
@@ -113,7 +114,7 @@
 				</div>
 
 				{% if song.score1 or song.score2 or song.score3 %}
-				<div class="well well-small content-widget">
+				<div class="customwell auxwell">
 					<h1>Nuty</h1>
 			        {% if song.score1 %}
 			        <center><a href="{{song.score1.url}}"><img src='{{ song.score1.path|thumbnail:"180w,scores" }}'/></a></center><br />
@@ -128,7 +129,7 @@
 				{% endif %}
 
 			    {% if song.link_youtube or song.link_wrzuta or external_links %}
-				<div class="well well-small content-widget">
+				<div class="customwell auxwell">
 				    <h1>Linki</h1>
 				    <ul class="unstyled">
 				        {% if song.link_youtube %}
@@ -144,7 +145,7 @@
 				</div>  
 				{% endif %}
 
-				<div class="well well-small content-widget">
+				<div class="customwell auxwell">
 				    <h1>Poleć piosenkę</h1>
 				    <table>
 				    	<tr><td>
@@ -161,7 +162,7 @@
 
 			    
 			    {% if user.is_staff %}
-			    	<div class="well well-small content-widget">
+			    	<div class="customwell auxwell">
 				    <h1>Administracja</h1>
 				    <ul>
 				        <li><a href="/admin/songs/song/{{song.id}}/">Edytuj piosenkę</a></li>

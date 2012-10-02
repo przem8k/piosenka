@@ -1,68 +1,52 @@
-{% extends "base.html" %}
+{% extends "base-next.html" %}
 
 {% block title %}Koncerty, przeglądy, festiwale{% endblock %}
+
+{% block content %}
+    {% include "events/top.html" %}
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="customwell contentwell">
+                    
+
+                    <table width="100%" class="vtop cleantable">
+                        <tr><th width="50%"></th><th width="50%"></th></tr>
+                        <tr>
+                            <td>
+                                <h1 class="remove-top-margin">{% block label %}Nadchodzące wydarzenia{% endblock %}</h1>
+                                <ul class="unstyled">
+                                    {% for event in event_list %}
+                                        <li><span class="date">{{ event.datetime|date:"d.m.Y" }}, <b>{{ event.venue.town }}</b>, <a href="{{event.get_absolute_url}}">{{ event.name }}</a></span></li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>
+                                {% include "events/maps/main_map.html" %}
+                                
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        {% include "events/menu.html" %}
+    </div>
+
+
+{% endblock content %}
 
 {% block hull %}
 <div class="padMain">
     <div class="widget">
 <h1>{% block header %}Wydarzenia{% endblock header %}</h1>
 
-    {% for event in event_list %}
-	    <div style="padding-left: 10px">
-		    <span class="date">{{ event.datetime|date:"d.m.Y" }}, <b>{{ event.venue.town }}</b>, <a href="{{event.get_absolute_url}}">{{ event.name }}</a></span>
-		  </div>
-	{% endfor %}
+
     <br />
 
-<script type="text/javascript">
-//<![CDATA[
-    var map_location;
-    
-    function savePosition_location(point)
-    {
-        var input = document.getElementById("id_location");
-        input.value = point.lat().toFixed(6) + "," + point.lng().toFixed(6);
-        map_location.panTo(point);
-    }
-    
-    function load_location() {
-        var point = new google.maps.LatLng(52.04, 19.28);
 
-        var options = {
-            zoom: 6,
-            center: point,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-            // mapTypeControl: true,
-            // navigationControl: true
-        };
-        
-        map_location = new google.maps.Map(document.getElementById("map_location"), options);
-
-        {% for event in event_list %}
-        
-            var marker_{{forloop.counter}} = new google.maps.Marker({
-                    map: map_location,
-                    position: new google.maps.LatLng({{event.venue.location_lat}}, {{event.venue.location_lng}}),
-                    draggable: false,
-                    url: '{{event.get_absolute_url}}',
-                    title: '{{event}}'
-            
-            });
-            
-            google.maps.event.addListener(marker_{{forloop.counter}}, 'click', function() {
-      window.location.href = marker_{{forloop.counter}}.url;
-    });
-        {% endfor %}
-
-    }
-    
-    $(document).ready(function(){
-        load_location();
-    });
-
-//]]>
-</script>
-        <div id="map_location" style="width: 610px; height: 420px"></div>
 
 </div>
 </div>

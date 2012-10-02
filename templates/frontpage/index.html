@@ -25,10 +25,12 @@
     <div class="container">
     	<div class="row">
   			<div class="span4">
-  				<h4 class="remove-top-margin">Blog</h4>
-			    {% for post in posts %}
-					{% include "blog/post_menu_entry.html" %}
-				{% endfor %}
+  				<div class="customwell auxwell">
+	  				<h1 class="remove-top-margin">Blog</h1>
+				    {% for post in posts %}
+						{% include "blog/post_menu_entry.html" %}
+					{% endfor %}
+				</div>
   			</div>
   			<div class="span8">
 	  			<div id="frontCarousel" class="carousel slide">
@@ -64,28 +66,37 @@
   			</div>
 		</div>
 		<div class="row">
-			<div class="span4"><h4>Nowe opracowania</h4>
-				<ul class="unstyled">
-					{% for song in songs %}
-				    	<li>
-						    <span class="date">{{ song.0|date:"d.m.Y" }}</span>, 
-						    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>
-						</li>
-					{% endfor %}
-				</ul>
+			<div class="span4">
+				<div class="customwell auxwell">
+					<h1>Nowe opracowania</h1>
+					<ul class="unstyled">
+						{% for song in songs %}
+					    	<li>
+							    <span class="date">{{ song.0|date:"d.m.Y" }}</span>, 
+							    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
 			</div>
-			<div class="span4"><h4>Nadchodzące wydarzenia</h4>
-				<ul class="unstyled">
-				    {% for event in events%}
-				    	<li>
-						    <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>,
-						    <a href="{{event.get_absolute_url}}">{{ event.venue.town }}: {{ event.name }}</a>
-						</li>
-					{% endfor %}
-  				</ul>				
+			<div class="span4">
+				<div class="customwell auxwell">
+					<h1>Nadchodzące wydarzenia</h1>
+					<ul class="unstyled">
+					    {% for event in events%}
+					    	<li>
+							    <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>,
+							    <a href="{{event.get_absolute_url}}">{{ event.venue.town }}: {{ event.name }}</a>
+							</li>
+						{% endfor %}
+	  				</ul>
+  				</div>				
 			</div>
-			<div class="span4"><h4>Facebook</h4>
-				<div class="fb-like-box" data-href="http://www.facebook.com/piosenkaztekstem" data-width="298" data-show-faces="true" data-stream="false" data-header="false"></div>
+			<div class="span4">
+				<div class="customwell auxwell">
+					<h1>Facebook</h1>
+					<div class="fb-like-box" data-href="http://www.facebook.com/piosenkaztekstem" data-width="280" data-show-faces="true" data-stream="false" data-header="false"></div>
+				</div>
 			</div>
 		</div>
 

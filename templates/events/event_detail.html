@@ -1,103 +1,84 @@
-{% extends "base.html" %}
+{% extends "base-next.html" %}
 
 {% block title %}{{ event }}{% endblock title %}
 
-{% block hull %}
-<div class="padMain">
-	<div class="sheet">
-	<h1>{{event.name}}</h1>
-	
-<table width="100%">
-	<tr><td valign="top" width="60%">
-	
-	<b>Kiedy: </b>
-	{{ event.datetime|date:"d.m.Y H:i" }}
-	
-	{% if event.artists.all or event.bands.all %}
-	<br />
-	<b>Kto: </b>
-	{% for artist in event.artists.all %}
-	{{artist}}
-	{% endfor %}
-	{% for band in event.bands.all %}
-	{{band}}
-	{% endfor %}
-	{% endif %}
-	<br />
-	<b>Ceny biletów: </b>
-	{{event.price}}
+{% block content %}
+	{% include "events/top.html" %}
 
+    <div class="container main">
+    	<div class="row">
+    		<div class="span8">
+    			<div class="customwell contentwell">
+				    <h1>{{event.name}}</h1>
+					<table width="100%">
+						<tr><td valign="top" width="60%">
+
+						<b>Kiedy: </b>
+						{{ event.datetime|date:"d.m.Y H:i" }}
+
+						{% if event.artists.all or event.bands.all %}
+						<br />
+						<b>Kto: </b>
+						{% for artist in event.artists.all %}
+						{{artist}}
+						{% endfor %}
+						{% for band in event.bands.all %}
+						{{band}}
+						{% endfor %}
+						{% endif %}
+						<br />
+						<b>Ceny biletów: </b>
+						{{event.price}}
+
+
+						</td>
+						<td valign="top" width="40%">
+						{% if event.venue %}
+						{{event.venue.name}}<br />
+						{{event.venue.street}}<br />
+						{{event.venue.town}}<br />
+						{% else %}
+						{{event.address|linebreaksbr}}
+						{% endif %}
+						</td></tr>
+					</table>
+
+					<br />
+					{{ event.description|linebreaks }}
+
+				</div>
+			</div>
+			<div class="span4">
+				<div class="customwell auxwell">
+					<h1>Mapa</h1>
+					{% include "events/maps/aux_map.html" %}
+				</div>
+
+				{% if event.website %}
+				<div class="customwell auxwell">
+				    <h1>Linki</h1>
+				    <ul class="unstyled">
+				        {% if event.website %}
+				        <li><a href="{{event.website}}" target="_blank">Źrodło informacji</a></li>
+				        {% endif %}
+				    </ul> 
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock content %}
 	
-	</td>
-	<td valign="top" width="40%">
-	{% if event.venue %}
-	{{event.venue.name}}<br />
-	{{event.venue.street}}<br />
-	{{event.venue.town}}<br />
-	{% else %}
-	{{event.address|linebreaksbr}}
-	{% endif %}
-	</td></tr>
-	</table>
-	<br />
-	<blockquote>
-	{{ event.description|linebreaks }}
-	{% if event.website %}
-	<p><a href="{{event.website}}" target="_blank">Źrodło informacji</a></p>
-	{% endif %}
-	</blockquote>
-</div>
-</div>
+
+
+{% block hull %}
+
 
 
 <div class="padSidebar">
 	<div class="widget">
-  <h1>Mapa</h1>
-	<script type="text/javascript">
-//<![CDATA[
-    var map_location;
-    
-    function savePosition_location(point)
-    {
-        var input = document.getElementById("id_location");
-        input.value = point.lat().toFixed(6) + "," + point.lng().toFixed(6);
-        map_location.panTo(point);
-    }
-    
-    function load_location() {
-    	var point = new google.maps.LatLng({{event.venue.location_lat}}, {{event.venue.location_lng}});
-
-        var options = {
-            zoom: 12,
-            center: point,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-            // mapTypeControl: true,
-            // navigationControl: true
-        };
-        
-        map_location = new google.maps.Map(document.getElementById("map_location"), options);
-
-        
-        
-            var marker = new google.maps.Marker({
-                    map: map_location,
-                    position: new google.maps.LatLng({{event.venue.location_lat}}, {{event.venue.location_lng}}),
-                    draggable: false,
-                    url: '{{event.get_absolute_url}}',
-                    title: '{{event}}'
-            
-            });
-            
-    }
-    
-    $(document).ready(function(){
-        load_location();
-    });
-
-//]]>
-</script>
-<div id="map_location" style="width: 290px; height: 210px"></div>
-</div>
+  	<h1>Mapa</h1>
+	
 
 <div class="widget">
 <h1>Poleć wydarzenie</h1>
