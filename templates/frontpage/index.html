@@ -1,5 +1,11 @@
 {% extends "base-next.html" %}
 
+{% block extra-scripts %}
+
+<script type="text/javascript" src="{{ STATIC_URL }}scripts/start_carousel.js"></script>
+
+{% endblock extra-scripts %}
+
 {% block content %}
 
     {% include "frontpage/top.html" %}
