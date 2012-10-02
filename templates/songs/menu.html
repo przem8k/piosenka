@@ -1,30 +1,27 @@
-<div class="container">
-    <div class="row">
-        <div class="span12">
-            <h5 class="remove-top-margin">Artyści</h5>
+<div class="row">
+    <div class="span4">
+        <div class="customwell auxwell">
+            <h1>Wykonawcy własnych tekstów</h1>
+              <ul class="unstyled">
+                {% for person in bards %}
+                  <li><a href="/spiewnik/{{person.slug}}" title="{{person}}">{{ person }}</a></li>
+                {% endfor %}
+              </ul>
         </div>
     </div>
-    <ul class="thumbnails">
-        {% for curartist in artists %}
-          <li class="span2" style="margin-bottom: 10px;">
-            <div class="thumbnail{% if curartist == artist %} selected{% endif %}" >
-              <a href="/spiewnik/{{curartist.slug}}" title="{{curartist}}"><small>{{ curartist }}</small></a>
-            </div>
-          </li>
-        {% endfor %}
-    </ul>
-    <div class="row">
-        <div class="span12">
-            <h5 style="margin-top: 0;">Zespoły</h5>
+    <div class="span4">
+        <div class="customwell auxwell">
+            <h1>Kompozytorzy</h1>
         </div>
     </div>
-    <ul class="thumbnails">
-        {% for band in bands %}
-          <li class="span3" style="margin-bottom: 10px;">
-            <div class="thumbnail{% if band == artist %} selected{% endif %}">
-              <a href="/spiewnik/{{band.slug}}" title="{{band}}"><small>{{ band }}</small></a>
-            </div>
-          </li>
-        {% endfor %}
-    </ul>
+    <div class="span4">
+        <div class="customwell auxwell">
+            <h1>Zespoły</h1>
+              <ul class="unstyled">
+                {% for band in bands %}
+                  <li><a href="/spiewnik/{{band.slug}}" title="{{band}}">{{ band }}</a></li>
+                {% endfor %}
+              </ul>
+        </div>
+    </div>
 </div>

@@ -64,30 +64,18 @@
 				    </ul> 
 				</div>
 				{% endif %}
+
+				<div class="customwell auxwell">
+					<h1>Poleć wydarzenie</h1>
+					<table><tr>
+					    <td><g:plusone size="medium" annotation="none" width="20" href="{{ request.build_absolute_uri }}"></g:plusone></td>
+					    <td valign="top"><div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-send="false" data-layout="button_count" data-width="20" data-show-faces="false"></div></td>
+					</tr></table>
+				</div>
 			</div>
 		</div>
 	</div>
 {% endblock content %}
 	
-
-
-{% block hull %}
-
-
-
-<div class="padSidebar">
-	<div class="widget">
-  	<h1>Mapa</h1>
-	
-
-<div class="widget">
-<h1>Poleć wydarzenie</h1>
-<table><tr>
-    <td><g:plusone size="medium" annotation="none" width="20" href="{{ request.build_absolute_uri }}"></g:plusone></td>
-    <td valign="top"><div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-send="false" data-layout="button_count" data-width="20" data-show-faces="false"></div></td>
-</tr></table>
-</div>
-</div>
-{% endblock hull %}
 
 

@@ -22,6 +22,10 @@ def songs_context(request):
 
     context["url"] = request.path
     context["artists"] = Artist.objects.filter(display=True).order_by('lastname')
+    context["bards"] = Artist.objects.filter(display=True, kind=Artist.KIND_TEXTER).order_by('lastname')
+    context["composers"] = Artist.objects.filter(display=True, kind=Artist.KIND_COMPOSER).order_by('lastname')
+    context["translators"] = Artist.objects.filter(display=True, kind=Artist.KIND_TRANSLATOR).order_by('lastname')
+    context["performers"] = Artist.objects.filter(display=True, kind=Artist.KIND_PERFORMER).order_by('lastname')
     context["bands"] = Band.objects.filter(display=True).order_by('name')
     return context
 
@@ -43,7 +47,7 @@ def render_lyrics(lyrics, mode, template_name="songs/lyrics.html"):
     return template.render(Context(context))
 
 
-def song(request, song, mode, template_name = 'songs/song.html'):
+def song(request, song, mode, template_name='songs/song.html'):
     external_links = [(x.artist, x.artist.website) for x in
         ArtistContribution.objects.filter(song=song).select_related('artist') if
         x.artist.website != None and len(x.artist.website) > 0

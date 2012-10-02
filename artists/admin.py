@@ -1,15 +1,17 @@
 from artists.models import Artist, Band
 from django.contrib import admin
 
+
 class ArtistAdmin(admin.ModelAdmin):
-    prepopulated_fields = { 'slug': ['firstname', 'lastname'] }
+    prepopulated_fields = {'slug': ['firstname', 'lastname']}
     fieldsets = [
-        (None, 				{'fields': ['firstname', 'lastname','slug', 'display']}),
+        (None, 				{'fields': ['firstname', 'lastname', 'slug', 'kind', 'display']}),
         ("Additional", 				{'fields': ['website']}),
     ]
-	
+
+
 class BandAdmin(admin.ModelAdmin):
-    prepopulated_fields = { 'slug': ['name'] }
+    prepopulated_fields = {'slug': ['name']}
     fieldsets = [
         (None, 				{'fields': ['name', 'slug', 'members', 'display']}),
         ("Additional", 				{'fields': ['website']}),
