@@ -36,11 +36,6 @@ class Song(models.Model):
     key = models.CharField(max_length=100, null=True, blank=True, help_text="Deprecated - use capo_fret instead", editable=False)
     capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret], help_text="Set to 0 if no capo")
     lyrics = models.TextField(null=True, validators=[validate_lyrics])
-    lyrics_html_for_display = models.TextField(null=True, blank=True, editable=False)
-    lyrics_html_text_only = models.TextField(null=True, blank=True, editable=False)
-    lyrics_html_basic_chords = models.TextField(null=True, blank=True, editable=False)
-    lyrics_html_all_chords = models.TextField(null=True, blank=True, editable=False)
-    lyrics_contain_extra_chords = models.BooleanField(blank=True, editable=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
 
     def capo(self, transposition=0):
