@@ -86,6 +86,46 @@ class BandContribution(models.Model):
     def songtitle(self):
         return self.song.title
 
+# Translations
+
+
+class Translation(models.Model):
+    original_song = models.ForeignKey(Song)
+    title = models.CharField(max_length=100)
+    artists = models.ManyToManyField(Artist, null=True, blank=True, through='ArtistContributionToTranslation')
+    bands = models.ManyToManyField(Band, null=True, blank=True, through='BandContributionToTranslation')
+    link_youtube = models.URLField(null=True, blank=True)
+    link_wrzuta = models.URLField(null=True, blank=True)
+    score1 = models.ImageField(null=True, blank=True, upload_to='scores')
+    score2 = models.ImageField(null=True, blank=True, upload_to='scores')
+    score3 = models.ImageField(null=True, blank=True, upload_to='scores')
+    capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret], help_text="Set to 0 if no capo")
+    lyrics = models.TextField(null=True, validators=[validate_lyrics])
+
+    def capo(self, transposition=0):
+        return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        ordering = ["title"]
+
+
+class ArtistContributionToTranslation(models.Model):
+    translation = models.ForeignKey(Translation)
+    artist = models.ForeignKey(Artist)
+    performed = models.BooleanField()
+    translated = models.BooleanField()
+
+
+class BandContributionToTranslation(models.Model):
+    translation = models.ForeignKey(Translation)
+    band = models.ForeignKey(Band)
+    performed = models.BooleanField()
+
+#
+
 
 class UserCategory(models.Model):
     user = models.ForeignKey(User)
