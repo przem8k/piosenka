@@ -33,6 +33,14 @@
 				<br />
 				{% endif %}
 				
+				{% if song.composers %}
+				<b>Muzyka: </b>
+				{% for composer in song.composers %}
+					<a href="{{composer.get_absolute_url}}">{{ composer }}</a>
+				{% endfor %}
+				<br />
+				{% endif %}
+
 				{% if song.translators %}
 					<b>Tłumaczenie: </b>
 					{% for translator in song.translators %}
@@ -41,20 +49,12 @@
 					<br />
 				{% endif %}
 				
-				{% if song.composers %}
-				<b>Muzyka: </b>
-				{% for composer in song.composers %}
-					<a href="{{composer.get_absolute_url}}">{{ composer }}</a>
-				{% endfor %}
-				<br />
-				{% endif %}
-				
 				{% if song.performers %}
-				<b>Wykonanie: </b>
-				{% for performer in song.performers %}
-					<a href="{{performer.get_absolute_url}}">{{ performer }}</a>
-				{% endfor %}
-				<br />
+					<b>Wykonanie: </b>
+					{% for performer in song.performers %}
+						<a href="{{performer.get_absolute_url}}">{{ performer }}</a>
+					{% endfor %}
+					<br />
 				{% endif %}
 
 				{% if song.capo %}
@@ -62,7 +62,6 @@
 			    {{ song.capo }}
 			    <br />
 				{% endif %}
-
 
 				</td>
 				<td valign="top" width="40%">
