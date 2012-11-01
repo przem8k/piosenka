@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
@@ -21,7 +23,7 @@ def validate_lyrics(value):
 
 
 class Song(models.Model):
-    CAPO_TO_ROMAN = ["~", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
+    CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
     title = models.CharField(max_length=100)
     disambig = models.CharField(max_length=100, null=True, blank=True, help_text="Disambiguation for multiple songs with the same title.")
     original_title = models.CharField(max_length=100, null=True, blank=True)
@@ -41,11 +43,55 @@ class Song(models.Model):
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
 
-    def save(self, force_insert=False, force_update=False):
-        super(Song, self).save(force_insert, force_update)
+    def translations(self):
+        """ returns list of Translation objects of this song """
+        return Translation.objects.filter(original_song=self)
 
+    def external_links(self):
+        """ returns list of (label, url) tuples describing links associated with the song """
+        ytpart = [("Nagranie (Youtube)", self.link_youtube, )] if self.link_youtube else []
+        wrzutapart = [("Nagranie (Wrzuta)", self.link_wrzuta, )] if self.link_wrzuta else []
+        return ytpart + wrzutapart + [(x.artist, x.artist.website) for x in
+            ArtistContribution.objects.filter(song=self).select_related('artist') if
+            x.artist.website != None and len(x.artist.website) > 0
+        ] + [(x.band, x.band.website) for x in
+            BandContribution.objects.filter(song=self).select_related('band') if
+            x.band.website != None and len(x.band.website) > 0
+        ]
+
+    def text_authors(self):
+        return [x.artist for x in ArtistContribution.objects.filter(song=self, texted=True)]
+
+    def composers(self):
+        return [x.artist for x in ArtistContribution.objects.filter(song=self, composed=True)]
+
+    def translators(self):
+        """ deprecated - translations should be stored as Translation objects """
+        return [x.artist for x in ArtistContribution.objects.filter(song=self, translated=True)]
+
+    def performers(self):
+        return [
+            x.artist for x in ArtistContribution.objects.filter(song=self, performed=True)
+        ] + [
+            x.band for x in BandContribution.objects.filter(song=self, performed=True)
+        ]
+
+    def head_entity(self):
+        """ any artist or band associated with the song, used to construct default urls """
+        try:
+            return self.performers()[0]
+        except IndexError:
+            return None
+
+    @models.permalink
     def get_absolute_url(self):
-        return "/spiewnik/szukaj/%s" % self.slug
+        """ each Song object may have multiple absolute urls, each for every contributing entity
+            this method returns one of them """
+        return ("song", (), {"artist_slug": self.head_entity().slug, "song_slug": self.slug})
+
+    @models.permalink
+    def get_absolute_url_print(self):
+        return ("song-print", (), {"artist_slug": self.head_entity().slug, "song_slug": self.slug})
 
     def __unicode__(self):
         return self.title
@@ -105,13 +151,52 @@ class Translation(models.Model):
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
 
-    def authors(self):
-        """ returns list of Artist objects that authored (not performed) this translation """
-        contributions = ArtistContributionToTranslation.objects.filter(translation=self, translated=True)
-        return [x.artist for x in contributions]
+    def text_authors(self):
+        return self.original_song.text_authors()
+
+    def composers(self):
+        return self.original_song.composers()
+
+    def translators(self):
+        return [x.artist for x in ArtistContributionToTranslation.objects.filter(translation=self, translated=True)]
+
+    def performers(self):
+        return [
+            x.artist for x in ArtistContributionToTranslation.objects.filter(translation=self, performed=True)
+        ] + [
+            x.band for x in BandContributionToTranslation.objects.filter(translation=self, performed=True)
+        ]
+
+    def head_entity(self):
+        """ any artist or band associated with the translation, used to construct default urls """
+        try:
+            return self.translators()[0]
+        except IndexError:
+            return None
+
+    def authors_string(self):
+        return ", ".join([x.__unicode__() for x in self.translators()])
+
+    @models.permalink
+    def get_absolute_url(self):
+        """ each Translation object may have multiple absolute urls, each for every contributing entity
+            this method returns one of them """
+        return ("translation", (), {
+            "artist_slug": self.original_song.head_entity().slug,
+            "song_slug": self.original_song.slug,
+            "translator_slug": self.head_entity().slug
+        })
+
+    @models.permalink
+    def get_absolute_url_print(self):
+        return ("translation-print", (), {
+            "artist_slug": self.original_song.head_entity().slug,
+            "song_slug": self.original_song.slug,
+            "translator_slug": self.head_entity().slug
+        })
 
     def __unicode__(self):
-        return self.title
+        return u"%s - tł. %s" % (self.title, self.authors_string())
 
     class Meta:
         ordering = ["title"]

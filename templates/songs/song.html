@@ -25,40 +25,41 @@
 				<br />
 				{% endif %}
 				
-
+				{% if song.text_authors %}
 				<b>Tekst: </b>
-				{% for contribution in textContributions %}
-					<a href="{{contribution.artist.get_absolute_url}}">{{ contribution.artist }}</a>
+				{% for author in song.text_authors %}
+					<a href="{{author.get_absolute_url}}">{{ author }}</a>
 				{% endfor %}
 				<br />
-				
-				{% if translationContributions.count > 0 %}
-					<b>Tłumaczenie: </b>
-					{% for contribution in translationContributions %}
-						<a href="{{contribution.artist.get_absolute_url}}">{{ contribution.artist }}</a>
-					{% endfor %}
-					<br />
-				
 				{% endif %}
 				
-				<b>Muzyka: </b>
-				{% for contribution in musicContributions %}
-					<a href="{{contribution.artist.get_absolute_url}}">{{ contribution.artist }}</a>
-				{% endfor %}
-				<br />
+				{% if song.translators %}
+					<b>Tłumaczenie: </b>
+					{% for translator in song.translators %}
+						<a href="{{translator.get_absolute_url}}">{{ translator }}</a>
+					{% endfor %}
+					<br />
+				{% endif %}
 				
-				<b>Wykonanie: </b>
-				{% for contribution in performanceContributions %}
-					<a href="{{contribution.artist.get_absolute_url}}">{{ contribution.artist }}</a>
-				{% endfor %}
-				{% for contribution in bandContributions %}
-					<a href="{{contribution.band.get_absolute_url}}">{{ contribution.band }}</a>
+				{% if song.composers %}
+				<b>Muzyka: </b>
+				{% for composer in song.composers %}
+					<a href="{{composer.get_absolute_url}}">{{ composer }}</a>
 				{% endfor %}
 				<br />
+				{% endif %}
+				
+				{% if song.performers %}
+				<b>Wykonanie: </b>
+				{% for performer in song.performers %}
+					<a href="{{performer.get_absolute_url}}">{{ performer }}</a>
+				{% endfor %}
+				<br />
+				{% endif %}
 
-				{% if capo != "~" %}
+				{% if song.capo %}
 			    <b>Kapodaster: </b>
-			    {{ capo }}
+			    {{ song.capo }}
 			    <br />
 				{% endif %}
 
@@ -104,12 +105,12 @@
 	    		<h1>Wersja do druku</h1>
 			    <ul class="unstyled">
 			        {% if extra %}
-			        <li><a href="{% url print-song-basic-chords artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Podstawowe akordy</a></li>
-			        <li><a href="{% url print-song-all-chords artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - wszystkie akordy">Wszystkie akordy</a></li>
+			        <li><a href="{{song.get_absolute_url_print}}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Podstawowe akordy</a></li>
+			        <li><a href="{{song.get_absolute_url_print}}?t={{trans}}&p=wszystkie-akordy" title="Wersja do druku - wszystkie akordy">Wszystkie akordy</a></li>
 			        {% else %}
-			        <li><a href="{% url print-song-basic-chords artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Tekst i akordy</a></li>
+			        <li><a href="{{song.get_absolute_url_print}}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Tekst i akordy</a></li>
 			        {% endif %}
-			        <li><a href="{% url print-song-text-only artist_slug song_slug %}?t={{trans}}" title="Wersja do druku - tylko tekst">Tylko tekst</a></li>
+			        <li><a href="{{song.get_absolute_url_print}}?t={{trans}}&p=tylko-tekst" title="Wersja do druku - tylko tekst">Tylko tekst</a></li>
 			    </ul>
 				</div>
 
@@ -128,17 +129,11 @@
 				</div>
 				{% endif %}
 
-			    {% if song.link_youtube or song.link_wrzuta or external_links %}
+			    {% if song.external_links %}
 				<div class="customwell auxwell">
 				    <h1>Linki</h1>
 				    <ul class="unstyled">
-				        {% if song.link_youtube %}
-				        <li><a href="{{song.link_youtube}}" target="_blank">Nagranie (Youtube)</a></li>
-				        {% endif %}
-				        {% if song.link_wrzuta %}
-				        <li><a href="{{song.link_wrzuta}}" target="_blank">Nagranie (Wrzuta)</a></li>
-				        {% endif %}
-				        {% for link in external_links %}
+				        {% for link in song.external_links %}
 				        <li><a href="{{link.1}}" target="_blank">{{link.0}}</a></li>
 				        {% endfor %}
 				    </ul> 
@@ -158,7 +153,23 @@
 				</table>
 				</div>
 			  
+			    {% if song.translations %}
+				<div class="customwell auxwell">
+				    <h1>Tłumaczenia</h1>
+				    <ul class="unstyled">
+				        {% for translation in song.translations %}
+				        <li><a href="{{translation.get_absolute_url}}">{{translation.authors_string}}</a></li>
+				        {% endfor %}
+				    </ul> 
+				</div>  
+				{% endif %}
 
+				{% if song.original_song %}
+				<div class="customwell auxwell">
+				    <h1>Oryginalna piosenka</h1>
+				    <a href="{{song.original_song.get_absolute_url}}">{{song.original_song}}</a>
+				</div>  
+				{% endif %}
 
 			    
 			    {% if user.is_staff %}

@@ -1,5 +1,5 @@
 from django.template import Context, loader
-from songs.models import Song, ArtistContribution, BandContribution
+from songs.models import Song, Translation, ArtistContribution, BandContribution, ArtistContributionToTranslation
 from artists.models import Artist, Band
 from django.http import HttpResponsePermanentRedirect, Http404
 from haystack.views import SearchView
@@ -10,6 +10,13 @@ from django.contrib.contenttypes.models import ContentType
 
 from songs.transpose import transpose_lyrics
 from songs.parse import parse_lyrics
+
+
+def get_or_none(model, **kwargs):
+    try:
+        return model.objects.get(**kwargs)
+    except model.DoesNotExist:
+        return None
 
 
 def songs_context(request):
@@ -37,24 +44,17 @@ class SongMode:
     PRINT_ALL_CHORDS = 3
 
 
-def render_lyrics(lyrics, mode, template_name="songs/lyrics.html"):
+def render_lyrics(lyrics, print_parameter=None, template_name="songs/lyrics.html"):
     context = {
         "lyrics": lyrics,
-        "any_chords": mode != SongMode.PRINT_TEXT_ONLY,
-        "distinguish_extra_chords": mode != SongMode.PRINT_ALL_CHORDS,
+        "any_chords": print_parameter != "tylko-tekst",
+        "distinguish_extra_chords": print_parameter != "wszystkie-akordy",
     }
     template = loader.get_template(template_name)
     return template.render(Context(context))
 
 
-def song(request, song, mode, template_name='songs/song.html'):
-    external_links = [(x.artist, x.artist.website) for x in
-        ArtistContribution.objects.filter(song=song).select_related('artist') if
-        x.artist.website != None and len(x.artist.website) > 0
-    ] + [(x.band, x.band.website) for x in
-        BandContribution.objects.filter(song=song).select_related('band') if
-        x.band.website != None and len(x.band.website) > 0
-    ]
+def song_or_translation(request, song, for_print, template_name='songs/song.html'):
 
     if request.method == "GET" and "t" in request.GET:
         try:
@@ -86,49 +86,44 @@ def song(request, song, mode, template_name='songs/song.html'):
     context = {
         'song': song,
         'section': 'songs',
-        'print': mode != SongMode.DISPLAY,
+        'print': for_print,
         'extra': extra,
         'trans':  transposition,
         'trans_up': trans_up,
         'trans_down': trans_down,
-        'capo': song.capo(),
         'lyrics': render_lyrics(
             transpose_lyrics(
                 lyrics,
                 transposition
             ),
-            mode
+            request.GET["p"] if "p" in request.GET else None
         ),
-        'textContributions': ArtistContribution.objects.filter(song=song, texted=True),
-        'translationContributions': ArtistContribution.objects.filter(song=song, translated=True),
-        'musicContributions': ArtistContribution.objects.filter(song=song, composed=True),
-        'performanceContributions': ArtistContribution.objects.filter(song=song, performed=True),
-        'bandContributions': BandContribution.objects.filter(song=song, performed=True),
-        'external_links': external_links,
     }
     return render(request, template_name, context)
 
 
-def song_by_unknown(request, slug, mode):
-    piece = get_object_or_404(Song, slug=slug)
-    return song(request, piece, mode)
+def song_or_translation_entry(request, artist_slug, song_slug, translator_slug=None, for_print=False):
+    song = get_object_or_404(Song, slug=song_slug)
 
+    artist = get_or_none(Artist, slug=artist_slug)
+    band = get_or_none(Band, slug=artist_slug)
 
-def song_of_artist(request, artist_slug, song_slug, mode):
-    piece = get_object_or_404(Song, slug=song_slug)
-    artist = None
-    for entry in (ArtistContribution.objects.filter(song=piece)
-                                            .select_related('artist')):
-        if entry.artist.slug == artist_slug:
-            artist = entry.artist
-    for entry in (BandContribution.objects.filter(song=piece)
-                                          .select_related('band')):
-        if entry.band.slug == artist_slug:
-            artist = entry.band
-
-    if not artist:
+    # verify that the song was reached via proper artist or band
+    if (
+        (artist == None or ArtistContribution.objects.filter(song=song, artist=artist).count() == 0) and
+        (band == None or BandContribution.objects.filter(song=song, band=band).count() == 0)
+       ):
         raise Http404()
-    return song(request, piece, mode)
+
+    if translator_slug:
+        translator = get_object_or_404(Artist, slug=translator_slug)
+        try:
+            translation = [x for x in song.translations() if (translator in x.translators())][0]
+        except IndexError:
+            raise Http404()
+        return song_or_translation(request, translation, for_print)
+    else:
+        return song_or_translation(request, song, for_print)
 
 
 def redirect_to_song(request, song_slug):
@@ -149,15 +144,16 @@ def obsolete_song(request, song_id):
     return redirect_to_song(request, song.slug)
 
 
-def artist(request, slug, template_name="songs/list.html"):
+def entity(request, slug, template_name="songs/list.html"):
+    """ Lists the songs associated with the given Artist or Band object """
     try:
-        guy = Artist.objects.get(slug=slug)
-        songs = (ArtistContribution.objects.filter(artist=guy)
+        entity = Artist.objects.get(slug=slug)
+        songs = (ArtistContribution.objects.filter(artist=entity)
                                    .select_related('song')
                                    .order_by('song__title'))
     except Artist.DoesNotExist:
-        guy = get_object_or_404(Band, slug=slug)
-        songs = (BandContribution.objects.filter(band=guy)
+        entity = get_object_or_404(Band, slug=slug)
+        songs = (BandContribution.objects.filter(band=entity)
                                          .select_related('song')
                                          .order_by('song__title'))
 
@@ -167,8 +163,8 @@ def artist(request, slug, template_name="songs/list.html"):
     return render(request, template_name, {
         'section': 'songs',
         'songs': songs,
-        'title': guy.__unicode__(),
-        'artist': guy
+        'title': entity.__unicode__(),
+        'artist': entity
         })
 
 
@@ -180,21 +176,6 @@ def obsolete_artist(request, artist_id):
 def obsolete_band(request, band_id):
     band = get_object_or_404(Band, pk=band_id)
     return HttpResponsePermanentRedirect("/spiewnik/%s/" % (band.slug,))
-
-
-class SongSearchView(SearchView):
-    def __name__(self):
-        return "SongSearchView"
-    #def extra_context(self):
-    #    extra = super(SongSearchView, self).extra_context()
-    #    return common_context()
-
-
-def get_or_none(model, **kwargs):
-    try:
-        return model.objects.get(**kwargs)
-    except model.DoesNotExist:
-        return None
 
 
 class IndexView(View):
