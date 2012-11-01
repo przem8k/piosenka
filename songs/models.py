@@ -105,6 +105,11 @@ class Translation(models.Model):
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
 
+    def authors(self):
+        """ returns list of Artist objects that authored (not performed) this translation """
+        contributions = ArtistContributionToTranslation.objects.filter(translation=self, translated=True)
+        return [x.artist for x in contributions]
+
     def __unicode__(self):
         return self.title
 
