@@ -38,7 +38,7 @@ class BandContributionToTranslationInline(admin.TabularInline):
 class TranslationAdmin(admin.ModelAdmin):
     inlines = (ArtistContributionToTranslationInline, BandContributionToTranslationInline,)
     fieldsets = [
-        ('Identification',          {'fields': ['title']}),
+        ('Identification',          {'fields': ['title', 'original_song']}),
         ('Content',                 {'fields': ['capo_fret', 'lyrics', ]}),
         ('Additional',              {'fields': ['link_youtube', 'link_wrzuta', 'score1', 'score2', 'score3']}),
     ]
