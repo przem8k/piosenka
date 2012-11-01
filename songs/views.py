@@ -148,14 +148,14 @@ def entity(request, slug, template_name="songs/list.html"):
     """ Lists the songs associated with the given Artist or Band object """
     try:
         entity = Artist.objects.get(slug=slug)
-        songs = (ArtistContribution.objects.filter(artist=entity)
-                                   .select_related('song')
-                                   .order_by('song__title'))
+        songs = [x.song for x in (ArtistContribution.objects.filter(artist=entity)
+                                                            .select_related('song')
+                                                            .order_by('song__title'))]
     except Artist.DoesNotExist:
         entity = get_object_or_404(Band, slug=slug)
-        songs = (BandContribution.objects.filter(band=entity)
-                                         .select_related('song')
-                                         .order_by('song__title'))
+        songs = [x.song for x in (BandContribution.objects.filter(band=entity)
+                                                          .select_related('song')
+                                                          .order_by('song__title'))]
 
     if not request.user.is_staff:
         songs = songs.filter(song__published=True)
@@ -163,8 +163,7 @@ def entity(request, slug, template_name="songs/list.html"):
     return render(request, template_name, {
         'section': 'songs',
         'songs': songs,
-        'title': entity.__unicode__(),
-        'artist': entity
+        'entity': entity
         })
 
 

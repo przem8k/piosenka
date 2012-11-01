@@ -1,6 +1,6 @@
 {% extends "base-next.html" %}
 
-{% block title %}{{ title }}{% endblock title %}
+{% block title %}{{ entity }}{% endblock title %}
 	
 {% load dxpartition %}
 	
@@ -14,15 +14,23 @@
     <div class="row">
         <div class="span12">
             <div class="customwell contentwell">
-            	<h1 class="remove-top-margin">{{ title }}</h1>
+            	<h1 class="remove-top-margin">{{ entity }}</h1>
 
-                <table width="100%">
+                <table width="100%" class="vtop">
                     <tr><th width="50%"></th><th width="50%"></th></tr>
                     {% for row in songs|columns:2 %}
                         <tr>
-                                {% for entry in row %}
-                                <td><a href="/spiewnik/{{artist.slug}}/{{entry.song.slug}}" {% if not entry.song.published %}style="color: gray;"{% endif %}>{{ entry.song|truncatechars:42 }}</a></td>
-                                {% endfor %}
+                            {% for song in row %}
+                            <td><a href="{% url song entity.slug song.slug %}" {% if not song.published %}style="color: gray;"{% endif %}>{{ song|truncatechars:50 }}</a>
+                                {% if song.translations %}
+                                <ul style="list-style-type: circle;">
+                                    {% for translation in song.translations %}
+                                        <li><a href="{% url translation entity.slug song.slug translation.head_entity.slug %}">tł. {{ translation.authors_string|truncatechars:50 }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </td>
+                            {% endfor %}
                         </tr>
                     {% endfor %}               
 
