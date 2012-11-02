@@ -175,7 +175,11 @@
 			    	<div class="customwell auxwell">
 				    <h1>Administracja</h1>
 				    <ul class="unstyled">
-				        <li><a href="/admin/songs/song/{{song.id}}/">Edytuj piosenkę</a></li>
+				    	{% if song.original_song %}
+				        <li><a href="/admin/songs/translation/{{song.id}}/">Edytuj tłumaczenie</a></li>
+				    	{% else %}
+				    	<li><a href="/admin/songs/song/{{song.id}}/">Edytuj piosenkę</a></li>
+				    	{% endif %}
 				    </ul> 
 				    </div> 
 				{% endif %}
