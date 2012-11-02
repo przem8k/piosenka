@@ -11,6 +11,14 @@
     </div>
     <div class="span4">
         <div class="customwell auxwell">
+            <h1>Zespoły</h1>
+              <ul class="unstyled">
+                {% for band in bands %}
+                  <li><a href="/spiewnik/{{band.slug}}" title="{{band}}">{{ band }}</a></li>
+                {% endfor %}
+              </ul>
+        </div>
+        <div class="customwell auxwell">
             <h1>Kompozytorzy</h1>
             <ul class="unstyled">
                 {% for person in composers %}
@@ -21,12 +29,13 @@
     </div>
     <div class="span4">
         <div class="customwell auxwell">
-            <h1>Zespoły</h1>
-              <ul class="unstyled">
-                {% for band in bands %}
-                  <li><a href="/spiewnik/{{band.slug}}" title="{{band}}">{{ band }}</a></li>
+            <h1>Twórcy zagraniczni</h1>
+            <ul class="unstyled">
+                {% for person in foreigners %}
+                  <li><a href="/spiewnik/{{person.slug}}" title="{{person}}">{{ person }}</a></li>
                 {% endfor %}
-              </ul>
+            </ul>
         </div>
+    </div>
     </div>
 </div>

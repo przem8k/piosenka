@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from django.db import models
 
 
@@ -12,11 +14,15 @@ class Artist(models.Model):
     KIND_COMPOSER = 2
     KIND_TRANSLATOR = 3
     KIND_PERFORMER = 4
+    KIND_POET = 5
+    KIND_FOREIGN = 6
     ARTIST_KINDS = (
-        (KIND_TEXTER, 'Wykonawca wlasnych tekstow'),
-        (KIND_COMPOSER, 'Kompozytor'),
-        (KIND_TRANSLATOR, 'Tlumacz'),
-        (KIND_PERFORMER, 'Wykonawca cudzych piosenek'),
+        (KIND_TEXTER, u'Wykonawca własnych tekstów'),
+        (KIND_COMPOSER, u'Kompozytor'),
+        (KIND_TRANSLATOR, u'Tłumacz'),
+        (KIND_PERFORMER, u'Wykonawca cudzych piosenek'),
+        (KIND_POET, u'Poeta nieśpiewający'),
+        (KIND_FOREIGN, u'Bard zagraniczny'),
     )
     kind = models.IntegerField(choices=ARTIST_KINDS, null=True, blank=True, help_text="Select the most prominent thing the person is famous for.")
 
