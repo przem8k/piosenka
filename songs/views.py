@@ -162,9 +162,6 @@ def entity(request, slug, template_name="songs/list.html"):
                                                                                      .select_related('translation')
                                                                                      .order_by('translation__title'))]
 
-    if not request.user.is_staff:
-        songs = songs.filter(song__published=True)
-
     return render(request, template_name, {
         'section': 'songs',
         'songs': songs,
