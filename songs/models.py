@@ -79,7 +79,7 @@ class Song(models.Model):
     def head_entity(self):
         """ any artist or band associated with the song, used to construct default urls """
         try:
-            return self.performers()[0]
+            return (self.performers() + self.text_authors())[0]
         except IndexError:
             return None
 
