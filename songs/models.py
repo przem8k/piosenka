@@ -151,6 +151,18 @@ class Translation(models.Model):
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
 
+    def external_links(self):
+        """ returns list of (label, url) tuples describing links associated with the song """
+        ytpart = [("Nagranie (Youtube)", self.link_youtube, )] if self.link_youtube else []
+        wrzutapart = [("Nagranie (Wrzuta)", self.link_wrzuta, )] if self.link_wrzuta else []
+        return ytpart + wrzutapart + [(x.artist, x.artist.website) for x in
+            ArtistContributionToTranslation.objects.filter(translation=self).select_related('artist') if
+            x.artist.website != None and len(x.artist.website) > 0
+        ] + [(x.band, x.band.website) for x in
+            BandContributionToTranslation.objects.filter(translation=self).select_related('band') if
+            x.band.website != None and len(x.band.website) > 0
+        ]
+
     def text_authors(self):
         return self.original_song.text_authors()
 
