@@ -158,7 +158,7 @@ def entity(request, slug, template_name="songs/list.html"):
         songs = [x.song for x in (BandContribution.objects.filter(band=entity)
                                                           .select_related('song')
                                                           .order_by('song__title'))]
-        translations = [x.translation for x in (BandContributionToTranslation.objects.filter(artist=entity)
+        translations = [x.translation for x in (BandContributionToTranslation.objects.filter(band=entity)
                                                                                      .select_related('translation')
                                                                                      .order_by('translation__title'))]
 
