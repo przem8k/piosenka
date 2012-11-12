@@ -1,4 +1,5 @@
 *.pyc
+*.swp
 *~
 settings_production.py
 settings_local.py
