@@ -102,6 +102,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'artists',
+    'articles',
     'songs',
     'events',
     'users',
