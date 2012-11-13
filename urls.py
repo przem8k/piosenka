@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     #site sections
     url(r'^spiewnik/', include('songs.urls')),
     url(r'^blog/', include('blog.urls')),
+    url(r'^artykuly/', include('articles.urls')),
     url(r'^wydarzenia/', include('events.urls')),
     url(r'^o-stronie/$', TemplateView.as_view(template_name="about.html")),
     url(r'^about/$', RedirectView.as_view(url="/o-stronie/")),

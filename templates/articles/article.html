@@ -1,0 +1,42 @@
+{% extends "base-next.html" %}
+
+{% block title %}{{ article.title }}{% endblock title %}
+
+{% block content %}
+
+{% include "articles/top.html" %}
+
+<div class="container">
+	<div class="row">
+		<div class="span8">
+			<div class="customwell contentwell">
+				<h1 class="remove-top-margin">{{ article.title }}</h1>
+                
+                <div class="article-lead">
+			    {{ article.lead_text_html|safe }}
+                </div>
+			    
+			    {{ article.main_text_html|safe }}
+
+			    <hr />
+				<p class="remove-bottom-margin">Dodany <span class="date">{{ article.date|date:"d.m.Y" }}</span> przez <b>{{ article.author }}</b>.</p>
+			</div>
+		</div>
+        
+
+        <div class="span4 not-for-print">
+            {% if user.is_staff %}
+                <div class="customwell auxwell">
+                <h1>Administracja</h1>
+                <ul class="unstyled">
+                    <li><a href="/admin/articles/article/{{article.id}}/">Edytuj artykuł</a></li>
+                </ul> 
+                </div> 
+            {% endif %}
+        </div>
+
+	</div>
+</div>
+
+{% endblock content %}
+

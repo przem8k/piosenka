@@ -4,5 +4,5 @@ from articles.models import Article
 
 class ArticleView(DetailView):
     model = Article
-    context_object_name = "post"
+    context_object_name = "article"
     template_name = "articles/article.html"
