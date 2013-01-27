@@ -1,0 +1,22 @@
+{% extends "base-next.html" %}
+
+{% block title %}Artykuły{% endblock %}
+
+{% block content %}
+
+{% include "articles/top.html" %}
+<div class="container">
+  <div class="row">
+    {% for article in featured %}
+    <div class="span4">
+      <div class="customwell auxwell">
+        <h1>{{ article.title }}</h1>
+        {{ article.lead_text_html|safe }}
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}
