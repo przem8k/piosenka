@@ -35,7 +35,7 @@ from django.conf import settings
 
 if settings.DEBUG:
     urlpatterns = patterns('',
-        (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+        (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.ALL_STATIC_ROOT}),
     ) + patterns('',
         (r'^500/$', 'django.views.generic.simple.direct_to_template', {'template': '500.html'}),
         (r'^404/$', 'django.views.generic.simple.direct_to_template', {'template': '404.html'}),

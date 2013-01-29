@@ -44,6 +44,8 @@ STATIC_ROOT = os.path.join(PROJECT_PATH, "site_media", "native")
 
 STATIC_URL = '/site_media/native/'
 
+ALL_STATIC_ROOT = os.path.join(PROJECT_PATH, "site_media") 
+
 STATICFILES_DIRS = (
     ("", os.path.join(PROJECT_PATH, "static")),
     ("scripts", os.path.join(PROJECT_PATH, "songs", "scripts")),
@@ -108,7 +110,7 @@ INSTALLED_APPS = (
     'users',
     'frontpage',
     'dxlibrary',
-    'haystack',
+    'sorl.thumbnail',
     'south',
 )
 

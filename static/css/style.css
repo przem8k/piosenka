@@ -122,6 +122,33 @@ body
 	color: #990000;
 }
 
+/* thumbnails */
+
+.thumbnail-host
+{
+    position: relative;
+}
+
+.thumbnail-caption
+{
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.75);
+}
+
+.thumbnail-caption p, .thumbnail-caption h1 
+{
+    color: white;
+}
+
+.thumbnail-caption h1 
+{
+    margin: 0;
+    padding: 5px;
+}
+
 /* printing */
 
 .print .not-for-print

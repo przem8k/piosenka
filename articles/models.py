@@ -1,5 +1,6 @@
 from markdown import markdown
 import datetime
+from sorl.thumbnail import ImageField
 
 from django.db import models
 from django.contrib.auth.models import User
@@ -28,7 +29,7 @@ class Article(models.Model):
     main_text_html = models.TextField(null=True, blank=True, editable=False)
     published = models.BooleanField(default=True)
     author = models.ForeignKey(User, null=True, blank=True)
-    cover = models.ImageField(null=True, blank=True, upload_to='articles', help_text="Main illustration for the article.")
+    cover_image = ImageField(null=True, blank=True, upload_to='article_covers', help_text="Main illustration for the article.")
 
     @models.permalink
     def get_absolute_url(self):

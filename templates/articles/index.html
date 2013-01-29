@@ -1,5 +1,7 @@
 {% extends "base-next.html" %}
 
+{% load thumbnail %}
+
 {% block title %}Artykuły{% endblock %}
 
 {% block content %}
@@ -10,7 +12,22 @@
     {% for article in featured %}
     <div class="span4">
       <div class="customwell auxwell">
-        <h1>{{ article.title }}</h1>
+        <a href="{{article.get_absolute_url}}">
+        <div class="thumbnail-host">
+          {% if article.cover_image %}
+          {% thumbnail article.cover_image "280x140" crop="center" as im %}
+          <img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" />
+          {% endthumbnail %}
+          {% else %}
+          <img src="http://placekitten.com/280/140" />
+          {% endif %}
+          <div class="thumbnail-caption">
+            <h1>{{article.title}}</h1>
+
+          </div>
+        </div>
+      </a>
+
         {{ article.lead_text_html|safe }}
       </div>
 
