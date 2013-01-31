@@ -7,189 +7,184 @@
 {% block description %}Opracowanie piosenki {{song.title}}{% endblock description %}
 
 {% block content %}
-	
-    {% include "songs/top.html" %}
 
-    <div class="container main">
-    	<div class="row">
-    		<div class="span8">
-    			<div class="customwell contentwell">
-			    <h1 class="remove-top-margin">{{ song.title }}</h1>
-				
-				<table width="100%">
-				<tr><td valign="top" width="60%">
-				
-				{% if song.original_title %}
-				<b>Tytuł oryginalny: </b>
-				<i>{{ song.original_title }}</i>
-				<br />
-				{% endif %}
-				
-				{% if song.text_authors %}
-				<b>Tekst: </b>
-				{% for author in song.text_authors %}
-					<a href="{{author.get_absolute_url}}">{{ author }}</a>
-				{% endfor %}
-				<br />
-				{% endif %}
-				
-				{% if song.composers %}
-				<b>Muzyka: </b>
-				{% for composer in song.composers %}
-					<a href="{{composer.get_absolute_url}}">{{ composer }}</a>
-				{% endfor %}
-				<br />
-				{% endif %}
+{% include "songs/top.html" %}
 
-				{% if song.translators %}
-					<b>Tłumaczenie: </b>
-					{% for translator in song.translators %}
-						<a href="{{translator.get_absolute_url}}">{{ translator }}</a>
-					{% endfor %}
-					<br />
-				{% endif %}
-				
-				{% if song.performers %}
-					<b>Wykonanie: </b>
-					{% for performer in song.performers %}
-						<a href="{{performer.get_absolute_url}}">{{ performer }}</a>
-					{% endfor %}
-					<br />
-				{% endif %}
+<div class="container main">
+  <div class="row">
+    <div class="span8">
+      <div class="customwell contentwell">
+        <h1 class="remove-top-margin">{{ song.title }}</h1>
 
-				{% if song.capo %}
-			    <b>Kapodaster: </b>
-			    {{ song.capo }}
-			    <br />
-				{% endif %}
+        <table width="100%">
+          <tr>
+            <td valign="top" width="60%">
+              {% if song.original_title %}
+              <b>Tytuł oryginalny: </b>
+              <i>{{ song.original_title }}</i>
+              <br />
+              {% endif %}
 
-				</td>
-				<td valign="top" width="40%">
-					<table class="not-for-print">
-						<tr>
-							<td><b>Transponuj: </b></td>
-							<td class="indented">
-								<a href="{{ url }}?t={{trans_up}}" title="Półton w górę">
-									<img src="{{STATIC_URL}}images/icons/up.png" style="display: inline; vertical-align: middle;"/>
-								</a>
-				    			<a href="{{ url }}?t=0" title="Zapis oryginalny">
-				    				<img src="{{STATIC_URL}}images/icons/home.png" style="display: inline; vertical-align: middle;"/>
-				    			</a>
-				    			<a href="{{ url }}?t={{trans_down}}" title="Półton w dół">
-				    				<img src="{{STATIC_URL}}images/icons/down.png" style="display: inline; vertical-align: middle;"/>
-				    			</a>
-				    		</td>
-						</tr>
-						{% if extra %}
-						<tr>
-							<td><b>Powtórz: </b></td>
-							<td class="indented"><span class="extra-chords-trigger" title="Pokaż / ukryj powtórzone akordy"><img src="{{STATIC_URL}}images/icons/gears.png" style="display: inline; vertical-align: middle;"/></span></td>
-						</tr>
-						{% endif %}
-				    </table>
-				
-				</td></tr>
-				</table>
-				
-				<br />
-				
-				<blockquote class="custom-blockquote">
-				{{ lyrics|safe }}
-				</blockquote>
-				</div>
-    		</div>
+              {% if song.text_authors %}
+              <b>Tekst: </b>
+              {% for author in song.text_authors %}
+              <a href="{{author.get_absolute_url}}">{{ author }}</a>
+              {% endfor %}
+              <br />
+              {% endif %}
 
-    		<div class="span4 not-for-print">
-				<div class="customwell auxwell">
-	    		<h1>Wersja do druku</h1>
-			    <ul class="unstyled">
-			        {% if extra %}
-			        <li><a href="{{song.get_absolute_url_print}}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Podstawowe akordy</a></li>
-			        <li><a href="{{song.get_absolute_url_print}}?t={{trans}}&p=wszystkie-akordy" title="Wersja do druku - wszystkie akordy">Wszystkie akordy</a></li>
-			        {% else %}
-			        <li><a href="{{song.get_absolute_url_print}}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Tekst i akordy</a></li>
-			        {% endif %}
-			        <li><a href="{{song.get_absolute_url_print}}?t={{trans}}&p=tylko-tekst" title="Wersja do druku - tylko tekst">Tylko tekst</a></li>
-			    </ul>
-				</div>
+              {% if song.composers %}
+              <b>Muzyka: </b>
+              {% for composer in song.composers %}
+              <a href="{{composer.get_absolute_url}}">{{ composer }}</a>
+              {% endfor %}
+              <br />
+              {% endif %}
 
-				{% if song.score1 or song.score2 or song.score3 %}
-				<div class="customwell auxwell">
-					<h1>Nuty</h1>
-			        {% if song.score1 %}
-			        <center><a href="{{song.score1.url}}"><img src='{{ song.score1.path|thumbnail:"180w,scores" }}'/></a></center><br />
-			        {% endif %}	
-			        {% if song.score2 %}
-			        <center><a href="{{song.score2.url}}"><img src='{{ song.score2.path|thumbnail:"180w,scores" }}'/></a></center><br />
-			        {% endif %}	
-			        {% if song.score3 %}
-			        <center><a href="{{song.score3.url}}"><img src='{{ song.score3.path|thumbnail:"180w,scores" }}'/></a></center><br />
-			        {% endif %}	
-				</div>
-				{% endif %}
+              {% if song.translators %}
+              <b>Tłumaczenie: </b>
+              {% for translator in song.translators %}
+              <a href="{{translator.get_absolute_url}}">{{ translator }}</a>
+              {% endfor %}
+              <br />
+              {% endif %}
 
-			    {% if song.external_links %}
-				<div class="customwell auxwell">
-				    <h1>Linki</h1>
-				    <ul class="unstyled">
-				        {% for link in song.external_links %}
-				        <li><a href="{{link.1}}" target="_blank">{{link.0}}</a></li>
-				        {% endfor %}
-				    </ul> 
-				</div>  
-				{% endif %}
+              {% if song.performers %}
+              <b>Wykonanie: </b>
+              {% for performer in song.performers %}
+              <a href="{{performer.get_absolute_url}}">{{ performer }}</a>
+              {% endfor %}
+              <br />
+              {% endif %}
 
-				<div class="customwell auxwell">
-				    <h1>Poleć piosenkę</h1>
-				    <table>
-				    	<tr><td>
-					<g:plusone size="medium" annotation="none" width="20" href="http://www.piosenkaztekstem.pl{{ request.path }}"></g:plusone>
-				</td>
-					    		<td valign="top">
-					<div class="fb-like" data-href="http://www.piosenkaztekstem.pl{{ request.path }}" data-send="false" data-layout="button_count" data-width="20" data-show-faces="false"></div>
-				</td>
-				</tr>
-				</table>
-				</div>
-			  
-			    {% if song.translations %}
-				<div class="customwell auxwell">
-				    <h1>Tłumaczenia</h1>
-				    <ul class="unstyled">
-				        {% for translation in song.translations %}
-				        <li><a href="{{translation.get_absolute_url}}">{{translation.authors_string}}</a></li>
-				        {% endfor %}
-				    </ul> 
-				</div>  
-				{% endif %}
+              {% if song.capo %}
+              <b>Kapodaster: </b>
+              {{ song.capo }}
+              <br />
+              {% endif %}
 
-				{% if song.original_song %}
-				<div class="customwell auxwell">
-				    <h1>Oryginalna piosenka</h1>
-				    <a href="{{song.original_song.get_absolute_url}}">{{song.original_song}}</a>
-				</div>  
-				{% endif %}
+            </td>
+            <td valign="top" width="40%">
+              <table class="not-for-print">
+                <tr>
+                  <td><b>Transponuj: </b></td>
+                  <td class="indented">
+                    <a href="{{ url }}?t={{trans_up}}" title="Półton w górę">
+                      <img src="{{STATIC_URL}}images/icons/up.png" style="display: inline; vertical-align: middle;"/>
+                    </a>
+                    <a href="{{ url }}?t=0" title="Zapis oryginalny">
+                      <img src="{{STATIC_URL}}images/icons/home.png" style="display: inline; vertical-align: middle;"/>
+                    </a>
+                    <a href="{{ url }}?t={{trans_down}}" title="Półton w dół">
+                      <img src="{{STATIC_URL}}images/icons/down.png" style="display: inline; vertical-align: middle;"/>
+                    </a>
+                  </td>
+                </tr>
+                {% if extra %}
+                <tr>
+                  <td><b>Powtórz: </b></td>
+                  <td class="indented"><span class="extra-chords-trigger" title="Pokaż / ukryj powtórzone akordy"><img src="{{STATIC_URL}}images/icons/gears.png" style="display: inline; vertical-align: middle;"/></span></td>
+                </tr>
+                {% endif %}
+              </table>
 
-			    
-			    {% if user.is_staff %}
-			    	<div class="customwell auxwell">
-				    <h1>Administracja</h1>
-				    <ul class="unstyled">
-				    	{% if song.original_song %}
-				        <li><a href="/admin/songs/translation/{{song.id}}/">Edytuj tłumaczenie</a></li>
-				    	{% else %}
-				    	<li><a href="/admin/songs/song/{{song.id}}/">Edytuj piosenkę</a></li>
-				    	{% endif %}
-				    </ul> 
-				    </div> 
-				{% endif %}
-    		</div>
+          </td></tr>
+        </table>
 
-    	</div>
+        <br />
 
+        <blockquote class="custom-blockquote">
+          {{ lyrics|safe }}
+        </blockquote>
+      </div>
     </div>
 
+    <div class="span4 not-for-print">
+      <div class="customwell auxwell">
+        <h1>Wersja do druku</h1>
+        <ul class="unstyled">
+          {% if extra %}
+          <li><a href="{{song.get_absolute_url_print}}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Podstawowe akordy</a></li>
+          <li><a href="{{song.get_absolute_url_print}}?t={{trans}}&p=wszystkie-akordy" title="Wersja do druku - wszystkie akordy">Wszystkie akordy</a></li>
+          {% else %}
+          <li><a href="{{song.get_absolute_url_print}}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Tekst i akordy</a></li>
+          {% endif %}
+          <li><a href="{{song.get_absolute_url_print}}?t={{trans}}&p=tylko-tekst" title="Wersja do druku - tylko tekst">Tylko tekst</a></li>
+        </ul>
+      </div>
+
+      {% if song.score1 or song.score2 or song.score3 %}
+      <div class="customwell auxwell">
+        <h1>Nuty</h1>
+        {% if song.score1 %}
+        <center><a href="{{song.score1.url}}"><img src='{{ song.score1.path|thumbnail:"180w,scores" }}'/></a></center><br />
+        {% endif %}	
+        {% if song.score2 %}
+        <center><a href="{{song.score2.url}}"><img src='{{ song.score2.path|thumbnail:"180w,scores" }}'/></a></center><br />
+        {% endif %}	
+        {% if song.score3 %}
+        <center><a href="{{song.score3.url}}"><img src='{{ song.score3.path|thumbnail:"180w,scores" }}'/></a></center><br />
+        {% endif %}	
+      </div>
+      {% endif %}
+
+      {% if song.external_links %}
+      <div class="customwell auxwell">
+        <h1>Linki</h1>
+        <ul class="unstyled">
+          {% for link in song.external_links %}
+          <li><a href="{{link.1}}" target="_blank">{{link.0}}</a></li>
+          {% endfor %}
+        </ul> 
+      </div>  
+      {% endif %}
+
+      <div class="customwell auxwell">
+        <h1>Poleć piosenkę</h1>
+        <table>
+          <tr><td>
+              <g:plusone size="medium" annotation="none" width="20" href="http://www.piosenkaztekstem.pl{{ request.path }}"></g:plusone>
+            </td>
+            <td valign="top">
+              <div class="fb-like" data-href="http://www.piosenkaztekstem.pl{{ request.path }}" data-send="false" data-layout="button_count" data-width="20" data-show-faces="false"></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      {% if song.translations %}
+      <div class="customwell auxwell">
+        <h1>Tłumaczenia</h1>
+        <ul class="unstyled">
+          {% for translation in song.translations %}
+          <li><a href="{{translation.get_absolute_url}}">{{translation.authors_string}}</a></li>
+          {% endfor %}
+        </ul> 
+      </div>  
+      {% endif %}
+
+      {% if song.original_song %}
+      <div class="customwell auxwell">
+        <h1>Oryginalna piosenka</h1>
+        <a href="{{song.original_song.get_absolute_url}}">{{song.original_song}}</a>
+      </div>  
+      {% endif %}
+
+
+      {% if user.is_staff %}
+      <div class="customwell auxwell">
+        <h1>Administracja</h1>
+        <ul class="unstyled">
+          {% if song.original_song %}
+          <li><a href="/admin/songs/translation/{{song.id}}/">Edytuj tłumaczenie</a></li>
+          {% else %}
+          <li><a href="/admin/songs/song/{{song.id}}/">Edytuj piosenkę</a></li>
+          {% endif %}
+        </ul> 
+      </div> 
+      {% endif %}
+    </div>
+  </div>
+</div>
+
 {% endblock content %}
-
-
-
