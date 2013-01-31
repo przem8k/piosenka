@@ -13,27 +13,23 @@
     <div class="span4">
       <div class="customwell auxwell">
         <a href="{{article.get_absolute_url}}">
-        <div class="thumbnail-host">
-          {% if article.cover_image %}
-          {% thumbnail article.cover_image "280x140" crop="center" as im %}
-          <img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" />
-          {% endthumbnail %}
-          {% else %}
-          <img src="http://placekitten.com/280/140" />
-          {% endif %}
-          <div class="thumbnail-caption">
-            <h1>{{article.title}}</h1>
-
+          <div class="thumbnail-host">
+            {% if article.cover_image %}
+            {% thumbnail article.cover_image "280x140" crop="center" as im %}
+            <img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" />
+            {% endthumbnail %}
+            {% else %}
+            <img src="http://placekitten.com/280/140" />
+            {% endif %}
+            <div class="thumbnail-caption">
+              <h1>{{article.title}}</h1>
+            </div>
           </div>
-        </div>
-      </a>
-
+        </a>
         {{ article.lead_text_html|safe }}
       </div>
-
     </div>
     {% endfor %}
   </div>
 </div>
-
 {% endblock content %}
