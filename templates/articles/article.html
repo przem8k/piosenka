@@ -1,5 +1,7 @@
 {% extends "base-next.html" %}
 
+{% load thumbnail %}
+
 {% block title %}{{ article.title }}{% endblock title %}
 
 {% block content %}
@@ -12,6 +14,16 @@
       <div class="customwell contentwell">
         <h1 class="remove-top-margin">{{ article.title }}</h1>
 
+          <div class="thumbnail-host">
+            {% if article.cover_image %}
+            {% thumbnail article.cover_image "600x300" crop="center" as im %}
+            <img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" />
+            {% endthumbnail %}
+            {% endif %}
+            <div class="thumbnail-caption">
+              <p>Miejsce na adnotację o autorstwie zdjęcia.</p>
+            </div>
+          </div>
         <div class="article-lead">
           {{ article.lead_text_html|safe }}
         </div>

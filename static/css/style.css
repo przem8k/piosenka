@@ -141,10 +141,6 @@ body
 .thumbnail-caption p, .thumbnail-caption h1 
 {
     color: white;
-}
-
-.thumbnail-caption h1 
-{
     margin: 0;
     padding: 5px;
 }
