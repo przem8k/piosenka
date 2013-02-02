@@ -22,14 +22,15 @@ class Article(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
     category = models.ForeignKey(ArticleCategory, null=True, blank=True)
-    date = models.DateTimeField(null=True, blank=True, help_text="Publication date.") # TODO: automate
+    date = models.DateTimeField(null=True, blank=True, editable=False, help_text="Publication date.")
     lead_text = models.TextField(help_text="Introductory paragraph, written in Markdown.")
     lead_text_html = models.TextField(null=True, blank=True, editable=False)
     main_text = models.TextField(help_text="Rest of the article, written in Markdown.")
     main_text_html = models.TextField(null=True, blank=True, editable=False)
     published = models.BooleanField(default=True)
-    author = models.ForeignKey(User, null=True, blank=True)
+    author = models.ForeignKey(User, null=True, blank=True, editable=False)
     cover_image = ImageField(null=True, blank=True, upload_to='article_covers', help_text="Main illustration for the article.")
+    cover_credits = models.TextField(null=True, blank=True, help_text="Thank you / credit notes about the author of the cover picture")
 
     @models.permalink
     def get_absolute_url(self):

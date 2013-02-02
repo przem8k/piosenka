@@ -4,7 +4,11 @@ from articles.models import Article, ArticleCategory
 
 class ArticleAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ['title']}
-    pass
+
+    def save_model(self, request, obj, form, change):
+        if not change:
+            obj.author = request.user
+        obj.save()
 
 class ArticleCategoryAdmin(admin.ModelAdmin):
     pass

@@ -21,14 +21,14 @@
             {% endthumbnail %}
             {% endif %}
             <div class="thumbnail-caption">
-              <p>Miejsce na adnotację o autorstwie zdjęcia.</p>
+              {{ article.cover_credits }}
             </div>
           </div>
-        <div class="article-lead">
-          {{ article.lead_text_html|safe }}
-        </div>
+          <div class="article-body">
+            {{ article.lead_text_html|safe }}
 
-        {{ article.main_text_html|safe }}
+            {{ article.main_text_html|safe }}
+          </div>
 
         <hr />
         <p class="remove-bottom-margin">Dodany <span class="date">{{ article.date|date:"d.m.Y" }}</span> przez <b>{{ article.author }}</b>.</p>
