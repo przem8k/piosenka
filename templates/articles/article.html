@@ -21,7 +21,7 @@
             {% endthumbnail %}
             {% endif %}
             <div class="thumbnail-caption">
-              {{ article.cover_credits }}
+              {{ article.cover_credits|safe }}
             </div>
           </div>
           <div class="article-body">
