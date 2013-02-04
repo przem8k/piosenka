@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
 from django.db import models
+from django.conf import settings
 from artists.models import Artist, Band
 from events.forms import LocationFormField
 from events.widgets import LocationWidget
@@ -46,13 +47,30 @@ class Venue(models.Model):
     town = models.CharField(max_length="100")
     street = models.CharField(max_length="100")
     slug = models.SlugField(max_length="100", unique=True)
-    location = LocationField()
+    location = LocationField(editable=False)
+
+    @models.permalink
+    def get_absolute_url(self):
+        return('venue', (), {
+            'slug': self.slug,
+        })
+
     def location_lat(self):
         a, b = self.location.split(',')
         return float(a)
     def location_lng(self):
         a, b = self.location.split(',')
         return float(b)
+
+    def save(self, *args, **kwargs):
+        if not self.location:
+            print "Empty location on save()."
+            from googlemaps import GoogleMaps
+            gmaps = GoogleMaps(settings.GOOGLE_MAPS_API_KEY)
+            lat, lng = gmaps.address_to_latlng(self.street + ', ' + self.town)
+            self.location = str(lat) + ',' + str(lng)
+        super(Venue, self).save(*args, **kwargs)
+
     def __unicode__(self):
         return "%s - %s" % (self.town, self.name)
     class Meta:

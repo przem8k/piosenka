@@ -1,1 +1,2 @@
 sorl-thumbnail
+googlemaps

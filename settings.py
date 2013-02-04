@@ -18,10 +18,13 @@ try:
     from settings_production import EMAIL_USE_TLS
 
     from settings_production import S3BUCKET
+
+    from settings_production import GOOGLE_MAPS_API_KEY
     PRODUCTION_SETTINGS = True
 except ImportError:
     from settings_local import DATABASES
     from settings_local import SECRET_KEY
+    GOOGLE_MAPS_API_KEY = 'AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA'
     PRODUCTION_SETTINGS = False
 
 DEBUG = not PRODUCTION_SETTINGS
