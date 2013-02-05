@@ -1,0 +1,58 @@
+<script type="text/javascript">
+//<![CDATA[
+var map_location;
+
+function savePosition_location(point)
+{
+  var input = document.getElementById("id_location");
+  input.value = point.lat().toFixed(6) + "," + point.lng().toFixed(6);
+  map_location.panTo(point);
+}
+
+function load_location() {
+  var point = new google.maps.LatLng({{map_center_lat}}, {{map_center_lng}});
+
+  var options = {
+      zoom: {{map_zoom}},
+      center: point,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+        // mapTypeControl: true,
+        // navigationControl: true
+  };
+
+  map_location = new google.maps.Map(document.getElementById("map_location"), options);
+
+  {% if mark %}
+    var marker = new google.maps.Marker({
+      map: map_location,
+      position: new google.maps.LatLng({{mark.location_lat}}, {{mark.location_lng}}),
+      draggable: false,
+      url: '{{mark.get_absolute_url}}',
+      title: '{{mark}}'
+      });
+  {% endif %}
+
+  {% for element in marks %}
+    var marker_{{forloop.counter}} = new google.maps.Marker({
+      map: map_location,
+      position: new google.maps.LatLng({{element.location_lat}}, {{element.location_lng}}),
+      draggable: false,
+      url: '{{element.get_absolute_url}}',
+      title: '{{element}}'
+    });
+
+    google.maps.event.addListener(marker_{{forloop.counter}}, 'click', function() {
+      window.location.href = marker_{{forloop.counter}}.url;
+    });
+  {% endfor %}
+}
+
+$(document).ready(
+  function(){
+    load_location();
+  }
+);
+
+//]]>
+</script>
+<div id="map_location" style="width: {{map_width}}px; height: {{map_height}}px"></div>

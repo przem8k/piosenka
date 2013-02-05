@@ -51,7 +51,9 @@
 			<div class="span4">
 				<div class="customwell auxwell">
 					<h1>Mapa</h1>
-					{% include "events/maps/aux_map.html" %}
+          {% if event.venue.location %}
+          {% include "events/map.html" with map_width="280" map_height="210" map_center_lat=event.venue.location_lat map_center_lng=event.venue.location_lng map_zoom="12" mark=event %}
+          {% endif %}
 				</div>
 
 				{% if event.website %}

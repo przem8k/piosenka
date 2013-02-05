@@ -1,0 +1,49 @@
+{% extends "base-next.html" %}
+
+{% block title %}{{ venue }}{% endblock title %}
+
+{% block content %}
+	{% include "events/top.html" %}
+
+    <div class="container main">
+    	<div class="row">
+    		<div class="span8">
+    			<div class="customwell contentwell">
+				    <h1>{{venue.name}}</h1>
+
+
+				</div>
+			</div>
+			<div class="span4">
+				<div class="customwell auxwell">
+					<h1>Mapa</h1>
+          {% if venue.location %}
+          {% include "events/map.html" with map_width="280" map_height="210" map_center_lat=venue.location_lat map_center_lng=venue.location_lng map_zoom="12" mark=venue %}
+          {% endif %}
+				</div>
+
+				{% if event.website %}
+				<div class="customwell auxwell">
+				    <h1>Linki</h1>
+				    <ul class="unstyled">
+				        {% if event.website %}
+				        <li><a href="{{event.website}}" target="_blank">Źrodło informacji</a></li>
+				        {% endif %}
+				    </ul> 
+				</div>
+				{% endif %}
+
+				<div class="customwell auxwell">
+					<h1>Poleć miejsce</h1>
+					<table><tr>
+					    <td><g:plusone size="medium" annotation="none" width="20" href="{{ request.build_absolute_uri }}"></g:plusone></td>
+					    <td valign="top"><div class="fb-like" data-href="{{ request.build_absolute_uri }}" data-send="false" data-layout="button_count" data-width="20" data-show-faces="false"></div></td>
+					</tr></table>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock content %}
+	
+
+

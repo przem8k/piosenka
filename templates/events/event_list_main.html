@@ -3,60 +3,50 @@
 {% block title %}Koncerty, przeglądy, festiwale{% endblock %}
 
 {% block content %}
-    {% include "events/top.html" %}
-    <div class="container">
-        <div class="row">
-            <div class="span12">
-                <div class="customwell contentwell">
-                    
+{% include "events/top.html" %}
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="customwell contentwell">
 
-                    <table width="100%" class="vtop cleantable">
-                        <tr><th width="50%"></th><th width="50%"></th></tr>
-                        <tr>
-                            <td>
-                                <h1 class="remove-top-margin">{% block label %}Nadchodzące wydarzenia{% endblock %}</h1>
-                                <ul class="unstyled">
-                                    {% for event in event_list %}
-                                        <li><span class="date">{{ event.datetime|date:"d.m.Y" }}, <b>{{ event.venue.town }}</b>, <a href="{{event.get_absolute_url}}">{{ event.name }}</a></span></li>
-                                    {% endfor %}
-                                </ul>
-                            </td>
-                            <td>
-                                {% include "events/maps/main_map.html" %}
-                                
-                            </td>
-                        </tr>
 
-                    </table>
-                </div>
-                <hr />
-            </div>
-        </div>
+        <table width="100%" class="vtop cleantable">
+          <tr><th width="50%"></th><th width="50%"></th></tr>
+          <tr>
+            <td>
+              <h1 class="remove-top-margin">{% block label %}Nadchodzące wydarzenia{% endblock %}</h1>
+              <ul class="unstyled">
+                {% for event in event_list %}
+                <li><span class="date">{{ event.datetime|date:"d.m.Y" }}, <b>{{ event.venue.town }}</b>, <a href="{{event.get_absolute_url}}">{{ event.name }}</a></span></li>
+                {% endfor %}
+              </ul>
+            </td>
+            <td>
+              {% include "events/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=event_list %}
+            </td>
+          </tr>
 
-        {% include "events/menu.html" %}
+        </table>
+      </div>
+      <hr />
     </div>
+  </div>
+
+  {% include "events/menu.html" %}
+</div>
 
 
 {% endblock content %}
 
 {% block hull %}
 <div class="padMain">
-    <div class="widget">
-<h1>{% block header %}Wydarzenia{% endblock header %}</h1>
-
-
+  <div class="widget">
+    <h1>{% block header %}Wydarzenia{% endblock header %}</h1>
     <br />
-
-
-
-</div>
+  </div>
 </div>
 
 <div class="padSidebar">
-{% include "events/menu.html" %}
+  {% include "events/menu.html" %}
 </div>
-
 {% endblock hull %}
-
-	
-

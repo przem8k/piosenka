@@ -23,4 +23,5 @@ urlpatterns += patterns('django.views.generic.date_based',
     url(r'^(?P<year>\d{4})/$', 'archive_year', events_date_setup, name="events-yearly-archive"),
     url(r'^(?P<year>\d{4})/(?P<month>\d{2})/$', 'archive_month', events_date_setup, name="events-monthly-archive"),
     url(r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$', 'object_detail', events_date_setup, name="event"),
+    url(r'^(?P<slug>[-\w]+)/$', VenueView.as_view(), name="venue"),
 )

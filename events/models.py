@@ -92,11 +92,9 @@ class Event(models.Model):
     past = PastEventManager()
     
     def location_lat(self):
-        a, b = self.location.split(',')
-        return float(a)
+        return self.venue.location_lat()
     def location_lng(self):
-        a, b = self.location.split(',')
-        return float(b)
+        return self.venue.location_lng()
     def date(self):
         return "%s.%s" % (self.datetime.strftime("%e"),self.datetime.strftime("%m"))
     @models.permalink
