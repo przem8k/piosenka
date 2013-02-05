@@ -1,2 +1,3 @@
 sorl-thumbnail
 googlemaps
+unidecode
