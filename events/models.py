@@ -64,10 +64,12 @@ class Venue(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.location:
-            print "Empty location on save()."
             from googlemaps import GoogleMaps
+            from unidecode import unidecode
+            address = self.street + ', ' + self.town;
+            ascii_address = unidecode(unicode(address))
             gmaps = GoogleMaps(settings.GOOGLE_MAPS_API_KEY)
-            lat, lng = gmaps.address_to_latlng(self.street + ', ' + self.town)
+            lat, lng = gmaps.address_to_latlng(ascii_address)
             self.location = str(lat) + ',' + str(lng)
         super(Venue, self).save(*args, **kwargs)
 
