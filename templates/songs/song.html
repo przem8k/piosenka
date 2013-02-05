@@ -139,18 +139,7 @@
       </div>  
       {% endif %}
 
-      <div class="customwell auxwell">
-        <h1>Poleć piosenkę</h1>
-        <table>
-          <tr><td>
-              <g:plusone size="medium" annotation="none" width="20" href="http://www.piosenkaztekstem.pl{{ request.path }}"></g:plusone>
-            </td>
-            <td valign="top">
-              <div class="fb-like" data-href="http://www.piosenkaztekstem.pl{{ request.path }}" data-send="false" data-layout="button_count" data-width="20" data-show-faces="false"></div>
-            </td>
-          </tr>
-        </table>
-      </div>
+      {% include "wells/like.html" with like_what="piosenkę" %}
 
       {% if song.translations %}
       <div class="customwell auxwell">
