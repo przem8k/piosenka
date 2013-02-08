@@ -19,21 +19,6 @@ class LocationField(models.CharField):
         defaults['widget'] = LocationWidget
         return super(LocationField, self).formfield(**defaults)
 
-miesiace = {
-    '01': u'stycznia',
-    '02': u'lutego',
-    '03': u'marca',
-    '04': u'kwietnia',
-    '05': u'maja',
-    '06': u'czerwca',
-    '07': u'lipca',
-    '08': u'sierpnia',
-    '09': u'września',
-    '10': u'paźdzernika',
-    '11': u'listopada',
-    '12': u'grudnia'
-}
-
 class CurrentEventManager(models.Manager):
     def get_query_set(self):
         return super(CurrentEventManager, self).get_query_set().filter(datetime__gte=datetime.now())
@@ -51,7 +36,7 @@ class Venue(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return('venue', (), {
+        return('venue_detail', (), {
             'slug': self.slug,
         })
 
@@ -63,14 +48,13 @@ class Venue(models.Model):
         return float(b)
 
     def save(self, *args, **kwargs):
-        if not self.location:
-            from googlemaps import GoogleMaps
-            from unidecode import unidecode
-            address = self.street + ', ' + self.town;
-            ascii_address = unidecode(unicode(address))
-            gmaps = GoogleMaps(settings.GOOGLE_MAPS_API_KEY)
-            lat, lng = gmaps.address_to_latlng(ascii_address)
-            self.location = str(lat) + ',' + str(lng)
+        from googlemaps import GoogleMaps
+        from unidecode import unidecode
+        address = self.street + ', ' + self.town;
+        ascii_address = unidecode(unicode(address))
+        gmaps = GoogleMaps(settings.GOOGLE_MAPS_API_KEY)
+        lat, lng = gmaps.address_to_latlng(ascii_address)
+        self.location = str(lat) + ',' + str(lng)
         super(Venue, self).save(*args, **kwargs)
 
     def __unicode__(self):
@@ -101,7 +85,7 @@ class Event(models.Model):
         return "%s.%s" % (self.datetime.strftime("%e"),self.datetime.strftime("%m"))
     @models.permalink
     def get_absolute_url(self):
-        return ('event', (), { 
+        return ('event_detail', (), { 
             'year': self.datetime.strftime("%Y"),
             'month': self.datetime.strftime("%m"),
             'day': self.datetime.strftime("%d"),

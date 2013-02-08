@@ -31,10 +31,10 @@ DEBUG = not PRODUCTION_SETTINGS
 TEMPLATE_DEBUG = DEBUG
 
 TIME_ZONE = 'Europe/Warsaw'
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pl'
 
 SITE_ID = 1
-USE_I18N = False
+USE_I18N = True
 USE_L10N = True
 
 PROJECT_PATH = os.path.abspath(os.path.split(__file__)[0])

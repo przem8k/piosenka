@@ -34,7 +34,7 @@
 						</td>
 						<td valign="top" width="40%">
 						{% if event.venue %}
-						{{event.venue.name}}<br />
+            <a href="{{event.venue.get_absolute_url}}">{{event.venue.name}}</a><br />
 						{{event.venue.street}}<br />
 						{{event.venue.town}}<br />
 						{% else %}
@@ -68,6 +68,7 @@
 				{% endif %}
 
         {% include "wells/like.html" with like_what="wydarzenie" %}
+        {% include "wells/manage.html" with item=event manage_what="wydarzenie" %}
 			</div>
 		</div>
 	</div>

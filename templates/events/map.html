@@ -1,3 +1,5 @@
+{% load l10n %}
+
 <script type="text/javascript">
 //<![CDATA[
 var map_location;
@@ -10,7 +12,7 @@ function savePosition_location(point)
 }
 
 function load_location() {
-  var point = new google.maps.LatLng({{map_center_lat}}, {{map_center_lng}});
+  var point = new google.maps.LatLng({{map_center_lat|unlocalize }}, {{map_center_lng|unlocalize }});
 
   var options = {
       zoom: {{map_zoom}},
@@ -25,7 +27,7 @@ function load_location() {
   {% if mark %}
     var marker = new google.maps.Marker({
       map: map_location,
-      position: new google.maps.LatLng({{mark.location_lat}}, {{mark.location_lng}}),
+      position: new google.maps.LatLng({{mark.location_lat|unlocalize}}, {{mark.location_lng|unlocalize}}),
       draggable: false,
       url: '{{mark.get_absolute_url}}',
       title: '{{mark}}'
@@ -35,7 +37,7 @@ function load_location() {
   {% for element in marks %}
     var marker_{{forloop.counter}} = new google.maps.Marker({
       map: map_location,
-      position: new google.maps.LatLng({{element.location_lat}}, {{element.location_lng}}),
+      position: new google.maps.LatLng({{element.location_lat|unlocalize}}, {{element.location_lng|unlocalize}}),
       draggable: false,
       url: '{{element.get_absolute_url}}',
       title: '{{element}}'

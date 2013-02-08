@@ -30,18 +30,8 @@
         {% endif %}
       </div>
 
-      {% if event.website %}
-      <div class="customwell auxwell">
-        <h1>Linki</h1>
-        <ul class="unstyled">
-          {% if event.website %}
-          <li><a href="{{event.website}}" target="_blank">Źrodło informacji</a></li>
-          {% endif %}
-        </ul> 
-      </div>
-      {% endif %}
-
       {% include "wells/like.html" with like_what="miejsce" %}
+      {% include "wells/manage.html" with item=venue manage_what="miejsce" %}
     </div>
   </div>
 </div>
