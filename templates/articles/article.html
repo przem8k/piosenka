@@ -1,11 +1,11 @@
 {% extends "base-next.html" %}
 
 {% load thumbnail %}
+{% load admin_urls %}
 
 {% block title %}{{ article.title }}{% endblock title %}
 
 {% block content %}
-
 {% include "articles/top.html" %}
 
 <div class="container">
@@ -14,21 +14,21 @@
       <div class="customwell contentwell">
         <h1 class="remove-top-margin">{{ article.title }}</h1>
 
-          <div class="thumbnail-host">
-            {% if article.cover_image %}
-            {% thumbnail article.cover_image "600x300" crop="center" as im %}
-            <img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" />
-            {% endthumbnail %}
-            {% endif %}
-            <div class="thumbnail-caption">
-              {{ article.cover_credits|safe }}
-            </div>
+        <div class="thumbnail-host">
+          {% if article.cover_image %}
+          {% thumbnail article.cover_image "600x300" crop="center" as im %}
+          <img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" />
+          {% endthumbnail %}
+          {% endif %}
+          <div class="thumbnail-caption">
+            {{ article.cover_credits|safe }}
           </div>
-          <div class="article-body">
-            {{ article.lead_text_html|safe }}
+        </div>
+        <div class="article-body">
+          {{ article.lead_text_html|safe }}
 
-            {{ article.main_text_html|safe }}
-          </div>
+          {{ article.main_text_html|safe }}
+        </div>
 
         <hr />
         <p class="remove-bottom-margin">Dodany <span class="date">{{ article.date|date:"d.m.Y" }}</span> przez <b>{{ article.author }}</b>.</p>
@@ -37,36 +37,14 @@
 
 
     <div class="span4 not-for-print">
-      <div class="customwell auxwell">
-        <h1>Poleć artykuł</h1>
-        <table>
-          <tr>
-            <td>
-              <g:plusone size="medium" annotation="none" width="20" href="http://www.piosenkaztekstem.pl{{ request.path }}"></g:plusone>
-            </td>
-            <td valign="top">
-              <div class="fb-like" data-href="http://www.piosenkaztekstem.pl{{ request.path }}" data-send="false" data-layout="button_count" data-width="20" data-show-faces="false"></div>
-            </td>
-          </tr>
-        </table>
+      {% include "wells/like.html" with like_what="artykuł" %}
+      {% include "wells/manage.html" with item=article manage_what="artykuł" %}
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        {% include "plugins/disqus.html" %}
       </div>
-
-      {% if user.is_staff %}
-      <div class="customwell auxwell">
-        <h1>Administracja</h1>
-        <ul class="unstyled">
-          <li><a href="/admin/articles/article/{{article.id}}/">Edytuj artykuł</a></li>
-        </ul> 
-      </div> 
-      {% endif %}
-    </div>
-
-  </div>
-  <div class="row">
-    <div class="span12">
-      {% include "plugins/disqus.html" %}
     </div>
   </div>
-</div>
-
 {% endblock content %}

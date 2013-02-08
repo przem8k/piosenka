@@ -7,6 +7,11 @@ class ArticleView(DetailView):
     context_object_name = "article"
     template_name = "articles/article.html"
 
+    def get_context_data(self, **kwargs):
+        context = super(DetailView, self).get_context_data(**kwargs)
+        context['model_meta'] = Article._meta
+        return context
+
 class IndexView(TemplateView):
     FEATURED_COUNT = 3
 
