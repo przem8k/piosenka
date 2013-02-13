@@ -9,22 +9,23 @@ def obsolete_post(request, post_id):
     return HttpResponsePermanentRedirect(post.get_absolute_url())
 
 
-class IndexView(TemplateView):
-    template_name = "blog/index.html"
+class PostIndex(TemplateView):
+    template_name = "blog/post_index.html"
 
     def get_context_data(self, **kwargs):
-        context = super(IndexView, self).get_context_data(**kwargs)
+        context = super(PostIndex, self).get_context_data(**kwargs)
         context['new_posts'] = Post.objects.all().order_by('-date')[0:5]
         context['all_posts'] = Post.objects.all().order_by('-date')
         return context
 
 
-class PostView(DetailView):
+class PostDetail(DetailView):
     model = Post
     context_object_name = "post"
-    template_name = "blog/post.html"
+    template_name = "blog/post_detail.html"
 
     def get_context_data(self, **kwargs):
-        context = super(PostView, self).get_context_data(**kwargs)
+        context = super(PostDetail, self).get_context_data(**kwargs)
+        context['model_meta'] = Post._meta
         context['all_posts'] = Post.objects.all().order_by('-date')
         return context
