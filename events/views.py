@@ -14,7 +14,7 @@ class VenueDetail(DetailView):
     template_name = "events/venue_detail.html"
 
     def get_context_data(self, **kwargs):
-        context = super(DetailView, self).get_context_data(**kwargs)
+        context = super(VenueDetail, self).get_context_data(**kwargs)
         context['model_meta'] = Venue._meta
         return context
 
@@ -27,7 +27,7 @@ class EventDetail(DateDetailView):
     allow_future = True
 
     def get_context_data(self, **kwargs):
-        context = super(DateDetailView, self).get_context_data(**kwargs)
+        context = super(EventDetail, self).get_context_data(**kwargs)
         context['model_meta'] = Event._meta
         return context
 
