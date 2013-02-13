@@ -1,70 +1,70 @@
 <!DOCTYPE HTML> 
 <html>
-<head>
-	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-	{% if not print %}
-		<meta name="robots" content="index,follow" />
-	{% else %}
-		<meta name="robots" content="noindex" />
-	{% endif %}
-	<link rel="index" title="Piosenka z tekstem" href="http://www.piosenkaztekstem.pl" />
-	<title>{% block title %}Piosenka literacka{% endblock title %} - Piosenka z tekstem</title>
-	
-	<meta name="description" content="{% block description %}Śpiewnik piosenki literackiej, wydarzenia, koncerty{% endblock description %}" />
-	<meta name="keywords" content="Śpiewnik, chwyty, akordy, Kaczmarski, Gintrowski, Czajkowski" />
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?stamp=3" > 
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" >
-	{% include "plugins/google_analytics.html" %}
-	{% include "plugins/google_plus.html" %}
-</head>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    {% if not print %}
+    <meta name="robots" content="index,follow" />
+    {% else %}
+    <meta name="robots" content="noindex" />
+    {% endif %}
+    <link rel="index" title="Piosenka z tekstem" href="http://www.piosenkaztekstem.pl" />
+    <title>{% block title %}Piosenka literacka{% endblock title %} - Piosenka z tekstem</title>
 
-<body {% if print %}class="print"{% endif %}>
-	{% include "plugins/facebook.html" %}
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="{{ STATIC_URL }}scripts/bootstrap.min.js"></script>
+    <meta name="description" content="{% block description %}Śpiewnik piosenki literackiej, wydarzenia, koncerty{% endblock description %}" />
+    <meta name="keywords" content="Śpiewnik, chwyty, akordy, Kaczmarski, Gintrowski, Czajkowski" />
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?stamp=3" > 
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" >
+    {% include "base/plugins/google_analytics.html" %}
+    {% include "base/plugins/google_plus.html" %}
+  </head>
+
+  <body {% if print %}class="print"{% endif %}>
+    {% include "base/plugins/facebook.html" %}
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="{{ STATIC_URL }}scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}scripts/trigger.js"></script>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
-	{% block extra-scripts %}
+    {% block extra-scripts %}
 
-	{% endblock extra-scripts %}
+    {% endblock extra-scripts %}
 
     <div class="navbar navbar-inverse navbar-fixed-top not-for-print">
       <div class="navbar-inner">
         <div class="container">
           <div class="nav-collapse collapse">
             <ul class="nav">
-            	{% if section == 'index' %}
-				<li class="feather active"><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
-				{% else %}
-				<li class="feather"><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
-				{% endif %}
+              {% if section == 'index' %}
+              <li class="feather active"><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
+              {% else %}
+              <li class="feather"><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
+              {% endif %}
 
 
-	            {% if section == 'blog' %}
-				<li class="active"><a href="/blog/" title="Blog"><span>Blog</span></a></li>
-				{% else %}
-				<li><a href="/blog/" title="Blog"><span>Blog</span></a></li>
-				{% endif %}
+              {% if section == 'blog' %}
+              <li class="active"><a href="/blog/" title="Blog"><span>Blog</span></a></li>
+              {% else %}
+              <li><a href="/blog/" title="Blog"><span>Blog</span></a></li>
+              {% endif %}
 
-				{% if section == 'spiewnik' %}
-				<li class="active"><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
-				{% else %}
-				<li><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
-				{% endif %}
-				
-				{% if section == 'wydarzenia' %}
-				<li class="active"><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
-				{% else %}
-				<li><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
-				{% endif %}
-				
-				{% if section == 'o-stronie' %}
-				<li class="active"><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
-				{% else %}
-				<li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
-				{% endif %}
+              {% if section == 'spiewnik' %}
+              <li class="active"><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
+              {% else %}
+              <li><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
+              {% endif %}
+
+              {% if section == 'wydarzenia' %}
+              <li class="active"><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
+              {% else %}
+              <li><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
+              {% endif %}
+
+              {% if section == 'o-stronie' %}
+              <li class="active"><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
+              {% else %}
+              <li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
+              {% endif %}
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -74,22 +74,22 @@
     {% block content %} {% endblock content %}
 
     <div class="footer not-for-print">
-        <div class="container">
-            <div class="row">
-                <div class="span12">
-                    <center><small>© 2011-2012 Piosenka z tekstem</small></center>
-                </div>
-            </div>
-
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <center><small>© 2011-2012 Piosenka z tekstem</small></center>
+          </div>
         </div>
+
+      </div>
     </div>
 
     <div class="only-for-print">
-        <div class="container">
-            <div class="row">
-                <div class="span12"><p><b>www.piosenkaztekstem.pl</b></p></div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="span12"><p><b>www.piosenkaztekstem.pl</b></p></div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

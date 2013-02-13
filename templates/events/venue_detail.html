@@ -23,15 +23,9 @@
       </div>
     </div>
     <div class="span4">
-      <div class="customwell auxwell">
-        <h1>Mapa</h1>
-        {% if venue.location %}
-        {% include "events/map.html" with map_width="280" map_height="210" map_center_lat=venue.location_lat map_center_lng=venue.location_lng map_zoom="12" mark=venue %}
-        {% endif %}
-      </div>
-
-      {% include "wells/like.html" with like_what="miejsce" %}
-      {% include "wells/manage.html" with item=venue manage_what="miejsce" %}
+      {% include "base/wells/place.html" with place=venue mark=venue %}
+      {% include "base/wells/like.html" with like_what="miejsce" %}
+      {% include "base/wells/manage.html" with item=venue manage_what="miejsce" %}
     </div>
   </div>
 </div>

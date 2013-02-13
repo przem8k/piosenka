@@ -37,14 +37,10 @@
 
 
     <div class="span4 not-for-print">
-      {% include "wells/like.html" with like_what="artykuł" %}
-      {% include "wells/manage.html" with item=article manage_what="artykuł" %}
+      {% include "base/wells/like.html" with like_what="artykuł" %}
+      {% include "base/wells/manage.html" with item=article manage_what="artykuł" %}
     </div>
 
-    <div class="row">
-      <div class="span12">
-        {% include "plugins/disqus.html" %}
-      </div>
-    </div>
+    {% include "base/rows/disqus.html" %}
   </div>
 {% endblock content %}
