@@ -4,20 +4,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Category(models.Model):
-    name = models.CharField(max_length=100)
-
-    class Meta:
-        verbose_name_plural = "Categories"
-
-    def __unicode__(self):
-        return self.name
-
-
 class Post(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length="100", null=True)
-    category = models.ForeignKey(Category)
     author = models.ForeignKey(User)
     date = models.DateTimeField(editable=False)
     post = models.TextField(help_text="Post or its introductory part, written in Markdown.")
@@ -41,6 +30,9 @@ class Post(models.Model):
         if not self.date and self.published:
             self.date = datetime.datetime.now()
         super(Post, self).save(*args, **kwargs)
+
+    class Meta:
+        ordering = ["-date"]
 
     def __unicode__(self):
         return self.title

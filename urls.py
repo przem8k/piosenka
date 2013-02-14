@@ -26,7 +26,7 @@ urlpatterns = patterns('',
     #admin
     url(r'^admin/', include(admin.site.urls)),
     #index
-    url(r'^$', frontpage.views.IndexView.as_view(), name="index"),
+    url(r'^$', frontpage.views.SiteIndex.as_view(), name="index"),
 )
 
 from django.conf import settings

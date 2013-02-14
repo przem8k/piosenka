@@ -8,23 +8,34 @@
 <div class="container">
   <div class="row">
     <div class="span8">
+      {% for post in new_posts %}
       <div class="customwell contentwell">
-        <h1 class="remove-top-margin">Nowe posty</h1>
-        {% for post in new_posts %}
-        <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a> <small>{{ post.date|date:"d.m.Y" }}</small></h2>
+        <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
 
-        {{ post.post|safe }}
+        {{ post.post_html|safe }}
 
         {% if post.more %}
-        <p><a href="{{ post.get_absolute_url }}">Czytaj dalej</a>.</p>
+        <p><a href="{{ post.get_absolute_url }}">Czytaj dalej i skomentuj</a>.</p>
+        {% else %}
+        <p><a href="{{ post.get_absolute_url }}">Skomentuj</a>.</p>
         {% endif %}
 
-        {% endfor %}
+        {% include "base/content_foot.html" with action="Dodany" item=post %}
       </div>
+      {% endfor %}
     </div>
 
     <div class="span4">
-      {% include "blog/inc/all_posts.html" %}
+      <div class="customwell auxwell">
+        <h1>Wszystkie posty</h1>
+        <table class="vtop cleantable">
+          {% for post in all_posts %}
+          <tr><td>
+              <small>{{ post.date|date:"d.m.Y" }}</small></td><td> <a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+          </td></tr>
+          {% endfor %}
+        </table>
+      </div>
     </div>
   </div>
 </div>

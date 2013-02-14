@@ -16,8 +16,7 @@
 
         {{ post.more_html|safe }}
 
-        <hr />
-        <p class="remove-bottom-margin">Dodany <span class="date">{{ post.date|date:"d.m.Y" }}</span> przez <b>{{ post.author }}</b>.</p>
+        {% include "base/content_foot.html" with action="Dodany" item=post %}
       </div>
     </div>
     <div class="span4">

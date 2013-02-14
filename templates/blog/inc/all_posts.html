@@ -1,9 +1,0 @@
-<div class="customwell auxwell">
-	<h1>Wszystkie posty</h1>
-	<ul class="unstyled">
-		{% for post in all_posts %}
-		
-			<li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a> <small>{{ post.date|date:"d.m.Y" }}</small></li>
-		{% endfor %}
-	</ul>
-</div>

@@ -1,12 +1,12 @@
 <div class="customwell auxwell">
-	<h1 class="remove-top-margin">Blog</h1>
-    {% for post in posts %}
-		<p><a href="{{ post.get_absolute_url }}">{{ post.title }}</a> <small>{{ post.date|date:"d.m.Y" }}</small></p>
+  <h1 class="remove-top-margin">Blog: {{ post.title }}</h1>
 
-		{{ post.post|safe }}
+  {{ post.post_html|safe }}
 
-		{% if post.more %}
-		<p><a href="{{ post.get_absolute_url }}">Czytaj dalej</a>.</p>
-		{% endif %}
-	{% endfor %}
+  {% if post.more %}
+  <p><a href="{{ post.get_absolute_url }}">Czytaj dalej i skomentuj</a>.</p>
+  {% else %}
+  <p><a href="{{ post.get_absolute_url }}">Skomentuj</a>.</p>
+  {% endif %}
+  {% include "base/content_foot.html" with action="Dodany" item=post %}
 </div>
