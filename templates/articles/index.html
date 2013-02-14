@@ -9,7 +9,7 @@
 
 {% include "articles/top.html" %}
 <div class="container">
-  {% for row in articles|rows:"3" %}
+  {% for row in articles|columns_horizontal:"3" %}
   <div class="row">
     {% for article in row %}
     <div class="span4">
