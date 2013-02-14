@@ -30,8 +30,7 @@
           {{ article.main_text_html|safe }}
         </div>
 
-        <hr />
-        <p class="remove-bottom-margin">Dodany <span class="date">{{ article.date|date:"d.m.Y" }}</span> przez <b>{{ article.author }}</b>.</p>
+        {% include "base/content_foot.html" with action="Dodany" item=article %}
       </div>
     </div>
 
