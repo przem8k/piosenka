@@ -1,10 +1,10 @@
 <div class="customwell auxwell">
-	<h1>Nowe opracowania</h1>
-	<ul class="unstyled">
-		{% for song in songs %}
-	    	<li>
-			    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a> <small>{{ song.0|date:"d.m.Y" }}</small>
-			</li>
-		{% endfor %}
-	</ul>
+  <h1>Nowe opracowania</h1>
+  <ul class="unstyled">
+    {% for song in songs %}
+    <li>
+    <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
