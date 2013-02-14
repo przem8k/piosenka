@@ -36,6 +36,14 @@ class EventIndex(ListView):
     context_object_name = "events"
     template_name = "events/event_index.html"
     queryset = Event.current.all()
+    VENUE_COUNT = 10
+    def get_context_data(self, **kwargs):
+        context = super(EventIndex, self).get_context_data(**kwargs)
+        from django.db.models import Count
+        context['popular_venues'] = Venue.objects.all() \
+                                                 .annotate(event_count=Count('event')) \
+                                                 .order_by('-event_count')[:EventIndex.VENUE_COUNT]
+        return context
 
 
 class EventMonthArchive(MonthArchiveView):
