@@ -7,7 +7,6 @@
 
 {% block content %}
 {% include "articles/top.html" %}
-
 <div class="container">
   <div class="row">
     <div class="span8">
@@ -21,7 +20,7 @@
           {% endthumbnail %}
           {% endif %}
           <div class="thumbnail-caption">
-            {{ article.cover_credits|safe }}
+            {{ article.cover_credits_html|safe }}
           </div>
         </div>
         <div class="article-body">
@@ -40,6 +39,7 @@
       {% include "base/wells/manage.html" with item=article manage_what="artykuł" %}
     </div>
 
-    {% include "base/rows/disqus.html" %}
   </div>
+  {% include "base/rows/disqus.html" %}
+</div>
 {% endblock content %}

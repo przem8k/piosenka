@@ -1,6 +1,7 @@
 {% extends "base-next.html" %}
 
 {% load thumbnail %}
+{% load dxpartition %}
 
 {% block title %}Artykuły{% endblock %}
 
@@ -8,8 +9,9 @@
 
 {% include "articles/top.html" %}
 <div class="container">
+  {% for row in articles|rows:"3" %}
   <div class="row">
-    {% for article in featured %}
+    {% for article in row %}
     <div class="span4">
       <div class="customwell auxwell">
         <a href="{{article.get_absolute_url}}">
@@ -27,9 +29,11 @@
           </div>
         </a>
         {{ article.lead_text_html|safe }}
+        {% include "base/content_foot.html" with action="Dodany" item=article %}
       </div>
     </div>
     {% endfor %}
   </div>
+  {% endfor %}
 </div>
 {% endblock content %}
