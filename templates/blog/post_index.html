@@ -30,9 +30,10 @@
         <h1>Wszystkie posty</h1>
         <table class="vtop cleantable">
           {% for post in all_posts %}
-          <tr><td>
-              <small>{{ post.date|date:"d.m.Y" }}</small></td><td> <a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-          </td></tr>
+          <tr>
+            <td><small>{{ post.date|date:"d.m.Y" }}</small></td>
+            <td><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></td>
+          </tr>
           {% endfor %}
         </table>
       </div>
