@@ -10,7 +10,7 @@
     <div class="span8">
       {% for post in new_posts %}
       <div class="customwell contentwell">
-        <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
+        <h1>{{ post.title }}</h1>
 
         {{ post.post_html|safe }}
 
