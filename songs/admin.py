@@ -19,8 +19,9 @@ class SongAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Identification',              {'fields': ['title', 'original_title', 'disambig', 'slug', 'published']}),
         ('Content',                 {'fields': ['capo_fret', 'lyrics', ]}),
-        ('Additional',              {'fields': ['link_youtube', 'link_wrzuta', 'score1', 'score2', 'score3']}),
+        ('Additional',              {'fields': ['link_youtube', 'link_wrzuta', 'score1', 'score2', 'score3', 'related_songs']}),
     ]
+    filter_horizontal = ['related_songs']
 
 admin.site.register(Song, SongAdmin)
 

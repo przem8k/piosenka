@@ -39,6 +39,7 @@ class Song(models.Model):
     capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret], help_text="Set to 0 if no capo")
     lyrics = models.TextField(null=True, validators=[validate_lyrics])
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
+    related_songs = models.ManyToManyField("self", null=True, blank=True, symmetrical=True, help_text="E.g. different translations or different compositions of the same text.");
 
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
@@ -66,7 +67,6 @@ class Song(models.Model):
         return [x.artist for x in ArtistContribution.objects.filter(song=self, composed=True)]
 
     def translators(self):
-        """ deprecated - translations should be stored as Translation objects """
         return [x.artist for x in ArtistContribution.objects.filter(song=self, translated=True)]
 
     def performers(self):
@@ -94,10 +94,13 @@ class Song(models.Model):
         return ("song-print", (), {"artist_slug": self.head_entity().slug, "song_slug": self.slug})
 
     def __unicode__(self):
-        return self.title
+        if self.disambig:
+            return "%s (%s)" % (self.title, self.disambig,)
+        else:
+            return self.title
 
     class Meta:
-        ordering = ["title"]
+        ordering = ["title", "disambig"]
 
 
 class ArtistContribution(models.Model):
@@ -111,12 +114,6 @@ class ArtistContribution(models.Model):
     def __unicode__(self):
         return self.artist.firstname + " " + self.artist.lastname + " - " + self.song.title
 
-    def songid(self):
-        return self.song.id
-
-    def songtitle(self):
-        return self.song.title
-
 
 class BandContribution(models.Model):
     song = models.ForeignKey(Song)
@@ -126,15 +123,8 @@ class BandContribution(models.Model):
     def __unicode__(self):
         return self.band.name + " - " + self.song.title
 
-    def songid(self):
-        return self.song.id
-
-    def songtitle(self):
-        return self.song.title
 
 # Translations
-
-
 class Translation(models.Model):
     original_song = models.ForeignKey(Song)
     title = models.CharField(max_length=100)
