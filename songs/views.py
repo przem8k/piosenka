@@ -1,5 +1,5 @@
 from django.template import Context, loader
-from songs.models import Song, Translation, ArtistContribution, BandContribution, ArtistContributionToTranslation, BandContributionToTranslation
+from songs.models import Song, ArtistContribution, BandContribution 
 from artists.models import Artist, Band
 from django.http import HttpResponsePermanentRedirect, Http404
 from django.shortcuts import get_object_or_404, render
@@ -101,7 +101,7 @@ def song_or_translation(request, song, for_print, template_name='songs/song.html
     return render(request, template_name, context)
 
 
-def song_or_translation_entry(request, artist_slug, song_slug, translator_slug=None, for_print=False):
+def song_or_translation_entry(request, artist_slug, song_slug, for_print=False):
     song = get_object_or_404(Song, slug=song_slug)
 
     artist = get_or_none(Artist, slug=artist_slug)
@@ -114,15 +114,7 @@ def song_or_translation_entry(request, artist_slug, song_slug, translator_slug=N
        ):
         raise Http404()
 
-    if translator_slug:
-        translator = get_object_or_404(Artist, slug=translator_slug)
-        try:
-            translation = [x for x in song.translations() if (translator in x.translators())][0]
-        except IndexError:
-            raise Http404()
-        return song_or_translation(request, translation, for_print)
-    else:
-        return song_or_translation(request, song, for_print)
+    return song_or_translation(request, song, for_print)
 
 
 def redirect_to_song(request, song_slug):
@@ -150,22 +142,15 @@ def entity(request, slug, template_name="songs/list.html"):
         songs = [x.song for x in (ArtistContribution.objects.filter(artist=entity)
                                                             .select_related('song')
                                                             .order_by('song__title'))]
-        translations = [x.translation for x in (ArtistContributionToTranslation.objects.filter(artist=entity)
-                                                                                       .select_related('translation')
-                                                                                       .order_by('translation__title'))]
     except Artist.DoesNotExist:
         entity = get_object_or_404(Band, slug=slug)
         songs = [x.song for x in (BandContribution.objects.filter(band=entity)
                                                           .select_related('song')
                                                           .order_by('song__title'))]
-        translations = [x.translation for x in (BandContributionToTranslation.objects.filter(band=entity)
-                                                                                     .select_related('translation')
-                                                                                     .order_by('translation__title'))]
 
     return render(request, template_name, {
         'section': 'songs',
         'songs': songs,
-        'translations': translations,
         'entity': entity
         })
 

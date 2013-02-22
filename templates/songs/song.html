@@ -15,6 +15,9 @@
     <div class="span8">
       <div class="customwell contentwell">
         <h1 class="remove-top-margin">{{ song.title }}</h1>
+        {% if song.disambig %}
+        <h2>{{ song.disambig }}</h2>
+        {% endif %}
 
         <table width="100%">
           <tr>
@@ -151,25 +154,6 @@
         </ul> 
       </div>  
       {% endif %}
-
-      {% if song.translations %}
-      <div class="customwell auxwell">
-        <h1>Tłumaczenia</h1>
-        <ul class="unstyled">
-          {% for translation in song.translations %}
-          <li><a href="{{translation.get_absolute_url}}">{{translation.authors_string}}</a></li>
-          {% endfor %}
-        </ul> 
-      </div>  
-      {% endif %}
-
-      {% if song.original_song %}
-      <div class="customwell auxwell">
-        <h1>Oryginalna piosenka</h1>
-        <a href="{{song.original_song.get_absolute_url}}">{{song.original_song}}</a>
-      </div>  
-      {% endif %}
-
 
       {% if user.is_staff %}
       <div class="customwell auxwell">

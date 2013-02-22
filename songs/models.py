@@ -44,10 +44,6 @@ class Song(models.Model):
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
 
-    def translations(self):
-        """ returns list of Translation objects of this song """
-        return Translation.objects.filter(original_song=self)
-
     def external_links(self):
         """ returns list of (label, url) tuples describing links associated with the song """
         ytpart = [("Nagranie (Youtube)", self.link_youtube, )] if self.link_youtube else []
@@ -124,101 +120,7 @@ class BandContribution(models.Model):
         return self.band.name + " - " + self.song.title
 
 
-# Translations
-class Translation(models.Model):
-    original_song = models.ForeignKey(Song)
-    title = models.CharField(max_length=100)
-    artists = models.ManyToManyField(Artist, null=True, blank=True, through='ArtistContributionToTranslation')
-    bands = models.ManyToManyField(Band, null=True, blank=True, through='BandContributionToTranslation')
-    link_youtube = models.URLField(null=True, blank=True)
-    link_wrzuta = models.URLField(null=True, blank=True)
-    score1 = models.ImageField(null=True, blank=True, upload_to='scores')
-    score2 = models.ImageField(null=True, blank=True, upload_to='scores')
-    score3 = models.ImageField(null=True, blank=True, upload_to='scores')
-    capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret], help_text="Set to 0 if no capo")
-    lyrics = models.TextField(null=True, validators=[validate_lyrics])
-
-    def capo(self, transposition=0):
-        return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
-
-    def external_links(self):
-        """ returns list of (label, url) tuples describing links associated with the song """
-        ytpart = [("Nagranie (Youtube)", self.link_youtube, )] if self.link_youtube else []
-        wrzutapart = [("Nagranie (Wrzuta)", self.link_wrzuta, )] if self.link_wrzuta else []
-        return ytpart + wrzutapart + [(x.artist, x.artist.website) for x in
-            ArtistContributionToTranslation.objects.filter(translation=self).select_related('artist') if
-            x.artist.website != None and len(x.artist.website) > 0
-        ] + [(x.band, x.band.website) for x in
-            BandContributionToTranslation.objects.filter(translation=self).select_related('band') if
-            x.band.website != None and len(x.band.website) > 0
-        ]
-
-    def text_authors(self):
-        return self.original_song.text_authors()
-
-    def composers(self):
-        return self.original_song.composers()
-
-    def translators(self):
-        return [x.artist for x in ArtistContributionToTranslation.objects.filter(translation=self, translated=True)]
-
-    def performers(self):
-        return [
-            x.artist for x in ArtistContributionToTranslation.objects.filter(translation=self, performed=True)
-        ] + [
-            x.band for x in BandContributionToTranslation.objects.filter(translation=self, performed=True)
-        ]
-
-    def head_entity(self):
-        """ any artist or band associated with the translation, used to construct default urls """
-        try:
-            return self.translators()[0]
-        except IndexError:
-            return None
-
-    def authors_string(self):
-        return ", ".join([x.__unicode__() for x in self.translators()])
-
-    @models.permalink
-    def get_absolute_url(self):
-        """ each Translation object may have multiple absolute urls, each for every contributing entity
-            this method returns one of them """
-        return ("translation", (), {
-            "artist_slug": self.original_song.head_entity().slug,
-            "song_slug": self.original_song.slug,
-            "translator_slug": self.head_entity().slug
-        })
-
-    @models.permalink
-    def get_absolute_url_print(self):
-        return ("translation-print", (), {
-            "artist_slug": self.original_song.head_entity().slug,
-            "song_slug": self.original_song.slug,
-            "translator_slug": self.head_entity().slug
-        })
-
-    def __unicode__(self):
-        return u"%s - tł. %s" % (self.title, self.authors_string())
-
-    class Meta:
-        ordering = ["title"]
-
-
-class ArtistContributionToTranslation(models.Model):
-    translation = models.ForeignKey(Translation)
-    artist = models.ForeignKey(Artist)
-    performed = models.BooleanField()
-    translated = models.BooleanField()
-
-
-class BandContributionToTranslation(models.Model):
-    translation = models.ForeignKey(Translation)
-    band = models.ForeignKey(Band)
-    performed = models.BooleanField()
-
-#
-
-
+###
 class UserCategory(models.Model):
     user = models.ForeignKey(User)
     name = models.CharField(max_length=100)

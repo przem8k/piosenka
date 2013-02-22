@@ -1,70 +1,42 @@
 {% extends "base-next.html" %}
 
 {% block title %}{{ entity }}{% endblock title %}
-	
+
 {% load dxpartition %}
-	
+
 {% block content %}
 
 {% include "songs/top.html" %}
 
 <div class="container">
-    <div class="row">
-        <div class="span12">
-            <div class="customwell contentwell">
-            	<h1 class="remove-top-margin">{{ entity }}</h1>
+  <div class="row">
+    <div class="span12">
+      <div class="customwell contentwell">
+        <h1 class="remove-top-margin">{{ entity }}</h1>
 
-                {% if songs %}
-                <table width="100%" class="vtop">
-                    <tr><th width="50%"></th><th width="50%"></th></tr>
-                    <tr>
-                    {% for row in songs|rows:2 %}
-                        <td>
-                            <ul class="unstyled">
-                            {% for song in row %}
-                            
-                                <li><a href="{% url song entity.slug song.slug %}" {% if not song.published %}style="color: gray;"{% endif %}>{{ song|truncatechars:50 }}</a>
-                                {% if song.translations %}
-                                <ul style="list-style-type: circle;">
-                                    {% for translation in song.translations %}
-                                        <li><a href="{% url translation entity.slug song.slug translation.head_entity.slug %}">tł. {{ translation.authors_string|truncatechars:50 }}</a></li>
-                                    {% endfor %}
-                                </ul>
-                                {% endif %}
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        </td>
-                    {% endfor %}               
-                    </tr>
-                </table>
-                {% endif %}
-                
-                {% if translations %}
-                <h2>Tłumaczenia</h2>
-                <table width="100%" class="vtop">
-                    <tr><th width="50%"></th><th width="50%"></th></tr>
-                    <tr>
-                    {% for row in translations|rows:2 %}
-                        <td>
-                            <ul class="unstyled">
-                            {% for translation in row %}
-                                <li>
-                                    <a href="{% url translation translation.original_song.head_entity.slug translation.original_song.slug entity.slug %}">{{translation.original_song}} - {{translation.title}}</a>
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        </td>
-                    {% endfor %}               
-                    </tr>
-                </table>
-                {% endif %}
-            </div>
-            <hr />
-        </div>
-    </div>    	
-    {% include "songs/menu.html" %}
+        {% if songs %}
+        <table width="100%" class="vtop">
+          <tr><th width="50%"></th><th width="50%"></th></tr>
+          <tr>
+            {% for row in songs|rows:2 %}
+            <td>
+              <ul class="unstyled">
+                {% for song in row %}
+                <li><a href="{% url song entity.slug song.slug %}" {% if not song.published %}style="color: gray;"{% endif %}>{{ song|truncatechars:50 }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </td>
+            {% endfor %}               
+          </tr>
+        </table>
+        {% endif %}
+
+      </div>
+      <hr />
+    </div>
+  </div>    	
+  {% include "songs/menu.html" %}
 </div>
 
 {% endblock content %}
-
