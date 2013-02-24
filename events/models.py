@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from markdown import markdown
 from datetime import datetime
 from django.db import models
 from django.conf import settings
@@ -19,13 +20,16 @@ class LocationField(models.CharField):
         defaults['widget'] = LocationWidget
         return super(LocationField, self).formfield(**defaults)
 
+
 class CurrentEventManager(models.Manager):
     def get_query_set(self):
         return super(CurrentEventManager, self).get_query_set().filter(datetime__gte=datetime.now())
         
+
 class PastEventManager(models.Manager):
     def get_query_set(self):
         return super(PastEventManager, self).get_query_set().filter(datetime__lt=datetime.now())
+
 
 class Venue(models.Model):
     name = models.CharField(max_length="100")
@@ -34,18 +38,11 @@ class Venue(models.Model):
     slug = models.SlugField(max_length="100", unique=True)
     location = LocationField(editable=False)
 
-    @models.permalink
-    def get_absolute_url(self):
-        return('venue_detail', (), {
-            'slug': self.slug,
-        })
+    class Meta:
+        ordering = ["town", "name"]    
 
-    def location_lat(self):
-        a, b = self.location.split(',')
-        return float(a)
-    def location_lng(self):
-        a, b = self.location.split(',')
-        return float(b)
+    def __unicode__(self):
+        return "%s - %s" % (self.town, self.name)
 
     def save(self, *args, **kwargs):
         from googlemaps import GoogleMaps
@@ -57,32 +54,47 @@ class Venue(models.Model):
         self.location = str(lat) + ',' + str(lng)
         super(Venue, self).save(*args, **kwargs)
 
-    def __unicode__(self):
-        return "%s - %s" % (self.town, self.name)
-    class Meta:
-        ordering = ["town", "name"]    
+    @models.permalink
+    def get_absolute_url(self):
+        return('venue_detail', (), {
+            'slug': self.slug,
+        })
+
+    def location_lat(self):
+        a, b = self.location.split(',')
+        return float(a)
+
+    def location_lng(self):
+        a, b = self.location.split(',')
+        return float(b)
+
 
 class Event(models.Model):
     name = models.CharField(max_length="100")	
     slug = models.SlugField(max_length="100", unique_for_date="datetime")
     datetime = models.DateTimeField()
-    price = models.CharField(max_length="100", help_text="E.g. 5zl, wstep wolny, etc.", null=True)
-    artists = models.ManyToManyField(Artist, null=True,blank=True)
-    bands = models.ManyToManyField(Band, null=True,blank=True)
-    description = models.TextField()
-    website = models.URLField(blank=True,null=True)
+    price = models.CharField(max_length="100", null=True, blank=True, help_text="E.g. 5zl, wstep wolny, brak danych, etc.")
+    artists = models.ManyToManyField(Artist, null=True, blank=True)
+    bands = models.ManyToManyField(Band, null=True, blank=True)
+    description = models.TextField(null=True, blank=True, help_text="Event description, written in Markdown.")
+    description_html = models.TextField(null=True, blank=True, editable=False)
+    website = models.URLField(null=True, blank=True)
     venue = models.ForeignKey(Venue, null=False, blank=False)
     
     objects = models.Manager()
     current = CurrentEventManager()
     past = PastEventManager()
     
-    def location_lat(self):
-        return self.venue.location_lat()
-    def location_lng(self):
-        return self.venue.location_lng()
-    def date(self):
-        return "%s.%s" % (self.datetime.strftime("%e"),self.datetime.strftime("%m"))
+    class Meta:
+        ordering = ["datetime"]
+
+    def __unicode__(self):
+        return "%s - %s (%s)" % (self.date(), self.name, self.venue.town)
+
+    def save(self, *args, **kwargs):
+        self.description_html = markdown(self.description, safe_mode='escape')
+        super(Event, self).save(*args, **kwargs)
+
     @models.permalink
     def get_absolute_url(self):
         return ('event_detail', (), { 
@@ -91,7 +103,12 @@ class Event(models.Model):
             'day': self.datetime.strftime("%d"),
             'slug': self.slug
         })                      
-    def __unicode__(self):
-        return "%s - %s (%s)" % (self.date(), self.name,self.venue.town)
-    class Meta:
-        ordering = ["datetime"]
+
+    def location_lat(self):
+        return self.venue.location_lat()
+
+    def location_lng(self):
+        return self.venue.location_lng()
+
+    def date(self):
+        return "%s.%s" % (self.datetime.strftime("%e"),self.datetime.strftime("%m"))
