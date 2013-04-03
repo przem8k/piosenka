@@ -1,3 +1,3 @@
 sorl-thumbnail
-googlemaps
+pygeocoder
 unidecode

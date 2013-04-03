@@ -45,12 +45,14 @@ class Venue(models.Model):
         return "%s - %s" % (self.town, self.name)
 
     def save(self, *args, **kwargs):
-        from googlemaps import GoogleMaps
+        from pygeocoder import Geocoder
         from unidecode import unidecode
         address = self.street + ', ' + self.town;
         ascii_address = unidecode(unicode(address))
-        gmaps = GoogleMaps(settings.GOOGLE_MAPS_API_KEY)
-        lat, lng = gmaps.address_to_latlng(ascii_address)
+        geo = Geocoder.geocode(ascii_address)
+        if len(geo) == 0:
+            raise RuntimeError("Address geo lookup failed.")
+        lat, lng = geo[0].coordinates
         self.location = str(lat) + ',' + str(lng)
         super(Venue, self).save(*args, **kwargs)
 
