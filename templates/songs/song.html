@@ -166,7 +166,7 @@
       {% endif %}
     </div>
   </div>
-  {% include "base/rows/disqus.html" %}
+  {% include "base/rows/disqus.html" with disqus_id=song.slug %}
 </div>
 
 {% endblock content %}
