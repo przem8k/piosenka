@@ -22,6 +22,8 @@
   <body {% if print %}class="print"{% endif %}>
     {% include "base/plugins/facebook.html" %}
     <script src="{{ STATIC_URL }}js/jquery-1.10.0.min.js"></script>
+    <!-- Added due to a bootstrap incompability - remove once we move to bootstrap 3.x -->
+    <script src="{{ STATIC_URL }}js/jquery-migrate-1.2.1.min.js"></script>
     <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}scripts/trigger.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
