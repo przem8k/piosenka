@@ -1,10 +1,10 @@
-from django.views.generic import TemplateView
 from django.contrib.admin.models import LogEntry, ADDITION
 from django.contrib.contenttypes.models import ContentType
-
+from django.views.generic import TemplateView
 
 from blog.models import Post
 from events.models import Event
+from frontpage.models import CarouselItem
 from songs.models import Song
 
 def get_or_none(model, **kwargs):
@@ -23,7 +23,8 @@ class SiteIndex(TemplateView):
         songs = [(x.action_time, get_or_none(Song, pk=x.object_id)) for x in entries if get_or_none(Song, pk=x.object_id) != None]
 
         context = super(SiteIndex, self).get_context_data(**kwargs)
-        context['post'] = Post.objects.all().order_by('-date')[0]
+        context['carousel_items'] = CarouselItem.objects.filter(archived=False)
         context['events'] = Event.current.all()
+        context['post'] = Post.objects.all().order_by('-date')[0]
         context['songs'] = songs
         return context
