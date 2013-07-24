@@ -33,11 +33,11 @@ class Article(models.Model):
     cover_credits = models.TextField(null=True, blank=True, help_text="Thank you / credit notes about the author of the cover picture, written in Markdown.")
     cover_credits_html = models.TextField(null=True, blank=True, editable=False)
 
-    @models.permalink
-    def get_absolute_url(self):
-        return('article', (), {
-            'slug': self.slug,
-        })
+    class Meta:
+        ordering = ["-date"]
+
+    def __unicode__(self):
+        return self.title
 
     def save(self, *args, **kwargs):
         self.lead_text_html = markdown(self.lead_text, safe_mode='escape')
@@ -47,8 +47,8 @@ class Article(models.Model):
             self.date = datetime.datetime.now()
         super(Article, self).save(*args, **kwargs)
 
-    class Meta:
-        ordering = ["-date"]
-
-    def __unicode__(self):
-        return self.title
+    @models.permalink
+    def get_absolute_url(self):
+        return('article', (), {
+            'slug': self.slug,
+        })

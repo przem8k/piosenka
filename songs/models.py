@@ -41,6 +41,25 @@ class Song(models.Model):
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
     related_songs = models.ManyToManyField("self", null=True, blank=True, symmetrical=True, help_text="E.g. different translations or different compositions of the same text.");
 
+    class Meta:
+        ordering = ["title", "disambig"]
+
+    def __unicode__(self):
+        if self.disambig:
+            return "%s (%s)" % (self.title, self.disambig,)
+        else:
+            return self.title
+
+    @models.permalink
+    def get_absolute_url(self):
+        """ each Song object may have multiple absolute urls, each for every contributing entity
+            this method returns one of them """
+        return ("song", (), {"artist_slug": self.head_entity().slug, "song_slug": self.slug})
+
+    @models.permalink
+    def get_absolute_url_print(self):
+        return ("song-print", (), {"artist_slug": self.head_entity().slug, "song_slug": self.slug})
+
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
 
@@ -78,25 +97,6 @@ class Song(models.Model):
             return (self.performers() + self.text_authors())[0]
         except IndexError:
             return None
-
-    @models.permalink
-    def get_absolute_url(self):
-        """ each Song object may have multiple absolute urls, each for every contributing entity
-            this method returns one of them """
-        return ("song", (), {"artist_slug": self.head_entity().slug, "song_slug": self.slug})
-
-    @models.permalink
-    def get_absolute_url_print(self):
-        return ("song-print", (), {"artist_slug": self.head_entity().slug, "song_slug": self.slug})
-
-    def __unicode__(self):
-        if self.disambig:
-            return "%s (%s)" % (self.title, self.disambig,)
-        else:
-            return self.title
-
-    class Meta:
-        ordering = ["title", "disambig"]
 
 
 class ArtistContribution(models.Model):

@@ -26,14 +26,14 @@ class Artist(models.Model):
     )
     kind = models.IntegerField(choices=ARTIST_KINDS, null=True, blank=True, help_text="Select the most prominent thing the person is famous for.")
 
-    def get_absolute_url(self):
-        return "/spiewnik/%s/" % self.slug
+    class Meta:
+        ordering = ["lastname", "firstname", ]
 
     def __unicode__(self):
         return self.firstname + " " + self.lastname
 
-    class Meta:
-        ordering = ["lastname", "firstname", ]
+    def get_absolute_url(self):
+        return "/spiewnik/%s/" % self.slug
 
 
 class Band(models.Model):
@@ -43,11 +43,11 @@ class Band(models.Model):
     display = models.BooleanField()
     website = models.URLField(null=True, blank=True)
 
-    def get_absolute_url(self):
-        return "/spiewnik/%s/" % self.slug
+    class Meta:
+        ordering = ["name", ]
 
     def __unicode__(self):
         return self.name
 
-    class Meta:
-        ordering = ["name", ]
+    def get_absolute_url(self):
+        return "/spiewnik/%s/" % self.slug

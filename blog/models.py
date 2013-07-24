@@ -15,14 +15,11 @@ class Post(models.Model):
     more_html = models.TextField(null=True, blank=True, editable=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published posts")
 
-    @models.permalink
-    def get_absolute_url(self):
-        return ('post_detail', (), {
-            'year': self.date.strftime("%Y"),
-            'month': self.date.strftime("%m"),
-            'day': self.date.strftime("%d"),
-            'slug': self.slug
-        })
+    class Meta:
+        ordering = ["-date"]
+
+    def __unicode__(self):
+        return self.title
 
     def save(self, *args, **kwargs):
         self.post_html = markdown(self.post, safe_mode='escape')
@@ -31,8 +28,11 @@ class Post(models.Model):
             self.date = datetime.datetime.now()
         super(Post, self).save(*args, **kwargs)
 
-    class Meta:
-        ordering = ["-date"]
-
-    def __unicode__(self):
-        return self.title
+    @models.permalink
+    def get_absolute_url(self):
+        return ('post_detail', (), {
+            'year': self.date.strftime("%Y"),
+            'month': self.date.strftime("%m"),
+            'day': self.date.strftime("%d"),
+            'slug': self.slug
+        })
