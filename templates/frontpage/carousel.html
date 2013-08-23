@@ -1,13 +1,20 @@
 {% load thumbnail %}
 
 <div id="frontCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    {% for item in carousel_items %}
+    <li data-target="#carousel-example-generic" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %} class="active"{% endif %}></li>
+    {% endfor %}
+  </ol>
+
 	<!-- Carousel items -->
 	<div class="carousel-inner">
     {% for item in carousel_items %}
     <div class="{% if forloop.first %}active {% endif %}item">
       {% if item.image %}
-      {% thumbnail item.image "620x338" crop="center" as im %}
-      <img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" />
+      {% thumbnail item.image "900x400" crop="center" as im %}
+      <img src="{{im.url}}" class="img-responsive"/>
       {% endthumbnail %}
       {% endif %}
       <div class="carousel-caption">
@@ -19,6 +26,6 @@
 	</div>
 
 	<!-- Carousel nav -->
-	<a class="carousel-control left" href="#frontCarousel" data-slide="prev">&lsaquo;</a>
-	<a class="carousel-control right" href="#frontCarousel" data-slide="next">&rsaquo;</a>
+	<a class="carousel-control left" href="#frontCarousel" data-slide="prev"><span class="icon-prev"></span></a>
+	<a class="carousel-control right" href="#frontCarousel" data-slide="next"><span class="icon-next"></span></a>
 </div>
