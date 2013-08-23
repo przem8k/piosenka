@@ -1,7 +1,8 @@
 <!DOCTYPE HTML> 
-<html>
+<html lang="pl">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if not print %}
     <meta name="robots" content="index,follow" />
     {% else %}
@@ -21,9 +22,7 @@
 
   <body {% if print %}class="print"{% endif %}>
     {% include "base/plugins/facebook.html" %}
-    <script src="{{ STATIC_URL }}js/jquery-1.10.0.min.js"></script>
-    <!-- Added due to a bootstrap incompability - remove once we move to bootstrap 3.x -->
-    <script src="{{ STATIC_URL }}js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery-2.0.3.min.js"></script>
     <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}scripts/trigger.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
@@ -32,52 +31,69 @@
 
     {% endblock extra-scripts %}
 
-    <div class="navbar navbar-inverse navbar-fixed-top not-for-print">
-      <div class="navbar-inner">
-        <div class="container">
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              {% if section == 'index' %}
-              <li class="feather active"><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
-              {% else %}
-              <li class="feather"><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
-              {% endif %}
-
-
-              {% if section == 'blog' %}
-              <li class="active"><a href="/blog/" title="Blog"><span>Blog</span></a></li>
-              {% else %}
-              <li><a href="/blog/" title="Blog"><span>Blog</span></a></li>
-              {% endif %}
-
-              {% if section == 'spiewnik' %}
-              <li class="active"><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
-              {% else %}
-              <li><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
-              {% endif %}
-
-              {% if section == 'wydarzenia' %}
-              <li class="active"><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
-              {% else %}
-              <li><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
-              {% endif %}
-
-              {% if section == 'artykuly' %}
-              <li class="active"><a href="/artykuly/" title="Artykuły"><span>Artykuły</span></a></li>
-              {% else %}
-              <li><a href="/artykuly/" title="Artykuły"><span>Artykuły</span></a></li>
-              {% endif %}
-
-              {% if section == 'o-stronie' %}
-              <li class="active"><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
-              {% else %}
-              <li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
-              {% endif %}
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top not-for-print" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="{{ STATIC_URL }}images/feather_40.png"/>
       </div>
-    </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          {% if section == 'index' %}
+          <li class="active"><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
+          {% else %}
+          <li><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
+          {% endif %}
+
+
+          {% if section == 'blog' %}
+          <li class="active"><a href="/blog/" title="Blog"><span>Blog</span></a></li>
+          {% else %}
+          <li><a href="/blog/" title="Blog"><span>Blog</span></a></li>
+          {% endif %}
+
+          {% if section == 'spiewnik' %}
+          <li class="active"><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
+          {% else %}
+          <li><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
+          {% endif %}
+
+          {% if section == 'wydarzenia' %}
+          <li class="active"><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
+          {% else %}
+          <li><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
+          {% endif %}
+
+          {% if section == 'artykuly' %}
+          <li class="active"><a href="/artykuly/" title="Artykuły"><span>Artykuły</span></a></li>
+          {% else %}
+          <li><a href="/artykuly/" title="Artykuły"><span>Artykuły</span></a></li>
+          {% endif %}
+
+          {% if section == 'o-stronie' %}
+          <li class="active"><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
+          {% else %}
+          <li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
+          {% endif %}
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Na ziemi, co zawsze...">
+          </div>
+          <button type="submit" class="btn btn-default">Szukaj</button>
+        </form>
+      </div>
+
+    </div> <!-- Container, potrzebne to?? -->
+    </nav>
 
     {% block content %} {% endblock content %}
 
