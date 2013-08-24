@@ -7,7 +7,7 @@
 
 <div class="container main">
   <div class="row">
-    <div class="span8">
+    <div class="col-md-8">
       <div class="customwell contentwell">
         <h1>{{event.name}}</h1>
         <table width="100%">
@@ -48,7 +48,7 @@
 
       </div>
     </div>
-    <div class="span4">
+    <div class="col-md-4">
       {% include "base/wells/place.html" with place=event.venue mark=event %}
 
       {% if event.website %}

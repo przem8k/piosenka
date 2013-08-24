@@ -1,15 +1,12 @@
-<table width="100%" class="vtop cleantable">
-  <tr><th width="50%"></th><th width="50%"></th></tr>
-  <tr>
-    <td>
-      <ul class="unstyled">
-        {% for event in events %}
-        <li><span class="date">{{ event.datetime|date:"d.m.Y" }}, <b>{{ event.venue.town }}</b>, <a href="{{event.get_absolute_url}}">{{ event.name }}</a></span></li>
-        {% endfor %}
-      </ul>
-    </td>
-    <td>
-      {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
-    </td>
-  </tr>
-</table>
+<div class="row">
+  <div class="col-md-6">
+    <ul class="unstyled">
+      {% for event in events %}
+      <li><span class="date">{{ event.datetime|date:"d.m.Y" }}, <b>{{ event.venue.town }}</b>, <a href="{{event.get_absolute_url}}">{{ event.name }}</a></span></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-md-6">
+    {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
+  </div>
+</div>

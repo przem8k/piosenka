@@ -4,60 +4,8 @@
 
 {% block content %}
 
-    {% include "songs/top.html" %}
-    <div class="container">
-        {% include "songs/menu.html" %}
-    </div>
+{% include "songs/top.html" %}
+<div class="container">
+  {% include "songs/menu.html" %}
+</div>
 {% endblock content %}
-
-
-
-
-{% comment %}
-
-
-{% load dxpartition %}
-
-
-	<h1>Śpiewnik</h1>
-
-    <form method="get" action=".">
-        <table width="100%">
-            <tr><th width="80%"></th><th width="20%"></th></tr>
-            <tr><td><input type="text" name="q" id="id_q" value="{{ query }}" style="width:100%"/></td>
-             <td>
-                 <input type="submit" value="Szukaj" style="width:100%"/>
-             </td>
-            </tr>
-        </table>
-
-        {% if query %}
-        	<br />
-        	<table width="100%">
-			<tr>
-			 <th width="50%"></th>
-			 <th width="50%"></th>
-		  	</tr>
-			{% for row in page.object_list|columns:2 %}
-			  <tr>
-			  {% for result in row %}
-					<td><a href="/spiewnik/szukaj/{{ result.object.slug }}">{{ result.object }}</a></td>
-			  {% endfor %}
-			  </tr>
-	      {% empty %}
-	          <tr><td>Nie znaleziono.</td></tr>
-	      {% endfor %}
-			</table>
-
-            {% if page.has_previous or page.has_next %}
-                <div>
-                    {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Wstecz{% if page.has_previous %}</a>{% endif %}
-                    |
-                    {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Dalej &raquo;{% if page.has_next %}</a>{% endif %}
-                </div>
-            {% endif %}
-        {% else %}
-            {# Show some example queries to run, maybe query syntax, something else? #}
-        {% endif %}
-    </form>
-{% endcomment %}
