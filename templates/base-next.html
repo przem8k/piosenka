@@ -20,11 +20,13 @@
     {% include "base/plugins/google_plus.html" %}
   </head>
 
-  <body {% if print %}class="print"{% endif %}>
+  <body{% if print %} class="print"{% endif %}>
     {% include "base/plugins/facebook.html" %}
     <script src="{{ STATIC_URL }}js/jquery-2.0.3.min.js"></script>
+    <script src="{{ STATIC_URL }}js/typeahead.min.js"></script>
     <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}scripts/trigger.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}scripts/site-search.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
     {% block extra-scripts %}
@@ -84,11 +86,10 @@
           <li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
           {% endif %}
         </ul>
-        <form class="navbar-form navbar-right" role="search">
+        <form class="navbar-form navbar-right site-search" role="search">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Na ziemi, co zawsze...">
+            <input type="text" class="form-control typeahead" placeholder="Na ziemi, co zawsze...">
           </div>
-          <button type="submit" class="btn btn-default">Szukaj</button>
         </form>
       </div>
 
@@ -100,7 +101,7 @@
     <div class="footer not-for-print">
       <div class="container">
         <div class="row">
-          <div class="span12">
+          <div class="col-md-12">
             <center><small>© 2011-2012 Piosenka z tekstem</small></center>
           </div>
         </div>
@@ -111,7 +112,7 @@
     <div class="only-for-print">
       <div class="container">
         <div class="row">
-          <div class="span12"><p><b>www.piosenkaztekstem.pl</b></p></div>
+          <div class="col-md-12"><p><b>www.piosenkaztekstem.pl</b></p></div>
         </div>
       </div>
     </div>

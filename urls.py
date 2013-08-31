@@ -21,6 +21,8 @@ urlpatterns = patterns('',
     url(r'^o-stronie/$', TemplateView.as_view(template_name="about.html")),
     url(r'^about/$', RedirectView.as_view(url="/o-stronie/")),
     url(r'^facebook/$', RedirectView.as_view(url="/o-stronie/")),
+    #site-search index
+    url(r'^index/', include('frontpage.index')),
     #users
     url(r'^zaloguj/$', users.views.hello),
     #admin
