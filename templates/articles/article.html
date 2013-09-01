@@ -16,7 +16,7 @@
         <div class="thumbnail-host">
           {% if article.cover_image %}
           {% thumbnail article.cover_image "600x300" crop="center" as im %}
-          <img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" />
+          <img src="{{im.url}}" width="100%" class="img-responsive" />
           {% endthumbnail %}
           {% endif %}
           <div class="thumbnail-caption">
