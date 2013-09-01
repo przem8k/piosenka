@@ -14,3 +14,10 @@ The following pypi python packages are required to develop and run the applicati
 - markdown
 - south
 - djang-debug-toolbar
+
+## Bootstrap customization ##
+
+Layout runs Bootstrap compiled with:
+- @font-family-sans-serif: Ubuntu, Helvetica, Arial, sans-serif
+- @navbar-height: 40px
+- @grid-gutter-width: 20px
