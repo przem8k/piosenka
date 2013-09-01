@@ -15,23 +15,19 @@
         <h1 class="remove-top-margin">{{ entity }}</h1>
 
         {% if songs %}
-        <table width="100%" class="vtop">
-          <tr><th width="50%"></th><th width="50%"></th></tr>
-          <tr>
-            {% for row in songs|rows:2 %}
-            <td>
-              <ul class="list-unstyled">
-                {% for song in row %}
-                <li><a href="{% url song entity.slug song.slug %}" {% if not song.published %}style="color: gray;"{% endif %}>{{ song|truncatechars:50 }}</a>
-                </li>
-                {% endfor %}
-              </ul>
-            </td>
-            {% endfor %}               
-          </tr>
-        </table>
+        <div class="row">
+          {% for row in songs|rows:2 %}
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              {% for song in row %}
+              <li><a href="{% url song entity.slug song.slug %}" {% if not song.published %}style="color: gray;"{% endif %}>{{ song|truncatechars:50 }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}               
+        </div>
         {% endif %}
-
       </div>
       <hr />
     </div>
