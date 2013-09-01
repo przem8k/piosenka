@@ -99,7 +99,7 @@
     <div class="col-md-4 not-for-print">
       <div class="customwell auxwell">
         <h1>Wersja do druku</h1>
-        <ul class="unstyled">
+        <ul class="list-unstyled">
           {% if extra %}
           <li><a href="{{song.get_absolute_url_print}}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Podstawowe akordy</a></li>
           <li><a href="{{song.get_absolute_url_print}}?t={{trans}}&p=wszystkie-akordy" title="Wersja do druku - wszystkie akordy">Wszystkie akordy</a></li>
@@ -128,7 +128,7 @@
       {% if song.external_links %}
       <div class="customwell auxwell">
         <h1>Linki</h1>
-        <ul class="unstyled">
+        <ul class="list-unstyled">
           {% for link in song.external_links %}
           <li><a href="{{link.1}}" target="_blank">{{link.0}}</a></li>
           {% endfor %}
@@ -141,7 +141,7 @@
       {% if song.related_songs.count %}
       <div class="customwell auxwell">
         <h1>Powiązane piosenki</h1>
-        <ul class="unstyled">
+        <ul class="list-unstyled">
           {% for related_song in song.related_songs.all %}
           <li><a href="{{related_song.get_absolute_url}}">{{related_song}}</a></li>
           {% endfor %}
@@ -152,7 +152,7 @@
       {% if user.is_staff %}
       <div class="customwell auxwell">
         <h1>Administracja</h1>
-        <ul class="unstyled">
+        <ul class="list-unstyled">
           {% if song.original_song %}
           <li><a href="/admin/songs/translation/{{song.id}}/">Edytuj tłumaczenie</a></li>
           {% else %}

@@ -2,7 +2,7 @@
   <div class="col-md-4">
     <div class="customwell auxwell">
       <h1>Wykonawcy własnych tekstów</h1>
-      <ul class="unstyled">
+      <ul class="list-unstyled">
         {% for person in bards %}
         <li><a href="/spiewnik/{{person.slug}}" title="{{person}}">{{ person }}</a></li>
         {% endfor %}
@@ -12,7 +12,7 @@
   <div class="col-md-4">
     <div class="customwell auxwell">
       <h1>Zespoły</h1>
-      <ul class="unstyled">
+      <ul class="list-unstyled">
         {% for band in bands %}
         <li><a href="/spiewnik/{{band.slug}}" title="{{band}}">{{ band }}</a></li>
         {% endfor %}
@@ -20,7 +20,7 @@
     </div>
     <div class="customwell auxwell">
       <h1>Kompozytorzy</h1>
-      <ul class="unstyled">
+      <ul class="list-unstyled">
         {% for person in composers %}
         <li><a href="/spiewnik/{{person.slug}}" title="{{person}}">{{ person }}</a></li>
         {% endfor %}
@@ -30,7 +30,7 @@
   <div class="col-md-4">
     <div class="customwell auxwell">
       <h1>Twórcy zagraniczni</h1>
-      <ul class="unstyled">
+      <ul class="list-unstyled">
         {% for person in foreigners %}
         <li><a href="/spiewnik/{{person.slug}}" title="{{person}}">{{ person }}</a></li>
         {% endfor %}

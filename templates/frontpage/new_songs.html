@@ -1,6 +1,6 @@
 <div class="customwell auxwell">
   <h1>Nowe opracowania</h1>
-  <ul class="unstyled">
+  <ul class="list-unstyled">
     {% for song in songs %}
     <li>
     <a href="{{song.1.get_absolute_url}}">{{ song.1|truncatechars:30 }}</a>

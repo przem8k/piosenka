@@ -20,7 +20,7 @@
           <tr>
             {% for row in songs|rows:2 %}
             <td>
-              <ul class="unstyled">
+              <ul class="list-unstyled">
                 {% for song in row %}
                 <li><a href="{% url song entity.slug song.slug %}" {% if not song.published %}style="color: gray;"{% endif %}>{{ song|truncatechars:50 }}</a>
                 </li>

@@ -4,7 +4,7 @@
 {% if user.is_staff %}
 <div class="customwell auxwell">
   <h1>Administracja</h1>
-  <ul class="unstyled">
+  <ul class="list-unstyled">
     <li><a href="{% url model_meta|admin_urlname:'change' item.pk %}">Edytuj {{manage_what}}</a></li>
   </ul> 
 </div> 

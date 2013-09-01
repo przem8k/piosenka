@@ -5,7 +5,7 @@
       <table class="vtop cleantable" style="width:100%;"><tr>
           <td style="width:33%;">
             <p><b>2013</b></p>
-            <ul class="unstyled">
+            <ul class="list-unstyled">
               <li class="muted">Grudzień</li>
               <li class="muted">Listopad</li>
               <li class="muted">Październik</li>
@@ -22,7 +22,7 @@
           </td>
           <td style="width:33%;">
             <p><b>2012</b></p>
-            <ul class="unstyled">
+            <ul class="list-unstyled">
               <li><a href="{% url event_month_archive "2012" "12" %}">Grudzień</a></li>
               <li><a href="{% url event_month_archive "2012" "11" %}">Listopad</a></li>
               <li><a href="{% url event_month_archive "2012" "10" %}">Październik</a></li>
@@ -39,7 +39,7 @@
           </td>
           <td style="width:33%;">
             <p><b>2011</b></p>
-            <ul class="unstyled">
+            <ul class="list-unstyled">
               <li><a href="{% url event_month_archive "2011" "12" %}">Grudzień</a></li>
               <li><a href="{% url event_month_archive "2011" "11" %}">Listopad</a></li>
               <li><a href="{% url event_month_archive "2011" "10" %}">Październik</a></li>
@@ -60,7 +60,7 @@
   <div class="col-md-4">
     <div class="customwell auxwell">
       <h1>Popularne miejsca (wg liczby wydarzeń)</h1>
-      <ul class="unstyled">
+      <ul class="list-unstyled">
         {% for venue in popular_venues %}
         <li>{{ venue.event_count }} - <a href="{{ venue.get_absolute_url }}">{{ venue }}</a></li>
         {% endfor %}
