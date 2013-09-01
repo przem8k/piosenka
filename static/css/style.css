@@ -279,6 +279,10 @@ body {
     padding: 5px 20px 25px 20px;
 }
 
+#front-carousel {
+    margin-bottom: 20px;
+}
+
 /* other */
 
 .date {

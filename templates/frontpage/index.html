@@ -11,22 +11,20 @@
   <div class="row">
     <div class="col-md-4">
       {% include "frontpage/new_posts.html" %}
+      {% include "frontpage/new_songs.html" %}
     </div>
     <div class="col-md-8">
       {% include "frontpage/carousel.html" %}
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      {% include "frontpage/new_songs.html" %}
-    </div>
-    <div class="col-md-4">
-      {% include "frontpage/upcoming_events.html" %}				
-    </div>
-    <div class="col-md-4">
-      <div class="customwell auxwell">
-        <h1>Facebook</h1>
-        <div class="fb-like-box" data-href="http://www.facebook.com/piosenkaztekstem" data-width="280" data-show-faces="true" data-stream="false" data-header="false"></div>
+      <div class="row">
+        <div class="col-md-6">
+          {% include "frontpage/upcoming_events.html" %}				
+        </div>
+        <div class="col-md-6">
+          <div class="customwell auxwell">
+            <h1>Facebook</h1>
+            <div class="fb-like-box" data-href="http://www.facebook.com/piosenkaztekstem" data-width="280" data-show-faces="true" data-stream="false" data-header="false"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
