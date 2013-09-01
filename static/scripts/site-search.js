@@ -3,11 +3,14 @@ $(document).ready(function(){
         {
             name: 'songs',
             prefetch: '/index/songs',
-            header: '<h3>Piosenki</h3>'
+            header: '<p class="dataset-header">Piosenki</p>'
         },
         {
             name: 'artists',
             prefetch: '/index/artists',
-            header: '<h3>Artyści</h3>'
-        }]);
+            header: '<p class="dataset-header">Artyści</p>'
+        }
+    ]).on('typeahead:selected', function($e, data) {
+          window.location = data.url;
+    });
 });

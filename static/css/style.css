@@ -223,11 +223,22 @@ body
 }
 .site-search input {
     width: 100%;
+    height: 100%;
+}
+
+.twitter-typeahead {
+  background: #fff;
 }
 
 .twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
   margin-bottom: 0;
+  display: none;
+}
+
+.dataset-header {
+  text-align: center;
+  font-weight: bold;
 }
 
 .tt-dropdown-menu {
