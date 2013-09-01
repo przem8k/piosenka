@@ -4,7 +4,7 @@
   <!-- Indicators -->
   <ol class="carousel-indicators">
     {% for item in carousel_items %}
-    <li data-target="#carousel-example-generic" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %} class="active"{% endif %}></li>
+    <li data-target="#front-carousel" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %} class="active"{% endif %}></li>
     {% endfor %}
   </ol>
 
@@ -26,6 +26,6 @@
 	</div>
 
 	<!-- Carousel nav -->
-	<a class="carousel-control left" href="#frontCarousel" data-slide="prev"><span class="icon-prev"></span></a>
-	<a class="carousel-control right" href="#frontCarousel" data-slide="next"><span class="icon-next"></span></a>
+	<a class="carousel-control left" href="#front-carousel" data-slide="prev"><span class="icon-prev"></span></a>
+	<a class="carousel-control right" href="#front-carousel" data-slide="next"><span class="icon-next"></span></a>
 </div>
