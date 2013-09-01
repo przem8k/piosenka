@@ -287,6 +287,26 @@ body
   margin: 0;
 }
 
+/* carousel */
+
+#front-carousel .carousel-indicators {
+    position: absolute;
+    bottom: 0;
+}
+
+#front-carousel .carousel-caption {
+    padding-bottom: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.75);
+}
+
+#front-carousel .carousel-caption {
+    text-align: left;
+    padding: 10px 10px 20px 10px;
+}
+
 /* other */
 
 .date {
