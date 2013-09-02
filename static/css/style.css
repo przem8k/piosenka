@@ -190,22 +190,24 @@ body {
 .site-search .form-group {
     width: 315px;
 }
+
 .site-search .twitter-typeahead {
     width: 100%;
 }
-.site-search input {
-    width: 100%;
-    height: 100%;
-}
 
 .twitter-typeahead {
+    border-radius: 5px;
     background: #fff;
 }
 
-.twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
     margin-bottom: 0;
     display: none;
+}
+
+.twitter-typeahead .tt-query {
+    background-color: #fff;
+    color: #000;
 }
 
 .dataset-header {

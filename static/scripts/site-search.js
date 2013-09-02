@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.site-search .typeahead').typeahead([
+    $('.site-search input').typeahead([
         {
             name: 'songs',
             prefetch: '/index/songs',
