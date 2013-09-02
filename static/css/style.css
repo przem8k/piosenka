@@ -17,6 +17,10 @@ body {
     padding-left: 20px;
 }
 
+.navbar .site-nav {
+    padding: 0;
+}
+
 
 /* header & footer */
 
@@ -203,6 +207,7 @@ body {
 }
 
 .twitter-typeahead {
+    margin-top: 3px;
     border-radius: 5px;
     background: #fff;
 }
@@ -215,6 +220,7 @@ body {
 .twitter-typeahead .tt-query {
     background-color: #fff;
     color: #000;
+    height: 30px;
 }
 
 .dataset-header {
