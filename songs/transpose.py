@@ -58,6 +58,8 @@ def transpose_sequence(chord_sequence, transposition):
     output_chords = list()
     for chord in input_chords:
         if chord.find("/") != -1: # for chords with specified base sound
+            if chord.find("/") == 0 or chord.find("/") == len(chord) - 1:
+                raise SyntaxError, "/ is for base sounds, use it like this: D7/f, a/h (no spaces before or after /)."
             transposed = "/".join([transpose_chord(x, transposition) for x in chord.split("/")])
         else:
             transposed = transpose_chord(chord, transposition)
@@ -74,7 +76,7 @@ def transpose_lyrics(parsed_lyrics, transposition):
                 begin = chords.find("(")
                 end = chords.find(")")
                 if end == -1 or end < begin:
-                    raise SyntaxError, "Incorrect '(' brackets in chords"
+                    raise SyntaxError, "Incorrect '(' brackets in chords."
                 core = chords[:begin].strip()
                 bracketed = chords[begin+1:end].strip()
                 transposed = "%s (%s)" % (transpose_sequence(core, transposition), transpose_sequence(bracketed, transposition)) 
