@@ -20,8 +20,13 @@ def parse_lyrics(raw_lyrics):
     for raw_line in raw_lyrics.split('\n'):
         line = raw_line.strip()
 
-        # Finish current section.
+        # Sanity checks.
+        if line.find("{") != -1:
+            raise SyntaxError("'{}' brackets are the old way of specifying repeated chords. "
+                              "use section tags ('#zw', '@zw') instead.)")
+
         if len(line) == 0:
+            # Empty line - finish current section.
             if recorded_section is not None:
                 recordings[recorded_section] = recorded_chords
                 recorded_section = None
@@ -30,14 +35,15 @@ def parse_lyrics(raw_lyrics):
                 result.append(current_section)
                 current_section = []
 
-        # Start new recording.
         if line.startswith('#'):
+            # Start new recording.
             if len(line) == 1:
                 raise SyntaxError("Empty paragraph tag (#TAG) name")
             recorded_section = line[1:]
             recorded_chords = []
             mode = LyricsParserMode.Recording
         elif line.startswith('@'):
+            # Start replaying.
             if len(line) == 1:
                 raise SyntaxError("Empty paragraph tag reference (@TAG) name")
             if not line[1:] in recordings:
@@ -46,18 +52,13 @@ def parse_lyrics(raw_lyrics):
             replay_index = 0
             mode = LyricsParserMode.Replaying
         else:
+            # Regular line.
             textPart = ""
             chordsPart = ""
-            are_chords_extra = False
             if line.find("[") != -1:
                 chordsStart = line.find("[")
                 textPart = line[0:chordsStart]
                 chordsPart = line[chordsStart+1:len(line)-1]
-            elif line.find("{") != -1:
-                chordsStart = line.find("{")
-                textPart = line[0:chordsStart]
-                chordsPart = line[chordsStart+1:len(line)-1]
-                are_chords_extra = True
             else:
                 textPart = line
 
@@ -66,18 +67,16 @@ def parse_lyrics(raw_lyrics):
                 indent = True
                 textPart = textPart[1:]
 
+            are_chords_replayed = False
             if mode == LyricsParserMode.Recording:
-                if are_chords_extra:
-                    raise SyntaxError("Paragraph tagged for reference cannot contain repeated "
-                                      "chords / chords in {} brackets")
                 recorded_chords.append(chordsPart)
             elif mode == LyricsParserMode.Replaying:
                 if replay_index < len(replayed_chords) and len(chordsPart) == 0:
                     chordsPart = replayed_chords[replay_index]
-                    are_chords_extra = True
+                    are_chords_replayed = True
                 replay_index = replay_index + 1
 
-            current_section.append((textPart, chordsPart, indent, are_chords_extra))
+            current_section.append((textPart, chordsPart, indent, are_chords_replayed))
     if recorded_section is not None:
         recordings[recorded_section] = recorded_chords
         recorded_section = None
