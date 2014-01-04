@@ -7,7 +7,7 @@ class LyricsParserMode:
 def parse_lyrics(raw_lyrics):
     """
     returns parsed lyrics as a list of paragraphs, each paragraph represented as a lists of tuples
-    representing lines, each line as (text, chords, is_indented, are_chords_extra)
+    representing lines, each line as (text, chords, is_indented, are_chords_replayed)
     """
     result = []
     mode = LyricsParserMode.Regular
