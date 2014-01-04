@@ -59,8 +59,8 @@ def parse_lyrics(raw_lyrics):
             chordsPart = ""
             if line.find("[") != -1:
                 chordsStart = line.find("[")
-                textPart = line[0:chordsStart]
-                chordsPart = line[chordsStart+1:len(line)-1]
+                textPart = line[0:chordsStart].strip()
+                chordsPart = line[chordsStart+1:len(line)-1].strip()
             else:
                 textPart = line
 
