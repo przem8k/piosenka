@@ -9,4 +9,5 @@ DATABASES = {
     }
 }
 
-SECRET_KEY = 'o@c*tih1vzy69-#wv16(^a7sgsv5l^vw7fah&+ttvyjyi@7)jr'
+SECRET_KEY = ''
+GOOGLE_MAPS_API_KEY = ''
