@@ -80,10 +80,14 @@ def transpose_lyrics(parsed_lyrics, transposition):
         section = []
         for (text, chords, is_indented, are_chords_extra) in paragraph:
             if chords.find("(") != -1:
+                if (chords.count("(") != 1 or chords.count(")") != 1 or
+                        chords.find(")") != len(chords) - 1):
+                    raise SyntaxError("I don't understand the line: '" + chords + "'. "
+                                      "'(', ')' brackets should contain "
+                                      "chords played without singing at the end of the verse, for "
+                                      "example: 'a C (H7 C)'. Don't put anything after ')'.")
                 begin = chords.find("(")
                 end = chords.find(")")
-                if end == -1 or end < begin:
-                    raise SyntaxError("Incorrect '(' brackets in chords.")
                 core = chords[:begin].strip()
                 bracketed = chords[begin+1:end].strip()
                 transposed = "%s (%s)" % (transpose_sequence(core, transposition),
