@@ -25,9 +25,11 @@ def validate_lyrics(value):
 class Song(models.Model):
     CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
     title = models.CharField(max_length=100)
-    disambig = models.CharField(max_length=100, null=True, blank=True, help_text="Disambiguation for multiple songs with the same title.")
+    disambig = models.CharField(max_length=100, null=True, blank=True,
+                                help_text="Disambiguation for multiple songs with the same title.")
     original_title = models.CharField(max_length=100, null=True, blank=True)
-    slug = models.SlugField(max_length=100, unique=True, help_text="Used in urls, has to be unique.")
+    slug = models.SlugField(max_length=100, unique=True,
+                            help_text="Used in urls, has to be unique.")
     artists = models.ManyToManyField(Artist, null=True, blank=True, through='ArtistContribution')
     bands = models.ManyToManyField(Band, null=True, blank=True, through='BandContribution')
     link_youtube = models.URLField(null=True, blank=True)
@@ -35,11 +37,15 @@ class Song(models.Model):
     score1 = models.ImageField(null=True, blank=True, upload_to='scores')
     score2 = models.ImageField(null=True, blank=True, upload_to='scores')
     score3 = models.ImageField(null=True, blank=True, upload_to='scores')
-    key = models.CharField(max_length=100, null=True, blank=True, help_text="Deprecated - use capo_fret instead", editable=False)
-    capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret], help_text="Set to 0 if no capo")
+    key = models.CharField(max_length=100, null=True, blank=True,
+                           help_text="Deprecated - use capo_fret instead", editable=False)
+    capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret],
+                                    help_text="Set to 0 if no capo")
     lyrics = models.TextField(null=True, validators=[validate_lyrics])
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
-    related_songs = models.ManyToManyField("self", null=True, blank=True, symmetrical=True, help_text="E.g. different translations or different compositions of the same text.");
+    related_songs = models.ManyToManyField("self", null=True, blank=True, symmetrical=True,
+                                           help_text="E.g. different translations or different "
+                                                     "compositions of the same text.")
 
     class Meta:
         ordering = ["title", "disambig"]
@@ -67,12 +73,14 @@ class Song(models.Model):
         """ returns list of (label, url) tuples describing links associated with the song """
         ytpart = [("Nagranie (Youtube)", self.link_youtube, )] if self.link_youtube else []
         wrzutapart = [("Nagranie (Wrzuta)", self.link_wrzuta, )] if self.link_wrzuta else []
-        return ytpart + wrzutapart + [(x.artist, x.artist.website) for x in
+        return ytpart + wrzutapart + [
+            (x.artist, x.artist.website) for x in
             ArtistContribution.objects.filter(song=self).select_related('artist') if
-            x.artist.website != None and len(x.artist.website) > 0
-        ] + [(x.band, x.band.website) for x in
+            x.artist.website is not None and len(x.artist.website) > 0
+        ] + [
+            (x.band, x.band.website) for x in
             BandContribution.objects.filter(song=self).select_related('band') if
-            x.band.website != None and len(x.band.website) > 0
+            x.band.website is not None and len(x.band.website) > 0
         ]
 
     def text_authors(self):

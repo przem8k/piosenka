@@ -1,5 +1,5 @@
 from django.template import Context, loader
-from songs.models import Song, ArtistContribution, BandContribution 
+from songs.models import Song, ArtistContribution, BandContribution
 from artists.models import Artist, Band
 from django.http import HttpResponsePermanentRedirect, Http404
 from django.shortcuts import get_object_or_404, render
@@ -27,12 +27,12 @@ def songs_context(request):
         context["song_slug"] = url_segments[2]
 
     context["url"] = request.path
-    context["bards"] = Artist.objects.filter(display=True, kind=Artist.KIND_TEXTER).order_by('lastname')
-    context["composers"] = Artist.objects.filter(display=True, kind=Artist.KIND_COMPOSER).order_by('lastname')
-    context["translators"] = Artist.objects.filter(display=True, kind=Artist.KIND_TRANSLATOR).order_by('lastname')
-    context["performers"] = Artist.objects.filter(display=True, kind=Artist.KIND_PERFORMER).order_by('lastname')
-    context["foreigners"] = Artist.objects.filter(display=True, kind=Artist.KIND_FOREIGN).order_by('lastname')
-    context["bands"] = Band.objects.filter(display=True).order_by('name')
+    context["bards"] = Artist.objects.filter(display=True, kind=Artist.KIND_TEXTER)
+    context["composers"] = Artist.objects.filter(display=True, kind=Artist.KIND_COMPOSER)
+    context["translators"] = Artist.objects.filter(display=True, kind=Artist.KIND_TRANSLATOR)
+    context["performers"] = Artist.objects.filter(display=True, kind=Artist.KIND_PERFORMER)
+    context["foreigners"] = Artist.objects.filter(display=True, kind=Artist.KIND_FOREIGN)
+    context["bands"] = Band.objects.filter(display=True)
     return context
 
 
@@ -109,9 +109,10 @@ def song_or_translation_entry(request, artist_slug, song_slug, for_print=False):
 
     # verify that the song was reached via proper artist or band
     if (
-        (artist == None or ArtistContribution.objects.filter(song=song, artist=artist).count() == 0) and
-        (band == None or BandContribution.objects.filter(song=song, band=band).count() == 0)
-       ):
+        (artist is None or
+            ArtistContribution.objects.filter(song=song, artist=artist).count() == 0) and
+        (band is None or BandContribution.objects.filter(song=song, band=band).count() == 0)
+    ):
         raise Http404()
 
     return song_or_translation(request, song, for_print)
@@ -171,8 +172,10 @@ class IndexView(View):
 
     def get(self, request):
         song_type = ContentType.objects.get(app_label="songs", model="song")
-        entries = LogEntry.objects.filter(content_type=song_type, action_flag=ADDITION).order_by("-action_time")[:IndexView.song_count]
-        songs = [(x.action_time, get_or_none(Song, pk=x.object_id)) for x in entries if get_or_none(Song, pk=x.object_id) != None]
+        entries = LogEntry.objects.filter(content_type=song_type, action_flag=ADDITION) \
+                          .order_by("-action_time")[:IndexView.song_count]
+        songs = [(x.action_time, get_or_none(Song, pk=x.object_id)) for x in entries
+                 if get_or_none(Song, pk=x.object_id) is not None]
         return render(
             request,
             self.template_name,
