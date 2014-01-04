@@ -38,16 +38,18 @@ def parse_lyrics(raw_lyrics):
         if line.startswith('#'):
             # Start new recording.
             if len(line) == 1:
-                raise SyntaxError("Empty paragraph tag (#TAG) name")
+                raise SyntaxError("Section defining tag (for example '#zw') can't have empty name.")
             recorded_section = line[1:]
             recorded_chords = []
             mode = LyricsParserMode.Recording
         elif line.startswith('@'):
             # Start replaying.
             if len(line) == 1:
-                raise SyntaxError("Empty paragraph tag reference (@TAG) name")
+                raise SyntaxError("Section reference tag (for example '@zw') can't have empty "
+                                  "name.")
             if not line[1:] in recordings:
-                raise SyntaxError("Paragraph was referenced by @TAG before it was defined by #TAG")
+                raise SyntaxError("Section had to be defined (with '#tag') before it can be "
+                                  "referenced (with '@tag').")
             replayed_chords = recordings[line[1:]]
             replay_index = 0
             mode = LyricsParserMode.Replaying
