@@ -35,8 +35,8 @@ ORD_TO_KEY = {
 
 # These chords cause trouble when parsing from the left side, eg. in Asus4 -> As us4.
 KNOWN_CHORD_TYPES = {
-    "sus4",
-    "sus2",
+    "sus4": "",
+    "sus2": "",
 }
 
 
