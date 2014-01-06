@@ -34,8 +34,7 @@ def parse_lyrics(raw_lyrics):
             if len(current_section) > 0:
                 result.append(current_section)
                 current_section = []
-
-        if line.startswith('#'):
+        elif line.startswith('#'):
             # Start new recording.
             if len(line) == 1:
                 raise SyntaxError("Section defining tag (for example '#zw') can't have empty name.")
