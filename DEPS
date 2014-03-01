@@ -1,3 +1,0 @@
-sorl-thumbnail
-pygeocoder
-unidecode

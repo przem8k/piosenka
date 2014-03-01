@@ -1,0 +1,7 @@
+Django==1.6
+South
+Pillow
+sorl-thumbnail
+pygeocoder
+unidecode
+django-debug-toolbar
