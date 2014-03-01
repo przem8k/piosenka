@@ -4,7 +4,6 @@ from django.views.generic import TemplateView, RedirectView
 
 import songs.views
 import frontpage.views
-import users.views
 
 admin.autodiscover()
 
@@ -23,8 +22,6 @@ urlpatterns = patterns('',
     url(r'^facebook/$', RedirectView.as_view(url="/o-stronie/")),
     #site-search index
     url(r'^index/', include('frontpage.index')),
-    #users
-    url(r'^zaloguj/$', users.views.hello),
     #admin
     url(r'^admin/', include(admin.site.urls)),
     #index

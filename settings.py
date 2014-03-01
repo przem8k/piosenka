@@ -106,7 +106,6 @@ INSTALLED_APPS = (
     'articles',
     'songs',
     'events',
-    'users',
     'frontpage',
     'dxlibrary',
     'sorl.thumbnail',
