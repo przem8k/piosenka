@@ -20,7 +20,7 @@
           <div class="col-md-6">
             <ul class="list-unstyled">
               {% for song in row %}
-              <li><a href="{% url song entity.slug song.slug %}" {% if not song.published %}style="color: gray;"{% endif %}>{{ song|truncatechars:50 }}</a>
+              <li><a href="{% url "song" entity.slug song.slug %}" {% if not song.published %}style="color: gray;"{% endif %}>{{ song|truncatechars:50 }}</a>
               </li>
               {% endfor %}
             </ul>
