@@ -9,6 +9,7 @@ MANAGERS = ADMINS
 try:
     from settings_production import DATABASES
     from settings_production import SECRET_KEY
+    from settings_production import ALLOWED_HOSTS
 
     from settings_production import EMAIL_HOST
     from settings_production import EMAIL_HOST_USER
