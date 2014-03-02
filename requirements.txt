@@ -1,6 +1,7 @@
 Django==1.6
 South
 Pillow
+Markdown
 psycopg2
 pygeocoder
 unidecode
