@@ -18,7 +18,7 @@ def validate_lyrics(value):
         from songs.transpose import transpose_lyrics
         lyrics = parse_lyrics(value)
         transpose_lyrics(lyrics, 0)
-    except SyntaxError, m:
+    except SyntaxError as m:
         raise ValidationError(u'Lyrics syntax is incorrect: ' + unicode(m))
 
 
