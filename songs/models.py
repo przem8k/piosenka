@@ -3,6 +3,7 @@
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 
 from artists.models import Artist, Band
 
@@ -22,6 +23,7 @@ def validate_lyrics(value):
         raise ValidationError(u'Lyrics syntax is incorrect: ' + unicode(m))
 
 
+@python_2_unicode_compatible
 class Song(models.Model):
     CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
     title = models.CharField(max_length=100)
@@ -50,7 +52,7 @@ class Song(models.Model):
     class Meta:
         ordering = ["title", "disambig"]
 
-    def __unicode__(self):
+    def __str__(self):
         if self.disambig:
             return "%s (%s)" % (self.title, self.disambig,)
         else:
@@ -107,6 +109,7 @@ class Song(models.Model):
             return None
 
 
+@python_2_unicode_compatible
 class ArtistContribution(models.Model):
     song = models.ForeignKey(Song)
     artist = models.ForeignKey(Artist)
@@ -115,16 +118,17 @@ class ArtistContribution(models.Model):
     translated = models.BooleanField()
     composed = models.BooleanField()
 
-    def __unicode__(self):
+    def __str__(self):
         return self.artist.firstname + " " + self.artist.lastname + " - " + self.song.title
 
 
+@python_2_unicode_compatible
 class BandContribution(models.Model):
     song = models.ForeignKey(Song)
     band = models.ForeignKey(Band)
     performed = models.BooleanField()
 
-    def __unicode__(self):
+    def __str__(self):
         return self.band.name + " - " + self.song.title
 
 

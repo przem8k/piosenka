@@ -1,9 +1,13 @@
-from markdown import markdown
 import datetime
+
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.encoding import python_2_unicode_compatible
+
+from markdown import markdown
 
 
+@python_2_unicode_compatible
 class Post(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length="100", null=True)
@@ -11,14 +15,15 @@ class Post(models.Model):
     date = models.DateTimeField(editable=False)
     post = models.TextField(help_text="Post or its introductory part, written in Markdown.")
     post_html = models.TextField(null=True, blank=True, editable=False)
-    more = models.TextField(blank=True, null=True, help_text="Optional rest of the post, written in Markdown.")
+    more = models.TextField(blank=True, null=True,
+                            help_text="Optional rest of the post, written in Markdown.")
     more_html = models.TextField(null=True, blank=True, editable=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published posts")
 
     class Meta:
         ordering = ["-date"]
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
     def save(self, *args, **kwargs):

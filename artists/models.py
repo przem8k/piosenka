@@ -1,12 +1,15 @@
 # coding=utf-8
 
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 
 
+@python_2_unicode_compatible
 class Artist(models.Model):
     firstname = models.CharField(max_length=25)
     lastname = models.CharField(max_length=25)
-    slug = models.SlugField(max_length=100, unique=True, help_text="Used in urls, has to be unique", default="void")
+    slug = models.SlugField(max_length=100, unique=True, help_text="Used in urls, has to be unique",
+                            default="void")
     display = models.BooleanField()
     website = models.URLField(null=True, blank=True)
 
@@ -24,29 +27,33 @@ class Artist(models.Model):
         (KIND_POET, u'Poeta nieśpiewający'),
         (KIND_FOREIGN, u'Bard zagraniczny'),
     )
-    kind = models.IntegerField(choices=ARTIST_KINDS, null=True, blank=True, help_text="Select the most prominent thing the person is famous for.")
+    kind = models.IntegerField(choices=ARTIST_KINDS, null=True, blank=True,
+                               help_text="Select the most prominent thing the person is "
+                               "famous for.")
 
     class Meta:
         ordering = ["lastname", "firstname", ]
 
-    def __unicode__(self):
+    def __str__(self):
         return self.firstname + " " + self.lastname
 
     def get_absolute_url(self):
         return "/spiewnik/%s/" % self.slug
 
 
+@python_2_unicode_compatible
 class Band(models.Model):
     name = models.CharField(max_length=50)
     members = models.ManyToManyField(Artist, null=True, blank=True)
-    slug = models.SlugField(max_length=100, unique=True, help_text="Used in urls, has to be unique.")
+    slug = models.SlugField(max_length=100, unique=True,
+                            help_text="Used in urls, has to be unique.")
     display = models.BooleanField()
     website = models.URLField(null=True, blank=True)
 
     class Meta:
         ordering = ["name", ]
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     def get_absolute_url(self):

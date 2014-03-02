@@ -1,8 +1,11 @@
+from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
+
 from markdown import markdown
 from sorl.thumbnail import ImageField
 
-from django.db import models
 
+@python_2_unicode_compatible
 class CarouselItem(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(help_text="Description, written in Markdown.")
@@ -14,7 +17,7 @@ class CarouselItem(models.Model):
     class Meta:
         ordering = ["position"]
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
     def save(self, *args, **kwargs):

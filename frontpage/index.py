@@ -25,9 +25,9 @@ class ArtistSearchIndex(JSONSearchIndexMixin, View):
         index = []
         for artist in Artist.objects.all():
             index.append({
-                "name": artist.__unicode__(),
-                "value": artist.__unicode__(),
-                "tokens": artist.__unicode__().split(),
+                "name": artist.__str__(),
+                "value": artist.__str__(),
+                "tokens": artist.__str__().split(),
                 "url": artist.get_absolute_url()
             })
         return self.render_to_response({"index": index})
@@ -38,9 +38,9 @@ class SongSearchIndex(JSONSearchIndexMixin, View):
         index = []
         for song in Song.objects.all():
             index.append({
-                "name": song.__unicode__(),
-                "value": song.__unicode__(),
-                "tokens": song.__unicode__().split(),
+                "name": song.__str__(),
+                "value": song.__str__(),
+                "tokens": song.__str__().split(),
                 "url": song.get_absolute_url()
             })
         return self.render_to_response({"index": index})
