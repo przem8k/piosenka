@@ -1,7 +1,8 @@
 Django==1.6
 South
 Pillow
-sorl-thumbnail
+psycopg2
 pygeocoder
 unidecode
 django-debug-toolbar
+git+git://github.com/mariocesar/sorl-thumbnail.git#egg=sorl-thumbnail
