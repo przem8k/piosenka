@@ -1,6 +1,7 @@
+import json
+
 from django.conf.urls import patterns, url
 from django.http import HttpResponse
-from django.utils import simplejson as json
 from django.views.decorators.cache import cache_control
 from django.views.generic.base import View
 
