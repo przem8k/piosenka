@@ -91,10 +91,6 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, "templates"),
 )
 
-HAYSTACK_SITECONF = 'search_sites'
-HAYSTACK_SEARCH_ENGINE = 'whoosh'
-HAYSTACK_WHOOSH_PATH = os.path.join(PROJECT_PATH, "index")
-
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
