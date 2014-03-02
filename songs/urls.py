@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls import patterns, url
 from songs.views import entity, song_or_translation_entry, IndexView
 
 urlpatterns = patterns(

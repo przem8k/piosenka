@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import include, patterns, url
 from django.contrib import admin
 from django.views.generic import TemplateView, RedirectView
 
@@ -7,7 +7,8 @@ import frontpage.views
 
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     #obsolete paths redicrects
     url(r'^songs/song/(?P<song_id>\d+)/$', songs.views.obsolete_song),
     url(r'^songs/artist/(?P<artist_id>\d+)/$', songs.views.obsolete_artist),
@@ -31,9 +32,10 @@ urlpatterns = patterns('',
 from django.conf import settings
 
 if settings.DEBUG:
-    urlpatterns = patterns('',
-                           (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
-                            {'document_root': settings.ALL_STATIC_ROOT}),
-                           (r'^500/$', TemplateView.as_view(template_name='500.html')),
-                           (r'^404/$', TemplateView.as_view(template_name='404.html')),
-                           ) + urlpatterns
+    urlpatterns = patterns(
+        '',
+        (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
+         {'document_root': settings.ALL_STATIC_ROOT}),
+        (r'^500/$', TemplateView.as_view(template_name='500.html')),
+        (r'^404/$', TemplateView.as_view(template_name='404.html')),
+    ) + urlpatterns
