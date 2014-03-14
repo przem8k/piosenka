@@ -2,7 +2,6 @@ from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
 from markdown import markdown
-from sorl.thumbnail import ImageField
 
 
 @python_2_unicode_compatible
@@ -11,7 +10,8 @@ class CarouselItem(models.Model):
     description = models.TextField(help_text="Description, written in Markdown.")
     description_html = models.TextField(null=True, blank=True, editable=False)
     position = models.IntegerField()
-    image = ImageField(upload_to='carousel_items', help_text="Picture to display in carousel.")
+    image = models.ImageField(upload_to='carousel_items',
+                              help_text="Picture to display in carousel.")
     archived = models.BooleanField(default=False)
 
     class Meta:

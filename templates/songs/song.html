@@ -2,7 +2,7 @@
 
 {% block title %}{{ song.title }}{% endblock title %}
 
-{% load dxthumbnail %}
+{% load thumbnail %}
 
 {% block description %}Opracowanie piosenki {{song.title}}{% endblock description %}
 
@@ -114,13 +114,13 @@
       <div class="customwell auxwell">
         <h1>Nuty</h1>
         {% if song.score1 %}
-        <center><a href="{{song.score1.url}}"><img src='{{ song.score1.path|thumbnail:"180w,scores" }}'/></a></center><br />
+        <center><a href="{{song.score1.url}}"><img src='{{ song.score1|thumbnail_url:'scorethumb' }}'/></a></center><br />
         {% endif %}	
         {% if song.score2 %}
-        <center><a href="{{song.score2.url}}"><img src='{{ song.score2.path|thumbnail:"180w,scores" }}'/></a></center><br />
+        <center><a href="{{song.score2.url}}"><img src='{{ song.score2|thumbnail_url:'scorethumb' }}'/></a></center><br />
         {% endif %}	
         {% if song.score3 %}
-        <center><a href="{{song.score3.url}}"><img src='{{ song.score3.path|thumbnail:"180w,scores" }}'/></a></center><br />
+        <center><a href="{{song.score3.url}}"><img src='{{ song.score3|thumbnail_url:'scorethumb' }}'/></a></center><br />
         {% endif %}	
       </div>
       {% endif %}

@@ -15,13 +15,11 @@
 
         <div class="thumbnail-host">
           {% if article.cover_image %}
-          {% thumbnail article.cover_image "600x300" crop="center" as im %}
-          <img src="{{im.url}}" width="100%" class="img-responsive" />
-          {% endthumbnail %}
-          {% endif %}
+          <img src="{{article.cover_image|thumbnail_url:'cover'}}" width="100%" class="img-responsive" />
           <div class="thumbnail-caption">
             {{ article.cover_credits_html|safe }}
           </div>
+          {% endif %}
         </div>
         <div class="article-body">
           {{ article.lead_text_html|safe }}

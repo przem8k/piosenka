@@ -1,9 +1,9 @@
-Django==1.6
+Django==1.6.2
 South
 Pillow
 Markdown
+easy-thumbnails
 psycopg2
 pygeocoder
 unidecode
 django-debug-toolbar
-git+git://github.com/mariocesar/sorl-thumbnail.git#egg=sorl-thumbnail

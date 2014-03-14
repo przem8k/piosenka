@@ -17,9 +17,7 @@
         <a href="{{article.get_absolute_url}}">
           <div class="thumbnail-host">
             {% if article.cover_image %}
-            {% thumbnail article.cover_image "420x210" crop="center" as im %}
-            <img src="{{im.url}}" width="100%" class="img-responsive" />
-            {% endthumbnail %}
+            <img src="{{article.cover_image|thumbnail_url:'coverthumb'}}" width="100%" class="img-responsive" />
             {% else %}
             <img src="http://placekitten.com/420/210" width="100%" class="img-responsive"/>
             {% endif %}

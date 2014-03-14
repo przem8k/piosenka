@@ -8,14 +8,12 @@
     {% endfor %}
   </ol>
 
-	<!-- Carousel items -->
-	<div class="carousel-inner">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
     {% for item in carousel_items %}
     <div class="{% if forloop.first %}active {% endif %}item">
       {% if item.image %}
-      {% thumbnail item.image "900x400" crop="center" as im %}
-      <img src="{{im.url}}" class="img-responsive"/>
-      {% endthumbnail %}
+      <img src="{{item.image|thumbnail_url:'carousel'}}"/>
       {% endif %}
       <div class="carousel-caption">
         <h4>{{ item.title }}</h4>
@@ -23,9 +21,9 @@
       </div>
     </div>
     {% endfor %}
-	</div>
+  </div>
 
-	<!-- Carousel nav -->
-	<a class="carousel-control left" href="#front-carousel" data-slide="prev"><span class="icon-prev"></span></a>
-	<a class="carousel-control right" href="#front-carousel" data-slide="next"><span class="icon-next"></span></a>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#front-carousel" data-slide="prev"><span class="icon-prev"></span></a>
+  <a class="carousel-control right" href="#front-carousel" data-slide="next"><span class="icon-next"></span></a>
 </div>

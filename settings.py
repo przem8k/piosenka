@@ -98,6 +98,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.staticfiles',
+    'easy_thumbnails',
     'blog',
     'artists',
     'articles',
@@ -105,9 +106,17 @@ INSTALLED_APPS = (
     'events',
     'frontpage',
     'dxlibrary',
-    'sorl.thumbnail',
     'south',
 )
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'cover': {'size': (600, 300), 'crop': True, 'upscale': True},
+        'coverthumb': {'size': (420, 210), 'crop': True, 'upscale': True},
+        'scorethumb': {'size': (180, 0), 'upscale': True},
+        'carousel': {'size': (900, 400), 'crop': True, 'upscale': True},
+    }
+}
 
 if DEBUG:
     INSTALLED_APPS += ('debug_toolbar',)
