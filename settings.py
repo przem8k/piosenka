@@ -110,11 +110,15 @@ INSTALLED_APPS = (
 )
 
 THUMBNAIL_ALIASES = {
-    '': {
+    'frontpage.CarouselItem.image': {
+        'carousel': {'size': (900, 400), 'crop': True, 'upscale': True},
+    },
+    'songs.Song': {
+        'scorethumb': {'size': (180, 0), 'upscale': True},
+    },
+    'articles.Article.cover_image': {
         'cover': {'size': (600, 300), 'crop': True, 'upscale': True},
         'coverthumb': {'size': (420, 210), 'crop': True, 'upscale': True},
-        'scorethumb': {'size': (180, 0), 'upscale': True},
-        'carousel': {'size': (900, 400), 'crop': True, 'upscale': True},
     }
 }
 

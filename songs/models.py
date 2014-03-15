@@ -5,7 +5,12 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
+from easy_thumbnails.signals import saved_file
+from easy_thumbnails.signal_handlers import generate_aliases
+
 from artists.models import Artist, Band
+
+saved_file.connect(generate_aliases)
 
 
 def validate_capo_fret(value):

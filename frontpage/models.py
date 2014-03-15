@@ -1,7 +1,11 @@
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
+from easy_thumbnails.signals import saved_file
+from easy_thumbnails.signal_handlers import generate_aliases
 from markdown import markdown
+
+saved_file.connect(generate_aliases)
 
 
 @python_2_unicode_compatible
