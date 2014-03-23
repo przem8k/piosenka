@@ -25,7 +25,7 @@ def validate_lyrics(value):
         lyrics = parse_lyrics(value)
         transpose_lyrics(lyrics, 0)
     except SyntaxError as m:
-        raise ValidationError(u'Lyrics syntax is incorrect: ' + unicode(m))
+        raise ValidationError(u'Lyrics syntax is incorrect: ' + str(m))
 
 
 @python_2_unicode_compatible

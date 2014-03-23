@@ -6,4 +6,3 @@ django-debug-toolbar
 easy-thumbnails
 psycopg2
 pygeocoder
-unidecode

@@ -52,10 +52,8 @@ class Venue(models.Model):
 
     def save(self, *args, **kwargs):
         from pygeocoder import Geocoder
-        from unidecode import unidecode
-        address = self.street + ', ' + self.town
-        ascii_address = unidecode(unicode(address))
-        geo = Geocoder.geocode(ascii_address)
+        address = str(self.street) + ', ' + str(self.town)
+        geo = Geocoder.geocode(address)
         if len(geo) == 0:
             raise RuntimeError("Address geo lookup failed.")
         lat, lng = geo[0].coordinates
