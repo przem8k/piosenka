@@ -38,10 +38,10 @@ class PastEventManager(models.Manager):
 
 @python_2_unicode_compatible
 class Venue(models.Model):
-    name = models.CharField(max_length="100")
-    town = models.CharField(max_length="100")
-    street = models.CharField(max_length="100")
-    slug = models.SlugField(max_length="100", unique=True)
+    name = models.CharField(max_length=100)
+    town = models.CharField(max_length=100)
+    street = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100, unique=True)
     location = LocationField(editable=False)
 
     class Meta:
@@ -79,10 +79,10 @@ class Venue(models.Model):
 
 @python_2_unicode_compatible
 class Event(models.Model):
-    name = models.CharField(max_length="100")
-    slug = models.SlugField(max_length="100", unique_for_date="datetime")
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100, unique_for_date="datetime")
     datetime = models.DateTimeField()
-    price = models.CharField(max_length="100", null=True, blank=True,
+    price = models.CharField(max_length=100, null=True, blank=True,
                              help_text="E.g. 5zl, wstep wolny, brak danych, etc.")
     artists = models.ManyToManyField(Artist, null=True, blank=True)
     bands = models.ManyToManyField(Band, null=True, blank=True)

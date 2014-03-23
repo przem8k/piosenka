@@ -10,7 +10,7 @@ from markdown import markdown
 @python_2_unicode_compatible
 class Post(models.Model):
     title = models.CharField(max_length=100)
-    slug = models.SlugField(max_length="100", null=True)
+    slug = models.SlugField(max_length=100, null=True)
     author = models.ForeignKey(User)
     date = models.DateTimeField(editable=False)
     post = models.TextField(help_text="Post or its introductory part, written in Markdown.")
