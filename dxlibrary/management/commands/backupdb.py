@@ -30,7 +30,7 @@ class Command(BaseCommand):
             os.makedirs(directory)
 
         #SQL
-        sql_file_path = os.path.join(directory, 'postgres_' + backup_name + ".sql")
+        sql_file_path = os.path.join(directory, 'postgres_' + backup_name + ".tar")
         print('Doing Postgresql backup to database %s into %s' % (self.db, sql_file_path))
         self.dump_sql(sql_file_path)
 
@@ -44,7 +44,8 @@ class Command(BaseCommand):
         json_file_path = os.path.join(directory, 'fixture_' + backup_name + ".json")
         self.dump_total_fixture(json_file_path)
 
-        push_command = "aws s3 cp %s %sdb/ --recursive" % (directory, settings.S3BUCKET)
+        push_command = "aws s3 cp %s %sdb/%s/ --recursive" % (directory, settings.S3BUCKET,
+                                                              backup_name)
         os.system(push_command)
         print(push_command)
 
