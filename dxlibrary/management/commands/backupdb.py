@@ -50,7 +50,7 @@ class Command(BaseCommand):
 
         # Upload sync
         upload_root = settings.MEDIA_ROOT
-        upload_command = "aws s3 sync %s %s" % (upload_root, settings.S3BUCKET, )
+        upload_command = "aws s3 sync %s %supload/" % (upload_root, settings.S3BUCKET, )
 
         os.system(upload_command)
         print(upload_command)
