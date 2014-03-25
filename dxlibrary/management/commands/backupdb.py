@@ -4,7 +4,7 @@
 
 import os
 import time
-from StringIO import StringIO
+from io import StringIO
 
 from django.conf import settings
 from django.core.management.base import BaseCommand
@@ -57,14 +57,14 @@ class Command(BaseCommand):
 
     def dump_sql(self, out_file_path):
         assert self.user
-        assert self.host
-        assert self.port
         assert self.db
 
         args = []
         args += ["--username=%s" % self.user]
-        args += ["--host=%s" % self.host]
-        args += ["--port=%s" % self.port]
+        if self.host:
+            args += ["--host=%s" % self.host]
+        if self.port:
+            args += ["--port=%s" % self.port]
         args += ["--format=t"]  # Use tarball backup format.
         args += ["--clean"]     # When restoring, start with cleaning the database.
         args += [self.db]
