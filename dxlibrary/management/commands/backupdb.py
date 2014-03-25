@@ -1,5 +1,5 @@
 """
- Command for database backup
+ Command for site backup in the cloud.
 """
 
 import os
@@ -10,36 +10,29 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.core.management import call_command
 
+
 class Command(BaseCommand):
-    help = "Backup database. Only Postgresql engine is implemented"
+    help = "Backup the site in the cloud."
 
     def handle(self, *args, **options):
-        from django.db import connection
-        from django.conf import settings
-
         self.engine = settings.DATABASES['default']['ENGINE']
         self.db = settings.DATABASES['default']['NAME']
         self.user = settings.DATABASES['default']['USER']
         self.passwd = settings.DATABASES['default']['PASSWORD']
         self.host = settings.DATABASES['default']['HOST']
         self.port = settings.DATABASES['default']['PORT']
+        assert self.engine == 'django.db.backends.postgresql_psycopg2'
 
         backup_name = time.strftime('%y%m%d-%H%M%S')
-
-        backup_root = os.path.join(os.environ['HOME'], 'backup/piosenka')
+        backup_root = os.path.join(os.environ['HOME'], 'backup')
         directory = os.path.join(backup_root, backup_name)
-
         if not os.path.exists(directory):
             os.makedirs(directory)
 
         #SQL
         sql_file_path = os.path.join(directory, 'postgres_' + backup_name + ".sql")
-
-        if self.engine == 'django.db.backends.postgresql_psycopg2':
-            print 'Doing Postgresql backup to database %s into %s' % (self.db, sql_file_path)
-            self.dump_sql(sql_file_path)
-        else:
-            print 'Backup in %s engine not implemented' % self.engine
+        print('Doing Postgresql backup to database %s into %s' % (self.db, sql_file_path))
+        self.dump_sql(sql_file_path)
 
         # App fixtures
         apps = settings.INSTALLED_APPS
@@ -51,36 +44,32 @@ class Command(BaseCommand):
         json_file_path = os.path.join(directory, 'fixture_' + backup_name + ".json")
         self.dump_total_fixture(json_file_path)
 
-        push_command = "s3cmd sync %s %sdb/" % (directory, settings.S3BUCKET)
+        push_command = "aws s3 cp %s %sdb/ --recursive" % (directory, settings.S3BUCKET)
         os.system(push_command)
-        print push_command
+        print(push_command)
 
         # Upload sync
         upload_root = settings.MEDIA_ROOT
-        upload_command = "s3cmd sync %s %s" % (upload_root, settings.S3BUCKET, )
+        upload_command = "aws s3 sync %s %s" % (upload_root, settings.S3BUCKET, )
 
         os.system(upload_command)
-        print upload_command
-
+        print(upload_command)
 
     def dump_sql(self, out_file_path):
+        assert self.user
+        assert self.host
+        assert self.port
+        assert self.db
+
         args = []
-        if self.user:
-            args += ["--username=%s" % self.user]
-        if self.host:
-            args += ["--host=%s" % self.host]
-        if self.port:
-            args += ["--port=%s" % self.port]
-        if self.db:
-            args += [self.db]
-
-        if self.host == "sql.dxhp.megiteam.pl":
-            tool = "/usr/local/pgsql-8.4/bin/pg_dump"
-        else:
-            tool = "pg_dump"
-
-        command = '%s %s > %s' % (tool, ' '.join(args), out_file_path)
-        print command
+        args += ["--username=%s" % self.user]
+        args += ["--host=%s" % self.host]
+        args += ["--port=%s" % self.port]
+        args += ["--format=t"]  # Use tarball backup format.
+        args += ["--clean"]     # When restoring, start with cleaning the database.
+        args += [self.db]
+        command = 'pg_dump %s > %s' % (' '.join(args), out_file_path)
+        print(command)
         os.system(command)
 
     def dump_app_fixture(self, app, out_file_path):
