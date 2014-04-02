@@ -34,9 +34,11 @@ class Venue(models.Model):
 
     def clean(self):
         from pygeocoder import Geocoder
+        from pygeolib import GeocoderError
         address = str(self.street) + ', ' + str(self.town)
-        geo = Geocoder.geocode(address)
-        if not geo:
+        try:
+            geo = Geocoder.geocode(address)
+        except GeocoderError:
             raise ValidationError("Geo lookup fails to recognize this address.")
         self.lat, self.lon = geo[0].coordinates
 
