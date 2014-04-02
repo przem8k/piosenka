@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from django.core.exceptions import ValidationError
 from django.db import models
 
 from markdown import markdown
@@ -39,6 +40,8 @@ class Venue(models.Model):
     street = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True)
     location = LocationField(editable=False)
+    lat = models.FloatField(editable=False, help_text="Latitude.")
+    lon = models.FloatField(editable=False, help_text="Longtitude.")
 
     class Meta:
         ordering = ["town", "name"]
@@ -46,15 +49,13 @@ class Venue(models.Model):
     def __str__(self):
         return "%s - %s" % (self.town, self.name)
 
-    def save(self, *args, **kwargs):
+    def clean(self):
         from pygeocoder import Geocoder
         address = str(self.street) + ', ' + str(self.town)
         geo = Geocoder.geocode(address)
-        if len(geo) == 0:
-            raise RuntimeError("Address geo lookup failed.")
-        lat, lng = geo[0].coordinates
-        self.location = str(lat) + ',' + str(lng)
-        super(Venue, self).save(*args, **kwargs)
+        if not geo:
+            raise ValidationError("Geo lookup fails to recognize this address.")
+        self.lat, self.lon = geo[0].coordinates
 
     @models.permalink
     def get_absolute_url(self):
