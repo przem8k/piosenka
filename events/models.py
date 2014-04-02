@@ -4,8 +4,6 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 from artists.models import Artist, Band
-from events.forms import LocationFormField
-from events.widgets import LocationWidget
 
 from markdown import markdown
 
