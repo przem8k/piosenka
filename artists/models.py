@@ -1,10 +1,6 @@
-# coding=utf-8
-
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
 
 
-@python_2_unicode_compatible
 class Artist(models.Model):
     firstname = models.CharField(max_length=25)
     lastname = models.CharField(max_length=25)
@@ -41,7 +37,6 @@ class Artist(models.Model):
         return "/spiewnik/%s/" % self.slug
 
 
-@python_2_unicode_compatible
 class Band(models.Model):
     name = models.CharField(max_length=50)
     members = models.ManyToManyField(Artist, null=True, blank=True)

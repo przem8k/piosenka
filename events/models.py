@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
 from datetime import datetime
 
 from django.db import models
-from django.conf import settings
-from django.utils.encoding import python_2_unicode_compatible
 
 from markdown import markdown
 from south.modelsinspector import add_introspection_rules
@@ -36,7 +33,6 @@ class PastEventManager(models.Manager):
         return super(PastEventManager, self).get_query_set().filter(datetime__lt=datetime.now())
 
 
-@python_2_unicode_compatible
 class Venue(models.Model):
     name = models.CharField(max_length=100)
     town = models.CharField(max_length=100)
@@ -75,7 +71,6 @@ class Venue(models.Model):
         return float(b)
 
 
-@python_2_unicode_compatible
 class Event(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique_for_date="datetime")

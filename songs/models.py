@@ -1,9 +1,6 @@
-# coding=utf-8
-
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
 
 from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
@@ -28,7 +25,6 @@ def validate_lyrics(value):
         raise ValidationError(u'Lyrics syntax is incorrect: ' + str(m))
 
 
-@python_2_unicode_compatible
 class Song(models.Model):
     CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
     title = models.CharField(max_length=100)
@@ -114,7 +110,6 @@ class Song(models.Model):
             return None
 
 
-@python_2_unicode_compatible
 class ArtistContribution(models.Model):
     song = models.ForeignKey(Song)
     artist = models.ForeignKey(Artist)
@@ -127,7 +122,6 @@ class ArtistContribution(models.Model):
         return self.artist.firstname + " " + self.artist.lastname + " - " + self.song.title
 
 
-@python_2_unicode_compatible
 class BandContribution(models.Model):
     song = models.ForeignKey(Song)
     band = models.ForeignKey(Band)
