@@ -3,25 +3,11 @@ from datetime import datetime
 from django.core.exceptions import ValidationError
 from django.db import models
 
-from markdown import markdown
-from south.modelsinspector import add_introspection_rules
-add_introspection_rules([], ["^events.models.LocationField"])
-
 from artists.models import Artist, Band
 from events.forms import LocationFormField
 from events.widgets import LocationWidget
 
-
-class LocationField(models.CharField):
-    def __init__(self, *args, **kwargs):
-        kwargs['max_length'] = 100
-        super(LocationField, self).__init__(*args, **kwargs)
-
-    def formfield(self, **kwargs):
-        defaults = {'form_class': LocationFormField}
-        defaults.update(kwargs)
-        defaults['widget'] = LocationWidget
-        return super(LocationField, self).formfield(**defaults)
+from markdown import markdown
 
 
 class CurrentEventManager(models.Manager):
@@ -39,7 +25,6 @@ class Venue(models.Model):
     town = models.CharField(max_length=100)
     street = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True)
-    location = LocationField(editable=False)
     lat = models.FloatField(editable=False, help_text="Latitude.")
     lon = models.FloatField(editable=False, help_text="Longtitude.")
 
@@ -62,14 +47,6 @@ class Venue(models.Model):
         return('venue_detail', (), {
             'slug': self.slug,
         })
-
-    def location_lat(self):
-        a, b = self.location.split(',')
-        return float(a)
-
-    def location_lng(self):
-        a, b = self.location.split(',')
-        return float(b)
 
 
 class Event(models.Model):
@@ -109,11 +86,11 @@ class Event(models.Model):
             'slug': self.slug
         })
 
-    def location_lat(self):
-        return self.venue.location_lat()
+    def lat(self):
+        return self.venue.lat
 
-    def location_lng(self):
-        return self.venue.location_lng()
+    def lon(self):
+        return self.venue.lon
 
     def date(self):
         return "%s.%s" % (self.datetime.strftime("%e"), self.datetime.strftime("%m"))

@@ -27,7 +27,7 @@ function load_location() {
   {% if mark %}
     var marker = new google.maps.Marker({
       map: map_location,
-      position: new google.maps.LatLng({{mark.location_lat|unlocalize}}, {{mark.location_lng|unlocalize}}),
+      position: new google.maps.LatLng({{mark.lat|unlocalize}}, {{mark.lon|unlocalize}}),
       draggable: false,
       url: '{{mark.get_absolute_url}}',
       title: '{{mark}}'
@@ -37,7 +37,7 @@ function load_location() {
   {% for element in marks %}
     var marker_{{forloop.counter}} = new google.maps.Marker({
       map: map_location,
-      position: new google.maps.LatLng({{element.location_lat|unlocalize}}, {{element.location_lng|unlocalize}}),
+      position: new google.maps.LatLng({{element.lat|unlocalize}}, {{element.lon|unlocalize}}),
       draggable: false,
       url: '{{element.get_absolute_url}}',
       title: '{{element}}'

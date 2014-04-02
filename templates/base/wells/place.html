@@ -1,6 +1,6 @@
 <div class="customwell auxwell">
   <h1>Mapa</h1>
-  {% if place.location %}
-  {% include "base/map.html" with map_width="280" map_height="210" map_center_lat=place.location_lat map_center_lng=place.location_lng map_zoom="12" mark=mark %}
+  {% if place.lat and place.lon %}
+  {% include "base/map.html" with map_width="280" map_height="210" map_center_lat=place.lat map_center_lng=place.lon map_zoom="12" mark=mark %}
   {% endif %}
 </div>
