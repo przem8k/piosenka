@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}{{ song.title }}{% endblock title %}
 
@@ -68,20 +69,20 @@
                 <td><b>Transponuj: </b></td>
                 <td class="indented">
                   <a href="{{ url }}?t={{trans_up}}" title="Półton w górę">
-                    <img src="{{STATIC_URL}}images/icons/up.png" style="display: inline; vertical-align: middle;"/>
+                    <img src="{% static "images/icons/up.png" %}" style="display: inline; vertical-align: middle;"/>
                   </a>
                   <a href="{{ url }}?t=0" title="Zapis oryginalny">
-                    <img src="{{STATIC_URL}}images/icons/home.png" style="display: inline; vertical-align: middle;"/>
+                    <img src="{% static "images/icons/home.png" %}" style="display: inline; vertical-align: middle;"/>
                   </a>
                   <a href="{{ url }}?t={{trans_down}}" title="Półton w dół">
-                    <img src="{{STATIC_URL}}images/icons/down.png" style="display: inline; vertical-align: middle;"/>
+                    <img src="{% static "images/icons/down.png" %}" style="display: inline; vertical-align: middle;"/>
                   </a>
                 </td>
               </tr>
               {% if extra %}
               <tr>
                 <td><b>Powtórz: </b></td>
-                <td class="indented"><span class="extra-chords-trigger" title="Pokaż / ukryj powtórzone akordy"><img src="{{STATIC_URL}}images/icons/gears.png" style="display: inline; vertical-align: middle;"/></span></td>
+                <td class="indented"><span class="extra-chords-trigger" title="Pokaż / ukryj powtórzone akordy"><img src="{% static "images/icons/gears.png" %}" style="display: inline; vertical-align: middle;"/></span></td>
               </tr>
               {% endif %}
             </table>

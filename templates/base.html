@@ -1,4 +1,5 @@
-<!DOCTYPE HTML> 
+{% load staticfiles %}
+<!DOCTYPE HTML>
 <html lang="pl">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
@@ -14,8 +15,8 @@
     <meta name="description" content="{% block description %}Śpiewnik piosenki literackiej, wydarzenia, koncerty{% endblock description %}" />
     <meta name="keywords" content="Śpiewnik, chwyty, akordy, Kaczmarski, Gintrowski, Czajkowski" />
     <link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?stamp=05" > 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css?stamp=05" >
+    <link rel="stylesheet" href="{% static "css/style.css" %}?stamp=05" >
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}?stamp=05" >
   </head>
 
   <body{% if print %} class="print"{% endif %}>
@@ -29,7 +30,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <img src="{{ STATIC_URL }}images/feather_40.png"/>
+        <img src="{% static "images/feather_40.png" %}"/>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -103,11 +104,11 @@
       </div>
     </div>
 
-    <script src="{{ STATIC_URL }}js/jquery-2.0.3.min.js?stamp=05"></script>
-    <script src="{{ STATIC_URL }}js/typeahead.min.js?stamp=05"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap.min.js?stamp=05"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}scripts/trigger.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}scripts/site-search.js"></script>
+    <script src="{% static "js/jquery-2.0.3.min.js" %}"></script>
+    <script src="{% static "js/typeahead.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "scripts/trigger.js" %}"></script>
+    <script type="text/javascript" src="{% static "scripts/site-search.js" %}"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
     {% block extra-scripts %}{% endblock extra-scripts %}
