@@ -107,14 +107,14 @@
     <script src="{% static "js/jquery-2.0.3.min.js" %}"></script>
     <script src="{% static "js/typeahead.min.js" %}"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>
-    <script type="text/javascript" src="{% static "scripts/trigger.js" %}"></script>
-    <script type="text/javascript" src="{% static "scripts/site-search.js" %}"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
+    <script src="{% static "scripts/trigger.js" %}"></script>
+    <script src="{% static "scripts/site-search.js" %}"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
     {% block extra-scripts %}{% endblock extra-scripts %}
 
     <!-- G+ -->
-    <script type="text/javascript">
+    <script>
       window.___gcfg = {lang: 'pl'};
       (function() {
       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -136,7 +136,7 @@
     </script>
 
     <!-- Google Analytics -->
-    <script type="text/javascript">
+    <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-23138480-1']);
       _gaq.push(['_trackPageview']);
