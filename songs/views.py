@@ -11,6 +11,10 @@ from songs.transpose import transpose_lyrics
 from songs.parse import parse_lyrics
 
 
+class IndexView(TemplateView):
+    template_name = "songs/index.html"
+
+
 def get_or_none(model, **kwargs):
     try:
         return model.objects.get(**kwargs)
@@ -131,11 +135,6 @@ def redirect_to_song(request, song_slug):
     return HttpResponsePermanentRedirect("/spiewnik/%s/%s/" % (artist.slug, piece.slug,))
 
 
-def obsolete_song(request, song_id):
-    song = get_object_or_404(Song, pk=song_id)
-    return redirect_to_song(request, song.slug)
-
-
 def entity(request, slug, template_name="songs/list.html"):
     """ Lists the songs associated with the given Artist or Band object """
     try:
@@ -166,5 +165,6 @@ def obsolete_band(request, band_id):
     return HttpResponsePermanentRedirect("/spiewnik/%s/" % (band.slug,))
 
 
-class IndexView(TemplateView):
-    template_name = "songs/index.html"
+def obsolete_song(request, song_id):
+    song = get_object_or_404(Song, pk=song_id)
+    return redirect_to_song(request, song.slug)
