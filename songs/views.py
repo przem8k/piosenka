@@ -3,7 +3,7 @@ from songs.models import Song, ArtistContribution, BandContribution
 from artists.models import Artist, Band
 from django.http import HttpResponsePermanentRedirect, Http404
 from django.shortcuts import get_object_or_404, render
-from django.views.generic import View
+from django.views.generic import TemplateView
 from django.contrib.admin.models import LogEntry, ADDITION
 from django.contrib.contenttypes.models import ContentType
 
@@ -166,20 +166,5 @@ def obsolete_band(request, band_id):
     return HttpResponsePermanentRedirect("/spiewnik/%s/" % (band.slug,))
 
 
-class IndexView(View):
+class IndexView(TemplateView):
     template_name = "songs/index.html"
-    song_count = 10
-
-    def get(self, request):
-        song_type = ContentType.objects.get(app_label="songs", model="song")
-        entries = LogEntry.objects.filter(content_type=song_type, action_flag=ADDITION) \
-                          .order_by("-action_time")[:IndexView.song_count]
-        songs = [(x.action_time, get_or_none(Song, pk=x.object_id)) for x in entries
-                 if get_or_none(Song, pk=x.object_id) is not None]
-        return render(
-            request,
-            self.template_name,
-            {
-                'songs': songs,
-            }
-        )
