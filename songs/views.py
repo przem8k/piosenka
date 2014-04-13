@@ -21,13 +21,7 @@ def get_or_none(model, **kwargs):
 
 
 def songs_context(request):
-    url_segments = [x for x in request.path.split("/") if len(x) > 0]
-
     context = {}
-    if len(url_segments) >= 3 and url_segments[0] == "spiewnik":
-        context["artist_slug"] = url_segments[1]
-        context["song_slug"] = url_segments[2]
-
     context["url"] = request.path
     context["bards"] = Artist.objects.filter(display=True, kind=Artist.KIND_TEXTER)
     context["composers"] = Artist.objects.filter(display=True, kind=Artist.KIND_COMPOSER)
