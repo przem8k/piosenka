@@ -1,14 +1,21 @@
 body {
-    padding-top: 41px;
-    padding-bottom: 40px;
     background: url("/site_media/native/images/patterns/groovepaper.png");
 }
 
-.print { /* navbar is not shown in print versions */
-    padding-top: 0;
-    padding-bottom: 0;
+@media screen
+{
+    body {
+        padding-top: 41px;
+    }
 }
 
+/* override Bootstrap "display urls in print" behavior */
+
+@media print {
+    a[href]:after {
+        content: none !important;
+    }
+}
 
 /* navbar */
 
@@ -141,20 +148,6 @@ body {
     margin-top: 10px;
 }
 
-/* printing */
-
-.print .not-for-print {
-    display: none;
-}
-
-.only-for-print {
-    display: none;
-}
-
-.print .only-for-print {
-    display: block
-}
-
 /* about.html */
 
 .badgelist li {
@@ -165,13 +158,26 @@ body {
 /* lyrics rendering */
 
 .indented {
-    padding-left:10px;
+    padding-left: 10px;
 }
 
-/* chords toggling */
+.chord-section {
+    padding-left: 10px;
+}
+
+.chords {
+    font-weight: bold;
+}
+
+/* gadget controlling song display (chords, transpo, etc.) */
+
+.song-gadget img {
+    display: inline;
+    vertical-align: middle;
+    cursor: pointer;
+}
 
 .extra-chords-trigger {
-    cursor: pointer;
     color: #215679;
     font-size: 9pt;    
 }

@@ -47,17 +47,15 @@ class SongMode:
     PRINT_ALL_CHORDS = 3
 
 
-def render_lyrics(lyrics, print_parameter=None, template_name="songs/lyrics.html"):
+def render_lyrics(lyrics, template_name="songs/lyrics.html"):
     context = {
         "lyrics": lyrics,
-        "any_chords": print_parameter != "tylko-tekst",
-        "distinguish_extra_chords": print_parameter != "wszystkie-akordy",
     }
     template = loader.get_template(template_name)
     return template.render(Context(context))
 
 
-def song_or_translation(request, song, for_print, template_name='songs/song.html'):
+def song_or_translation(request, song, template_name='songs/song.html'):
 
     if request.method == "GET" and "t" in request.GET:
         try:
@@ -76,8 +74,8 @@ def song_or_translation(request, song, for_print, template_name='songs/song.html
 
     lyrics = parse_lyrics(song.lyrics)
 
+    # TODO(ppi): maxe extra a field in song and set it on save.
     extra = False
-
     for paragraph in lyrics:
         for text, chords, is_indented, are_chords_extra in paragraph:
             if are_chords_extra:
@@ -89,7 +87,6 @@ def song_or_translation(request, song, for_print, template_name='songs/song.html
     context = {
         'song': song,
         'section': 'songs',
-        'print': for_print,
         'extra': extra,
         'trans':  transposition,
         'trans_up': trans_up,
@@ -98,14 +95,13 @@ def song_or_translation(request, song, for_print, template_name='songs/song.html
             transpose_lyrics(
                 lyrics,
                 transposition
-            ),
-            request.GET["p"] if "p" in request.GET else None
+            )
         ),
     }
     return render(request, template_name, context)
 
 
-def song_or_translation_entry(request, artist_slug, song_slug, for_print=False):
+def song_or_translation_entry(request, artist_slug, song_slug):
     song = get_object_or_404(Song, slug=song_slug)
 
     artist = get_or_none(Artist, slug=artist_slug)
@@ -119,7 +115,7 @@ def song_or_translation_entry(request, artist_slug, song_slug, for_print=False):
     ):
         raise Http404()
 
-    return song_or_translation(request, song, for_print)
+    return song_or_translation(request, song)
 
 
 def redirect_to_song(request, song_slug):

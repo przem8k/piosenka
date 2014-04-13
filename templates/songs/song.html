@@ -8,7 +8,6 @@
 {% block description %}Opracowanie piosenki {{song.title}}{% endblock description %}
 
 {% block content %}
-
 {% include "songs/top.html" %}
 
 <div class="container main">
@@ -64,25 +63,37 @@
             {% endif %}
           </div>
           <div class="col-md-6">
-            <table class="not-for-print">
+            <table class="song-gadget hidden-print">
               <tr>
                 <td><b>Transponuj: </b></td>
                 <td class="indented">
                   <a href="{{ url }}?t={{trans_up}}" title="Półton w górę">
-                    <img src="{% static "images/icons/up.png" %}" style="display: inline; vertical-align: middle;"/>
+                    <img src="{% static "images/icons/up.png" %}"/>
                   </a>
                   <a href="{{ url }}?t=0" title="Zapis oryginalny">
-                    <img src="{% static "images/icons/home.png" %}" style="display: inline; vertical-align: middle;"/>
+                    <img src="{% static "images/icons/home.png" %}"/>
                   </a>
                   <a href="{{ url }}?t={{trans_down}}" title="Półton w dół">
-                    <img src="{% static "images/icons/down.png" %}" style="display: inline; vertical-align: middle;"/>
+                    <img src="{% static "images/icons/down.png" %}"/>
                   </a>
                 </td>
               </tr>
               {% if extra %}
               <tr>
-                <td><b>Powtórz: </b></td>
-                <td class="indented"><span class="extra-chords-trigger" title="Pokaż / ukryj powtórzone akordy"><img src="{% static "images/icons/gears.png" %}" style="display: inline; vertical-align: middle;"/></span></td>
+                <td><b>Akordy: </b></td>
+                <td class="indented">
+                  <span class="chords-none-trigger" title="Tylko tekst">
+                    <img src="{% static "images/icons/gears.png" %}"/>
+                  </span>
+                  {% if extra %}
+                  <span class="chords-basic-trigger" title="Podstawowe akordy">
+                    <img src="{% static "images/icons/gears.png" %}"/>
+                  </span>
+                  {% endif %}
+                  <span class="chords-all-trigger" title="{% if extra %}Wszystkie akordy{% else %}Tekst i akordy{% endif %}">
+                    <img src="{% static "images/icons/gears.png" %}"/>
+                  </span>
+                </td>
               </tr>
               {% endif %}
             </table>
@@ -97,18 +108,15 @@
       </div>
     </div>
 
-    <div class="col-md-4 not-for-print">
+    <div class="col-md-4 hidden-print">
       <div class="customwell auxwell">
         <h1>Wersja do druku</h1>
         <ul class="list-unstyled">
-          {% if extra %}
-          <li><a href="{{song.get_absolute_url_print}}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Podstawowe akordy</a></li>
-          <li><a href="{{song.get_absolute_url_print}}?t={{trans}}&p=wszystkie-akordy" title="Wersja do druku - wszystkie akordy">Wszystkie akordy</a></li>
-          {% else %}
-          <li><a href="{{song.get_absolute_url_print}}?t={{trans}}" title="Wersja do druku - podstawowe akordy">Tekst i akordy</a></li>
-          {% endif %}
-          <li><a href="{{song.get_absolute_url_print}}?t={{trans}}&p=tylko-tekst" title="Wersja do druku - tylko tekst">Tylko tekst</a></li>
+          <li><a href="javascript:window.print()" title="wersja do druku - tylko tekst">Drukuj</a></li>
         </ul>
+        <p><small>Opracowanie zostanie wydrukowane w wybranej tonacji, bez
+        nagłówka i bocznego menu. Twoja przeglądarka pozwoli dostosować
+        parametry przed rozpoczęciem drukowania.</small></p>
       </div>
 
       {% if song.score1 or song.score2 or song.score3 %}

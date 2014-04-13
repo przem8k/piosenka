@@ -4,23 +4,19 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if not print %}
     <meta name="robots" content="index,follow" />
-    {% else %}
-    <meta name="robots" content="noindex" />
-    {% endif %}
     <link rel="index" title="Piosenka z tekstem" href="http://www.piosenkaztekstem.pl" />
     <title>{% block title %}Piosenka literacka{% endblock title %} - Piosenka z tekstem</title>
 
     <meta name="description" content="{% block description %}Śpiewnik piosenki literackiej, wydarzenia, koncerty{% endblock description %}" />
     <meta name="keywords" content="Śpiewnik, chwyty, akordy, Kaczmarski, Gintrowski, Czajkowski" />
     <link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{% static "css/style.css" %}?stamp=05" >
-    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}?stamp=05" >
+    <link rel="stylesheet" href="{% static "css/style.css" %}?stamp=08" >
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}?stamp=06" >
   </head>
 
-  <body{% if print %} class="print"{% endif %}>
-    <nav class="navbar navbar-inverse navbar-fixed-top not-for-print" role="navigation">
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top hidden-print" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -85,21 +81,15 @@
 
     {% block content %} {% endblock content %}
 
-    <div class="footer not-for-print">
+    <div class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <center><small>© 2011-2012 Piosenka z tekstem</small></center>
+          <div class="col-md-12 hidden-print">
+            <center><b>© 2011-2014 Piosenka z tekstem</b></center>
           </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="only-for-print">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12"><p><b>www.piosenkaztekstem.pl</b></p></div>
+          <div class="col-md-12 visible-print">
+            <center><b>www.piosenkaztekstem.pl</b></center>
+          </div>
         </div>
       </div>
     </div>
@@ -107,7 +97,7 @@
     <script src="{% static "js/jquery-2.0.3.min.js" %}"></script>
     <script src="{% static "js/typeahead.min.js" %}"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>
-    <script src="{% static "scripts/trigger.js" %}"></script>
+    <script src="{% static "scripts/trigger.js" %}?stamp=01"></script>
     <script src="{% static "scripts/site-search.js" %}"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
