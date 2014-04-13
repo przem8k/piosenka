@@ -196,6 +196,11 @@ body {
     padding: 0 0 0 5px;
     margin: 0 0 20px 5px;
     border-left: 2px solid #0088cc;
+    font-size: 14px;
+}
+
+.custom-blockquote small {
+    font-size: 85%;
 }
 
 .print .custom-blockquote {
@@ -212,21 +217,22 @@ body {
     width: 100%;
 }
 
-.twitter-typeahead {
+.site-search .twitter-typeahead {
     margin-top: 3px;
     border-radius: 5px;
     background: #fff;
 }
 
-.twitter-typeahead .tt-hint {
+.site-search .twitter-typeahead .tt-hint {
     margin-bottom: 0;
     display: none;
 }
 
-.twitter-typeahead .tt-query {
+.site-search .twitter-typeahead .tt-query {
     background-color: #fff;
     color: #000;
     height: 30px;
+    width: 100%;
 }
 
 .dataset-header {
