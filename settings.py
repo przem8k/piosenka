@@ -83,7 +83,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
-    'songs.views.songs_context',
     'frontpage.context.site_context',
 )
 

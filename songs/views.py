@@ -14,20 +14,18 @@ def get_or_none(model, **kwargs):
         return None
 
 
-def songs_context(request):
-    context = {}
-    context["url"] = request.path
-    context["bards"] = Artist.objects.filter(display=True, kind=Artist.KIND_TEXTER)
-    context["composers"] = Artist.objects.filter(display=True, kind=Artist.KIND_COMPOSER)
-    context["translators"] = Artist.objects.filter(display=True, kind=Artist.KIND_TRANSLATOR)
-    context["performers"] = Artist.objects.filter(display=True, kind=Artist.KIND_PERFORMER)
-    context["foreigners"] = Artist.objects.filter(display=True, kind=Artist.KIND_FOREIGN)
-    context["bands"] = Band.objects.filter(display=True)
-    return context
-
-
 class IndexView(TemplateView):
     template_name = "songs/index.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context["bards"] = Artist.objects.filter(display=True, kind=Artist.KIND_TEXTER)
+        context["composers"] = Artist.objects.filter(display=True, kind=Artist.KIND_COMPOSER)
+        context["translators"] = Artist.objects.filter(display=True, kind=Artist.KIND_TRANSLATOR)
+        context["performers"] = Artist.objects.filter(display=True, kind=Artist.KIND_PERFORMER)
+        context["foreigners"] = Artist.objects.filter(display=True, kind=Artist.KIND_FOREIGN)
+        context["bands"] = Band.objects.filter(display=True)
+        return context
 
 
 class ArtistView(TemplateView):
