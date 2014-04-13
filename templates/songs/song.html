@@ -67,32 +67,38 @@
               <tr>
                 <td><b>Transponuj: </b></td>
                 <td class="indented">
+                  <button type="button" class="btn btn-sm btn-default">
                   <a href="{{ url }}?t={{trans_up}}" title="Półton w górę">
                     <img src="{% static "images/icons/up.png" %}"/>
                   </a>
+                  </button>
+                  <button type="button" class="btn btn-sm btn-default">
                   <a href="{{ url }}?t=0" title="Zapis oryginalny">
                     <img src="{% static "images/icons/home.png" %}"/>
                   </a>
+                  </button>
+                  <button type="button" class="btn btn-sm btn-default">
                   <a href="{{ url }}?t={{trans_down}}" title="Półton w dół">
                     <img src="{% static "images/icons/down.png" %}"/>
                   </a>
+                  </button>
                 </td>
               </tr>
               {% if extra %}
               <tr>
                 <td><b>Akordy: </b></td>
                 <td class="indented">
-                  <span class="chords-none-trigger" title="Tylko tekst">
-                    <img src="{% static "images/icons/gears.png" %}"/>
-                  </span>
+                  <button type="button" class="btn btn-primary btn-sm chords-trigger chords-normal-trigger">
+                    <span class="glyphicon glyphicon-music" title="{% if extra %}Podstawowe akordy{% else %}Tekst i akordy{% endif %}"></span>
+                  </button>
                   {% if extra %}
-                  <span class="chords-basic-trigger" title="Podstawowe akordy">
-                    <img src="{% static "images/icons/gears.png" %}"/>
-                  </span>
+                  <button type="button" class="btn btn-default btn-sm chords-trigger chords-repeated-trigger">
+                    <span class="glyphicon glyphicon-repeat" title="Wszystkie akordy"></span>
+                  </button>
                   {% endif %}
-                  <span class="chords-all-trigger" title="{% if extra %}Wszystkie akordy{% else %}Tekst i akordy{% endif %}">
-                    <img src="{% static "images/icons/gears.png" %}"/>
-                  </span>
+                  <button type="button" class="btn btn-default btn-sm chords-trigger chords-none-trigger">
+                    <span class="glyphicon glyphicon-font" title="Tylko tekst"></span>
+                  </button>
                 </td>
               </tr>
               {% endif %}
@@ -174,5 +180,8 @@
   </div>
   {% include "base/rows/disqus.html" with disqus_id=song.slug %}
 </div>
-
 {% endblock content %}
+
+{% block extra-scripts %}
+<script src="{% static "scripts/trigger.js" %}?stamp=05"></script>
+{% endblock extra-scripts %}

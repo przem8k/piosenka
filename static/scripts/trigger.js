@@ -1,13 +1,39 @@
-$(document).ready(function(){
-    $(".chords-none-trigger").click(function() {
-        $(".chord-section").hide();
-    });
-    $(".chords-basic-trigger").click(function() {
+var GadgetStateEnum = {
+    NORMAL: 0,
+    REPEATED: 1,
+    NONE: 2
+};
+
+var gadgetState = GadgetStateEnum.NORMAL;
+
+function applyState() {
+    $(".chords-trigger").removeClass("btn-primary");
+    $(".chords-trigger").addClass("btn-default");
+    if (gadgetState == GadgetStateEnum.NORMAL) {
         $(".chord-section").show();
         $(".extra-chords").hide();
-    });
-    $(".chords-all-trigger").click(function() {
+        $(".chords-normal-trigger").addClass("btn-primary").removeClass("btn-default");
+    } else if (gadgetState == GadgetStateEnum.REPEATED) {
         $(".chord-section").show();
         $(".extra-chords").show();
+        $(".chords-repeated-trigger").addClass("btn-primary").removeClass("btn-default");
+    } else if (gadgetState == GadgetStateEnum.NONE) {
+        $(".chord-section").hide();
+        $(".chords-none-trigger").addClass("btn-primary").removeClass("btn-default");
+    }
+}
+
+$(document).ready(function(){
+    $(".chords-normal-trigger").click(function() {
+        gadgetState = GadgetStateEnum.NORMAL;
+        applyState();
+    });
+    $(".chords-repeated-trigger").click(function() {
+        gadgetState = GadgetStateEnum.REPEATED;
+        applyState();
+    });
+    $(".chords-none-trigger").click(function() {
+        gadgetState = GadgetStateEnum.NONE;
+        applyState();
     });
 });
