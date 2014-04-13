@@ -63,38 +63,39 @@
             {% endif %}
           </div>
           <div class="col-md-6">
-            <table class="song-gadget hidden-print">
-              <tr>
-                <td><b>Transponuj: </b></td>
-                <td class="indented">
-                  <button type="button" class="btn btn-sm btn-default trans-up-trigger">
-                    <span class="glyphicon glyphicon-arrow-up" title="Półton w górę"></span>
-                  </button>
-                  <button type="button" class="btn btn-sm btn-default trans-home-trigger">
-                    <span class="glyphicon glyphicon-home" title="Zapis oryginalny"></span>
-                  </button>
-                  <button type="button" class="btn btn-sm btn-default trans-down-trigger">
-                    <span class="glyphicon glyphicon-arrow-down" title="Półton w dół"></span>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td><b>Akordy: </b></td>
-                <td class="indented">
-                  <button type="button" class="btn btn-primary btn-sm chords-trigger chords-normal-trigger">
-                    <span class="glyphicon glyphicon-music" title="{% if song.has_extra_chords %}Podstawowe akordy{% else %}Tekst i akordy{% endif %}"></span>
-                  </button>
-                  {% if song.has_extra_chords %}
-                  <button type="button" class="btn btn-default btn-sm chords-trigger chords-repeated-trigger">
-                    <span class="glyphicon glyphicon-repeat" title="Wszystkie akordy"></span>
-                  </button>
-                  {% endif %}
-                  <button type="button" class="btn btn-default btn-sm chords-trigger chords-none-trigger">
-                    <span class="glyphicon glyphicon-font" title="Tylko tekst"></span>
-                  </button>
-                </td>
-              </tr>
-            </table>
+        <div class="song-gadget hidden-print">
+          <div class="gadget-row">
+            <button type="button" class="btn btn-sm btn-default trans-up-trigger">
+              <span class="glyphicon glyphicon-arrow-up" title="półton w górę"></span>
+            </button>
+            <button type="button" class="btn btn-sm btn-default trans-home-trigger">
+              <span class="glyphicon glyphicon-home" title="zapis oryginalny"></span>
+            </button>
+            <button type="button" class="btn btn-sm btn-default trans-down-trigger">
+              <span class="glyphicon glyphicon-arrow-down" title="półton w dół"></span>
+            </button>
+            <span data-toggle="tooltip" data-placement="bottom" title="Transponuj
+              akordy w górę lub w dół." class="tip">
+              <span class="glyphicon glyphicon-question-sign"></span>
+            </span>
+          </div>
+
+          <div class="gadget-row">
+            <button type="button" class="btn btn-primary btn-sm chords-trigger chords-normal-trigger">
+              <span class="glyphicon glyphicon-music" title="{% if song.has_extra_chords %}podstawowe akordy{% else %}tekst i akordy{% endif %}"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-sm chords-trigger chords-repeated-trigger" {% if not song.has_extra_chords %}disabled{% endif %}>
+              <span class="glyphicon glyphicon-repeat" title="wszystkie akordy"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-sm chords-trigger chords-none-trigger">
+              <span class="glyphicon glyphicon-font" title="tylko tekst"></span>
+            </button>
+            <span data-toggle="tooltip" data-placement="bottom" title="Wyświetl lub
+              ukryj dodatkowe akordy." class="tip">
+              <span class="glyphicon glyphicon-question-sign"></span>
+            </span>
+          </div>
+        </div>
           </div>
         </div>
 
@@ -108,13 +109,17 @@
 
     <div class="col-md-4 hidden-print">
       <div class="customwell auxwell">
-        <h1>Wersja do druku</h1>
-        <ul class="list-unstyled">
-          <li><a href="javascript:window.print()" title="wersja do druku - tylko tekst">Drukuj</a></li>
-        </ul>
-        <p><small>Opracowanie zostanie wydrukowane w wybranej tonacji, bez
-        nagłówka i bocznego menu. Twoja przeglądarka pozwoli dostosować
-        parametry przed rozpoczęciem drukowania.</small></p>
+        <h1>Wersja do druku
+        <span data-toggle="tooltip" data-placement="bottom" title="Opracowanie
+          zostanie wydrukowane w wybranej tonacji, bez nagłówka i bocznego
+          menu. Twoja przeglądarka pozwoli dostosować parametry przed
+          rozpoczęciem drukowania." class="tip tip pull-right">
+          <span class="glyphicon glyphicon-question-sign"></span>
+        </span>
+        </h1>
+        <p>
+        <a href="javascript:window.print()" title="wersja do druku - tylko tekst">Drukuj</a>
+        </p>
       </div>
 
       {% if song.score1 or song.score2 or song.score3 %}
@@ -181,5 +186,10 @@ var transpositionUrls = []
 transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0 }}/");
 {% endfor %}
 </script>
-<script src="{% static "scripts/trigger.js" %}?stamp=10"></script>
+
+<script>
+$('.tip').tooltip({});
+</script>
+
+<script src="{% static "scripts/trigger.js" %}?stamp=12"></script>
 {% endblock extra-scripts %}

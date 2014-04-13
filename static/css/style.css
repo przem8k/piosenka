@@ -177,9 +177,8 @@ body {
     cursor: pointer;
 }
 
-.extra-chords-trigger {
-    color: #215679;
-    font-size: 9pt;    
+.song-gadget .gadget-row {
+    margin-bottom: 2px;
 }
 
 .extra-chords {
@@ -315,6 +314,11 @@ body {
 .date {
     background: url("/site_media/native/images/date.gif") left no-repeat;
     padding: 0 0 0 15px;
+}
+
+.tip {
+    color: #428bca !important;
+    margin-left: 10px;
 }
 
 /* ... */
