@@ -84,14 +84,13 @@
                   </button>
                 </td>
               </tr>
-              {% if extra %}
               <tr>
                 <td><b>Akordy: </b></td>
                 <td class="indented">
                   <button type="button" class="btn btn-primary btn-sm chords-trigger chords-normal-trigger">
-                    <span class="glyphicon glyphicon-music" title="{% if extra %}Podstawowe akordy{% else %}Tekst i akordy{% endif %}"></span>
+                    <span class="glyphicon glyphicon-music" title="{% if song.has_extra_chords %}Podstawowe akordy{% else %}Tekst i akordy{% endif %}"></span>
                   </button>
-                  {% if extra %}
+                  {% if song.has_extra_chords %}
                   <button type="button" class="btn btn-default btn-sm chords-trigger chords-repeated-trigger">
                     <span class="glyphicon glyphicon-repeat" title="Wszystkie akordy"></span>
                   </button>
@@ -101,7 +100,6 @@
                   </button>
                 </td>
               </tr>
-              {% endif %}
             </table>
           </div>
         </div>

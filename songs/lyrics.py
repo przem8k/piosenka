@@ -1,3 +1,9 @@
+""" Parsing and rendering of song lyrics. """
+from django.template import Context, loader
+
+from songs.transpose import transpose_lyrics
+
+
 class LyricsParserMode:
     Regular = 0
     Recording = 1
@@ -84,3 +90,18 @@ def parse_lyrics(raw_lyrics):
     if len(current_section) > 0:
         result.append(current_section)
     return result
+
+
+def contain_extra_chords(raw_lyrics):
+    for paragraph in raw_lyrics:
+        for text, chords, is_indented, are_chords_extra in paragraph:
+            if are_chords_extra:
+                return True
+    return False
+
+
+def render_lyrics(raw_lyrics, transposition=0, template_name="songs/lyrics.html"):
+    lyrics = transpose_lyrics(
+        parse_lyrics(raw_lyrics),
+        transposition)
+    return loader.get_template(template_name).render(Context({"lyrics": lyrics}))

@@ -1,12 +1,10 @@
-from django.template import Context, loader
 from songs.models import Song, ArtistContribution, BandContribution
 from artists.models import Artist, Band
 from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import TemplateView
 
-from songs.transpose import transpose_lyrics
-from songs.parse import parse_lyrics
+from songs.lyrics import render_lyrics
 
 
 class IndexView(TemplateView):
@@ -32,14 +30,6 @@ def songs_context(request):
     return context
 
 
-def render_lyrics(lyrics, template_name="songs/lyrics.html"):
-    context = {
-        "lyrics": lyrics,
-    }
-    template = loader.get_template(template_name)
-    return template.render(Context(context))
-
-
 def song_or_translation(request, song, template_name='songs/song.html'):
 
     if request.method == "GET" and "t" in request.GET:
@@ -57,31 +47,13 @@ def song_or_translation(request, song, template_name='songs/song.html'):
     trans_up = (transposition + 1) % 12
     trans_down = (transposition + 11) % 12
 
-    lyrics = parse_lyrics(song.lyrics)
-
-    # TODO(ppi): maxe extra a field in song and set it on save.
-    extra = False
-    for paragraph in lyrics:
-        for text, chords, is_indented, are_chords_extra in paragraph:
-            if are_chords_extra:
-                extra = True
-                break
-        if extra:
-            break
-
     context = {
         'song': song,
         'section': 'songs',
-        'extra': extra,
         'trans':  transposition,
         'trans_up': trans_up,
         'trans_down': trans_down,
-        'lyrics': render_lyrics(
-            transpose_lyrics(
-                lyrics,
-                transposition
-            )
-        ),
+        'lyrics': render_lyrics(song.lyrics, transposition),
     }
     return render(request, template_name, context)
 

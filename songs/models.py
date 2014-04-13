@@ -15,16 +15,6 @@ def validate_capo_fret(value):
         raise ValidationError(u'Capo fret has to be in range [0, 11]')
 
 
-def validate_lyrics(value):
-    try:
-        from songs.parse import parse_lyrics
-        from songs.transpose import transpose_lyrics
-        lyrics = parse_lyrics(value)
-        transpose_lyrics(lyrics, 0)
-    except SyntaxError as m:
-        raise ValidationError(u'Lyrics syntax is incorrect: ' + str(m))
-
-
 class Song(models.Model):
     CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
     title = models.CharField(max_length=100)
@@ -44,7 +34,9 @@ class Song(models.Model):
                            help_text="Deprecated - use capo_fret instead", editable=False)
     capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret],
                                     help_text="Set to 0 if no capo")
-    lyrics = models.TextField(null=True, validators=[validate_lyrics])
+    lyrics = models.TextField(null=True)
+    has_extra_chords = models.BooleanField(blank=True, editable=False,
+                                           help_text="True iff the lyrics contain repeated chords.")
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
     related_songs = models.ManyToManyField("self", null=True, blank=True, symmetrical=True,
                                            help_text="E.g. different translations or different "
@@ -68,6 +60,17 @@ class Song(models.Model):
     @models.permalink
     def get_absolute_url_print(self):
         return ("song-print", (), {"artist_slug": self.head_entity().slug, "song_slug": self.slug})
+
+    def clean(self):
+        try:
+            from songs.lyrics import parse_lyrics
+            from songs.lyrics import contain_extra_chords
+            from songs.transpose import transpose_lyrics
+            parsed_lyrics = parse_lyrics(self.lyrics)
+            transpose_lyrics(parsed_lyrics, 0)
+        except SyntaxError as m:
+            raise ValidationError(u'Lyrics syntax is incorrect: ' + str(m))
+        self.has_extra_chords = contain_extra_chords(parsed_lyrics)
 
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
