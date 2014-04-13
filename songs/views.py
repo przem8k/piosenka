@@ -1,11 +1,9 @@
 from django.template import Context, loader
 from songs.models import Song, ArtistContribution, BandContribution
 from artists.models import Artist, Band
-from django.http import HttpResponsePermanentRedirect, Http404
+from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import TemplateView
-from django.contrib.admin.models import LogEntry, ADDITION
-from django.contrib.contenttypes.models import ContentType
 
 from songs.transpose import transpose_lyrics
 from songs.parse import parse_lyrics
@@ -38,13 +36,6 @@ def songs_context(request):
     context["foreigners"] = Artist.objects.filter(display=True, kind=Artist.KIND_FOREIGN)
     context["bands"] = Band.objects.filter(display=True)
     return context
-
-
-class SongMode:
-    DISPLAY = 0
-    PRINT_TEXT_ONLY = 1
-    PRINT_BASIC_CHORDS = 2
-    PRINT_ALL_CHORDS = 3
 
 
 def render_lyrics(lyrics, template_name="songs/lyrics.html"):
@@ -118,19 +109,6 @@ def song_or_translation_entry(request, artist_slug, song_slug):
     return song_or_translation(request, song)
 
 
-def redirect_to_song(request, song_slug):
-    piece = get_object_or_404(Song, slug=song_slug)
-    artists = ArtistContribution.objects.filter(song=piece)
-    bands = BandContribution.objects.filter(song=piece)
-    if len(artists) > 0:
-        artist = artists[0].artist
-    elif len(bands) > 0:
-        artist = bands[0].band
-    else:
-        raise Http404()
-    return HttpResponsePermanentRedirect("/spiewnik/%s/%s/" % (artist.slug, piece.slug,))
-
-
 def entity(request, slug, template_name="songs/list.html"):
     """ Lists the songs associated with the given Artist or Band object """
     try:
@@ -149,18 +127,3 @@ def entity(request, slug, template_name="songs/list.html"):
         'songs': songs,
         'entity': entity
         })
-
-
-def obsolete_artist(request, artist_id):
-    artist = get_object_or_404(Artist, pk=artist_id)
-    return HttpResponsePermanentRedirect("/spiewnik/%s/" % (artist.slug,))
-
-
-def obsolete_band(request, band_id):
-    band = get_object_or_404(Band, pk=band_id)
-    return HttpResponsePermanentRedirect("/spiewnik/%s/" % (band.slug,))
-
-
-def obsolete_song(request, song_id):
-    song = get_object_or_404(Song, pk=song_id)
-    return redirect_to_song(request, song.slug)
