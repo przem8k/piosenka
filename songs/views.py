@@ -1,10 +1,12 @@
-from songs.models import Song, ArtistContribution, BandContribution
-from artists.models import Artist, Band
-from django.http import Http404
+import json
+
+from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
 
+from artists.models import Artist, Band
 from songs.lyrics import render_lyrics
+from songs.models import Song, ArtistContribution, BandContribution
 
 
 def get_or_none(model, **kwargs):
@@ -51,7 +53,7 @@ class ArtistView(TemplateView):
 
 
 class SongView(TemplateView):
-    """ Displays a song. """
+    """ Displays a songs by default, returns transposed lyrics part in json if asked. """
     template_name = 'songs/song.html'
 
     def get_context_data(self, **kwargs):
@@ -70,24 +72,24 @@ class SongView(TemplateView):
              BandContribution.objects.filter(song=song, band=band).count() == 0)):
             raise Http404()
 
-        if self.request.method == "GET" and "t" in self.request.GET:
-            try:
-                t = int(self.request.GET["t"])
-                if t >= 0 and t < 12:
-                    transposition = t
-                else:
-                    transposition = 0
-            except ValueError:
-                transposition = 0
+        context = super(SongView, self).get_context_data(**kwargs)
+        if 'transposition' in kwargs:
+            context['json'] = True
+            transposition = int(kwargs['transposition'])
+            context['transposition'] = transposition
         else:
             transposition = 0
-        trans_up = (transposition + 1) % 12
-        trans_down = (transposition + 11) % 12
-
-        context = super(SongView, self).get_context_data(**kwargs)
         context['song'] = song
-        context['trans'] = transposition
-        context['trans_up'] = trans_up
-        context['trans_down'] = trans_down
         context['lyrics'] = render_lyrics(song.lyrics, transposition)
         return context
+
+    def render_to_response(self, context):
+        if context.get('json'):
+            return self.get_lyrics_as_json(context)
+        return super(SongView, self).render_to_response(context)
+
+    def get_lyrics_as_json(self, context):
+        payload = {'lyrics': context['lyrics'],
+                   'transposition': context['transposition']}
+        return HttpResponse(json.dumps(payload),
+                            content_type='application/json')

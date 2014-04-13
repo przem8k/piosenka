@@ -67,20 +67,14 @@
               <tr>
                 <td><b>Transponuj: </b></td>
                 <td class="indented">
-                  <button type="button" class="btn btn-sm btn-default">
-                  <a href="{{ url }}?t={{trans_up}}" title="Półton w górę">
-                    <span class="glyphicon glyphicon-arrow-up" title="Wszystkie akordy"></span>
-                  </a>
+                  <button type="button" class="btn btn-sm btn-default trans-up-trigger">
+                    <span class="glyphicon glyphicon-arrow-up" title="Półton w górę"></span>
                   </button>
-                  <button type="button" class="btn btn-sm btn-default">
-                  <a href="{{ url }}?t=0" title="Zapis oryginalny">
-                    <span class="glyphicon glyphicon-home" title="Wszystkie akordy"></span>
-                  </a>
+                  <button type="button" class="btn btn-sm btn-default trans-home-trigger">
+                    <span class="glyphicon glyphicon-home" title="Zapis oryginalny"></span>
                   </button>
-                  <button type="button" class="btn btn-sm btn-default">
-                  <a href="{{ url }}?t={{trans_down}}" title="Półton w dół">
-                    <span class="glyphicon glyphicon-arrow-down" title="Wszystkie akordy"></span>
-                  </a>
+                  <button type="button" class="btn btn-sm btn-default trans-down-trigger">
+                    <span class="glyphicon glyphicon-arrow-down" title="Półton w dół"></span>
                   </button>
                 </td>
               </tr>
@@ -181,5 +175,11 @@
 {% endblock content %}
 
 {% block extra-scripts %}
-<script src="{% static "scripts/trigger.js" %}?stamp=05"></script>
+<script>
+var transpositionUrls = []
+{% for t in "a"|rjust:"12" %}
+transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0 }}/");
+{% endfor %}
+</script>
+<script src="{% static "scripts/trigger.js" %}?stamp=10"></script>
 {% endblock extra-scripts %}
