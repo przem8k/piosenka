@@ -41,6 +41,8 @@ class Song(models.Model):
     related_songs = models.ManyToManyField("self", null=True, blank=True, symmetrical=True,
                                            help_text="E.g. different translations or different "
                                                      "compositions of the same text.")
+    author = models.ForeignKey(User, null=True, editable=False)
+    date = models.DateTimeField(null=True, editable=False)
 
     class Meta:
         ordering = ["title", "disambig"]
@@ -71,6 +73,11 @@ class Song(models.Model):
         except SyntaxError as m:
             raise ValidationError(u'Lyrics syntax is incorrect: ' + str(m))
         self.has_extra_chords = contain_extra_chords(parsed_lyrics)
+
+    def save(self, *args, **kwargs):
+        if not self.date and self.published:
+            self.date = datetime.datetime.now()
+        super(Song, self).save(*args, **kwargs)
 
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
@@ -132,15 +139,3 @@ class BandContribution(models.Model):
 
     def __str__(self):
         return self.band.name + " - " + self.song.title
-
-
-###
-class UserCategory(models.Model):
-    user = models.ForeignKey(User)
-    name = models.CharField(max_length=100)
-
-
-class UserSubscription(models.Model):
-    user = models.ForeignKey(User)
-    song = models.ForeignKey(Song)
-    category = models.ForeignKey(UserCategory, blank=True, null=True)

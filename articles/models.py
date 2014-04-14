@@ -33,7 +33,7 @@ class Article(models.Model):
     main_text = models.TextField(help_text="Rest of the article, written in Markdown.")
     main_text_html = models.TextField(null=True, blank=True, editable=False)
     published = models.BooleanField(default=True)
-    author = models.ForeignKey(User, null=True, blank=True, editable=False)
+    author = models.ForeignKey(User, blank=True, editable=False)
     cover_image = models.ImageField(null=True, blank=True, upload_to='article_covers',
                                     help_text="Main illustration for the article.")
     cover_credits = models.TextField(null=True, blank=True,

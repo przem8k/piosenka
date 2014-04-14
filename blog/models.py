@@ -9,8 +9,8 @@ from markdown import markdown
 class Post(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, null=True)
-    author = models.ForeignKey(User)
-    date = models.DateTimeField(editable=False)
+    author = models.ForeignKey(User, editable=False)
+    date = models.DateTimeField(null=True, editable=False)
     post = models.TextField(help_text="Post or its introductory part, written in Markdown.")
     post_html = models.TextField(null=True, blank=True, editable=False)
     more = models.TextField(blank=True, null=True,

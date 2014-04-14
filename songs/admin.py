@@ -25,4 +25,9 @@ class SongAdmin(admin.ModelAdmin):
     ]
     filter_horizontal = ['related_songs']
 
+    def save_model(self, request, obj, form, change):
+        if not change:
+            obj.author = request.user
+        obj.save()
+
 admin.site.register(Song, SongAdmin)

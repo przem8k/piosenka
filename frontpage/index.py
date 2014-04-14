@@ -36,7 +36,7 @@ class ArtistSearchIndex(JSONSearchIndexMixin, View):
 class SongSearchIndex(JSONSearchIndexMixin, View):
     def get(self, request, *args, **kwargs):
         index = []
-        for song in Song.objects.all():
+        for song in Song.objects.filter(published=True):
             index.append({
                 "name": song.__str__(),
                 "value": song.__str__(),
