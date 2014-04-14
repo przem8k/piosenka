@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
 
@@ -62,6 +63,9 @@ class Event(models.Model):
     description_html = models.TextField(null=True, blank=True, editable=False)
     website = models.URLField(null=True, blank=True)
     venue = models.ForeignKey(Venue, null=False, blank=False)
+    published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
+    author = models.ForeignKey(User, null=True, editable=False)
+    pub_date = models.DateTimeField(null=True, editable=False)
 
     objects = models.Manager()
     current = CurrentEventManager()
@@ -71,10 +75,12 @@ class Event(models.Model):
         ordering = ["datetime"]
 
     def __str__(self):
-        return "%s - %s (%s)" % (self.date(), self.name, self.venue.town)
+        return "%s - %s (%s)" % (self.datetime, self.name, self.venue.town)
 
     def save(self, *args, **kwargs):
         self.description_html = markdown(self.description, safe_mode='escape')
+        if not self.pub_date and self.published:
+            self.pub_date = datetime.now()
         super(Event, self).save(*args, **kwargs)
 
     @models.permalink
@@ -91,6 +97,3 @@ class Event(models.Model):
 
     def lon(self):
         return self.venue.lon
-
-    def date(self):
-        return "%s.%s" % (self.datetime.strftime("%e"), self.datetime.strftime("%m"))

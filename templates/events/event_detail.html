@@ -46,6 +46,7 @@
         <br />
         {{ event.description_html|safe }}
 
+        {% include "base/content_foot.html" with action="Dodane" item=event %}
       </div>
     </div>
     <div class="col-md-4">
