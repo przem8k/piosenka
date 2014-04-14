@@ -39,13 +39,13 @@ class ArtistView(TemplateView):
         try:
             entity = Artist.objects.get(slug=slug)
             songs = [x.song for x in (ArtistContribution.objects.filter(artist=entity,
-                                                                        published=True)
+                                                                        song__published=True)
                                       .select_related('song')
                                       .order_by('song__title'))]
         except Artist.DoesNotExist:
             entity = get_object_or_404(Band, slug=slug)
             songs = [x.song for x in (BandContribution.objects.filter(band=entity,
-                                                                      published=True)
+                                                                      song__published=True)
                                       .select_related('song')
                                       .order_by('song__title'))]
         context = super(ArtistView, self).get_context_data(**kwargs)
