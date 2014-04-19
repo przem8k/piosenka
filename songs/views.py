@@ -16,11 +16,9 @@ def get_or_none(model, **kwargs):
         return None
 
 
-class IndexView(TemplateView):
-    template_name = "songs/index.html"
-
+class BaseMenuView(TemplateView):
     def get_context_data(self, **kwargs):
-        context = super(IndexView, self).get_context_data(**kwargs)
+        context = super(BaseMenuView, self).get_context_data(**kwargs)
         context["bards"] = Artist.objects.filter(display=True, kind=Artist.KIND_TEXTER)
         context["composers"] = Artist.objects.filter(display=True, kind=Artist.KIND_COMPOSER)
         context["translators"] = Artist.objects.filter(display=True, kind=Artist.KIND_TRANSLATOR)
@@ -30,7 +28,11 @@ class IndexView(TemplateView):
         return context
 
 
-class ArtistView(TemplateView):
+class IndexView(BaseMenuView):
+    template_name = "songs/index.html"
+
+
+class ArtistView(BaseMenuView):
     """ Lists the songs associated with the given Artist or Band object. """
     template_name = "songs/list.html"
 
