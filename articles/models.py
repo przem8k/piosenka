@@ -49,7 +49,7 @@ class Article(models.Model):
 
     def save(self, *args, **kwargs):
         self.lead_text_html = markdown(self.lead_text, safe_mode='escape')
-        self.main_text_html = markdown(self.main_text, safe_mode='escape')
+        self.main_text_html = markdown(self.main_text)
         self.cover_credits_html = markdown(self.cover_credits, safe_mode='escape')
         if not self.date and self.published:
             self.date = datetime.datetime.now()
