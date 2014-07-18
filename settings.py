@@ -59,8 +59,8 @@ STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 PIPELINE_CSS = {
     'piosenka': {
         'source_filenames': (
-            'third_party/bootstrap/css/bootstrap.css',
             'css/style.css',
+            'third_party/bootstrap/css/bootstrap.css',
         ),
         'output_filename': 'css/piosenka.css',
     },
