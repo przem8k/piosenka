@@ -66,6 +66,8 @@ PIPELINE_CSS = {
     },
 }
 
+PIPELINE_YUGLIFY_BINARY = os.path.join(PROJECT_PATH, 'node_modules/yuglify/bin/yuglify')
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',

@@ -8,4 +8,5 @@ songs/fixtures
 artists/fixtures
 piosenka.sublime-workspace
 site_media
+node_modules
 .idea

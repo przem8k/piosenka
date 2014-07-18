@@ -1,7 +1,0 @@
-To restore the upload directory:
-aws s3 cp s3://BUCKET/upload/ upload --recursive
-
-To restore the db:
-pg_restore -Ft --no-owner --username=USER --dbname=DB BACKUP.tar
-
-TODO: make that into a management command? :)
