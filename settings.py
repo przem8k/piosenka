@@ -54,6 +54,18 @@ STATICFILES_DIRS = (
     ("scripts", os.path.join(PROJECT_PATH, "songs", "scripts")),
 )
 
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+
+PIPELINE_CSS = {
+    'piosenka': {
+        'source_filenames': (
+            'third_party/bootstrap/css/bootstrap.css',
+            'css/style.css',
+        ),
+        'output_filename': 'css/piosenka.css',
+    },
+}
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
@@ -106,6 +118,7 @@ INSTALLED_APPS = (
     'frontpage',
     'dxlibrary',
     'south',
+    'pipeline',
 )
 
 THUMBNAIL_ALIASES = {
