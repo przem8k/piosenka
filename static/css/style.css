@@ -1,5 +1,5 @@
 body {
-    background: url("/site_media/native/images/patterns/groovepaper.png");
+    background: url("../images/patterns/groovepaper.png");
 }
 
 @media screen
@@ -20,7 +20,7 @@ body {
 /* navbar */
 
 .feather {
-    background: url("/site_media/native/images/feather_40.png") no-repeat left top;
+    background: url("../images/feather_40.png") no-repeat left top;
     padding-left: 20px;
 }
 
@@ -33,7 +33,7 @@ body {
 
 .header {
     border-bottom: 1px solid #BBB;
-    background: url("/site_media/native/images/patterns/paper.png");
+    background: url("../images/patterns/paper.png");
 }
 
 .header h1, .header h2 {
@@ -47,7 +47,7 @@ body {
 .footer {
     padding: 20px 0 20px 0;
     border-top: 1px solid #BBB;
-    background: url("/site_media/native/images/patterns/paper.png");
+    background: url("../images/patterns/paper.png");
 }
 
 /* margin tools */
@@ -233,7 +233,7 @@ body {
 /* other */
 
 .date {
-    background: url("/site_media/native/images/date.gif") left no-repeat;
+    background: url("../images/date.gif") left no-repeat;
     padding: 0 0 0 15px;
 }
 

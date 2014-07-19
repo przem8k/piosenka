@@ -47,14 +47,14 @@ STATIC_ROOT = os.path.join(PROJECT_PATH, "site_media", "native")
 
 STATIC_URL = '/site_media/native/'
 
-ALL_STATIC_ROOT = os.path.join(PROJECT_PATH, "site_media")
+SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, "site_media")
 
 STATICFILES_DIRS = (
     ("", os.path.join(PROJECT_PATH, "static")),
     ("scripts", os.path.join(PROJECT_PATH, "songs", "scripts")),
 )
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
 PIPELINE_CSS = {
     'piosenka': {
