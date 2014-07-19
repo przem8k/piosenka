@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}{{ event }}{% endblock title %}
+
+{% block content %}
+{% include "events/top.html" %}
+
+<div class="container main">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="customwell editwell">
+        <form action="{% url 'add_event' %}" method="post">{% csrf_token %}
+          <h1>Dodaj wydarzenie</h1>
+          <h2>Podstawowe informacje</h2>
+          <table>
+            <tr>
+              <td><b>Nazwa:</b></td><td>{{ form.name }}</td>
+              <td>
+                <span data-toggle="tooltip" data-placement="right" title="{{ form.name.help_text }}" class="tip">
+                  <span class="glyphicon glyphicon-question-sign"></span>
+                </span>
+                {{ form.name.errors }}
+              </td>
+            </tr>
+
+            <tr>
+              <td><b>Dzień:</b></td><td>{{ form.date }}</td>
+              <td>
+                {{ form.date.errors }}
+              </td>
+            </tr>
+
+            <tr>
+              <td><b>Godzina:</b></td><td>{{ form.time }}</td>
+              <td>
+                {{ form.time.errors }}
+              </td>
+            </tr>
+          </table>
+
+          <h2>Miejsce</h2>
+          <table>
+            <tr>
+              <td><b>Miejsce:</b></td><td>{{ form.venue }}</td>
+              <td>
+                <span data-toggle="tooltip" data-placement="right" title="{{ form.price.help_text }}" class="tip">
+                  <span class="glyphicon glyphicon-question-sign"></span>
+                </span>
+                {{ form.venue.errors }}
+              </td>
+            </tr>
+          </table>
+
+          <h2>Opis</h2>
+          <table>
+            <tr>
+              <td><b>Ceny biletów:</b></td><td>{{ form.price }}</td>
+              <td>
+                <span data-toggle="tooltip" data-placement="right" title="{{ form.price.help_text }}" class="tip">
+                  <span class="glyphicon glyphicon-question-sign"></span>
+                </span>
+                {{ form.price.errors }}
+              </td>
+            </tr>
+          </table>
+
+          {{ form.description }}
+
+          {{ form.non_field_errors }}
+          <input type="submit" value="Confirm" />
+        </form>
+
+      </div>
+    </div>
+    <div class="col-md-4">
+      {% include "base/wells/place.html" with place=event.venue mark=event %}
+
+      {% if event.website %}
+      <div class="customwell auxwell">
+        <h1>Linki</h1>
+        <ul class="list-unstyled">
+          {% if event.website %}
+          <li><a href="{{event.website}}" target="_blank">Źrodło informacji</a></li>
+          {% endif %}
+        </ul> 
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

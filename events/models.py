@@ -51,7 +51,9 @@ class Venue(models.Model):
 
 
 class Event(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100,
+                            help_text="Nazwa wydarzenia, np. 'Koncert piosenek Jacka Kaczmarskiego' "
+                                      "lub 'V Festiwal Piosenki Wymyślnej w Katowicach'.")
     slug = models.SlugField(max_length=100, unique_for_date="datetime")
     datetime = models.DateTimeField()
     price = models.CharField(max_length=100, null=True, blank=True,

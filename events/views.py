@@ -1,12 +1,15 @@
-# -*- coding: utf-8 -*-
+import datetime
+
 from django.views.generic import DetailView, ListView, TemplateView
 from django.views.generic.dates import MonthArchiveView, DateDetailView
+from django.views.generic.edit import CreateView, FormView
 from django.template import RequestContext, loader
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect, Http404
 from django.shortcuts import get_object_or_404
 
 from artists.models import Artist, Band
 from events.models import Event, Venue
+from events.forms import EventForm
 
 class VenueDetail(DetailView):
     model = Venue
@@ -54,3 +57,15 @@ class EventMonthArchive(MonthArchiveView):
     month_format = "%m"
     allow_future = True
     allow_empty = True
+
+class AddEvent(CreateView):
+    model = Event
+    form_class = EventForm
+    template_name = "events/add_event.html"
+    success_url = "/thanks/"
+
+    def form_valid(self, form):
+        form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],
+                                                           form.cleaned_data['time'])
+        return super(AddEvent, self).form_valid(form)
+
