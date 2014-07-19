@@ -67,6 +67,18 @@ PIPELINE_CSS = {
     },
 }
 
+PIPELINE_JS = {
+    'piosenka': {
+        'source_filenames': (
+            'third_party/jquery/jquery-2.1.1.js',
+            'third_party/typeahead/typeahead-0.10.4.js',
+            'third_party/bootstrap/js/bootstrap.js',
+            'js/search.js',
+        ),
+        'output_filename': 'js/piosenka.js',
+    },
+}
+
 PIPELINE_YUGLIFY_BINARY = os.path.join(PROJECT_PATH, 'node_modules/yuglify/bin/yuglify')
 
 # List of callables that know how to import templates from various sources.

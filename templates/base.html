@@ -92,10 +92,7 @@
       </div>
     </div>
 
-    <script src="{% static "third_party/jquery/jquery-2.1.1.js" %}"></script>
-    <script src="{% static "third_party/typeahead/typeahead-0.10.4.js" %}"></script>
-    <script src="{% static "third_party/bootstrap/js/bootstrap.js" %}"></script>
-    <script src="{% static "js/search.js" %}"></script>
+    {% compressed_js 'piosenka' %}
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
     {% block extra-scripts %}{% endblock extra-scripts %}
