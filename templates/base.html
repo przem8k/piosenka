@@ -69,11 +69,9 @@
           <li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
           {% endif %}
         </ul>
-        <form class="navbar-form navbar-right site-search" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Jałta, Rublow, Epitafium dla ...">
-          </div>
-        </form>
+        <div class="navbar-right search">
+          <input type="text" class="form-control" placeholder="Jałta, Rublow, Epitafium dla ...">
+        </div>
       </div>
 
     </div> <!-- Container, potrzebne to?? -->
@@ -95,9 +93,9 @@
     </div>
 
     <script src="{% static "third_party/jquery/jquery-2.1.1.js" %}"></script>
-    <script src="{% static "third_party/typeahead/typeahead.min.js" %}"></script>
+    <script src="{% static "third_party/typeahead/typeahead-0.10.4.js" %}"></script>
     <script src="{% static "third_party/bootstrap/js/bootstrap.js" %}"></script>
-    <script src="{% static "scripts/site-search.js" %}"></script>
+    <script src="{% static "js/search.js" %}"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
     {% block extra-scripts %}{% endblock extra-scripts %}

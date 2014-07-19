@@ -60,6 +60,7 @@ PIPELINE_CSS = {
     'piosenka': {
         'source_filenames': (
             'css/style.css',
+            'css/search.css',
             'third_party/bootstrap/css/bootstrap.css',
         ),
         'output_filename': 'css/piosenka.css',
