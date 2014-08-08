@@ -69,6 +69,9 @@ class AddEvent(CreateView):
     success_url = reverse_lazy('event_index')
 
     def form_valid(self, form):
+        venue = form.cleaned_data['venue']
+        venue.save()
+        form.instance.venue = venue
         form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],
                                                            form.cleaned_data['time'])
         form.instance.slug = slugify(unidecode(form.cleaned_data['name']))

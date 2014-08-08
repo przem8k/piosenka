@@ -6,11 +6,11 @@
 {% include "events/top.html" %}
 
 <div class="container main">
-  <div class="row">
-    <div class="col-md-8">
-      <div class="customwell editwell">
-        <form action="{% url 'add_event' %}" method="post">{% csrf_token %}
-          <h1>Dodaj wydarzenie</h1>
+  <form action="{% url 'add_event' %}" method="post">{% csrf_token %}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="customwell editwell">
+          <h1>Wydarzenie</h1>
           <h2>Podstawowe informacje</h2>
           <table>
             <tr>
@@ -38,19 +38,6 @@
             </tr>
           </table>
 
-          <h2>Miejsce</h2>
-          <table>
-            <tr>
-              <td><b>Miejsce:</b></td><td>{{ form.venue }}</td>
-              <td>
-                <span data-toggle="tooltip" data-placement="right" title="{{ form.price.help_text }}" class="tip">
-                  <span class="glyphicon glyphicon-question-sign"></span>
-                </span>
-                {{ form.venue.errors }}
-              </td>
-            </tr>
-          </table>
-
           <h2>Opis</h2>
           <table>
             <tr>
@@ -68,24 +55,48 @@
 
           {{ form.non_field_errors }}
           <input type="submit" value="Confirm" />
-        </form>
 
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="customwell editwell">
+          <h1>Miejsce</h1>
+          {{ form.venue }}
+          {{ form.venue.errors }}
+          <table>
+            <tr>
+              <td><b>Nazwa:</b></td><td>{{ form.venue_name }}</td>
+              <td>
+                <span data-toggle="tooltip" data-placement="right" title="{{ form.venue_name.help_text }}" class="tip">
+                  <span class="glyphicon glyphicon-question-sign"></span>
+                </span>
+                {{ form.venue_name.errors }}
+              </td>
+            </tr>
+
+            <tr>
+              <td><b>Miasto:</b></td><td>{{ form.venue_town }}</td>
+              <td>
+                <span data-toggle="tooltip" data-placement="right" title="{{ form.venue_town.help_text }}" class="tip">
+                  <span class="glyphicon glyphicon-question-sign"></span>
+                </span>
+                {{ form.venue_town.errors }}
+              </td>
+            </tr>
+
+            <tr>
+              <td><b>Adres:</b></td><td>{{ form.venue_street }}</td>
+              <td>
+                <span data-toggle="tooltip" data-placement="right" title="{{ form.venue_street.help_text }}" class="tip">
+                  <span class="glyphicon glyphicon-question-sign"></span>
+                </span>
+                {{ form.venue_street.errors }}
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
-    <div class="col-md-4">
-      {% include "base/wells/place.html" with place=event.venue mark=event %}
-
-      {% if event.website %}
-      <div class="customwell auxwell">
-        <h1>Linki</h1>
-        <ul class="list-unstyled">
-          {% if event.website %}
-          <li><a href="{{event.website}}" target="_blank">Źrodło informacji</a></li>
-          {% endif %}
-        </ul> 
-      </div>
-      {% endif %}
-    </div>
-  </div>
+  </form>
 </div>
 {% endblock content %}

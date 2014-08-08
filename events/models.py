@@ -34,6 +34,7 @@ class Venue(models.Model):
         return "%s - %s" % (self.town, self.name)
 
     def clean(self):
+        super(Venue, self).clean()
         from pygeocoder import Geocoder
         from pygeolib import GeocoderError
         address = str(self.street) + ', ' + str(self.town)
