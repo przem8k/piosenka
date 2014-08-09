@@ -2,9 +2,26 @@
 
 {% block title %}{{ event }}{% endblock title %}
 
+{% block extra-scripts %}
+<script>
+$(document).ready(function(){
+  $("#trigger-new-venue").click(function() {
+    $("#new-venue").show();
+    $("#id_venue")[0].selectedIndex = 0;
+  });
+
+  $("#id_venue").change(function() {
+    if ($("#id_venue")[0].selectedIndex != 0) {
+      $("#new-venue").hide();
+      $("#new-venue input").val("");
+    }
+  });
+});
+</script>
+{% endblock extra-scripts %}
+
 {% block content %}
 {% include "events/top.html" %}
-
 <div class="container main">
   <form action="{% url 'add_event' %}" method="post">{% csrf_token %}
     <div class="row">
@@ -29,12 +46,15 @@
         <div class="customwell editwell">
           <h1>Miejsce</h1>
           {{ form.venue }}
+          <button type="button" id="trigger-new-venue">Nowe miejsce</button>
           {{ form.venue.errors }}
-          <table>
-            {% include "components/forms/table_field.html" with name="Nazwa" field=form.venue_name %}
-            {% include "components/forms/table_field.html" with name="Miasto" field=form.venue_town %}
-            {% include "components/forms/table_field.html" with name="Adres" field=form.venue_street %}
-          </table>
+          <div id="new-venue" style="display: none;">
+            <table>
+              {% include "components/forms/table_field.html" with name="Nazwa" field=form.venue_name %}
+              {% include "components/forms/table_field.html" with name="Miasto" field=form.venue_town %}
+              {% include "components/forms/table_field.html" with name="Adres" field=form.venue_street %}
+            </table>
+          </div>
         </div>
         <div class="customwell editwell">
           <h1>Dodatkowe informacje</h1>
