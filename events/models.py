@@ -82,7 +82,8 @@ class Event(models.Model):
         return "%s - %s (%s)" % (self.datetime, self.name, self.venue.town)
 
     def save(self, *args, **kwargs):
-        self.description_html = markdown(self.description, safe_mode='escape')
+        if self.description:
+            self.description_html = markdown(self.description, safe_mode='escape')
         if not self.pub_date and self.published:
             self.pub_date = datetime.now()
         super(Event, self).save(*args, **kwargs)
@@ -90,6 +91,15 @@ class Event(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('event_detail', (), {
+            'year': self.datetime.strftime("%Y"),
+            'month': self.datetime.strftime("%m"),
+            'day': self.datetime.strftime("%d"),
+            'slug': self.slug
+        })
+
+    @models.permalink
+    def get_edit_url(self):
+        return ('edit_event', (), {
             'year': self.datetime.strftime("%Y"),
             'month': self.datetime.strftime("%m"),
             'day': self.datetime.strftime("%d"),
