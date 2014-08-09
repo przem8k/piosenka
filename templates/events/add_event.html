@@ -11,31 +11,10 @@
       <div class="col-md-6">
         <div class="customwell editwell">
           <h1>Wydarzenie</h1>
-          <h2>Podstawowe informacje</h2>
           <table>
-            <tr>
-              <td><b>Nazwa:</b></td><td>{{ form.name }}</td>
-              <td>
-                <span data-toggle="tooltip" data-placement="right" title="{{ form.name.help_text }}" class="tip">
-                  <span class="glyphicon glyphicon-question-sign"></span>
-                </span>
-                {{ form.name.errors }}
-              </td>
-            </tr>
-
-            <tr>
-              <td><b>Dzień:</b></td><td>{{ form.date }}</td>
-              <td>
-                {{ form.date.errors }}
-              </td>
-            </tr>
-
-            <tr>
-              <td><b>Godzina:</b></td><td>{{ form.time }}</td>
-              <td>
-                {{ form.time.errors }}
-              </td>
-            </tr>
+            {% include "components/forms/table_field.html" with name="Nazwa" field=form.name %}
+            {% include "components/forms/table_field.html" with name="Dzień" field=form.date %}
+            {% include "components/forms/table_field.html" with name="Godzina" field=form.time %}
           </table>
 
           <h2>Opis</h2>
@@ -43,7 +22,6 @@
           {{ form.description }}
 
           {{ form.non_field_errors }}
-          <input type="submit" value="Confirm" />
 
         </div>
       </div>
@@ -53,50 +31,20 @@
           {{ form.venue }}
           {{ form.venue.errors }}
           <table>
-            <tr>
-              <td><b>Nazwa:</b></td><td>{{ form.venue_name }}</td>
-              <td>
-                <span data-toggle="tooltip" data-placement="right" title="{{ form.venue_name.help_text }}" class="tip">
-                  <span class="glyphicon glyphicon-question-sign"></span>
-                </span>
-                {{ form.venue_name.errors }}
-              </td>
-            </tr>
-
-            <tr>
-              <td><b>Miasto:</b></td><td>{{ form.venue_town }}</td>
-              <td>
-                <span data-toggle="tooltip" data-placement="right" title="{{ form.venue_town.help_text }}" class="tip">
-                  <span class="glyphicon glyphicon-question-sign"></span>
-                </span>
-                {{ form.venue_town.errors }}
-              </td>
-            </tr>
-
-            <tr>
-              <td><b>Adres:</b></td><td>{{ form.venue_street }}</td>
-              <td>
-                <span data-toggle="tooltip" data-placement="right" title="{{ form.venue_street.help_text }}" class="tip">
-                  <span class="glyphicon glyphicon-question-sign"></span>
-                </span>
-                {{ form.venue_street.errors }}
-              </td>
-            </tr>
+            {% include "components/forms/table_field.html" with name="Nazwa" field=form.venue_name %}
+            {% include "components/forms/table_field.html" with name="Miasto" field=form.venue_town %}
+            {% include "components/forms/table_field.html" with name="Adres" field=form.venue_street %}
           </table>
         </div>
         <div class="customwell editwell">
           <h1>Dodatkowe informacje</h1>
           <table>
-            <tr>
-              <td><b>Ceny biletów:</b></td><td>{{ form.price }}</td>
-              <td>
-                <span data-toggle="tooltip" data-placement="right" title="{{ form.price.help_text }}" class="tip">
-                  <span class="glyphicon glyphicon-question-sign"></span>
-                </span>
-                {{ form.price.errors }}
-              </td>
-            </tr>
+            {% include "components/forms/table_field.html" with name="Ceny biletów" field=form.price %}
           </table>
+        </div>
+        <div class="customwell editwell">
+          <h1>Gotowe</h1>
+          <input type="submit" value="Dodaj" style="width: 100%"/>
         </div>
       </div>
     </div>
