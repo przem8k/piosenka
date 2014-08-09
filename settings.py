@@ -65,6 +65,13 @@ PIPELINE_CSS = {
         ),
         'output_filename': 'css/piosenka.css',
     },
+    'sirtrevor': {
+        'source_filenames': (
+            'third_party/sirtrevor/css/sir-trevor.css',
+            'third_party/sirtrevor/css/sir-trevor-icons.css',
+        ),
+        'output_filename': 'css/sirtrevor.css',
+    },
 }
 
 PIPELINE_JS = {
@@ -77,9 +84,18 @@ PIPELINE_JS = {
         ),
         'output_filename': 'js/piosenka.js',
     },
+    'sirtrevor': {
+        'source_filenames': (
+            'third_party/sirtrevor/js/underscore.js',
+            'third_party/sirtrevor/js/eventable.js',
+            'third_party/sirtrevor/js/sir-trevor.js',
+        ),
+        'output_filename': 'js/sirtrevor.js',
+    },
 }
 
 PIPELINE_YUGLIFY_BINARY = os.path.join(PROJECT_PATH, 'node_modules/yuglify/bin/yuglify')
+PIPELINE_DISABLE_WRAPPER = True
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (

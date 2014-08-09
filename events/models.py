@@ -64,6 +64,7 @@ class Event(models.Model):
     description = models.TextField(null=True, blank=True,
                                    help_text="Event description, written in Markdown.")
     description_html = models.TextField(null=True, blank=True, editable=False)
+    description_trevor = models.TextField(null=True, blank=True)
     website = models.URLField(null=True, blank=True)
     venue = models.ForeignKey(Venue, null=False, blank=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")

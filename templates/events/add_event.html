@@ -1,8 +1,15 @@
 {% extends "base.html" %}
+{% load compressed %}
 
 {% block title %}{{ event }}{% endblock title %}
 
+{% block extra-css %}
+{% compressed_css 'sirtrevor' %}
+{% endblock %}
+
 {% block extra-scripts %}
+{% compressed_js 'sirtrevor' %}
+
 <script>
 $(document).ready(function(){
   $("#trigger-new-venue").click(function() {
@@ -16,6 +23,16 @@ $(document).ready(function(){
       $("#new-venue input").val("");
     }
   });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    new SirTrevor.Editor({
+      el: $('#id_description_trevor'),
+      blockTypes: ["Text", "List"],
+      defaultType: "Text",
+    });
 });
 </script>
 {% endblock extra-scripts %}
@@ -34,12 +51,13 @@ $(document).ready(function(){
             {% include "components/forms/table_field.html" with name="Godzina" field=form.time %}
           </table>
 
-          <h2>Opis</h2>
-
-          {{ form.description }}
 
           {{ form.non_field_errors }}
 
+        </div>
+        <div class="customwell editwell">
+          <h1>Opis</h1>
+          {{ form.description_trevor }}
         </div>
       </div>
       <div class="col-md-6">

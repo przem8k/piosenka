@@ -44,7 +44,7 @@ class EventForm(forms.ModelForm):
 
     class Meta:
         model = Event
-        exclude = ('venue', 'slug', 'datetime', 'description_html', 'published', 'author', 'pub_date')
+        exclude = ('venue', 'slug', 'datetime', 'description', 'description_html', 'published', 'author', 'pub_date')
 
     def __init__(self, *args, **kwargs):
         super(EventForm, self).__init__(*args, **kwargs)
