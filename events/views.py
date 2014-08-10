@@ -89,7 +89,6 @@ class EditEvent(UpdateView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"
-    success_url = reverse_lazy('event_index')
 
     date_field = "datetime"
     month_format = "%m"
@@ -119,3 +118,6 @@ class EditEvent(UpdateView):
         form.instance.slug = slugify(unidecode(form.cleaned_data['name']))
         form.instance.pk = self.object.pk
         return super(EditEvent, self).form_valid(form)
+
+    def get_success_url(self):
+        return self.object.get_absolute_url()
