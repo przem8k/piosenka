@@ -35,7 +35,8 @@ class EventDetail(DateDetailView):
 
     def get_context_data(self, **kwargs):
         context = super(EventDetail, self).get_context_data(**kwargs)
-        context['model_meta'] = Event._meta
+        context['can_edit'] = self.request.user.is_active and (
+            self.request.user.is_staff or self.request.user == object.author)
         return context
 
 class EventIndex(ListView):

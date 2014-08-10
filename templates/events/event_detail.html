@@ -64,7 +64,16 @@
       {% endif %}
 
       {% include "base/wells/like.html" with like_what="wydarzenie" %}
-      {% include "base/wells/manage.html" with item=event manage_what="wydarzenie" %}
+
+      {% if can_edit %}
+      <div class="customwell auxwell">
+        <h1>Administracja</h1>
+        <ul class="list-unstyled">
+          <li><a href="{{ event.get_edit_url }}">Edytuj wydarzenie</a></li>
+          <li><a href="{% url 'add_event' %}">Dodaj nowe wydarzenie</a></li>
+        </ul>
+      </div>
+      {% endif %}
     </div>
   </div>
   {% include "base/rows/disqus.html" %}
