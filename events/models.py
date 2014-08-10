@@ -5,6 +5,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 from artists.models import Artist, Band
+from frontpage.render import render_trevor
 
 from markdown import markdown
 
@@ -82,8 +83,11 @@ class Event(models.Model):
         return "%s - %s (%s)" % (self.datetime, self.name, self.venue.town)
 
     def save(self, *args, **kwargs):
-        if self.description:
+        if self.description_trevor:
+            self.description_html = render_trevor(self.description_trevor)
+        elif self.description:
             self.description_html = markdown(self.description, safe_mode='escape')
+
         if not self.pub_date and self.published:
             self.pub_date = datetime.now()
         super(Event, self).save(*args, **kwargs)
