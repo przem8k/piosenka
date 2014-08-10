@@ -94,6 +94,20 @@ class EditEvent(UpdateView):
     month_format = "%m"
     allow_future = True
 
+    def get_object(self):
+        import datetime, time
+        year = self.kwargs['year']
+        month = self.kwargs['month']
+        day = self.kwargs['day']
+        slug = self.kwargs['slug']
+        date_stamp = time.strptime(year+month+day, "%Y%m%d")
+        event_date = datetime.date(*date_stamp[:3])
+        return Event.objects.get(slug=slug,
+                                 datetime__year=event_date.year,
+                                 datetime__month=event_date.month,
+                                 datetime__day=event_date.day)
+
+
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         event = self.get_object()
