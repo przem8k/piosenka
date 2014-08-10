@@ -69,6 +69,7 @@ PIPELINE_CSS = {
         'source_filenames': (
             'third_party/sirtrevor/css/sir-trevor.css',
             'third_party/sirtrevor/css/sir-trevor-icons.css',
+            'css/sirtrevor.css',
         ),
         'output_filename': 'css/sirtrevor.css',
     },
