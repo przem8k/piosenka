@@ -59,14 +59,17 @@ class Event(models.Model):
     slug = models.SlugField(max_length=100, unique_for_date="datetime")
     datetime = models.DateTimeField()
     price = models.CharField(max_length=100, null=True, blank=True,
-                             help_text="E.g. 5zl, wstep wolny, brak danych, etc.")
+                             help_text="E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw "
+                                       "puste.")
     artists = models.ManyToManyField(Artist, null=True, blank=True)
     bands = models.ManyToManyField(Band, null=True, blank=True)
     description = models.TextField(null=True, blank=True,
                                    help_text="Event description, written in Markdown.")
     description_html = models.TextField(null=True, blank=True, editable=False)
     description_trevor = models.TextField(null=True, blank=True)
-    website = models.URLField(null=True, blank=True)
+    website = models.URLField(null=True, blank=True,
+                              help_text="Strona internetowa wydarzenia, źródło informacji. "
+                                        "W przypadku braku danych pozostaw puste.")
     venue = models.ForeignKey(Venue, null=False, blank=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
     author = models.ForeignKey(User, null=True, editable=False)

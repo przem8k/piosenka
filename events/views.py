@@ -105,12 +105,12 @@ class EditEvent(UpdateView):
         return {
             'date': self.object.datetime,
             'time': self.object.datetime,
-            'venue': self.object.venue,
+            'venue_selection': self.object.venue,
             'description_trevor': self.object.description_trevor,
         }
 
     def form_valid(self, form):
-        venue = form.cleaned_data['venue']
+        venue = form.cleaned_data['venue_selection']
         venue.save()
         form.instance.venue = venue
         form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],

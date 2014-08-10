@@ -14,15 +14,19 @@
 $(document).ready(function(){
   $("#trigger-new-venue").click(function() {
     $("#new-venue").show();
-    $("#id_venue")[0].selectedIndex = 0;
+    $("#id_venue_selection")[0].selectedIndex = 0;
   });
 
-  $("#id_venue").change(function() {
-    if ($("#id_venue")[0].selectedIndex != 0) {
+  $("#id_venue_selection").change(function() {
+    if ($("#id_venue_selection")[0].selectedIndex != 0) {
       $("#new-venue").hide();
       $("#new-venue input").val("");
     }
   });
+
+  if ($("#id_venue_name").val() != "" || $("#id_venue_town").val() != "" || $("#id_venue_street").val() != "") {
+    $("#new-venue").show();
+  }
 });
 </script>
 
@@ -57,15 +61,25 @@ $(document).ready(function(){
         </div>
         <div class="customwell editwell">
           <h1>Opis</h1>
+          <div class="alert alert-info" role="alert">
+            Tu opisz dodawane wydarzenie <b>własnymi słowami</b>. Nie dodawaj
+            tekstu skopiowanego z innych stron internetowych - obecność
+            skopiowanych treści obniża pozycję PzT w wyszukiwarkach.
+          </div>
           {{ form.description_trevor }}
         </div>
       </div>
       <div class="col-md-6">
         <div class="customwell editwell">
           <h1>Miejsce</h1>
-          {{ form.venue }}
+          <div class="alert alert-info" role="alert">
+            Jeśli miejsce jest już w bazie PzT wybierz je z listy. W przeciwnym
+            wypadku wybierz 'Nowe miejsce' i wypełnij formularz. Miejsce
+            zostanie dodane do bazy wraz z wydarzeniem.
+          </div>
+          {{ form.venue_selection }}
           <button type="button" id="trigger-new-venue">Nowe miejsce</button>
-          {{ form.venue.errors }}
+          {{ form.venue_selection.errors }}
           <div id="new-venue" style="display: none;">
             <table>
               {% include "components/forms/table_field.html" with name="Nazwa" field=form.venue_name %}
@@ -76,8 +90,12 @@ $(document).ready(function(){
         </div>
         <div class="customwell editwell">
           <h1>Dodatkowe informacje</h1>
+          <div class="alert alert-info" role="alert">
+            Wszystkie pola w tej sekcji są opcjonalne.
+          </div>
           <table>
             {% include "components/forms/table_field.html" with name="Ceny biletów" field=form.price %}
+            {% include "components/forms/table_field.html" with name="Strona WWW" field=form.website %}
           </table>
         </div>
         <div class="customwell editwell">
