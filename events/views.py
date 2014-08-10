@@ -65,7 +65,7 @@ class EventMonthArchive(MonthArchiveView):
 class AddEvent(CreateView):
     model = Event
     form_class = EventForm
-    template_name = "events/add_event.html"
+    template_name = "events/add_edit_event.html"
     success_url = reverse_lazy('event_index')
 
     def form_valid(self, form):
@@ -81,7 +81,7 @@ class AddEvent(CreateView):
 class EditEvent(UpdateView):
     model = Event
     form_class = EventForm
-    template_name = "events/add_event.html"
+    template_name = "events/add_edit_event.html"
     success_url = reverse_lazy('event_index')
 
     date_field = "datetime"
