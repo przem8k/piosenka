@@ -1,9 +1,11 @@
 import datetime
 
+from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import DetailView, ListView, TemplateView
 from django.views.generic.dates import MonthArchiveView, DateDetailView
 from django.views.generic.edit import CreateView, FormView, UpdateView
+from django.utils.decorators import method_decorator
 from django.template import RequestContext, loader
 from django.utils.text import slugify
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect, Http404
@@ -69,6 +71,10 @@ class AddEvent(CreateView):
     template_name = "events/add_edit_event.html"
     success_url = reverse_lazy('event_index')
 
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(AddEvent, self).dispatch(*args, **kwargs)
+
     def form_valid(self, form):
         venue = form.cleaned_data['venue']
         venue.save()
@@ -88,6 +94,13 @@ class EditEvent(UpdateView):
     date_field = "datetime"
     month_format = "%m"
     allow_future = True
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        event = self.get_object()
+        if not (self.request.user.is_staff or self.request.user == event.author):
+            raise Http404
+        return super(EditEvent, self).dispatch(*args, **kwargs)
 
     def get_initial(self):
         return {
