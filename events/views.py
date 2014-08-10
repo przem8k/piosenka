@@ -75,6 +75,7 @@ class AddEvent(CreateView):
         form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],
                                                            form.cleaned_data['time'])
         form.instance.slug = slugify(unidecode(form.cleaned_data['name']))
+        form.instance.author = self.request.user
         return super(AddEvent, self).form_valid(form)
 
 class EditEvent(UpdateView):
