@@ -49,8 +49,14 @@ class Venue(models.Model):
             'slug': self.slug,
         })
 
+class PublishedEventManager(models.Manager):
+    def get_queryset(self):
+        return super(PublishedEventManager, self).get_queryset().filter(published=True)
 
 class Event(models.Model):
+    objects = models.Manager()
+    po = PublishedEventManager()
+
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique_for_date="datetime")
     datetime = models.DateTimeField()

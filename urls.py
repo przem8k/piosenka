@@ -19,7 +19,7 @@ urlpatterns = patterns(
     url(r'^blog/', include('blog.urls')),
     url(r'^artykuly/', include('articles.urls')),
     url(r'^wydarzenia/', include('events.urls')),
-    url(r'^o-stronie/$', TemplateView.as_view(template_name="about.html")),
+    url(r'^o-stronie/$', frontpage.views.About.as_view(), name="about"),
     url(r'^about/$', RedirectView.as_view(url="/o-stronie/")),
     url(r'^facebook/$', RedirectView.as_view(url="/o-stronie/")),
     #site-search index

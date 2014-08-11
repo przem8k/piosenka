@@ -16,8 +16,14 @@ def validate_capo_fret(value):
     if value < 0 or value > 11:
         raise ValidationError(u'Capo fret has to be in range [0, 11]')
 
+class PublishedSongManager(models.Manager):
+    def get_queryset(self):
+        return super(PublishedSongManager, self).get_queryset().filter(published=True)
 
 class Song(models.Model):
+    objects = models.Manager()
+    po = PublishedSongManager()
+
     CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
     title = models.CharField(max_length=100)
     disambig = models.CharField(max_length=100, null=True, blank=True,

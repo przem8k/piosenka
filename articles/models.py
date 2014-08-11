@@ -22,7 +22,15 @@ class ArticleCategory(models.Model):
         return self.name
 
 
+class PublishedArticleManager(models.Manager):
+    def get_queryset(self):
+        return super(PublishedArticleManager, self).get_queryset().filter(published=True)
+
+
 class Article(models.Model):
+    objects = models.Manager()
+    po = PublishedArticleManager()
+
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
     category = models.ForeignKey(ArticleCategory, null=True, blank=True)

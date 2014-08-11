@@ -6,7 +6,15 @@ from django.contrib.auth.models import User
 from markdown import markdown
 
 
+class PublishedPostManager(models.Manager):
+    def get_queryset(self):
+        return super(PublishedPostManager, self).get_queryset().filter(published=True)
+
+
 class Post(models.Model):
+    objects = models.Manager()
+    po = PublishedPostManager()
+
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, null=True)
     author = models.ForeignKey(User, editable=False)
