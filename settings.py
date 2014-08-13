@@ -1,4 +1,5 @@
 import os
+from django.core.urlresolvers import reverse_lazy
 
 ADMINS = (
     ('Przemyslaw Pietrzkiewicz', 'pietrzkiewicz@gmail.com'),
@@ -153,3 +154,5 @@ if DEBUG:
     INSTALLED_APPS += ('debug_toolbar',)
 
 INTERNAL_IPS = ('127.0.0.1',)
+
+LOGIN_URL = reverse_lazy('index')

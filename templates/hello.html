@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Zaloguj się{% endblock %}
+
+{% block content %}
+
+{% include "frontpage/top.html" %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="customwell auxwell">
+        <h1>Zaloguj się</h1>
+        <form action="{% url "hello" %}" method="post">{% csrf_token %}
+          <input name="username" type="text" class="form-control" placeholder="Nazwa użytkownika" style="margin-bottom: 5px;"/>
+          <input name="password" type="password" class="form-control" placeholder="Hasło" style="margin-bottom: 5px;"/>
+          <input type="submit" value="Zaloguj" style="width: 100%"/>
+        </form>
+        {{ form.non_field_errors }}
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+{% endblock content %}

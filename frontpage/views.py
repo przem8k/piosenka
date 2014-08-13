@@ -1,7 +1,12 @@
 from django.contrib.admin.models import LogEntry, ADDITION
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.views import login, logout
 from django.contrib.contenttypes.models import ContentType
-from django.views.generic import TemplateView
+from django.core.urlresolvers import reverse_lazy
+from django.http import HttpResponseRedirect
+from django.views.generic import View, TemplateView
+from django.views.generic.edit import FormView
 
 from articles.models import Article
 from blog.models import Post
@@ -49,3 +54,19 @@ class About(TemplateView):
                 authors.append(author)
         context['authors'] = sorted(authors, key=lambda k: k['total'], reverse=True)
         return context
+
+
+class Hello(FormView):
+    form_class = AuthenticationForm
+    template_name = "hello.html"
+    success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        login(self.request, form.get_user())
+        return super(Hello, self).form_valid(form)
+
+
+class Goodbye(View):
+    def get(self, request, *args, **kwargs):
+        logout(request)
+        return HttpResponseRedirect(reverse_lazy('index'))

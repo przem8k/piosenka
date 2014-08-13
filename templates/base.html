@@ -29,7 +29,6 @@
         <img src="{% static "images/feather_40.png" %}"/>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse site-nav">
         <ul class="nav navbar-nav">
           {% if section == 'index' %}
@@ -68,6 +67,17 @@
           {% else %}
           <li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
           {% endif %}
+
+          {% if user.is_authenticated %}
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span class="glyphicon glyphicon-user"></span> {{ user }}
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{% url "goodbye" %}">Wyloguj</a></li>
+          </ul>
+          {% endif %}
+          </li>
         </ul>
         <div class="navbar-right search">
           <input type="text" class="form-control" placeholder="Jałta, Rublow, Epitafium dla ...">
