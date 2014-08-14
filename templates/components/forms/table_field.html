@@ -1,0 +1,13 @@
+<tr>
+  <td><b>{{name}}:</b></td><td>{{ field }}</td>
+  <td>
+    {% if field.help_text %}
+    <span data-toggle="tooltip" data-placement="right" title="{{ field.help_text }}" class="tip">
+      <span class="glyphicon glyphicon-question-sign"></span>
+    </span>
+    {% endif %}
+  </td>
+  <td>
+    {{ field.errors }}
+  </td>
+</tr>

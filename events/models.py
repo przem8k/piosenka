@@ -5,6 +5,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 from artists.models import Artist, Band
+from frontpage.render import render_trevor
 
 from markdown import markdown
 
@@ -34,6 +35,7 @@ class Venue(models.Model):
         return "%s - %s" % (self.town, self.name)
 
     def clean(self):
+        super(Venue, self).clean()
         from pygeocoder import Geocoder
         from pygeolib import GeocoderError
         address = str(self.street) + ', ' + str(self.town)
@@ -57,17 +59,23 @@ class Event(models.Model):
     objects = models.Manager()
     po = PublishedEventManager()
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100,
+                            help_text="Nazwa wydarzenia, np. 'Koncert piosenek Jacka Kaczmarskiego' "
+                                      "lub 'V Festiwal Piosenki Wymyślnej w Katowicach'.")
     slug = models.SlugField(max_length=100, unique_for_date="datetime")
     datetime = models.DateTimeField()
     price = models.CharField(max_length=100, null=True, blank=True,
-                             help_text="E.g. 5zl, wstep wolny, brak danych, etc.")
+                             help_text="E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw "
+                                       "puste.")
     artists = models.ManyToManyField(Artist, null=True, blank=True)
     bands = models.ManyToManyField(Band, null=True, blank=True)
     description = models.TextField(null=True, blank=True,
                                    help_text="Event description, written in Markdown.")
     description_html = models.TextField(null=True, blank=True, editable=False)
-    website = models.URLField(null=True, blank=True)
+    description_trevor = models.TextField(null=True, blank=True)
+    website = models.URLField(null=True, blank=True,
+                              help_text="Strona internetowa wydarzenia, źródło informacji. "
+                                        "W przypadku braku danych pozostaw puste.")
     venue = models.ForeignKey(Venue, null=False, blank=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
     author = models.ForeignKey(User, null=True, editable=False)
@@ -84,7 +92,11 @@ class Event(models.Model):
         return "%s - %s (%s)" % (self.datetime, self.name, self.venue.town)
 
     def save(self, *args, **kwargs):
-        self.description_html = markdown(self.description, safe_mode='escape')
+        if self.description_trevor:
+            self.description_html = render_trevor(self.description_trevor)
+        elif self.description:
+            self.description_html = markdown(self.description, safe_mode='escape')
+
         if not self.pub_date and self.published:
             self.pub_date = datetime.now()
         super(Event, self).save(*args, **kwargs)
@@ -92,6 +104,15 @@ class Event(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('event_detail', (), {
+            'year': self.datetime.strftime("%Y"),
+            'month': self.datetime.strftime("%m"),
+            'day': self.datetime.strftime("%d"),
+            'slug': self.slug
+        })
+
+    @models.permalink
+    def get_edit_url(self):
+        return ('edit_event', (), {
             'year': self.datetime.strftime("%Y"),
             'month': self.datetime.strftime("%m"),
             'day': self.datetime.strftime("%d"),

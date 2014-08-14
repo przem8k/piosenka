@@ -1,0 +1,5 @@
+/* Overrides for the sirtrevor editor style. */
+
+.container .st-text-block {
+    font-size: 14px;
+}

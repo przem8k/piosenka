@@ -6,7 +6,7 @@ class EventAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ['name']}
     fieldsets = [
         ('What', {'fields': ['name', 'slug', 'artists', 'bands', 'price', 'description',
-                             'website']}),
+                             'description_trevor', 'website']}),
         ('When', {'fields': ['datetime']}),
         ('Where', {'fields': ['venue']}),
     ]
