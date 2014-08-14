@@ -2,23 +2,13 @@ from songs.models import Song, ArtistContribution, BandContribution, EntityContr
 from django.contrib import admin
 
 
-class ArtistContributionInline(admin.TabularInline):
-    model = ArtistContribution
-    extra = 1
-
-
-class BandContributionInline(admin.TabularInline):
-    model = BandContribution
-    extra = 1
-
-
 class EntityContributionInline(admin.TabularInline):
     model = EntityContribution
     extra = 1
 
 
 class SongAdmin(admin.ModelAdmin):
-    inlines = (ArtistContributionInline, BandContributionInline, EntityContributionInline, )
+    inlines = (EntityContributionInline, )
     prepopulated_fields = {'slug': ['title', 'disambig']}
     fieldsets = [
         ('Identification',

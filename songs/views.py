@@ -4,9 +4,9 @@ from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
 
-from artists.models import Artist, Band
+from artists.models import Entity
 from songs.lyrics import render_lyrics
-from songs.models import Song, ArtistContribution, BandContribution
+from songs.models import Song, EntityContribution
 
 
 def get_or_none(model, **kwargs):
@@ -19,12 +19,12 @@ def get_or_none(model, **kwargs):
 class BaseMenuView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(BaseMenuView, self).get_context_data(**kwargs)
-        context["bards"] = Artist.objects.filter(display=True, kind=Artist.KIND_TEXTER)
-        context["composers"] = Artist.objects.filter(display=True, kind=Artist.KIND_COMPOSER)
-        context["translators"] = Artist.objects.filter(display=True, kind=Artist.KIND_TRANSLATOR)
-        context["performers"] = Artist.objects.filter(display=True, kind=Artist.KIND_PERFORMER)
-        context["foreigners"] = Artist.objects.filter(display=True, kind=Artist.KIND_FOREIGN)
-        context["bands"] = Band.objects.filter(display=True)
+        context["bards"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_TEXTER)
+        context["composers"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_COMPOSER)
+        context["translators"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_TRANSLATOR)
+        context["performers"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_PERFORMER)
+        context["foreigners"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_FOREIGN)
+        context["bands"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_BAND)
         return context
 
 
@@ -38,18 +38,11 @@ class ArtistView(BaseMenuView):
 
     def get_context_data(self, **kwargs):
         slug = kwargs['slug']
-        try:
-            entity = Artist.objects.get(slug=slug)
-            songs = [x.song for x in (ArtistContribution.objects.filter(artist=entity,
-                                                                        song__published=True)
-                                      .select_related('song')
-                                      .order_by('song__title'))]
-        except Artist.DoesNotExist:
-            entity = get_object_or_404(Band, slug=slug)
-            songs = [x.song for x in (BandContribution.objects.filter(band=entity,
-                                                                      song__published=True)
-                                      .select_related('song')
-                                      .order_by('song__title'))]
+        entity = get_object_or_404(Entity, slug=slug)
+        songs = [x.song for x in (EntityContribution.objects.filter(entity=entity,
+                                                                    song__published=True)
+                                  .select_related('song')
+                                  .order_by('song__title'))]
         context = super(ArtistView, self).get_context_data(**kwargs)
         context['songs'] = songs
         context['entity'] = entity
@@ -61,19 +54,14 @@ class SongView(TemplateView):
     template_name = 'songs/song.html'
 
     def get_context_data(self, **kwargs):
-        artist_slug = kwargs['artist_slug']
+        entity_slug = kwargs['entity_slug']
         song_slug = kwargs['song_slug']
 
         song = get_object_or_404(Song, slug=song_slug)
-        artist = get_or_none(Artist, slug=artist_slug)
-        band = get_or_none(Band, slug=artist_slug)
+        entity = get_object_or_404(Entity, slug=entity_slug)
 
         # verify that the song was reached via proper artist or band
-        if ((artist is None or
-             ArtistContribution.objects.filter(song=song, artist=artist).count() == 0
-             ) and
-            (band is None or
-             BandContribution.objects.filter(song=song, band=band).count() == 0)):
+        if EntityContribution.objects.filter(song=song, entity=entity).count() == 0:
             raise Http404()
 
         context = super(SongView, self).get_context_data(**kwargs)

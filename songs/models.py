@@ -65,11 +65,11 @@ class Song(models.Model):
     def get_absolute_url(self):
         """ each Song object may have multiple absolute urls, each for every contributing entity
             this method returns one of them """
-        return ("song", (), {"artist_slug": self.head_entity().slug, "song_slug": self.slug})
+        return ("song", (), {"entity_slug": self.head_entity().slug, "song_slug": self.slug})
 
     @models.permalink
     def get_absolute_url_print(self):
-        return ("song-print", (), {"artist_slug": self.head_entity().slug, "song_slug": self.slug})
+        return ("song-print", (), {"entity_slug": self.head_entity().slug, "song_slug": self.slug})
 
     def clean(self):
         try:
@@ -105,20 +105,16 @@ class Song(models.Model):
         ]
 
     def text_authors(self):
-        return [x.artist for x in ArtistContribution.objects.filter(song=self, texted=True)]
+        return [x.entity for x in EntityContribution.objects.filter(song=self, texted=True)]
 
     def composers(self):
-        return [x.artist for x in ArtistContribution.objects.filter(song=self, composed=True)]
+        return [x.entity for x in EntityContribution.objects.filter(song=self, composed=True)]
 
     def translators(self):
-        return [x.artist for x in ArtistContribution.objects.filter(song=self, translated=True)]
+        return [x.entity for x in EntityContribution.objects.filter(song=self, translated=True)]
 
     def performers(self):
-        return [
-            x.artist for x in ArtistContribution.objects.filter(song=self, performed=True)
-        ] + [
-            x.band for x in BandContribution.objects.filter(song=self, performed=True)
-        ]
+        return [x.entity for x in EntityContribution.objects.filter(song=self, performed=True)]
 
     def head_entity(self):
         """ any artist or band associated with the song, used to construct default urls """
