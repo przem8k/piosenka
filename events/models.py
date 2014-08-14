@@ -125,6 +125,9 @@ class Event(models.Model):
     def lon(self):
         return self.venue.lon
 
+    def performers(self):
+        return [x.entity for x in EntityPerformance.objects.filter(event=self)]
+
 
 class EntityPerformance(models.Model):
     event = models.ForeignKey(Event)

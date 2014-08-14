@@ -4,12 +4,13 @@ from django.contrib import admin
 
 class EntityPerformanceInlineAdmin(admin.TabularInline):
     model = EntityPerformance
+    extra = 1
 
 
 class EventAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ['name']}
     fieldsets = [
-        ('What', {'fields': ['name', 'slug', 'artists', 'bands', 'price', 'description',
+        ('What', {'fields': ['name', 'slug', 'price', 'description',
                              'description_trevor', 'website']}),
         ('When', {'fields': ['datetime']}),
         ('Where', {'fields': ['venue']}),

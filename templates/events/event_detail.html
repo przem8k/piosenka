@@ -16,14 +16,11 @@
               <b>Kiedy: </b>
               {{ event.datetime|date:"d.m.Y H:i" }}
 
-              {% if event.artists.all or event.bands.all %}
+              {% if event.performers %}
               <br />
               <b>Kto: </b>
-              {% for artist in event.artists.all %}
-              {{artist}}
-              {% endfor %}
-              {% for band in event.bands.all %}
-              {{band}}
+              {% for entity in event.performers %}
+              {{ entity }}
               {% endfor %}
               {% endif %}
               <br />
