@@ -1,5 +1,9 @@
-from events.models import Event, Venue
+from events.models import Event, Venue, EntityPerformance
 from django.contrib import admin
+
+
+class EntityPerformanceInlineAdmin(admin.TabularInline):
+    model = EntityPerformance
 
 
 class EventAdmin(admin.ModelAdmin):
@@ -11,6 +15,7 @@ class EventAdmin(admin.ModelAdmin):
         ('Where', {'fields': ['venue']}),
     ]
     filter_horizontal = ['artists', 'bands']
+    inlines = (EntityPerformanceInlineAdmin, )
 
     def save_model(self, request, obj, form, change):
         if not change:

@@ -7,7 +7,7 @@ from django.db import models
 from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
 
-from artists.models import Artist, Band
+from artists.models import Artist, Band, Entity
 
 saved_file.connect(generate_aliases)
 
@@ -128,6 +128,18 @@ class Song(models.Model):
             return None
 
 
+class EntityContribution(models.Model):
+    song = models.ForeignKey(Song)
+    entity = models.ForeignKey(Entity)
+    performed = models.BooleanField()
+    texted = models.BooleanField()
+    translated = models.BooleanField()
+    composed = models.BooleanField()
+
+    def __str__(self):
+        return self.entity.__str__() + " - " + self.song.title
+
+
 class ArtistContribution(models.Model):
     song = models.ForeignKey(Song)
     artist = models.ForeignKey(Artist)
@@ -135,6 +147,8 @@ class ArtistContribution(models.Model):
     texted = models.BooleanField()
     translated = models.BooleanField()
     composed = models.BooleanField()
+    entity_contribution = models.ForeignKey(EntityContribution, null=True, blank=True,
+                                            editable=False)
 
     def __str__(self):
         return self.artist.firstname + " " + self.artist.lastname + " - " + self.song.title
@@ -144,6 +158,8 @@ class BandContribution(models.Model):
     song = models.ForeignKey(Song)
     band = models.ForeignKey(Band)
     performed = models.BooleanField()
+    entity_contribution = models.ForeignKey(EntityContribution, null=True, blank=True,
+                                            editable=False)
 
     def __str__(self):
         return self.band.name + " - " + self.song.title

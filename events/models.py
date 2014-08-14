@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
 
-from artists.models import Artist, Band
+from artists.models import Artist, Band, Entity
 from frontpage.render import render_trevor
 
 from markdown import markdown
@@ -124,3 +124,8 @@ class Event(models.Model):
 
     def lon(self):
         return self.venue.lon
+
+
+class EntityPerformance(models.Model):
+    event = models.ForeignKey(Event)
+    entity = models.ForeignKey(Entity)
