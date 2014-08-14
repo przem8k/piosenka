@@ -27,9 +27,17 @@
               {% endfor %}
               {% endif %}
               <br />
+              {% if event.price %}
               <b>Ceny biletów: </b>
               {{event.price}}
+              <br />
+              {% endif %}
 
+              {% if event.website %}
+              <b>Strona WWW: </b>
+              <a href="{{event.website}}" target="_blank">link</a>
+              <br />
+              {% endif %}
 
             </td>
             <td valign="top" width="40%">
@@ -51,17 +59,6 @@
     </div>
     <div class="col-md-4">
       {% include "base/wells/place.html" with place=event.venue mark=event %}
-
-      {% if event.website %}
-      <div class="customwell auxwell">
-        <h1>Linki</h1>
-        <ul class="list-unstyled">
-          {% if event.website %}
-          <li><a href="{{event.website}}" target="_blank">Źrodło informacji</a></li>
-          {% endif %}
-        </ul> 
-      </div>
-      {% endif %}
 
       {% include "base/wells/like.html" with like_what="wydarzenie" %}
 
