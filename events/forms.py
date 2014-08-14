@@ -6,8 +6,10 @@ from unidecode import unidecode
 from events.models import Event, Venue
 
 class EventForm(forms.ModelForm):
-    date = forms.DateField(help_text="Dzień w formacie DD.MM.RRRR, np '22.03.2014'.")
-    time = forms.TimeField(help_text="Godzina w formacie GG:MM:SS, np. '20:00:00'.")
+    date = forms.DateField(help_text="Dzień w formacie DD.MM.RRRR, np '22.03.2014'.",
+                           widget=forms.TextInput(attrs={'placeholder': 'DD.MM.RRRR'}))
+    time = forms.TimeField(help_text="Godzina w formacie GG:MM, np. '20:00'.",
+                           widget=forms.TextInput(attrs={'placeholder': 'HH:MM'}))
     venue_selection = forms.ModelChoiceField(required=False, queryset=Venue.objects.all())
     venue_name = forms.CharField(required=False, max_length=100,
                                  help_text="Nazwa miejsca, np. 'Klub studencki Żaczek'.")
