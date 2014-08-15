@@ -7,7 +7,7 @@ from django.db import models
 from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
 
-from artists.models import Artist, Band, Entity
+from artists.models import Entity
 
 saved_file.connect(generate_aliases)
 
@@ -16,9 +16,11 @@ def validate_capo_fret(value):
     if value < 0 or value > 11:
         raise ValidationError(u'Capo fret has to be in range [0, 11]')
 
+
 class PublishedSongManager(models.Manager):
     def get_queryset(self):
         return super(PublishedSongManager, self).get_queryset().filter(published=True)
+
 
 class Song(models.Model):
     objects = models.Manager()
@@ -31,8 +33,6 @@ class Song(models.Model):
     original_title = models.CharField(max_length=100, null=True, blank=True)
     slug = models.SlugField(max_length=100, unique=True,
                             help_text="Used in urls, has to be unique.")
-    artists = models.ManyToManyField(Artist, null=True, blank=True, through='ArtistContribution')
-    bands = models.ManyToManyField(Band, null=True, blank=True, through='BandContribution')
     link_youtube = models.URLField(null=True, blank=True)
     link_wrzuta = models.URLField(null=True, blank=True)
     score1 = models.ImageField(null=True, blank=True, upload_to='scores')
@@ -95,13 +95,9 @@ class Song(models.Model):
         ytpart = [("Nagranie (Youtube)", self.link_youtube, )] if self.link_youtube else []
         wrzutapart = [("Nagranie (Wrzuta)", self.link_wrzuta, )] if self.link_wrzuta else []
         return ytpart + wrzutapart + [
-            (x.artist, x.artist.website) for x in
-            ArtistContribution.objects.filter(song=self).select_related('artist') if
-            x.artist.website is not None and len(x.artist.website) > 0
-        ] + [
-            (x.band, x.band.website) for x in
-            BandContribution.objects.filter(song=self).select_related('band') if
-            x.band.website is not None and len(x.band.website) > 0
+            (x.entity, x.entity.website) for x in
+            EntityContribution.objects.filter(song=self).select_related('entity')
+            if x.entity.website
         ]
 
     def text_authors(self):
@@ -134,28 +130,3 @@ class EntityContribution(models.Model):
 
     def __str__(self):
         return self.entity.__str__() + " - " + self.song.title
-
-
-class ArtistContribution(models.Model):
-    song = models.ForeignKey(Song)
-    artist = models.ForeignKey(Artist)
-    performed = models.BooleanField()
-    texted = models.BooleanField()
-    translated = models.BooleanField()
-    composed = models.BooleanField()
-    entity_contribution = models.ForeignKey(EntityContribution, null=True, blank=True,
-                                            editable=False)
-
-    def __str__(self):
-        return self.artist.firstname + " " + self.artist.lastname + " - " + self.song.title
-
-
-class BandContribution(models.Model):
-    song = models.ForeignKey(Song)
-    band = models.ForeignKey(Band)
-    performed = models.BooleanField()
-    entity_contribution = models.ForeignKey(EntityContribution, null=True, blank=True,
-                                            editable=False)
-
-    def __str__(self):
-        return self.band.name + " - " + self.song.title

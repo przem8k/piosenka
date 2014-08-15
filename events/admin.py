@@ -15,7 +15,6 @@ class EventAdmin(admin.ModelAdmin):
         ('When', {'fields': ['datetime']}),
         ('Where', {'fields': ['venue']}),
     ]
-    filter_horizontal = ['artists', 'bands']
     inlines = (EntityPerformanceInlineAdmin, )
 
     def save_model(self, request, obj, form, change):

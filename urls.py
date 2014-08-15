@@ -12,8 +12,6 @@ urlpatterns = patterns(
     '',
     #obsolete paths redicrects
     url(r'^songs/song/(?P<song_id>\d+)/$', songs.obsolete.obsolete_song),
-    url(r'^songs/artist/(?P<artist_id>\d+)/$', songs.obsolete.obsolete_artist),
-    url(r'^songs/band/(?P<band_id>\d+)/$', songs.obsolete.obsolete_band),
     url(r'^about/$', RedirectView.as_view(url="/o-stronie/")),
     url(r'^facebook/$', RedirectView.as_view(url="/o-stronie/")),
     #site sections

@@ -67,8 +67,6 @@ class Event(models.Model):
     price = models.CharField(max_length=100, null=True, blank=True,
                              help_text="E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw "
                                        "puste.")
-    artists = models.ManyToManyField(Artist, null=True, blank=True)
-    bands = models.ManyToManyField(Band, null=True, blank=True)
     description = models.TextField(null=True, blank=True,
                                    help_text="Event description, written in Markdown.")
     description_html = models.TextField(null=True, blank=True, editable=False)

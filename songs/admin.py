@@ -1,4 +1,4 @@
-from songs.models import Song, ArtistContribution, BandContribution, EntityContribution
+from songs.models import Song, EntityContribution
 from django.contrib import admin
 
 
