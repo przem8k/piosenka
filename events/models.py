@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
 
-from artists.models import Artist, Band, Entity
+from artists.models import Entity
 from frontpage.render import render_trevor
 
 from markdown import markdown
@@ -51,16 +51,18 @@ class Venue(models.Model):
             'slug': self.slug,
         })
 
+
 class PublishedEventManager(models.Manager):
     def get_queryset(self):
         return super(PublishedEventManager, self).get_queryset().filter(published=True)
+
 
 class Event(models.Model):
     objects = models.Manager()
     po = PublishedEventManager()
 
     name = models.CharField(max_length=100,
-                            help_text="Nazwa wydarzenia, np. 'Koncert piosenek Jacka Kaczmarskiego' "
+                            help_text="Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego' "
                                       "lub 'V Festiwal Piosenki Wymyślnej w Katowicach'.")
     slug = models.SlugField(max_length=100, unique_for_date="datetime")
     datetime = models.DateTimeField()

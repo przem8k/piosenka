@@ -2,20 +2,18 @@ import datetime
 
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse_lazy
-from django.views.generic import DetailView, ListView, TemplateView
+from django.views.generic import DetailView, ListView
 from django.views.generic.dates import MonthArchiveView, DateDetailView
-from django.views.generic.edit import CreateView, FormView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.utils.decorators import method_decorator
-from django.template import RequestContext, loader
 from django.utils.text import slugify
-from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect, Http404
-from django.shortcuts import get_object_or_404
+from django.http import Http404
 
 from unidecode import unidecode
 
-from artists.models import Artist, Band
 from events.models import Event, Venue
 from events.forms import EventForm
+
 
 class VenueDetail(DetailView):
     model = Venue
@@ -26,6 +24,7 @@ class VenueDetail(DetailView):
         context = super(VenueDetail, self).get_context_data(**kwargs)
         context['model_meta'] = Venue._meta
         return context
+
 
 class EventDetail(DateDetailView):
     model = Event
@@ -41,12 +40,14 @@ class EventDetail(DateDetailView):
             self.request.user.is_staff or self.request.user == object.author)
         return context
 
+
 class EventIndex(ListView):
     model = Event
     context_object_name = "events"
     template_name = "events/event_index.html"
     queryset = Event.current.all()
     VENUE_COUNT = 10
+
     def get_context_data(self, **kwargs):
         context = super(EventIndex, self).get_context_data(**kwargs)
         from django.db.models import Count
@@ -64,6 +65,7 @@ class EventMonthArchive(MonthArchiveView):
     month_format = "%m"
     allow_future = True
     allow_empty = True
+
 
 class AddEvent(CreateView):
     model = Event
@@ -85,6 +87,7 @@ class AddEvent(CreateView):
         form.instance.author = self.request.user
         return super(AddEvent, self).form_valid(form)
 
+
 class EditEvent(UpdateView):
     model = Event
     form_class = EventForm
@@ -95,7 +98,8 @@ class EditEvent(UpdateView):
     allow_future = True
 
     def get_object(self):
-        import datetime, time
+        import datetime
+        import time
         year = self.kwargs['year']
         month = self.kwargs['month']
         day = self.kwargs['day']
@@ -106,7 +110,6 @@ class EditEvent(UpdateView):
                                  datetime__year=event_date.year,
                                  datetime__month=event_date.month,
                                  datetime__day=event_date.day)
-
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
