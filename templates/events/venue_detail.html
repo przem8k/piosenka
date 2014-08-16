@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ venue }}{% endblock title %}
+{% block title %}{{ venue }} - koncerty, wydarzenia{% endblock title %}
 
 {% block content %}
 {% include "events/top.html" %}
@@ -8,16 +8,19 @@
 <div class="container main">
   <div class="row">
     <div class="col-md-8">
-      <div class="customwell contentwell">
-        <h1>{{venue.name}}</h1>
+      <div class="customwell auxwell">
+        <h1>Miejsce: {{venue.name}}</h1>
 
         <p><b>Adres:</b> {{venue.street}}, {{venue.town}}.</p>
 
         <p><b>Wydarzenia:</b></p>
 
-        <ul>
+        <ul class="list-unstyled">
           {% for event in venue.event_set.all %}
-          <li><a href="{{event.get_absolute_url}}">{{event}}</a></li>
+          <li>
+          <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>, 
+          <a href="{{event.get_absolute_url}}">{{ event.name }}</a>
+          </li>
           {% endfor %}
         </ul>
       </div>

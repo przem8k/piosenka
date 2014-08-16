@@ -1,27 +1,31 @@
 {% extends "base.html" %}
 
-{% block title %}Koncerty {{ entity }}{% endblock title %}
+{% block title %}{{ entity }} - koncerty, wydarzenia{% endblock title %}
 
 {% block content %}
 {% include "events/top.html" %}
 
 <div class="container main">
   <div class="row">
-    <div class="col-md-8">
-      <div class="customwell contentwell">
-        <h1>{{ entity }}</h1>
-
-        <p><b>Wydarzenia:</b></p>
-
-        <ul>
+    <div class="col-md-6">
+      <div class="customwell auxwell">
+        <h1>Wydarzenia z udziałem: {{ entity }}</h1>
+        <ul class="list-unstyled">
           {% for event in events %}
-          <li><a href="{{event.get_absolute_url}}">{{event}}</a></li>
+          <li>
+          <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>, 
+          <b>{{ event.venue.town }}</b>, 
+          <a href="{{event.get_absolute_url}}">{{ event.name }}</a>
+          </li>
           {% endfor %}
         </ul>
       </div>
     </div>
-    <div class="col-md-4">
-      {% include "base/wells/like.html" with like_what="miejsce" %}
+    <div class="col-md-6">
+      <div class="customwell auxwell">
+        <h1>Mapa</h1>
+        {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
+      </div>
     </div>
   </div>
   {% include "base/rows/disqus.html" %}

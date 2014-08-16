@@ -6,12 +6,25 @@
 {% include "events/top.html" %}
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <div class="customwell contentwell">
+    <div class="col-md-6">
+      <div class="customwell auxwell">
         <h1>Archiwum wydarzeń: {{month|date:"F Y" }}</h1>
-        {% include "events/inc/event_list.html" %}
+        <ul class="list-unstyled">
+          {% for event in events %}
+          <li>
+          <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>, 
+          <b>{{ event.venue.town }}</b>, 
+          <a href="{{event.get_absolute_url}}">{{ event.name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
-      <hr />
+    </div>
+    <div class="col-md-6">
+      <div class="customwell auxwell">
+        <h1>Mapa</h1>
+        {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
+      </div>
     </div>
   </div>
 

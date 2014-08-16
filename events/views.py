@@ -58,6 +58,16 @@ class EventDetail(DateDetailView):
         return context
 
 
+def add_context_for_menu(context):
+    from django.db.models import Count
+    context['popular_venues'] = Venue.objects.all() \
+        .annotate(event_count=Count('event')) \
+        .order_by('-event_count')[:EventIndex.VENUE_COUNT]
+    context['active_entities'] = Entity.objects.all() \
+        .annotate(event_count=Count('entityperformance')) \
+        .order_by('-event_count')[:EventIndex.ENTITY_COUNT]
+    return context
+
 class EventIndex(ListView):
     model = Event
     context_object_name = "events"
@@ -68,14 +78,7 @@ class EventIndex(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(EventIndex, self).get_context_data(**kwargs)
-        from django.db.models import Count
-        context['popular_venues'] = Venue.objects.all() \
-                                                 .annotate(event_count=Count('event')) \
-                                                 .order_by('-event_count')[:EventIndex.VENUE_COUNT]
-        context['active_entities'] = Entity.objects.all() \
-                                                   .annotate(event_count=Count('entityperformance')) \
-                                                   .order_by('-event_count')[:EventIndex.ENTITY_COUNT]
-        return context
+        return add_context_for_menu(context)
 
 
 class EventMonthArchive(MonthArchiveView):
@@ -86,6 +89,10 @@ class EventMonthArchive(MonthArchiveView):
     month_format = "%m"
     allow_future = True
     allow_empty = True
+
+    def get_context_data(self, **kwargs):
+        context = super(EventMonthArchive, self).get_context_data(**kwargs)
+        return add_context_for_menu(context)
 
 
 class AddEvent(CreateView):
