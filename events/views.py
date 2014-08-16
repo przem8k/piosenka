@@ -132,8 +132,6 @@ class EditEvent(UpdateView):
         form.instance.venue = venue
         form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],
                                                            form.cleaned_data['time'])
-        form.instance.slug = slugify(unidecode(form.cleaned_data['name']))
-        form.instance.pk = self.object.pk
         return super(EditEvent, self).form_valid(form)
 
     def get_success_url(self):
