@@ -120,8 +120,8 @@ class EditEvent(UpdateView):
 
     def get_initial(self):
         return {
-            'date': self.object.datetime,
-            'time': self.object.datetime,
+            'date': self.object.datetime.strftime("%d.%m.%Y"),
+            'time': self.object.datetime.strftime("%H:%M"),
             'venue_selection': self.object.venue,
             'description_trevor': self.object.description_trevor,
         }
