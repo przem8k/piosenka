@@ -69,10 +69,8 @@ class Event(models.Model):
     price = models.CharField(max_length=100, null=True, blank=True,
                              help_text="E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw "
                                        "puste.")
-    description = models.TextField(null=True, blank=True,
-                                   help_text="Event description, written in Markdown.")
     description_html = models.TextField(null=True, blank=True, editable=False)
-    description_trevor = models.TextField(null=True, blank=True)
+    description_trevor = models.TextField()
     website = models.URLField(null=True, blank=True,
                               help_text="Strona internetowa wydarzenia, źródło informacji. "
                                         "W przypadku braku danych pozostaw puste.")
@@ -92,10 +90,7 @@ class Event(models.Model):
         return "%s - %s (%s)" % (self.datetime, self.name, self.venue.town)
 
     def save(self, *args, **kwargs):
-        if self.description_trevor:
-            self.description_html = render_trevor(self.description_trevor)
-        elif self.description:
-            self.description_html = markdown(self.description, safe_mode='escape')
+        self.description_html = render_trevor(self.description_trevor)
 
         if not self.pub_date and self.published:
             self.pub_date = datetime.now()
