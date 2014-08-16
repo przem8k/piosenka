@@ -20,7 +20,7 @@
               <br />
               <b>Kto: </b>
               {% for entity in event.performers %}
-              {{ entity }}
+              <a href="{{ entity.get_gigs_url }}">{{ entity }}</a>
               {% endfor %}
               {% endif %}
               <br />

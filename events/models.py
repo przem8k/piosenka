@@ -87,7 +87,7 @@ class Event(models.Model):
         ordering = ["datetime"]
 
     def __str__(self):
-        return "%s - %s (%s)" % (self.datetime, self.name, self.venue.town)
+        return "%s - %s (%s)" % (self.datetime.strftime("%d.%m.%Y"), self.name, self.venue.town)
 
     def save(self, *args, **kwargs):
         self.description_html = render_trevor(self.description_trevor)

@@ -50,6 +50,10 @@ class Entity(models.Model):
     def get_absolute_url(self):
         return ('songbook-entity', (), {'slug': self.slug})
 
+    @models.permalink
+    def get_gigs_url(self):
+        return ('entity_gigs', (), {'slug': self.slug})
+
     def clean(self):
         super(Entity, self).clean()
         if self.kind == Entity.TYPE_BAND and self.first_name:

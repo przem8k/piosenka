@@ -66,14 +66,6 @@
             <li><a href="{% url "event_month_archive" "2011" "11" %}">Listopad</a></li>
             <li><a href="{% url "event_month_archive" "2011" "10" %}">Październik</a></li>
             <li><a href="{% url "event_month_archive" "2011" "09" %}">Wrzesień</a></li>
-            <li class="muted">Sierpień</li>
-            <li class="muted">Lipiec</li>
-            <li class="muted">Czerwiec</li>
-            <li class="muted">Maj</li>
-            <li class="muted">Kwiecień</li>
-            <li class="muted">Marzec</li>
-            <li class="muted">Luty</li>
-            <li class="muted">Styczeń</li>
           </ul>
         </td>
       </tr>
@@ -85,15 +77,19 @@
       <h1>Popularne miejsca (wg liczby wydarzeń)</h1>
       <ul class="list-unstyled">
         {% for venue in popular_venues %}
-        <li>{{ venue.event_count }} - <a href="{{ venue.get_absolute_url }}">{{ venue }}</a></li>
+        <li><a href="{{ venue.get_absolute_url }}">{{ venue }}</a> ({{ venue.event_count }})</li>
         {% endfor %}
       </ul>
     </div>
   </div>
   <div class="col-md-4">
     <div class="customwell auxwell">
-      <h1>Aktywni artyści</h1>
-      <p class="muted">Funkcjonalność w przygotowaniu.</p>
+      <h1>Aktywni artyści (wg liczby wydarzeń)</h1>
+      <ul class="list-unstyled">
+        {% for entity in active_entities %}
+        <li><a href="{{ entity.get_gigs_url }}">{{ entity }}</a> ({{ entity.event_count }})</li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>

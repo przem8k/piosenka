@@ -11,7 +11,8 @@ from django.http import Http404
 
 from unidecode import unidecode
 
-from events.models import Event, Venue
+from artists.models import Entity
+from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm
 
 
@@ -23,6 +24,17 @@ class VenueDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(VenueDetail, self).get_context_data(**kwargs)
         context['model_meta'] = Venue._meta
+        return context
+
+
+class EntityDetail(DetailView):
+    model = Entity
+    context_object_name = "entity"
+    template_name = "events/entity.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(EntityDetail, self).get_context_data(**kwargs)
+        context['events'] = [x.event for x in EntityPerformance.objects.filter(entity=self.object)]
         return context
 
 
@@ -46,7 +58,8 @@ class EventIndex(ListView):
     context_object_name = "events"
     template_name = "events/event_index.html"
     queryset = Event.current.all()
-    VENUE_COUNT = 10
+    VENUE_COUNT = 15
+    ENTITY_COUNT = 15
 
     def get_context_data(self, **kwargs):
         context = super(EventIndex, self).get_context_data(**kwargs)
@@ -54,6 +67,9 @@ class EventIndex(ListView):
         context['popular_venues'] = Venue.objects.all() \
                                                  .annotate(event_count=Count('event')) \
                                                  .order_by('-event_count')[:EventIndex.VENUE_COUNT]
+        context['active_entities'] = Entity.objects.all() \
+                                                   .annotate(event_count=Count('entityperformance')) \
+                                                   .order_by('-event_count')[:EventIndex.ENTITY_COUNT]
         return context
 
 
