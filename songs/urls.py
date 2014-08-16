@@ -1,11 +1,11 @@
 from django.conf.urls import patterns, url
 from django.views.generic import RedirectView
 
-from songs.views import IndexView, ArtistView, SongView
+from songs.views import IndexView, EntityView, SongView
 
 urlpatterns = patterns(
     'songs.views',
-    url(r'^(?P<slug>[-\w]+)/$', ArtistView.as_view(), name="songbook-entity"),
+    url(r'^(?P<slug>[-\w]+)/$', EntityView.as_view(), name="songbook_entity"),
     url(r'^(?P<entity_slug>[-\w]+)/(?P<song_slug>[-\w]+)/$', SongView.as_view(), name="song"),
     url(r'^(?P<entity_slug>[-\w]+)/(?P<song_slug>[-\w]+)/transpose/(?P<transposition>\d+)/$',
         SongView.as_view(), name="song-transposition"),

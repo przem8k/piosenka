@@ -9,13 +9,6 @@ from songs.lyrics import render_lyrics
 from songs.models import Song, EntityContribution
 
 
-def get_or_none(model, **kwargs):
-    try:
-        return model.objects.get(**kwargs)
-    except model.DoesNotExist:
-        return None
-
-
 class BaseMenuView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(BaseMenuView, self).get_context_data(**kwargs)
@@ -32,8 +25,8 @@ class IndexView(BaseMenuView):
     template_name = "songs/index.html"
 
 
-class ArtistView(BaseMenuView):
-    """ Lists the songs associated with the given Artist or Band object. """
+class EntityView(BaseMenuView):
+    """ Lists the songs associated with the given Entity object. """
     template_name = "songs/list.html"
 
     def get_context_data(self, **kwargs):
@@ -43,7 +36,7 @@ class ArtistView(BaseMenuView):
                                                                     song__published=True)
                                   .select_related('song')
                                   .order_by('song__title'))]
-        context = super(ArtistView, self).get_context_data(**kwargs)
+        context = super(EntityView, self).get_context_data(**kwargs)
         context['songs'] = songs
         context['entity'] = entity
         return context

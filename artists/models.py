@@ -48,7 +48,7 @@ class Entity(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('songbook-entity', (), {'slug': self.slug})
+        return ('songbook_entity', (), {'slug': self.slug})
 
     @models.permalink
     def get_gigs_url(self):
