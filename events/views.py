@@ -32,6 +32,11 @@ class EntityDetail(DetailView):
     context_object_name = "entity"
     template_name = "events/entity.html"
 
+    def dispatch(self, *args, **kwargs):
+        if not self.get_object().still_plays:
+            raise Http404
+        return super(EntityDetail, self).dispatch(*args, **kwargs)
+
     def get_context_data(self, **kwargs):
         context = super(EntityDetail, self).get_context_data(**kwargs)
         context['events'] = [x.event for x in EntityPerformance.objects.filter(entity=self.object)]
