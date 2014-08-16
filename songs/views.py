@@ -36,6 +36,8 @@ class EntityView(BaseMenuView):
                                                                     song__published=True)
                                   .select_related('song')
                                   .order_by('song__title'))]
+        if not songs:
+            raise Http404()
         context = super(EntityView, self).get_context_data(**kwargs)
         context['songs'] = songs
         context['entity'] = entity
