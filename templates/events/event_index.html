@@ -10,6 +10,10 @@
       <div class="customwell contentwell">
         <h1>Nadchodzące wydarzenia</h1>
         {% include "events/inc/event_list.html" %}
+        {% if user.is_authenticated %}
+        <hr />
+        <a href="{% url 'add_event' %}">Dodaj nowe wydarzenie</a>
+        {% endif %}
       </div>
       <hr />
     </div>
