@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Koncerty {{ entity }}{% endblock title %}
+
+{% block content %}
+{% include "events/top.html" %}
+
+<div class="container main">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="customwell contentwell">
+        <h1>{{ entity }}</h1>
+
+        <p><b>Wydarzenia:</b></p>
+
+        <ul>
+          {% for event in events %}
+          <li><a href="{{event.get_absolute_url}}">{{event}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      {% include "base/wells/like.html" with like_what="miejsce" %}
+    </div>
+  </div>
+  {% include "base/rows/disqus.html" %}
+</div>
+{% endblock content %}
