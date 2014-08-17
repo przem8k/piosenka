@@ -196,7 +196,7 @@ class EditEvent(ManagePerformancesMixin, UpdateView):
         if not performances.is_valid():
             return self.form_invalid(form)
 
-        venue = form.cleaned_data['venue_selection']
+        venue = form.cleaned_data['venue']
         venue.save()
         form.instance.venue = venue
         form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],
