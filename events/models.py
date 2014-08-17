@@ -76,8 +76,8 @@ class Event(models.Model):
                                         "W przypadku braku danych pozostaw puste.")
     venue = models.ForeignKey(Venue, null=False, blank=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
-    author = models.ForeignKey(User, null=True, editable=False)
-    pub_date = models.DateTimeField(null=True, editable=False)
+    author = models.ForeignKey(User, editable=False)
+    pub_date = models.DateTimeField(editable=False)
 
     objects = models.Manager()
     current = CurrentEventManager()
@@ -91,8 +91,7 @@ class Event(models.Model):
 
     def save(self, *args, **kwargs):
         self.description_html = render_trevor(self.description_trevor)
-
-        if not self.pub_date and self.published:
+        if not self.pub_date:
             self.pub_date = datetime.now()
         super(Event, self).save(*args, **kwargs)
 
