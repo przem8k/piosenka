@@ -34,14 +34,13 @@ class Article(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
     category = models.ForeignKey(ArticleCategory, null=True, blank=True)
-    date = models.DateTimeField(null=True, blank=True, editable=False,
-                                help_text="Publication date.")
+    date = models.DateTimeField(editable=False, help_text="Publication date.")
     lead_text = models.TextField(help_text="Introductory paragraph, written in Markdown.")
     lead_text_html = models.TextField(null=True, blank=True, editable=False)
     main_text = models.TextField(help_text="Rest of the article, written in Markdown.")
     main_text_html = models.TextField(null=True, blank=True, editable=False)
     published = models.BooleanField(default=True)
-    author = models.ForeignKey(User, blank=True, editable=False)
+    author = models.ForeignKey(User, editable=False)
     cover_image = models.ImageField(null=True, blank=True, upload_to='article_covers',
                                     help_text="Main illustration for the article.")
     cover_credits = models.TextField(null=True, blank=True,
@@ -59,7 +58,7 @@ class Article(models.Model):
         self.lead_text_html = markdown(self.lead_text, safe_mode='escape')
         self.main_text_html = markdown(self.main_text)
         self.cover_credits_html = markdown(self.cover_credits, safe_mode='escape')
-        if not self.date and self.published:
+        if not self.date:
             self.date = datetime.datetime.now()
         super(Article, self).save(*args, **kwargs)
 
