@@ -6,6 +6,7 @@ from unidecode import unidecode
 
 from events.models import EntityPerformance, Event, Venue
 
+
 class EventForm(forms.ModelForm):
     date = forms.DateField(help_text="Dzień w formacie DD.MM.RRRR, np '22.03.2014'.",
                            widget=forms.TextInput(attrs={'placeholder': 'DD.MM.RRRR'}))
@@ -62,7 +63,6 @@ class EventForm(forms.ModelForm):
                 raise forms.ValidationError("Stało się coś dziwnego.")
         cleaned_data['venue'] = venue
         return cleaned_data
-
 
     class Meta:
         model = Event

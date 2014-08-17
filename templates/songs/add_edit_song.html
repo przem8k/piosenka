@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "songs/top.html" %}
+
+<div class="container main">
+  <form action="{% if not object or not object.pk %}{% url 'add_song' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="customwell editwell">
+          <h1>Piosenka</h1>
+          <table>
+            {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
+            {% include "components/forms/table_field.html" with name="Adnotacja" field=form.disambig %}
+          </table>
+          {{ form.non_field_errors }}
+        </div>
+        <div class="customwell editwell">
+          <h1>Opracowanie</h1>
+          <div class="alert alert-info" role="alert">
+            Bla bla bla.
+          </div>
+          {{ form.lyrics }}
+          {{ form.lyrics.errors }}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="customwell editwell">
+          <h1>Autor lub autorzy</h1>
+          {{ contributions.management_form }}
+          {% for form in contributions %}
+          {{ form }} <br />
+          {% endfor %}
+        </div>
+        <div class="customwell editwell">
+          <h1>Dodatkowe informacje</h1>
+          <div class="alert alert-info" role="alert">
+            Wszystkie pola w tej sekcji są opcjonalne.
+          </div>
+          <table>
+            {% include "components/forms/table_field.html" with name="Tytuł oryginalny" field=form.original_title %}
+            {% include "components/forms/table_field.html" with name="Link (YouTube)" field=form.link_youtube %}
+            {% include "components/forms/table_field.html" with name="Link (Wrzuta)" field=form.link_wrzuta %}
+          </table>
+        </div>
+        <div class="customwell editwell">
+          <h1>Gotowe</h1>
+          <input type="submit" value="{% if not object or not object.pk %}Dodaj{% else %}Zapisz{% endif %}" style="width: 100%"/>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock content %}

@@ -68,6 +68,10 @@ class Song(models.Model):
         return ("song", (), {"entity_slug": self.head_entity().slug, "song_slug": self.slug})
 
     @models.permalink
+    def get_edit_url(self):
+        return ('edit_song', (), {"entity_slug": self.head_entity().slug, "song_slug": self.slug})
+
+    @models.permalink
     def get_absolute_url_print(self):
         return ("song-print", (), {"entity_slug": self.head_entity().slug, "song_slug": self.slug})
 

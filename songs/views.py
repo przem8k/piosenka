@@ -1,12 +1,29 @@
 import json
 
+from django.contrib.auth.decorators import login_required
+from django.core.urlresolvers import reverse_lazy
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
+from django.utils.decorators import method_decorator
+from django.utils.text import slugify
 from django.views.generic import TemplateView
+from django.views.generic.edit import CreateView, UpdateView
+
+from unidecode import unidecode
 
 from artists.models import Entity
+from songs.forms import SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Song, EntityContribution
+
+
+def get_song_by_entity_or_404(song_slug, entity_slug):
+    song = get_object_or_404(Song, slug=song_slug)
+    entity = get_object_or_404(Entity, slug=entity_slug)
+    # verify that the song was reached via proper artist or band
+    if EntityContribution.objects.filter(song=song, entity=entity).count() == 0:
+        raise Http404()
+    return song
 
 
 class BaseMenuView(TemplateView):
@@ -49,17 +66,8 @@ class SongView(TemplateView):
     template_name = 'songs/song.html'
 
     def get_context_data(self, **kwargs):
-        entity_slug = kwargs['entity_slug']
-        song_slug = kwargs['song_slug']
-
-        song = get_object_or_404(Song, slug=song_slug)
-        entity = get_object_or_404(Entity, slug=entity_slug)
-
-        # verify that the song was reached via proper artist or band
-        if EntityContribution.objects.filter(song=song, entity=entity).count() == 0:
-            raise Http404()
-
         context = super(SongView, self).get_context_data(**kwargs)
+        song = get_song_by_entity_or_404(kwargs['song_slug'], kwargs['entity_slug'])
         if 'transposition' in kwargs:
             context['json'] = True
             transposition = int(kwargs['transposition'])
@@ -80,3 +88,73 @@ class SongView(TemplateView):
                    'transposition': context['transposition']}
         return HttpResponse(json.dumps(payload),
                             content_type='application/json')
+
+
+class ManageContributionsMixin(object):
+    def get_contributions_formset(self):
+        if self.request.POST:
+            return ContributionFormSet(self.request.POST, instance=self.object)
+        else:
+            return ContributionFormSet(instance=self.object)
+
+    def get_context_data(self, **kwargs):
+        context = super(ManageContributionsMixin, self).get_context_data(**kwargs)
+        context['contributions'] = self.get_contributions_formset()
+        return context
+
+    def form_valid(self, form):
+        contributions = self.get_contributions_formset()
+        if not contributions.is_valid():
+            raise RuntimeError()
+        contributions.instance = form.instance
+
+        ret = super(ManageContributionsMixin, self).form_valid(form)
+        contributions.save()
+        return ret
+
+
+class AddSong(ManageContributionsMixin, CreateView):
+    model = Song
+    form_class = SongForm
+    template_name = "songs/add_edit_song.html"
+    success_url = reverse_lazy('songbook')
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(AddSong, self).dispatch(*args, **kwargs)
+
+    def form_valid(self, form):
+        contributions = super(AddSong, self).get_contributions_formset()
+        if not contributions.is_valid():
+            return self.form_invalid(form)
+
+        form.instance.slug = slugify(unidecode(form.cleaned_data['title'] + " " +
+                                     form.cleaned_data['disambig']))
+        form.instance.author = self.request.user
+        return super(AddSong, self).form_valid(form)
+
+
+class EditSong(ManageContributionsMixin, UpdateView):
+    model = Song
+    form_class = SongForm
+    template_name = "songs/add_edit_song.html"
+
+    def get_object(self):
+        return get_song_by_entity_or_404(self.kwargs['song_slug'], self.kwargs['entity_slug'])
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        song = self.get_object()
+        if not (self.request.user.is_staff or self.request.user == song.author):
+            raise Http404
+        return super(EditSong, self).dispatch(*args, **kwargs)
+
+    def form_valid(self, form):
+        contributions = super(EditSong, self).get_contributions_formset()
+        if not contributions.is_valid():
+            return self.form_invalid(form)
+
+        return super(EditSong, self).form_valid(form)
+
+    def get_success_url(self):
+        return self.object.get_absolute_url()
