@@ -45,12 +45,12 @@ class Song(models.Model):
     lyrics = models.TextField(null=True)
     has_extra_chords = models.BooleanField(blank=True, editable=False,
                                            help_text="True iff the lyrics contain repeated chords.")
-    published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
+    published = models.BooleanField(default=True, help_text="Unpublish instead of deleting.")
     related_songs = models.ManyToManyField("self", null=True, blank=True, symmetrical=True,
                                            help_text="E.g. different translations or different "
                                                      "compositions of the same text.")
-    author = models.ForeignKey(User, null=True, editable=False)
-    date = models.DateTimeField(null=True, editable=False)
+    author = models.ForeignKey(User, editable=False)
+    date = models.DateTimeField(editable=False)
 
     class Meta:
         ordering = ["title", "disambig"]
@@ -83,7 +83,7 @@ class Song(models.Model):
         self.has_extra_chords = contain_extra_chords(parsed_lyrics)
 
     def save(self, *args, **kwargs):
-        if not self.date and self.published:
+        if not self.date:
             self.date = datetime.datetime.now()
         super(Song, self).save(*args, **kwargs)
 
