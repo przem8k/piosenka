@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load compressed %}
 
-{% block title %}{{ event }}{% endblock title %}
+{% block title %}{% if event %}Edytuj wydarzenie: {{ event }}{% else %}Dodaj wydarzenie{% endif %}{% endblock title %}
 
 {% block extra-css %}
 {% compressed_css 'sirtrevor' %}
