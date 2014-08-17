@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 from artists.models import Entity
-from frontpage.render import render_trevor
+from frontpage.trevor import render_trevor
 
 from markdown import markdown
 

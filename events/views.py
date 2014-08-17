@@ -14,6 +14,7 @@ from unidecode import unidecode
 from artists.models import Entity
 from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm
+from frontpage.trevor import put_text_in_trevor
 
 
 class VenueDetail(DetailView):
@@ -68,6 +69,7 @@ def add_context_for_menu(context):
         .order_by('-event_count')[:EventIndex.ENTITY_COUNT]
     return context
 
+
 class EventIndex(ListView):
     model = Event
     context_object_name = "events"
@@ -104,6 +106,13 @@ class AddEvent(CreateView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(AddEvent, self).dispatch(*args, **kwargs)
+
+    def get_initial(self):
+        initial_description = "Tutaj opisz wydarzenie. Zaznacz fragment tekstu aby dodać \
+            **pogrubienie** albo [odsyłacz](#)."
+        return {
+            'description_trevor': put_text_in_trevor(initial_description)
+        }
 
     def form_valid(self, form):
         venue = form.cleaned_data['venue']

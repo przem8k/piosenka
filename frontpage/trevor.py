@@ -21,3 +21,13 @@ def text_block(data):
 
 def list_block(data):
     return markdown(data['text'], safe_mode='escape')
+
+def put_text_in_trevor(text):
+    return json.dumps({
+        'data': [{
+            'type': "text",
+            'data': {
+                'text': text
+            }
+        }]
+    })
