@@ -89,6 +89,13 @@ $(document).ready(function(){
           </div>
         </div>
         <div class="customwell editwell">
+          <h1>Wystąpią</h1>
+          {{ performances.management_form }}
+          {% for form in performances %}
+          {{ form }} <br />
+          {% endfor %}
+        </div>
+        <div class="customwell editwell">
           <h1>Dodatkowe informacje</h1>
           <div class="alert alert-info" role="alert">
             Wszystkie pola w tej sekcji są opcjonalne.

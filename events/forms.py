@@ -1,9 +1,10 @@
 from django import forms
+from django.forms.models import inlineformset_factory
 from django.utils.text import slugify
 
 from unidecode import unidecode
 
-from events.models import Event, Venue
+from events.models import EntityPerformance, Event, Venue
 
 class EventForm(forms.ModelForm):
     date = forms.DateField(help_text="Dzień w formacie DD.MM.RRRR, np '22.03.2014'.",
@@ -66,3 +67,5 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         exclude = ('venue', 'slug', 'datetime', 'description', 'description_html', 'published', 'author', 'pub_date')
+
+PerformanceFormSet = inlineformset_factory(Event, EntityPerformance)

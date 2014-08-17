@@ -13,7 +13,7 @@ from unidecode import unidecode
 
 from artists.models import Entity
 from events.models import EntityPerformance, Event, Venue
-from events.forms import EventForm
+from events.forms import EventForm, PerformanceFormSet
 from frontpage.trevor import put_text_in_trevor
 
 
@@ -97,7 +97,30 @@ class EventMonthArchive(MonthArchiveView):
         return add_context_for_menu(context)
 
 
-class AddEvent(CreateView):
+class ManagePerformancesMixin(object):
+    def get_performances_formset(self):
+        if self.request.POST:
+            return PerformanceFormSet(self.request.POST, instance=self.object)
+        else:
+            return PerformanceFormSet(instance=self.object)
+
+    def get_context_data(self, **kwargs):
+        context = super(ManagePerformancesMixin, self).get_context_data(**kwargs)
+        context['performances'] = self.get_performances_formset()
+        return context
+
+    def form_valid(self, form):
+        performances = self.get_performances_formset()
+        if not performances.is_valid():
+            raise RuntimeError()
+        performances.instance = form.instance
+
+        ret = super(ManagePerformancesMixin, self).form_valid(form)
+        performances.save()
+        return ret
+
+
+class AddEvent(ManagePerformancesMixin, CreateView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"
@@ -115,6 +138,10 @@ class AddEvent(CreateView):
         }
 
     def form_valid(self, form):
+        performances = super(AddEvent, self).get_performances_formset()
+        if not performances.is_valid():
+            return self.form_invalid(form)
+
         venue = form.cleaned_data['venue']
         venue.save()
         form.instance.venue = venue
@@ -122,10 +149,11 @@ class AddEvent(CreateView):
                                                            form.cleaned_data['time'])
         form.instance.slug = slugify(unidecode(form.cleaned_data['name']))
         form.instance.author = self.request.user
+
         return super(AddEvent, self).form_valid(form)
 
 
-class EditEvent(UpdateView):
+class EditEvent(ManagePerformancesMixin, UpdateView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"
@@ -164,6 +192,10 @@ class EditEvent(UpdateView):
         }
 
     def form_valid(self, form):
+        performances = super(EditEvent, self).get_performances_formset()
+        if not performances.is_valid():
+            return self.form_invalid(form)
+
         venue = form.cleaned_data['venue_selection']
         venue.save()
         form.instance.venue = venue
