@@ -50,8 +50,16 @@ class Hello(FormView):
     template_name = "hello.html"
     success_url = reverse_lazy('index')
 
+    def get_context_data(self, **kwargs):
+        context = super(Hello, self).get_context_data(**kwargs)
+        if self.request.GET and 'next' in self.request.GET:
+            context['next'] = self.request.GET['next']
+        return context
+
     def form_valid(self, form):
         login(self.request, form.get_user())
+        if self.request.GET and 'next' in self.request.GET:
+            return HttpResponseRedirect(self.request.GET['next'])
         return super(Hello, self).form_valid(form)
 
 
