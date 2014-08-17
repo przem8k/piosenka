@@ -18,7 +18,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, null=True)
     author = models.ForeignKey(User, editable=False)
-    date = models.DateTimeField(null=True, editable=False)
+    date = models.DateTimeField(editable=False)
     post = models.TextField(help_text="Post or its introductory part, written in Markdown.")
     post_html = models.TextField(null=True, blank=True, editable=False)
     more = models.TextField(blank=True, null=True,
@@ -35,7 +35,7 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         self.post_html = markdown(self.post, safe_mode='escape')
         self.more_html = markdown(self.more, safe_mode='escape')
-        if not self.date and self.published:
+        if not self.date:
             self.date = datetime.datetime.now()
         super(Post, self).save(*args, **kwargs)
 
