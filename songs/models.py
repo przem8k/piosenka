@@ -126,11 +126,11 @@ class Song(models.Model):
 
 class EntityContribution(models.Model):
     song = models.ForeignKey(Song)
-    entity = models.ForeignKey(Entity)
-    performed = models.BooleanField()
-    texted = models.BooleanField()
-    translated = models.BooleanField()
-    composed = models.BooleanField()
+    entity = models.ForeignKey(Entity, verbose_name="artysta")
+    performed = models.BooleanField(verbose_name="wyk.")
+    texted = models.BooleanField(verbose_name="tekst")
+    translated = models.BooleanField(verbose_name="tł.")
+    composed = models.BooleanField(verbose_name="muz.")
 
     def __str__(self):
         return self.entity.__str__() + " - " + self.song.title

@@ -28,9 +28,20 @@
         <div class="customwell editwell">
           <h1>Autor lub autorzy</h1>
           {{ entitycontribution.management_form }}
+          <table class="table table-condensed">
+            <tr>
+            {% for field in entitycontribution|first %}
+            <th>{% if not field.is_hidden %}{{ field.label_tag }}{% endif %}</th>
+            {% endfor %}
+            </tr>
           {% for form in entitycontribution %}
-          {{ form }} <br />
+          <tr>
+            {% for field in form %}
+            <td>{{ field }}</td>
+            {% endfor %}
+          </tr>
           {% endfor %}
+        </table>
         </div>
         <div class="customwell editwell">
           <h1>Dodatkowe informacje</h1>
