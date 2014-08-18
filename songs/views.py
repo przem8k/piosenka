@@ -10,7 +10,7 @@ from django.views.generic.edit import CreateView, UpdateView
 from unidecode import unidecode
 
 from artists.models import Entity
-from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin
+from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin, ManageInlineFormsetMixin
 from songs.forms import SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Song, EntityContribution
@@ -89,37 +89,17 @@ class SongView(TemplateView):
                             content_type='application/json')
 
 
-class ManageContributionsMixin(object):
-    def get_contributions_formset(self):
-        if self.request.POST:
-            return ContributionFormSet(self.request.POST, instance=self.object)
-        else:
-            return ContributionFormSet(instance=self.object)
-
-    def get_context_data(self, **kwargs):
-        context = super(ManageContributionsMixin, self).get_context_data(**kwargs)
-        context['contributions'] = self.get_contributions_formset()
-        return context
-
-    def form_valid(self, form):
-        contributions = self.get_contributions_formset()
-        if not contributions.is_valid():
-            raise RuntimeError()
-        contributions.instance = form.instance
-
-        ret = super(ManageContributionsMixin, self).form_valid(form)
-        contributions.save()
-        return ret
-
-
-class AddSong(CheckLoginMixin, ManageContributionsMixin, CreateView):
+class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
     model = Song
     form_class = SongForm
     template_name = "songs/add_edit_song.html"
     success_url = reverse_lazy('songbook')
 
+    def get_managed_formset_class(self):
+        return ContributionFormSet
+
     def form_valid(self, form):
-        contributions = super(AddSong, self).get_contributions_formset()
+        contributions = super(AddSong, self).get_managed_formset()
         if not contributions.is_valid():
             return self.form_invalid(form)
 
@@ -129,7 +109,7 @@ class AddSong(CheckLoginMixin, ManageContributionsMixin, CreateView):
         return super(AddSong, self).form_valid(form)
 
 
-class EditSong(CheckAuthorshipMixin, ManageContributionsMixin, UpdateView):
+class EditSong(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
     model = Song
     form_class = SongForm
     template_name = "songs/add_edit_song.html"
@@ -137,8 +117,11 @@ class EditSong(CheckAuthorshipMixin, ManageContributionsMixin, UpdateView):
     def get_object(self):
         return get_song_by_entity_or_404(self.kwargs['song_slug'], self.kwargs['entity_slug'])
 
+    def get_managed_formset_class(self):
+        return ContributionFormSet
+
     def form_valid(self, form):
-        contributions = super(EditSong, self).get_contributions_formset()
+        contributions = super(EditSong, self).get_managed_formset()
         if not contributions.is_valid():
             return self.form_invalid(form)
         return super(EditSong, self).form_valid(form)

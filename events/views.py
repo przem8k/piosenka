@@ -13,7 +13,7 @@ from artists.models import Entity
 from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm, PerformanceFormSet
 from frontpage.trevor import put_text_in_trevor
-from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin
+from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin, ManageInlineFormsetMixin
 
 
 class VenueDetail(DetailView):
@@ -96,30 +96,7 @@ class EventMonthArchive(MonthArchiveView):
         return add_context_for_menu(context)
 
 
-class ManagePerformancesMixin(object):
-    def get_performances_formset(self):
-        if self.request.POST:
-            return PerformanceFormSet(self.request.POST, instance=self.object)
-        else:
-            return PerformanceFormSet(instance=self.object)
-
-    def get_context_data(self, **kwargs):
-        context = super(ManagePerformancesMixin, self).get_context_data(**kwargs)
-        context['performances'] = self.get_performances_formset()
-        return context
-
-    def form_valid(self, form):
-        performances = self.get_performances_formset()
-        if not performances.is_valid():
-            raise RuntimeError()
-        performances.instance = form.instance
-
-        ret = super(ManagePerformancesMixin, self).form_valid(form)
-        performances.save()
-        return ret
-
-
-class AddEvent(CheckLoginMixin, ManagePerformancesMixin, CreateView):
+class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"
@@ -132,8 +109,11 @@ class AddEvent(CheckLoginMixin, ManagePerformancesMixin, CreateView):
             'description_trevor': put_text_in_trevor(initial_description)
         }
 
+    def get_managed_formset_class(self):
+        return PerformanceFormSet
+
     def form_valid(self, form):
-        performances = super(AddEvent, self).get_performances_formset()
+        performances = super(AddEvent, self).get_managed_formset()
         if not performances.is_valid():
             return self.form_invalid(form)
 
@@ -148,7 +128,7 @@ class AddEvent(CheckLoginMixin, ManagePerformancesMixin, CreateView):
         return super(AddEvent, self).form_valid(form)
 
 
-class EditEvent(CheckAuthorshipMixin, ManagePerformancesMixin, UpdateView):
+class EditEvent(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"
@@ -179,8 +159,11 @@ class EditEvent(CheckAuthorshipMixin, ManagePerformancesMixin, UpdateView):
             'description_trevor': self.object.description_trevor,
         }
 
+    def get_managed_formset_class(self):
+        return PerformanceFormSet
+
     def form_valid(self, form):
-        performances = super(EditEvent, self).get_performances_formset()
+        performances = super(EditEvent, self).get_managed_formset()
         if not performances.is_valid():
             return self.form_invalid(form)
 
