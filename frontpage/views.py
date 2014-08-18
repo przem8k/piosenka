@@ -1,8 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth.views import login, logout
 from django.core.urlresolvers import reverse_lazy
 from django.http import HttpResponseRedirect
+from django.http import Http404
+from django.utils.decorators import method_decorator
 from django.views.generic import View, TemplateView
 from django.views.generic.edit import FormView
 
@@ -11,6 +14,21 @@ from blog.models import Post
 from events.models import Event
 from frontpage.models import CarouselItem
 from songs.models import Song
+
+
+class CheckAuthorshipMixin(object):
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        item = self.get_object()
+        if not (self.request.user.is_staff or self.request.user == item.author):
+            raise Http404
+        return super(CheckAuthorshipMixin, self).dispatch(*args, **kwargs)
+
+
+class CheckLoginMixin(object):
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(CheckLoginMixin, self).dispatch(*args, **kwargs)
 
 
 class SiteIndex(TemplateView):

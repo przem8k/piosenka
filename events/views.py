@@ -1,11 +1,9 @@
 import datetime
 
-from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import DetailView, ListView
 from django.views.generic.dates import MonthArchiveView, DateDetailView
 from django.views.generic.edit import CreateView, UpdateView
-from django.utils.decorators import method_decorator
 from django.utils.text import slugify
 from django.http import Http404
 
@@ -15,6 +13,7 @@ from artists.models import Entity
 from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm, PerformanceFormSet
 from frontpage.trevor import put_text_in_trevor
+from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin
 
 
 class VenueDetail(DetailView):
@@ -120,15 +119,11 @@ class ManagePerformancesMixin(object):
         return ret
 
 
-class AddEvent(ManagePerformancesMixin, CreateView):
+class AddEvent(CheckLoginMixin, ManagePerformancesMixin, CreateView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"
     success_url = reverse_lazy('event_index')
-
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(AddEvent, self).dispatch(*args, **kwargs)
 
     def get_initial(self):
         initial_description = "Tutaj opisz wydarzenie. Zaznacz fragment tekstu aby dodać \
@@ -153,7 +148,7 @@ class AddEvent(ManagePerformancesMixin, CreateView):
         return super(AddEvent, self).form_valid(form)
 
 
-class EditEvent(ManagePerformancesMixin, UpdateView):
+class EditEvent(CheckAuthorshipMixin, ManagePerformancesMixin, UpdateView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"
@@ -175,13 +170,6 @@ class EditEvent(ManagePerformancesMixin, UpdateView):
                                  datetime__year=event_date.year,
                                  datetime__month=event_date.month,
                                  datetime__day=event_date.day)
-
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        event = self.get_object()
-        if not (self.request.user.is_staff or self.request.user == event.author):
-            raise Http404
-        return super(EditEvent, self).dispatch(*args, **kwargs)
 
     def get_initial(self):
         return {
