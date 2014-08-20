@@ -21,11 +21,6 @@ class VenueDetail(DetailView):
     context_object_name = "venue"
     template_name = "events/venue_detail.html"
 
-    def get_context_data(self, **kwargs):
-        context = super(VenueDetail, self).get_context_data(**kwargs)
-        context['model_meta'] = Venue._meta
-        return context
-
 
 class EntityDetail(DetailView):
     model = Entity
