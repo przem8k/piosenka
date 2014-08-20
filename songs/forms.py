@@ -7,6 +7,6 @@ from songs.models import EntityContribution, Song
 class SongForm(forms.ModelForm):
     class Meta:
         model = Song
-        exclude = ()
+        exclude = ('related_songs', 'published', 'slug')
 
 ContributionFormSet = inlineformset_factory(Song, EntityContribution)

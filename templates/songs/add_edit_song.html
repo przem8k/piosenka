@@ -20,28 +20,40 @@
           <div class="alert alert-info" role="alert">
             Bla bla bla.
           </div>
+          {{ form.capo_fret }}
           {{ form.lyrics }}
           {{ form.lyrics.errors }}
         </div>
       </div>
       <div class="col-md-6">
-        <div class="customwell editwell">
+        <div class="customwell auxwell">
           <h1>Autor lub autorzy</h1>
           {{ entitycontribution.management_form }}
-          <table class="table table-condensed">
+          <table class="table table-condensed formset">
             <tr>
-            {% for field in entitycontribution|first %}
-            <th>{% if not field.is_hidden %}{{ field.label_tag }}{% endif %}</th>
-            {% endfor %}
+              <th> </th>
+              <th>Tekst</th>
+              <th>Muzyka</th>
+              <th>Tł.</th>
+              <th>Wyk.</th>
+              <th><span class="glyphicon glyphicon-remove"></span></th>
             </tr>
-          {% for form in entitycontribution %}
-          <tr>
-            {% for field in form %}
-            <td>{{ field }}</td>
+            {% for form in entitycontribution %}
+            <tr>
+              <td>{{ form.song }} {{ form.id }} {{ form.entity }}</td>
+              <td>{{ form.texted }}</td>
+              <td>{{ form.composed }}</td>
+              <td>{{ form.translated }}</td>
+              <td>{{ form.performed }}</td>
+              <td>{{ form.DELETE }}</td>
+            </tr>
             {% endfor %}
-          </tr>
+          </table>
+          {% for dict in entitycontribution.errors %}
+          {% for error in dict.values %}
+          {{ error }}
           {% endfor %}
-        </table>
+          {% endfor %}
         </div>
         <div class="customwell editwell">
           <h1>Dodatkowe informacje</h1>
@@ -52,6 +64,9 @@
             {% include "components/forms/table_field.html" with name="Tytuł oryginalny" field=form.original_title %}
             {% include "components/forms/table_field.html" with name="Link (YouTube)" field=form.link_youtube %}
             {% include "components/forms/table_field.html" with name="Link (Wrzuta)" field=form.link_wrzuta %}
+            {% include "components/forms/table_field.html" with name="Nuty" field=form.score1 %}
+            {% include "components/forms/table_field.html" with name="Nuty (2)" field=form.score2 %}
+            {% include "components/forms/table_field.html" with name="Nuty (3)" field=form.score3 %}
           </table>
         </div>
         <div class="customwell editwell">
@@ -60,5 +75,6 @@
         </div>
       </div>
     </div>
+  </form>
 </div>
 {% endblock content %}
