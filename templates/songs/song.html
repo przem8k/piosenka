@@ -163,17 +163,13 @@
       </div>  
       {% endif %}
 
-      {% if user.is_staff %}
+      {% if can_edit %}
       <div class="customwell auxwell">
         <h1>Administracja</h1>
         <ul class="list-unstyled">
-          {% if song.original_song %}
-          <li><a href="/admin/songs/translation/{{song.id}}/">Edytuj tłumaczenie</a></li>
-          {% else %}
-          <li><a href="/admin/songs/song/{{song.id}}/">Edytuj piosenkę</a></li>
-          {% endif %}
-        </ul> 
-      </div> 
+          <li><a href="{{ song.get_edit_url }}">Edytuj opracowanie</a></li>
+        </ul>
+      </div>
       {% endif %}
     </div>
   </div>

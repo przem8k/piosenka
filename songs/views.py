@@ -75,6 +75,8 @@ class SongView(TemplateView):
             transposition = 0
         context['song'] = song
         context['lyrics'] = render_lyrics(song.lyrics, transposition)
+        context['can_edit'] = self.request.user.is_active and (
+            self.request.user.is_staff or self.request.user == self.object.author)
         return context
 
     def render_to_response(self, context):
