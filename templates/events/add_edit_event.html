@@ -47,9 +47,9 @@ $(document).ready(function(){
   <form action="{% if not object or not object.pk %}{% url 'add_event' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
     <div class="row">
       <div class="col-md-6">
-        <div class="customwell editwell">
+        <div class="customwell auxwell">
           <h1>Wydarzenie</h1>
-          <table>
+          <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Nazwa" field=form.name %}
             {% include "components/forms/table_field.html" with name="Dzień" field=form.date %}
             {% include "components/forms/table_field.html" with name="Godzina" field=form.time %}
@@ -70,7 +70,7 @@ $(document).ready(function(){
         </div>
       </div>
       <div class="col-md-6">
-        <div class="customwell editwell">
+        <div class="customwell auxwell">
           <h1>Miejsce</h1>
           <div class="alert alert-info" role="alert">
             Jeśli miejsce jest już w bazie PzT wybierz je z listy. W przeciwnym
@@ -88,19 +88,29 @@ $(document).ready(function(){
             </table>
           </div>
         </div>
-        <div class="customwell editwell">
+        <div class="customwell auxwell">
           <h1>Wystąpią</h1>
           {{ entityperformance.management_form }}
-          {% for form in entityperformance %}
-          {{ form }} <br />
-          {% endfor %}
+
+          <table class="table table-condensed formset">
+            <tr>
+              <th> </th>
+              <th><span class="glyphicon glyphicon-remove"></span></th>
+            </tr>
+            {% for form in entityperformance %}
+            <tr>
+              <td>{{ form.song }} {{ form.id }} {{ form.entity }}</td>
+              <td>{{ form.DELETE }}</td>
+            </tr>
+            {% endfor %}
+          </table>
         </div>
-        <div class="customwell editwell">
+        <div class="customwell auxwell">
           <h1>Dodatkowe informacje</h1>
           <div class="alert alert-info" role="alert">
             Wszystkie pola w tej sekcji są opcjonalne.
           </div>
-          <table>
+          <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Ceny biletów" field=form.price %}
             {% include "components/forms/table_field.html" with name="Strona WWW" field=form.website %}
           </table>

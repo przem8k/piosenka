@@ -244,6 +244,10 @@ body {
     text-align: center;
 }
 
+.formset select {
+    width: 100%;
+}
+
 .formtable input[type=text], .formtable input[type=url], .formtable input[type=number] {
     width: 100%;
 }
