@@ -10,8 +10,7 @@ class EntityPerformanceInlineAdmin(admin.TabularInline):
 class EventAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ['name']}
     fieldsets = [
-        ('What', {'fields': ['name', 'slug', 'price', 'description',
-                             'description_trevor', 'website']}),
+        ('What', {'fields': ['name', 'slug', 'price', 'description_trevor', 'website']}),
         ('When', {'fields': ['datetime']}),
         ('Where', {'fields': ['venue']}),
     ]
