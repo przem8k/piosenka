@@ -7,20 +7,22 @@
   <form action="{% if not object or not object.pk %}{% url 'add_song' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
     <div class="row">
       <div class="col-md-6">
-        <div class="customwell editwell">
+        <div class="customwell auxwell">
           <h1>Piosenka</h1>
-          <table>
+          <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
             {% include "components/forms/table_field.html" with name="Adnotacja" field=form.disambig %}
           </table>
           {{ form.non_field_errors }}
         </div>
-        <div class="customwell editwell">
+        <div class="customwell auxwell">
           <h1>Opracowanie</h1>
           <div class="alert alert-info" role="alert">
-            Bla bla bla.
+            Wpisz opracowanie według przykładu poniżej.
           </div>
-          {{ form.capo_fret }}
+          <table class="table table-condensed formtable">
+            {% include "components/forms/table_field.html" with name="Próg kapodastra" field=form.capo_fret %}
+          </table>
           {{ form.lyrics }}
           {{ form.lyrics.errors }}
         </div>
@@ -55,18 +57,26 @@
           {% endfor %}
           {% endfor %}
         </div>
-        <div class="customwell editwell">
+        <div class="customwell auxwell">
+          <h1>Nuty</h1>
+          <div class="alert alert-info" role="alert">
+            Opcjonalnie: załaduj jeden lub więcej plik graficzny z nutami do piosenki.
+          </div>
+          <table class="table table-condensed formtable">
+            {% include "components/forms/table_field.html" with name="Plik 1" field=form.score1 %}
+            {% include "components/forms/table_field.html" with name="Plik 2" field=form.score2 %}
+            {% include "components/forms/table_field.html" with name="Plik 3" field=form.score3 %}
+          </table>
+        </div>
+        <div class="customwell auxwell">
           <h1>Dodatkowe informacje</h1>
           <div class="alert alert-info" role="alert">
             Wszystkie pola w tej sekcji są opcjonalne.
           </div>
-          <table>
+          <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Tytuł oryginalny" field=form.original_title %}
             {% include "components/forms/table_field.html" with name="Link (YouTube)" field=form.link_youtube %}
             {% include "components/forms/table_field.html" with name="Link (Wrzuta)" field=form.link_wrzuta %}
-            {% include "components/forms/table_field.html" with name="Nuty" field=form.score1 %}
-            {% include "components/forms/table_field.html" with name="Nuty (2)" field=form.score2 %}
-            {% include "components/forms/table_field.html" with name="Nuty (3)" field=form.score3 %}
           </table>
         </div>
         <div class="customwell editwell">

@@ -132,7 +132,6 @@ body {
     border-top: none;
 }
 
-
 /* thumbnails */
 
 .thumbnail-host {
@@ -243,6 +242,10 @@ body {
 
 .formset th, .formset td {
     text-align: center;
+}
+
+.formtable input[type=text], .formtable input[type=url], .formtable input[type=number] {
+    width: 100%;
 }
 
 /* other */
