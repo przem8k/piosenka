@@ -3,9 +3,11 @@ import datetime
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.utils.text import slugify
 
 from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
+from unidecode import unidecode
 
 from artists.models import Entity
 
@@ -33,6 +35,8 @@ class Song(models.Model):
     original_title = models.CharField(max_length=100, null=True, blank=True)
     slug = models.SlugField(max_length=100, unique=True,
                             help_text="Used in urls, has to be unique.")
+    new_slug = models.SlugField(max_length=100, unique=True, null=True, blank=True,
+                                help_text="Used in urls, has to be unique.")
     link_youtube = models.URLField(null=True, blank=True)
     link_wrzuta = models.URLField(null=True, blank=True)
     score1 = models.ImageField(null=True, blank=True, upload_to='scores')
@@ -83,9 +87,18 @@ class Song(models.Model):
             raise ValidationError(u'Lyrics syntax is incorrect: ' + str(m))
         self.has_extra_chords = contain_extra_chords(parsed_lyrics)
 
+        if not self.head_entity():
+            raise ValidationError("Wskaż co najmniej jednego autora piosenki.")
+
     def save(self, *args, **kwargs):
         if not self.date:
             self.date = datetime.datetime.now()
+        if not self.slug:
+            self.slug = slugify(unidecode(self.title + " " + self.disambig))
+        if not self.new_slug:
+            assert self.head_entity()
+            self.new_slug = slugify(unidecode(
+                self.head_entity().__str() + " " + self.title + " " + self.disambig))
         super(Song, self).save(*args, **kwargs)
 
     def capo(self, transposition=0):
@@ -115,10 +128,13 @@ class Song(models.Model):
 
     def head_entity(self):
         """ any artist or band associated with the song, used to construct default urls """
-        try:
-            return (self.performers() + self.text_authors())[0]
-        except IndexError:
-            return None
+        entities = self.performers() + self.text_authors() + self.composers() + self.translators()
+        for entity in entities:
+            if entity.featured:
+                return entity
+        if entities:
+            return entities[0]
+        return None
 
 
 class EntityContribution(models.Model):

@@ -3,11 +3,8 @@ import json
 from django.core.urlresolvers import reverse_lazy
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
-from django.utils.text import slugify
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView, UpdateView
-
-from unidecode import unidecode
 
 from artists.models import Entity
 from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin, ManageInlineFormsetMixin
@@ -105,8 +102,6 @@ class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         if not contributions.is_valid():
             return self.form_invalid(form)
 
-        form.instance.slug = slugify(unidecode(form.cleaned_data['title'] + " " +
-                                     form.cleaned_data['disambig']))
         form.instance.author = self.request.user
         return super(AddSong, self).form_valid(form)
 
