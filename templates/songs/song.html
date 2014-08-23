@@ -152,17 +152,6 @@
 
       {% include "base/wells/like.html" with like_what="piosenkę" %}
 
-      {% if song.related_songs.count %}
-      <div class="customwell auxwell">
-        <h1>Powiązane piosenki</h1>
-        <ul class="list-unstyled">
-          {% for related_song in song.related_songs.all %}
-          <li><a href="{{related_song.get_absolute_url}}">{{related_song}}</a></li>
-          {% endfor %}
-        </ul> 
-      </div>  
-      {% endif %}
-
       {% if can_edit %}
       <div class="customwell auxwell">
         <h1>Administracja</h1>

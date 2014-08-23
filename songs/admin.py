@@ -15,10 +15,8 @@ class SongAdmin(admin.ModelAdmin):
             {'fields': ['title', 'original_title', 'disambig', 'slug', 'published']}),
         ('Content', {'fields': ['capo_fret', 'lyrics', ]}),
         ('Additional',
-            {'fields': ['link_youtube', 'link_wrzuta', 'score1', 'score2', 'score3',
-                        'related_songs']}),
+            {'fields': ['link_youtube', 'link_wrzuta', 'score1', 'score2', 'score3', ]}),
     ]
-    filter_horizontal = ['related_songs']
 
     def save_model(self, request, obj, form, change):
         if not change:

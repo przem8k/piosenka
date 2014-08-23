@@ -46,9 +46,6 @@ class Song(models.Model):
     has_extra_chords = models.BooleanField(blank=True, editable=False,
                                            help_text="True iff the lyrics contain repeated chords.")
     published = models.BooleanField(default=True, help_text="Unpublish instead of deleting.")
-    related_songs = models.ManyToManyField("self", null=True, blank=True, symmetrical=True,
-                                           help_text="E.g. different translations or different "
-                                                     "compositions of the same text.")
     author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
 
