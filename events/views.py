@@ -116,6 +116,8 @@ class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],
                                                            form.cleaned_data['time'])
         form.instance.author = self.request.user
+        performances.instance = form.save()
+        performances.save()
         return super(AddEvent, self).form_valid(form)
 
 
@@ -163,6 +165,8 @@ class EditEvent(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
         form.instance.venue = venue
         form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],
                                                            form.cleaned_data['time'])
+        performances.instance = form.save()
+        performances.save()
         return super(EditEvent, self).form_valid(form)
 
     def get_success_url(self):

@@ -108,8 +108,9 @@ class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         contributions = super(AddSong, self).get_managed_formset()
         if not contributions.is_valid():
             return self.form_invalid(form)
-
         form.instance.author = self.request.user
+        contributions.instance = form.save()
+        contributions.save()
         return super(AddSong, self).form_valid(form)
 
 
@@ -128,6 +129,8 @@ class EditSong(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
         contributions = super(EditSong, self).get_managed_formset()
         if not contributions.is_valid():
             return self.form_invalid(form)
+        contributions.instance = form.save()
+        contributions.save()
         return super(EditSong, self).form_valid(form)
 
     def get_success_url(self):

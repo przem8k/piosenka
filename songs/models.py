@@ -35,7 +35,7 @@ class Song(models.Model):
     original_title = models.CharField(max_length=100, null=True, blank=True)
     slug = models.SlugField(max_length=100, unique=True, null=True, blank=True,
                             help_text="Old slug, kept to maintain redirects.")
-    new_slug = models.SlugField(max_length=200, unique=True,
+    new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True,
                                 help_text="Used in urls, has to be unique.")
     link_youtube = models.URLField(null=True, blank=True)
     link_wrzuta = models.URLField(null=True, blank=True)
@@ -81,14 +81,12 @@ class Song(models.Model):
             raise ValidationError(u'Lyrics syntax is incorrect: ' + str(m))
         self.has_extra_chords = contain_extra_chords(parsed_lyrics)
 
-        if not self.head_entity():
-            raise ValidationError("Wskaż co najmniej jednego autora piosenki.")
-
     def save(self, *args, **kwargs):
         if not self.date:
             self.date = datetime.datetime.now()
-        if not self.new_slug:
-            assert self.head_entity()
+        if not self.new_slug and self.head_entity():
+            # We need to save a newly added song before saving the contributions. Hence the slug is
+            # not assigned on the first save.
             max_len = Song._meta.get_field('new_slug').max_length
             entity_part = unidecode(self.head_entity().__str__())[:(max_len / 2)]
             song_part = unidecode(self.title + " " + self.disambig)[:(max_len / 2)]

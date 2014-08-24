@@ -45,14 +45,6 @@ class ManageInlineFormsetMixin(object):
         context[self.get_managed_formset_class().model.__name__.lower()] = self.get_managed_formset()
         return context
 
-    def form_valid(self, form):
-        formset = self.get_managed_formset()
-        if not formset.is_valid():
-            raise RuntimeError()
-        formset.instance = form.save()
-        formset.save()
-        return super(ManageInlineFormsetMixin, self).form_valid(form)
-
 
 class SiteIndex(TemplateView):
     template_name = "frontpage/index.html"
