@@ -34,8 +34,8 @@ class Song(models.Model):
                                 help_text="Disambiguation for multiple songs with the same title.")
     original_title = models.CharField(max_length=100, null=True, blank=True)
     slug = models.SlugField(max_length=100, unique=True,
-                            help_text="Used in urls, has to be unique.")
-    new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True,
+                            help_text="Old slug, kept to maintain redirects.")
+    new_slug = models.SlugField(max_length=200, unique=True,
                                 help_text="Used in urls, has to be unique.")
     link_youtube = models.URLField(null=True, blank=True)
     link_wrzuta = models.URLField(null=True, blank=True)

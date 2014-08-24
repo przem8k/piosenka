@@ -12,7 +12,7 @@ class SongAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ['title', 'disambig']}
     fieldsets = [
         ('Identification',
-            {'fields': ['title', 'original_title', 'disambig', 'slug', 'new_slug', 'published']}),
+            {'fields': ['title', 'original_title', 'disambig', 'published']}),
         ('Content', {'fields': ['capo_fret', 'lyrics', ]}),
         ('Additional',
             {'fields': ['link_youtube', 'link_wrzuta', 'score1', 'score2', 'score3', ]}),
