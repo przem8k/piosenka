@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, RedirectView
 
 import frontpage.views
 import songs.obsolete
-import songs.views
+from songs.views import AddSong, EditSong, SongView
 
 admin.autodiscover()
 
@@ -14,8 +14,14 @@ urlpatterns = patterns(
     url(r'^songs/song/(?P<song_id>\d+)/$', songs.obsolete.obsolete_song),
     url(r'^about/$', RedirectView.as_view(url="/o-stronie/")),
     url(r'^facebook/$', RedirectView.as_view(url="/o-stronie/")),
-    #site sections
+    # songbook
     url(r'^spiewnik/', include('songs.urls')),
+    url(r'^opracowanie/dodaj/$', AddSong.as_view(), name="add_song"),
+    url(r'^opracowanie/(?P<song_slug>[-\w]+)/$', SongView.as_view(), name="song"),
+    url(r'^opracowanie/(?P<song_slug>[-\w]+)/transpose/(?P<transposition>\d+)/$',
+        SongView.as_view(), name="song-transposition"),
+    url(r'^opracowanie/(?P<song_slug>[-\w]+)/edytuj/$', EditSong.as_view(), name="edit_song"),
+    # other sections
     url(r'^blog/', include('blog.urls')),
     url(r'^artykuly/', include('articles.urls')),
     url(r'^wydarzenia/', include('events.urls')),

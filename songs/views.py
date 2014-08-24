@@ -3,7 +3,7 @@ import json
 from django.core.urlresolvers import reverse_lazy
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, RedirectView
 from django.views.generic.edit import CreateView, UpdateView
 
 from artists.models import Entity
@@ -20,6 +20,14 @@ def get_song_by_entity_or_404(song_slug, entity_slug):
     if EntityContribution.objects.filter(song=song, entity=entity).count() == 0:
         raise Http404()
     return song
+
+
+class SongRedirectView(RedirectView):
+    """ Displays a songs by default, returns transposed lyrics part in json if asked. """
+
+    def get_redirect_url(**kwargs):
+        song = get_song_by_entity_or_404(kwargs['song_slug'], kwargs['entity_slug'])
+        return song.get_absolute_url()
 
 
 class BaseMenuView(TemplateView):
@@ -56,14 +64,13 @@ class EntityView(BaseMenuView):
         context['entity'] = entity
         return context
 
-
 class SongView(TemplateView):
     """ Displays a songs by default, returns transposed lyrics part in json if asked. """
     template_name = 'songs/song.html'
 
     def get_context_data(self, **kwargs):
         context = super(SongView, self).get_context_data(**kwargs)
-        song = get_song_by_entity_or_404(kwargs['song_slug'], kwargs['entity_slug'])
+        song = get_object_or_404(Song, new_slug=kwargs['song_slug'])
         if 'transposition' in kwargs:
             context['json'] = True
             transposition = int(kwargs['transposition'])
@@ -112,7 +119,7 @@ class EditSong(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
     template_name = "songs/add_edit_song.html"
 
     def get_object(self):
-        return get_song_by_entity_or_404(self.kwargs['song_slug'], self.kwargs['entity_slug'])
+        return get_object_or_404(Song, new_slug=self.kwargs['song_slug'])
 
     def get_managed_formset_class(self):
         return ContributionFormSet

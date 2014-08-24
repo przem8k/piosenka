@@ -64,17 +64,11 @@ class Song(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        """ each Song object may have multiple absolute urls, each for every contributing entity
-            this method returns one of them """
-        return ("song", (), {"entity_slug": self.head_entity().slug, "song_slug": self.slug})
+        return ("song", (), {"song_slug": self.new_slug})
 
     @models.permalink
     def get_edit_url(self):
-        return ('edit_song', (), {"entity_slug": self.head_entity().slug, "song_slug": self.slug})
-
-    @models.permalink
-    def get_absolute_url_print(self):
-        return ("song-print", (), {"entity_slug": self.head_entity().slug, "song_slug": self.slug})
+        return ('edit_song', (), {"song_slug": self.new_slug})
 
     def clean(self):
         try:

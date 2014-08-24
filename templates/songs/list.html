@@ -14,24 +14,22 @@
       <div class="customwell contentwell">
         <h1 class="remove-top-margin">{{ entity }}</h1>
 
-        {% if songs %}
         <div class="row">
           {% for row in songs|rows:2 %}
           <div class="col-md-6">
             <ul class="list-unstyled">
               {% for song in row %}
-              <li><a href="{% url "song" entity.slug song.slug %}" {% if not song.published %}style="color: gray;"{% endif %}>{{ song|truncatechars:50 }}</a>
+              <li><a href="{{ song.get_absolute_url }}">{{ song|truncatechars:50 }}</a>
               </li>
               {% endfor %}
             </ul>
           </div>
-          {% endfor %}               
+          {% endfor %}
         </div>
-        {% endif %}
       </div>
       <hr />
     </div>
-  </div>    	
+  </div>
   {% include "songs/menu.html" %}
 </div>
 
