@@ -33,7 +33,7 @@ class Song(models.Model):
     disambig = models.CharField(max_length=100, null=True, blank=True,
                                 help_text="Disambiguation for multiple songs with the same title.")
     original_title = models.CharField(max_length=100, null=True, blank=True)
-    slug = models.SlugField(max_length=100, unique=True,
+    slug = models.SlugField(max_length=100, unique=True, null=True, blank=True,
                             help_text="Old slug, kept to maintain redirects.")
     new_slug = models.SlugField(max_length=200, unique=True,
                                 help_text="Used in urls, has to be unique.")
@@ -87,8 +87,6 @@ class Song(models.Model):
     def save(self, *args, **kwargs):
         if not self.date:
             self.date = datetime.datetime.now()
-        if not self.slug:
-            self.slug = slugify(unidecode(self.title + " " + self.disambig))
         if not self.new_slug:
             assert self.head_entity()
             entity_part = unidecode(self.head_entity().__str__())[:90]
