@@ -88,8 +88,8 @@ class Song(models.Model):
             # We need to save a newly added song before saving the contributions. Hence the slug is
             # not assigned on the first save.
             max_len = Song._meta.get_field('new_slug').max_length
-            entity_part = unidecode(self.head_entity().__str__())[:(max_len / 2)]
-            song_part = unidecode(self.title + " " + self.disambig)[:(max_len / 2)]
+            entity_part = unidecode(self.head_entity().__str__())[:(max_len // 2)]
+            song_part = unidecode(self.title + " " + self.disambig)[:(max_len // 2)]
             self.new_slug = slugify(entity_part + " " + song_part)[:max_len]
         super(Song, self).save(*args, **kwargs)
 
