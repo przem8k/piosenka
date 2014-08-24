@@ -35,7 +35,7 @@ class Song(models.Model):
     original_title = models.CharField(max_length=100, null=True, blank=True)
     slug = models.SlugField(max_length=100, unique=True,
                             help_text="Used in urls, has to be unique.")
-    new_slug = models.SlugField(max_length=100, unique=True, null=True, blank=True,
+    new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True,
                                 help_text="Used in urls, has to be unique.")
     link_youtube = models.URLField(null=True, blank=True)
     link_wrzuta = models.URLField(null=True, blank=True)
@@ -97,8 +97,9 @@ class Song(models.Model):
             self.slug = slugify(unidecode(self.title + " " + self.disambig))
         if not self.new_slug:
             assert self.head_entity()
-            self.new_slug = slugify(unidecode(
-                self.head_entity().__str() + " " + self.title + " " + self.disambig))
+            entity_part = unidecode(self.head_entity().__str__())[:90]
+            song_part = unidecode(self.title + " " + self.disambig)[:90]
+            self.new_slug = slugify(entity_part + " " + song_part)
         super(Song, self).save(*args, **kwargs)
 
     def capo(self, transposition=0):
@@ -128,7 +129,7 @@ class Song(models.Model):
 
     def head_entity(self):
         """ any artist or band associated with the song, used to construct default urls """
-        entities = self.performers() + self.text_authors() + self.composers() + self.translators()
+        entities = self.text_authors() + self.performers() + self.composers() + self.translators()
         for entity in entities:
             if entity.featured:
                 return entity
