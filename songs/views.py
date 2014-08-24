@@ -25,7 +25,7 @@ def get_song_by_entity_or_404(song_slug, entity_slug):
 class SongRedirectView(RedirectView):
     """ Displays a songs by default, returns transposed lyrics part in json if asked. """
 
-    def get_redirect_url(**kwargs):
+    def get_redirect_url(self, *args, **kwargs):
         song = get_song_by_entity_or_404(kwargs['song_slug'], kwargs['entity_slug'])
         return song.get_absolute_url()
 
