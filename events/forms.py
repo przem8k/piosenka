@@ -1,8 +1,5 @@
 from django import forms
 from django.forms.models import inlineformset_factory
-from django.utils.text import slugify
-
-from unidecode import unidecode
 
 from events.models import EntityPerformance, Event, Venue
 
@@ -51,10 +48,9 @@ class EventForm(forms.ModelForm):
                 venue.name = name
                 venue.town = town
                 venue.street = street
-                venue.slug = slugify(unidecode(venue.name) + " " + unidecode(venue.town))
                 try:
                     venue.clean()
-                except forms.ValidationError as err:
+                except forms.ValidationError:
                     geo_msg = "Nie udało się zlokalizować adresu."
                     self._errors['venue_street'] = self.error_class([geo_msg])
                     del cleaned_data['venue_street']
@@ -66,6 +62,7 @@ class EventForm(forms.ModelForm):
 
     class Meta:
         model = Event
-        exclude = ('venue', 'slug', 'datetime', 'description', 'description_html', 'published', 'author', 'pub_date')
+        exclude = ('venue', 'slug', 'datetime', 'description', 'description_html', 'published',
+                   'author', 'pub_date')
 
 PerformanceFormSet = inlineformset_factory(Event, EntityPerformance)

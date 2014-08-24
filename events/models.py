@@ -3,11 +3,12 @@ from datetime import datetime
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.utils.text import slugify
+
+from unidecode import unidecode
 
 from artists.models import Entity
 from frontpage.trevor import render_trevor
-
-from markdown import markdown
 
 
 class CurrentEventManager(models.Manager):
@@ -33,6 +34,12 @@ class Venue(models.Model):
 
     def __str__(self):
         return "%s - %s" % (self.town, self.name)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            max_len = Venue._meta.get_field('slug').max_length
+            self.slug = slugify(unidecode(self.name + " " + self.town))[:max_len]
+        super(Venue, self).save(*args, **kwargs)
 
     def clean(self):
         super(Venue, self).clean()
@@ -90,9 +97,14 @@ class Event(models.Model):
         return "%s - %s (%s)" % (self.datetime.strftime("%d.%m.%Y"), self.name, self.venue.town)
 
     def save(self, *args, **kwargs):
-        self.description_html = render_trevor(self.description_trevor)
+        if not self.slug:
+            assert self.name
+            assert self.venue.town
+            max_len = Event._meta.get_field('slug').max_length
+            self.slug = slugify(unidecode(self.name + " " + self.venue.town))[:max_len]
         if not self.pub_date:
             self.pub_date = datetime.now()
+        self.description_html = render_trevor(self.description_trevor)
         super(Event, self).save(*args, **kwargs)
 
     @models.permalink

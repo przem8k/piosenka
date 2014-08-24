@@ -4,10 +4,8 @@ from django.core.urlresolvers import reverse_lazy
 from django.views.generic import DetailView, ListView
 from django.views.generic.dates import MonthArchiveView, DateDetailView
 from django.views.generic.edit import CreateView, UpdateView
-from django.utils.text import slugify
 from django.http import Http404
 
-from unidecode import unidecode
 
 from artists.models import Entity
 from events.models import EntityPerformance, Event, Venue
@@ -117,9 +115,7 @@ class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         form.instance.venue = venue
         form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],
                                                            form.cleaned_data['time'])
-        form.instance.slug = slugify(unidecode(form.cleaned_data['name']))
         form.instance.author = self.request.user
-
         return super(AddEvent, self).form_valid(form)
 
 

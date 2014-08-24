@@ -89,9 +89,10 @@ class Song(models.Model):
             self.date = datetime.datetime.now()
         if not self.new_slug:
             assert self.head_entity()
-            entity_part = unidecode(self.head_entity().__str__())[:90]
-            song_part = unidecode(self.title + " " + self.disambig)[:90]
-            self.new_slug = slugify(entity_part + " " + song_part)
+            max_len = Song._meta.get_field('new_slug').max_length
+            entity_part = unidecode(self.head_entity().__str__())[:(max_len / 2)]
+            song_part = unidecode(self.title + " " + self.disambig)[:(max_len / 2)]
+            self.new_slug = slugify(entity_part + " " + song_part)[:max_len]
         super(Song, self).save(*args, **kwargs)
 
     def capo(self, transposition=0):
