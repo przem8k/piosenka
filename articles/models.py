@@ -1,11 +1,13 @@
 import datetime
 
-from django.db import models
 from django.contrib.auth.models import User
+from django.db import models
+from django.utils.text import slugify
 
-from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
+from easy_thumbnails.signals import saved_file
 from markdown import markdown
+from unidecode import unidecode
 
 saved_file.connect(generate_aliases)
 
@@ -58,6 +60,10 @@ class Article(models.Model):
         self.lead_text_html = markdown(self.lead_text, safe_mode='escape')
         self.main_text_html = markdown(self.main_text)
         self.cover_credits_html = markdown(self.cover_credits, safe_mode='escape')
+        if not self.slug:
+            assert self.title
+            max_len = Article._meta.get_field('slug').max_length
+            self.slug = slugify(unidecode(self.title))[:max_len]
         if not self.date:
             self.date = datetime.datetime.now()
         super(Article, self).save(*args, **kwargs)

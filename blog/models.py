@@ -1,9 +1,11 @@
 import datetime
 
-from django.db import models
 from django.contrib.auth.models import User
+from django.db import models
+from django.utils.text import slugify
 
 from markdown import markdown
+from unidecode import unidecode
 
 
 class PublishedPostManager(models.Manager):
@@ -33,10 +35,14 @@ class Post(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
-        self.post_html = markdown(self.post, safe_mode='escape')
-        self.more_html = markdown(self.more, safe_mode='escape')
+        if not self.slug:
+            assert self.title
+            max_len = Post._meta.get_field('slug').max_length
+            self.slug = slugify(unidecode(self.title))[:max_len]
         if not self.date:
             self.date = datetime.datetime.now()
+        self.post_html = markdown(self.post, safe_mode='escape')
+        self.more_html = markdown(self.more, safe_mode='escape')
         super(Post, self).save(*args, **kwargs)
 
     @models.permalink
