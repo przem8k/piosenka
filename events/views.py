@@ -126,10 +126,6 @@ class EditEvent(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
     form_class = EventForm
     template_name = "events/add_edit_event.html"
 
-    date_field = "datetime"
-    month_format = "%m"
-    allow_future = True
-
     def get_object(self):
         import datetime
         import time
