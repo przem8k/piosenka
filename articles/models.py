@@ -6,8 +6,9 @@ from django.utils.text import slugify
 
 from easy_thumbnails.signal_handlers import generate_aliases
 from easy_thumbnails.signals import saved_file
-from markdown import markdown
 from unidecode import unidecode
+
+from frontpage.trevor import render_trevor
 
 saved_file.connect(generate_aliases)
 
@@ -38,9 +39,11 @@ class Article(models.Model):
     category = models.ForeignKey(ArticleCategory, null=True, blank=True)
     date = models.DateTimeField(editable=False, help_text="Publication date.")
     lead_text = models.TextField(help_text="Introductory paragraph, written in Markdown.")
-    lead_text_html = models.TextField(null=True, blank=True, editable=False)
+    lead_text_trevor = models.TextField()
+    lead_text_html = models.TextField(editable=False)
     main_text = models.TextField(help_text="Rest of the article, written in Markdown.")
-    main_text_html = models.TextField(null=True, blank=True, editable=False)
+    main_text_trevor = models.TextField()
+    main_text_html = models.TextField(editable=False)
     published = models.BooleanField(default=True)
     author = models.ForeignKey(User, editable=False)
     cover_image = models.ImageField(null=True, blank=True, upload_to='article_covers',
@@ -48,6 +51,7 @@ class Article(models.Model):
     cover_credits = models.TextField(null=True, blank=True,
                                      help_text="Thank you / credit notes about the author of "
                                                "the cover picture, written in Markdown.")
+    cover_credits_trevor = models.TextField()
     cover_credits_html = models.TextField(null=True, blank=True, editable=False)
 
     class Meta:
@@ -57,15 +61,15 @@ class Article(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
-        self.lead_text_html = markdown(self.lead_text, safe_mode='escape')
-        self.main_text_html = markdown(self.main_text)
-        self.cover_credits_html = markdown(self.cover_credits, safe_mode='escape')
         if not self.slug:
             assert self.title
             max_len = Article._meta.get_field('slug').max_length
             self.slug = slugify(unidecode(self.title))[:max_len]
         if not self.date:
             self.date = datetime.datetime.now()
+        self.cover_credits_html = render_trevor(self.cover_credits_trevor)
+        self.lead_text_html = render_trevor(self.lead_text_trevor)
+        self.main_text_html = render_trevor(self.main_text_trevor)
         super(Article, self).save(*args, **kwargs)
 
     @models.permalink

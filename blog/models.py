@@ -4,8 +4,9 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils.text import slugify
 
-from markdown import markdown
 from unidecode import unidecode
+
+from frontpage.trevor import render_trevor
 
 
 class PublishedPostManager(models.Manager):
@@ -22,9 +23,11 @@ class Post(models.Model):
     author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
     post = models.TextField(help_text="Post or its introductory part, written in Markdown.")
+    post_trevor = models.TextField()
     post_html = models.TextField(null=True, blank=True, editable=False)
     more = models.TextField(blank=True, null=True,
                             help_text="Optional rest of the post, written in Markdown.")
+    more_trevor = models.TextField()
     more_html = models.TextField(null=True, blank=True, editable=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published posts")
 
@@ -41,8 +44,8 @@ class Post(models.Model):
             self.slug = slugify(unidecode(self.title))[:max_len]
         if not self.date:
             self.date = datetime.datetime.now()
-        self.post_html = markdown(self.post, safe_mode='escape')
-        self.more_html = markdown(self.more, safe_mode='escape')
+        self.post_html = render_trevor(self.post_trevor)
+        self.more_html = render_trevor(self.more_trevor)
         super(Post, self).save(*args, **kwargs)
 
     @models.permalink
