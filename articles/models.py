@@ -77,3 +77,9 @@ class Article(models.Model):
         return('article', (), {
             'slug': self.slug,
         })
+
+    @models.permalink
+    def get_edit_url(self):
+        return('edit_article', (), {
+            'slug': self.slug,
+        })
