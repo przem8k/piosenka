@@ -13,18 +13,6 @@ from frontpage.trevor import render_trevor
 saved_file.connect(generate_aliases)
 
 
-class ArticleCategory(models.Model):
-    name = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100)
-
-    class Meta:
-        ordering = ["name"]
-        verbose_name_plural = "ArticleCategories"
-
-    def __str__(self):
-        return self.name
-
-
 class PublishedArticleManager(models.Manager):
     def get_queryset(self):
         return super(PublishedArticleManager, self).get_queryset().filter(published=True)
@@ -36,7 +24,6 @@ class Article(models.Model):
 
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
-    category = models.ForeignKey(ArticleCategory, null=True, blank=True)
     date = models.DateTimeField(editable=False, help_text="Publication date.")
     lead_text = models.TextField(null=True, blank=True, help_text="Introductory paragraph, written in Markdown.")
     lead_text_trevor = models.TextField()

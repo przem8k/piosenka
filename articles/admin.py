@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from articles.models import Article, ArticleCategory
+from articles.models import Article
 
 class ArticleAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ['title']}
@@ -10,8 +10,4 @@ class ArticleAdmin(admin.ModelAdmin):
             obj.author = request.user
         obj.save()
 
-class ArticleCategoryAdmin(admin.ModelAdmin):
-    pass
-
 admin.site.register(Article, ArticleAdmin)
-admin.site.register(ArticleCategory, ArticleCategoryAdmin)
