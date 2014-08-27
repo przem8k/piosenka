@@ -63,9 +63,9 @@ class EditPost(CheckAuthorshipMixin, UpdateView):
         date_stamp = time.strptime(year+month+day, "%Y%m%d")
         event_date = datetime.date(*date_stamp[:3])
         return Post.objects.get(slug=slug,
-                                datetime__year=event_date.year,
-                                datetime__month=event_date.month,
-                                datetime__day=event_date.day)
+                                date__year=event_date.year,
+                                date__month=event_date.month,
+                                date__day=event_date.day)
 
     def get_success_url(self):
         return self.object.get_absolute_url()
