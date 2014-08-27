@@ -38,7 +38,7 @@ class Article(models.Model):
     cover_credits = models.TextField(null=True, blank=True,
                                      help_text="Thank you / credit notes about the author of "
                                                "the cover picture, written in Markdown.")
-    cover_credits_trevor = models.TextField()
+    cover_credits_trevor = models.TextField(null=True, blank=True)
     cover_credits_html = models.TextField(null=True, blank=True, editable=False)
 
     class Meta:
