@@ -45,7 +45,8 @@ class Post(models.Model):
         if not self.date:
             self.date = datetime.datetime.now()
         self.post_html = render_trevor(self.post_trevor)
-        self.more_html = render_trevor(self.more_trevor)
+        if self.more_trevor:
+            self.more_html = render_trevor(self.more_trevor)
         super(Post, self).save(*args, **kwargs)
 
     @models.permalink

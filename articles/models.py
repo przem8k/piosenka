@@ -67,9 +67,10 @@ class Article(models.Model):
             self.slug = slugify(unidecode(self.title))[:max_len]
         if not self.date:
             self.date = datetime.datetime.now()
-        self.cover_credits_html = render_trevor(self.cover_credits_trevor)
         self.lead_text_html = render_trevor(self.lead_text_trevor)
         self.main_text_html = render_trevor(self.main_text_trevor)
+        if self.cover_credits_trevor:
+            self.cover_credits_html = render_trevor(self.cover_credits_trevor)
         super(Article, self).save(*args, **kwargs)
 
     @models.permalink
