@@ -22,12 +22,12 @@ class Post(models.Model):
     slug = models.SlugField(max_length=100, null=True)
     author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
-    post = models.TextField(help_text="Post or its introductory part, written in Markdown.")
+    post = models.TextField(null=True, blank=True, help_text="Post or its introductory part, written in Markdown.")
     post_trevor = models.TextField()
     post_html = models.TextField(null=True, blank=True, editable=False)
     more = models.TextField(blank=True, null=True,
                             help_text="Optional rest of the post, written in Markdown.")
-    more_trevor = models.TextField()
+    more_trevor = models.TextField(null=True, blank=True)
     more_html = models.TextField(null=True, blank=True, editable=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published posts")
 
