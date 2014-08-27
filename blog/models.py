@@ -56,3 +56,12 @@ class Post(models.Model):
             'day': self.date.strftime("%d"),
             'slug': self.slug
         })
+
+    @models.permalink
+    def get_edit_url(self):
+        return ('edit_post', (), {
+            'year': self.date.strftime("%Y"),
+            'month': self.date.strftime("%m"),
+            'day': self.date.strftime("%d"),
+            'slug': self.slug
+        })

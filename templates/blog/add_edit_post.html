@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load compressed %}
+
+{% block title %}{% if post %}Edytuj post: {{ post }}{% else %}Dodaj post{% endif %}{% endblock title %}
+
+{% block extra-css %}
+{% compressed_css 'sirtrevor' %}
+{% endblock %}
+
+{% block extra-scripts %}
+{% compressed_js 'sirtrevor' %}
+
+<script>
+$(document).ready(function(){
+    new SirTrevor.Editor({
+      el: $('#id_post_trevor'),
+      blockTypes: ["Text"],
+      blockLimit: 1,
+      defaultType: "Text",
+    });
+    new SirTrevor.Editor({
+      el: $('#id_more_trevor'),
+      blockTypes: ["Text", "List"],
+      defaultType: "Text",
+    });
+});
+</script>
+{% endblock extra-scripts %}
+
+{% block content %}
+{% include "events/top.html" %}
+<div class="container main">
+  <form action="{% if not object or not object.pk %}{% url 'add_post' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
+  <div class="row">
+    <div class="col-md-6">
+      <div class="customwell auxwell">
+        <h1>Post</h1>
+          {{ form.post_trevor }}
+          {{ form.more_trevor }}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="customwell auxwell">
+        <h1>Gotowe</h1>
+        <input type="submit" value="{% if not object or not object.pk %}Dodaj{% else %}Zapisz{% endif %}" style="width: 100%"/>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>
+{% endblock content %}
