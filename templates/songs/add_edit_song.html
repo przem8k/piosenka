@@ -4,7 +4,7 @@
 {% include "songs/top.html" %}
 
 <div class="container main">
-  <form action="{% if not object or not object.pk %}{% url 'add_song' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
+  <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_song' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
     <div class="row">
       <div class="col-md-6">
         <div class="customwell auxwell">
