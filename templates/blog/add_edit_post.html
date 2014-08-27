@@ -21,7 +21,6 @@ $(document).ready(function(){
     new SirTrevor.Editor({
       el: $('#id_more_trevor'),
       blockTypes: ["Text", "List"],
-      defaultType: "Text",
     });
 });
 </script>
@@ -35,6 +34,9 @@ $(document).ready(function(){
     <div class="col-md-6">
       <div class="customwell auxwell">
         <h1>Post</h1>
+          <table class="table table-condensed formtable">
+            {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
+          </table>
           {{ form.post_trevor }}
           {{ form.more_trevor }}
       </div>

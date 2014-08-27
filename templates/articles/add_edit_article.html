@@ -41,6 +41,15 @@ $(document).ready(function(){
     <div class="col-md-6">
       <div class="customwell auxwell">
         <h1>Artykuł</h1>
+          <table class="table table-condensed formtable">
+            {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
+          </table>
+          <div class="alert alert-info" role="alert">
+            Treść artykułu podzielona jest na dwie części. Pierwszy akapit
+            powinien mieć maksymalnie dwa zdania - będzie widoczny w menu
+            wszystkich artykułów. Pozostałą część tekstu umieść w części
+            głównej poniżej.
+          </div>
           {{ form.lead_text_trevor }}
           {{ form.main_text_trevor }}
       </div>
@@ -48,6 +57,11 @@ $(document).ready(function(){
     <div class="col-md-6">
       <div class="customwell auxwell">
         <h1>Zdjęcie</h1>
+          <div class="alert alert-info" role="alert">
+            Każdy artykuł musi posiadać zdjęcie lub grafikę okładkową.  Poniżej
+            możesz wpisać adnotację o źródle zdjęcia. Np. "Zdjęcie: Przemysław
+            Lipski".
+          </div>
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Plik" field=form.cover_image %}
           </table>

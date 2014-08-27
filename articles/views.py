@@ -5,6 +5,7 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from articles.forms import ArticleForm
 from articles.models import Article
+from frontpage.trevor import put_text_in_trevor
 from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin
 
 
@@ -33,7 +34,17 @@ class AddArticle(CheckLoginMixin, CreateView):
     model = Article
     form_class = ArticleForm
     template_name = "articles/add_edit_article.html"
+
     success_url = reverse_lazy('articles')
+    def get_initial(self):
+        initial_lead = "Tu wpisz **lead** wydarzenia - jedno lub dwuzdaniowy akapit otwierający tekst."
+        initial_main = "Tu wpisz resztę artykułu."
+        initial_credits = "Tu wpisz adnotację o źródle zdjęcia."
+        return {
+            'lead_text_trevor': put_text_in_trevor(initial_lead),
+            'main_text_trevor': put_text_in_trevor(initial_main),
+            'cover_credits_trevor': put_text_in_trevor(initial_credits)
+        }
 
     def form_valid(self, form):
         form.instance.author = self.request.user
