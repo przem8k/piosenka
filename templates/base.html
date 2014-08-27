@@ -75,7 +75,11 @@
             <span class="glyphicon glyphicon-user"></span> {{ user }}
           </a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="{% url "goodbye" %}">Wyloguj</a></li>
+            <li><a href="{% url 'add_article' %}">Dodaj artykuł</a></li>
+            <li><a href="{% url 'add_song' %}">Dodaj piosenkę</a></li>
+            <li><a href="{% url 'add_post' %}">Dodaj post</a></li>
+            <li><a href="{% url 'add_event' %}">Dodaj wydarzenie</a></li>
+            <li><a href="{% url 'goodbye' %}"><b>Wyloguj</b></a></li>
           </ul>
           {% endif %}
           </li>
