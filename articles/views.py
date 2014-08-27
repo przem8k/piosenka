@@ -24,7 +24,8 @@ class ArticleView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(DetailView, self).get_context_data(**kwargs)
-        context['model_meta'] = Article._meta
+        context['can_edit'] = self.request.user.is_active and (
+            self.request.user.is_staff or self.request.user == self.object.author)
         return context
 
 

@@ -31,7 +31,8 @@ class PostDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(PostDetail, self).get_context_data(**kwargs)
-        context['model_meta'] = Post._meta
+        context['can_edit'] = self.request.user.is_active and (
+            self.request.user.is_staff or self.request.user == self.object.author)
         context['all_posts'] = Post.objects.all().order_by('-date')
         return context
 

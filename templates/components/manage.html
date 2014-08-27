@@ -1,0 +1,8 @@
+{% if can_edit %}
+<div class="customwell auxwell">
+  <h1>Administracja</h1>
+  <ul class="list-unstyled">
+    <li><a href="{{ item.get_edit_url }}">Edytuj {{manage_what}}</a></li>
+  </ul> 
+</div> 
+{% endif %}
