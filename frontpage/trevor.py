@@ -11,6 +11,8 @@ def render_trevor(trevor_data):
             output += text_block(block['data'])
         elif block['type'] == 'list':
             output += list_block(block['data'])
+        elif block['type'] == 'quote':
+            output += quote_block(block['data'])
         else:
             raise RuntimeError("Cannot render an unsupported sirtrevor block.")
 
@@ -21,6 +23,13 @@ def text_block(data):
 
 def list_block(data):
     return markdown(data['text'], safe_mode='escape')
+
+def quote_block(data):
+    crazy_unique_tag = "CrazyUniqueTag"
+    # Append the tag before line breaks.
+    text = data['text'].replace("\n", crazy_unique_tag + "\n")
+    return markdown(text, safe_mode='escape').replace(crazy_unique_tag, "<br />")
+
 
 def put_text_in_trevor(text):
     return json.dumps({

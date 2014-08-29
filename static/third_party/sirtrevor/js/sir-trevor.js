@@ -271,7 +271,6 @@
         },
         quote: {
           'title': "Quote",
-          'credit_field': "Credit"
         },
         image: {
           'title': "Image",
@@ -1849,10 +1848,7 @@
   SirTrevor.Blocks.Quote = (function(){
   
     var template = _.template([
-      '<blockquote class="st-required st-text-block" contenteditable="true"></blockquote>',
-      '<label class="st-input-label"> <%= i18n.t("blocks:quote:credit_field") %></label>',
-      '<input maxlength="140" name="cite" placeholder="<%= i18n.t("blocks:quote:credit_field") %>"',
-      ' class="st-input-string st-required js-cite-input" type="text" />'
+      '<blockquote class="st-required st-text-block" contenteditable="true"></blockquote>'
     ].join("\n"));
   
     return SirTrevor.Block.extend({
@@ -1869,7 +1865,6 @@
   
       loadData: function(data){
         this.getTextBlock().html(SirTrevor.toHTML(data.text, this.type));
-        this.$('.js-cite-input').val(data.cite);
       },
   
       toMarkdown: function(markdown) {

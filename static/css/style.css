@@ -199,10 +199,10 @@ body {
     padding-top: 20px;
 }
 
-.custom-blockquote {
+blockquote, .contentwell blockquote, .auxwell blockquote, .custom-blockquote {
     padding: 0 0 0 5px;
     margin: 0 0 20px 5px;
-    border-left: 2px solid #0088cc;
+    border-left: 2px solid #0088cc !important;
     font-size: 14px;
 }
 
