@@ -93,7 +93,6 @@ class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"
-    success_url = reverse_lazy('event_index')
 
     def get_initial(self):
         initial_description = "Tutaj opisz wydarzenie. Zaznacz fragment tekstu aby dodać \
@@ -119,6 +118,9 @@ class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         performances.instance = form.save()
         performances.save()
         return super(AddEvent, self).form_valid(form)
+
+    def get_success_url(self):
+        return self.object.get_absolute_url()
 
 
 class EditEvent(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):

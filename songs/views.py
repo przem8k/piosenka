@@ -121,7 +121,6 @@ class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
     model = Song
     form_class = SongForm
     template_name = "songs/add_edit_song.html"
-    success_url = reverse_lazy('songbook')
 
     def get_initial(self):
         return {
@@ -139,6 +138,9 @@ class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         contributions.instance = form.save()
         contributions.save()
         return super(AddSong, self).form_valid(form)
+
+    def get_success_url(self):
+        return self.object.get_absolute_url()
 
 
 class EditSong(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):

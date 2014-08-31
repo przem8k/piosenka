@@ -41,11 +41,13 @@ class AddPost(CheckLoginMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = "blog/add_edit_post.html"
-    success_url = reverse_lazy('posts')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super(AddPost, self).form_valid(form)
+
+    def get_success_url(self):
+        return self.object.get_absolute_url()
 
 
 class EditPost(CheckAuthorshipMixin, UpdateView):

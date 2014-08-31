@@ -35,7 +35,6 @@ class AddArticle(CheckLoginMixin, CreateView):
     form_class = ArticleForm
     template_name = "articles/add_edit_article.html"
 
-    success_url = reverse_lazy('articles')
     def get_initial(self):
         initial_lead = "Tu wpisz **lead** artykułu - jedno lub dwa zdania otwierające tekst."
         initial_main = "Tu wpisz resztę artykułu."
@@ -48,6 +47,9 @@ class AddArticle(CheckLoginMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super(AddArticle, self).form_valid(form)
+
+    def get_success_url(self):
+        return self.object.get_absolute_url()
 
 
 class EditArticle(CheckAuthorshipMixin, UpdateView):
