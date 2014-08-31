@@ -64,4 +64,4 @@ class EventForm(forms.ModelForm):
         model = Event
         exclude = ('venue', 'datetime')
 
-PerformanceFormSet = inlineformset_factory(Event, EntityPerformance)
+PerformanceFormSet = inlineformset_factory(Event, EntityPerformance, exclude=[])
