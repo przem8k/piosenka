@@ -25,17 +25,18 @@ class Article(models.Model):
     title = models.CharField(max_length=100,
                              help_text="Tytuł artykułu, np. 'IX Festiwal Piosenki Poetyckiej im. "
                                        "Jacka Kaczmarskiego \"Nadzieja\"'.")
-    slug = models.SlugField(max_length=100)
-    date = models.DateTimeField(editable=False, help_text="Publication date.")
     lead_text_trevor = models.TextField()
-    lead_text_html = models.TextField(editable=False)
     main_text_trevor = models.TextField()
-    main_text_html = models.TextField(editable=False)
-    published = models.BooleanField(default=True)
-    author = models.ForeignKey(User, editable=False)
     cover_image = models.ImageField(null=True, blank=True, upload_to='article_covers',
                                     help_text="Main illustration for the article.")
     cover_credits_trevor = models.TextField(null=True, blank=True)
+
+    slug = models.SlugField(max_length=100, editable=False)
+    author = models.ForeignKey(User, editable=False)
+    date = models.DateTimeField(editable=False)
+    published = models.BooleanField(default=True, editable=False)
+    lead_text_html = models.TextField(editable=False)
+    main_text_html = models.TextField(editable=False)
     cover_credits_html = models.TextField(null=True, blank=True, editable=False)
 
     class Meta:
