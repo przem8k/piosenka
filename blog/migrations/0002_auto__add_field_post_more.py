@@ -8,32 +8,14 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         
-        # Adding model 'Category'
-        db.create_table('blog_category', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
-        ))
-        db.send_create_signal('blog', ['Category'])
-
-        # Adding model 'Post'
-        db.create_table('blog_post', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('author', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
-            ('date', self.gf('django.db.models.fields.DateTimeField')()),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('category', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['blog.Category'])),
-            ('post', self.gf('django.db.models.fields.TextField')()),
-        ))
-        db.send_create_signal('blog', ['Post'])
+        # Adding field 'Post.more'
+        db.add_column('blog_post', 'more', self.gf('django.db.models.fields.TextField')(null=True, blank=True), keep_default=False)
 
 
     def backwards(self, orm):
         
-        # Deleting model 'Category'
-        db.delete_table('blog_category')
-
-        # Deleting model 'Post'
-        db.delete_table('blog_post')
+        # Deleting field 'Post.more'
+        db.delete_column('blog_post', 'more')
 
 
     models = {
@@ -77,6 +59,7 @@ class Migration(SchemaMigration):
             'category': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['blog.Category']"}),
             'date': ('django.db.models.fields.DateTimeField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'more': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'post': ('django.db.models.fields.TextField', [], {}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },

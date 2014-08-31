@@ -150,6 +150,7 @@ INSTALLED_APPS = (
     'events',
     'frontpage',
     'dxlibrary',
+    'south',
     'pipeline',
 )
 

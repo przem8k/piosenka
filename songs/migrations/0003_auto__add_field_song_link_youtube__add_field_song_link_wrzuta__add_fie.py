@@ -8,53 +8,38 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         
-        # Adding model 'Song'
-        db.create_table('songs_song', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=50)),
-            ('disambig', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('created', self.gf('django.db.models.fields.DateField')(null=True, blank=True)),
-            ('description', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('remarks', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('key', self.gf('django.db.models.fields.CharField')(max_length=100, null=True, blank=True)),
-            ('lyrics', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('externals', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('original', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['songs.Song'], null=True, blank=True)),
-        ))
-        db.send_create_signal('songs', ['Song'])
+        # Adding field 'Song.link_youtube'
+        db.add_column('songs_song', 'link_youtube', self.gf('django.db.models.fields.URLField')(max_length=200, null=True, blank=True), keep_default=False)
 
-        # Adding model 'ArtistContribution'
-        db.create_table('songs_artistcontribution', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('song', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['songs.Song'])),
-            ('artist', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['artists.Artist'])),
-            ('performed', self.gf('django.db.models.fields.BooleanField')(default=False)),
-            ('texted', self.gf('django.db.models.fields.BooleanField')(default=False)),
-            ('translated', self.gf('django.db.models.fields.BooleanField')(default=False)),
-            ('composed', self.gf('django.db.models.fields.BooleanField')(default=False)),
-        ))
-        db.send_create_signal('songs', ['ArtistContribution'])
+        # Adding field 'Song.link_wrzuta'
+        db.add_column('songs_song', 'link_wrzuta', self.gf('django.db.models.fields.URLField')(max_length=200, null=True, blank=True), keep_default=False)
 
-        # Adding model 'BandContribution'
-        db.create_table('songs_bandcontribution', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('song', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['songs.Song'])),
-            ('band', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['artists.Band'])),
-            ('performed', self.gf('django.db.models.fields.BooleanField')(default=False)),
-        ))
-        db.send_create_signal('songs', ['BandContribution'])
+        # Adding field 'Song.score1'
+        db.add_column('songs_song', 'score1', self.gf('django.db.models.fields.files.ImageField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Song.score2'
+        db.add_column('songs_song', 'score2', self.gf('django.db.models.fields.files.ImageField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Song.score3'
+        db.add_column('songs_song', 'score3', self.gf('django.db.models.fields.files.ImageField')(max_length=100, null=True, blank=True), keep_default=False)
 
 
     def backwards(self, orm):
         
-        # Deleting model 'Song'
-        db.delete_table('songs_song')
+        # Deleting field 'Song.link_youtube'
+        db.delete_column('songs_song', 'link_youtube')
 
-        # Deleting model 'ArtistContribution'
-        db.delete_table('songs_artistcontribution')
+        # Deleting field 'Song.link_wrzuta'
+        db.delete_column('songs_song', 'link_wrzuta')
 
-        # Deleting model 'BandContribution'
-        db.delete_table('songs_bandcontribution')
+        # Deleting field 'Song.score1'
+        db.delete_column('songs_song', 'score1')
+
+        # Deleting field 'Song.score2'
+        db.delete_column('songs_song', 'score2')
+
+        # Deleting field 'Song.score3'
+        db.delete_column('songs_song', 'score3')
 
 
     models = {
@@ -104,12 +89,16 @@ class Migration(SchemaMigration):
             'created': ('django.db.models.fields.DateField', [], {'null': 'True', 'blank': 'True'}),
             'description': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'disambig': ('django.db.models.fields.CharField', [], {'max_length': '50', 'null': 'True', 'blank': 'True'}),
-            'externals': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'key': ('django.db.models.fields.CharField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'link_wrzuta': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'}),
+            'link_youtube': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'}),
             'lyrics': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'original': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['songs.Song']", 'null': 'True', 'blank': 'True'}),
             'remarks': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
+            'score1': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'score2': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'score3': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '50'})
         }
     }

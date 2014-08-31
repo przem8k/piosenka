@@ -8,47 +8,28 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         
-        # Adding model 'ArticleCategory'
-        db.create_table('articles_articlecategory', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('slug', self.gf('django.db.models.fields.SlugField')(max_length=100, db_index=True)),
-        ))
-        db.send_create_signal('articles', ['ArticleCategory'])
+        # Deleting field 'Article.cover'
+        db.delete_column('articles_article', 'cover')
 
-        # Adding model 'Article'
-        db.create_table('articles_article', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('slug', self.gf('django.db.models.fields.SlugField')(max_length=100, db_index=True)),
-            ('category', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['articles.ArticleCategory'], null=True, blank=True)),
-            ('date', self.gf('django.db.models.fields.DateTimeField')(null=True, blank=True)),
-            ('lead_text', self.gf('django.db.models.fields.TextField')()),
-            ('lead_text_html', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('main_text', self.gf('django.db.models.fields.TextField')()),
-            ('main_text_html', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('published', self.gf('django.db.models.fields.BooleanField')(default=True)),
-            ('author', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'], null=True, blank=True)),
-            ('cover', self.gf('django.db.models.fields.files.ImageField')(max_length=100, null=True, blank=True)),
-        ))
-        db.send_create_signal('articles', ['Article'])
+        # Adding field 'Article.cover_image'
+        db.add_column('articles_article', 'cover_image', self.gf('sorl.thumbnail.fields.ImageField')(max_length=100, null=True, blank=True), keep_default=False)
 
 
     def backwards(self, orm):
         
-        # Deleting model 'ArticleCategory'
-        db.delete_table('articles_articlecategory')
+        # Adding field 'Article.cover'
+        db.add_column('articles_article', 'cover', self.gf('django.db.models.fields.files.ImageField')(max_length=100, null=True, blank=True), keep_default=False)
 
-        # Deleting model 'Article'
-        db.delete_table('articles_article')
+        # Deleting field 'Article.cover_image'
+        db.delete_column('articles_article', 'cover_image')
 
 
     models = {
         'articles.article': {
-            'Meta': {'ordering': "['title']", 'object_name': 'Article'},
+            'Meta': {'ordering': "['date']", 'object_name': 'Article'},
             'author': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['auth.User']", 'null': 'True', 'blank': 'True'}),
             'category': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['articles.ArticleCategory']", 'null': 'True', 'blank': 'True'}),
-            'cover': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'cover_image': ('sorl.thumbnail.fields.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'date': ('django.db.models.fields.DateTimeField', [], {'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'lead_text': ('django.db.models.fields.TextField', [], {}),
@@ -80,7 +61,7 @@ class Migration(SchemaMigration):
         },
         'auth.user': {
             'Meta': {'object_name': 'User'},
-            'date_joined': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2012, 11, 14, 0, 12, 37, 626834)'}),
+            'date_joined': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2013, 1, 29, 22, 19, 29, 479010)'}),
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'blank': 'True'}),
             'first_name': ('django.db.models.fields.CharField', [], {'max_length': '30', 'blank': 'True'}),
             'groups': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['auth.Group']", 'symmetrical': 'False', 'blank': 'True'}),
@@ -88,7 +69,7 @@ class Migration(SchemaMigration):
             'is_active': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
             'is_staff': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'is_superuser': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
-            'last_login': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2012, 11, 14, 0, 12, 37, 626749)'}),
+            'last_login': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2013, 1, 29, 22, 19, 29, 478916)'}),
             'last_name': ('django.db.models.fields.CharField', [], {'max_length': '30', 'blank': 'True'}),
             'password': ('django.db.models.fields.CharField', [], {'max_length': '128'}),
             'user_permissions': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['auth.Permission']", 'symmetrical': 'False', 'blank': 'True'}),

@@ -8,53 +8,14 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         
-        # Adding model 'Song'
-        db.create_table('songs_song', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=50)),
-            ('disambig', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('created', self.gf('django.db.models.fields.DateField')(null=True, blank=True)),
-            ('description', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('remarks', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('key', self.gf('django.db.models.fields.CharField')(max_length=100, null=True, blank=True)),
-            ('lyrics', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('externals', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('original', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['songs.Song'], null=True, blank=True)),
-        ))
-        db.send_create_signal('songs', ['Song'])
-
-        # Adding model 'ArtistContribution'
-        db.create_table('songs_artistcontribution', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('song', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['songs.Song'])),
-            ('artist', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['artists.Artist'])),
-            ('performed', self.gf('django.db.models.fields.BooleanField')(default=False)),
-            ('texted', self.gf('django.db.models.fields.BooleanField')(default=False)),
-            ('translated', self.gf('django.db.models.fields.BooleanField')(default=False)),
-            ('composed', self.gf('django.db.models.fields.BooleanField')(default=False)),
-        ))
-        db.send_create_signal('songs', ['ArtistContribution'])
-
-        # Adding model 'BandContribution'
-        db.create_table('songs_bandcontribution', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('song', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['songs.Song'])),
-            ('band', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['artists.Band'])),
-            ('performed', self.gf('django.db.models.fields.BooleanField')(default=False)),
-        ))
-        db.send_create_signal('songs', ['BandContribution'])
+        # Deleting field 'Song.externals'
+        db.delete_column('songs_song', 'externals')
 
 
     def backwards(self, orm):
         
-        # Deleting model 'Song'
-        db.delete_table('songs_song')
-
-        # Deleting model 'ArtistContribution'
-        db.delete_table('songs_artistcontribution')
-
-        # Deleting model 'BandContribution'
-        db.delete_table('songs_bandcontribution')
+        # Adding field 'Song.externals'
+        db.add_column('songs_song', 'externals', self.gf('django.db.models.fields.TextField')(null=True, blank=True), keep_default=False)
 
 
     models = {
@@ -104,7 +65,6 @@ class Migration(SchemaMigration):
             'created': ('django.db.models.fields.DateField', [], {'null': 'True', 'blank': 'True'}),
             'description': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'disambig': ('django.db.models.fields.CharField', [], {'max_length': '50', 'null': 'True', 'blank': 'True'}),
-            'externals': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'key': ('django.db.models.fields.CharField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'lyrics': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
