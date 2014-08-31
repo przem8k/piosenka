@@ -13,6 +13,33 @@ from songs.lyrics import render_lyrics
 from songs.models import Song, EntityContribution
 
 
+INITIAL_LYRICS = \
+"""#zw
+Pierwszy wers zwrotki [C G F E]
+Drugi wers zwrotki [a C]
+Trzeci wers zwrotki [a C]
+Czwarty wers zwrotki [F E]
+
+#ref
+>Obława, obława, na młode wilki obława [a C G C]
+>Te dzikie, zapalczywe, w gęstym lesie wychowane [F E]
+>Krąg w śniegu wydeptany, w tym kręgu plama krwawa [a C G C]
+>Ciała wilcze kłami gończych psów szarpane! [F E]
+
+@zw
+Symbol @NAZWA skopiuje akordy ze wcześniejszej
+Sekcji oznaczonej tagiem #NAZWA
+Pozwala to uniknąć wielokrotnego wpisywania
+Tych samych akordów
+
+@zwrotka
+Po oznaczeniu jednej sekcji znacznikiem #NAZWA
+Można znacznika kopiującego akordy (@NAZWA)
+Używac wielokrotnie
+Jak w tym przykładzie
+"""
+
+
 def get_song_by_entity_or_404(song_slug, entity_slug):
     song = get_object_or_404(Song, slug=song_slug)
     entity = get_object_or_404(Entity, slug=entity_slug)
@@ -64,6 +91,7 @@ class EntityView(BaseMenuView):
         context['entity'] = entity
         return context
 
+
 class SongView(TemplateView):
     """ Displays a songs by default, returns transposed lyrics part in json if asked. """
     template_name = 'songs/song.html'
@@ -100,6 +128,11 @@ class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
     form_class = SongForm
     template_name = "songs/add_edit_song.html"
     success_url = reverse_lazy('songbook')
+
+    def get_initial(self):
+        return {
+            'lyrics': INITIAL_LYRICS,
+        }
 
     def get_managed_formset_class(self):
         return ContributionFormSet

@@ -33,7 +33,11 @@ textarea#id_lyrics {
         <div class="customwell auxwell">
           <h1>Opracowanie</h1>
           <div class="alert alert-info" role="alert">
-            Wpisz opracowanie według przykładu poniżej.
+            <p>Wpisz opracowanie w miejsce przykładu poniżej. Uwagi:</p>
+            <ul>
+              <li>tylko opracowania w języku polskim</li>
+              <li>tylko opracowania wraz z akordami</li>
+            </ul>
           </div>
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Próg kapodastra" field=form.capo_fret %}
