@@ -46,6 +46,8 @@ class Post(models.Model):
         self.post_html = render_trevor(self.post_trevor)
         if self.more_trevor:
             self.more_html = render_trevor(self.more_trevor)
+        else:
+            self.more_html = ""
         super(Post, self).save(*args, **kwargs)
 
     @models.permalink

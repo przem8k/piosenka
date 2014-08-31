@@ -56,6 +56,8 @@ class Article(models.Model):
         self.main_text_html = render_trevor(self.main_text_trevor)
         if self.cover_credits_trevor:
             self.cover_credits_html = render_trevor(self.cover_credits_trevor)
+        else:
+            self.cover_credits_html = ""
         super(Article, self).save(*args, **kwargs)
 
     @models.permalink
