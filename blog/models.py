@@ -22,7 +22,6 @@ class Post(models.Model):
     slug = models.SlugField(max_length=100, null=True)
     author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
-    post = models.TextField(null=True, blank=True, help_text="Post or its introductory part, written in Markdown.")
     post_trevor = models.TextField()
     post_html = models.TextField(null=True, blank=True, editable=False)
     more = models.TextField(blank=True, null=True,

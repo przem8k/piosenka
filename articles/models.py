@@ -25,19 +25,14 @@ class Article(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
     date = models.DateTimeField(editable=False, help_text="Publication date.")
-    lead_text = models.TextField(null=True, blank=True, help_text="Introductory paragraph, written in Markdown.")
     lead_text_trevor = models.TextField()
     lead_text_html = models.TextField(editable=False)
-    main_text = models.TextField(null=True, blank=True, help_text="Rest of the article, written in Markdown.")
     main_text_trevor = models.TextField()
     main_text_html = models.TextField(editable=False)
     published = models.BooleanField(default=True)
     author = models.ForeignKey(User, editable=False)
     cover_image = models.ImageField(null=True, blank=True, upload_to='article_covers',
                                     help_text="Main illustration for the article.")
-    cover_credits = models.TextField(null=True, blank=True,
-                                     help_text="Thank you / credit notes about the author of "
-                                               "the cover picture, written in Markdown.")
     cover_credits_trevor = models.TextField(null=True, blank=True)
     cover_credits_html = models.TextField(null=True, blank=True, editable=False)
 
