@@ -20,14 +20,15 @@ class Post(models.Model):
 
     title = models.CharField(max_length=100,
                              help_text="Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'.")
-    slug = models.SlugField(max_length=100, null=True)
+    post_trevor = models.TextField()
+    more_trevor = models.TextField(null=True, blank=True)
+
+    slug = models.SlugField(max_length=100, editable=False)
     author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
-    post_trevor = models.TextField()
-    post_html = models.TextField(null=True, blank=True, editable=False)
-    more_trevor = models.TextField(null=True, blank=True)
-    more_html = models.TextField(null=True, blank=True, editable=False)
-    published = models.BooleanField(default=True, help_text="Only admins see not-published posts")
+    published = models.BooleanField(default=True, editable=False)
+    post_html = models.TextField(null=True, editable=False)
+    more_html = models.TextField(null=True, editable=False)
 
     class Meta:
         ordering = ["-date"]
