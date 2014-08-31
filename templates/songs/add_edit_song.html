@@ -27,7 +27,6 @@ textarea#id_lyrics {
             {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
             {% include "components/forms/table_field.html" with name="Adnotacja" field=form.disambig %}
           </table>
-          {{ form.non_field_errors }}
         </div>
         <div class="customwell auxwell">
           <h1>Opracowanie</h1>
@@ -44,6 +43,11 @@ textarea#id_lyrics {
               <li>tylko opracowania wraz z akordami</li>
             </ul>
           </div>
+          {% if form.non_field_errors %}
+          <div class="alert alert-danger" role="alert">
+            {{ form.non_field_errors }}
+          </div>
+          {% endif %}
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Próg kapodastra" field=form.capo_fret %}
           </table>
@@ -54,6 +58,9 @@ textarea#id_lyrics {
       <div class="col-md-6">
         <div class="customwell auxwell">
           <h1>Autor lub autorzy</h1>
+          <div class="alert alert-info" role="alert">
+            Przy każdym opracowaniu należy wskazać przynajmniej jednego autora.
+          </div>
           {{ entitycontribution.management_form }}
           <table class="table table-condensed formset">
             <tr>
@@ -75,11 +82,15 @@ textarea#id_lyrics {
             </tr>
             {% endfor %}
           </table>
-          {% for dict in entitycontribution.errors %}
-          {% for error in dict.values %}
-          {{ error }}
-          {% endfor %}
-          {% endfor %}
+          {% if entitycontribution.errors %}
+          <div class="alert alert-danger" role="alert">
+            {% for dict in entitycontribution.errors %}
+            {% for error in dict.values %}
+            {{ error }}
+            {% endfor %}
+            {% endfor %}
+          </div>
+          {% endif %}
         </div>
         <div class="customwell auxwell">
           <h1>Nuty</h1>

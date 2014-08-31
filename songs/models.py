@@ -144,3 +144,7 @@ class EntityContribution(models.Model):
 
     def __str__(self):
         return self.entity.__str__() + " - " + self.song.title
+
+    def clean(self):
+        if not self.performed and not self.texted and not self.translated and not self.composed:
+            raise ValidationError("Zaznacz co najmniej jedną rolę autora.")
