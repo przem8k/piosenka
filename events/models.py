@@ -56,15 +56,15 @@ class PublishedEventManager(models.Manager):
 
 
 class CurrentEventManager(models.Manager):
-    def get_query_set(self):
-        return super(CurrentEventManager, self).get_query_set().filter(published=True,
-                                                                       datetime__gte=datetime.now())
+    def get_queryset(self):
+        return super(CurrentEventManager, self).get_queryset().filter(published=True,
+                                                                      datetime__gte=datetime.now())
 
 
 class PastEventManager(models.Manager):
-    def get_query_set(self):
-        return super(PastEventManager, self).get_query_set().filter(published=True,
-                                                                    datetime__lt=datetime.now())
+    def get_queryset(self):
+        return super(PastEventManager, self).get_queryset().filter(published=True,
+                                                                   datetime__lt=datetime.now())
 
 
 class Event(models.Model):
