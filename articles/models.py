@@ -22,7 +22,9 @@ class Article(models.Model):
     objects = models.Manager()
     po = PublishedArticleManager()
 
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100,
+                             help_text="Tytuł artykułu, np. 'IX Festiwal Piosenki Poetyckiej im. "
+                                       "Jacka Kaczmarskiego \"Nadzieja\"'.")
     slug = models.SlugField(max_length=100)
     date = models.DateTimeField(editable=False, help_text="Publication date.")
     lead_text_trevor = models.TextField()
