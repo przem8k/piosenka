@@ -32,10 +32,8 @@ class Song(models.Model):
 
     title = models.CharField(max_length=100)
     disambig = models.CharField(max_length=100, null=True, blank=True,
-                                help_text="Opcjonalna adnotacja wyróżniająca piosenki o tym samym "
-                                          "tytule, np. 'melodia z roku 1998' dla 'Kwestii Odwagi', "
-                                          "pierwsze słowa piosenki lub nazwisko tłumacza "
-                                          "wyróżniające tłumaczenia tej samej piosenki.")
+                                help_text="Opcjonalna adnotacja rozróżniająca piosenki o tym samym "
+                                          "tytule.")
     original_title = models.CharField(max_length=100, null=True, blank=True,
                                       help_text="Opcjonalny tytuł oryginalnej piosenki w przypadku "
                                                 "tłumaczeń, np. 'Mourir pour des idées'.")
