@@ -33,7 +33,7 @@ class Entity(models.Model):
     )
     kind = models.IntegerField(choices=ENTITY_TYPES, null=True, blank=True,
                                help_text="Select the best fit.")
-    is_band = models.BooleanField(editable=False,
+    is_band = models.BooleanField(default=False, editable=False,
                                   help_text="Filled automaticely from type to facilitate sorting.")
 
     class Meta:

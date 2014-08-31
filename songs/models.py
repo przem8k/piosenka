@@ -55,7 +55,7 @@ class Song(models.Model):
     published = models.BooleanField(default=True, editable=False, help_text="Unpublish instead of deleting.")
     author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
-    has_extra_chords = models.BooleanField(blank=True, editable=False,
+    has_extra_chords = models.BooleanField(default=False, blank=True, editable=False,
                                            help_text="True iff the lyrics contain repeated chords.")
 
     class Meta:
@@ -137,10 +137,10 @@ class Song(models.Model):
 class EntityContribution(models.Model):
     song = models.ForeignKey(Song)
     entity = models.ForeignKey(Entity, verbose_name="artysta")
-    performed = models.BooleanField(verbose_name="wyk.")
-    texted = models.BooleanField(verbose_name="tekst")
-    translated = models.BooleanField(verbose_name="tł.")
-    composed = models.BooleanField(verbose_name="muz.")
+    performed = models.BooleanField(default=False, verbose_name="wyk.")
+    texted = models.BooleanField(default=False, verbose_name="tekst")
+    translated = models.BooleanField(default=False, verbose_name="tł.")
+    composed = models.BooleanField(default=False, verbose_name="muz.")
 
     def __str__(self):
         return self.entity.__str__() + " - " + self.song.title
