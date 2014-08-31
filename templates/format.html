@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}O stronie{% endblock %}
+
+{% block content %}
+<style>
+span.extra-chords {
+    display: inline;
+    color: grey;
+}
+</style>
+{% include "frontpage/top.html" %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="customwell contentwell">
+        <div class="row">
+          <div class="col-md-8">
+            <h1 class="remove-top-margin">Pomoc: dodawanie opracowań</h1>
+            <p>
+            PzT używa specjalnego formatu zapisu opracowań piosenek, który
+            umożliwia m. in. automatyczne <b>przepisywanie powtarzających się
+              akordów</b> i <b>transpozycję</b> opracowań do wybranej tonacji.
+            Poniżej znajduje się przykładowy fragment opracowania piosenki
+            <b>1788</b>.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-6">
+            <pre>
+<b>#zwrotka</b>
+Ta pierwsza morska podróż do Australii! <b>[D G]</b>
+Łotry przy burtach, prostytutki w kojach <b>[D A]</b>
+Wszyscy się bali, łkali i rzygali <b>[D G]</b>
+W drodze do raju. Przewrotności Twoja <b>[D A]</b>
+Panie, coś w jeszcze nam nieznanych planach <b>[h e]</b>
+Miał czarne diabły strzegące wybrzeży <b>[h fis]</b>
+Edenu, który przeznaczyłeś dla nas <b>[G A D]</b>
+A w który nikt, prawdę mówiąc, nie wierzył! <b>[G A h (G D A)]</b>
+
+<b>@zwrotka</b>
+Czym żeśmy, marni, zasłużyli na to?
+Ten, co zawisnąć miał za kradzież płaszcza
+Płakał nad swoją niechybną zatratą
+Nie widział Ciebie w robaczywych masztach
+Statku, co tylko był więzieniem nowym
+Tej, co kupczyła ciałami swych dziatek 
+Ani przez mgnienie nie przyszło do głowy
+Że to nadziei - nie rozpaczy statek
+            </pre>
+          </div>
+          <div class="col-md-6">
+
+            <blockquote class="custom-blockquote">
+              <div id="lyrics">
+                <table>
+                  <tr> <td>Ta pierwsza morska podróż do Australii!</td> <td class="chord-section"> <span class="chords"> D G </span> </td> </tr>
+                  <tr> <td>Łotry przy burtach, prostytutki w kojach</td> <td class="chord-section"> <span class="chords"> D A </span> </td> </tr>
+                  <tr> <td>Wszyscy się bali, łkali i rzygali</td> <td class="chord-section"> <span class="chords"> D G </span> </td> </tr>
+                  <tr> <td>W drodze do raju. Przewrotności Twoja</td> <td class="chord-section"> <span class="chords"> D A </span> </td> </tr>
+                  <tr> <td>Panie, coś w jeszcze nam nieznanych planach</td> <td class="chord-section"> <span class="chords"> h e </span> </td> </tr>
+                  <tr> <td>Miał czarne diabły strzegące wybrzeży</td> <td class="chord-section"> <span class="chords"> h fis </span> </td> </tr>
+                  <tr> <td>Edenu, który przeznaczyłeś dla nas</td> <td class="chord-section"> <span class="chords"> G A D </span> </td> </tr>
+                  <tr> <td>A w który nikt, prawdę mówiąc, nie wierzył!</td> <td class="chord-section"> <span class="chords"> G A h (G D A) </span></td> </tr>
+                </table>
+                <br />
+
+                <table>
+                  <tr> <td>Czym żeśmy, marni, zasłużyli na to?</td> <td class="chord-section"> <span class="chords extra-chords"> D G </span> </td> </tr>
+                  <tr> <td>Ten, co zawisnąć miał za kradzież płaszcza</td> <td class="chord-section"> <span class="chords extra-chords"> D A </span> </td> </tr>
+                  <tr> <td>Płakał nad swoją niechybną zatratą</td> <td class="chord-section"> <span class="chords extra-chords"> D G </span> </td> </tr>
+                  <tr> <td>Nie widział Ciebie w robaczywych masztach</td> <td class="chord-section"> <span class="chords extra-chords"> D A </span> </td> </tr>
+                  <tr> <td>Statku, co tylko był więzieniem nowym</td> <td class="chord-section"> <span class="chords extra-chords"> h e </span> </td> </tr>
+                  <tr> <td>Tej, co kupczyła ciałami swych dziatek</td> <td class="chord-section"> <span class="chords extra-chords"> h fis </span> </td> </tr>
+                  <tr> <td>Ani przez mgnienie nie przyszło do głowy</td> <td class="chord-section"> <span class="chords extra-chords"> G A D </span> </td> </tr>
+                  <tr> <td>Że to nadziei - nie rozpaczy statek</td> <td class="chord-section"> <span class="chords extra-chords"> G A h (G D A) </span> </td> </tr>
+                </div>
+              </table>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Struktura opracowania</h2>
+            <p>Opracowanie piosenki podzielone jest na sekcje
+            przedzielone pustymi wierszami. Akordy odpowiadające poszczególnym
+            wersom są wpisane na końcu wiersza, w nawiasach kwadratowych,
+            przedzielone spacjami.</p>
+            </p>
+            <h2>Powtórzone akordy</h2>
+            <p>Dowolna sekcja opracowania może być poprzedzona znacznikiem
+            <b>#NAZWA</b> (gdzie "NAZWA" to dowolnie wybrany ciąg znaków bez
+            spacji). Znacznik zapamiętuje akordy danej sekcji i pozwala
+            na przepisanie ich do dowolnej późniejszej sekcji oznaczonej znacznikiem
+            <b>@NAZWA</b>.
+            </p>
+            <h2>Akordy przejściowe</h2>
+            Akordy grane w czasie przejścia pomiędzy wersami zapisywane są na
+            końcu poprzedniego wersu, w nawiasach okrągłych (por. przykład
+            powyżej). Tak samo zapisywane są akordy przypadające już na
+            pierwsze, ale jeszcze nieakcentowane sylaby nowego wersu.
+            <h2>Refreny</h2>
+            <p>Każdy wers rozpoczęty znakiem ">" otrzyma dodatkowe wcięcie, co
+            umożliwia formatowanie refrenów jak poniżej.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <pre>
+#zw
+Jeszcze pod ręką globus - z taką mapą świata [d C a d]
+Na jaką stać strategię, plany i marzenia [d C A]
+Jeszcze insygnia władzy, sobolowa szata [d C a d]
+Gęsty, trefiony włos i ręki gest bez drżenia [d A d]
+Jeszcze w zasięgu dłoni zegar - jeszcze wcześnie [d C a d]
+Pewności siebie ruch wskazówki nie odbiera [d C A]
+Wzrok - lustro duszy - widzi wszystko nawet we śnie [d C a d]
+Któremu spokój niesie Cyfra i Litera [d A]
+
+#ref
+>Tyle zrobili już, jak na swe młode lata [D G D]
+>Ulega dziejów wosk ich nieomylnym śladom [D G A]
+>To George de Selve - obiecujący dyplomata [A h Fis G]
+>I Jean de Dinteville - francuski ambasador [G D A D G (D)]
+
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <blockquote class="custom-blockquote">
+              <div id="lyrics">
+                <table>
+                  <tr> <td>Jeszcze pod ręką globus - z taką mapą świata</td> <td class="chord-section"> <span class="chords"> d C a d </span> </td> </tr>
+                  <tr> <td>Na jaką stać strategię, plany i marzenia</td> <td class="chord-section"> <span class="chords"> d C A </span> </td> </tr>
+                  <tr> <td>Jeszcze insygnia władzy, sobolowa szata</td> <td class="chord-section"> <span class="chords"> d C a d </span> </td> </tr>
+                  <tr> <td>Gęsty, trefiony włos i ręki gest bez drżenia</td> <td class="chord-section"> <span class="chords"> d A d </span> </td> </tr>
+                  <tr> <td>Jeszcze w zasięgu dłoni zegar - jeszcze wcześnie</td> <td class="chord-section"> <span class="chords"> d C a d </span> </td> </tr>
+                  <tr> <td>Pewności siebie ruch wskazówki nie odbiera</td> <td class="chord-section"> <span class="chords"> d C A </span> </td> </tr>
+                  <tr> <td>Wzrok - lustro duszy - widzi wszystko nawet we śnie</td> <td class="chord-section"> <span class="chords"> d C a d </span> </td> </tr>
+                  <tr> <td>Któremu spokój niesie Cyfra i Litera</td> <td class="chord-section"> <span class="chords"> d A </span> </td> </tr>
+                </table>
+                <br />
+
+                <table>
+                  <tr> <td class="indented">Tyle zrobili już, jak na swe młode lata</td> <td class="chord-section"> <span class="chords"> D G D </span> </td> </tr>
+                  <tr> <td class="indented">Ulega dziejów wosk ich nieomylnym śladom</td> <td class="chord-section"> <span class="chords"> D G A </span> </td> </tr>
+                  <tr> <td class="indented">To George de Selve - obiecujący dyplomata</td> <td class="chord-section"> <span class="chords"> h Fis G </span> </td> </tr>
+                  <tr> <td class="indented">I Jean de Dinteville - francuski ambasador</td> <td class="chord-section"> <span class="chords"> D A D G (D) </span> </td> </tr>
+                </table>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -78,6 +78,10 @@ class About(TemplateView):
         return context
 
 
+class Format(TemplateView):
+    template_name = "format.html"
+
+
 class Hello(FormView):
     form_class = AuthenticationForm
     template_name = "hello.html"

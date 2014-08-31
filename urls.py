@@ -21,6 +21,7 @@ urlpatterns = patterns(
     url(r'^artykuly/', include('articles.urls')),
     url(r'^wydarzenia/', include('events.urls')),
     url(r'^o-stronie/$', frontpage.views.About.as_view(), name="about"),
+    url(r'^o-stronie/format-opracowan/$', frontpage.views.Format.as_view(), name="format"),
     # Site-search index.
     url(r'^index/', include('frontpage.index')),
     # Admin and users.

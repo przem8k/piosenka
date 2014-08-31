@@ -27,16 +27,10 @@ Czwarty wers zwrotki [F E]
 >Ciała wilcze kłami gończych psów szarpane! [F E]
 
 @zw
-Symbol @NAZWA skopiuje akordy ze wcześniejszej
-Sekcji oznaczonej tagiem #NAZWA
-Pozwala to uniknąć wielokrotnego wpisywania
-Tych samych akordów
-
-@zwrotka
-Po oznaczeniu jednej sekcji znacznikiem #NAZWA
-Można znacznika kopiującego akordy (@NAZWA)
-Używac wielokrotnie
-Jak w tym przykładzie
+Druga zwrotka o tych samych akordach
+Co pierwsza zwrotka
+Kolejny wers, kolejny wers
+I jeszcze jeden i jeszcze raz
 """
 
 
