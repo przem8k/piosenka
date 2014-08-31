@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from django.contrib.auth.views import login, logout
 from django.core.urlresolvers import reverse_lazy
@@ -104,3 +104,22 @@ class Goodbye(View):
     def get(self, request, *args, **kwargs):
         logout(request)
         return HttpResponseRedirect(reverse_lazy('index'))
+
+
+class ChangePassword(FormView):
+    form_class = PasswordChangeForm
+    template_name = "change_password.html"
+    success_url = reverse_lazy('index')
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ChangePassword, self).dispatch(*args, **kwargs)
+
+    def get_form_kwargs(self):
+        kwargs = super(ChangePassword, self).get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
+
+    def form_valid(self, form):
+        form.save()
+        return super(ChangePassword, self).form_valid(form)

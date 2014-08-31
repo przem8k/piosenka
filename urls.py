@@ -28,6 +28,7 @@ urlpatterns = patterns(
     url(r'^admin/', include(admin.site.urls)),
     url(r'^zaloguj/', frontpage.views.Hello.as_view(), name="hello"),
     url(r'^wyloguj/', frontpage.views.Goodbye.as_view(), name="goodbye"),
+    url(r'^zmien-haslo/', frontpage.views.ChangePassword.as_view(), name="change_password"),
     # Frontpage.
     url(r'^$', frontpage.views.SiteIndex.as_view(), name="index"),
 )
