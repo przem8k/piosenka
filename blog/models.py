@@ -23,7 +23,7 @@ class Post(models.Model):
     post_trevor = models.TextField()
     more_trevor = models.TextField(null=True, blank=True)
 
-    slug = models.SlugField(max_length=100, editable=False)
+    slug = models.SlugField(max_length=100, unique=True, editable=False)
     author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
     published = models.BooleanField(default=True, editable=False)

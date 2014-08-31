@@ -31,7 +31,7 @@ class Article(models.Model):
                                     help_text="Main illustration for the article.")
     cover_credits_trevor = models.TextField(null=True, blank=True)
 
-    slug = models.SlugField(max_length=100, editable=False)
+    slug = models.SlugField(max_length=100, unique=True, editable=False)
     author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
     published = models.BooleanField(default=True, editable=False)
