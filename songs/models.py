@@ -25,18 +25,20 @@ class PublishedSongManager(models.Manager):
 
 
 class Song(models.Model):
+    CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
+
     objects = models.Manager()
     po = PublishedSongManager()
 
-    CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
     title = models.CharField(max_length=100)
     disambig = models.CharField(max_length=100, null=True, blank=True,
-                                help_text="Disambiguation for multiple songs with the same title.")
-    original_title = models.CharField(max_length=100, null=True, blank=True)
-    slug = models.SlugField(max_length=100, unique=True, null=True, blank=True,
-                            help_text="Old slug, kept to maintain redirects.")
-    new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True,
-                                help_text="Used in urls, has to be unique.")
+                                help_text="Opcjonalna adnotacja wyróżniająca piosenki o tym samym "
+                                          "tytule, np. 'melodia z roku 1998' dla 'Kwestii Odwagi', "
+                                          "pierwsze słowa piosenki lub nazwisko tłumacza "
+                                          "wyróżniające tłumaczenia tej samej piosenki.")
+    original_title = models.CharField(max_length=100, null=True, blank=True,
+                                      help_text="Opcjonalny tytuł oryginalnej piosenki w przypadku "
+                                                "tłumaczeń, np. 'Mourir pour des idées'.")
     link_youtube = models.URLField(null=True, blank=True)
     link_wrzuta = models.URLField(null=True, blank=True)
     score1 = models.ImageField(null=True, blank=True, upload_to='scores')
@@ -46,12 +48,17 @@ class Song(models.Model):
                            help_text="Deprecated - use capo_fret instead", editable=False)
     capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret],
                                     help_text="Set to 0 if no capo")
-    lyrics = models.TextField(null=True)
-    has_extra_chords = models.BooleanField(blank=True, editable=False,
-                                           help_text="True iff the lyrics contain repeated chords.")
-    published = models.BooleanField(default=True, help_text="Unpublish instead of deleting.")
+    lyrics = models.TextField()
+
+    slug = models.SlugField(max_length=100, unique=True, null=True, blank=True, editable=False,
+                            help_text="Old slug, kept to maintain redirects.")
+    new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True, editable=False,
+                                help_text="Used in urls, has to be unique.")
+    published = models.BooleanField(default=True, editable=False, help_text="Unpublish instead of deleting.")
     author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
+    has_extra_chords = models.BooleanField(blank=True, editable=False,
+                                           help_text="True iff the lyrics contain repeated chords.")
 
     class Meta:
         ordering = ["title", "disambig"]
