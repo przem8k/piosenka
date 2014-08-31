@@ -30,20 +30,22 @@ class Song(models.Model):
     objects = models.Manager()
     po = PublishedSongManager()
 
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, help_text="Tytuł piosenki.")
     disambig = models.CharField(max_length=100, null=True, blank=True,
                                 help_text="Opcjonalna adnotacja rozróżniająca piosenki o tym samym "
                                           "tytule.")
     original_title = models.CharField(max_length=100, null=True, blank=True,
-                                      help_text="Opcjonalny tytuł oryginalnej piosenki w przypadku "
-                                                "tłumaczeń, np. 'Mourir pour des idées'.")
-    link_youtube = models.URLField(null=True, blank=True)
-    link_wrzuta = models.URLField(null=True, blank=True)
+                                      help_text="Tytuł oryginalnej piosenki w przypadku "
+                                                "tłumaczenia, np. 'Mourir pour des idées'.")
+    link_youtube = models.URLField(null=True, blank=True,
+                                   help_text="Link do nagrania piosenki w serwisie YouTube.")
+    link_wrzuta = models.URLField(null=True, blank=True,
+                                  help_text="Link do nagrania piosenki w serwisie Wrzuta.")
     score1 = models.ImageField(null=True, blank=True, upload_to='scores')
     score2 = models.ImageField(null=True, blank=True, upload_to='scores')
     score3 = models.ImageField(null=True, blank=True, upload_to='scores')
     capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret],
-                                    help_text="Set to 0 if no capo")
+                                    help_text="Liczba od 0 do 11, 0 oznacza brak kapodastra.")
     lyrics = models.TextField()
 
     slug = models.SlugField(max_length=100, unique=True, null=True, blank=True, editable=False,
