@@ -62,7 +62,6 @@ class EventForm(forms.ModelForm):
 
     class Meta:
         model = Event
-        exclude = ('venue', 'slug', 'datetime', 'description', 'description_html', 'published',
-                   'author', 'pub_date')
+        exclude = ('venue', 'datetime')
 
 PerformanceFormSet = inlineformset_factory(Event, EntityPerformance)

@@ -11,21 +11,12 @@ from artists.models import Entity
 from frontpage.trevor import render_trevor
 
 
-class CurrentEventManager(models.Manager):
-    def get_query_set(self):
-        return super(CurrentEventManager, self).get_query_set().filter(datetime__gte=datetime.now())
-
-
-class PastEventManager(models.Manager):
-    def get_query_set(self):
-        return super(PastEventManager, self).get_query_set().filter(datetime__lt=datetime.now())
-
-
 class Venue(models.Model):
     name = models.CharField(max_length=100)
     town = models.CharField(max_length=100)
     street = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100, unique=True)
+
+    slug = models.SlugField(max_length=100, unique=True, editable=False)
     lat = models.FloatField(editable=False, help_text="Latitude.")
     lon = models.FloatField(editable=False, help_text="Longtitude.")
 
@@ -64,31 +55,42 @@ class PublishedEventManager(models.Manager):
         return super(PublishedEventManager, self).get_queryset().filter(published=True)
 
 
+class CurrentEventManager(models.Manager):
+    def get_query_set(self):
+        return super(CurrentEventManager, self).get_query_set().filter(published=True,
+                                                                       datetime__gte=datetime.now())
+
+
+class PastEventManager(models.Manager):
+    def get_query_set(self):
+        return super(PastEventManager, self).get_query_set().filter(published=True,
+                                                                    datetime__lt=datetime.now())
+
+
 class Event(models.Model):
     objects = models.Manager()
     po = PublishedEventManager()
+    current = CurrentEventManager()
+    past = PastEventManager()
 
     name = models.CharField(max_length=100,
                             help_text="Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego' "
                                       "lub 'V Festiwal Piosenki Wymyślnej w Katowicach'.")
-    slug = models.SlugField(max_length=100, unique_for_date="datetime")
     datetime = models.DateTimeField()
+    venue = models.ForeignKey(Venue)
+    description_trevor = models.TextField()
     price = models.CharField(max_length=100, null=True, blank=True,
                              help_text="E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw "
                                        "puste.")
-    description_html = models.TextField(null=True, blank=True, editable=False)
-    description_trevor = models.TextField()
     website = models.URLField(null=True, blank=True,
                               help_text="Strona internetowa wydarzenia, źródło informacji. "
                                         "W przypadku braku danych pozostaw puste.")
-    venue = models.ForeignKey(Venue, null=False, blank=False)
-    published = models.BooleanField(default=True, help_text="Only admins see not-published songs")
+
+    slug = models.SlugField(max_length=100, unique_for_date="datetime", editable=False)
     author = models.ForeignKey(User, editable=False)
     pub_date = models.DateTimeField(editable=False)
-
-    objects = models.Manager()
-    current = CurrentEventManager()
-    past = PastEventManager()
+    published = models.BooleanField(default=True, editable=False)
+    description_html = models.TextField(editable=False)
 
     class Meta:
         ordering = ["datetime"]

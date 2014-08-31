@@ -8,22 +8,11 @@ class EntityPerformanceInlineAdmin(admin.TabularInline):
 
 
 class EventAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ['name']}
-    fieldsets = [
-        ('What', {'fields': ['name', 'slug', 'price', 'description_trevor', 'website']}),
-        ('When', {'fields': ['datetime']}),
-        ('Where', {'fields': ['venue']}),
-    ]
     inlines = (EntityPerformanceInlineAdmin, )
-
-    def save_model(self, request, obj, form, change):
-        if not change:
-            obj.author = request.user
-        obj.save()
 
 
 class VenueAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ['name', 'town']}
+    pass
 
 admin.site.register(Event, EventAdmin)
 admin.site.register(Venue, VenueAdmin)
