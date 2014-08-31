@@ -44,8 +44,6 @@ class Song(models.Model):
     score1 = models.ImageField(null=True, blank=True, upload_to='scores')
     score2 = models.ImageField(null=True, blank=True, upload_to='scores')
     score3 = models.ImageField(null=True, blank=True, upload_to='scores')
-    key = models.CharField(max_length=100, null=True, blank=True,
-                           help_text="Deprecated - use capo_fret instead", editable=False)
     capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret],
                                     help_text="Set to 0 if no capo")
     lyrics = models.TextField()
