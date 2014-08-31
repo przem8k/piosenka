@@ -1,82 +1,31 @@
-# encoding: utf-8
-import datetime
-from south.db import db
-from south.v2 import SchemaMigration
-from django.db import models
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 
-class Migration(SchemaMigration):
-
-    def forwards(self, orm):
-        
-        # Adding model 'Artist'
-        db.create_table('artists_artist', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('firstname', self.gf('django.db.models.fields.CharField')(max_length=25)),
-            ('lastname', self.gf('django.db.models.fields.CharField')(max_length=25)),
-            ('birth', self.gf('django.db.models.fields.DateField')(null=True, blank=True)),
-            ('death', self.gf('django.db.models.fields.DateField')(null=True, blank=True)),
-            ('description', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('externals', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('granted', self.gf('django.db.models.fields.BooleanField')(default=False)),
-            ('story', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('display', self.gf('django.db.models.fields.BooleanField')(default=False)),
-        ))
-        db.send_create_signal('artists', ['Artist'])
-
-        # Adding model 'Band'
-        db.create_table('artists_band', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=50)),
-            ('description', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('externals', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('display', self.gf('django.db.models.fields.BooleanField')(default=False)),
-        ))
-        db.send_create_signal('artists', ['Band'])
-
-        # Adding M2M table for field members on 'Band'
-        db.create_table('artists_band_members', (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('band', models.ForeignKey(orm['artists.band'], null=False)),
-            ('artist', models.ForeignKey(orm['artists.artist'], null=False))
-        ))
-        db.create_unique('artists_band_members', ['band_id', 'artist_id'])
+from django.db import models, migrations
 
 
-    def backwards(self, orm):
-        
-        # Deleting model 'Artist'
-        db.delete_table('artists_artist')
+class Migration(migrations.Migration):
 
-        # Deleting model 'Band'
-        db.delete_table('artists_band')
+    dependencies = [
+    ]
 
-        # Removing M2M table for field members on 'Band'
-        db.delete_table('artists_band_members')
-
-
-    models = {
-        'artists.artist': {
-            'Meta': {'object_name': 'Artist'},
-            'birth': ('django.db.models.fields.DateField', [], {'null': 'True', 'blank': 'True'}),
-            'death': ('django.db.models.fields.DateField', [], {'null': 'True', 'blank': 'True'}),
-            'description': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
-            'display': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
-            'externals': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
-            'firstname': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
-            'granted': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'lastname': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
-            'story': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'})
-        },
-        'artists.band': {
-            'Meta': {'object_name': 'Band'},
-            'description': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
-            'display': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
-            'externals': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'members': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'to': "orm['artists.Artist']", 'null': 'True', 'blank': 'True'}),
-            'name': ('django.db.models.fields.CharField', [], {'max_length': '50'})
-        }
-    }
-
-    complete_apps = ['artists']
+    operations = [
+        migrations.CreateModel(
+            name='Entity',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, verbose_name='ID', serialize=False)),
+                ('name', models.CharField(max_length=50, help_text='Name for a band, lastname for a person.')),
+                ('first_name', models.CharField(blank=True, max_length=50, null=True, help_text='First (and possibly second) name if this is a person.')),
+                ('slug', models.SlugField(max_length=100, unique=True, help_text='Used in urls, has to be unique.')),
+                ('featured', models.BooleanField(default=False, help_text='Iff true, it will be included in the songbook menu.')),
+                ('still_plays', models.BooleanField(default=False, help_text='Iff true, the entity can be added on events.')),
+                ('website', models.URLField(blank=True, null=True)),
+                ('kind', models.IntegerField(blank=True, help_text='Select the best fit.', null=True, choices=[(1, 'Wykonawca własnych tekstów'), (2, 'Kompozytor'), (3, 'Tłumacz'), (4, 'Wykonawca cudzych piosenek'), (5, 'Poeta nieśpiewający'), (6, 'Bard zagraniczny'), (7, 'Zespół')])),
+                ('is_band', models.BooleanField(default=False, editable=False, help_text='Filled automaticely from type to facilitate sorting.')),
+            ],
+            options={
+                'ordering': ['is_band', 'name', 'first_name'],
+            },
+            bases=(models.Model,),
+        ),
+    ]

@@ -1,62 +1,74 @@
-# encoding: utf-8
-import datetime
-from south.db import db
-from south.v2 import SchemaMigration
-from django.db import models
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 
-class Migration(SchemaMigration):
-
-    def forwards(self, orm):
-        
-        # Adding model 'Event'
-        db.create_table('events_event', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length='100')),
-            ('slug', self.gf('django.db.models.fields.SlugField')(max_length='100', db_index=True)),
-            ('datetime', self.gf('django.db.models.fields.DateTimeField')()),
-            ('description', self.gf('django.db.models.fields.TextField')()),
-            ('location', self.gf('events.models.LocationField')(max_length=100)),
-        ))
-        db.send_create_signal('events', ['Event'])
-
-        # Adding M2M table for field artists on 'Event'
-        db.create_table('events_event_artists', (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('event', models.ForeignKey(orm['events.event'], null=False)),
-            ('artist', models.ForeignKey(orm['artists.artist'], null=False))
-        ))
-        db.create_unique('events_event_artists', ['event_id', 'artist_id'])
+from django.db import models, migrations
+from django.conf import settings
 
 
-    def backwards(self, orm):
-        
-        # Deleting model 'Event'
-        db.delete_table('events_event')
+class Migration(migrations.Migration):
 
-        # Removing M2M table for field artists on 'Event'
-        db.delete_table('events_event_artists')
+    dependencies = [
+        ('artists', '0001_initial'),
+        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+    ]
 
-
-    models = {
-        'artists.artist': {
-            'Meta': {'ordering': "['lastname', 'firstname']", 'object_name': 'Artist'},
-            'display': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
-            'firstname': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'lastname': ('django.db.models.fields.CharField', [], {'max_length': '25'}),
-            'slug': ('django.db.models.fields.SlugField', [], {'default': "'void'", 'unique': 'True', 'max_length': '100', 'db_index': 'True'}),
-            'website': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'})
-        },
-        'events.event': {
-            'Meta': {'object_name': 'Event'},
-            'artists': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'to': "orm['artists.Artist']", 'null': 'True', 'blank': 'True'}),
-            'datetime': ('django.db.models.fields.DateTimeField', [], {}),
-            'description': ('django.db.models.fields.TextField', [], {}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'location': ('events.models.LocationField', [], {'max_length': '100'}),
-            'name': ('django.db.models.fields.CharField', [], {'max_length': "'100'"}),
-            'slug': ('django.db.models.fields.SlugField', [], {'max_length': "'100'", 'db_index': 'True'})
-        }
-    }
-
-    complete_apps = ['events']
+    operations = [
+        migrations.CreateModel(
+            name='EntityPerformance',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, verbose_name='ID', serialize=False)),
+                ('entity', models.ForeignKey(to='artists.Entity')),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='Event',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, verbose_name='ID', serialize=False)),
+                ('name', models.CharField(max_length=100, help_text="Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego' lub 'V Festiwal Piosenki Wymyślnej w Katowicach'.")),
+                ('datetime', models.DateTimeField()),
+                ('description_trevor', models.TextField()),
+                ('price', models.CharField(blank=True, max_length=100, null=True, help_text='E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw puste.')),
+                ('website', models.URLField(blank=True, null=True, help_text='Strona internetowa wydarzenia, źródło informacji. W przypadku braku danych pozostaw puste.')),
+                ('slug', models.SlugField(max_length=100, unique_for_date='datetime', editable=False)),
+                ('pub_date', models.DateTimeField(editable=False)),
+                ('published', models.BooleanField(default=True, editable=False)),
+                ('description_html', models.TextField(editable=False)),
+                ('author', models.ForeignKey(to=settings.AUTH_USER_MODEL, editable=False)),
+            ],
+            options={
+                'ordering': ['datetime'],
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='Venue',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, verbose_name='ID', serialize=False)),
+                ('name', models.CharField(max_length=100)),
+                ('town', models.CharField(max_length=100)),
+                ('street', models.CharField(max_length=100)),
+                ('slug', models.SlugField(max_length=100, unique=True, editable=False)),
+                ('lat', models.FloatField(editable=False, help_text='Latitude.')),
+                ('lon', models.FloatField(editable=False, help_text='Longtitude.')),
+            ],
+            options={
+                'ordering': ['town', 'name'],
+            },
+            bases=(models.Model,),
+        ),
+        migrations.AddField(
+            model_name='event',
+            name='venue',
+            field=models.ForeignKey(to='events.Venue'),
+            preserve_default=True,
+        ),
+        migrations.AddField(
+            model_name='entityperformance',
+            name='event',
+            field=models.ForeignKey(to='events.Event'),
+            preserve_default=True,
+        ),
+    ]
