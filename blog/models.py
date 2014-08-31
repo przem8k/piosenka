@@ -25,8 +25,6 @@ class Post(models.Model):
     date = models.DateTimeField(editable=False)
     post_trevor = models.TextField()
     post_html = models.TextField(null=True, blank=True, editable=False)
-    more = models.TextField(blank=True, null=True,
-                            help_text="Optional rest of the post, written in Markdown.")
     more_trevor = models.TextField(null=True, blank=True)
     more_html = models.TextField(null=True, blank=True, editable=False)
     published = models.BooleanField(default=True, help_text="Only admins see not-published posts")
