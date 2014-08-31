@@ -18,7 +18,8 @@ class Post(models.Model):
     objects = models.Manager()
     po = PublishedPostManager()
 
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100,
+                             help_text="Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'.")
     slug = models.SlugField(max_length=100, null=True)
     author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)

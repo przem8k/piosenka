@@ -31,17 +31,30 @@ $(document).ready(function(){
 <div class="container main">
   <form action="{% if not object or not object.pk %}{% url 'add_post' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
       <div class="customwell auxwell">
         <h1>Post</h1>
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
           </table>
-          {{ form.post_trevor }}
-          {{ form.more_trevor }}
+      </div>
+      <div class="customwell auxwell">
+        <h1>Lead</h1>
+        <div class="alert alert-info" role="alert">
+          Lead to pierwsza, obowiązkowa część posta, która będzie wyświetlana
+          na stronie głównej.
+        </div>
+        {{ form.post_trevor }}
+      </div>
+      <div class="customwell auxwell">
+        <h1>Dalsza treść</h1>
+        <div class="alert alert-info" role="alert">
+          Dalsza część jest opcjonalna, będzie wyświetlana po kliknięciu na "czytaj dalej".
+        </div>
+        {{ form.more_trevor }}
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <div class="customwell auxwell">
         <h1>Gotowe</h1>
         <input type="submit" value="{% if not object or not object.pk %}Dodaj{% else %}Zapisz{% endif %}" style="width: 100%"/>
