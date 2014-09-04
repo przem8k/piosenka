@@ -13,4 +13,4 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         for song in Song.objects.all():
             song.save()
-            print("New slug: " + song.new_slug)
+            print("Slugs: %s %s" % (song.slug, song.new_slug))

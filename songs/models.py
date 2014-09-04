@@ -10,6 +10,9 @@ from easy_thumbnails.signal_handlers import generate_aliases
 from unidecode import unidecode
 
 from artists.models import Entity
+from songs.lyrics import contain_extra_chords
+from songs.lyrics import parse_lyrics
+from songs.transpose import transpose_lyrics
 
 saved_file.connect(generate_aliases)
 
@@ -49,7 +52,7 @@ class Song(models.Model):
     lyrics = models.TextField()
 
     slug = models.SlugField(max_length=100, unique=True, null=True, blank=True, editable=False,
-                            help_text="Old slug, kept to maintain redirects.")
+                            help_text="Old, core slug, kept to avoid duplicates and maintain redirects.")
     new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True, editable=False,
                                 help_text="Used in urls, has to be unique.")
     published = models.BooleanField(default=True, editable=False, help_text="Unpublish instead of deleting.")
@@ -57,6 +60,15 @@ class Song(models.Model):
     date = models.DateTimeField(editable=False)
     has_extra_chords = models.BooleanField(default=False, blank=True, editable=False,
                                            help_text="True iff the lyrics contain repeated chords.")
+
+    @staticmethod
+    def build_slug(title, disambig):
+        return slugify(unidecode(title + " " + disambig))
+
+    @staticmethod
+    def build_new_slug(title, disambig, entity):
+        return slugify(unidecode(entity + " " + title + " " + disambig))
+
 
     class Meta:
         ordering = ["title", "disambig"]
@@ -77,25 +89,30 @@ class Song(models.Model):
 
     def clean(self):
         try:
-            from songs.lyrics import parse_lyrics
-            from songs.lyrics import contain_extra_chords
-            from songs.transpose import transpose_lyrics
             parsed_lyrics = parse_lyrics(self.lyrics)
             transpose_lyrics(parsed_lyrics, 0)
         except SyntaxError as m:
             raise ValidationError(u'Lyrics syntax is incorrect: ' + str(m))
-        self.has_extra_chords = contain_extra_chords(parsed_lyrics)
+
+        if not self.pk:
+            # New Song, let's see if the core slug is free.
+            proposed_slug = Song.build_slug(self.title, self.disambig)
+            if Song.objects.filter(slug=proposed_slug).count():
+                raise ValidationError("Piosenka o takim tytule i wyróżniku jest już w bazie.")
 
     def save(self, *args, **kwargs):
         if not self.date:
             self.date = datetime.datetime.now()
+        if not self.slug:
+            max_len = Song._meta.get_field('slug').max_length
+            self.slug = Song.build_slug(self.title, self.disambig)[:max_len]
         if not self.new_slug and self.head_entity():
             # We need to save a newly added song before saving the contributions. Hence the slug is
             # not assigned on the first save.
             max_len = Song._meta.get_field('new_slug').max_length
-            entity_part = unidecode(self.head_entity().__str__())[:(max_len // 2)]
-            song_part = unidecode(self.title + " " + self.disambig)[:(max_len // 2)]
-            self.new_slug = slugify(entity_part + " " + song_part)[:max_len]
+            self.new_slug = Song.build_new_slug(self.title, self.disambig,
+                                                self.head_entity().__str__())[:max_len]
+        self.has_extra_chords = contain_extra_chords(parse_lyrics(self.lyrics))
         super(Song, self).save(*args, **kwargs)
 
     def capo(self, transposition=0):
