@@ -83,13 +83,15 @@ textarea#id_lyrics {
             {% endfor %}
           </table>
           {% if entitycontribution.errors %}
+          {%   for dict in entitycontribution.errors %}
+          {%     if dict %}
           <div class="alert alert-danger" role="alert">
-            {% for dict in entitycontribution.errors %}
-            {% for error in dict.values %}
-            {{ error }}
-            {% endfor %}
-            {% endfor %}
+            {%     for error in dict.values %}
+            {{       error }}
+            {%     endfor %}
           </div>
+          {%     endif %}
+          {%   endfor %}
           {% endif %}
         </div>
         <div class="customwell auxwell">
