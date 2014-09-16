@@ -1,11 +1,10 @@
 {% extends "base.html" %}
-
-{% block title %}{{ entity }}{% endblock title %}
-
 {% load dxpartition %}
 
-{% block content %}
+{% block title %}Śpiewnik piosenek {{ entity }} - teksty i akordy{% endblock title %}
+{% block description %}Śpiewnik zawiera teksty i akordy do piosenek - artysta: {{ entity }}.{% endblock description %}
 
+{% block content %}
 {% include "songs/top.html" %}
 
 <div class="container">

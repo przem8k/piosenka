@@ -1,12 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}
-Strona nie znaleziona
-{% endblock %}
+{% block title %}Strona nie znaleziona{% endblock %}
+{% block description %}Strona nie znaleziona{% endblock description %}
 
-{% block hull %}
-	<div>
-    <h1 align="center">Strona nie znaleziona</h1>
-    <p>Serwis piosenkaztekstem.pl nie zawiera strony o takim adresie.</p>
+{% block content %}
+{% include "frontpage/top.html" %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="customwell auxwell">
+        <h1>Strona nie znaleziona</h1>
+        <p>Serwis piosenkaztekstem.pl nie zawiera strony o takim adresie.</p>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
 </div>
 {% endblock hull %}

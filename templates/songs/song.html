@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-
-{% block title %}{{ song.title }}{% endblock title %}
-
 {% load thumbnail %}
 
-{% block description %}Opracowanie piosenki {{song.title}}{% endblock description %}
+{% block title %}{{ song }} - tekst i akordy{% endblock title %}
+{% block description %}Opracowanie piosenki {{ song.title }} w śpiewniku Piosenki z tekstem{% endblock description %}
 
 {% block content %}
 {% include "songs/top.html" %}

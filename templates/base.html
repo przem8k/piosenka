@@ -3,14 +3,12 @@
 <!DOCTYPE HTML>
 <html lang="pl">
   <head>
+    <title>{% block title %}Piosenka z tekstem{% endblock title %}</title>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow" />
-    <link rel="index" title="Piosenka z tekstem" href="http://www.piosenkaztekstem.pl" />
-    <title>{% block title %}Piosenka literacka{% endblock title %} - Piosenka z tekstem</title>
-
     <meta name="description" content="{% block description %}Śpiewnik piosenki literackiej, wydarzenia, koncerty{% endblock description %}" />
-    <meta name="keywords" content="Śpiewnik, chwyty, akordy, Kaczmarski, Gintrowski, Czajkowski" />
+
     <link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     {% compressed_css 'piosenka' %}
     {% block extra-css %}{% endblock extra-css %}

@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-
 {% load thumbnail %}
 {% load admin_urls %}
 
-{% block title %}{{ article.title }}{% endblock title %}
+{% block title %}{{ article }} - artykuł{% endblock title %}
+{% block description %}Artykuł {{ article }} na Piosence z tekstem{% endblock description %}
 
 {% block content %}
 {% include "articles/top.html" %}
