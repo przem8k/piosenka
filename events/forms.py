@@ -1,6 +1,7 @@
 from django import forms
-from django.forms.models import inlineformset_factory
+from django.forms.models import ModelForm, inlineformset_factory
 
+from artists.models import Entity
 from events.models import EntityPerformance, Event, Venue
 
 
@@ -64,4 +65,14 @@ class EventForm(forms.ModelForm):
         model = Event
         exclude = ('venue', 'datetime')
 
-PerformanceFormSet = inlineformset_factory(Event, EntityPerformance, exclude=[])
+
+class EntityPerformanceForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(EntityPerformanceForm, self).__init__(*args, **kwargs)
+        self.fields['entity'].queryset = Entity.objects.filter(still_plays=True)
+
+    class Meta:
+        model = EntityPerformance
+
+
+PerformanceFormSet = inlineformset_factory(Event, EntityPerformance, form=EntityPerformanceForm, exclude=[])
