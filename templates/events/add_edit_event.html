@@ -96,6 +96,18 @@ $('.tip').tooltip({});
           <h1>Wystąpią</h1>
           {{ entityperformance.management_form }}
 
+          {% if entityperformance.errors %}
+          {%   for dict in entityperformance.errors %}
+          {%     if dict %}
+          <div class="alert alert-danger" role="alert">
+            {%     for error in dict.values %}
+            {{       error }}
+            {%     endfor %}
+          </div>
+          {%     endif %}
+          {%   endfor %}
+          {% endif %}
+
           <table class="table table-condensed formset">
             <tr>
               <th> </th>

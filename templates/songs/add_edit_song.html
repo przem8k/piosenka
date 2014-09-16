@@ -62,6 +62,19 @@ textarea#id_lyrics {
             Przy każdym opracowaniu należy wskazać przynajmniej jednego autora.
           </div>
           {{ entitycontribution.management_form }}
+
+          {% if entitycontribution.errors %}
+          {%   for dict in entitycontribution.errors %}
+          {%     if dict %}
+          <div class="alert alert-danger" role="alert">
+            {%     for error in dict.values %}
+            {{       error }}
+            {%     endfor %}
+          </div>
+          {%     endif %}
+          {%   endfor %}
+          {% endif %}
+
           <table class="table table-condensed formset">
             <tr>
               <th> </th>
@@ -82,17 +95,6 @@ textarea#id_lyrics {
             </tr>
             {% endfor %}
           </table>
-          {% if entitycontribution.errors %}
-          {%   for dict in entitycontribution.errors %}
-          {%     if dict %}
-          <div class="alert alert-danger" role="alert">
-            {%     for error in dict.values %}
-            {{       error }}
-            {%     endfor %}
-          </div>
-          {%     endif %}
-          {%   endfor %}
-          {% endif %}
         </div>
         <div class="customwell auxwell">
           <h1>Nuty</h1>
