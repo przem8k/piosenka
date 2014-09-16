@@ -140,3 +140,11 @@ class Event(models.Model):
 class EntityPerformance(models.Model):
     event = models.ForeignKey(Event)
     entity = models.ForeignKey(Entity)
+
+    class Meta:
+        unique_together = ("event", "entity")
+
+    def clean(self):
+        super(EntityPerformance, self).clean()
+        if not self.entity.still_plays:
+            raise ValidationError("Ten artysta nie koncertuje.")
