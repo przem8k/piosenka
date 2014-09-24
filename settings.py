@@ -74,6 +74,12 @@ PIPELINE_CSS = {
         ),
         'output_filename': 'css/sirtrevor.css',
     },
+    'frontpage': {
+        'source_filenames': (
+            'css/comments.css',
+        ),
+        'output_filename': 'css/frontpage.css',
+    },
 }
 
 PIPELINE_JS = {
@@ -93,6 +99,13 @@ PIPELINE_JS = {
             'third_party/sirtrevor/js/sir-trevor.js',
         ),
         'output_filename': 'js/sirtrevor.js',
+    },
+    'frontpage': {
+        'source_filenames': (
+            'js/comments.js',
+            'js/start_carousel.js',
+        ),
+        'output_filename': 'js/frontpage.js',
     },
 }
 

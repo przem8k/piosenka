@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load compressed %}
 
 {% block extra-scripts %}
-<script src="{% static "scripts/start_carousel.js" %}"></script>
+{% compressed_js 'frontpage' %}
 {% endblock extra-scripts %}
+
+{% block extra-css %}
+{% compressed_css 'frontpage' %}
+{% endblock extra-css %}
 
 {% block content %}
 {% include "frontpage/top.html" %}
@@ -12,18 +17,22 @@
   <div class="row">
     <div class="col-md-4">
       {% include "frontpage/new_posts.html" %}
-      {% include "frontpage/new_songs.html" %}
+      <div class="customwell auxwell">
+        <h1>Ostatnie komentarze</h1>
+          <div id="last-comments"></div>
+      </div>
     </div>
     <div class="col-md-8">
       {% include "frontpage/carousel.html" %}
       <div class="row">
         <div class="col-md-6">
-          {% include "frontpage/upcoming_events.html" %}				
+          {% include "frontpage/upcoming_events.html" %}
         </div>
         <div class="col-md-6">
+          {% include "frontpage/new_songs.html" %}
           <div class="customwell auxwell">
-            <h1>Facebook</h1>
-            <div class="fb-like-box" data-href="http://www.facebook.com/piosenkaztekstem" data-width="280" data-show-faces="true" data-stream="false" data-header="false"></div>
+            <h1>Portale społecznościowe</h1>
+            <div class="fb-like-box" data-href="http://www.facebook.com/piosenkaztekstem" data-width="280" data-show-faces="false" data-stream="false" data-header="false"></div>
           </div>
         </div>
       </div>

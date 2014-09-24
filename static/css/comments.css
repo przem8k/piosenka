@@ -1,0 +1,19 @@
+.comment .source {
+    margin-bottom: 5px;
+}
+
+.comment .content {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.comment .author {
+    text-align: center;
+    font-size: x-small;
+}
+
+.comment {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
