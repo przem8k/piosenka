@@ -8,25 +8,25 @@ ADMINS = (
 MANAGERS = ADMINS
 
 try:
-    from settings_production import DATABASES
-    from settings_production import SECRET_KEY
-    from settings_production import ALLOWED_HOSTS
+    from piosenka.settings_production import DATABASES
+    from piosenka.settings_production import SECRET_KEY
+    from piosenka.settings_production import ALLOWED_HOSTS
 
-    from settings_production import EMAIL_HOST
-    from settings_production import EMAIL_HOST_USER
-    from settings_production import EMAIL_HOST_PASSWORD
-    from settings_production import DEFAULT_FROM_EMAIL
-    from settings_production import SERVER_EMAIL
-    from settings_production import EMAIL_USE_TLS
+    from piosenka.settings_production import EMAIL_HOST
+    from piosenka.settings_production import EMAIL_HOST_USER
+    from piosenka.settings_production import EMAIL_HOST_PASSWORD
+    from piosenka.settings_production import DEFAULT_FROM_EMAIL
+    from piosenka.settings_production import SERVER_EMAIL
+    from piosenka.settings_production import EMAIL_USE_TLS
 
-    from settings_production import S3BUCKET
-    from settings_production import GOOGLE_MAPS_API_KEY
+    from piosenka.settings_production import S3BUCKET
+    from piosenka.settings_production import GOOGLE_MAPS_API_KEY
     DEBUG = False
 except ImportError:
-    from settings_local import DATABASES
-    from settings_local import SECRET_KEY
+    from piosenka.settings_local import DATABASES
+    from piosenka.settings_local import SECRET_KEY
 
-    from settings_local import GOOGLE_MAPS_API_KEY
+    from piosenka.settings_local import GOOGLE_MAPS_API_KEY
     DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
@@ -38,7 +38,7 @@ SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
 
-PROJECT_PATH = os.path.abspath(os.path.split(__file__)[0])
+PROJECT_PATH = os.path.join(os.path.abspath(os.path.split(__file__)[0]), "..")
 
 MEDIA_ROOT = os.path.join(PROJECT_PATH, "site_media", "upload")
 
