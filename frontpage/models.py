@@ -30,6 +30,7 @@ class CarouselItem(models.Model):
 class ContentItem(models.Model):
     author = models.ForeignKey(User, editable=False)
     published = models.BooleanField(default=True, editable=False)
+    pub_date = models.DateTimeField(editable=False)
 
     class Meta:
         abstract = True

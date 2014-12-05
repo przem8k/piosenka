@@ -32,7 +32,6 @@ class Article(ContentItem):
     cover_credits_trevor = models.TextField(null=True, blank=True)
 
     slug = models.SlugField(max_length=100, unique=True, editable=False)
-    pub_date = models.DateTimeField(editable=False)
     lead_text_html = models.TextField(editable=False)
     main_text_html = models.TextField(editable=False)
     cover_credits_html = models.TextField(null=True, blank=True, editable=False)

@@ -55,7 +55,6 @@ class Song(ContentItem):
                             help_text="Old, core slug, kept to avoid duplicates and maintain redirects.")
     new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True, editable=False,
                                 help_text="Used in urls, has to be unique.")
-    pub_date = models.DateTimeField(editable=False)
     has_extra_chords = models.BooleanField(default=False, blank=True, editable=False,
                                            help_text="True iff the lyrics contain repeated chords.")
 

@@ -87,7 +87,6 @@ class Event(ContentItem):
                                         "W przypadku braku danych pozostaw puste.")
 
     slug = models.SlugField(max_length=100, unique_for_date="datetime", editable=False)
-    pub_date = models.DateTimeField(editable=False)
     description_html = models.TextField(editable=False)
 
     class Meta:

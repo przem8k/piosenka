@@ -24,7 +24,6 @@ class Post(ContentItem):
     more_trevor = models.TextField(null=True, blank=True)
 
     slug = models.SlugField(max_length=100, unique=True, editable=False)
-    pub_date = models.DateTimeField(editable=False)
     post_html = models.TextField(null=True, editable=False)
     more_html = models.TextField(null=True, editable=False)
 
