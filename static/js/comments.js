@@ -8,9 +8,8 @@ $(document).ready(function() {
         var post = res.response[i];
         var content = post.raw_message.length < max_length ? post.raw_message : post.raw_message.substring(0, max_length) + " (...)";
         var html = "<div class='comment'>";
-        html += "<p class='source'><a href='" + post.thread.link + "'>" + post.thread.title + "</a></p>";
         html += "<p class='content'>" + content + "</p>";
-        html += "<p class='author'>" + post.author.name + "</p>";
+        html += "<p class='attribution'><b>" + post.author.name + "</b> - <a href='" + post.thread.link + "'>" + post.thread.title + "</a></p>";
         html += "</div>";
         result += html;
       }

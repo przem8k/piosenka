@@ -1,14 +1,10 @@
-.comment .source {
-    margin-bottom: 5px;
-}
-
 .comment .content {
     text-align: center;
     font-style: italic;
     margin-bottom: 0;
 }
 
-.comment .author {
+.comment .attribution {
     text-align: center;
     font-size: x-small;
 }
