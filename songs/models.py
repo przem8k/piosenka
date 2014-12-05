@@ -1,6 +1,5 @@
 import datetime
 
-from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.text import slugify
@@ -10,6 +9,7 @@ from easy_thumbnails.signal_handlers import generate_aliases
 from unidecode import unidecode
 
 from artists.models import Entity
+from frontpage.models import ContentItem
 from songs.lyrics import contain_extra_chords
 from songs.lyrics import parse_lyrics
 from songs.transpose import transpose_lyrics
@@ -27,7 +27,7 @@ class PublishedSongManager(models.Manager):
         return super(PublishedSongManager, self).get_queryset().filter(published=True)
 
 
-class Song(models.Model):
+class Song(ContentItem):
     CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
 
     objects = models.Manager()
@@ -55,8 +55,6 @@ class Song(models.Model):
                             help_text="Old, core slug, kept to avoid duplicates and maintain redirects.")
     new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True, editable=False,
                                 help_text="Used in urls, has to be unique.")
-    published = models.BooleanField(default=True, editable=False, help_text="Unpublish instead of deleting.")
-    author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
     has_extra_chords = models.BooleanField(default=False, blank=True, editable=False,
                                            help_text="True iff the lyrics contain repeated chords.")

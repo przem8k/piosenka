@@ -1,11 +1,11 @@
 import datetime
 
-from django.contrib.auth.models import User
 from django.db import models
 from django.utils.text import slugify
 
 from unidecode import unidecode
 
+from frontpage.models import ContentItem
 from frontpage.trevor import render_trevor
 
 
@@ -14,7 +14,7 @@ class PublishedPostManager(models.Manager):
         return super(PublishedPostManager, self).get_queryset().filter(published=True)
 
 
-class Post(models.Model):
+class Post(ContentItem):
     objects = models.Manager()
     po = PublishedPostManager()
 
@@ -24,9 +24,7 @@ class Post(models.Model):
     more_trevor = models.TextField(null=True, blank=True)
 
     slug = models.SlugField(max_length=100, unique=True, editable=False)
-    author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
-    published = models.BooleanField(default=True, editable=False)
     post_html = models.TextField(null=True, editable=False)
     more_html = models.TextField(null=True, editable=False)
 

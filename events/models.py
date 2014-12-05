@@ -1,6 +1,5 @@
 from datetime import datetime
 
-from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.text import slugify
@@ -8,6 +7,7 @@ from django.utils.text import slugify
 from unidecode import unidecode
 
 from artists.models import Entity
+from frontpage.models import ContentItem
 from frontpage.trevor import render_trevor
 
 
@@ -67,7 +67,7 @@ class PastEventManager(models.Manager):
                                                                    datetime__lt=datetime.now())
 
 
-class Event(models.Model):
+class Event(ContentItem):
     objects = models.Manager()
     po = PublishedEventManager()
     current = CurrentEventManager()
@@ -87,9 +87,7 @@ class Event(models.Model):
                                         "W przypadku braku danych pozostaw puste.")
 
     slug = models.SlugField(max_length=100, unique_for_date="datetime", editable=False)
-    author = models.ForeignKey(User, editable=False)
     pub_date = models.DateTimeField(editable=False)
-    published = models.BooleanField(default=True, editable=False)
     description_html = models.TextField(editable=False)
 
     class Meta:

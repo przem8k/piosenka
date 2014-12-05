@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 from easy_thumbnails.signals import saved_file
@@ -25,3 +26,10 @@ class CarouselItem(models.Model):
     def save(self, *args, **kwargs):
         self.description_html = markdown(self.description, safe_mode='escape')
         super(CarouselItem, self).save(*args, **kwargs)
+
+class ContentItem(models.Model):
+    author = models.ForeignKey(User, editable=False)
+    published = models.BooleanField(default=True, editable=False)
+
+    class Meta:
+        abstract = True

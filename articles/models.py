@@ -1,6 +1,5 @@
 import datetime
 
-from django.contrib.auth.models import User
 from django.db import models
 from django.utils.text import slugify
 
@@ -8,6 +7,7 @@ from easy_thumbnails.signal_handlers import generate_aliases
 from easy_thumbnails.signals import saved_file
 from unidecode import unidecode
 
+from frontpage.models import ContentItem
 from frontpage.trevor import render_trevor
 
 saved_file.connect(generate_aliases)
@@ -18,7 +18,7 @@ class PublishedArticleManager(models.Manager):
         return super(PublishedArticleManager, self).get_queryset().filter(published=True)
 
 
-class Article(models.Model):
+class Article(ContentItem):
     objects = models.Manager()
     po = PublishedArticleManager()
 
@@ -32,9 +32,7 @@ class Article(models.Model):
     cover_credits_trevor = models.TextField(null=True, blank=True)
 
     slug = models.SlugField(max_length=100, unique=True, editable=False)
-    author = models.ForeignKey(User, editable=False)
     date = models.DateTimeField(editable=False)
-    published = models.BooleanField(default=True, editable=False)
     lead_text_html = models.TextField(editable=False)
     main_text_html = models.TextField(editable=False)
     cover_credits_html = models.TextField(null=True, blank=True, editable=False)
