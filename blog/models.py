@@ -24,12 +24,12 @@ class Post(ContentItem):
     more_trevor = models.TextField(null=True, blank=True)
 
     slug = models.SlugField(max_length=100, unique=True, editable=False)
-    date = models.DateTimeField(editable=False)
+    pub_date = models.DateTimeField(editable=False)
     post_html = models.TextField(null=True, editable=False)
     more_html = models.TextField(null=True, editable=False)
 
     class Meta:
-        ordering = ["-date"]
+        ordering = ["-pub_date"]
 
     def __str__(self):
         return self.title
@@ -39,8 +39,8 @@ class Post(ContentItem):
             assert self.title
             max_len = Post._meta.get_field('slug').max_length
             self.slug = slugify(unidecode(self.title))[:max_len]
-        if not self.date:
-            self.date = datetime.datetime.now()
+        if not self.pub_date:
+            self.pub_date = datetime.datetime.now()
         self.post_html = render_trevor(self.post_trevor)
         if self.more_trevor:
             self.more_html = render_trevor(self.more_trevor)
@@ -51,17 +51,17 @@ class Post(ContentItem):
     @models.permalink
     def get_absolute_url(self):
         return ('post_detail', (), {
-            'year': self.date.strftime("%Y"),
-            'month': self.date.strftime("%m"),
-            'day': self.date.strftime("%d"),
+            'year': self.pub_date.strftime("%Y"),
+            'month': self.pub_date.strftime("%m"),
+            'day': self.pub_date.strftime("%d"),
             'slug': self.slug
         })
 
     @models.permalink
     def get_edit_url(self):
         return ('edit_post', (), {
-            'year': self.date.strftime("%Y"),
-            'month': self.date.strftime("%m"),
-            'day': self.date.strftime("%d"),
+            'year': self.pub_date.strftime("%Y"),
+            'month': self.pub_date.strftime("%m"),
+            'day': self.pub_date.strftime("%d"),
             'slug': self.slug
         })

@@ -32,13 +32,13 @@ class Article(ContentItem):
     cover_credits_trevor = models.TextField(null=True, blank=True)
 
     slug = models.SlugField(max_length=100, unique=True, editable=False)
-    date = models.DateTimeField(editable=False)
+    pub_date = models.DateTimeField(editable=False)
     lead_text_html = models.TextField(editable=False)
     main_text_html = models.TextField(editable=False)
     cover_credits_html = models.TextField(null=True, blank=True, editable=False)
 
     class Meta:
-        ordering = ["-date"]
+        ordering = ["-pub_date"]
 
     def __str__(self):
         return self.title
@@ -48,8 +48,8 @@ class Article(ContentItem):
             assert self.title
             max_len = Article._meta.get_field('slug').max_length
             self.slug = slugify(unidecode(self.title))[:max_len]
-        if not self.date:
-            self.date = datetime.datetime.now()
+        if not self.pub_date:
+            self.pub_date = datetime.datetime.now()
         self.lead_text_html = render_trevor(self.lead_text_trevor)
         self.main_text_html = render_trevor(self.main_text_trevor)
         if self.cover_credits_trevor:

@@ -3,8 +3,6 @@
 {{ action }} <span class="date">
   {% if item.pub_date %}
   {{ item.pub_date|date:"d.m.Y" }}
-  {% else %}
-  {{ item.date|date:"d.m.Y" }}
   {% endif %}
 </span> przez <b>{{ item.author }}</b>.
 </p>

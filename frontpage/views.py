@@ -54,8 +54,8 @@ class SiteIndex(TemplateView):
         context = super(SiteIndex, self).get_context_data(**kwargs)
         context['carousel_items'] = CarouselItem.objects.filter(archived=False)
         context['events'] = Event.current.all()
-        context['post'] = Post.objects.all().order_by('-date')[0]
-        context['songs'] = Song.objects.all().order_by('-date')[:SiteIndex.SONG_COUNT]
+        context['post'] = Post.objects.all().order_by('-pub_date')[0]
+        context['songs'] = Song.objects.all().order_by('-pub_date')[:SiteIndex.SONG_COUNT]
         return context
 
 

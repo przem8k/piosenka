@@ -55,7 +55,7 @@ class Song(ContentItem):
                             help_text="Old, core slug, kept to avoid duplicates and maintain redirects.")
     new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True, editable=False,
                                 help_text="Used in urls, has to be unique.")
-    date = models.DateTimeField(editable=False)
+    pub_date = models.DateTimeField(editable=False)
     has_extra_chords = models.BooleanField(default=False, blank=True, editable=False,
                                            help_text="True iff the lyrics contain repeated chords.")
 
@@ -99,8 +99,8 @@ class Song(ContentItem):
                 raise ValidationError("Piosenka o takim tytule i wyróżniku jest już w bazie.")
 
     def save(self, *args, **kwargs):
-        if not self.date:
-            self.date = datetime.datetime.now()
+        if not self.pub_date:
+            self.pub_date = datetime.datetime.now()
         if not self.slug:
             max_len = Song._meta.get_field('slug').max_length
             self.slug = Song.build_slug(self.title, self.disambig)[:max_len]
