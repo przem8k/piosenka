@@ -51,7 +51,7 @@ class Song(ContentItem):
                                     help_text="Liczba od 0 do 11, 0 oznacza brak kapodastra.")
     lyrics = models.TextField()
 
-    slug = models.SlugField(max_length=100, unique=True, null=True, blank=True, editable=False,
+    core_slug = models.SlugField(max_length=100, unique=True, null=True, blank=True, editable=False,
                             help_text="Old, core slug, kept to avoid duplicates and maintain redirects.")
     new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True, editable=False,
                                 help_text="Used in urls, has to be unique.")
@@ -59,7 +59,7 @@ class Song(ContentItem):
                                            help_text="True iff the lyrics contain repeated chords.")
 
     @staticmethod
-    def build_slug(title, disambig):
+    def build_core_slug(title, disambig):
         return slugify(unidecode(title + " " + disambig))
 
     @staticmethod
@@ -93,16 +93,16 @@ class Song(ContentItem):
 
         if not self.pk:
             # New Song, let's see if the core slug is free.
-            proposed_slug = Song.build_slug(self.title, self.disambig)
-            if Song.objects.filter(slug=proposed_slug).count():
+            proposed_slug = Song.build_core_slug(self.title, self.disambig)
+            if Song.objects.filter(core_slug=proposed_slug).count():
                 raise ValidationError("Piosenka o takim tytule i wyróżniku jest już w bazie.")
 
     def save(self, *args, **kwargs):
         if not self.pub_date:
             self.pub_date = datetime.datetime.now()
-        if not self.slug:
-            max_len = Song._meta.get_field('slug').max_length
-            self.slug = Song.build_slug(self.title, self.disambig)[:max_len]
+        if not self.core_slug:
+            max_len = Song._meta.get_field('core_slug').max_length
+            self.core_slug = Song.build_core_slug(self.title, self.disambig)[:max_len]
         if not self.new_slug and self.head_entity():
             # We need to save a newly added song before saving the contributions. Hence the slug is
             # not assigned on the first save.

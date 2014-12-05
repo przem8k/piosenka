@@ -35,7 +35,7 @@ I jeszcze jeden i jeszcze raz
 
 
 def get_song_by_entity_or_404(song_slug, entity_slug):
-    song = get_object_or_404(Song, slug=song_slug)
+    song = get_object_or_404(Song, core_slug=song_slug)
     entity = get_object_or_404(Entity, slug=entity_slug)
     # verify that the song was reached via proper artist or band
     if EntityContribution.objects.filter(song=song, entity=entity).count() == 0:
