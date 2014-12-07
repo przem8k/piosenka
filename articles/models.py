@@ -1,11 +1,9 @@
 import datetime
 
 from django.db import models
-from django.utils.text import slugify
 
 from easy_thumbnails.signal_handlers import generate_aliases
 from easy_thumbnails.signals import saved_file
-from unidecode import unidecode
 
 from frontpage.models import ContentItem
 from frontpage.trevor import render_trevor

@@ -1,6 +1,5 @@
 import json
 
-from django.core.urlresolvers import reverse_lazy
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView, RedirectView
@@ -138,7 +137,7 @@ class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         # Pick head contribution to put into the slug.
         head = EntityContribution.head_contribution([x.instance for x in contributions])
         assert head
-        form.instance.extra_slug_elements = [ head.entity.__str__() ]
+        form.instance.extra_slug_elements = [head.entity.__str__()]
         # Set the author.
         form.instance.author = self.request.user
         # Save the song - this is required for saving the contributions as they need songs pk.

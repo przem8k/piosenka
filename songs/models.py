@@ -52,7 +52,7 @@ class Song(ContentItem):
     lyrics = models.TextField()
 
     core_slug = models.SlugField(max_length=100, unique=True, null=True, blank=True, editable=False,
-                            help_text="Old, core slug, kept to avoid duplicates and maintain redirects.")
+                                 help_text="Old, core slug, kept to avoid duplicates and maintain redirects.")
     new_slug = models.SlugField(max_length=200, unique=True, null=True, blank=True, editable=False,
                                 help_text="Used in urls, has to be unique.")
     has_extra_chords = models.BooleanField(default=False, blank=True, editable=False,

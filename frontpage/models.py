@@ -29,8 +29,9 @@ class CarouselItem(models.Model):
         self.description_html = markdown(self.description, safe_mode='escape')
         super(CarouselItem, self).save(*args, **kwargs)
 
+
 class ContentItem(models.Model):
-    MAX_SLUG_LENGTH = 200;
+    MAX_SLUG_LENGTH = 200
 
     author = models.ForeignKey(User, editable=False)
     published = models.BooleanField(default=True, editable=False)
