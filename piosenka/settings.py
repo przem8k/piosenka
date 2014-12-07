@@ -8,6 +8,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 try:
+    # Try importing prod settings.
     from piosenka.settings_production import DATABASES
     from piosenka.settings_production import SECRET_KEY
     from piosenka.settings_production import ALLOWED_HOSTS
@@ -23,10 +24,19 @@ try:
     from piosenka.settings_production import GOOGLE_MAPS_API_KEY
     DEBUG = False
 except ImportError:
-    from piosenka.settings_local import DATABASES
-    from piosenka.settings_local import SECRET_KEY
-
-    from piosenka.settings_local import GOOGLE_MAPS_API_KEY
+    # Load non-prod settings.
+    try:
+        from piosenka.settings_local import DATABASES
+        from piosenka.settings_local import GOOGLE_MAPS_API_KEY
+    except ImportError:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': 'piosenka',
+            }
+        }
+        GOOGLE_MAPS_API_KEY = ""
+    SECRET_KEY = "piosenka"
     DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG

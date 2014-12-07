@@ -9,5 +9,4 @@ DATABASES = {
     }
 }
 
-SECRET_KEY = ''
 GOOGLE_MAPS_API_KEY = ''
