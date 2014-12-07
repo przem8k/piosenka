@@ -1,9 +1,6 @@
 import datetime
 
 from django.db import models
-from django.utils.text import slugify
-
-from unidecode import unidecode
 
 from frontpage.models import ContentItem
 from frontpage.trevor import render_trevor
@@ -33,11 +30,12 @@ class Post(ContentItem):
     def __str__(self):
         return self.title
 
+    # ContentItem override.
+    def get_slug_elements(self):
+        assert self.title
+        return [self.title]
+
     def save(self, *args, **kwargs):
-        if not self.slug:
-            assert self.title
-            max_len = Post._meta.get_field('slug').max_length
-            self.slug = slugify(unidecode(self.title))[:max_len]
         if not self.pub_date:
             self.pub_date = datetime.datetime.now()
         self.post_html = render_trevor(self.post_trevor)

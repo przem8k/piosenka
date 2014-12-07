@@ -95,12 +95,13 @@ class Event(ContentItem):
     def __str__(self):
         return "%s - %s (%s)" % (self.datetime.strftime("%d.%m.%Y"), self.name, self.venue.town)
 
+    # ContentItem override.
+    def get_slug_elements(self):
+        assert self.name
+        assert self.venue and self.venue.town
+        return [self.name, self.venue.town]
+
     def save(self, *args, **kwargs):
-        if not self.slug:
-            assert self.name
-            assert self.venue.town
-            max_len = Event._meta.get_field('slug').max_length
-            self.slug = slugify(unidecode(self.name + " " + self.venue.town))[:max_len]
         if not self.pub_date:
             self.pub_date = datetime.now()
         self.description_html = render_trevor(self.description_trevor)

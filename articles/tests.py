@@ -1,16 +1,27 @@
-"""
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
-
-Replace this with more appropriate tests for your application.
-"""
-
+from django.contrib.auth.models import User
 from django.test import TestCase
 
+from articles.models import Article
+from frontpage.trevor import put_text_in_trevor
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
+
+class ArticleTest(TestCase):
+    def test_slug(self):
+        author = User.objects.create_user(username="bob", email="bob@example.com",
+                                          password="secret")
+        author.save()
+
+        article = Article()
+        article.title = "Krótka historia pewnej piosenki"
+        article.lead_text_trevor = put_text_in_trevor("Lead part.")
+        article.main_text_trevor = put_text_in_trevor("Main part.")
+        article.author = author
+
+        self.assertEqual("", article.slug)
+        article.save()
+        self.assertEqual("krotka-historia-pewnej-piosenki", article.slug)
+
+        # Change the title and verify that the slug didn't change.
+        article.title = "Zupełnie inny tytuł"
+        article.save()
+        self.assertEqual("krotka-historia-pewnej-piosenki", article.slug)

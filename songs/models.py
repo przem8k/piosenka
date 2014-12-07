@@ -66,7 +66,6 @@ class Song(ContentItem):
     def build_new_slug(title, disambig, entity):
         return slugify(unidecode(entity + " " + title + " " + disambig))
 
-
     class Meta:
         ordering = ["title", "disambig"]
 
@@ -96,6 +95,10 @@ class Song(ContentItem):
             proposed_slug = Song.build_core_slug(self.title, self.disambig)
             if Song.objects.filter(core_slug=proposed_slug).count():
                 raise ValidationError("Piosenka o takim tytule i wyróżniku jest już w bazie.")
+
+    # ContentItem override.
+    def get_slug_elements(self):
+        return [self.title] + ([self.disambig] if self.disambig else [])
 
     def save(self, *args, **kwargs):
         if not self.pub_date:
@@ -162,3 +165,17 @@ class EntityContribution(models.Model):
     def clean(self):
         if not self.performed and not self.texted and not self.translated and not self.composed:
             raise ValidationError("Zaznacz co najmniej jedną rolę autora.")
+
+    @staticmethod
+    def head_contribution(contributions):
+        candidates = ([x for x in contributions if x.texted] +
+                      [x for x in contributions if x.performed] +
+                      [x for x in contributions if x.composed] +
+                      [x for x in contributions if x.translated])
+        for cand in candidates:
+            if cand.entity.featured:
+                return cand
+        for cand in candidates:
+            return cand
+        return None
+

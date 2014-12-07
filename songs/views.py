@@ -134,8 +134,16 @@ class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         contributions = super(AddSong, self).get_managed_formset()
         if not contributions.is_valid():
             return self.form_invalid(form)
+
+        # Pick head contribution to put into the slug.
+        head = EntityContribution.head_contribution([x.instance for x in contributions])
+        assert head
+        form.instance.extra_slug_elements = [ head.entity.__str__() ]
+        # Set the author.
         form.instance.author = self.request.user
-        contributions.instance = form.save()
+        # Save the song - this is required for saving the contributions as they need songs pk.
+        form.instance.save(prepend_slug_elements=[head.entity.__str__()])
+        contributions.instance = form.instance
         contributions.save()
         return super(AddSong, self).form_valid(form)
 

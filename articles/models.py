@@ -42,11 +42,12 @@ class Article(ContentItem):
     def __str__(self):
         return self.title
 
+    # ContentItem override.
+    def get_slug_elements(self):
+        assert self.title
+        return [self.title]
+
     def save(self, *args, **kwargs):
-        if not self.slug:
-            assert self.title
-            max_len = Article._meta.get_field('slug').max_length
-            self.slug = slugify(unidecode(self.title))[:max_len]
         if not self.pub_date:
             self.pub_date = datetime.datetime.now()
         self.lead_text_html = render_trevor(self.lead_text_trevor)
