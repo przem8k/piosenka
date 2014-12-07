@@ -66,6 +66,9 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+if DEBUG:
+    # Temp. workaround for https://github.com/cyberdelia/django-pipeline/issues/277 .
+    STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 
 PIPELINE_CSS = {
     'piosenka': {

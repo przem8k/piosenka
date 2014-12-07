@@ -51,10 +51,12 @@ class SiteIndex(TemplateView):
     SONG_COUNT = 10
 
     def get_context_data(self, **kwargs):
+        all_posts = Post.objects.all().order_by('-pub_date')
+
         context = super(SiteIndex, self).get_context_data(**kwargs)
         context['carousel_items'] = CarouselItem.objects.filter(archived=False)
         context['events'] = Event.current.all()
-        context['post'] = Post.objects.all().order_by('-pub_date')[0]
+        context['post'] = all_posts[0] if all_posts else None
         context['songs'] = Song.objects.all().order_by('-pub_date')[:SiteIndex.SONG_COUNT]
         return context
 
