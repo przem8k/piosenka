@@ -91,7 +91,7 @@ class SongView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(SongView, self).get_context_data(**kwargs)
-        song = get_object_or_404(Song, new_slug=kwargs['song_slug'])
+        song = get_object_or_404(Song, slug=kwargs['song_slug'])
         if 'transposition' in kwargs:
             context['json'] = True
             transposition = int(kwargs['transposition'])
@@ -156,7 +156,7 @@ class EditSong(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
     template_name = "songs/add_edit_song.html"
 
     def get_object(self):
-        return get_object_or_404(Song, new_slug=self.kwargs['song_slug'])
+        return get_object_or_404(Song, slug=self.kwargs['song_slug'])
 
     def get_managed_formset_class(self):
         return ContributionFormSet
