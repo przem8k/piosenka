@@ -2,11 +2,9 @@ import datetime
 
 from django.core.exceptions import ValidationError
 from django.db import models
-from django.utils.text import slugify
 
 from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
-from unidecode import unidecode
 
 from artists.models import Entity
 from frontpage.models import ContentItem
@@ -58,14 +56,6 @@ class Song(ContentItem):
     has_extra_chords = models.BooleanField(default=False, blank=True, editable=False,
                                            help_text="True iff the lyrics contain repeated chords.")
 
-    @staticmethod
-    def build_core_slug(title, disambig):
-        return slugify(unidecode(title + " " + disambig))
-
-    @staticmethod
-    def build_slug(title, disambig, entity):
-        return slugify(unidecode(entity + " " + title + " " + disambig))
-
     class Meta:
         ordering = ["title", "disambig"]
 
@@ -92,7 +82,7 @@ class Song(ContentItem):
 
         if not self.pk:
             # New Song, let's see if the core slug is free.
-            proposed_slug = Song.build_core_slug(self.title, self.disambig)
+            proposed_slug = self.make_slug(self.get_slug_elements())
             if Song.objects.filter(core_slug=proposed_slug).count():
                 raise ValidationError("Piosenka o takim tytule i wyróżniku jest już w bazie.")
 
@@ -104,14 +94,7 @@ class Song(ContentItem):
         if not self.pub_date:
             self.pub_date = datetime.datetime.now()
         if not self.core_slug:
-            max_len = Song._meta.get_field('core_slug').max_length
-            self.core_slug = Song.build_core_slug(self.title, self.disambig)[:max_len]
-        if not self.slug and self.head_entity():
-            # We need to save a newly added song before saving the contributions. Hence the slug is
-            # not assigned on the first save.
-            max_len = Song._meta.get_field('slug').max_length
-            self.slug = Song.build_slug(self.title, self.disambig,
-                                        self.head_entity().__str__())[:max_len]
+            self.core_slug = self.make_slug(self.get_slug_elements())
         self.has_extra_chords = contain_extra_chords(parse_lyrics(self.lyrics))
         super(Song, self).save(*args, **kwargs)
 
@@ -178,4 +161,3 @@ class EntityContribution(models.Model):
         for cand in candidates:
             return cand
         return None
-
