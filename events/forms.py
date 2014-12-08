@@ -63,7 +63,7 @@ class EventForm(forms.ModelForm):
 
     class Meta:
         model = Event
-        exclude = ('venue', 'datetime')
+        exclude = ['venue', 'datetime']
 
 
 class EntityPerformanceForm(ModelForm):
@@ -73,6 +73,8 @@ class EntityPerformanceForm(ModelForm):
 
     class Meta:
         model = EntityPerformance
+        exclude = []
 
 
-PerformanceFormSet = inlineformset_factory(Event, EntityPerformance, form=EntityPerformanceForm, exclude=[])
+PerformanceFormSet = inlineformset_factory(Event, EntityPerformance, form=EntityPerformanceForm,
+                                           exclude=[])
