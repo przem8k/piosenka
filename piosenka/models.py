@@ -1,3 +1,5 @@
+import datetime
+
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.text import slugify
@@ -16,6 +18,8 @@ class ContentItem(models.Model):
         abstract = True
 
     def save(self, *args, **kwargs):
+        if not self.pub_date:
+            self.pub_date = datetime.datetime.now()
         if not self.slug:
             slug_elements = kwargs.pop('prepend_slug_elements', []) + self.get_slug_elements()
             self.slug = ContentItem.make_slug(slug_elements)

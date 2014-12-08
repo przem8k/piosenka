@@ -2,9 +2,6 @@ from datetime import datetime
 
 from django.core.exceptions import ValidationError
 from django.db import models
-from django.utils.text import slugify
-
-from unidecode import unidecode
 
 from artists.models import Entity
 from frontpage.trevor import render_trevor
@@ -101,8 +98,6 @@ class Event(ContentItem):
         return [self.name, self.venue.town]
 
     def save(self, *args, **kwargs):
-        if not self.pub_date:
-            self.pub_date = datetime.now()
         self.description_html = render_trevor(self.description_trevor)
         super(Event, self).save(*args, **kwargs)
 

@@ -1,5 +1,3 @@
-import datetime
-
 from django.core.exceptions import ValidationError
 from django.db import models
 
@@ -92,8 +90,6 @@ class Song(ContentItem):
         return [self.title] + ([self.disambig] if self.disambig else [])
 
     def save(self, *args, **kwargs):
-        if not self.pub_date:
-            self.pub_date = datetime.datetime.now()
         if not self.core_slug:
             self.core_slug = self.make_slug(self.get_slug_elements())
         self.has_extra_chords = contain_extra_chords(parse_lyrics(self.lyrics))

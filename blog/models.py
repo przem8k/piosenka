@@ -1,5 +1,3 @@
-import datetime
-
 from django.db import models
 
 from frontpage.trevor import render_trevor
@@ -36,8 +34,6 @@ class Post(ContentItem):
         return [self.title]
 
     def save(self, *args, **kwargs):
-        if not self.pub_date:
-            self.pub_date = datetime.datetime.now()
         self.post_html = render_trevor(self.post_trevor)
         if self.more_trevor:
             self.more_html = render_trevor(self.more_trevor)

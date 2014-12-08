@@ -1,5 +1,3 @@
-import datetime
-
 from django.db import models
 
 from easy_thumbnails.signal_handlers import generate_aliases
@@ -46,8 +44,6 @@ class Article(ContentItem):
         return [self.title]
 
     def save(self, *args, **kwargs):
-        if not self.pub_date:
-            self.pub_date = datetime.datetime.now()
         self.lead_text_html = render_trevor(self.lead_text_trevor)
         self.main_text_html = render_trevor(self.main_text_trevor)
         if self.cover_credits_trevor:
