@@ -7,8 +7,8 @@ from django.utils.text import slugify
 from unidecode import unidecode
 
 from artists.models import Entity
-from frontpage.models import ContentItem
 from frontpage.trevor import render_trevor
+from piosenka.models import ContentItem
 
 
 class Venue(models.Model):
@@ -28,8 +28,7 @@ class Venue(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            max_len = Venue._meta.get_field('slug').max_length
-            self.slug = slugify(unidecode(self.name + " " + self.town))[:max_len]
+            self.slug = ContentItem.make_slug([self.name, self.town])
         super(Venue, self).save(*args, **kwargs)
 
     def clean(self):

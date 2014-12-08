@@ -7,7 +7,7 @@ from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
 
 from artists.models import Entity
-from frontpage.models import ContentItem
+from piosenka.models import ContentItem
 from songs.lyrics import contain_extra_chords
 from songs.lyrics import parse_lyrics
 from songs.transpose import transpose_lyrics
@@ -50,7 +50,8 @@ class Song(ContentItem):
     lyrics = models.TextField()
 
     core_slug = models.SlugField(max_length=100, unique=True, null=True, blank=True, editable=False,
-                                 help_text="Old, core slug, kept to avoid duplicates and maintain redirects.")
+                                 help_text="Old slug, kept to avoid duplicates and maintain "
+                                           "redirects.")
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=True, editable=False,
                             help_text="Used in urls, has to be unique.")
     has_extra_chords = models.BooleanField(default=False, blank=True, editable=False,
