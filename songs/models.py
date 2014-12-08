@@ -120,16 +120,6 @@ class Song(ContentItem):
     def performers(self):
         return [x.entity for x in EntityContribution.objects.filter(song=self, performed=True)]
 
-    def head_entity(self):
-        """ any artist or band associated with the song, used to construct default urls """
-        entities = self.text_authors() + self.performers() + self.composers() + self.translators()
-        for entity in entities:
-            if entity.featured:
-                return entity
-        if entities:
-            return entities[0]
-        return None
-
 
 class EntityContribution(models.Model):
     song = models.ForeignKey(Song)
