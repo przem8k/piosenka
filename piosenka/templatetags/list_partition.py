@@ -3,7 +3,7 @@ Template filters to partition lists into rows or columns.
 
 A common use-case is for splitting a list into a table with columns::
 
-    {% load partition %}
+    {% load list_partition %}
     <table>
     {% for row in mylist|columns:3 %}
         <tr>
@@ -115,7 +115,7 @@ def columns(thelist, n):
 
         >>> from pprint import pprint
         >>> for i in range(7, 11):
-        ...     print '%sx%s:' % (i, 3)
+        ...     print('%sx%s:' % (i, 3))
         ...     pprint(columns(range(i), 3), width=20)
         7x3:
         [[0, 3, 6],
@@ -169,11 +169,3 @@ register.filter(rows)
 register.filter(rows_distributed)
 register.filter(columns)
 register.filter(columns_horizontal)
-
-
-def _test():
-    import doctest
-    doctest.testmod()
-
-if __name__ == "__main__":
-    _test()

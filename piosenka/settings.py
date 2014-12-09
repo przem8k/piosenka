@@ -172,7 +172,7 @@ INSTALLED_APPS = (
     'songs',
     'events',
     'frontpage',
-    'dxlibrary',
+    'piosenka',
     'pipeline',
 )
 
