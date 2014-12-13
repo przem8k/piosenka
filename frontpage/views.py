@@ -1,10 +1,9 @@
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth.views import login, logout
 from django.core.urlresolvers import reverse_lazy
 from django.http import HttpResponseRedirect
-from django.http import Http404
 from django.utils.decorators import method_decorator
 from django.views.generic import View, TemplateView
 from django.views.generic.edit import FormView
@@ -14,36 +13,6 @@ from blog.models import Post
 from events.models import Event
 from frontpage.models import CarouselItem
 from songs.models import Song
-
-
-class CheckAuthorshipMixin(object):
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        item = self.get_object()
-        if not (self.request.user.is_staff or self.request.user == item.author):
-            raise Http404
-        return super(CheckAuthorshipMixin, self).dispatch(*args, **kwargs)
-
-
-class CheckLoginMixin(object):
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(CheckLoginMixin, self).dispatch(*args, **kwargs)
-
-
-class ManageInlineFormsetMixin(object):
-    """ requires .get_managed_formset_class() to be defined """
-    def get_managed_formset(self):
-        cls = self.get_managed_formset_class()
-        if self.request.POST:
-            return cls(self.request.POST, instance=self.object)
-        else:
-            return cls(instance=self.object)
-
-    def get_context_data(self, **kwargs):
-        context = super(ManageInlineFormsetMixin, self).get_context_data(**kwargs)
-        context[self.get_managed_formset_class().model.__name__.lower()] = self.get_managed_formset()
-        return context
 
 
 class SiteIndex(TemplateView):
