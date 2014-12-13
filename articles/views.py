@@ -32,7 +32,6 @@ class AddArticle(CheckLoginMixin, CreateView):
     def get_initial(self):
         initial_lead = "Tu wpisz **lead** artykułu - jedno lub dwa zdania otwierające tekst."
         initial_main = "Tu wpisz resztę artykułu."
-        initial_credits = "Tu wpisz adnotację o źródle zdjęcia."
         return {
             'lead_text_trevor': put_text_in_trevor(initial_lead),
             'main_text_trevor': put_text_in_trevor(initial_main),

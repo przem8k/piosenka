@@ -14,8 +14,14 @@
     {% for article in row %}
     <div class="col-md-4">
       <div class="customwell auxwell">
+        {% if not article.ready %}
+          <div class="alert alert-warning" role="alert">
+            Szkic.
+          </div>
+        {% endif %}
         <a href="{{article.get_absolute_url}}">
           <div class="thumbnail-host">
+
             {% if article.cover_image %}
             <img src="{{article.cover_image|thumbnail_url:'coverthumb'}}" width="100%" class="img-responsive" />
             {% else %}

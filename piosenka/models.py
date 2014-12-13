@@ -11,7 +11,7 @@ class ContentItem(models.Model):
     MAX_SLUG_LENGTH = 200
 
     author = models.ForeignKey(User, editable=False)
-    ready = models.BooleanField(default=True, editable=False)
+    ready = models.BooleanField(default=True)
     reviewed = models.BooleanField(default=False, editable=False)
     # published is deprecated - need to use ready & reviewed instead.
     published = models.BooleanField(default=True, editable=False)
