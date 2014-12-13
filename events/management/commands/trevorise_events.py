@@ -7,7 +7,7 @@ import json
 from django.core.management.base import BaseCommand
 
 from events.models import Event
-from frontpage.trevor import put_text_in_trevor
+from piosenka.trevor import put_text_in_trevor
 
 
 class Command(BaseCommand):

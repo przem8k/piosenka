@@ -3,7 +3,7 @@ from django.db import models
 from easy_thumbnails.signal_handlers import generate_aliases
 from easy_thumbnails.signals import saved_file
 
-from frontpage.trevor import render_trevor
+from piosenka.trevor import render_trevor
 from piosenka.models import ContentItem
 
 saved_file.connect(generate_aliases)

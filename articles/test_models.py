@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.test import TestCase
 
 from articles.models import Article
-from frontpage.trevor import put_text_in_trevor
+from piosenka.trevor import put_text_in_trevor
 
 
 class ArticleTest(TestCase):

@@ -9,7 +9,7 @@ from django.http import Http404
 from artists.models import Entity
 from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm, PerformanceFormSet
-from frontpage.trevor import put_text_in_trevor
+from piosenka.trevor import put_text_in_trevor
 from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin, ManageInlineFormsetMixin
 from piosenka.views import ContentItemViewMixin
 

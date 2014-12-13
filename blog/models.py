@@ -1,6 +1,6 @@
 from django.db import models
 
-from frontpage.trevor import render_trevor
+from piosenka.trevor import render_trevor
 from piosenka.models import ContentItem
 
 

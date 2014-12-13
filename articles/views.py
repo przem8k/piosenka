@@ -4,7 +4,7 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from articles.forms import ArticleForm
 from articles.models import Article
-from frontpage.trevor import put_text_in_trevor
+from piosenka.trevor import put_text_in_trevor
 from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin
 from piosenka.views import ContentItemViewMixin
 

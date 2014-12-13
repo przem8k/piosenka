@@ -7,7 +7,7 @@ import json
 from django.core.management.base import BaseCommand
 
 from blog.models import Post
-from frontpage.trevor import put_text_in_trevor
+from piosenka.trevor import put_text_in_trevor
 
 
 class Command(BaseCommand):

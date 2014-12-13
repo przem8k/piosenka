@@ -4,7 +4,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 from artists.models import Entity
-from frontpage.trevor import render_trevor
+from piosenka.trevor import render_trevor
 from piosenka.models import ContentItem
 
 
