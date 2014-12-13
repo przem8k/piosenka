@@ -7,6 +7,7 @@ from django.views.generic.edit import CreateView, UpdateView
 from blog.forms import PostForm
 from blog.models import Post
 from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin
+from piosenka.views import ContentItemViewMixin
 
 
 def obsolete_post(request, post_id):
@@ -24,15 +25,13 @@ class PostIndex(TemplateView):
         return context
 
 
-class PostDetail(DetailView):
+class PostDetail(ContentItemViewMixin, DetailView):
     model = Post
     context_object_name = "post"
     template_name = "blog/post_detail.html"
 
     def get_context_data(self, **kwargs):
         context = super(PostDetail, self).get_context_data(**kwargs)
-        context['can_edit'] = self.request.user.is_active and (
-            self.request.user.is_staff or self.request.user == self.object.author)
         context['all_posts'] = Post.objects.all()
         return context
 

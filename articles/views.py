@@ -1,4 +1,3 @@
-from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView
@@ -7,6 +6,7 @@ from articles.forms import ArticleForm
 from articles.models import Article
 from frontpage.trevor import put_text_in_trevor
 from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin
+from piosenka.views import ContentItemViewMixin
 
 
 class IndexView(TemplateView):
@@ -18,16 +18,10 @@ class IndexView(TemplateView):
         return context
 
 
-class ArticleView(DetailView):
+class ArticleView(ContentItemViewMixin, DetailView):
     model = Article
     context_object_name = "article"
     template_name = "articles/article.html"
-
-    def get_context_data(self, **kwargs):
-        context = super(DetailView, self).get_context_data(**kwargs)
-        context['can_edit'] = self.request.user.is_active and (
-            self.request.user.is_staff or self.request.user == self.object.author)
-        return context
 
 
 class AddArticle(CheckLoginMixin, CreateView):

@@ -66,18 +66,18 @@ class Song(ContentItem):
 
     @models.permalink
     def get_absolute_url(self):
-        return ("song", (), {"song_slug": self.slug})
+        return ('song', (), {'slug': self.slug})
 
     @models.permalink
     def get_edit_url(self):
-        return ('edit_song', (), {"song_slug": self.slug})
+        return ('edit_song', (), {'slug': self.slug})
 
     def clean(self):
         try:
             parsed_lyrics = parse_lyrics(self.lyrics)
             transpose_lyrics(parsed_lyrics, 0)
         except SyntaxError as m:
-            raise ValidationError(u'Lyrics syntax is incorrect: ' + str(m))
+            raise ValidationError("Lyrics syntax is incorrect: " + str(m))
 
         if not self.pk:
             # New Song, let's see if the core slug is free.

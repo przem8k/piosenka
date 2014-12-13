@@ -1,6 +1,5 @@
 import datetime
 
-from django.core.urlresolvers import reverse_lazy
 from django.views.generic import DetailView, ListView
 from django.views.generic.dates import MonthArchiveView, DateDetailView
 from django.views.generic.edit import CreateView, UpdateView
@@ -12,6 +11,7 @@ from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm, PerformanceFormSet
 from frontpage.trevor import put_text_in_trevor
 from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin, ManageInlineFormsetMixin
+from piosenka.views import ContentItemViewMixin
 
 
 class VenueDetail(DetailView):
@@ -36,19 +36,13 @@ class EntityDetail(DetailView):
         return context
 
 
-class EventDetail(DateDetailView):
+class EventDetail(ContentItemViewMixin, DateDetailView):
     model = Event
     context_object_name = "event"
     template_name = "events/event_detail.html"
     date_field = "datetime"
     month_format = "%m"
     allow_future = True
-
-    def get_context_data(self, **kwargs):
-        context = super(EventDetail, self).get_context_data(**kwargs)
-        context['can_edit'] = self.request.user.is_active and (
-            self.request.user.is_staff or self.request.user == self.object.author)
-        return context
 
 
 def add_context_for_menu(context):

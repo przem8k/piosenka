@@ -2,18 +2,19 @@ import json
 
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
-from django.views.generic import TemplateView, RedirectView
+from django.views.generic import DetailView, TemplateView, RedirectView
 from django.views.generic.edit import CreateView, UpdateView
 
 from artists.models import Entity
 from frontpage.views import CheckAuthorshipMixin, CheckLoginMixin, ManageInlineFormsetMixin
+from piosenka.views import ContentItemViewMixin
 from songs.forms import SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Song, EntityContribution
 
 
 INITIAL_LYRICS = \
-"""#zw
+    """#zw
 Pierwszy wers zwrotki [C G F E]
 Drugi wers zwrotki [a C]
 Trzeci wers zwrotki [a C]
@@ -46,7 +47,7 @@ class SongRedirectView(RedirectView):
     """ Displays a songs by default, returns transposed lyrics part in json if asked. """
 
     def get_redirect_url(self, *args, **kwargs):
-        song = get_song_by_entity_or_404(kwargs['song_slug'], kwargs['entity_slug'])
+        song = get_song_by_entity_or_404(kwargs['slug'], kwargs['entity_slug'])
         return song.get_absolute_url()
 
 
@@ -85,23 +86,21 @@ class EntityView(BaseMenuView):
         return context
 
 
-class SongView(TemplateView):
+class SongView(ContentItemViewMixin, DetailView):
     """ Displays a songs by default, returns transposed lyrics part in json if asked. """
+    model = Song
+    context_object_name = 'song'
     template_name = 'songs/song.html'
 
     def get_context_data(self, **kwargs):
         context = super(SongView, self).get_context_data(**kwargs)
-        song = get_object_or_404(Song, slug=kwargs['song_slug'])
         if 'transposition' in kwargs:
             context['json'] = True
             transposition = int(kwargs['transposition'])
             context['transposition'] = transposition
         else:
             transposition = 0
-        context['song'] = song
-        context['lyrics'] = render_lyrics(song.lyrics, transposition)
-        context['can_edit'] = self.request.user.is_active and (
-            self.request.user.is_staff or self.request.user == song.author)
+        context['lyrics'] = render_lyrics(self.object.lyrics, transposition)
         return context
 
     def render_to_response(self, context):
@@ -156,7 +155,7 @@ class EditSong(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
     template_name = "songs/add_edit_song.html"
 
     def get_object(self):
-        return get_object_or_404(Song, slug=self.kwargs['song_slug'])
+        return get_object_or_404(Song, slug=self.kwargs['slug'])
 
     def get_managed_formset_class(self):
         return ContributionFormSet
