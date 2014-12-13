@@ -2,7 +2,7 @@ from django.conf.urls import include, patterns, url
 from django.contrib import admin
 from django.views.generic import TemplateView, RedirectView
 
-import frontpage.views
+import piosenka.views
 import songs.obsolete
 
 admin.autodiscover()
@@ -20,17 +20,17 @@ urlpatterns = patterns(
     url(r'^blog/', include('blog.urls')),
     url(r'^artykuly/', include('articles.urls')),
     url(r'^wydarzenia/', include('events.urls')),
-    url(r'^o-stronie/$', frontpage.views.About.as_view(), name="about"),
-    url(r'^o-stronie/format-opracowan/$', frontpage.views.Format.as_view(), name="format"),
+    url(r'^o-stronie/$', piosenka.views.About.as_view(), name="about"),
+    url(r'^o-stronie/format-opracowan/$', piosenka.views.Format.as_view(), name="format"),
     # Site-search index.
-    url(r'^index/', include('frontpage.index')),
+    url(r'^index/', include('piosenka.index')),
     # Admin and users.
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^zaloguj/', frontpage.views.Hello.as_view(), name="hello"),
-    url(r'^wyloguj/', frontpage.views.Goodbye.as_view(), name="goodbye"),
-    url(r'^zmien-haslo/', frontpage.views.ChangePassword.as_view(), name="change_password"),
+    url(r'^zaloguj/', piosenka.views.Hello.as_view(), name="hello"),
+    url(r'^wyloguj/', piosenka.views.Goodbye.as_view(), name="goodbye"),
+    url(r'^zmien-haslo/', piosenka.views.ChangePassword.as_view(), name="change_password"),
     # Frontpage.
-    url(r'^$', frontpage.views.SiteIndex.as_view(), name="index"),
+    url(r'^$', piosenka.views.SiteIndex.as_view(), name="index"),
 )
 
 from django.conf import settings
