@@ -7,6 +7,7 @@ settings_local.py
 songs/fixtures
 artists/fixtures
 piosenka.sublime-workspace
+piosenka.db
 site_media
 node_modules
 .idea

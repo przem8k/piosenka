@@ -32,7 +32,7 @@ except ImportError:
         DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': 'piosenka',
+                'NAME': 'piosenka.db',
             }
         }
         GOOGLE_MAPS_API_KEY = ""
