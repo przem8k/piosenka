@@ -1,0 +1,11 @@
+<hr />
+<p class="remove-bottom-margin">
+  {{ action }}
+  {% if item.pub_date %}<span class="date">{{ item.pub_date|date:"d.m.Y" }}</span>{% endif %}
+  przez <b>{{ item.author }}</b>
+  <span class="pull-right">
+  {% if can_edit %}
+  <a href="{{ item.get_edit_url }}">edytuj</a>
+  {% endif %}
+  </span>
+</p>
