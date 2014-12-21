@@ -78,16 +78,7 @@ $('.tip').tooltip({});
           </div>
           {{ form.cover_credits_trevor }}
       </div>
-      <div class="customwell auxwell">
-        <h1>Dodaj</h1>
-        <div class="alert alert-info" role="alert">
-          Możesz odznaczyć pole "gotowe" i dodać artykuł jako szkic widoczny tylko dla Ciebie i moderatorów.
-        </div>
-        <table class="table table-condensed formtable">
-          {% include "components/forms/table_field.html" with name="Gotowe" field=form.ready %}
-        </table>
-        <input type="submit" value="{% if not object or not object.pk %}Dodaj{% else %}Zapisz{% endif %}" style="width: 100%"/>
-      </div>
+      {% include "components/forms/add.html" with item=object %}
     </div>
   </div>
   </form>

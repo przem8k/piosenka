@@ -131,10 +131,7 @@ $('.tip').tooltip({});
             {% include "components/forms/table_field.html" with name="Strona WWW" field=form.website %}
           </table>
         </div>
-        <div class="customwell editwell">
-          <h1>Gotowe</h1>
-          <input type="submit" value="{% if not object or not object.pk %}Dodaj{% else %}Zapisz{% endif %}" style="width: 100%"/>
-        </div>
+        {% include "components/forms/add.html" with item=object %}
       </div>
     </div>
   </form>

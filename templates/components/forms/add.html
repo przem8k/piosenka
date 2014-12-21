@@ -1,0 +1,11 @@
+<div class="customwell auxwell">
+  <h1>Gotowe</h1>
+  {% if not item or not item.pk %}
+  <div class="alert alert-info" role="alert">
+    Po dodaniu materiału będzie on natychmiast widoczny dla moderatorów. Po
+    jego zatwierdzeniu przez moderatora, będzie widoczny dla wszystkich.
+  </div>
+  {% else %}
+  {% endif %}
+  <input type="submit" value="{% if not item or not item.pk %}Dodaj{% else %}Zapisz{% endif %}" style="width: 100%" />
+</div>
