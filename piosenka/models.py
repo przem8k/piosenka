@@ -11,9 +11,8 @@ class ContentItem(models.Model):
     MAX_SLUG_LENGTH = 200
 
     author = models.ForeignKey(User, editable=False)
-    ready = models.BooleanField(default=True)
-    reviewed = models.BooleanField(default=False, editable=False)
-    # published is deprecated - need to use ready & reviewed instead.
+    reviewed = models.BooleanField(default=True, editable=False)
+    # published is deprecated - need to use reviewed instead.
     published = models.BooleanField(default=True, editable=False)
     pub_date = models.DateTimeField(editable=False)
 
@@ -34,4 +33,10 @@ class ContentItem(models.Model):
         return slugify(unidecode(" ".join(slug_elements)))[:ContentItem.MAX_SLUG_LENGTH]
 
     def is_live(self):
-        return self.ready and self.reviewed
+        return self.reviewed
+
+    def status_str(self):
+        return "opublikowany" if self.reviewed else "w moderacji"
+
+    def status_long_str(self):
+        return "Widoczny publicznie." if self.reviewed else "Czeka na akceptację moderatora."
