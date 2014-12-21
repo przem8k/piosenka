@@ -16,6 +16,7 @@
           <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>, 
           <b>{{ event.venue.town }}</b>, 
           <a href="{{event.get_absolute_url}}">{{ event.name }}</a>
+          {% include "components/content_status_span.html" with item=event %}
           </li>
           {% endfor %}
         </ul>

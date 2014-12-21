@@ -10,6 +10,7 @@
     <div class="col-md-8">
       {% for post in new_posts %}
       <div class="customwell contentwell">
+        {% include "components/content_status_div.html" with item=post %}
         <h1>{{ post.title }}</h1>
 
         {{ post.post_html|safe }}
@@ -32,7 +33,9 @@
           {% for post in all_posts %}
           <tr>
             <td><small>{{ post.pub_date|date:"d.m.Y" }}</small></td>
-            <td><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></td>
+            <td><a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+            {% include "components/content_status_span.html" with item=post %}
+            </td>
           </tr>
           {% endfor %}
         </table>

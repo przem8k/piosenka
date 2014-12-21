@@ -20,6 +20,7 @@
             <ul class="list-unstyled">
               {% for song in row %}
               <li><a href="{{ song.get_absolute_url }}">{{ song|truncatechars:50 }}</a>
+              {% include "components/content_status_span.html" with item=song %}
               </li>
               {% endfor %}
             </ul>

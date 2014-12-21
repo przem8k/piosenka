@@ -14,11 +14,7 @@
     {% for article in row %}
     <div class="col-md-4">
       <div class="customwell auxwell">
-        {% if not article.ready %}
-          <div class="alert alert-warning" role="alert">
-            Szkic.
-          </div>
-        {% endif %}
+        {% include "components/content_status_div.html" with item=article %}
         <a href="{{article.get_absolute_url}}">
           <div class="thumbnail-host">
 
