@@ -67,20 +67,22 @@
           <li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
           {% endif %}
 
-          {% if user.is_authenticated %}
           <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <span class="glyphicon glyphicon-user"></span> {{ user }}
+            <span class="glyphicon glyphicon-user"></span>{% if user.is_authenticated %} {{ user }} {% endif %}
           </a>
           <ul class="dropdown-menu" role="menu">
+            {% if user.is_authenticated %}
             <li><a href="{% url 'add_article' %}">Dodaj artykuł</a></li>
             <li><a href="{% url 'add_song' %}">Dodaj piosenkę</a></li>
             <li><a href="{% url 'add_post' %}">Dodaj post</a></li>
             <li><a href="{% url 'add_event' %}">Dodaj wydarzenie</a></li>
             <li><a href="{% url 'change_password' %}">Zmień hasło</a></li>
             <li><a href="{% url 'goodbye' %}"><b>Wyloguj</b></a></li>
+            {% else %}
+            <li><a href="{% url 'hello' %}"><b>Zaloguj</b></a></li>
+            {% endif %}
           </ul>
-          {% endif %}
           </li>
         </ul>
         <div class="navbar-right search">
