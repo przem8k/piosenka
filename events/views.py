@@ -45,18 +45,20 @@ class EventDetail(ContentItemViewMixin, DateDetailView):
     allow_future = True
 
 
-def add_context_for_menu(context):
-    from django.db.models import Count
-    context['popular_venues'] = Venue.objects.all() \
-        .annotate(event_count=Count('event')) \
-        .order_by('-event_count')[:EventIndex.VENUE_COUNT]
-    context['active_entities'] = Entity.objects.all() \
-        .annotate(event_count=Count('entityperformance')) \
-        .order_by('-event_count')[:EventIndex.ENTITY_COUNT]
-    return context
+class EventMenuMixin(object):
+    """ Populates the context needed for events/menu.html. """
+    def get_context_data(self, **kwargs):
+        context = super(EventMenuMixin, self).get_context_data(**kwargs)
+        from django.db.models import Count
+        context['popular_venues'] = Venue.objects.all() \
+            .annotate(event_count=Count('event')) \
+            .order_by('-event_count')[:EventIndex.VENUE_COUNT]
+        context['active_entities'] = Entity.objects.all() \
+            .annotate(event_count=Count('entityperformance')) \
+            .order_by('-event_count')[:EventIndex.ENTITY_COUNT]
+        return context
 
-
-class EventIndex(ListView):
+class EventIndex(EventMenuMixin, ListView):
     model = Event
     context_object_name = "events"
     template_name = "events/event_index.html"
@@ -64,12 +66,8 @@ class EventIndex(ListView):
     VENUE_COUNT = 15
     ENTITY_COUNT = 15
 
-    def get_context_data(self, **kwargs):
-        context = super(EventIndex, self).get_context_data(**kwargs)
-        return add_context_for_menu(context)
 
-
-class EventMonthArchive(MonthArchiveView):
+class EventMonthArchive(EventMenuMixin, MonthArchiveView):
     model = Event
     context_object_name = "events"
     template_name = "events/event_month_archive.html"
@@ -77,10 +75,6 @@ class EventMonthArchive(MonthArchiveView):
     month_format = "%m"
     allow_future = True
     allow_empty = True
-
-    def get_context_data(self, **kwargs):
-        context = super(EventMonthArchive, self).get_context_data(**kwargs)
-        return add_context_for_menu(context)
 
 
 class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
