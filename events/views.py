@@ -5,10 +5,10 @@ from django.views.generic.dates import MonthArchiveView, DateDetailView
 from django.views.generic.edit import CreateView, UpdateView
 from django.http import Http404
 
-
 from artists.models import Entity
 from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm, PerformanceFormSet
+from events.mixins import EventMenuMixin
 from piosenka.trevor import put_text_in_trevor
 from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin, ManageInlineFormsetMixin
 from piosenka.mixins import ContentItemViewMixin
@@ -45,26 +45,11 @@ class EventDetail(ContentItemViewMixin, DateDetailView):
     allow_future = True
 
 
-class EventMenuMixin(object):
-    """ Populates the context needed for events/menu.html. """
-    def get_context_data(self, **kwargs):
-        context = super(EventMenuMixin, self).get_context_data(**kwargs)
-        from django.db.models import Count
-        context['popular_venues'] = Venue.objects.all() \
-            .annotate(event_count=Count('event')) \
-            .order_by('-event_count')[:EventIndex.VENUE_COUNT]
-        context['active_entities'] = Entity.objects.all() \
-            .annotate(event_count=Count('entityperformance')) \
-            .order_by('-event_count')[:EventIndex.ENTITY_COUNT]
-        return context
-
 class EventIndex(EventMenuMixin, ListView):
     model = Event
     context_object_name = "events"
     template_name = "events/event_index.html"
     queryset = Event.current.all()
-    VENUE_COUNT = 15
-    ENTITY_COUNT = 15
 
 
 class EventMonthArchive(EventMenuMixin, MonthArchiveView):
