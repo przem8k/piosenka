@@ -1,34 +1,7 @@
-{% extends "base.html" %}
+{% extends "events/event_list.html" %}
 
 {% block title %}{{ entity }} - koncerty, wydarzenia{% endblock title %}
 
-{% block content %}
-{% include "events/top.html" %}
-
-<div class="container main">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="customwell auxwell">
-        <h1>Wydarzenia z udziałem: {{ entity }}</h1>
-        <ul class="list-unstyled">
-          {% for event in events %}
-          <li>
-          <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>, 
-          <b>{{ event.venue.town }}</b>, 
-          <a href="{{event.get_absolute_url}}">{{ event.name }}</a>
-          {% include "components/content_status_span.html" with item=event %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="customwell auxwell">
-        <h1>Mapa</h1>
-        {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
-      </div>
-    </div>
-  </div>
-  {% include "base/rows/disqus.html" %}
-</div>
-{% endblock content %}
+{% block content-header %}
+<h1>Wydarzenia z udziałem: {{ entity }}</h1>
+{% endblock content-header %}
