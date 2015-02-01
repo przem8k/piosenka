@@ -17,7 +17,7 @@ from piosenka.mixins import ContentItemViewMixin
 class VenueDetail(DetailView):
     model = Venue
     context_object_name = "venue"
-    template_name = "events/venue_detail.html"
+    template_name = "events/venue.html"
 
     def get_context_data(self, **kwargs):
         context = super(VenueDetail, self).get_context_data(**kwargs)
@@ -44,7 +44,7 @@ class EntityDetail(DetailView):
 class EventDetail(ContentItemViewMixin, DateDetailView):
     model = Event
     context_object_name = "event"
-    template_name = "events/event_detail.html"
+    template_name = "events/event.html"
     date_field = "datetime"
     month_format = "%m"
     allow_future = True
@@ -53,14 +53,14 @@ class EventDetail(ContentItemViewMixin, DateDetailView):
 class EventIndex(EventMenuMixin, ListView):
     model = Event
     context_object_name = "events"
-    template_name = "events/event_index.html"
+    template_name = "events/index.html"
     queryset = Event.current.all()
 
 
 class EventMonthArchive(EventMenuMixin, MonthArchiveView):
     model = Event
     context_object_name = "events"
-    template_name = "events/event_month_archive.html"
+    template_name = "events/month.html"
     date_field = "datetime"
     month_format = "%m"
     allow_future = True
