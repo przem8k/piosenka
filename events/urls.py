@@ -1,12 +1,14 @@
 from django.conf.urls import patterns, url
 
-from events.views import AddEvent, EditEvent, EventIndex, EventMonthArchive, EventDetail, EntityDetail, VenueDetail
+from events.views import *
 
 urlpatterns = patterns(
     '',
     url(r'^$', EventIndex.as_view(), name="event_index"),
-    url(r'^(?P<year>\d{4})/(?P<month>\d{2})/$', EventMonthArchive.as_view(),
-        name="event_month_archive"),
+    url(r'^(?P<year>\d{4})/(?P<month>\d{2})/$', MonthArchiveRedirect.as_view(),
+        name="event_month_redirect"),
+    url(r'^(?P<year>\d{4})/$', YearArchive.as_view(),
+        name="event_year"),
     url(r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$',
         EventDetail.as_view(), name="event_detail"),
     url(r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)/edytuj/$',

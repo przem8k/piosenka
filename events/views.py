@@ -1,7 +1,8 @@
 import datetime
 
-from django.views.generic import DetailView, ListView
-from django.views.generic.dates import MonthArchiveView, DateDetailView
+from django.core.urlresolvers import reverse
+from django.views.generic import DetailView, ListView, RedirectView, TemplateView
+from django.views.generic.dates import DateDetailView
 from django.views.generic.edit import CreateView, UpdateView
 from django.http import Http404
 
@@ -57,14 +58,21 @@ class EventIndex(EventMenuMixin, ListView):
     queryset = Event.current.all()
 
 
-class EventMonthArchive(EventMenuMixin, MonthArchiveView):
-    model = Event
-    context_object_name = "events"
-    template_name = "events/month.html"
-    date_field = "datetime"
-    month_format = "%m"
-    allow_future = True
-    allow_empty = True
+class MonthArchiveRedirect(RedirectView):
+    """ Redirect for the per-month archives which were replaced by per-year archives. """
+
+    def get_redirect_url(self, *args, **kwargs):
+        return reverse('event_year', kwargs={'year': kwargs['year']})
+
+
+class YearArchive(TemplateView):
+    template_name = "events/year.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(YearArchive, self).get_context_data(**kwargs)
+        context['events'] = Event.objects.filter(datetime__year=kwargs['year'])
+        context['year'] = kwargs['year']
+        return context
 
 
 class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):

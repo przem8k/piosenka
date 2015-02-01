@@ -2,74 +2,11 @@
   <div class="col-md-4">
     <div class="customwell auxwell">
       <h1>Archiwum wydarzeń</h1>
-      <table class="vtop cleantable" style="width:100%;">
-        <tr>
-          <td style="width:33%;">
-            <p><b>2014</b></p>
-            <ul class="list-unstyled">
-              <li class="muted">Grudzień</li>
-              <li class="muted">Listopad</li>
-              <li class="muted">Październik</li>
-              <li class="muted">Wrzesień</li>
-              <li><a href="{% url "event_month_archive" "2014" "08" %}">Sierpień</a></li>
-              <li><a href="{% url "event_month_archive" "2014" "07" %}">Lipiec</a></li>
-              <li><a href="{% url "event_month_archive" "2014" "06" %}">Czerwiec</a></li>
-              <li><a href="{% url "event_month_archive" "2014" "05" %}">Maj</a></li>
-              <li><a href="{% url "event_month_archive" "2014" "04" %}">Kwiecień</a></li>
-              <li><a href="{% url "event_month_archive" "2014" "03" %}">Marzec</a></li>
-              <li><a href="{% url "event_month_archive" "2014" "02" %}">Luty</a></li>
-              <li><a href="{% url "event_month_archive" "2014" "01" %}">Styczeń</a></li>
-            </ul>
-          </td>
-          <td style="width:33%;">
-            <p><b>2013</b></p>
-            <ul class="list-unstyled">
-              <li><a href="{% url "event_month_archive" "2013" "12" %}">Grudzień</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "11" %}">Listopad</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "10" %}">Październik</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "09" %}">Wrzesień</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "08" %}">Sierpień</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "07" %}">Lipiec</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "06" %}">Czerwiec</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "05" %}">Maj</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "04" %}">Kwiecień</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "03" %}">Marzec</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "02" %}">Luty</a></li>
-              <li><a href="{% url "event_month_archive" "2013" "01" %}">Styczeń</a></li>
-            </ul>
-          </td>
-          <td style="width:33%;">
-            <p><b>2012</b></p>
-            <ul class="list-unstyled">
-              <li><a href="{% url "event_month_archive" "2012" "12" %}">Grudzień</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "11" %}">Listopad</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "10" %}">Październik</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "09" %}">Wrzesień</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "08" %}">Sierpień</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "07" %}">Lipiec</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "06" %}">Czerwiec</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "05" %}">Maj</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "04" %}">Kwiecień</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "03" %}">Marzec</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "02" %}">Luty</a></li>
-              <li><a href="{% url "event_month_archive" "2012" "01" %}">Styczeń</a></li>
-            </ul>
-          </td>
-      </tr>
-    </table>
-    <table class="vtop cleantable" style="width:100%;">
-      <tr>
-        <td style="width:33%;">
-          <p><b>2011</b></p>
-          <ul class="list-unstyled">
-            <li><a href="{% url "event_month_archive" "2011" "12" %}">Grudzień</a></li>
-            <li><a href="{% url "event_month_archive" "2011" "11" %}">Listopad</a></li>
-            <li><a href="{% url "event_month_archive" "2011" "10" %}">Październik</a></li>
-            <li><a href="{% url "event_month_archive" "2011" "09" %}">Wrzesień</a></li>
-          </ul>
-        </td>
-      </tr>
-    </table>
+      <ul class="list-unstyled">
+        {% for year in years %}
+        <li><a href="{% url "event_year" year=year %}">{{ year }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
   <div class="col-md-4">
