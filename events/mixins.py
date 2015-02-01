@@ -14,7 +14,7 @@ class EventMenuMixin(object):
 
     def get_year_span(self):
         cur = datetime.now().year
-        earliest = Event.objects.first().datetime.year
+        earliest = Event.objects.first().datetime.year if Event.objects.first() else cur
         return [x for x in range(cur, earliest - 1, -1)]
 
     def get_context_data(self, **kwargs):
