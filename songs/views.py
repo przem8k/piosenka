@@ -6,15 +6,16 @@ from django.views.generic import DetailView, TemplateView, RedirectView
 from django.views.generic.edit import CreateView, UpdateView
 
 from artists.models import Entity
-from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin, ManageInlineFormsetMixin
+from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin
 from piosenka.mixins import ContentItemViewMixin
+from piosenka.mixins import ManageInlineFormsetMixin
 from songs.forms import SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Song, EntityContribution
 
 
-INITIAL_LYRICS = \
-    """#zw
+INITIAL_LYRICS = """\
+#zw
 Pierwszy wers zwrotki [C G F E]
 Drugi wers zwrotki [a C]
 Trzeci wers zwrotki [a C]
@@ -44,7 +45,8 @@ def get_song_by_entity_or_404(song_slug, entity_slug):
 
 
 class SongRedirectView(RedirectView):
-    """ Displays a songs by default, returns transposed lyrics part in json if asked. """
+    """ Displays a songs by default, returns transposed lyrics part in json if
+    asked. """
 
     def get_redirect_url(self, *args, **kwargs):
         song = get_song_by_entity_or_404(kwargs['slug'], kwargs['entity_slug'])
@@ -54,12 +56,18 @@ class SongRedirectView(RedirectView):
 class BaseMenuView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(BaseMenuView, self).get_context_data(**kwargs)
-        context["bards"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_TEXTER)
-        context["composers"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_COMPOSER)
-        context["translators"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_TRANSLATOR)
-        context["performers"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_PERFORMER)
-        context["foreigners"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_FOREIGN)
-        context["bands"] = Entity.objects.filter(featured=True, kind=Entity.TYPE_BAND)
+        context["bards"] = Entity.objects.filter(
+            featured=True, kind=Entity.TYPE_TEXTER)
+        context["composers"] = Entity.objects.filter(
+            featured=True, kind=Entity.TYPE_COMPOSER)
+        context["translators"] = Entity.objects.filter(
+            featured=True, kind=Entity.TYPE_TRANSLATOR)
+        context["performers"] = Entity.objects.filter(
+            featured=True, kind=Entity.TYPE_PERFORMER)
+        context["foreigners"] = Entity.objects.filter(
+            featured=True, kind=Entity.TYPE_FOREIGN)
+        context["bands"] = Entity.objects.filter(
+            featured=True, kind=Entity.TYPE_BAND)
         return context
 
 
@@ -74,10 +82,10 @@ class EntityView(BaseMenuView):
     def get_context_data(self, **kwargs):
         slug = kwargs['slug']
         entity = get_object_or_404(Entity, slug=slug)
-        songs = [x.song for x in (EntityContribution.objects.filter(entity=entity,
-                                                                    song__published=True)
-                                  .select_related('song')
-                                  .order_by('song__title'))]
+        contributions = EntityContribution.objects.filter(
+            entity=entity, song__published=True).select_related('song')\
+                                                .order_by('song__title')
+        songs = [contribution.song for contribution in contributions]
         if not songs:
             raise Http404()
         context = super(EntityView, self).get_context_data(**kwargs)
@@ -87,7 +95,8 @@ class EntityView(BaseMenuView):
 
 
 class SongView(ContentItemViewMixin, DetailView):
-    """ Displays a songs by default, returns transposed lyrics part in json if asked. """
+    """ Displays a songs by default, returns transposed lyrics part in json if
+    asked. """
     model = Song
     context_object_name = 'song'
     template_name = 'songs/song.html'
@@ -134,12 +143,14 @@ class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
             return self.form_invalid(form)
 
         # Pick head contribution to put into the slug.
-        head = EntityContribution.head_contribution([x.instance for x in contributions])
+        head = EntityContribution.head_contribution([x.instance for x in
+                                                     contributions])
         assert head
         form.instance.extra_slug_elements = [head.entity.__str__()]
         # Set the author.
         form.instance.author = self.request.user
-        # Save the song - this is required for saving the contributions as they need songs pk.
+        # Save the song - this is required for saving the contributions as they
+        # need songs pk.
         form.instance.save(prepend_slug_elements=[head.entity.__str__()])
         contributions.instance = form.instance
         contributions.save()
