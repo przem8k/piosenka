@@ -14,7 +14,6 @@
     {% for article in row %}
     <div class="col-md-4">
       <div class="customwell auxwell">
-        {% include "components/content_status_div.html" with item=article %}
         <a href="{{article.get_absolute_url}}">
           <div class="thumbnail-host">
 
@@ -24,7 +23,9 @@
             <img src="http://placekitten.com/420/210" width="100%" class="img-responsive"/>
             {% endif %}
             <div class="thumbnail-caption">
-              <h1>{{article.title}}</h1>
+              <h1>{{article.title}}
+              {% include "components/content_status_span.html" with item=article %}
+              </h1>
             </div>
           </div>
         </a>

@@ -11,8 +11,9 @@
   <div class="row">
     <div class="col-md-8">
       <div class="customwell contentwell">
-        {% include "components/content_status_div.html" with item=post %}
-        <h1 class="remove-top-margin">{{ post.title }}</h1>
+        <h1 class="remove-top-margin">{{ post.title }}
+        {% include "components/content_status_span.html" with item=post %}
+        </h1>
 
         {{ post.post_html|safe }}
 

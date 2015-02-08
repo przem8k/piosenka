@@ -10,8 +10,9 @@
     <div class="col-md-8">
       {% for post in new_posts %}
       <div class="customwell contentwell">
-        {% include "components/content_status_div.html" with item=post %}
-        <h1>{{ post.title }}</h1>
+        <h1>{{ post.title }}
+        {% include "components/content_status_span.html" with item=post %}
+        </h1>
 
         {{ post.post_html|safe }}
 

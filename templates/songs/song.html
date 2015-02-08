@@ -12,8 +12,9 @@
   <div class="row">
     <div class="col-md-8">
       <div class="customwell contentwell">
-        {% include "components/content_status_div.html" with item=song %}
-        <h1 class="remove-top-margin">{{ song }}</h1>
+        <h1 class="remove-top-margin">{{ song }}
+        {% include "components/content_status_span.html" with item=song %}
+        </h1>
 
         <div class="row">
           <div class="col-md-6">

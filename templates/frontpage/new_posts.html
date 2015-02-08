@@ -1,6 +1,8 @@
 {% for post in posts %}
 <div class="customwell contentwell">
-  <h1 class="remove-top-margin">Blog: {{ post.title }}</h1>
+  <h1 class="remove-top-margin">Blog: {{ post.title }}
+  {% include "components/content_status_span.html" with item=post %}
+  </h1>
 
   {{ post.post_html|safe }}
 

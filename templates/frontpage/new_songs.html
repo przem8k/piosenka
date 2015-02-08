@@ -4,6 +4,7 @@
     {% for song in songs %}
     <li>
     <a href="{{song.get_absolute_url}}">{{ song|truncatechars:30 }}</a>
+    {% include "components/content_status_span.html" with item=song %}
     </li>
     {% endfor %}
   </ul>
