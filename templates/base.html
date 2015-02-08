@@ -30,42 +30,12 @@
 
       <div class="collapse navbar-collapse navbar-ex1-collapse site-nav">
         <ul class="nav navbar-nav">
-          {% if section == 'index' %}
-          <li class="active"><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
-          {% else %}
           <li><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
-          {% endif %}
-
-
-          {% if section == 'blog' %}
-          <li class="active"><a href="/blog/" title="Blog"><span>Blog</span></a></li>
-          {% else %}
           <li><a href="/blog/" title="Blog"><span>Blog</span></a></li>
-          {% endif %}
-
-          {% if section == 'spiewnik' %}
-          <li class="active"><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
-          {% else %}
           <li><a href="/spiewnik/" title="Śpiewnik"><span>Śpiewnik</span></a></li>
-          {% endif %}
-
-          {% if section == 'wydarzenia' %}
-          <li class="active"><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
-          {% else %}
           <li><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
-          {% endif %}
-
-          {% if section == 'artykuly' %}
-          <li class="active"><a href="/artykuly/" title="Artykuły"><span>Artykuły</span></a></li>
-          {% else %}
           <li><a href="/artykuly/" title="Artykuły"><span>Artykuły</span></a></li>
-          {% endif %}
-
-          {% if section == 'o-stronie' %}
-          <li class="active"><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
-          {% else %}
           <li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
-          {% endif %}
 
           <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -90,7 +60,7 @@
         </div>
       </div>
 
-    </div> <!-- Container, potrzebne to?? -->
+    </div>
     </nav>
 
     {% block content %} {% endblock content %}
