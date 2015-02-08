@@ -20,40 +20,63 @@ def validate_capo_fret(value):
 
 class PublishedSongManager(models.Manager):
     def get_queryset(self):
-        return super(PublishedSongManager, self).get_queryset().filter(published=True)
+        return super(PublishedSongManager, self).get_queryset() \
+                                                .filter(published=True)
 
 
 class Song(ContentItem):
-    CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"]
+    CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX",
+                     "X", "XI", "XII"]
+
+    HELP_DISAMBIG = """\
+Opcjonalna adnotacja rozróżniająca piosenki o tym samym tytule."""
+    HELP_TITLE = """\
+Tytuł piosenki."""
+    HELP_ORIGINAL_TITLE = """\
+Tytuł oryginalnej piosenki w przypadku tłumaczenia, np. 'Mourir pour des \
+idées'."""
+    HELP_LINK_YOUTUBE = """\
+Link do nagrania piosenki w serwisie YouTube."""
+    HELP_LINK_WRZUTA = """\
+Link do nagrania piosenki w serwisie Wrzuta."""
+    HELP_CAPO_FRET = """\
+Liczba od 0 do 11, 0 oznacza brak kapodastra."""
+    HELP_CORE_SLUG = """\
+Old slug, kept to avoid duplicates and maintain redirects."""
+    HELP_SLUG = """\
+Used in urls, has to be unique."""
+    HELP_HAS_EXTRA_CHORDS = """\
+True iff the lyrics contain repeated chords."""
 
     objects = models.Manager()
     po = PublishedSongManager()
 
-    title = models.CharField(max_length=100, help_text="Tytuł piosenki.")
-    disambig = models.CharField(max_length=100, null=True, blank=True,
-                                help_text="Opcjonalna adnotacja rozróżniająca piosenki o tym samym "
-                                          "tytule.")
-    original_title = models.CharField(max_length=100, null=True, blank=True,
-                                      help_text="Tytuł oryginalnej piosenki w przypadku "
-                                                "tłumaczenia, np. 'Mourir pour des idées'.")
-    link_youtube = models.URLField(null=True, blank=True,
-                                   help_text="Link do nagrania piosenki w serwisie YouTube.")
-    link_wrzuta = models.URLField(null=True, blank=True,
-                                  help_text="Link do nagrania piosenki w serwisie Wrzuta.")
+    title = models.CharField(
+        max_length=100, help_text=HELP_TITLE)
+    disambig = models.CharField(
+        max_length=100, null=True, blank=True, help_text=HELP_DISAMBIG)
+    original_title = models.CharField(
+        max_length=100, null=True, blank=True, help_text=HELP_ORIGINAL_TITLE)
+    link_youtube = models.URLField(
+        null=True, blank=True, help_text=HELP_LINK_YOUTUBE)
+    link_wrzuta = models.URLField(
+        null=True, blank=True, help_text=HELP_LINK_WRZUTA)
     score1 = models.ImageField(null=True, blank=True, upload_to='scores')
     score2 = models.ImageField(null=True, blank=True, upload_to='scores')
     score3 = models.ImageField(null=True, blank=True, upload_to='scores')
-    capo_fret = models.IntegerField(default=0, validators=[validate_capo_fret],
-                                    help_text="Liczba od 0 do 11, 0 oznacza brak kapodastra.")
+    capo_fret = models.IntegerField(
+        default=0, validators=[validate_capo_fret], help_text=HELP_CAPO_FRET)
     lyrics = models.TextField()
 
-    core_slug = models.SlugField(max_length=100, unique=True, null=True, blank=True, editable=False,
-                                 help_text="Old slug, kept to avoid duplicates and maintain "
-                                           "redirects.")
-    slug = models.SlugField(max_length=200, unique=True, null=True, blank=True, editable=False,
-                            help_text="Used in urls, has to be unique.")
-    has_extra_chords = models.BooleanField(default=False, blank=True, editable=False,
-                                           help_text="True iff the lyrics contain repeated chords.")
+    core_slug = models.SlugField(
+        max_length=100, unique=True, null=True, blank=True, editable=False,
+        help_text=HELP_CORE_SLUG)
+    slug = models.SlugField(
+        max_length=200, unique=True, null=True, blank=True, editable=False,
+        help_text=HELP_SLUG)
+    has_extra_chords = models.BooleanField(
+        default=False, blank=True, editable=False,
+        help_text=HELP_HAS_EXTRA_CHORDS)
 
     class Meta:
         ordering = ["title", "disambig"]
@@ -83,7 +106,8 @@ class Song(ContentItem):
             # New Song, let's see if the core slug is free.
             proposed_slug = self.make_slug(self.get_slug_elements())
             if Song.objects.filter(core_slug=proposed_slug).count():
-                raise ValidationError("Piosenka o takim tytule i wyróżniku jest już w bazie.")
+                raise ValidationError(
+                    "Piosenka o takim tytule i wyróżniku jest już w bazie.")
 
     # ContentItem override.
     def get_slug_elements(self):
@@ -99,26 +123,34 @@ class Song(ContentItem):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
 
     def external_links(self):
-        """ returns list of (label, url) tuples describing links associated with the song """
-        ytpart = [("Nagranie (Youtube)", self.link_youtube, )] if self.link_youtube else []
-        wrzutapart = [("Nagranie (Wrzuta)", self.link_wrzuta, )] if self.link_wrzuta else []
-        return ytpart + wrzutapart + [
-            (x.entity, x.entity.website) for x in
-            EntityContribution.objects.filter(song=self).select_related('entity')
-            if x.entity.website
-        ]
+        """ returns list of (label, url) describing links associated with the
+        song """
+        links = []
+        if self.link_youtube:
+            links.append(("Nagranie (Youtube)", self.link_youtube))
+        if self.link_wrzuta:
+            links.append(("Nagranie (Wrzuta)", self.link_wrzuta))
+        links += [(x.entity, x.entity.website) for x in
+                  EntityContribution.objects.filter(song=self)
+                                            .select_related('entity')
+                  if x.entity.website]
+        return links
 
     def text_authors(self):
-        return [x.entity for x in EntityContribution.objects.filter(song=self, texted=True)]
+        return [x.entity for x in
+                EntityContribution.objects.filter(song=self, texted=True)]
 
     def composers(self):
-        return [x.entity for x in EntityContribution.objects.filter(song=self, composed=True)]
+        return [x.entity for x in
+                EntityContribution.objects.filter(song=self, composed=True)]
 
     def translators(self):
-        return [x.entity for x in EntityContribution.objects.filter(song=self, translated=True)]
+        return [x.entity for x in
+                EntityContribution.objects.filter(song=self, translated=True)]
 
     def performers(self):
-        return [x.entity for x in EntityContribution.objects.filter(song=self, performed=True)]
+        return [x.entity for x in
+                EntityContribution.objects.filter(song=self, performed=True)]
 
 
 class EntityContribution(models.Model):
@@ -133,7 +165,8 @@ class EntityContribution(models.Model):
         return self.entity.__str__() + " - " + self.song.title
 
     def clean(self):
-        if not self.performed and not self.texted and not self.translated and not self.composed:
+        if (not self.performed and not self.texted and not self.translated and
+                not self.composed):
             raise ValidationError("Zaznacz co najmniej jedną rolę autora.")
 
     @staticmethod
