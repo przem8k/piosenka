@@ -1,0 +1,3 @@
+<span class="date">{{ event.datetime|date:"d.m.Y" }}</span>, 
+<b>{{ event.venue.town }}</b>, 
+{% include "components/content_link.html" with item=event %}

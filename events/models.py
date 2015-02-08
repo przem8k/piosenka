@@ -90,7 +90,7 @@ class Event(ContentItem):
         ordering = ["datetime"]
 
     def __str__(self):
-        return "%s - %s (%s)" % (self.datetime.strftime("%d.%m.%Y"), self.name, self.venue.town)
+        return self.name
 
     # ContentItem override.
     def get_slug_elements(self):

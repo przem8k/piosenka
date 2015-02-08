@@ -12,10 +12,7 @@
         <ul class="list-unstyled">
           {% for event in events %}
           <li>
-          <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>, 
-          <b>{{ event.venue.town }}</b>, 
-          <a href="{{event.get_absolute_url}}">{{ event.name }}</a>
-          {% include "components/content_status_span.html" with item=event %}
+          {% include "events/event_link.html" with event=event %}
           </li>
           {% endfor %}
         </ul>

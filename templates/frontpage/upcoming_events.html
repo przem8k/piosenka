@@ -3,9 +3,7 @@
   <ul class="list-unstyled">
     {% for event in events%}
     <li>
-      <small>{{ event.datetime|date:"d.m.Y" }}</small>
-      <a href="{{ event.get_absolute_url }}">{{ event.venue.town }}: {{ event.name }}</a>
-      {% include "components/content_status_span.html" with item=event %}
+      {% include "events/event_link.html" with event=event %}
     </li>
     {% endfor %}
   </ul>
