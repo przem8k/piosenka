@@ -5,7 +5,7 @@ from django.db import models
 
 from artists.models import Entity
 from piosenka.trevor import render_trevor
-from piosenka.models import ContentItem
+from piosenka.models import ContentItem, LiveContentManager
 
 
 class Venue(models.Model):
@@ -68,6 +68,7 @@ class Event(ContentItem):
     po = PublishedEventManager()
     current = CurrentEventManager()
     past = PastEventManager()
+    live = LiveContentManager()
 
     name = models.CharField(max_length=100,
                             help_text="Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego' "

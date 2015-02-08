@@ -4,7 +4,7 @@ from easy_thumbnails.signal_handlers import generate_aliases
 from easy_thumbnails.signals import saved_file
 
 from piosenka.trevor import render_trevor
-from piosenka.models import ContentItem
+from piosenka.models import ContentItem, LiveContentManager
 
 saved_file.connect(generate_aliases)
 
@@ -17,6 +17,7 @@ class PublishedArticleManager(models.Manager):
 class Article(ContentItem):
     objects = models.Manager()
     po = PublishedArticleManager()
+    live = LiveContentManager()
 
     title = models.CharField(max_length=100,
                              help_text="Tytuł artykułu, np. 'IX Festiwal Piosenki Poetyckiej im. "

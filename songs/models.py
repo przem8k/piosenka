@@ -5,7 +5,7 @@ from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
 
 from artists.models import Entity
-from piosenka.models import ContentItem
+from piosenka.models import ContentItem, LiveContentManager
 from songs.lyrics import contain_extra_chords
 from songs.lyrics import parse_lyrics
 from songs.transpose import transpose_lyrics
@@ -20,7 +20,7 @@ def validate_capo_fret(value):
 
 class PublishedSongManager(models.Manager):
     def get_queryset(self):
-        return super(PublishedSongManager, self).get_queryset() \
+        return super(PublishedSongManager, self).get_queryset()\
                                                 .filter(published=True)
 
 
@@ -50,6 +50,7 @@ True iff the lyrics contain repeated chords."""
 
     objects = models.Manager()
     po = PublishedSongManager()
+    live = LiveContentManager()
 
     title = models.CharField(
         max_length=100, help_text=HELP_TITLE)

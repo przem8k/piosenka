@@ -1,7 +1,7 @@
 from django.db import models
 
 from piosenka.trevor import render_trevor
-from piosenka.models import ContentItem
+from piosenka.models import ContentItem, LiveContentManager
 
 
 class PublishedPostManager(models.Manager):
@@ -12,6 +12,7 @@ class PublishedPostManager(models.Manager):
 class Post(ContentItem):
     objects = models.Manager()
     po = PublishedPostManager()
+    live = LiveContentManager()
 
     title = models.CharField(max_length=100,
                              help_text="Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'.")

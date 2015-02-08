@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -17,6 +19,7 @@ from songs.models import Song
 
 class SiteIndex(TemplateView):
     template_name = "frontpage/index.html"
+    POST_COUNT = 1
     SONG_COUNT = 10
 
     def get_context_data(self, **kwargs):
@@ -24,9 +27,13 @@ class SiteIndex(TemplateView):
 
         context = super(SiteIndex, self).get_context_data(**kwargs)
         context['carousel_items'] = CarouselItem.objects.filter(archived=False)
-        context['events'] = Event.current.all()
-        context['post'] = all_posts[0] if all_posts else None
-        context['songs'] = Song.objects.all().order_by('-pub_date')[:SiteIndex.SONG_COUNT]
+        context['events'] = Event.visible_to(self.request.user)\
+                                 .filter(datetime__gte=datetime.now())\
+                                 .order_by('datetime')
+        context['posts'] = Post.visible_to(self.request.user)\
+                               .order_by('-pub_date')[:SiteIndex.POST_COUNT]
+        context['songs'] = Song.visible_to(self.request.user)\
+                               .order_by('-pub_date')[:SiteIndex.SONG_COUNT]
         return context
 
 
