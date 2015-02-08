@@ -2,14 +2,28 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.http import Http404
 
+# TODO: Some of these throw 404, some redirect to login - unify.
+# TODO: Some of these use standard decorators, other defer to can_be_ABC_by
+# methods. Use the latter everywhere to centralize the decisions in ContentItem?
+
 
 class ContentItemViewMixin(object):
-    """ Mixin added to default views for displaying the content. Adds information needed to render
-    controls (e.g.  if the link to the edit view should be displayed. """
+    """ Mixin added to default views for displaying the content.
+
+    Adds information needed to render controls (e.g. if the link to the edit
+    view should be displayed.
+
+    Limits access to the view to authenticated users if not live yet."""
+    def dispatch(self, *args, **kwargs):
+        if not self.get_object().can_be_seen_by(self.request.user):
+            raise Http404
+        return super(ContentItemViewMixin, self).dispatch(*args, **kwargs)
+
     def get_context_data(self, **kwargs):
         context = super(ContentItemViewMixin, self).get_context_data(**kwargs)
-        context['can_edit'] = self.request.user.is_active and (
-            self.request.user.is_staff or self.request.user == self.object.author)
+        context['can_edit'] = self.object.can_be_edited_by(self.request.user)
+        context['can_moderate'] = \
+            self.object.can_be_moderated_by(self.request.user)
         return context
 
 
@@ -38,7 +52,8 @@ class ManageInlineFormsetMixin(object):
             return cls(instance=self.object)
 
     def get_context_data(self, **kwargs):
-        context = super(ManageInlineFormsetMixin, self).get_context_data(**kwargs)
+        context = super(ManageInlineFormsetMixin,
+                        self).get_context_data(**kwargs)
         context[self.get_managed_formset_class().model.__name__.lower()] = \
             self.get_managed_formset()
         return context

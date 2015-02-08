@@ -38,26 +38,35 @@ class ContentItem(models.Model):
 
         return super(ContentItem, self).save(*args, **kwargs)
 
+    @staticmethod
+    def make_slug(slug_elements):
+        normalized_string = unidecode(" ".join(slug_elements))
+        return slugify(normalized_string)[:ContentItem.MAX_SLUG_LENGTH]
+
     @classmethod
-    def visible_to(cls, user):
+    def items_visible_to(cls, user):
         """ Returns the manager representing the set of instances visible to the
         particular user. """
         if user and user.is_authenticated():
             return cls.objects
         return cls.live
 
-    @staticmethod
-    def make_slug(slug_elements):
-        normalized_string = unidecode(" ".join(slug_elements))
-        return slugify(normalized_string)[:ContentItem.MAX_SLUG_LENGTH]
+    def can_be_seen_by(self, user):
+        return self.is_live() or (user.is_active and user.is_authenticated())
+
+    def can_be_edited_by(self, user):
+        return (user.is_active and
+                user.is_authenticated() and 
+                (user == self.author or user.is_staff))
+
+    def can_be_moderated_by(self, user):
+        return (user.is_active and
+                user.is_authenticated() and
+                user.is_staff and
+                user != self.author)
 
     def is_live(self):
         return self.reviewed
 
     def status_str(self):
         return "opublikowany" if self.reviewed else "w moderacji"
-
-    def status_long_str(self):
-        PUBLIC = "Widoczny publicznie."
-        IN_MODERATION = "Czeka na akceptację moderatora."
-        return PUBLIC if self.reviewed else IN_MODERATION

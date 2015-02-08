@@ -27,12 +27,12 @@ class SiteIndex(TemplateView):
 
         context = super(SiteIndex, self).get_context_data(**kwargs)
         context['carousel_items'] = CarouselItem.objects.filter(archived=False)
-        context['events'] = Event.visible_to(self.request.user)\
+        context['events'] = Event.items_visible_to(self.request.user)\
                                  .filter(datetime__gte=datetime.now())\
                                  .order_by('datetime')
-        context['posts'] = Post.visible_to(self.request.user)\
+        context['posts'] = Post.items_visible_to(self.request.user)\
                                .order_by('-pub_date')[:SiteIndex.POST_COUNT]
-        context['songs'] = Song.visible_to(self.request.user)\
+        context['songs'] = Song.items_visible_to(self.request.user)\
                                .order_by('-pub_date')[:SiteIndex.SONG_COUNT]
         return context
 

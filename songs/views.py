@@ -151,6 +151,7 @@ class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         form.instance.author = self.request.user
         # Save the song - this is required for saving the contributions as they
         # need songs pk.
+        # TODO Add test for this prepend_slug_elements hackery.
         form.instance.save(prepend_slug_elements=[head.entity.__str__()])
         contributions.instance = form.instance
         contributions.save()
