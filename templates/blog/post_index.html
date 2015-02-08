@@ -34,8 +34,8 @@
           {% for post in all_posts %}
           <tr>
             <td><small>{{ post.pub_date|date:"d.m.Y" }}</small></td>
-            <td><a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-            {% include "components/content_status_span.html" with item=post %}
+            <td>
+            {% include "components/content_link.html" with item=post %}
             </td>
           </tr>
           {% endfor %}
