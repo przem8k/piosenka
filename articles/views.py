@@ -14,7 +14,7 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
-        context['articles'] = Article.objects.all()
+        context['articles'] = Article.items_visible_to(self.request.user).all()
         return context
 
 
@@ -30,7 +30,8 @@ class AddArticle(CheckLoginMixin, CreateView):
     template_name = "articles/add_edit_article.html"
 
     def get_initial(self):
-        initial_lead = "Tu wpisz **lead** artykułu - jedno lub dwa zdania otwierające tekst."
+        initial_lead = "Tu wpisz **lead** artykułu - " \
+                       "jedno lub dwa zdania otwierające tekst."
         initial_main = "Tu wpisz resztę artykułu."
         return {
             'lead_text_trevor': put_text_in_trevor(initial_lead),
