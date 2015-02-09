@@ -85,7 +85,8 @@ class EntityView(BaseMenuView):
         contributions = EntityContribution.objects.filter(
             entity=entity, song__published=True).select_related('song')\
                                                 .order_by('song__title')
-        songs = [contribution.song for contribution in contributions]
+        songs = [contribution.song for contribution in contributions
+                 if contribution.song.can_be_seen_by(self.request.user)]
         if not songs:
             raise Http404()
         context = super(EntityView, self).get_context_data(**kwargs)

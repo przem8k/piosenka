@@ -8,6 +8,7 @@ from piosenka.models import ContentItem
 
 PASS = "secret"
 
+
 class SongUrlTest(TestCase):
     def setUp(self):
         self.user_alice = User.objects.create_user(
@@ -59,8 +60,29 @@ class SongUrlTest(TestCase):
         jolene = self.new_song("Jolene", self.user_bob)
         self.add_contribution(jolene, jack_white, True)
 
+        # Approve only Jolene.
+        seven_nations_army.reviewed = False
+        seven_nations_army.save()
+        jolene.reviewed = True
+        jolene.save()
+
+        # General public should see only Jolene.
         response = self.get(reverse('songbook_entity',
                                     kwargs={'slug': jack_white.slug}))
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(1, len(response.context['songs']))
+
+        # Any logged-in used should see both.
+        response = self.get(reverse('songbook_entity',
+                                    kwargs={'slug': jack_white.slug}),
+                            self.user_bob)
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(2, len(response.context['songs']))
+
+        # Ditto.
+        response = self.get(reverse('songbook_entity',
+                                    kwargs={'slug': jack_white.slug}),
+                            self.user_alice)
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['songs']))
 
