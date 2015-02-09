@@ -7,7 +7,7 @@ from articles.models import Article
 PASS = "secret"
 
 
-class SongUrlTest(TestCase):
+class ArticleUrlTest(TestCase):
     def setUp(self):
         self.user_mark = User.objects.create_user(
             username="mark", email="example@example.com", password=PASS)
