@@ -1,30 +1,19 @@
-from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
-from django.test import Client, TestCase
 
 from articles.models import Article
+from piosenka.url_test_case import UrlTestCase
 
-PASS = "secret"
 
-
-class ArticleUrlTest(TestCase):
+class ArticleUrlTest(UrlTestCase):
     def setUp(self):
-        self.user_mark = User.objects.create_user(
-            username="mark", email="example@example.com", password=PASS)
-        self.user_john = User.objects.create_user(
-            username="john", email="example@example.com", password=PASS)
+        self.user_mark = self.create_user_for_testing()
+        self.user_john = self.create_user_for_testing()
 
     def new_article(self, author_user):
         article = Article.create_for_testing()
         article.author = author_user
         article.save()
         return article
-
-    def get(self, url, user=None):
-        c = Client()
-        if user:
-            c.login(username=user.username, password=PASS)
-        return c.get(url)
 
     def test_article_index(self):
         response = self.get(reverse('articles'))

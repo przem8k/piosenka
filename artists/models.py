@@ -36,6 +36,14 @@ class Entity(models.Model):
     is_band = models.BooleanField(default=False, editable=False,
                                   help_text="Filled automaticely from type to facilitate sorting.")
 
+    @staticmethod
+    def create_for_testing():
+        import uuid
+        entity = Entity()
+        entity.name = str(uuid.uuid4()).replace("-", "")
+        entity.slug = entity.name
+        return entity
+
     class Meta:
         ordering = ["is_band", "name", "first_name"]
 

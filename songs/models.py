@@ -79,6 +79,14 @@ True iff the lyrics contain repeated chords."""
         default=False, blank=True, editable=False,
         help_text=HELP_HAS_EXTRA_CHORDS)
 
+    @staticmethod
+    def create_for_testing():
+        import uuid
+        song = Song()
+        song.title = str(uuid.uuid4()).replace("-", "")
+        song.lyrics = "Abc"
+        return song
+
     class Meta:
         ordering = ["title", "disambig"]
 

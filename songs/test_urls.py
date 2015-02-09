@@ -1,34 +1,24 @@
-from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
-from django.test import Client, TestCase
 
 from songs.models import EntityContribution, Song
 from artists.models import Entity
 from piosenka.models import ContentItem
+from piosenka.url_test_case import UrlTestCase
 
-PASS = "secret"
 
-
-class SongUrlTest(TestCase):
+class SongUrlTest(UrlTestCase):
     def setUp(self):
-        self.user_alice = User.objects.create_user(
-            username="alice", email="example@example.com", password=PASS)
-        self.user_bob = User.objects.create_user(
-            username="bob", email="example@example.com", password=PASS)
+        self.user_alice = self.create_user_for_testing()
+        self.user_bob = self.create_user_for_testing()
 
-    def new_song(self, title, author_user):
-        song = Song()
-        song.title = title
-        song.lyrics = "Da da da da da da"
+    def new_song(self, author_user):
+        song = Song.create_for_testing()
         song.author = author_user
         song.save()
         return song
 
-    def new_entity(self, name):
-        entity = Entity()
-        entity.name = name
-        entity.first_name = "Jacek"
-        entity.slug = ContentItem.make_slug([name])
+    def new_entity(self):
+        entity = Entity.create_for_testing()
         entity.save()
         return entity
 
@@ -43,21 +33,15 @@ class SongUrlTest(TestCase):
         contribution.composed = composed
         contribution.save()
 
-    def get(self, url, user=None):
-        c = Client()
-        if user:
-            c.login(username=user.username, password=PASS)
-        return c.get(url)
-
     def test_songbook_index(self):
         response = self.get(reverse('songbook'))
         self.assertEqual(200, response.status_code)
 
     def test_entity_index(self):
-        jack_white = self.new_entity("White")
-        seven_nations_army = self.new_song("Seven nations army", self.user_bob)
+        jack_white = self.new_entity()
+        seven_nations_army = self.new_song(self.user_bob)
         self.add_contribution(seven_nations_army, jack_white, True)
-        jolene = self.new_song("Jolene", self.user_bob)
+        jolene = self.new_song(self.user_bob)
         self.add_contribution(jolene, jack_white, True)
 
         # Approve only Jolene.
@@ -87,8 +71,8 @@ class SongUrlTest(TestCase):
         self.assertEqual(2, len(response.context['songs']))
 
     def test_view_new_song(self):
-        entity = self.new_entity("Bardus")
-        song = self.new_song("Piekna piesn", self.user_alice)
+        entity = self.new_entity()
+        song = self.new_song(self.user_alice)
         self.add_contribution(song, entity, True, True)
         song.save()
 
@@ -120,8 +104,8 @@ class SongUrlTest(TestCase):
         self.assertFalse(response.context['can_moderate'])
 
     def test_edit_song(self):
-        entity = self.new_entity("Zadura")
-        song = self.new_song("Reduta", self.user_alice)
+        entity = self.new_entity()
+        song = self.new_song(self.user_alice)
         self.add_contribution(song, entity, True, True)
         song.save()
 
