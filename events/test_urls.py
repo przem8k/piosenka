@@ -17,11 +17,11 @@ class EventUrlTest(UrlTestCase):
         return event
 
     def new_venue(self):
-        venue = Venue.create_for_testing();
+        venue = Venue.create_for_testing()
         venue.save()
         return venue
 
-    def test_event_index(self):
+    def test_event_visibility(self):
         response = self.get(reverse('event_index'))
         self.assertEqual(200, response.status_code)
 
@@ -35,15 +35,34 @@ class EventUrlTest(UrlTestCase):
         event_b.reviewed = False
         event_b.save()
 
-
+        # The general public should see only the reviewed event.
         response = self.get(reverse('event_index'))
         self.assertEqual(200, response.status_code)
         self.assertEqual(1, len(response.context['events']))
 
+        response = self.get(reverse('venue_detail',
+                                    kwargs={'slug': venue.slug}))
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(1, len(response.context['events']))
+
+        # The author should see both.
         response = self.get(reverse('event_index'), self.user_mark)
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['events']))
 
+        response = self.get(reverse('venue_detail',
+                                    kwargs={'slug': venue.slug}),
+                            self.user_mark)
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(2, len(response.context['events']))
+
+        # Another user should also see both.
         response = self.get(reverse('event_index'), self.user_john)
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(2, len(response.context['events']))
+
+        response = self.get(reverse('venue_detail',
+                                    kwargs={'slug': venue.slug}),
+                            self.user_john)
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['events']))

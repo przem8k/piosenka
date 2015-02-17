@@ -33,7 +33,9 @@ class VenueDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(VenueDetail, self).get_context_data(**kwargs)
-        context['events'] = self.object.event_set.all()
+        context['events'] = Event.items_visible_to(self.request.user)\
+                                 .filter(venue=self.object)\
+                                 .order_by('datetime')
         return context
 
 
