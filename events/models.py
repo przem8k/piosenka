@@ -36,7 +36,7 @@ class Venue(models.Model):
         try:
             geo = Geocoder.geocode(address)
         except GeocoderError:
-            raise ValidationError("Geo lookup fails to recognize this address.")
+            raise ValidationError("Geo lookup failed to recognize this address.")
         self.lat, self.lon = geo[0].coordinates
 
     @models.permalink
@@ -48,42 +48,49 @@ class Venue(models.Model):
 
 class PublishedEventManager(models.Manager):
     def get_queryset(self):
-        return super(PublishedEventManager, self).get_queryset().filter(published=True)
+        return super(PublishedEventManager,
+                     self).get_queryset().filter(published=True)
 
 
 class CurrentEventManager(models.Manager):
     def get_queryset(self):
-        return super(CurrentEventManager, self).get_queryset().filter(published=True,
-                                                                      datetime__gte=datetime.now())
+        return super(CurrentEventManager,
+                     self).get_queryset().filter(published=True,
+                                                 datetime__gte=datetime.now())
 
 
 class PastEventManager(models.Manager):
     def get_queryset(self):
-        return super(PastEventManager, self).get_queryset().filter(published=True,
-                                                                   datetime__lt=datetime.now())
+        return super(PastEventManager,
+                     self).get_queryset().filter(published=True,
+                                                 datetime__lt=datetime.now())
 
 
 class Event(ContentItem):
+    HELP_NAME = """Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego'
+lub 'V Festiwal Piosenki Wymyślnej w Katowicach'."""
+    HELP_PRICE = """E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw
+puste."""
+    HELP_WEBSITE = """Strona internetowa wydarzenia, źródło informacji. W
+przypadku braku danych pozostaw puste."""
+
     objects = models.Manager()
     po = PublishedEventManager()
     current = CurrentEventManager()
     past = PastEventManager()
     live = LiveContentManager()
 
-    name = models.CharField(max_length=100,
-                            help_text="Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego' "
-                                      "lub 'V Festiwal Piosenki Wymyślnej w Katowicach'.")
+    name = models.CharField(max_length=100, help_text=HELP_NAME)
     datetime = models.DateTimeField()
     venue = models.ForeignKey(Venue)
     description_trevor = models.TextField()
     price = models.CharField(max_length=100, null=True, blank=True,
-                             help_text="E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw "
-                                       "puste.")
+                             help_text=HELP_PRICE)
     website = models.URLField(null=True, blank=True,
-                              help_text="Strona internetowa wydarzenia, źródło informacji. "
-                                        "W przypadku braku danych pozostaw puste.")
+                              help_text=HELP_WEBSITE)
 
-    slug = models.SlugField(max_length=100, unique_for_date="datetime", editable=False)
+    slug = models.SlugField(max_length=100, unique_for_date="datetime",
+                            editable=False)
     description_html = models.TextField(editable=False)
 
     class Meta:
