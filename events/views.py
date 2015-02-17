@@ -1,7 +1,7 @@
-import datetime
+from datetime import datetime
 
 from django.core.urlresolvers import reverse
-from django.views.generic import DetailView, ListView, RedirectView, TemplateView
+from django.views.generic import DetailView, RedirectView, TemplateView
 from django.views.generic.dates import DateDetailView
 from django.views.generic.edit import CreateView, UpdateView
 from django.http import Http404
@@ -11,8 +11,19 @@ from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm, PerformanceFormSet
 from events.mixins import EventMenuMixin
 from piosenka.trevor import put_text_in_trevor
-from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin, ManageInlineFormsetMixin
-from piosenka.mixins import ContentItemViewMixin
+from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin
+from piosenka.mixins import ContentItemViewMixin, ManageInlineFormsetMixin
+
+
+class EventIndex(EventMenuMixin, TemplateView):
+    template_name = "events/index.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(EventIndex, self).get_context_data(**kwargs)
+        context['events'] = Event.items_visible_to(self.request.user)\
+                                 .filter(datetime__gte=datetime.now())\
+                                 .order_by('datetime')
+        return context
 
 
 class VenueDetail(DetailView):
@@ -38,7 +49,9 @@ class EntityDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(EntityDetail, self).get_context_data(**kwargs)
-        context['events'] = [x.event for x in EntityPerformance.objects.filter(entity=self.object)]
+        context['events'] = [x.event for x in
+                             EntityPerformance.objects.filter(
+                                 entity=self.object)]
         return context
 
 
@@ -51,15 +64,9 @@ class EventDetail(ContentItemViewMixin, DateDetailView):
     allow_future = True
 
 
-class EventIndex(EventMenuMixin, ListView):
-    model = Event
-    context_object_name = "events"
-    template_name = "events/index.html"
-    queryset = Event.current.all()
-
-
 class MonthArchiveRedirect(RedirectView):
-    """ Redirect for the per-month archives which were replaced by per-year archives. """
+    """ Redirect for the per-month archives which were replaced by per-year
+    archives. """
 
     def get_redirect_url(self, *args, **kwargs):
         return reverse('event_year', kwargs={'year': kwargs['year']})
@@ -81,8 +88,8 @@ class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
     template_name = "events/add_edit_event.html"
 
     def get_initial(self):
-        initial_description = "Tutaj opisz wydarzenie. Zaznacz fragment tekstu aby dodać \
-            **pogrubienie** albo [odsyłacz](#)."
+        initial_description = """Tutaj opisz wydarzenie. Zaznacz fragment tekstu
+        aby dodać \ **pogrubienie** albo [odsyłacz](#)."""
         return {
             'description_trevor': put_text_in_trevor(initial_description)
         }
@@ -98,8 +105,8 @@ class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         venue = form.cleaned_data['venue']
         venue.save()
         form.instance.venue = venue
-        form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],
-                                                           form.cleaned_data['time'])
+        form.instance.datetime = datetime.combine(form.cleaned_data['date'],
+                                                  form.cleaned_data['time'])
         form.instance.author = self.request.user
         performances.instance = form.save()
         performances.save()
@@ -115,7 +122,6 @@ class EditEvent(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
     template_name = "events/add_edit_event.html"
 
     def get_object(self):
-        import datetime
         import time
         year = self.kwargs['year']
         month = self.kwargs['month']
@@ -147,8 +153,8 @@ class EditEvent(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
         venue = form.cleaned_data['venue']
         venue.save()
         form.instance.venue = venue
-        form.instance.datetime = datetime.datetime.combine(form.cleaned_data['date'],
-                                                           form.cleaned_data['time'])
+        form.instance.datetime = datetime.combine(form.cleaned_data['date'],
+                                                  form.cleaned_data['time'])
         performances.instance = form.save()
         performances.save()
         return super(EditEvent, self).form_valid(form)
