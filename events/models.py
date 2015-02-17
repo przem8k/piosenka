@@ -1,10 +1,11 @@
 from datetime import datetime
+from datetime import timedelta
 
 from django.core.exceptions import ValidationError
 from django.db import models
 
 from artists.models import Entity
-from piosenka.trevor import render_trevor
+from piosenka.trevor import render_trevor, put_text_in_trevor
 from piosenka.models import ContentItem, LiveContentManager
 
 
@@ -16,6 +17,17 @@ class Venue(models.Model):
     slug = models.SlugField(max_length=100, unique=True, editable=False)
     lat = models.FloatField(editable=False, help_text="Latitude.")
     lon = models.FloatField(editable=False, help_text="Longtitude.")
+
+    @staticmethod
+    def create_for_testing():
+        import uuid
+        venue = Venue()
+        venue.name = str(uuid.uuid4()).replace("-", "")
+        venue.town = "New York"
+        venue.street = "233 Madison Avenue"
+        venue.lat = 0.0
+        venue.lon = 0.0
+        return venue
 
     class Meta:
         ordering = ["town", "name"]
@@ -92,6 +104,15 @@ przypadku braku danych pozostaw puste."""
     slug = models.SlugField(max_length=100, unique_for_date="datetime",
                             editable=False)
     description_html = models.TextField(editable=False)
+
+    @staticmethod
+    def create_for_testing():
+        import uuid
+        event = Event()
+        event.name = str(uuid.uuid4()).replace("-", "")
+        event.description_trevor = put_text_in_trevor("Abc")
+        event.datetime = datetime.now() + timedelta(days=365)
+        return event
 
     class Meta:
         ordering = ["datetime"]
