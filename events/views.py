@@ -53,7 +53,8 @@ class EntityDetail(DetailView):
         context = super(EntityDetail, self).get_context_data(**kwargs)
         context['events'] = [x.event for x in
                              EntityPerformance.objects.filter(
-                                 entity=self.object)]
+                                 entity=self.object)
+                             if x.event.can_be_seen_by(self.request.user)]
         return context
 
 
@@ -79,7 +80,8 @@ class YearArchive(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(YearArchive, self).get_context_data(**kwargs)
-        context['events'] = Event.objects.filter(datetime__year=kwargs['year'])
+        context['events'] = Event.items_visible_to(self.request.user)\
+                                 .filter(datetime__year=kwargs['year'])
         context['year'] = kwargs['year']
         return context
 
