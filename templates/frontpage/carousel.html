@@ -1,5 +1,6 @@
 {% load thumbnail %}
 
+{% if carousel_items %}
 <div id="front-carousel" class="carousel slide">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -27,3 +28,4 @@
   <a class="carousel-control left" href="#front-carousel" data-slide="prev"><span class="icon-prev"></span></a>
   <a class="carousel-control right" href="#front-carousel" data-slide="next"><span class="icon-next"></span></a>
 </div>
+{% endif %}
