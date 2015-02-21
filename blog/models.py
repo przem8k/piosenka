@@ -1,27 +1,39 @@
 from django.db import models
 
-from piosenka.trevor import render_trevor
+from piosenka.trevor import render_trevor, put_text_in_trevor
 from piosenka.models import ContentItem, LiveContentManager
 
 
 class PublishedPostManager(models.Manager):
     def get_queryset(self):
-        return super(PublishedPostManager, self).get_queryset().filter(published=True)
+        return super(PublishedPostManager, self).get_queryset()\
+                                                .filter(published=True)
 
 
 class Post(ContentItem):
+    HELP_TITLE = "Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'."
+
     objects = models.Manager()
     po = PublishedPostManager()
     live = LiveContentManager()
 
     title = models.CharField(max_length=100,
-                             help_text="Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'.")
+                             help_text=HELP_TITLE)
     post_trevor = models.TextField()
     more_trevor = models.TextField(null=True, blank=True)
 
     slug = models.SlugField(max_length=100, unique=True, editable=False)
     post_html = models.TextField(null=True, editable=False)
     more_html = models.TextField(null=True, editable=False)
+
+    @staticmethod
+    def create_for_testing():
+        import uuid
+        post = Post()
+        post.title = str(uuid.uuid4()).replace("-", "")
+        post.post_trevor = put_text_in_trevor("Abc")
+        post.more_trevor = put_text_in_trevor("Abc")
+        return post
 
     class Meta:
         ordering = ["-pub_date"]

@@ -16,12 +16,14 @@ def obsolete_post(request, post_id):
 
 
 class PostIndex(TemplateView):
+    MAX_POSTS = 5
     template_name = "blog/post_index.html"
 
     def get_context_data(self, **kwargs):
         context = super(PostIndex, self).get_context_data(**kwargs)
-        context['new_posts'] = Post.objects.all()[0:5]
-        context['all_posts'] = Post.objects.all()
+        context['new_posts'] = Post.items_visible_to(self.request.user)\
+                                   .all()[0:PostIndex.MAX_POSTS]
+        context['all_posts'] = Post.items_visible_to(self.request.user).all()
         return context
 
 
@@ -32,7 +34,7 @@ class PostDetail(ContentItemViewMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(PostDetail, self).get_context_data(**kwargs)
-        context['all_posts'] = Post.objects.all()
+        context['all_posts'] = Post.items_visible_to(self.request.user).all()
         return context
 
 
