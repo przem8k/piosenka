@@ -8,6 +8,7 @@ from django.views.generic.edit import CreateView, UpdateView
 from artists.models import Entity
 from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin
 from piosenka.mixins import ContentItemViewMixin
+from piosenka.mixins import ContentItemApproveMixin
 from piosenka.mixins import ManageInlineFormsetMixin
 from songs.forms import SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
@@ -183,3 +184,15 @@ class EditSong(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
 
     def get_success_url(self):
         return self.object.get_absolute_url()
+
+
+class ApproveSong(ContentItemApproveMixin, RedirectView):
+    def get_object(self):
+        return get_object_or_404(Song, slug=self.kwargs['slug'])
+
+    def get_redirect_url(self, *args, **kwargs):
+        song = self.get_object()
+        song.reviewed = True
+        song.save()
+        return song.get_absolute_url()
+

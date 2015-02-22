@@ -56,10 +56,10 @@ class ContentItem(models.Model):
 
     def can_be_edited_by(self, user):
         return (user.is_active and
-                user.is_authenticated() and 
+                user.is_authenticated() and
                 (user == self.author or user.is_staff))
 
-    def can_be_moderated_by(self, user):
+    def can_be_approved_by(self, user):
         return (user.is_active and
                 user.is_authenticated() and
                 user.is_staff and

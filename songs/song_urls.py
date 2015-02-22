@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from songs.views import AddSong, EditSong, SongView
+from songs.views import AddSong, ApproveSong, EditSong, SongView
 
 urlpatterns = patterns(
     '',
@@ -9,4 +9,6 @@ urlpatterns = patterns(
     url(r'^(?P<slug>[-\w]+)/transpose/(?P<transposition>\d+)/$',
         SongView.as_view(), name="song-transposition"),
     url(r'^(?P<slug>[-\w]+)/edytuj/$', EditSong.as_view(), name="edit_song"),
+    url(r'^(?P<slug>[-\w]+)/zatwierdz/$', ApproveSong.as_view(),
+        name="approve_song"),
 )

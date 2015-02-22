@@ -22,12 +22,22 @@ class ContentItemViewMixin(object):
     def get_context_data(self, **kwargs):
         context = super(ContentItemViewMixin, self).get_context_data(**kwargs)
         context['can_edit'] = self.object.can_be_edited_by(self.request.user)
-        context['can_moderate'] = \
-            self.object.can_be_moderated_by(self.request.user)
+        context['can_approve'] = \
+            self.object.can_be_approved_by(self.request.user)
         return context
 
 
+class ContentItemApproveMixin(object):
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        item = self.get_object()
+        if not item.can_be_approved_by(self.request.user):
+            raise Http404
+        return super(ContentItemApproveMixin, self).dispatch(*args, **kwargs)
+
+
 class CheckAuthorshipMixin(object):
+    # TODO this should become ContentItemEditMixin?
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         item = self.get_object()
@@ -37,6 +47,7 @@ class CheckAuthorshipMixin(object):
 
 
 class CheckLoginMixin(object):
+    # TODO this should become ContentItemAddMixin?
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(CheckLoginMixin, self).dispatch(*args, **kwargs)
