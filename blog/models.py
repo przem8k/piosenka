@@ -71,3 +71,12 @@ class Post(ContentItem):
             'day': self.pub_date.strftime("%d"),
             'slug': self.slug
         })
+
+    @models.permalink
+    def get_approve_url(self):
+        return ('approve_post', (), {
+            'year': self.pub_date.strftime("%Y"),
+            'month': self.pub_date.strftime("%m"),
+            'day': self.pub_date.strftime("%d"),
+            'slug': self.slug
+        })

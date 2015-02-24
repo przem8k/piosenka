@@ -1,13 +1,15 @@
-from django.core.urlresolvers import reverse_lazy
+from datetime import datetime
+
 from django.http import HttpResponsePermanentRedirect
 from django.shortcuts import get_object_or_404
-from django.views.generic import DetailView, TemplateView
+from django.views.generic import DetailView, TemplateView, RedirectView
 from django.views.generic.edit import CreateView, UpdateView
 
 from blog.forms import PostForm
 from blog.models import Post
 from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin
 from piosenka.mixins import ContentItemViewMixin
+from piosenka.mixins import ContentItemApproveMixin
 
 
 def obsolete_post(request, post_id):
@@ -38,6 +40,21 @@ class PostDetail(ContentItemViewMixin, DetailView):
         return context
 
 
+class PostGetObjectMixin(object):
+    def get_object(self):
+        import time
+        year = self.kwargs['year']
+        month = self.kwargs['month']
+        day = self.kwargs['day']
+        slug = self.kwargs['slug']
+        date_stamp = time.strptime(year+month+day, "%Y%m%d")
+        pub_date = datetime.fromtimestamp(time.mktime(date_stamp))
+        return Post.objects.get(slug=slug,
+                                pub_date__year=pub_date.year,
+                                pub_date__month=pub_date.month,
+                                pub_date__day=pub_date.day)
+
+
 class AddPost(CheckLoginMixin, CreateView):
     model = Post
     form_class = PostForm
@@ -51,24 +68,14 @@ class AddPost(CheckLoginMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditPost(CheckAuthorshipMixin, UpdateView):
+class EditPost(PostGetObjectMixin, CheckAuthorshipMixin, UpdateView):
     model = Post
     form_class = PostForm
     template_name = "blog/add_edit_post.html"
 
-    def get_object(self):
-        import datetime
-        import time
-        year = self.kwargs['year']
-        month = self.kwargs['month']
-        day = self.kwargs['day']
-        slug = self.kwargs['slug']
-        date_stamp = time.strptime(year+month+day, "%Y%m%d")
-        pub_date = datetime.date(*date_stamp[:3])
-        return Post.objects.get(slug=slug,
-                                pub_date__year=pub_date.year,
-                                pub_date__month=pub_date.month,
-                                pub_date__day=pub_date.day)
-
     def get_success_url(self):
         return self.object.get_absolute_url()
+
+
+class ApprovePost(PostGetObjectMixin, ContentItemApproveMixin, RedirectView):
+    pass
