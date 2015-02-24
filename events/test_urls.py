@@ -36,8 +36,7 @@ class EventUrlTest(UrlTestCase):
         self.assertEqual(200, response.status_code)
         self.assertEqual(1, len(response.context['events']))
 
-        response = self.get(reverse('venue_detail',
-                                    kwargs={'slug': venue.slug}))
+        response = self.get(venue.get_absolute_url())
         self.assertEqual(200, response.status_code)
         self.assertEqual(1, len(response.context['events']))
 
@@ -46,9 +45,7 @@ class EventUrlTest(UrlTestCase):
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['events']))
 
-        response = self.get(reverse('venue_detail',
-                                    kwargs={'slug': venue.slug}),
-                            self.user_alice)
+        response = self.get(venue.get_absolute_url(), self.user_alice)
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['events']))
 
@@ -57,9 +54,7 @@ class EventUrlTest(UrlTestCase):
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['events']))
 
-        response = self.get(reverse('venue_detail',
-                                    kwargs={'slug': venue.slug}),
-                            self.user_bob)
+        response = self.get(venue.get_absolute_url(), self.user_bob)
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['events']))
 

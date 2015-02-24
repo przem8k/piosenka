@@ -74,19 +74,17 @@ class SongUrlTest(UrlTestCase):
 
         # Verify that the general public can't access the song.
         self.assertFalse(song.is_live())
-        response = self.get(reverse('song', kwargs={'slug': song.slug}))
+        response = self.get(song.get_absolute_url())
         self.assertEqual(404, response.status_code)
 
         # Verify what happens when the author does.
-        response = self.get(reverse('song', kwargs={'slug': song.slug}),
-                            self.user_alice)
+        response = self.get(song.get_absolute_url(), self.user_alice)
         self.assertEqual(200, response.status_code)
         self.assertTrue(response.context['can_edit'])
         self.assertFalse(response.context['can_approve'])
 
         # Verify what happens when another author does.
-        response = self.get(reverse('song', kwargs={'slug': song.slug}),
-                            self.user_bob)
+        response = self.get(song.get_absolute_url(), self.user_bob)
         self.assertEqual(200, response.status_code)
         self.assertFalse(response.context['can_edit'])
         self.assertFalse(response.context['can_approve'])
@@ -99,32 +97,29 @@ class SongUrlTest(UrlTestCase):
 
         # Verify that the general public can't access the song.
         self.assertFalse(song.is_live())
-        response = self.get(reverse('song', kwargs={'slug': song.slug}))
+        response = self.get(song.get_absolute_url())
         self.assertEqual(404, response.status_code)
 
         # Try to approve the song - Alice can't, she's the author.
-        response = self.get(reverse('approve_song', kwargs={'slug': song.slug}),
-                            self.user_alice)
+        response = self.get(song.get_approve_url(), self.user_alice)
         self.assertEqual(404, response.status_code)
         song = Song.objects.get(id=song.id)  # Refresh from db.
         self.assertFalse(song.is_live())
 
         # Try to approve the song - Bob can't, he's not staff.
-        response = self.get(reverse('approve_song', kwargs={'slug': song.slug}),
-                            self.user_bob)
+        response = self.get(song.get_approve_url(), self.user_bob)
         self.assertEqual(404, response.status_code)
         song = Song.objects.get(id=song.id)  # Refresh from db.
         self.assertFalse(song.is_live())
 
         # Try to approve the song - approver can and does.
-        response = self.get(reverse('approve_song', kwargs={'slug': song.slug}),
-                            self.user_approver)
+        response = self.get(song.get_approve_url(), self.user_approver)
         self.assertEqual(301, response.status_code)
         song = Song.objects.get(id=song.id)  # Refresh from db.
         self.assertTrue(song.is_live())
 
         # Verify what happens now that the song is approved.
-        response = self.get(reverse('song', kwargs={'slug': song.slug}))
+        response = self.get(song.get_absolute_url())
         self.assertEqual(200, response.status_code)
         self.assertFalse(response.context['can_edit'])
         self.assertFalse(response.context['can_approve'])
