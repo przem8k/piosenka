@@ -13,6 +13,7 @@ from events.mixins import EventMenuMixin
 from piosenka.trevor import put_text_in_trevor
 from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin
 from piosenka.mixins import ContentItemViewMixin, ManageInlineFormsetMixin
+from piosenka.mixins import ContentItemApproveMixin
 
 
 class EventIndex(EventMenuMixin, TemplateView):
@@ -120,11 +121,7 @@ class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditEvent(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
-    model = Event
-    form_class = EventForm
-    template_name = "events/add_edit_event.html"
-
+class EventGetObjectMixin(object):
     def get_object(self):
         import time
         year = self.kwargs['year']
@@ -132,11 +129,18 @@ class EditEvent(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
         day = self.kwargs['day']
         slug = self.kwargs['slug']
         date_stamp = time.strptime(year+month+day, "%Y%m%d")
-        event_date = datetime.date(*date_stamp[:3])
+        event_date = datetime.fromtimestamp(time.mktime(date_stamp))
         return Event.objects.get(slug=slug,
                                  datetime__year=event_date.year,
                                  datetime__month=event_date.month,
                                  datetime__day=event_date.day)
+
+
+class EditEvent(EventGetObjectMixin, CheckAuthorshipMixin,
+                ManageInlineFormsetMixin, UpdateView):
+    model = Event
+    form_class = EventForm
+    template_name = "events/add_edit_event.html"
 
     def get_initial(self):
         return {
@@ -165,3 +169,7 @@ class EditEvent(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
 
     def get_success_url(self):
         return self.object.get_absolute_url()
+
+
+class ApproveEvent(EventGetObjectMixin, ContentItemApproveMixin, RedirectView):
+    pass

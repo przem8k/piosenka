@@ -148,6 +148,15 @@ przypadku braku danych pozostaw puste."""
             'slug': self.slug
         })
 
+    @models.permalink
+    def get_approve_url(self):
+        return ('approve_event', (), {
+            'year': self.datetime.strftime("%Y"),
+            'month': self.datetime.strftime("%m"),
+            'day': self.datetime.strftime("%d"),
+            'slug': self.slug
+        })
+
     def lat(self):
         return self.venue.lat
 
