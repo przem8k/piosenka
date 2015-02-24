@@ -79,3 +79,9 @@ Main illustration for the article."""
         return('edit_article', (), {
             'slug': self.slug,
         })
+
+    @models.permalink
+    def get_approve_url(self):
+        return ('approve_article', (), {
+            'slug': self.slug
+        })

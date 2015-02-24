@@ -1,7 +1,6 @@
 import uuid
 
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
 from django.test import Client, TestCase
 
 PASS = "secret"
@@ -21,3 +20,11 @@ class UrlTestCase(TestCase):
         return User.objects.create_user(username=name,
                                         email=EMAIL,
                                         password=PASS)
+
+    def setUp(self):
+        super().setUp()
+        self.user_alice = self.create_user_for_testing()
+        self.user_bob = self.create_user_for_testing()
+        self.user_approver = self.create_user_for_testing()
+        self.user_approver.is_staff = True
+        self.user_approver.save()

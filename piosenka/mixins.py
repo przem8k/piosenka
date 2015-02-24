@@ -35,6 +35,12 @@ class ContentItemApproveMixin(object):
             raise Http404
         return super(ContentItemApproveMixin, self).dispatch(*args, **kwargs)
 
+    def get_redirect_url(self, *args, **kwargs):
+        item = self.get_object()
+        item.reviewed = True
+        item.save()
+        return item.get_absolute_url()
+
 
 class CheckAuthorshipMixin(object):
     # TODO this should become ContentItemEditMixin?

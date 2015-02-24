@@ -189,10 +189,3 @@ class EditSong(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
 class ApproveSong(ContentItemApproveMixin, RedirectView):
     def get_object(self):
         return get_object_or_404(Song, slug=self.kwargs['slug'])
-
-    def get_redirect_url(self, *args, **kwargs):
-        song = self.get_object()
-        song.reviewed = True
-        song.save()
-        return song.get_absolute_url()
-

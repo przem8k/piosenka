@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from django.views.generic import DetailView, TemplateView
+from django.views.generic import DetailView, TemplateView, RedirectView
 from django.views.generic.edit import CreateView, UpdateView
 
 from articles.forms import ArticleForm
@@ -7,6 +7,7 @@ from articles.models import Article
 from piosenka.trevor import put_text_in_trevor
 from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin
 from piosenka.mixins import ContentItemViewMixin
+from piosenka.mixins import ContentItemApproveMixin
 
 
 class IndexView(TemplateView):
@@ -56,3 +57,8 @@ class EditArticle(CheckAuthorshipMixin, UpdateView):
 
     def get_success_url(self):
         return self.object.get_absolute_url()
+
+
+class ApproveArticle(ContentItemApproveMixin, RedirectView):
+    def get_object(self):
+        return get_object_or_404(Article, slug=self.kwargs['slug'])

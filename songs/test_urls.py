@@ -7,13 +7,6 @@ from piosenka.url_test_case import UrlTestCase
 
 
 class SongUrlTest(UrlTestCase):
-    def setUp(self):
-        self.user_alice = self.create_user_for_testing()
-        self.user_bob = self.create_user_for_testing()
-        self.user_approver = self.create_user_for_testing()
-        self.user_approver.is_staff = True
-        self.user_approver.save()
-
     def new_song(self, author_user):
         song = Song.create_for_testing()
         song.author = author_user
