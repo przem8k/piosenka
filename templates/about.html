@@ -12,11 +12,27 @@
     <div class="col-md-8">
       <div class="customwell contentwell">
         <h1 class="remove-top-margin">O stronie</h1>
+        <p>
+        <b>Piosenka z tekstem</b> jest tworzona przez środowisko sympatyków
+        piosenki literackiej hobbystycznie i <b>niekomercyjnie</b>. Serwis nie
+        zawiera reklam i nie publikuje artykułów sponsorowanych.
+        </p>
+
+        <p>
+        Strona działa dzięki pracy <b>zespołu</b> ochotników. W ramach dbałości o
+        jakość zamieszczanych treści, każdy materiał przed publikacją
+        przechodzi <b>korektę</b>.
+        </p>
+
+        <h2>Zespół</h2>
         <table class="table table-striped table-condensed scoreboard">
           <tr><th></th><th>Piosenki</th><th>Wydarzenia</th><th>Artykuły</th><th>Suma<th></tr>
           {% for author in authors %}
           <tr>
-            <td>{{ author.user.first_name }} {{ author.user.last_name }}</td>
+            <td>{{ author.user.first_name }} {{ author.user.last_name }}
+              {% if author.user.is_staff %} <span class="badge"> korektor </span> {% else %}
+              <span class="badge"> autor </span>{% endif %}
+            </td>
             <td>{{ author.songs }}</td>
             <td>{{ author.events }}</td>
             <td>{{ author.articles }}</td>
@@ -28,8 +44,11 @@
       <div class="customwell contentwell">
         <h1>Dziękujemy</h1>
         <p>
-        Dziękujemy za pomoc w zgromadzeniu opublikowanych materiałów, w szczególności za nadesłane opracowania, materiały i poprawki a także za pomoc techniczną. Pomogli:
+        Dziękujemy za pomoc w zgromadzeniu opublikowanych materiałów, w
+        szczególności za nadesłane opracowania, materiały i poprawki a także za
+        pomoc techniczną. Pomogli:
         </p>
+
         <ul>
           <li>Witold Bartoszek</li>
           <li><a href="http://asia-biega.com/">Joanna Biega</a></li>
@@ -41,7 +60,12 @@
           <li><a href="http://www.trio.art.pl/" >Tomasz Susmęd</a></li>
           <li>Mariusz Zadura</li>
         </ul>
-        <p>Autorem wszystkich opracowań nutowych zamieszczonych w <a href="/spiewnik/">Śpiewniku</a> jest <a href="http://www.trio.art.pl/" >Tomasz Susmęd</a>.</p>
+
+        <p>
+        Autorem wszystkich opracowań nutowych zamieszczonych w
+        <a href="/spiewnik/">Śpiewniku</a> jest
+        <a href="http://www.trio.art.pl/" >Tomasz Susmęd</a>.
+        </p>
       </div>
     </div>
 
@@ -49,20 +73,22 @@
       <div class="customwell auxwell">
         <h1>Kontakt</h1>
         <p>
-        Wszelkie uwagi, sugestie, zapytania, informacje o błędach prosimy przesyłać na adres <b>redakcja malpa piosenkaztekstem kropka pl</b>.
+        Wszelkie uwagi, sugestie, zapytania, informacje o błędach prosimy
+        przesyłać na adres <b>redakcja malpa piosenkaztekstem kropka pl</b>.
         </p>
 
       </div>
       <div class="customwell auxwell">
         <h1>Notka</h1>
         <p>
-        Serwis ma charakter <b>niekomercyjny</b>. PzT nie zawiera reklam i nie
-        publikuje artykułów sponsorowanych.
+        Dokładamy starań, aby materiały publikowane na stronie, w szczególności
+        teksty piosenek, były zamieszczane za zgodą autorów lub właścicieli
+        praw.
         </p>
 
         <p>
-        Dokładamy starań, aby materiały publikowane na stronie, w szczególności
-        teksty piosenek, były zamieszczane za zgodą autorów lub właścicieli praw.
+        W przypadku wątpliwości odnośnie poszczególnych publikacji, prosimy o
+        kontakt mailowy (adres powyżej).
         </p>
       </div>
       <div class="customwell auxwell">
@@ -76,7 +102,7 @@
           <li><img src="{% static "images/badges/python.gif" %}"/></li>
           <li><img src="{% static "images/badges/postgres.gif" %}"/></li>
         </ul>
-        <p>Również kod źródłowy PzT jest <a href="https://github.com/pietrzkiewicz/piosenka">dostępny publicznie</a>.</p>
+        <p>Również kod źródłowy PzT jest <a href="https://github.com/ppiet/piosenka">dostępny publicznie</a>.</p>
       </div>
     </div>
   </div>
