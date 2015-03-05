@@ -69,4 +69,4 @@ class ContentItem(models.Model):
         return self.reviewed
 
     def status_str(self):
-        return "opublikowany" if self.reviewed else "w moderacji"
+        return "opublikowany" if self.reviewed else "w korekcie"

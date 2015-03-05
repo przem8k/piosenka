@@ -29,10 +29,7 @@
           <tr><th></th><th>Piosenki</th><th>Wydarzenia</th><th>Artykuły</th><th>Suma<th></tr>
           {% for author in authors %}
           <tr>
-            <td>{{ author.user.first_name }} {{ author.user.last_name }}
-              {% if author.user.is_staff %} <span class="badge"> korektor </span> {% else %}
-              <span class="badge"> autor </span>{% endif %}
-            </td>
+            <td>{{ author.user.first_name }} {{ author.user.last_name }}</td>
             <td>{{ author.songs }}</td>
             <td>{{ author.events }}</td>
             <td>{{ author.articles }}</td>

@@ -2,8 +2,9 @@
   <h1>Gotowe</h1>
   {% if not item or not item.pk %}
   <div class="alert alert-info" role="alert">
-    Po dodaniu materiału będzie on natychmiast widoczny dla moderatorów. Po
-    jego zatwierdzeniu przez moderatora, będzie widoczny dla wszystkich.
+    Po dodaniu materiału będzie on natychmiast widoczny dla zalogowanych
+    autorów. Po jego zatwierdzeniu przez korektora, będzie widoczny dla
+    publicznie.
   </div>
   {% else %}
   {% endif %}
