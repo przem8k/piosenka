@@ -59,6 +59,14 @@ class CheckLoginMixin(object):
         return super(CheckLoginMixin, self).dispatch(*args, **kwargs)
 
 
+class CheckStaffMixin(object):
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        if not (self.request.user.is_staff):
+            raise Http404
+        return super().dispatch(*args, **kwargs)
+
+
 class ManageInlineFormsetMixin(object):
     """ requires .get_managed_formset_class() to be defined """
     def get_managed_formset(self):

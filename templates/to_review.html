@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Do korekty{% endblock %}
+
+{% block content %}
+
+{% include "frontpage/top.html" %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="customwell auxwell">
+        <h1>Do korekty</h1>
+        <ul>
+          {% for item in to_review %}
+          <li><a href="{{ item.get_absolute_url }}">{{ item }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+{% endblock content %}

@@ -15,6 +15,7 @@ from blog.models import Post
 from events.models import Event
 from frontpage.models import CarouselItem
 from songs.models import Song
+from piosenka.mixins import CheckStaffMixin
 
 
 class SiteIndex(TemplateView):
@@ -101,3 +102,6 @@ class ChangePassword(FormView):
     def form_valid(self, form):
         form.save()
         return super(ChangePassword, self).form_valid(form)
+
+class ToReview(CheckStaffMixin, TemplateView):
+    template_name = "to_review.html"

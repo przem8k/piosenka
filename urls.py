@@ -26,6 +26,7 @@ urlpatterns = patterns(
     url(r'^index/', include('piosenka.index')),
     # Admin and users.
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^do-korekty/', piosenka.views.ToReview.as_view(), name="to_review"),
     url(r'^zaloguj/', piosenka.views.Hello.as_view(), name="hello"),
     url(r'^wyloguj/', piosenka.views.Goodbye.as_view(), name="goodbye"),
     url(r'^zmien-haslo/', piosenka.views.ChangePassword.as_view(), name="change_password"),
