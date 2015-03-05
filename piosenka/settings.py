@@ -1,18 +1,13 @@
 import os
 from django.core.urlresolvers import reverse_lazy
 
-ADMINS = (
-    ('Przemyslaw Pietrzkiewicz', 'pietrzkiewicz@gmail.com'),
-)
-
-MANAGERS = ADMINS
-
 try:
     # Try importing prod settings.
     from piosenka.settings_production import DATABASES
     from piosenka.settings_production import SECRET_KEY
     from piosenka.settings_production import ALLOWED_HOSTS
 
+    from piosenka.settings_production import ADMINS
     from piosenka.settings_production import EMAIL_HOST
     from piosenka.settings_production import EMAIL_HOST_USER
     from piosenka.settings_production import EMAIL_HOST_PASSWORD
