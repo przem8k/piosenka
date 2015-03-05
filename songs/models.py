@@ -18,12 +18,6 @@ def validate_capo_fret(value):
         raise ValidationError(u'Capo fret has to be in range [0, 11]')
 
 
-class PublishedSongManager(models.Manager):
-    def get_queryset(self):
-        return super(PublishedSongManager, self).get_queryset()\
-                                                .filter(published=True)
-
-
 class Song(ContentItem):
     CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX",
                      "X", "XI", "XII"]
@@ -49,7 +43,6 @@ Used in urls, has to be unique."""
 True iff the lyrics contain repeated chords."""
 
     objects = models.Manager()
-    po = PublishedSongManager()
     live = LiveContentManager()
 
     title = models.CharField(

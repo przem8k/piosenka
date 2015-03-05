@@ -58,26 +58,6 @@ class Venue(models.Model):
         })
 
 
-class PublishedEventManager(models.Manager):
-    def get_queryset(self):
-        return super(PublishedEventManager,
-                     self).get_queryset().filter(published=True)
-
-
-class CurrentEventManager(models.Manager):
-    def get_queryset(self):
-        return super(CurrentEventManager,
-                     self).get_queryset().filter(published=True,
-                                                 datetime__gte=datetime.now())
-
-
-class PastEventManager(models.Manager):
-    def get_queryset(self):
-        return super(PastEventManager,
-                     self).get_queryset().filter(published=True,
-                                                 datetime__lt=datetime.now())
-
-
 class Event(ContentItem):
     HELP_NAME = """Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego'
 lub 'V Festiwal Piosenki Wymyślnej w Katowicach'."""
@@ -87,9 +67,6 @@ puste."""
 przypadku braku danych pozostaw puste."""
 
     objects = models.Manager()
-    po = PublishedEventManager()
-    current = CurrentEventManager()
-    past = PastEventManager()
     live = LiveContentManager()
 
     name = models.CharField(max_length=100, help_text=HELP_NAME)

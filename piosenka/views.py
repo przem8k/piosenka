@@ -46,9 +46,9 @@ class About(TemplateView):
         for user in User.objects.filter(is_active=True):
             author = {}
             author['user'] = user
-            author['songs'] = Song.po.filter(author=user).count()
-            author['articles'] = Article.po.filter(author=user).count()
-            author['events'] = Event.po.filter(author=user).count()
+            author['songs'] = Song.live.filter(author=user).count()
+            author['articles'] = Article.live.filter(author=user).count()
+            author['events'] = Event.live.filter(author=user).count()
             author['total'] = author['songs'] + author['articles'] + author['events']
             if author['total']:
                 authors.append(author)

@@ -9,12 +9,6 @@ from piosenka.models import ContentItem, LiveContentManager
 saved_file.connect(generate_aliases)
 
 
-class PublishedArticleManager(models.Manager):
-    def get_queryset(self):
-        return super(PublishedArticleManager, self).get_queryset()\
-                                                   .filter(published=True)
-
-
 class Article(ContentItem):
     HELP_TITLE = """\
 Tytuł artykułu, np. 'IX Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego \
@@ -23,7 +17,6 @@ Tytuł artykułu, np. 'IX Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego \
 Main illustration for the article."""
 
     objects = models.Manager()
-    po = PublishedArticleManager()
     live = LiveContentManager()
 
     title = models.CharField(max_length=100, help_text=HELP_TITLE)

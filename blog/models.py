@@ -4,17 +4,10 @@ from piosenka.trevor import render_trevor, put_text_in_trevor
 from piosenka.models import ContentItem, LiveContentManager
 
 
-class PublishedPostManager(models.Manager):
-    def get_queryset(self):
-        return super(PublishedPostManager, self).get_queryset()\
-                                                .filter(published=True)
-
-
 class Post(ContentItem):
     HELP_TITLE = "Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'."
 
     objects = models.Manager()
-    po = PublishedPostManager()
     live = LiveContentManager()
 
     title = models.CharField(max_length=100,

@@ -84,8 +84,7 @@ class EntityView(BaseMenuView):
         slug = kwargs['slug']
         entity = get_object_or_404(Entity, slug=slug)
         contributions = EntityContribution.objects.filter(
-            entity=entity, song__published=True).select_related('song')\
-                                                .order_by('song__title')
+            entity=entity).select_related('song').order_by('song__title')
         songs = [contribution.song for contribution in contributions
                  if contribution.song.can_be_seen_by(self.request.user)]
         if not songs:
