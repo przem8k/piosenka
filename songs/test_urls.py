@@ -108,7 +108,7 @@ class SongUrlTest(UrlTestCase):
         self.assertFalse(song.is_live())
 
         # Try to approve the song - approver can and does.
-        response = self.get(song.get_approve_url(), self.user_approver)
+        response = self.get(song.get_approve_url(), self.user_approver_zoe)
         self.assertEqual(301, response.status_code)
         song = Song.objects.get(id=song.id)  # Refresh from db.
         self.assertTrue(song.is_live())

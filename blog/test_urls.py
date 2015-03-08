@@ -57,7 +57,7 @@ class PostUrlTest(UrlTestCase):
         self.assertFalse(post.is_live())
 
         # Try to approve the post - approver can and does.
-        response = self.get(post.get_approve_url(), self.user_approver)
+        response = self.get(post.get_approve_url(), self.user_approver_zoe)
         self.assertEqual(301, response.status_code)
         post = Post.objects.get(id=post.id)  # Refresh from db.
         self.assertTrue(post.is_live())

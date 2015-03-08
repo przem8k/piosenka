@@ -81,7 +81,7 @@ class EventUrlTest(UrlTestCase):
         self.assertFalse(event.is_live())
 
         # Try to approve the event - approver can and does.
-        response = self.get(event.get_approve_url(), self.user_approver)
+        response = self.get(event.get_approve_url(), self.user_approver_zoe)
         self.assertEqual(301, response.status_code)
         event = Event.objects.get(id=event.id)  # Refresh from db.
         self.assertTrue(event.is_live())
