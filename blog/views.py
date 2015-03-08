@@ -7,7 +7,7 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from blog.forms import PostForm
 from blog.models import Post
-from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin
+from piosenka.mixins import ContentItemEditMixin, ContentItemAddMixin
 from piosenka.mixins import ContentItemViewMixin
 from piosenka.mixins import ContentItemApproveMixin
 
@@ -55,7 +55,7 @@ class PostGetObjectMixin(object):
                                 pub_date__day=pub_date.day)
 
 
-class AddPost(CheckLoginMixin, CreateView):
+class AddPost(ContentItemAddMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = "blog/add_edit_post.html"
@@ -68,7 +68,7 @@ class AddPost(CheckLoginMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditPost(PostGetObjectMixin, CheckAuthorshipMixin, UpdateView):
+class EditPost(PostGetObjectMixin, ContentItemEditMixin, UpdateView):
     model = Post
     form_class = PostForm
     template_name = "blog/add_edit_post.html"

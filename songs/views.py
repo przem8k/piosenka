@@ -6,7 +6,7 @@ from django.views.generic import DetailView, TemplateView, RedirectView
 from django.views.generic.edit import CreateView, UpdateView
 
 from artists.models import Entity
-from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin
+from piosenka.mixins import ContentItemEditMixin, ContentItemAddMixin
 from piosenka.mixins import ContentItemViewMixin
 from piosenka.mixins import ContentItemApproveMixin
 from piosenka.mixins import ManageInlineFormsetMixin
@@ -125,7 +125,7 @@ class SongView(ContentItemViewMixin, DetailView):
                             content_type='application/json')
 
 
-class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
+class AddSong(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
     model = Song
     form_class = SongForm
     template_name = "songs/add_edit_song.html"
@@ -162,7 +162,7 @@ class AddSong(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditSong(CheckAuthorshipMixin, ManageInlineFormsetMixin, UpdateView):
+class EditSong(ContentItemEditMixin, ManageInlineFormsetMixin, UpdateView):
     model = Song
     form_class = SongForm
     template_name = "songs/add_edit_song.html"

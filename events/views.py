@@ -11,7 +11,7 @@ from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm, PerformanceFormSet
 from events.mixins import EventMenuMixin
 from piosenka.trevor import put_text_in_trevor
-from piosenka.mixins import CheckAuthorshipMixin, CheckLoginMixin
+from piosenka.mixins import ContentItemEditMixin, ContentItemAddMixin
 from piosenka.mixins import ContentItemViewMixin, ManageInlineFormsetMixin
 from piosenka.mixins import ContentItemApproveMixin
 
@@ -87,7 +87,7 @@ class YearArchive(TemplateView):
         return context
 
 
-class AddEvent(CheckLoginMixin, ManageInlineFormsetMixin, CreateView):
+class AddEvent(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"
@@ -136,7 +136,7 @@ class EventGetObjectMixin(object):
                                  datetime__day=event_date.day)
 
 
-class EditEvent(EventGetObjectMixin, CheckAuthorshipMixin,
+class EditEvent(EventGetObjectMixin, ContentItemEditMixin,
                 ManageInlineFormsetMixin, UpdateView):
     model = Event
     form_class = EventForm

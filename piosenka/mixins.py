@@ -27,6 +27,12 @@ class ContentItemViewMixin(object):
         return context
 
 
+class ContentItemAddMixin(object):
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+
 class ContentItemApproveMixin(object):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
@@ -42,21 +48,13 @@ class ContentItemApproveMixin(object):
         return item.get_absolute_url()
 
 
-class CheckAuthorshipMixin(object):
-    # TODO this should become ContentItemEditMixin?
+class ContentItemEditMixin(object):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         item = self.get_object()
         if not (self.request.user.is_staff or self.request.user == item.author):
             raise Http404
-        return super(CheckAuthorshipMixin, self).dispatch(*args, **kwargs)
-
-
-class CheckLoginMixin(object):
-    # TODO this should become ContentItemAddMixin?
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(CheckLoginMixin, self).dispatch(*args, **kwargs)
+        return super().dispatch(*args, **kwargs)
 
 
 class CheckStaffMixin(object):
