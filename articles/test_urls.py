@@ -80,3 +80,9 @@ class ArticleUrlTest(PiosenkaTestCase):
         self.assertEqual(200, response.status_code)
         self.assertFalse(response.context['can_edit'])
         self.assertFalse(response.context['can_approve'])
+
+        # Now that the article is approved, there should be no approve link.
+        response = self.get(article.get_absolute_url(), self.user_approver_zoe)
+        self.assertEqual(200, response.status_code)
+        self.assertTrue(response.context['can_edit'])
+        self.assertFalse(response.context['can_approve'])

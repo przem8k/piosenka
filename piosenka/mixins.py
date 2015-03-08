@@ -25,7 +25,8 @@ class ContentItemViewMixin(object):
         context = super(ContentItemViewMixin, self).get_context_data(**kwargs)
         context['can_edit'] = self.object.can_be_edited_by(self.request.user)
         context['can_approve'] = \
-            self.object.can_be_approved_by(self.request.user)
+            (self.object.can_be_approved_by(self.request.user) and
+             not self.object.is_live())
         return context
 
 
