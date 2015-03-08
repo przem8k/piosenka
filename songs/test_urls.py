@@ -1,34 +1,10 @@
 from django.core.urlresolvers import reverse
 
-from songs.models import EntityContribution, Song
-from artists.models import Entity
-from piosenka.models import ContentItem
-from piosenka.url_test_case import UrlTestCase
+from songs.models import Song
+from piosenka.testing import PiosenkaTestCase
 
 
-class SongUrlTest(UrlTestCase):
-    def new_song(self, author_user):
-        song = Song.create_for_testing()
-        song.author = author_user
-        song.save()
-        return song
-
-    def new_entity(self):
-        entity = Entity.create_for_testing()
-        entity.save()
-        return entity
-
-    def add_contribution(self, song, entity, performed=False, texted=False,
-                         translated=False, composed=False):
-        contribution = EntityContribution()
-        contribution.song = song
-        contribution.entity = entity
-        contribution.performed = performed
-        contribution.texted = texted
-        contribution.translated = translated
-        contribution.composed = composed
-        contribution.save()
-
+class SongUrlTest(PiosenkaTestCase):
     def test_songbook_index(self):
         response = self.get(reverse('songbook'))
         self.assertEqual(200, response.status_code)

@@ -1,16 +1,10 @@
 from django.core.urlresolvers import reverse
 
 from blog.models import Post
-from piosenka.url_test_case import UrlTestCase
+from piosenka.testing import PiosenkaTestCase
 
 
-class PostUrlTest(UrlTestCase):
-    def new_post(self, author_user):
-        post = Post.create_for_testing()
-        post.author = author_user
-        post.save()
-        return post
-
+class PostUrlTest(PiosenkaTestCase):
     def test_blog_index(self):
         response = self.get(reverse('post_index'))
         self.assertEqual(200, response.status_code)
@@ -34,7 +28,6 @@ class PostUrlTest(UrlTestCase):
         response = self.get(reverse('post_index'), self.user_bob)
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['all_posts']))
-
 
     def test_approve_post(self):
         post = self.new_post(self.user_alice)

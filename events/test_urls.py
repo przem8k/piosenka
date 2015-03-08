@@ -1,22 +1,10 @@
 from django.core.urlresolvers import reverse
 
-from events.models import Event, Venue
-from piosenka.url_test_case import UrlTestCase
+from events.models import Event
+from piosenka.testing import PiosenkaTestCase
 
 
-class EventUrlTest(UrlTestCase):
-    def new_event(self, venue, author_user):
-        event = Event.create_for_testing()
-        event.venue = venue
-        event.author = author_user
-        event.save()
-        return event
-
-    def new_venue(self):
-        venue = Venue.create_for_testing()
-        venue.save()
-        return venue
-
+class EventUrlTest(PiosenkaTestCase):
     def test_event_visibility(self):
         response = self.get(reverse('event_index'))
         self.assertEqual(200, response.status_code)
@@ -57,7 +45,6 @@ class EventUrlTest(UrlTestCase):
         response = self.get(venue.get_absolute_url(), self.user_bob)
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['events']))
-
 
     def test_approve_event(self):
         venue = self.new_venue()

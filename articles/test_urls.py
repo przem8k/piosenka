@@ -1,16 +1,10 @@
 from django.core.urlresolvers import reverse
 
 from articles.models import Article
-from piosenka.url_test_case import UrlTestCase
+from piosenka.testing import PiosenkaTestCase
 
 
-class ArticleUrlTest(UrlTestCase):
-    def new_article(self, author_user):
-        article = Article.create_for_testing()
-        article.author = author_user
-        article.save()
-        return article
-
+class ArticleUrlTest(PiosenkaTestCase):
     def test_article_index(self):
         response = self.get(reverse('articles'))
         self.assertEqual(200, response.status_code)
@@ -54,7 +48,6 @@ class ArticleUrlTest(UrlTestCase):
         self.assertEqual(200, response.status_code)
         self.assertFalse(response.context['can_edit'])
         self.assertFalse(response.context['can_approve'])
-
 
     def test_approve_article(self):
         article = self.new_article(self.user_alice)
