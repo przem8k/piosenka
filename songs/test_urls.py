@@ -47,22 +47,17 @@ class SongUrlTest(UrlTestCase):
         jolene.save()
 
         # General public should see only Jolene.
-        response = self.get(reverse('songbook_entity',
-                                    kwargs={'slug': jack_white.slug}))
+        response = self.get(jack_white.get_absolute_url())
         self.assertEqual(200, response.status_code)
         self.assertEqual(1, len(response.context['songs']))
 
         # Any logged-in used should see both.
-        response = self.get(reverse('songbook_entity',
-                                    kwargs={'slug': jack_white.slug}),
-                            self.user_bob)
+        response = self.get(jack_white.get_absolute_url(), self.user_bob)
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['songs']))
 
         # Ditto.
-        response = self.get(reverse('songbook_entity',
-                                    kwargs={'slug': jack_white.slug}),
-                            self.user_alice)
+        response = self.get(jack_white.get_absolute_url(), self.user_alice)
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['songs']))
 
@@ -130,11 +125,8 @@ class SongUrlTest(UrlTestCase):
         self.add_contribution(song, entity, True, True)
         song.save()
 
-        response = self.get(reverse('edit_song',
-                                    kwargs={'slug': song.slug}))
+        response = self.get(song.get_edit_url())
         self.assertEqual(302, response.status_code)
 
-        response = self.get(reverse('edit_song',
-                                    kwargs={'slug': song.slug}),
-                            self.user_alice)
+        response = self.get(song.get_edit_url(), self.user_alice)
         self.assertEqual(200, response.status_code)
