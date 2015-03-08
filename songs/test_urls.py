@@ -61,6 +61,16 @@ class SongUrlTest(UrlTestCase):
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['songs']))
 
+    def test_add_song(self):
+        # General public can't access the add_song view.
+        response = self.get(reverse('add_song'))
+        self.assertEqual(302, response.status_code)
+
+        # Signed in author should be able to access it just fine.
+        alice_client = self.get_client(self.user_alice)
+        response = alice_client.get(reverse('add_song'))
+        self.assertEqual(200, response.status_code)
+
     def test_view_new_song(self):
         entity = self.new_entity()
         song = self.new_song(self.user_alice)
