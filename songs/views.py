@@ -104,9 +104,10 @@ class SongView(ContentItemViewMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(SongView, self).get_context_data(**kwargs)
-        if 'transposition' in kwargs:
+        # TODO: why we do self.kwargs and not kwargs here?
+        if 'transposition' in self.kwargs:
             context['json'] = True
-            transposition = int(kwargs['transposition'])
+            transposition = int(self.kwargs['transposition'])
             context['transposition'] = transposition
         else:
             transposition = 0
