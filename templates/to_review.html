@@ -12,11 +12,15 @@
     <div class="col-md-4">
       <div class="customwell auxwell">
         <h1>Do korekty</h1>
+        {% if to_review %}
         <ul>
           {% for item in to_review %}
           <li><a href="{{ item.get_absolute_url }}">{{ item }}</a></li>
           {% endfor %}
         </ul>
+        {% else %}
+        <p>Nie ma obecnie materiałów oczekujących na Twoją korektę.</p>
+        {% endif %}
       </div>
     </div>
     <div class="col-md-4"></div>
