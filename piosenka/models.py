@@ -2,9 +2,6 @@ import datetime
 
 from django.contrib.auth.models import User
 from django.db import models
-from django.utils.text import slugify
-
-from unidecode import unidecode
 
 
 class LiveContentManager(models.Manager):
@@ -16,7 +13,6 @@ class ContentItem(models.Model):
     """ A class that extends this has to have:
      - objects default manager
      - live manager (LiveContentManager above) """
-    MAX_SLUG_LENGTH = 200
 
     author = models.ForeignKey(User, editable=False)
     reviewed = models.BooleanField(default=False, editable=False)
@@ -28,17 +24,7 @@ class ContentItem(models.Model):
     def save(self, *args, **kwargs):
         if not self.pub_date:
             self.pub_date = datetime.datetime.now()
-        if not self.slug:
-            slug_elements = (kwargs.pop('prepend_slug_elements', []) +
-                             self.get_slug_elements())
-            self.slug = ContentItem.make_slug(slug_elements)
-
         return super().save(*args, **kwargs)
-
-    @staticmethod
-    def make_slug(slug_elements):
-        normalized_string = unidecode(" ".join(slug_elements))
-        return slugify(normalized_string)[:ContentItem.MAX_SLUG_LENGTH]
 
     @classmethod
     def items_visible_to(cls, user):

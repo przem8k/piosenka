@@ -7,9 +7,10 @@ from django.db import models
 from artists.models import Entity
 from piosenka.trevor import render_trevor, put_text_in_trevor
 from piosenka.models import ContentItem, LiveContentManager
+from piosenka.slug import SlugMixin
 
 
-class Venue(models.Model):
+class Venue(SlugMixin, models.Model):
     name = models.CharField(max_length=100)
     town = models.CharField(max_length=100)
     street = models.CharField(max_length=100)
@@ -35,11 +36,6 @@ class Venue(models.Model):
     def __str__(self):
         return "%s - %s" % (self.town, self.name)
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = ContentItem.make_slug([self.name, self.town])
-        super().save(*args, **kwargs)
-
     def clean(self):
         super().clean()
         from pygeocoder import Geocoder
@@ -57,8 +53,14 @@ class Venue(models.Model):
             'slug': self.slug,
         })
 
+    # SlugMixin:
+    def get_slug_elements(self):
+        assert self.name
+        assert self.town
+        return [self.name, self.town]
 
-class Event(ContentItem):
+
+class Event(SlugMixin, ContentItem):
     HELP_NAME = """Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego'
 lub 'V Festiwal Piosenki Wymyślnej w Katowicach'."""
     HELP_PRICE = """E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw
@@ -97,12 +99,6 @@ przypadku braku danych pozostaw puste."""
     def __str__(self):
         return self.name
 
-    # ContentItem override.
-    def get_slug_elements(self):
-        assert self.name
-        assert self.venue and self.venue.town
-        return [self.name, self.venue.town]
-
     def save(self, *args, **kwargs):
         self.description_html = render_trevor(self.description_trevor)
         super().save(*args, **kwargs)
@@ -133,6 +129,12 @@ przypadku braku danych pozostaw puste."""
             'day': self.datetime.strftime("%d"),
             'slug': self.slug
         })
+
+    # SlugMixin:
+    def get_slug_elements(self):
+        assert self.name
+        assert self.venue and self.venue.town
+        return [self.name, self.venue.town]
 
     def lat(self):
         return self.venue.lat

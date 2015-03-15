@@ -9,6 +9,7 @@ from piosenka.models import ContentItem, LiveContentManager
 from songs.lyrics import contain_extra_chords
 from songs.lyrics import parse_lyrics
 from songs.transpose import transpose_lyrics
+from piosenka.slug import SlugMixin
 
 saved_file.connect(generate_aliases)
 
@@ -18,7 +19,7 @@ def validate_capo_fret(value):
         raise ValidationError(u'Capo fret has to be in range [0, 11]')
 
 
-class Song(ContentItem):
+class Song(SlugMixin, ContentItem):
     CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX",
                      "X", "XI", "XII"]
 
@@ -115,7 +116,7 @@ True iff the lyrics contain repeated chords."""
                 raise ValidationError(
                     "Piosenka o takim tytule i wyróżniku jest już w bazie.")
 
-    # ContentItem override.
+    # SlugMixin:
     def get_slug_elements(self):
         return [self.title] + ([self.disambig] if self.disambig else [])
 

@@ -2,9 +2,10 @@ from django.db import models
 
 from piosenka.trevor import render_trevor, put_text_in_trevor
 from piosenka.models import ContentItem, LiveContentManager
+from piosenka.slug import SlugMixin
 
 
-class Post(ContentItem):
+class Post(SlugMixin, ContentItem):
     HELP_TITLE = "Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'."
 
     objects = models.Manager()
@@ -34,7 +35,7 @@ class Post(ContentItem):
     def __str__(self):
         return self.title
 
-    # ContentItem override.
+    # SlugMixin:
     def get_slug_elements(self):
         assert self.title
         return [self.title]
