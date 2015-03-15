@@ -87,7 +87,10 @@ class EntityView(BaseMenuView):
             entity=entity).select_related('song').order_by('song__title')
         songs = [contribution.song for contribution in contributions
                  if contribution.song.can_be_seen_by(self.request.user)]
-        if not songs:
+        if not songs and not entity.featured:
+            # TODO: maybe one day throws 404 always if not featured? We would
+            # only link to the artist from a Song view if they are featured.
+            # Issue: we already have a few not featured pages indexed.
             raise Http404()
         context = super().get_context_data(**kwargs)
         context['songs'] = songs
