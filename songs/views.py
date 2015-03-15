@@ -96,7 +96,7 @@ class EntityView(BaseMenuView):
 
 
 class SongView(ContentItemViewMixin, DetailView):
-    """ Displays a songs by default, returns transposed lyrics part in json if
+    """ Displays a song by default, returns transposed lyrics part in json if
     asked. """
     model = Song
     context_object_name = 'song'
