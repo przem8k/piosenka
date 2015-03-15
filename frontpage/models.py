@@ -24,4 +24,4 @@ class CarouselItem(models.Model):
 
     def save(self, *args, **kwargs):
         self.description_html = markdown(self.description, safe_mode='escape')
-        super(CarouselItem, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)

@@ -22,7 +22,7 @@ class PostIndex(TemplateView):
     template_name = "blog/post_index.html"
 
     def get_context_data(self, **kwargs):
-        context = super(PostIndex, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['new_posts'] = Post.items_visible_to(self.request.user)\
                                    .all()[0:PostIndex.MAX_POSTS]
         context['all_posts'] = Post.items_visible_to(self.request.user).all()
@@ -35,7 +35,7 @@ class PostDetail(ContentItemViewMixin, DetailView):
     template_name = "blog/post_detail.html"
 
     def get_context_data(self, **kwargs):
-        context = super(PostDetail, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['all_posts'] = Post.items_visible_to(self.request.user).all()
         return context
 
@@ -62,7 +62,7 @@ class AddPost(ContentItemAddMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        return super(AddPost, self).form_valid(form)
+        return super().form_valid(form)
 
     def get_success_url(self):
         return self.object.get_absolute_url()

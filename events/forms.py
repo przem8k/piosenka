@@ -20,7 +20,7 @@ class EventForm(forms.ModelForm):
                                    help_text="Adres w ramach miasta, np. 'ul. Podwale 37/38'.")
 
     def clean(self):
-        cleaned_data = super(EventForm, self).clean()
+        cleaned_data = super().clean()
         venue = cleaned_data['venue_selection'] if 'venue_selection' in cleaned_data else None
         name = cleaned_data['venue_name']
         town = cleaned_data['venue_town']
@@ -68,7 +68,7 @@ class EventForm(forms.ModelForm):
 
 class EntityPerformanceForm(ModelForm):
     def __init__(self, *args, **kwargs):
-        super(EntityPerformanceForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.fields['entity'].queryset = Entity.objects.filter(still_plays=True)
 
     class Meta:

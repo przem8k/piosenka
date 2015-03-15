@@ -52,7 +52,7 @@ class Entity(models.Model):
 
     def save(self, *args, **kwargs):
         self.is_band = self.kind == Entity.TYPE_BAND
-        super(Entity, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     @models.permalink
     def get_absolute_url(self):
@@ -63,6 +63,6 @@ class Entity(models.Model):
         return ('entity_gigs', (), {'slug': self.slug})
 
     def clean(self):
-        super(Entity, self).clean()
+        super().clean()
         if self.kind == Entity.TYPE_BAND and self.first_name:
             raise ValidationError("Bands don't have first names.")

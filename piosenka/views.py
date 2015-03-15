@@ -26,7 +26,7 @@ class SiteIndex(TemplateView):
     def get_context_data(self, **kwargs):
         all_posts = Post.objects.all().order_by('-pub_date')
 
-        context = super(SiteIndex, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['carousel_items'] = CarouselItem.objects.filter(archived=False)
         context['events'] = Event.items_visible_to(self.request.user)\
                                  .filter(datetime__gte=datetime.now())\
@@ -42,7 +42,7 @@ class About(TemplateView):
     template_name = "about.html"
 
     def get_context_data(self, **kwargs):
-        context = super(About, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         authors = []
         for user in User.objects.filter(is_active=True):
             author = {}
@@ -67,7 +67,7 @@ class Hello(FormView):
     success_url = reverse_lazy('index')
 
     def get_context_data(self, **kwargs):
-        context = super(Hello, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         if self.request.GET and 'next' in self.request.GET:
             context['next'] = self.request.GET['next']
         return context
@@ -76,7 +76,7 @@ class Hello(FormView):
         login(self.request, form.get_user())
         if self.request.GET and 'next' in self.request.GET:
             return HttpResponseRedirect(self.request.GET['next'])
-        return super(Hello, self).form_valid(form)
+        return super().form_valid(form)
 
 
 class Goodbye(View):
@@ -92,16 +92,16 @@ class ChangePassword(FormView):
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
-        return super(ChangePassword, self).dispatch(*args, **kwargs)
+        return super().dispatch(*args, **kwargs)
 
     def get_form_kwargs(self):
-        kwargs = super(ChangePassword, self).get_form_kwargs()
+        kwargs = super().get_form_kwargs()
         kwargs['user'] = self.request.user
         return kwargs
 
     def form_valid(self, form):
         form.save()
-        return super(ChangePassword, self).form_valid(form)
+        return super().form_valid(form)
 
 class ToReview(CheckStaffMixin, TemplateView):
     template_name = "to_review.html"

@@ -9,8 +9,7 @@ from unidecode import unidecode
 
 class LiveContentManager(models.Manager):
     def get_queryset(self):
-        return super(LiveContentManager, self).get_queryset()\
-                                              .filter(reviewed=True)
+        return super().get_queryset().filter(reviewed=True)
 
 
 class ContentItem(models.Model):
@@ -34,7 +33,7 @@ class ContentItem(models.Model):
                              self.get_slug_elements())
             self.slug = ContentItem.make_slug(slug_elements)
 
-        return super(ContentItem, self).save(*args, **kwargs)
+        return super().save(*args, **kwargs)
 
     @staticmethod
     def make_slug(slug_elements):

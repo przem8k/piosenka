@@ -123,7 +123,7 @@ True iff the lyrics contain repeated chords."""
         if not self.core_slug:
             self.core_slug = self.make_slug(self.get_slug_elements())
         self.has_extra_chords = contain_extra_chords(parse_lyrics(self.lyrics))
-        super(Song, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]

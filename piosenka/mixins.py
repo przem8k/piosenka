@@ -19,10 +19,10 @@ class ContentItemViewMixin(object):
     def dispatch(self, *args, **kwargs):
         if not self.get_object().can_be_seen_by(self.request.user):
             raise Http404
-        return super(ContentItemViewMixin, self).dispatch(*args, **kwargs)
+        return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
-        context = super(ContentItemViewMixin, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['can_edit'] = self.object.can_be_edited_by(self.request.user)
         context['can_approve'] = \
             (self.object.can_be_approved_by(self.request.user) and
@@ -46,7 +46,7 @@ class ContentItemApproveMixin(object):
         item = self.get_object()
         if not item.can_be_approved_by(self.request.user):
             raise Http404
-        return super(ContentItemApproveMixin, self).dispatch(*args, **kwargs)
+        return super().dispatch(*args, **kwargs)
 
     def get_redirect_url(self, *args, **kwargs):
         item = self.get_object()
@@ -82,8 +82,7 @@ class ManageInlineFormsetMixin(object):
             return cls(instance=self.object)
 
     def get_context_data(self, **kwargs):
-        context = super(ManageInlineFormsetMixin,
-                        self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context[self.get_managed_formset_class().model.__name__.lower()] = \
             self.get_managed_formset()
         return context

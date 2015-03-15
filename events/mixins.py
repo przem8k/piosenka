@@ -18,7 +18,7 @@ class EventMenuMixin(object):
         return [x for x in range(cur, earliest - 1, -1)]
 
     def get_context_data(self, **kwargs):
-        context = super(EventMenuMixin, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['years'] = EventMenuMixin.get_year_span(self)
         context['popular_venues'] = Venue.objects.all() \
             .annotate(event_count=Count('event')) \

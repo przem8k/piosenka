@@ -38,10 +38,10 @@ class Venue(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = ContentItem.make_slug([self.name, self.town])
-        super(Venue, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def clean(self):
-        super(Venue, self).clean()
+        super().clean()
         from pygeocoder import Geocoder
         from pygeolib import GeocoderError
         address = str(self.street) + ', ' + str(self.town)
@@ -105,7 +105,7 @@ przypadku braku danych pozostaw puste."""
 
     def save(self, *args, **kwargs):
         self.description_html = render_trevor(self.description_trevor)
-        super(Event, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     @models.permalink
     def get_absolute_url(self):
@@ -152,6 +152,6 @@ class EntityPerformance(models.Model):
         unique_together = ("event", "entity")
 
     def clean(self):
-        super(EntityPerformance, self).clean()
+        super().clean()
         if not self.entity.still_plays:
             raise ValidationError("Ten artysta nie koncertuje.")

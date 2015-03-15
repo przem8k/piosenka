@@ -45,7 +45,7 @@ class Post(ContentItem):
             self.more_html = render_trevor(self.more_trevor)
         else:
             self.more_html = ""
-        super(Post, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     @models.permalink
     def get_absolute_url(self):

@@ -56,7 +56,7 @@ class SongRedirectView(RedirectView):
 
 class BaseMenuView(TemplateView):
     def get_context_data(self, **kwargs):
-        context = super(BaseMenuView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context["bards"] = Entity.objects.filter(
             featured=True, kind=Entity.TYPE_TEXTER)
         context["composers"] = Entity.objects.filter(
@@ -89,7 +89,7 @@ class EntityView(BaseMenuView):
                  if contribution.song.can_be_seen_by(self.request.user)]
         if not songs:
             raise Http404()
-        context = super(EntityView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['songs'] = songs
         context['entity'] = entity
         return context
@@ -103,7 +103,7 @@ class SongView(ContentItemViewMixin, DetailView):
     template_name = 'songs/song.html'
 
     def get_context_data(self, **kwargs):
-        context = super(SongView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         # TODO: why we do self.kwargs and not kwargs here?
         if 'transposition' in self.kwargs:
             context['json'] = True
@@ -117,7 +117,7 @@ class SongView(ContentItemViewMixin, DetailView):
     def render_to_response(self, context):
         if context.get('json'):
             return self.get_lyrics_as_json(context)
-        return super(SongView, self).render_to_response(context)
+        return super().render_to_response(context)
 
     def get_lyrics_as_json(self, context):
         payload = {'lyrics': context['lyrics'],
@@ -140,7 +140,7 @@ class AddSong(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
         return ContributionFormSet
 
     def form_valid(self, form):
-        contributions = super(AddSong, self).get_managed_formset()
+        contributions = super().get_managed_formset()
         if not contributions.is_valid():
             return self.form_invalid(form)
 
@@ -157,7 +157,7 @@ class AddSong(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
         form.instance.save(prepend_slug_elements=[head.entity.__str__()])
         contributions.instance = form.instance
         contributions.save()
-        return super(AddSong, self).form_valid(form)
+        return super().form_valid(form)
 
     def get_success_url(self):
         return self.object.get_absolute_url()
@@ -175,12 +175,12 @@ class EditSong(ContentItemEditMixin, ManageInlineFormsetMixin, UpdateView):
         return ContributionFormSet
 
     def form_valid(self, form):
-        contributions = super(EditSong, self).get_managed_formset()
+        contributions = super().get_managed_formset()
         if not contributions.is_valid():
             return self.form_invalid(form)
         contributions.instance = form.save()
         contributions.save()
-        return super(EditSong, self).form_valid(form)
+        return super().form_valid(form)
 
     def get_success_url(self):
         return self.object.get_absolute_url()

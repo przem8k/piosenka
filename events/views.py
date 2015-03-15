@@ -20,7 +20,7 @@ class EventIndex(EventMenuMixin, TemplateView):
     template_name = "events/index.html"
 
     def get_context_data(self, **kwargs):
-        context = super(EventIndex, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['events'] = Event.items_visible_to(self.request.user)\
                                  .filter(datetime__gte=datetime.now())\
                                  .order_by('datetime')
@@ -33,7 +33,7 @@ class VenueDetail(DetailView):
     template_name = "events/venue.html"
 
     def get_context_data(self, **kwargs):
-        context = super(VenueDetail, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['events'] = Event.items_visible_to(self.request.user)\
                                  .filter(venue=self.object)\
                                  .order_by('datetime')
@@ -48,10 +48,10 @@ class EntityDetail(DetailView):
     def dispatch(self, *args, **kwargs):
         if not self.get_object().still_plays:
             raise Http404
-        return super(EntityDetail, self).dispatch(*args, **kwargs)
+        return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
-        context = super(EntityDetail, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['events'] = [x.event for x in
                              EntityPerformance.objects.filter(
                                  entity=self.object)
@@ -80,7 +80,7 @@ class YearArchive(TemplateView):
     template_name = "events/year.html"
 
     def get_context_data(self, **kwargs):
-        context = super(YearArchive, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['events'] = Event.items_visible_to(self.request.user)\
                                  .filter(datetime__year=kwargs['year'])
         context['year'] = kwargs['year']
@@ -103,7 +103,7 @@ class AddEvent(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
         return PerformanceFormSet
 
     def form_valid(self, form):
-        performances = super(AddEvent, self).get_managed_formset()
+        performances = super().get_managed_formset()
         if not performances.is_valid():
             return self.form_invalid(form)
 
@@ -115,7 +115,7 @@ class AddEvent(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
         form.instance.author = self.request.user
         performances.instance = form.save()
         performances.save()
-        return super(AddEvent, self).form_valid(form)
+        return super().form_valid(form)
 
     def get_success_url(self):
         return self.object.get_absolute_url()
@@ -154,7 +154,7 @@ class EditEvent(EventGetObjectMixin, ContentItemEditMixin,
         return PerformanceFormSet
 
     def form_valid(self, form):
-        performances = super(EditEvent, self).get_managed_formset()
+        performances = super().get_managed_formset()
         if not performances.is_valid():
             return self.form_invalid(form)
 
@@ -165,7 +165,7 @@ class EditEvent(EventGetObjectMixin, ContentItemEditMixin,
                                                   form.cleaned_data['time'])
         performances.instance = form.save()
         performances.save()
-        return super(EditEvent, self).form_valid(form)
+        return super().form_valid(form)
 
     def get_success_url(self):
         return self.object.get_absolute_url()

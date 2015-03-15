@@ -14,7 +14,7 @@ class IndexView(TemplateView):
     template_name = "articles/index.html"
 
     def get_context_data(self, **kwargs):
-        context = super(IndexView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['articles'] = Article.items_visible_to(self.request.user).all()
         return context
 
@@ -41,7 +41,7 @@ class AddArticle(ContentItemAddMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        return super(AddArticle, self).form_valid(form)
+        return super().form_valid(form)
 
     def get_success_url(self):
         return self.object.get_absolute_url()

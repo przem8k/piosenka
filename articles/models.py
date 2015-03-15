@@ -59,7 +59,7 @@ Main illustration for the article."""
             self.cover_credits_html = render_trevor(self.cover_credits_trevor)
         else:
             self.cover_credits_html = ""
-        super(Article, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     @models.permalink
     def get_absolute_url(self):
