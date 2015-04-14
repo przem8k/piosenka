@@ -10,6 +10,8 @@ def send_new_to_review_mails(item, request=None):
                  if x != item.author]
     subject = "PzT: Nowy materiał czeka na Twoją korektę."
     for reviewer in reviewers:
+        if not reviewer.email:
+            continue
         data = {'item': item, 'reviewer': reviewer}
         context = RequestContext(request, data) if request else Context(data)
         html_content = get_template('mail/new_to_review.html').render(context)

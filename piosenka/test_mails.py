@@ -18,3 +18,11 @@ class EventUrlTest(PiosenkaTestCase):
         send_new_to_review_mails(article)
         self.assertEqual(len(mail.outbox), 3)
 
+        # https://github.com/ppiet/piosenka/issues/8
+        # Set Zoe's email to empty - Zoe should now be skipped, but the other
+        # approver should be notified.
+        self.user_approver_zoe.email = ""
+        self.user_approver_zoe.save()
+        article = self.new_article(self.user_alice)
+        send_new_to_review_mails(article)
+        self.assertEqual(len(mail.outbox), 4)
