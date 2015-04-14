@@ -4,7 +4,7 @@ from django.template.loader import get_template
 from django.contrib.auth.models import User
 
 
-def send_new_to_review_mails(item, request=None):
+def send_new_to_review_mails(item):
     reviewers = [x for x in
                  User.objects.filter(is_staff=True, is_active=True)
                  if x != item.author]
@@ -12,8 +12,7 @@ def send_new_to_review_mails(item, request=None):
     for reviewer in reviewers:
         if not reviewer.email:
             continue
-        data = {'item': item, 'reviewer': reviewer}
-        context = RequestContext(request, data) if request else Context(data)
+        context = Context({'item': item, 'reviewer': reviewer})
         html_content = get_template('mail/new_to_review.html').render(context)
         email = EmailMessage(subject, body=html_content, to=[reviewer.email])
         email.content_subtype = "html"
