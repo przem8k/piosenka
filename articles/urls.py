@@ -1,15 +1,14 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import include, url
 
-from articles.views import AddArticle, ApproveArticle, ArticleView, EditArticle
-from articles.views import IndexView
+from articles import views
 
-urlpatterns = patterns(
-    '',
-    url(r'^$', IndexView.as_view(), name='articles'),
-    url(r'^dodaj/$', AddArticle.as_view(), name='add_article'),
-    url(r'^(?P<slug>[-\w]+)/$', ArticleView.as_view(), name='article'),
-    url(r'^(?P<slug>[-\w]+)/edytuj/$', EditArticle.as_view(),
-        name='edit_article'),
-    url(r'^(?P<slug>[-\w]+)/zatwierdz/$', ApproveArticle.as_view(),
-        name='approve_article'),
-)
+urlpatterns = [
+    url(r'^$', views.IndexView.as_view(), name='articles'),
+    url(r'^dodaj/$', views.AddArticle.as_view(), name='add_article'),
+    url(r'^(?P<slug>[-\w]+)/', include([
+        url(r'^$', views.ArticleView.as_view(), name='article'),
+        url(r'^edytuj/$', views.EditArticle.as_view(), name='edit_article'),
+        url(r'^zatwierdz/$', views.ApproveArticle.as_view(),
+            name='approve_article'),
+        ])),
+]
