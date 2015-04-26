@@ -97,6 +97,7 @@ PIPELINE_JS = {
             'third_party/typeahead/typeahead-0.10.4.js',
             'third_party/bootstrap/js/bootstrap.js',
             'js/search.js',
+            'js/messages.js',
         ),
         'output_filename': 'js/piosenka.js',
     },

@@ -97,6 +97,22 @@
       </div>
     </div>
 
+    {% if messages %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alert alert-info messages" role="alert">
+            <ul class="list-unstyled">
+              {% for message in messages %}
+              <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
     {% block content %} {% endblock content %}
 
     <div class="footer">

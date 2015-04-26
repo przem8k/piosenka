@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.utils.decorators import method_decorator
 from django.http import Http404
 
@@ -41,6 +42,8 @@ class ContentItemAddMixin(object):
             send_new_to_review_mails(form.instance)
         except Exception:
             pass
+        messages.add_message(self.request, messages.INFO,
+                             "Materiał dodany, oczekuje na korektę.")
         return ret
 
 
