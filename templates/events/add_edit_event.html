@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "events/base.html" %}
 {% load compressed %}
 
 {% block title %}{% if event %}Edytuj wydarzenie: {{ event }}{% else %}Dodaj wydarzenie{% endif %}{% endblock title %}
@@ -46,7 +46,6 @@ $('.tip').tooltip({});
 {% endblock extra-scripts %}
 
 {% block content %}
-{% include "events/top.html" %}
 <div class="container main">
   <form action="{% if not object or not object.pk %}{% url 'add_event' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
     <div class="row">

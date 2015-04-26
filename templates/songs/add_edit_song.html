@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "songs/base.html" %}
 
 {% block title %}{% if song %}Edytuj piosenkę: {{ song }}{% else %}Dodaj piosenkę{% endif %}{% endblock title %}
 
@@ -15,7 +15,6 @@ textarea#id_lyrics {
     height: 500px;
 }
 </style>
-{% include "songs/top.html" %}
 
 <div class="container main">
   <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_song' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}

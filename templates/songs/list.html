@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "songs/base.html" %}
 
 {% load list_partition %}
 
@@ -6,8 +6,6 @@
 {% block description %}Śpiewnik zawiera teksty i akordy do piosenek - artysta: {{ entity }}.{% endblock description %}
 
 {% block content %}
-{% include "songs/top.html" %}
-
 <div class="container">
   <div class="row">
     <div class="col-md-12">

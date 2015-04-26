@@ -1,11 +1,9 @@
-{% extends "base.html" %}
+{% extends "events/base.html" %}
 
 {% block title %}{{ event.name }} - wydarzenie{% endblock title %}
 {% block description %}Opis wydarzenia {{ event.name }} w kalendarzu Piosenki z tekstem{% endblock description %}
 
 {% block content %}
-{% include "events/top.html" %}
-
 <div class="container main">
   <div class="row">
     <div class="col-md-8">

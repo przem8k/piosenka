@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "articles/base.html" %}
 
 {% load thumbnail %}
 {% load list_partition %}
@@ -6,8 +6,6 @@
 {% block title %}Artykuły{% endblock %}
 
 {% block content %}
-
-{% include "articles/top.html" %}
 <div class="container">
   {% for row in articles|columns_horizontal:"3" %}
   <div class="row">

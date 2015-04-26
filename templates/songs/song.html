@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "songs/base.html" %}
 {% load staticfiles %}
 {% load thumbnail %}
 
@@ -6,8 +6,6 @@
 {% block description %}Opracowanie piosenki {{ song.title }} w śpiewniku Piosenki z tekstem{% endblock description %}
 
 {% block content %}
-{% include "songs/top.html" %}
-
 <div class="container main">
   <div class="row">
     <div class="col-md-8">
