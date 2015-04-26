@@ -36,8 +36,12 @@ class ContentItemAddMixin(object):
         return super().dispatch(*args, **kwargs)
 
     def form_valid(self, form):
-        send_new_to_review_mails(form.instance)
-        return super().form_valid(form)
+        ret = super().form_valid(form)
+        try:
+            send_new_to_review_mails(form.instance)
+        except Exception:
+            pass
+        return ret
 
 
 class ContentItemApproveMixin(object):
