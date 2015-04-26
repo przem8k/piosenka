@@ -8,14 +8,16 @@ $('.tip').tooltip({});
 </script>
 {% endblock extra-scripts %}
 
-{% block content %}
+{% block extra-css %}
 <style>
 textarea#id_lyrics {
     width: 100%;
     height: 500px;
 }
 </style>
+{% endblock extra-css %}
 
+{% block content %}
 <div class="container main">
   <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_song' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
     <div class="row">
