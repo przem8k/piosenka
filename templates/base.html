@@ -1,5 +1,5 @@
 {% load staticfiles %}
-{% load compressed %}
+{% load pipeline %}
 <!DOCTYPE HTML>
 <html lang="pl">
   <head>
@@ -10,7 +10,7 @@
     <meta name="description" content="{% block description %}Śpiewnik piosenki literackiej, wydarzenia, koncerty{% endblock description %}" />
 
     <link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    {% compressed_css 'piosenka' %}
+    {% stylesheet 'piosenka' %}
     {% block extra-css %}{% endblock extra-css %}
   </head>
 
@@ -128,7 +128,7 @@
       </div>
     </div>
 
-    {% compressed_js 'piosenka' %}
+    {% javascript 'piosenka' %}
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
     {% block extra-scripts %}{% endblock extra-scripts %}

@@ -1,14 +1,14 @@
 {% extends "articles/base.html" %}
-{% load compressed %}
+{% load pipeline %}
 
 {% block title %}{% if article %}Edytuj artykuł: {{ article }}{% else %}Dodaj artykuł{% endif %}{% endblock title %}
 
 {% block extra-css %}
-{% compressed_css 'sirtrevor' %}
+{% stylesheet 'sirtrevor' %}
 {% endblock %}
 
 {% block extra-scripts %}
-{% compressed_js 'sirtrevor' %}
+{% javascript 'sirtrevor' %}
 
 <script>
 $(document).ready(function(){

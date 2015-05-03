@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-{% load compressed %}
+{% load pipeline %}
 
 {% block extra-scripts %}
-{% compressed_js 'frontpage' %}
+{% javascript 'frontpage' %}
 {% endblock extra-scripts %}
 
 {% block extra-css %}
-{% compressed_css 'frontpage' %}
+{% stylesheet 'frontpage' %}
 {% endblock extra-css %}
 
 {% block content %}

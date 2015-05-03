@@ -1,14 +1,14 @@
 {% extends "blog/base.html" %}
-{% load compressed %}
+{% load pipeline %}
 
 {% block title %}{% if post %}Edytuj post: {{ post }}{% else %}Dodaj post{% endif %}{% endblock title %}
 
 {% block extra-css %}
-{% compressed_css 'sirtrevor' %}
+{% stylesheet 'sirtrevor' %}
 {% endblock %}
 
 {% block extra-scripts %}
-{% compressed_js 'sirtrevor' %}
+{% javascript 'sirtrevor' %}
 
 <script>
 $(document).ready(function(){
