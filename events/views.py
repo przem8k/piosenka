@@ -13,8 +13,8 @@ from events.mixins import EventMenuMixin
 from content.trevor import put_text_in_trevor
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
 from content.mixins import ContentItemViewMixin, ManageInlineFormsetMixin
-from content.mixins import ContentItemApproveMixin
 from content.views import ReviewContentView
+from content.views import ApproveContentView
 
 
 class EventIndex(EventMenuMixin, TemplateView):
@@ -72,6 +72,7 @@ class EventDetail(ContentItemViewMixin, DateDetailView):
 class MonthArchiveRedirect(RedirectView):
     """ Redirect for the per-month archives which were replaced by per-year
     archives. """
+    permanent = True
 
     def get_redirect_url(self, *args, **kwargs):
         return reverse('event_year', kwargs={'year': kwargs['year']})
@@ -176,5 +177,5 @@ class ReviewEvent(GetEventMixin, ReviewContentView):
     pass
 
 
-class ApproveEvent(GetEventMixin, ContentItemApproveMixin, RedirectView):
+class ApproveEvent(GetEventMixin, ApproveContentView):
     pass

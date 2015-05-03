@@ -51,7 +51,7 @@ class PostUrlTest(PiosenkaTestCase):
 
         # Try to approve the post - approver can and does.
         response = self.get(post.get_approve_url(), self.user_approver_zoe)
-        self.assertEqual(301, response.status_code)
+        self.assertEqual(302, response.status_code)
         post = Post.objects.get(id=post.id)  # Refresh from db.
         self.assertTrue(post.is_live())
 
@@ -76,21 +76,21 @@ class PostUrlTest(PiosenkaTestCase):
         # message.
         response = self.get_client(self.user_alice).get(post.get_review_url(),
                                                         follow=True)
-        self.assertRedirects(response, post.get_absolute_url(), status_code=301)
+        self.assertRedirects(response, post.get_absolute_url())
         self.assertTrue('messages' in response.context)
         self.assertEqual(1, len(response.context['messages']))
 
         # Bob should be redirected too.
         response = self.get_client(self.user_bob).get(post.get_review_url(),
                                                       follow=True)
-        self.assertRedirects(response, post.get_absolute_url(), status_code=301)
+        self.assertRedirects(response, post.get_absolute_url())
         self.assertTrue('messages' in response.context)
         self.assertEqual(1, len(response.context['messages']))
 
         # And the valid approver too.
         response = self.get_client(self.user_approver_zoe).get(
                 post.get_review_url(), follow=True)
-        self.assertRedirects(response, post.get_absolute_url(), status_code=301)
+        self.assertRedirects(response, post.get_absolute_url())
         self.assertTrue('messages' in response.context)
         self.assertEqual(1, len(response.context['messages']))
 
@@ -99,6 +99,6 @@ class PostUrlTest(PiosenkaTestCase):
         post.save()
         response = self.get_client(self.user_approver_zoe).get(
                 post.get_review_url(), follow=True)
-        self.assertRedirects(response, post.get_absolute_url(), status_code=301)
+        self.assertRedirects(response, post.get_absolute_url())
         self.assertTrue('messages' in response.context)
         self.assertEqual(1, len(response.context['messages']))

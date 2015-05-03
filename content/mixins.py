@@ -47,21 +47,6 @@ class ContentItemAddMixin(object):
         return ret
 
 
-class ContentItemApproveMixin(object):
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        item = self.get_object()
-        if not item.can_be_approved_by(self.request.user):
-            raise Http404
-        return super().dispatch(*args, **kwargs)
-
-    def get_redirect_url(self, *args, **kwargs):
-        item = self.get_object()
-        item.reviewed = True
-        item.save()
-        return item.get_absolute_url()
-
-
 class ContentItemEditMixin(object):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):

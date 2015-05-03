@@ -9,8 +9,8 @@ from blog.forms import PostForm
 from blog.models import Post
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
 from content.mixins import ContentItemViewMixin
-from content.mixins import ContentItemApproveMixin
 from content.views import ReviewContentView
+from content.views import ApproveContentView
 
 
 def obsolete_post(request, post_id):
@@ -82,5 +82,5 @@ class ReviewPost(GetPostMixin, ReviewContentView):
     pass
 
 
-class ApprovePost(GetPostMixin, ContentItemApproveMixin, RedirectView):
+class ApprovePost(GetPostMixin, ApproveContentView):
     pass

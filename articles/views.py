@@ -7,8 +7,8 @@ from articles.models import Article
 from content.trevor import put_text_in_trevor
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
 from content.mixins import ContentItemViewMixin
-from content.mixins import ContentItemApproveMixin
 from content.views import ReviewContentView
+from content.views import ApproveContentView
 
 
 class IndexView(TemplateView):
@@ -66,5 +66,5 @@ class ReviewArticle(GetArticleMixin, ReviewContentView):
     pass
 
 
-class ApproveArticle(GetArticleMixin, ContentItemApproveMixin, RedirectView):
+class ApproveArticle(GetArticleMixin, ApproveContentView):
     pass

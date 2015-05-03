@@ -69,7 +69,7 @@ class EventUrlTest(PiosenkaTestCase):
 
         # Try to approve the event - approver can and does.
         response = self.get(event.get_approve_url(), self.user_approver_zoe)
-        self.assertEqual(301, response.status_code)
+        self.assertEqual(302, response.status_code)
         event = Event.objects.get(id=event.id)  # Refresh from db.
         self.assertTrue(event.is_live())
 

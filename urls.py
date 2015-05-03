@@ -10,8 +10,9 @@ admin.autodiscover()
 urlpatterns = [
     # Obsolete paths redicrects.
     url(r'^songs/song/(?P<song_id>\d+)/$', songs.obsolete.obsolete_song),
-    url(r'^about/$', RedirectView.as_view(url="/o-stronie/")),
-    url(r'^facebook/$', RedirectView.as_view(url="/o-stronie/")),
+    url(r'^about/$', RedirectView.as_view(url="/o-stronie/", permanent=True)),
+    url(r'^facebook/$', RedirectView.as_view(url="/o-stronie/",
+                                             permanent=True)),
     # Songbook.
     url(r'^spiewnik/', include('songs.entity_urls')),
     url(r'^opracowanie/', include('songs.song_urls')),

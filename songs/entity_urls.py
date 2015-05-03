@@ -11,6 +11,6 @@ urlpatterns = [
     url(r'^(?P<entity_slug>[-\w]+)/(?P<slug>[-\w]+)/', include([
         url(r'^$', views.SongRedirectView.as_view()),
         url(r'^drukuj/$', RedirectView.as_view(
-            url='/spiewnik/%(entity_slug)s/%(slug)s/')),
+            url='/spiewnik/%(entity_slug)s/%(slug)s/', permanent=True)),
         ])),
 ]

@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import Http404
 from django.utils.decorators import method_decorator
 from django.views.generic import RedirectView
 
@@ -12,6 +13,7 @@ class ReviewContentView(RedirectView):
     Requirements for impl:
      - self.get_object() has to return the content item
     """
+    permanent = False
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
@@ -33,4 +35,28 @@ class ReviewContentView(RedirectView):
         messages.add_message(self.request, messages.INFO,
                              "Edytuj lub zatwierdź materiał przy pomocy linków "
                              "na dole strony.")
+        return item.get_absolute_url()
+
+
+class ApproveContentView(RedirectView):
+    """ Marks the content item as reviewed.
+
+    Requirements for impl:
+     - self.get_object() has to return the content item
+    """
+    permanent = False
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        item = self.get_object()
+        if not item.can_be_approved_by(self.request.user):
+            raise Http404
+        return super().dispatch(*args, **kwargs)
+
+    def get_redirect_url(self, *args, **kwargs):
+        item = self.get_object()
+        item.reviewed = True
+        item.save()
+        messages.add_message(self.request, messages.INFO,
+                             "Materiał zatwierdzony.")
         return item.get_absolute_url()

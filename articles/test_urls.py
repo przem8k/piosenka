@@ -71,7 +71,7 @@ class ArticleUrlTest(PiosenkaTestCase):
 
         # Try to approve the article - approver can and does.
         response = self.get(article.get_approve_url(), self.user_approver_zoe)
-        self.assertEqual(301, response.status_code)
+        self.assertEqual(302, response.status_code)
         article = Article.objects.get(id=article.id)  # Refresh from db.
         self.assertTrue(article.is_live())
 

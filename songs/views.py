@@ -8,12 +8,12 @@ from django.views.generic.edit import CreateView, UpdateView
 from artists.models import Entity
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
 from content.mixins import ContentItemViewMixin
-from content.mixins import ContentItemApproveMixin
 from content.mixins import ManageInlineFormsetMixin
 from songs.forms import SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Song, EntityContribution
 from content.views import ReviewContentView
+from content.views import ApproveContentView
 
 
 INITIAL_LYRICS = """\
@@ -47,8 +47,7 @@ def get_song_by_entity_or_404(song_slug, entity_slug):
 
 
 class SongRedirectView(RedirectView):
-    """ Displays a songs by default, returns transposed lyrics part in json if
-    asked. """
+    permanent = True
 
     def get_redirect_url(self, *args, **kwargs):
         song = get_song_by_entity_or_404(kwargs['slug'], kwargs['entity_slug'])
@@ -197,5 +196,5 @@ class ReviewSong(GetSongMixin, ReviewContentView):
     pass
 
 
-class ApproveSong(GetSongMixin, ContentItemApproveMixin, RedirectView):
+class ApproveSong(GetSongMixin, ApproveContentView):
     pass
