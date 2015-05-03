@@ -16,8 +16,8 @@ class Venue(SlugMixin, models.Model):
     street = models.CharField(max_length=100)
 
     slug = models.SlugField(max_length=100, unique=True, editable=False)
-    lat = models.FloatField(editable=False, help_text="Latitude.")
-    lon = models.FloatField(editable=False, help_text="Longtitude.")
+    lat = models.FloatField(null=True, editable=False, help_text="Latitude.")
+    lon = models.FloatField(null=True, editable=False, help_text="Longtitude.")
 
     @staticmethod
     def create_for_testing():
@@ -43,9 +43,10 @@ class Venue(SlugMixin, models.Model):
         address = str(self.street) + ', ' + str(self.town)
         try:
             geo = Geocoder.geocode(address)
+            self.lat, self.lon = geo[0].coordinates
         except GeocoderError:
-            raise ValidationError("Geo lookup failed to recognize this address.")
-        self.lat, self.lon = geo[0].coordinates
+            # Geo lookup failed to recognize this address.
+            pass
 
     @models.permalink
     def get_absolute_url(self):

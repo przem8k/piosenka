@@ -35,6 +35,7 @@ function load_location() {
   {% endif %}
 
   {% for element in marks %}
+    {% if element.lat and element.lon %}
     var marker_{{forloop.counter}} = new google.maps.Marker({
       map: map_location,
       position: new google.maps.LatLng({{element.lat|unlocalize}}, {{element.lon|unlocalize}}),
@@ -46,6 +47,7 @@ function load_location() {
     google.maps.event.addListener(marker_{{forloop.counter}}, 'click', function() {
       window.location.href = marker_{{forloop.counter}}.url;
     });
+    {% endif %}
   {% endfor %}
 }
 

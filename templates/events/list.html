@@ -18,16 +18,23 @@
         {% endblock content-footer %}
       </div>
     </div>
+    {% if venue %}
+      {% if venue.lat and venue.lon %}
     <div class="col-md-6">
       <div class="customwell auxwell">
         <h1>Mapa</h1>
-        {% if venue %}
         {% include "base/map.html" with map_width="280" map_height="210" map_center_lat=venue.lat map_center_lng=venue.lon map_zoom="12" mark=venue %}
-        {% else %}
-        {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
-        {% endif %}
       </div>
     </div>
+      {% endif %}
+    {% else %}
+    <div class="col-md-6">
+      <div class="customwell auxwell">
+        <h1>Mapa</h1>
+        {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
+      </div>
+    </div>
+    {% endif %}
   </div>
   {% block page-footer %}
   {% include "base/rows/disqus.html" %}

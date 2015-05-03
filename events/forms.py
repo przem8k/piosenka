@@ -21,43 +21,25 @@ class EventForm(forms.ModelForm):
 
     def clean(self):
         cleaned_data = super().clean()
-        venue = cleaned_data['venue_selection'] if 'venue_selection' in cleaned_data else None
-        name = cleaned_data['venue_name']
-        town = cleaned_data['venue_town']
-        street = cleaned_data['venue_street']
+
+        venue = None
+        if 'venue_selection' in cleaned_data:
+            venue = cleaned_data['venue_selection']
+
         if not venue:
-            lacking = False
-            msg = "To pole jest wymagane."
-
-            if not name:
-                self._errors['venue_name'] = self.error_class([msg])
-                del cleaned_data['venue_name']
-                lacking = True
-            if not town:
-                self._errors['venue_town'] = self.error_class([msg])
-                del cleaned_data['venue_town']
-                lacking = True
-            if not street:
-                self._errors['venue_street'] = self.error_class([msg])
-                del cleaned_data['venue_street']
-                lacking = True
-
-            if lacking:
-                self._errors['venue_selection'] = self.error_class([msg])
-            else:
+            name = cleaned_data['venue_name']
+            town = cleaned_data['venue_town']
+            street = cleaned_data['venue_street']
+            if name and town and street:
                 venue = Venue()
                 venue.name = name
                 venue.town = town
                 venue.street = street
-                try:
-                    venue.clean()
-                except forms.ValidationError:
-                    geo_msg = "Nie udało się zlokalizować adresu."
-                    self._errors['venue_street'] = self.error_class([geo_msg])
-                    del cleaned_data['venue_street']
-        else:
-            if name or town or street:
-                raise forms.ValidationError("Stało się coś dziwnego.")
+                venue.clean()
+            else:
+                self.add_error('venue_selection', "Wybierz miejsce z listy "
+                               "lub wypełnij formularz aby dodać nowe miejsce.")
+
         cleaned_data['venue'] = venue
         return cleaned_data
 
