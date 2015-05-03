@@ -11,6 +11,8 @@ urlpatterns = [
         include([
             url(r'^$', views.PostDetail.as_view(), name='post_detail'),
             url(r'^edytuj/$', views.EditPost.as_view(), name='edit_post'),
+            url(r'^korekta/$', views.ReviewPost.as_view(),
+                name='review_post'),
             url(r'^zatwierdz/$', views.ApprovePost.as_view(),
                 name='approve_post'),
         ])),

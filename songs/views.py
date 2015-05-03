@@ -13,6 +13,7 @@ from content.mixins import ManageInlineFormsetMixin
 from songs.forms import SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Song, EntityContribution
+from content.views import ReviewContentView
 
 
 INITIAL_LYRICS = """\
@@ -166,13 +167,16 @@ class AddSong(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditSong(ContentItemEditMixin, ManageInlineFormsetMixin, UpdateView):
+class GetSongMixin(object):
+    def get_object(self):
+        return get_object_or_404(Song, slug=self.kwargs['slug'])
+
+
+class EditSong(GetSongMixin, ContentItemEditMixin, ManageInlineFormsetMixin,
+               UpdateView):
     model = Song
     form_class = SongForm
     template_name = "songs/add_edit_song.html"
-
-    def get_object(self):
-        return get_object_or_404(Song, slug=self.kwargs['slug'])
 
     def get_managed_formset_class(self):
         return ContributionFormSet
@@ -189,6 +193,9 @@ class EditSong(ContentItemEditMixin, ManageInlineFormsetMixin, UpdateView):
         return self.object.get_absolute_url()
 
 
-class ApproveSong(ContentItemApproveMixin, RedirectView):
-    def get_object(self):
-        return get_object_or_404(Song, slug=self.kwargs['slug'])
+class ReviewSong(GetSongMixin, ReviewContentView):
+    pass
+
+
+class ApproveSong(GetSongMixin, ContentItemApproveMixin, RedirectView):
+    pass

@@ -8,6 +8,7 @@ from content.trevor import put_text_in_trevor
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
 from content.mixins import ContentItemViewMixin
 from content.mixins import ContentItemApproveMixin
+from content.views import ReviewContentView
 
 
 class IndexView(TemplateView):
@@ -47,18 +48,23 @@ class AddArticle(ContentItemAddMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditArticle(ContentItemEditMixin, UpdateView):
+class GetArticleMixin(object):
+    def get_object(self):
+        return get_object_or_404(Article, slug=self.kwargs['slug'])
+
+
+class EditArticle(GetArticleMixin, ContentItemEditMixin, UpdateView):
     model = Article
     form_class = ArticleForm
     template_name = "articles/add_edit_article.html"
-
-    def get_object(self):
-        return get_object_or_404(Article, slug=self.kwargs['slug'])
 
     def get_success_url(self):
         return self.object.get_absolute_url()
 
 
-class ApproveArticle(ContentItemApproveMixin, RedirectView):
-    def get_object(self):
-        return get_object_or_404(Article, slug=self.kwargs['slug'])
+class ReviewArticle(GetArticleMixin, ReviewContentView):
+    pass
+
+
+class ApproveArticle(GetArticleMixin, ContentItemApproveMixin, RedirectView):
+    pass

@@ -31,9 +31,9 @@ class PostUrlTest(PiosenkaTestCase):
 
     def test_approve_post(self):
         post = self.new_post(self.user_alice)
+        self.assertFalse(post.is_live())
 
         # Verify that the general public can't access the post.
-        self.assertFalse(post.is_live())
         response = self.get(post.get_absolute_url())
         self.assertEqual(404, response.status_code)
 
@@ -60,3 +60,45 @@ class PostUrlTest(PiosenkaTestCase):
         self.assertEqual(200, response.status_code)
         self.assertFalse(response.context['can_edit'])
         self.assertFalse(response.context['can_approve'])
+
+    def test_review_post(self):
+        """ Tests the review helper view. """
+        # Add a new post.
+        post = self.new_post(self.user_alice)
+        self.assertFalse(post.is_live())
+
+        # Verify that anonymous user is redirected to login.
+        response = self.get(post.get_review_url())
+        self.assertEqual(302, response.status_code)
+        self.assertTrue(reverse('hello') in response.url)
+
+        # Alice should be redirected to the actual post with some informative
+        # message.
+        response = self.get_client(self.user_alice).get(post.get_review_url(),
+                                                        follow=True)
+        self.assertRedirects(response, post.get_absolute_url(), status_code=301)
+        self.assertTrue('messages' in response.context)
+        self.assertEqual(1, len(response.context['messages']))
+
+        # Bob should be redirected too.
+        response = self.get_client(self.user_bob).get(post.get_review_url(),
+                                                      follow=True)
+        self.assertRedirects(response, post.get_absolute_url(), status_code=301)
+        self.assertTrue('messages' in response.context)
+        self.assertEqual(1, len(response.context['messages']))
+
+        # And the valid approver too.
+        response = self.get_client(self.user_approver_zoe).get(
+                post.get_review_url(), follow=True)
+        self.assertRedirects(response, post.get_absolute_url(), status_code=301)
+        self.assertTrue('messages' in response.context)
+        self.assertEqual(1, len(response.context['messages']))
+
+        # And the valid approver after the post is live too.
+        post.reviewed = True
+        post.save()
+        response = self.get_client(self.user_approver_zoe).get(
+                post.get_review_url(), follow=True)
+        self.assertRedirects(response, post.get_absolute_url(), status_code=301)
+        self.assertTrue('messages' in response.context)
+        self.assertEqual(1, len(response.context['messages']))

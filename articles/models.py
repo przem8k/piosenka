@@ -62,20 +62,23 @@ Main illustration for the article."""
             self.cover_credits_html = ""
         super().save(*args, **kwargs)
 
+    def get_url_params(self):
+        return {
+            'slug': self.slug,
+        }
+
     @models.permalink
     def get_absolute_url(self):
-        return('article', (), {
-            'slug': self.slug,
-        })
+        return('article', (), self.get_url_params())
 
     @models.permalink
     def get_edit_url(self):
-        return('edit_article', (), {
-            'slug': self.slug,
-        })
+        return('edit_article', (), self.get_url_params())
+
+    @models.permalink
+    def get_review_url(self):
+        return ('review_article', (), self.get_url_params())
 
     @models.permalink
     def get_approve_url(self):
-        return ('approve_article', (), {
-            'slug': self.slug
-        })
+        return ('approve_article', (), self.get_url_params())

@@ -48,29 +48,26 @@ class Post(SlugMixin, ContentItem):
             self.more_html = ""
         super().save(*args, **kwargs)
 
-    @models.permalink
-    def get_absolute_url(self):
-        return ('post_detail', (), {
+    def get_url_params(self):
+        return {
             'year': self.pub_date.strftime("%Y"),
             'month': self.pub_date.strftime("%m"),
             'day': self.pub_date.strftime("%d"),
             'slug': self.slug
-        })
+        }
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('post_detail', (), self.get_url_params())
 
     @models.permalink
     def get_edit_url(self):
-        return ('edit_post', (), {
-            'year': self.pub_date.strftime("%Y"),
-            'month': self.pub_date.strftime("%m"),
-            'day': self.pub_date.strftime("%d"),
-            'slug': self.slug
-        })
+        return ('edit_post', (), self.get_url_params())
+
+    @models.permalink
+    def get_review_url(self):
+        return ('review_post', (), self.get_url_params())
 
     @models.permalink
     def get_approve_url(self):
-        return ('approve_post', (), {
-            'year': self.pub_date.strftime("%Y"),
-            'month': self.pub_date.strftime("%m"),
-            'day': self.pub_date.strftime("%d"),
-            'slug': self.slug
-        })
+        return ('approve_post', (), self.get_url_params())

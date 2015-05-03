@@ -13,7 +13,7 @@
         {% if to_review %}
         <ul>
           {% for item in to_review %}
-          <li><a href="{{ item.get_absolute_url }}">{{ item }}</a></li>
+          <li><a href="{{ item.get_review_url }}">{{ item }}</a></li>
           {% endfor %}
         </ul>
         {% else %}

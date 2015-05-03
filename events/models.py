@@ -103,32 +103,29 @@ przypadku braku danych pozostaw puste."""
         self.description_html = render_trevor(self.description_trevor)
         super().save(*args, **kwargs)
 
-    @models.permalink
-    def get_absolute_url(self):
-        return ('event_detail', (), {
+    def get_url_params(self):
+        return {
             'year': self.datetime.strftime("%Y"),
             'month': self.datetime.strftime("%m"),
             'day': self.datetime.strftime("%d"),
             'slug': self.slug
-        })
+        }
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('event_detail', (), self.get_url_params())
 
     @models.permalink
     def get_edit_url(self):
-        return ('edit_event', (), {
-            'year': self.datetime.strftime("%Y"),
-            'month': self.datetime.strftime("%m"),
-            'day': self.datetime.strftime("%d"),
-            'slug': self.slug
-        })
+        return ('edit_event', (), self.get_url_params())
+
+    @models.permalink
+    def get_review_url(self):
+        return ('review_event', (), self.get_url_params())
 
     @models.permalink
     def get_approve_url(self):
-        return ('approve_event', (), {
-            'year': self.datetime.strftime("%Y"),
-            'month': self.datetime.strftime("%m"),
-            'day': self.datetime.strftime("%d"),
-            'slug': self.slug
-        })
+        return ('approve_event', (), self.get_url_params())
 
     # SlugMixin:
     def get_slug_elements(self):

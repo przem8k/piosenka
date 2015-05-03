@@ -14,6 +14,7 @@ from content.trevor import put_text_in_trevor
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
 from content.mixins import ContentItemViewMixin, ManageInlineFormsetMixin
 from content.mixins import ContentItemApproveMixin
+from content.views import ReviewContentView
 
 
 class EventIndex(EventMenuMixin, TemplateView):
@@ -121,7 +122,7 @@ class AddEvent(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EventGetObjectMixin(object):
+class GetEventMixin(object):
     def get_object(self):
         import time
         year = self.kwargs['year']
@@ -136,7 +137,7 @@ class EventGetObjectMixin(object):
                                  datetime__day=event_date.day)
 
 
-class EditEvent(EventGetObjectMixin, ContentItemEditMixin,
+class EditEvent(GetEventMixin, ContentItemEditMixin,
                 ManageInlineFormsetMixin, UpdateView):
     model = Event
     form_class = EventForm
@@ -171,5 +172,9 @@ class EditEvent(EventGetObjectMixin, ContentItemEditMixin,
         return self.object.get_absolute_url()
 
 
-class ApproveEvent(EventGetObjectMixin, ContentItemApproveMixin, RedirectView):
+class ReviewEvent(GetEventMixin, ReviewContentView):
+    pass
+
+
+class ApproveEvent(GetEventMixin, ContentItemApproveMixin, RedirectView):
     pass

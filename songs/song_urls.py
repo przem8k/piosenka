@@ -9,6 +9,7 @@ urlpatterns = [
         url(r'^transpose/(?P<transposition>\d+)/$', views.SongView.as_view(),
             name="song-transposition"),
         url(r'^edytuj/$', views.EditSong.as_view(), name="edit_song"),
+        url(r'^korekta/$', views.ReviewSong.as_view(), name="review_song"),
         url(r'^zatwierdz/$', views.ApproveSong.as_view(), name="approve_song"),
         ])),
 ]

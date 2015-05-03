@@ -8,6 +8,8 @@ urlpatterns = [
     url(r'^(?P<slug>[-\w]+)/', include([
         url(r'^$', views.ArticleView.as_view(), name='article'),
         url(r'^edytuj/$', views.EditArticle.as_view(), name='edit_article'),
+        url(r'^korekta/$', views.ReviewArticle.as_view(),
+            name='review_article'),
         url(r'^zatwierdz/$', views.ApproveArticle.as_view(),
             name='approve_article'),
         ])),

@@ -90,17 +90,26 @@ True iff the lyrics contain repeated chords."""
         else:
             return self.title
 
+    def get_url_params(self):
+        return {
+            'slug': self.slug
+        }
+
     @models.permalink
     def get_absolute_url(self):
-        return ('song', (), {'slug': self.slug})
+        return ('song', (), self.get_url_params())
 
     @models.permalink
     def get_edit_url(self):
-        return ('edit_song', (), {'slug': self.slug})
+        return ('edit_song', (), self.get_url_params())
+
+    @models.permalink
+    def get_review_url(self):
+        return ('review_song', (), self.get_url_params())
 
     @models.permalink
     def get_approve_url(self):
-        return ('approve_song', (), {'slug': self.slug})
+        return ('approve_song', (), self.get_url_params())
 
     def clean(self):
         try:

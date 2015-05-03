@@ -10,6 +10,7 @@ from blog.models import Post
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
 from content.mixins import ContentItemViewMixin
 from content.mixins import ContentItemApproveMixin
+from content.views import ReviewContentView
 
 
 def obsolete_post(request, post_id):
@@ -40,7 +41,7 @@ class PostDetail(ContentItemViewMixin, DetailView):
         return context
 
 
-class PostGetObjectMixin(object):
+class GetPostMixin(object):
     def get_object(self):
         import time
         year = self.kwargs['year']
@@ -68,7 +69,7 @@ class AddPost(ContentItemAddMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditPost(PostGetObjectMixin, ContentItemEditMixin, UpdateView):
+class EditPost(GetPostMixin, ContentItemEditMixin, UpdateView):
     model = Post
     form_class = PostForm
     template_name = "blog/add_edit_post.html"
@@ -77,5 +78,9 @@ class EditPost(PostGetObjectMixin, ContentItemEditMixin, UpdateView):
         return self.object.get_absolute_url()
 
 
-class ApprovePost(PostGetObjectMixin, ContentItemApproveMixin, RedirectView):
+class ReviewPost(GetPostMixin, ReviewContentView):
+    pass
+
+
+class ApprovePost(GetPostMixin, ContentItemApproveMixin, RedirectView):
     pass

@@ -12,6 +12,8 @@ urlpatterns = [
             url(r'^(?P<day>\d{2})/(?P<slug>[-\w]+)/', include([
                 url(r'^$', views.EventDetail.as_view(), name="event_detail"),
                 url(r'^edytuj/$', views.EditEvent.as_view(), name="edit_event"),
+                url(r'^korekta/$', views.ReviewEvent.as_view(),
+                    name="review_event"),
                 url(r'^zatwierdz/$', views.ApproveEvent.as_view(),
                     name="approve_event")
                 ])),
