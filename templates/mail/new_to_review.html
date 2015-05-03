@@ -3,12 +3,12 @@
 <p>Drogi <b>{{ reviewer }}</b>,</p>
 
 <p><b>{{ item.author }}</b> właśnie dodał nowy materiał na PzT:
-<b><a href="http://www.piosenkaztekstem.pl{{ item.get_absolute_url }}">{{ item }}</a></b>.
+<b><a href="{{ site }}{{ item.get_absolute_url }}">{{ item }}</a></b>.
 Materiał oczekuje na zatwierdzenie przez korektora.</p>
 
 <p>Jako korektor PzT, możesz przejrzeć, edytować i zatwierdzić
-materiał klikając na <a href="http://www.piosenkaztekstem.pl{{ item.get_absolute_url }}">link</a>.
-Możesz również wyświetlić <a href="http://www.piosenkaztekstem.pl{% url "to_review" %}">listę
+materiał klikając na <a href="{{ site }}{{ item.get_absolute_url }}">link</a>.
+Możesz również wyświetlić <a href="{{ site }}{% url "to_review" %}">listę
 wszystkich materiałów</a> oczekujących na Twoją korektę.</p>
 </body>
 </html>

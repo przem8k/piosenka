@@ -191,3 +191,5 @@ INTERNAL_IPS = ('127.0.0.1',)
 LOGIN_URL = reverse_lazy('hello')
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+
+SITE = 'http://www.piosenkaztekstem.pl'

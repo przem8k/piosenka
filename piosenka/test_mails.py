@@ -2,6 +2,7 @@ from django.core import mail
 
 from piosenka.testing import PiosenkaTestCase
 from piosenka.mail import send_new_to_review_mails
+from piosenka.mail import send_item_approved_mail
 
 
 class EventUrlTest(PiosenkaTestCase):
@@ -26,3 +27,9 @@ class EventUrlTest(PiosenkaTestCase):
         article = self.new_article(self.user_alice)
         send_new_to_review_mails(article)
         self.assertEqual(len(mail.outbox), 4)
+
+    def test_item_approved_mail(self):
+        self.assertEqual(len(mail.outbox), 0)
+        article = self.new_article(self.user_alice)
+        send_item_approved_mail(article, self.user_approver_zoe)
+        self.assertEqual(len(mail.outbox), 1)

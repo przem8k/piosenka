@@ -4,6 +4,8 @@ from django.http import Http404
 from django.utils.decorators import method_decorator
 from django.views.generic import RedirectView
 
+from piosenka.mail import send_item_approved_mail
+
 
 class ReviewContentView(RedirectView):
     """ Redirects to content to be reviewed and puts up a helper message
@@ -59,4 +61,8 @@ class ApproveContentView(RedirectView):
         item.save()
         messages.add_message(self.request, messages.INFO,
                              "Materiał zatwierdzony.")
+        try:
+            send_item_approved_mail(item, self.request.user)
+        except Exception:
+            pass
         return item.get_absolute_url()
