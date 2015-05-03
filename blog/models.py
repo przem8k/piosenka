@@ -1,8 +1,8 @@
 from django.db import models
 
-from piosenka.trevor import render_trevor, put_text_in_trevor
-from piosenka.models import ContentItem, LiveContentManager
-from piosenka.slug import SlugMixin
+from content.trevor import render_trevor, put_text_in_trevor
+from content.models import ContentItem, LiveContentManager
+from content.slug import SlugMixin
 
 
 class Post(SlugMixin, ContentItem):

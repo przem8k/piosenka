@@ -15,7 +15,7 @@ from blog.models import Post
 from events.models import Event
 from frontpage.models import CarouselItem
 from songs.models import Song
-from piosenka.mixins import CheckStaffMixin
+from content.mixins import CheckStaffMixin
 
 
 class SiteIndex(TemplateView):

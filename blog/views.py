@@ -7,9 +7,9 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from blog.forms import PostForm
 from blog.models import Post
-from piosenka.mixins import ContentItemEditMixin, ContentItemAddMixin
-from piosenka.mixins import ContentItemViewMixin
-from piosenka.mixins import ContentItemApproveMixin
+from content.mixins import ContentItemEditMixin, ContentItemAddMixin
+from content.mixins import ContentItemViewMixin
+from content.mixins import ContentItemApproveMixin
 
 
 def obsolete_post(request, post_id):

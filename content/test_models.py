@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from piosenka.models import ContentItem
+from content.models import ContentItem
 
 
 class ContentItemTest(TestCase):

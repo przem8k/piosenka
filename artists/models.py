@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 
-from piosenka.slug import SlugMixin
+from content.slug import SlugMixin
 
 class Entity(SlugMixin, models.Model):
     name = models.CharField(max_length=50,

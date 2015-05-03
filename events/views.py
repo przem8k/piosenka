@@ -10,10 +10,10 @@ from artists.models import Entity
 from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm, PerformanceFormSet
 from events.mixins import EventMenuMixin
-from piosenka.trevor import put_text_in_trevor
-from piosenka.mixins import ContentItemEditMixin, ContentItemAddMixin
-from piosenka.mixins import ContentItemViewMixin, ManageInlineFormsetMixin
-from piosenka.mixins import ContentItemApproveMixin
+from content.trevor import put_text_in_trevor
+from content.mixins import ContentItemEditMixin, ContentItemAddMixin
+from content.mixins import ContentItemViewMixin, ManageInlineFormsetMixin
+from content.mixins import ContentItemApproveMixin
 
 
 class EventIndex(EventMenuMixin, TemplateView):

@@ -5,11 +5,11 @@ from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
 
 from artists.models import Entity
-from piosenka.models import ContentItem, LiveContentManager
+from content.models import ContentItem, LiveContentManager
 from songs.lyrics import contain_extra_chords
 from songs.lyrics import parse_lyrics
 from songs.transpose import transpose_lyrics
-from piosenka.slug import SlugMixin
+from content.slug import SlugMixin
 
 saved_file.connect(generate_aliases)
 

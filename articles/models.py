@@ -3,9 +3,9 @@ from django.db import models
 from easy_thumbnails.signal_handlers import generate_aliases
 from easy_thumbnails.signals import saved_file
 
-from piosenka.trevor import render_trevor, put_text_in_trevor
-from piosenka.models import ContentItem, LiveContentManager
-from piosenka.slug import SlugMixin
+from content.trevor import render_trevor, put_text_in_trevor
+from content.models import ContentItem, LiveContentManager
+from content.slug import SlugMixin
 
 saved_file.connect(generate_aliases)
 

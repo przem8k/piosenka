@@ -162,6 +162,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.staticfiles',
     'easy_thumbnails',
+    'pipeline',
     'blog',
     'artists',
     'articles',
@@ -169,7 +170,7 @@ INSTALLED_APPS = (
     'events',
     'frontpage',
     'piosenka',
-    'pipeline',
+    'content',
 )
 
 THUMBNAIL_ALIASES = {

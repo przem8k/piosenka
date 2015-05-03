@@ -6,10 +6,10 @@ from django.views.generic import DetailView, TemplateView, RedirectView
 from django.views.generic.edit import CreateView, UpdateView
 
 from artists.models import Entity
-from piosenka.mixins import ContentItemEditMixin, ContentItemAddMixin
-from piosenka.mixins import ContentItemViewMixin
-from piosenka.mixins import ContentItemApproveMixin
-from piosenka.mixins import ManageInlineFormsetMixin
+from content.mixins import ContentItemEditMixin, ContentItemAddMixin
+from content.mixins import ContentItemViewMixin
+from content.mixins import ContentItemApproveMixin
+from content.mixins import ManageInlineFormsetMixin
 from songs.forms import SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Song, EntityContribution
