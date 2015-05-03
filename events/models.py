@@ -91,6 +91,9 @@ przypadku braku danych pozostaw puste."""
         event.name = str(uuid.uuid4()).replace("-", "")
         event.description_trevor = put_text_in_trevor("Abc")
         event.datetime = datetime.now() + timedelta(days=365)
+        venue = Venue.create_for_testing()
+        venue.save()
+        event.venue = venue
         return event
 
     class Meta:

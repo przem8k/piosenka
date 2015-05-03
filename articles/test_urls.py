@@ -1,10 +1,11 @@
 from django.core.urlresolvers import reverse
 
+from content.scenarios import ContentTestScenarios
 from articles.models import Article
 from piosenka.testing import PiosenkaTestCase
 
 
-class ArticleUrlTest(PiosenkaTestCase):
+class ArticleUrlTest(ContentTestScenarios, PiosenkaTestCase):
     def test_article_index(self):
         response = self.get(reverse('articles'))
         self.assertEqual(200, response.status_code)
@@ -49,40 +50,8 @@ class ArticleUrlTest(PiosenkaTestCase):
         self.assertFalse(response.context['can_edit'])
         self.assertFalse(response.context['can_approve'])
 
+    def test_review_article(self):
+        self.content_review(Article)
+
     def test_approve_article(self):
-        article = self.new_article(self.user_alice)
-
-        # Verify that the general public can't access the article.
-        self.assertFalse(article.is_live())
-        response = self.get(article.get_absolute_url())
-        self.assertEqual(404, response.status_code)
-
-        # Try to approve the article - Alice can't, she's the author.
-        response = self.get(article.get_approve_url(), self.user_alice)
-        self.assertEqual(404, response.status_code)
-        article = Article.objects.get(id=article.id)  # Refresh from db.
-        self.assertFalse(article.is_live())
-
-        # Try to approve the article - Bob can't, he's not staff.
-        response = self.get(article.get_approve_url(), self.user_bob)
-        self.assertEqual(404, response.status_code)
-        article = Article.objects.get(id=article.id)  # Refresh from db.
-        self.assertFalse(article.is_live())
-
-        # Try to approve the article - approver can and does.
-        response = self.get(article.get_approve_url(), self.user_approver_zoe)
-        self.assertEqual(302, response.status_code)
-        article = Article.objects.get(id=article.id)  # Refresh from db.
-        self.assertTrue(article.is_live())
-
-        # Verify what happens now that the article is approved.
-        response = self.get(article.get_absolute_url())
-        self.assertEqual(200, response.status_code)
-        self.assertFalse(response.context['can_edit'])
-        self.assertFalse(response.context['can_approve'])
-
-        # Now that the article is approved, there should be no approve link.
-        response = self.get(article.get_absolute_url(), self.user_approver_zoe)
-        self.assertEqual(200, response.status_code)
-        self.assertTrue(response.context['can_edit'])
-        self.assertFalse(response.context['can_approve'])
+        self.content_approve(Article)

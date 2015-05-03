@@ -1,10 +1,11 @@
 from django.core.urlresolvers import reverse
 
+from content.scenarios import ContentTestScenarios
 from songs.models import Song
 from piosenka.testing import PiosenkaTestCase
 
 
-class SongUrlTest(PiosenkaTestCase):
+class SongUrlTest(ContentTestScenarios, PiosenkaTestCase):
     def test_songbook_index(self):
         response = self.get(reverse('songbook'))
         self.assertEqual(200, response.status_code)
@@ -70,41 +71,6 @@ class SongUrlTest(PiosenkaTestCase):
         self.assertFalse(response.context['can_edit'])
         self.assertFalse(response.context['can_approve'])
 
-    def test_approve_song(self):
-        entity = self.new_entity()
-        song = self.new_song(self.user_alice)
-        self.add_contribution(song, entity, True, True)
-        song.save()
-
-        # Verify that the general public can't access the song.
-        self.assertFalse(song.is_live())
-        response = self.get(song.get_absolute_url())
-        self.assertEqual(404, response.status_code)
-
-        # Try to approve the song - Alice can't, she's the author.
-        response = self.get(song.get_approve_url(), self.user_alice)
-        self.assertEqual(404, response.status_code)
-        song = Song.objects.get(id=song.id)  # Refresh from db.
-        self.assertFalse(song.is_live())
-
-        # Try to approve the song - Bob can't, he's not staff.
-        response = self.get(song.get_approve_url(), self.user_bob)
-        self.assertEqual(404, response.status_code)
-        song = Song.objects.get(id=song.id)  # Refresh from db.
-        self.assertFalse(song.is_live())
-
-        # Try to approve the song - approver can and does.
-        response = self.get(song.get_approve_url(), self.user_approver_zoe)
-        self.assertEqual(302, response.status_code)
-        song = Song.objects.get(id=song.id)  # Refresh from db.
-        self.assertTrue(song.is_live())
-
-        # Verify what happens now that the song is approved.
-        response = self.get(song.get_absolute_url())
-        self.assertEqual(200, response.status_code)
-        self.assertFalse(response.context['can_edit'])
-        self.assertFalse(response.context['can_approve'])
-
     def test_edit_song(self):
         entity = self.new_entity()
         song = self.new_song(self.user_alice)
@@ -116,3 +82,9 @@ class SongUrlTest(PiosenkaTestCase):
 
         response = self.get(song.get_edit_url(), self.user_alice)
         self.assertEqual(200, response.status_code)
+
+    def test_review_song(self):
+        self.content_review(Song)
+
+    def test_approve_song(self):
+        self.content_approve(Song)
