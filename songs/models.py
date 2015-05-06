@@ -6,10 +6,11 @@ from easy_thumbnails.signal_handlers import generate_aliases
 
 from artists.models import Entity
 from content.models import ContentItem, LiveContentManager
+from content.slug import SlugMixin
+from content.trevor import render_trevor
 from songs.lyrics import contain_extra_chords
 from songs.lyrics import parse_lyrics
 from songs.transpose import transpose_lyrics
-from content.slug import SlugMixin
 
 saved_file.connect(generate_aliases)
 
@@ -197,3 +198,74 @@ class EntityContribution(models.Model):
         for cand in candidates:
             return cand
         return None
+
+
+class Annotation(SlugMixin, ContentItem):
+    HELP_TITLE = """\
+Tytuł adnotacji, np. "Aspazja", "Francuska choroba", "Rok 1788". Adnotacje
+poświęcone dziełom artystycznym tytułuj wg schematu "Nazwa - Autor", np.
+"Fortepian Chopina - Cyprian Kamil Norwid" lub "Wojna postu z karnawałem - Piotr
+Breugel."""
+    HELP_IMAGE = """\
+Ilustracja adnotacji. Pamiętaj o wskazaniu źródła tak samo jak w przypadku
+treści zawartych w tekście adnotacji."""
+    HELP_SOURCE_URL = """\
+Link do źródła informacji, jeśli źródłem jest strona internetowa."""
+    HELP_SOURCE_REF = """\
+Nazwa publikacji źródłowej, jeśli adnotacja jest oparta na publikacjii."""
+    HELP_SLUG = """\
+Used in urls, has to be unique."""
+
+    objects = models.Manager()
+    live = LiveContentManager()
+
+    title = models.CharField(max_length=100, help_text=HELP_TITLE)
+    text_trevor = models.TextField()
+    image = models.ImageField(null=True, blank=True,
+                              upload_to='song_annotations',
+                              help_text=HELP_IMAGE)
+    source_url1 = models.URLField(null=True, blank=True,
+                                  help_text=HELP_SOURCE_URL)
+    source_url2 = models.URLField(null=True, blank=True,
+                                  help_text=HELP_SOURCE_URL)
+    source_ref1 = models.TextField(null=True, blank=True,
+                                   help_text=HELP_SOURCE_REF)
+    source_ref2 = models.TextField(null=True, blank=True,
+                                   help_text=HELP_SOURCE_REF)
+
+    song = models.ForeignKey(Song, editable=False)
+    slug = models.SlugField(max_length=200, unique=True, editable=False,
+                            help_text=HELP_SLUG)
+    text_html = models.TextField(editable=False)
+
+    @staticmethod
+    def create_for_testing():
+        raise NotImplementedError()
+
+    def __str__(self):
+        return self.title
+
+    def get_url_params(self):
+        return {
+            'slug': self.slug
+        }
+
+    @models.permalink
+    def get_edit_url(self):
+        return ('edit_annotation', (), self.get_url_params())
+
+    @models.permalink
+    def get_review_url(self):
+        return ('review_annotation', (), self.get_url_params())
+
+    @models.permalink
+    def get_approve_url(self):
+        return ('approve_annotation', (), self.get_url_params())
+
+    # SlugMixin:
+    def get_slug_elements(self):
+        return [self.title, self.song.slug]
+
+    def save(self, *args, **kwargs):
+        self.text_html = render_trevor(self.text_trevor)
+        super().save(*args, **kwargs)
