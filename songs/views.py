@@ -2,18 +2,18 @@ import json
 
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
-from django.views.generic import DetailView, TemplateView, RedirectView
+from django.views.generic import TemplateView, RedirectView
 from django.views.generic.edit import CreateView, UpdateView
 
 from artists.models import Entity
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
-from content.mixins import ContentItemViewMixin
 from content.mixins import ManageInlineFormsetMixin
+from content.views import ApproveContentView
+from content.views import ReviewContentView
+from content.views import ViewContentView
 from songs.forms import SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Song, EntityContribution
-from content.views import ReviewContentView
-from content.views import ApproveContentView
 
 
 INITIAL_LYRICS = """\
@@ -35,6 +35,11 @@ Co pierwsza zwrotka
 Kolejny wers, kolejny wers
 I jeszcze jeden i jeszcze raz
 """
+
+
+class GetSongMixin(object):
+    def get_object(self):
+        return get_object_or_404(Song, slug=self.kwargs['slug'])
 
 
 def get_song_by_entity_or_404(song_slug, entity_slug):
@@ -98,7 +103,7 @@ class EntityView(BaseMenuView):
         return context
 
 
-class SongView(ContentItemViewMixin, DetailView):
+class ViewSong(GetSongMixin, ViewContentView):
     """ Displays a song by default, returns transposed lyrics part in json if
     asked. """
     model = Song
@@ -164,11 +169,6 @@ class AddSong(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
 
     def get_success_url(self):
         return self.object.get_absolute_url()
-
-
-class GetSongMixin(object):
-    def get_object(self):
-        return get_object_or_404(Song, slug=self.kwargs['slug'])
 
 
 class EditSong(GetSongMixin, ContentItemEditMixin, ManageInlineFormsetMixin,

@@ -2,7 +2,6 @@ from datetime import datetime
 
 from django.core.urlresolvers import reverse
 from django.views.generic import DetailView, RedirectView, TemplateView
-from django.views.generic.dates import DateDetailView
 from django.views.generic.edit import CreateView, UpdateView
 from django.http import Http404
 
@@ -12,9 +11,25 @@ from events.forms import EventForm, PerformanceFormSet
 from events.mixins import EventMenuMixin
 from content.trevor import put_text_in_trevor
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
-from content.mixins import ContentItemViewMixin, ManageInlineFormsetMixin
+from content.mixins import ManageInlineFormsetMixin
 from content.views import ReviewContentView
 from content.views import ApproveContentView
+from content.views import ViewContentView
+
+
+class GetEventMixin(object):
+    def get_object(self):
+        import time
+        year = self.kwargs['year']
+        month = self.kwargs['month']
+        day = self.kwargs['day']
+        slug = self.kwargs['slug']
+        date_stamp = time.strptime(year+month+day, "%Y%m%d")
+        event_date = datetime.fromtimestamp(time.mktime(date_stamp))
+        return Event.objects.get(slug=slug,
+                                 datetime__year=event_date.year,
+                                 datetime__month=event_date.month,
+                                 datetime__day=event_date.day)
 
 
 class EventIndex(EventMenuMixin, TemplateView):
@@ -60,7 +75,7 @@ class EntityDetail(DetailView):
         return context
 
 
-class EventDetail(ContentItemViewMixin, DateDetailView):
+class ViewEvent(GetEventMixin, ViewContentView):
     model = Event
     context_object_name = "event"
     template_name = "events/event.html"
@@ -121,21 +136,6 @@ class AddEvent(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
 
     def get_success_url(self):
         return self.object.get_absolute_url()
-
-
-class GetEventMixin(object):
-    def get_object(self):
-        import time
-        year = self.kwargs['year']
-        month = self.kwargs['month']
-        day = self.kwargs['day']
-        slug = self.kwargs['slug']
-        date_stamp = time.strptime(year+month+day, "%Y%m%d")
-        event_date = datetime.fromtimestamp(time.mktime(date_stamp))
-        return Event.objects.get(slug=slug,
-                                 datetime__year=event_date.year,
-                                 datetime__month=event_date.month,
-                                 datetime__day=event_date.day)
 
 
 class EditEvent(GetEventMixin, ContentItemEditMixin,

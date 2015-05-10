@@ -1,14 +1,19 @@
 from django.shortcuts import get_object_or_404
-from django.views.generic import DetailView, TemplateView, RedirectView
+from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView, UpdateView
 
 from articles.forms import ArticleForm
 from articles.models import Article
 from content.trevor import put_text_in_trevor
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
-from content.mixins import ContentItemViewMixin
 from content.views import ReviewContentView
 from content.views import ApproveContentView
+from content.views import ViewContentView
+
+
+class GetArticleMixin(object):
+    def get_object(self):
+        return get_object_or_404(Article, slug=self.kwargs['slug'])
 
 
 class IndexView(TemplateView):
@@ -20,7 +25,7 @@ class IndexView(TemplateView):
         return context
 
 
-class ArticleView(ContentItemViewMixin, DetailView):
+class ViewArticle(GetArticleMixin, ViewContentView):
     model = Article
     context_object_name = "article"
     template_name = "articles/article.html"
@@ -46,11 +51,6 @@ class AddArticle(ContentItemAddMixin, CreateView):
 
     def get_success_url(self):
         return self.object.get_absolute_url()
-
-
-class GetArticleMixin(object):
-    def get_object(self):
-        return get_object_or_404(Article, slug=self.kwargs['slug'])
 
 
 class EditArticle(GetArticleMixin, ContentItemEditMixin, UpdateView):

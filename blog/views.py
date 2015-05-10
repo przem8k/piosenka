@@ -2,15 +2,30 @@ from datetime import datetime
 
 from django.http import HttpResponsePermanentRedirect
 from django.shortcuts import get_object_or_404
-from django.views.generic import DetailView, TemplateView, RedirectView
+from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView, UpdateView
 
 from blog.forms import PostForm
 from blog.models import Post
 from content.mixins import ContentItemEditMixin, ContentItemAddMixin
-from content.mixins import ContentItemViewMixin
 from content.views import ReviewContentView
 from content.views import ApproveContentView
+from content.views import ViewContentView
+
+
+class GetPostMixin(object):
+    def get_object(self):
+        import time
+        year = self.kwargs['year']
+        month = self.kwargs['month']
+        day = self.kwargs['day']
+        slug = self.kwargs['slug']
+        date_stamp = time.strptime(year+month+day, "%Y%m%d")
+        pub_date = datetime.fromtimestamp(time.mktime(date_stamp))
+        return Post.objects.get(slug=slug,
+                                pub_date__year=pub_date.year,
+                                pub_date__month=pub_date.month,
+                                pub_date__day=pub_date.day)
 
 
 def obsolete_post(request, post_id):
@@ -30,7 +45,7 @@ class PostIndex(TemplateView):
         return context
 
 
-class PostDetail(ContentItemViewMixin, DetailView):
+class ViewPost(GetPostMixin, ViewContentView):
     model = Post
     context_object_name = "post"
     template_name = "blog/post_detail.html"
@@ -39,21 +54,6 @@ class PostDetail(ContentItemViewMixin, DetailView):
         context = super().get_context_data(**kwargs)
         context['all_posts'] = Post.items_visible_to(self.request.user).all()
         return context
-
-
-class GetPostMixin(object):
-    def get_object(self):
-        import time
-        year = self.kwargs['year']
-        month = self.kwargs['month']
-        day = self.kwargs['day']
-        slug = self.kwargs['slug']
-        date_stamp = time.strptime(year+month+day, "%Y%m%d")
-        pub_date = datetime.fromtimestamp(time.mktime(date_stamp))
-        return Post.objects.get(slug=slug,
-                                pub_date__year=pub_date.year,
-                                pub_date__month=pub_date.month,
-                                pub_date__day=pub_date.day)
 
 
 class AddPost(ContentItemAddMixin, CreateView):

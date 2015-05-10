@@ -10,27 +10,6 @@ from piosenka.mail import send_new_to_review_mails
 # methods. Use the latter everywhere to centralize the decisions in ContentItem?
 
 
-class ContentItemViewMixin(object):
-    """ Mixin added to default views for displaying the content.
-
-    Adds information needed to render controls (e.g. if the link to the edit
-    view should be displayed.
-
-    Limits access to the view to authenticated users if not live yet."""
-    def dispatch(self, *args, **kwargs):
-        if not self.get_object().can_be_seen_by(self.request.user):
-            raise Http404
-        return super().dispatch(*args, **kwargs)
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['can_edit'] = self.object.can_be_edited_by(self.request.user)
-        context['can_approve'] = \
-            (self.object.can_be_approved_by(self.request.user) and
-             not self.object.is_live())
-        return context
-
-
 class ContentItemAddMixin(object):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
