@@ -80,6 +80,11 @@ class ApproveContentView(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
         item = self.get_object()
+        if item.is_live():
+            messages.add_message(self.request, messages.INFO,
+                                 "Materiał został już wcześniej zatwierdzony.")
+            return item.get_absolute_url()
+
         item.reviewed = True
         item.save()
         messages.add_message(self.request, messages.INFO,
