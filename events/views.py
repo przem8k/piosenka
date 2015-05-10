@@ -96,7 +96,7 @@ class AddEvent(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
 
     def get_initial(self):
         initial_description = """Tutaj opisz wydarzenie. Zaznacz fragment tekstu
-        aby dodać \ **pogrubienie** albo [odsyłacz](#)."""
+        aby dodać **pogrubienie** albo [odsyłacz](#)."""
         return {
             'description_trevor': put_text_in_trevor(initial_description)
         }
