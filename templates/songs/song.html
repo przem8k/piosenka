@@ -26,32 +26,36 @@
             <b>Tekst: </b>
             {% for author in song.text_authors %}
             <a href="{{author.get_absolute_url}}">{{ author }}</a>
+            {% if not forloop.last %},{% endif %}
             {% endfor %}
-            <br />
+            <br class="hidden-print"/>
             {% endif %}
 
             {% if song.composers %}
             <b>Muzyka: </b>
             {% for composer in song.composers %}
             <a href="{{composer.get_absolute_url}}">{{ composer }}</a>
+            {% if not forloop.last %},{% endif %}
             {% endfor %}
-            <br />
+            <br class="hidden-print"/>
             {% endif %}
 
             {% if song.translators %}
             <b>Tłumaczenie: </b>
             {% for translator in song.translators %}
             <a href="{{translator.get_absolute_url}}">{{ translator }}</a>
+            {% if not forloop.last %},{% endif %}
             {% endfor %}
-            <br />
+            <br class="hidden-print"/>
             {% endif %}
 
             {% if song.performers %}
             <b>Wykonanie: </b>
             {% for performer in song.performers %}
             <a href="{{performer.get_absolute_url}}">{{ performer }}</a>
+            {% if not forloop.last %},{% endif %}
             {% endfor %}
-            <br />
+            <br class="hidden-print"/>
             {% endif %}
 
             {% if song.capo %}
@@ -99,7 +103,7 @@
 
         <br />
 
-        <blockquote class="custom-blockquote">
+        <blockquote class="lyrics-quote">
           {{ lyrics|safe }}
         </blockquote>
 

@@ -200,19 +200,18 @@ body {
     padding-top: 20px;
 }
 
-blockquote, .contentwell blockquote, .auxwell blockquote, .custom-blockquote {
+.lyrics-quote, .container blockquote {
     padding: 0 0 0 5px;
     margin: 0 0 20px 5px;
-    border-left: 2px solid #0088cc !important;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 2px solid #0088cc;
     font-size: 14px;
 }
 
-.custom-blockquote small {
+.lyrics-quote small {
     font-size: 85%;
-}
-
-.print .custom-blockquote {
-    border-left: 0;
 }
 
 /* carousel */
