@@ -164,36 +164,6 @@ body {
     padding: 10px;
 }
 
-/* lyrics rendering */
-
-.indented {
-    padding-left: 10px;
-}
-
-.chord-section {
-    padding-left: 10px;
-}
-
-.chords {
-    font-weight: bold;
-}
-
-/* gadget controlling song display (chords, transpo, etc.) */
-
-.song-gadget img {
-    display: inline;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-.song-gadget .gadget-row {
-    margin-bottom: 2px;
-}
-
-.extra-chords {
-    display: none;
-}
-
 /* blockquoute */
 
 .lead-quote {

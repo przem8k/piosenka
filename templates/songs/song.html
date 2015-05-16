@@ -16,53 +16,51 @@
 
         <div class="row">
           <div class="col-md-6">
-            {% if song.original_title %}
-            <b>Tytuł oryginalny: </b>
-            <i>{{ song.original_title }}</i>
-            <br />
-            {% endif %}
+            <div class="song-info">
+              {% if song.original_title %}
+              <p><b>Tytuł oryginalny:</b> <i>{{ song.original_title }}</i></p>
+              {% endif %}
 
-            {% if song.text_authors %}
-            <b>Tekst: </b>
-            {% for author in song.text_authors %}
-            <a href="{{author.get_absolute_url}}">{{ author }}</a>
-            {% if not forloop.last %},{% endif %}
-            {% endfor %}
-            <br class="hidden-print"/>
-            {% endif %}
+              {% if song.text_authors %}
+              <p><b>Tekst:</b>
+              {% for author in song.text_authors %}
+              <a href="{{author.get_absolute_url}}">{{ author }}</a>
+              {% if not forloop.last %},{% endif %}
+              {% endfor %}
+              </p>
+              {% endif %}
 
-            {% if song.composers %}
-            <b>Muzyka: </b>
-            {% for composer in song.composers %}
-            <a href="{{composer.get_absolute_url}}">{{ composer }}</a>
-            {% if not forloop.last %},{% endif %}
-            {% endfor %}
-            <br class="hidden-print"/>
-            {% endif %}
+              {% if song.composers %}
+              <p><b>Muzyka:</b>
+              {% for composer in song.composers %}
+              <a href="{{composer.get_absolute_url}}">{{ composer }}</a>
+              {% if not forloop.last %},{% endif %}
+              {% endfor %}
+              </p>
+              {% endif %}
 
-            {% if song.translators %}
-            <b>Tłumaczenie: </b>
-            {% for translator in song.translators %}
-            <a href="{{translator.get_absolute_url}}">{{ translator }}</a>
-            {% if not forloop.last %},{% endif %}
-            {% endfor %}
-            <br class="hidden-print"/>
-            {% endif %}
+              {% if song.translators %}
+              <p><b>Tłumaczenie:</b>
+              {% for translator in song.translators %}
+              <a href="{{translator.get_absolute_url}}">{{ translator }}</a>
+              {% if not forloop.last %},{% endif %}
+              {% endfor %}
+              </p>
+              {% endif %}
 
-            {% if song.performers %}
-            <b>Wykonanie: </b>
-            {% for performer in song.performers %}
-            <a href="{{performer.get_absolute_url}}">{{ performer }}</a>
-            {% if not forloop.last %},{% endif %}
-            {% endfor %}
-            <br class="hidden-print"/>
-            {% endif %}
+              {% if song.performers %}
+              <p><b>Wykonanie:</b>
+              {% for performer in song.performers %}
+              <a href="{{performer.get_absolute_url}}">{{ performer }}</a>
+              {% if not forloop.last %},{% endif %}
+              {% endfor %}
+              </p>
+              {% endif %}
 
-            {% if song.capo %}
-            <b>Kapodaster: </b>
-            {{ song.capo }}
-            <br />
-            {% endif %}
+              {% if song.capo %}
+              <p><b>Kapodaster:</b> {{ song.capo }} </p>
+              {% endif %}
+            </div>
           </div>
           <div class="col-md-6">
             <div class="song-gadget hidden-print">

@@ -1,0 +1,41 @@
+/* Song info section (authors, capodaster, etc.). */
+
+.song-info p {
+    margin: 0;
+}
+
+@media print {
+  .song-info p {
+    display: inline;
+  }
+}
+
+/* gadget controlling song display (chords, transpo, etc.) */
+
+.song-gadget img {
+    display: inline;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.song-gadget .gadget-row {
+    margin-bottom: 2px;
+}
+
+/* lyrics rendering */
+
+.indented {
+    padding-left: 10px;
+}
+
+.chord-section {
+    padding-left: 10px;
+}
+
+.chords {
+    font-weight: bold;
+}
+
+.extra-chords {
+    display: none;
+}
