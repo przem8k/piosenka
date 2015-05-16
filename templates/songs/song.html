@@ -14,7 +14,7 @@
           {% include "components/content_status_span.html" with item=song %}
         </h1>
 
-        <div class="row">
+        <div class="row song-header">
           <div class="col-md-6">
             <div class="song-info">
               {% if song.original_title %}
@@ -101,9 +101,9 @@
 
         <br />
 
-        <blockquote class="lyrics-quote">
+        <div class="lyrics">
           {{ lyrics|safe }}
-        </blockquote>
+        </div>
 
         {% include "components/content_foot.html" with action="Dodane" item=song %}
       </div>

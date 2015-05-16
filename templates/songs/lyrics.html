@@ -1,19 +1,16 @@
-<div id="lyrics">
-  {% for paragraph in lyrics %}
+{% for paragraph in lyrics %}
+<div class="paragraph">
   <table>
-    {% for line in paragraph %}
-    <tr>
-      <td{% if line.2 %} class="indented"{% endif %}>{{ line.0 }}</td>
-      <td class="chord-section">
-        <span class="chords{% if line.3 %} extra-chords{% endif %}">
-          {{ line.1 }}
-        </span>
-      </td>
-    </tr>
-    {% endfor %}
-  </table>
-  {% if not forloop.last %}
-  <br />
-  {% endif %}
+  {% for line in paragraph %}
+  <tr>
+    <td{% if line.2 %} class="indented"{% endif %}>{{ line.0 }}</td>
+    <td class="chord-section">
+      <span class="chords{% if line.3 %} extra-chords{% endif %}">
+        {{ line.1 }}
+      </span>
+    </td>
+  </tr>
   {% endfor %}
+  </table>
 </div>
+{% endfor %}
