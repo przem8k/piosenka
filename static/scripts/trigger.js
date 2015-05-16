@@ -43,7 +43,7 @@ function transpose() {
     $.ajax({
         url: transpositionUrls[transposition],
     }).done(function(data) {
-        $("#lyrics").replaceWith(data['lyrics']);
+        $(".lyrics-content").replaceWith(data['lyrics']);
         applyState();
     });
 }
