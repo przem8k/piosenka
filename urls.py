@@ -14,8 +14,9 @@ urlpatterns = [
     url(r'^facebook/$', RedirectView.as_view(url="/o-stronie/",
                                              permanent=True)),
     # Songbook.
-    url(r'^spiewnik/', include('songs.entity_urls')),
-    url(r'^opracowanie/', include('songs.song_urls')),
+    url(r'^spiewnik/', include('songs.urls_entity')),
+    url(r'^opracowanie/', include('songs.urls_song')),
+    url(r'^adnotacja/', include('songs.urls_annotation')),
     # Other sections.
     url(r'^blog/', include('blog.urls')),
     url(r'^artykuly/', include('articles.urls')),

@@ -226,3 +226,26 @@ class AddAnnotation(ContentItemAddMixin, CreateView):
 
     def get_success_url(self):
         return self.song.get_absolute_url()
+
+
+class GetAnnotationMixin(object):
+    def get_object(self):
+        return get_object_or_404(Annotation, slug=self.kwargs['slug'])
+
+
+class EditAnnotation(GetAnnotationMixin, ContentItemEditMixin,
+                     UpdateView):
+    model = Annotation
+    form_class = AnnotationForm
+    template_name = "songs/add_edit_annotation.html"
+
+    def get_success_url(self):
+        return self.get_object().song.get_absolute_url()
+
+
+class ReviewAnnotation(GetAnnotationMixin, ReviewContentView):
+    pass
+
+
+class ApproveAnnotation(GetAnnotationMixin, ApproveContentView):
+    pass

@@ -141,8 +141,11 @@
 
       {% for annotation in annotations %}
       <div class="customwell auxwell">
-        <h1>{{ annotation.title }}</h1>
+        <h1>{{ annotation.title }}
+          {% include "components/content_status_span.html" with item=song %}
+        </h1>
         {{ annotation.text_html|safe }}
+        {% include "components/content_foot.html" with action="Dodane" item=annotation %}
       </div>
       {% endfor %}
 
