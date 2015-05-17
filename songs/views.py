@@ -112,7 +112,6 @@ class ViewSong(GetSongMixin, ViewContentView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # TODO: why we do self.kwargs and not kwargs here?
         if 'transposition' in self.kwargs:
             context['json'] = True
             transposition = int(self.kwargs['transposition'])
