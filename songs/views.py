@@ -120,7 +120,9 @@ class ViewSong(GetSongMixin, ViewContentView):
         else:
             transposition = 0
         context['lyrics'] = render_lyrics(self.object.lyrics, transposition)
-        context['annotations'] = Annotation.objects.filter(song=self.object)
+        context['annotations'] = [x for x in
+                                  Annotation.objects.filter(song=self.object)
+                                  if x.can_be_seen_by(self.request.user)]
         return context
 
     def render_to_response(self, context):
