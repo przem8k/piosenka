@@ -1,0 +1,23 @@
+/* carousel */
+
+#front-carousel .carousel-indicators {
+    position: absolute;
+    bottom: 0;
+}
+
+#front-carousel .carousel-caption {
+    padding-bottom: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.75);
+}
+
+#front-carousel .carousel-caption {
+    text-align: left;
+    padding: 5px 20px 25px 20px;
+}
+
+#front-carousel {
+    margin-bottom: 20px;
+}

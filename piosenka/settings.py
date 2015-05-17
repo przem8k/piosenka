@@ -85,6 +85,7 @@ PIPELINE_CSS = {
     },
     'frontpage': {
         'source_filenames': (
+            'css/carousel.css',
             'css/comments.css',
         ),
         'output_filename': 'css/frontpage.css',
