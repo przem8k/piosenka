@@ -1,0 +1,70 @@
+{% extends "songs/base.html" %}
+{% load pipeline %}
+
+{% block extra-css %}
+{% stylesheet 'sirtrevor' %}
+{% endblock %}
+
+{% block extra-scripts %}
+{% javascript 'sirtrevor' %}
+
+<script>
+$(document).ready(function(){
+    new SirTrevor.Editor({
+      el: $('#id_text_trevor'),
+      blockTypes: ["Text", "List"],
+      defaultType: "Text",
+    });
+});
+</script>
+
+<script>
+$('.tip').tooltip({});
+</script>
+{% endblock extra-scripts %}
+
+{% block content %}
+<div class="container main">
+  <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_annotation' song.slug %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="customwell auxwell">
+          <h1>Adnotacja</h1>
+          <table class="table table-condensed formtable">
+            {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
+          </table>
+        </div>
+        <div class="customwell auxwell">
+          <h1>Ilustracja</h1>
+          <div class="alert alert-info" role="alert">
+            Opcjonalna ilustracja do adnotacji.
+          </div>
+          {{ form.image }}
+        </div>
+        <div class="customwell auxwell">
+          <h1>Treść</h1>
+          <div class="alert alert-info" role="alert">
+            Treść adnotacji.
+          </div>
+          {{ form.text_trevor }}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="customwell auxwell">
+          <h1>Źródła</h1>
+          <div class="alert alert-info" role="alert">
+            Przy każdej adnotacji należy wskazać przynajmniej jedno źródło informacji.
+          </div>
+          <table class="table table-condensed formtable">
+            {% include "components/forms/table_field.html" with name="Link 1" field=form.source_url1 %}
+            {% include "components/forms/table_field.html" with name="Link 2" field=form.source_url2 %}
+            {% include "components/forms/table_field.html" with name="Publikacja 1" field=form.source_ref1 %}
+            {% include "components/forms/table_field.html" with name="Publikacja 2" field=form.source_ref2 %}
+          </table>
+        </div>
+        {% include "components/forms/add.html" with item=object %}
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock content %}

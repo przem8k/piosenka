@@ -139,6 +139,13 @@
       </div>
       {% endif %}
 
+      {% for annotation in annotations %}
+      <div class="customwell auxwell">
+        <h1>{{ annotation.title }}</h1>
+        {{ annotation.text_html|safe }}
+      </div>
+      {% endfor %}
+
       {% if song.external_links %}
       <div class="customwell auxwell">
         <h1>Linki</h1>

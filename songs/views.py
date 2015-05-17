@@ -11,9 +11,9 @@ from content.mixins import ManageInlineFormsetMixin
 from content.views import ApproveContentView
 from content.views import ReviewContentView
 from content.views import ViewContentView
-from songs.forms import SongForm, ContributionFormSet
+from songs.forms import AnnotationForm, SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
-from songs.models import Song, EntityContribution
+from songs.models import Annotation, Song, EntityContribution
 
 
 INITIAL_LYRICS = """\
@@ -120,6 +120,7 @@ class ViewSong(GetSongMixin, ViewContentView):
         else:
             transposition = 0
         context['lyrics'] = render_lyrics(self.object.lyrics, transposition)
+        context['annotations'] = Annotation.objects.filter(song=self.object)
         return context
 
     def render_to_response(self, context):
@@ -198,3 +199,30 @@ class ReviewSong(GetSongMixin, ReviewContentView):
 
 class ApproveSong(GetSongMixin, ApproveContentView):
     pass
+
+
+class AddAnnotation(ContentItemAddMixin, CreateView):
+    model = Annotation
+    form_class = AnnotationForm
+    template_name = "songs/add_edit_annotation.html"
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.song = None
+
+    def dispatch(self, *args, **kwargs):
+        self.song = get_object_or_404(Song, slug=self.kwargs['slug'])
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['song'] = self.song
+        return context
+
+    def form_valid(self, form):
+        form.instance.song = self.song
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return self.song.get_absolute_url()
