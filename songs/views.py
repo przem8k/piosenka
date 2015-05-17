@@ -158,13 +158,11 @@ class AddSong(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
         head = EntityContribution.head_contribution([x.instance for x in
                                                      contributions])
         assert head
-        form.instance.extra_slug_elements = [head.entity.__str__()]
-        # Set the author.
+        form.instance.set_slug_prepend_elements([head.entity.__str__()])
         form.instance.author = self.request.user
-        # Save the song - this is required for saving the contributions as they
-        # need songs pk.
-        # TODO Add test for this prepend_slug_elements hackery.
-        form.instance.save(prepend_slug_elements=[head.entity.__str__()])
+        # Save the song - this is required before saving the contributions.
+        form.instance.save()
+
         contributions.instance = form.instance
         contributions.save()
         return super().form_valid(form)

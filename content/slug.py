@@ -26,7 +26,6 @@ class SlugMixin(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            slug_elements = (kwargs.pop('prepend_slug_elements', []) +
-                             self.get_slug_elements())
+            slug_elements = self.get_slug_elements()
             self.slug = SlugMixin.make_slug(slug_elements)
         return super().save(*args, **kwargs)

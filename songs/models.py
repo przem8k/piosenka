@@ -68,11 +68,14 @@ True iff the lyrics contain repeated chords."""
         max_length=100, unique=True, null=True, blank=True, editable=False,
         help_text=HELP_CORE_SLUG)
     slug = models.SlugField(
-        max_length=200, unique=True, null=True, blank=True, editable=False,
+        max_length=200, unique=True, null=False, blank=False, editable=False,
         help_text=HELP_SLUG)
     has_extra_chords = models.BooleanField(
         default=False, blank=True, editable=False,
         help_text=HELP_HAS_EXTRA_CHORDS)
+
+    class Meta:
+        ordering = ["title", "disambig"]
 
     @staticmethod
     def create_for_testing():
@@ -82,8 +85,9 @@ True iff the lyrics contain repeated chords."""
         song.lyrics = "Abc"
         return song
 
-    class Meta:
-        ordering = ["title", "disambig"]
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.slug_prepend_elements = []
 
     def __str__(self):
         if self.disambig:
@@ -126,9 +130,14 @@ True iff the lyrics contain repeated chords."""
                 raise ValidationError(
                     "Piosenka o takim tytule i wyróżniku jest już w bazie.")
 
+    def set_slug_prepend_elements(self, elements):
+        self.slug_prepend_elements = elements
+
     # SlugMixin:
     def get_slug_elements(self):
-        return [self.title] + ([self.disambig] if self.disambig else [])
+        return self.slug_prepend_elements + [self.title] + ([self.disambig]
+                                                            if self.disambig
+                                                            else [])
 
     def save(self, *args, **kwargs):
         if not self.core_slug:
