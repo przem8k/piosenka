@@ -9,108 +9,110 @@
 <div class="container main">
   <div class="row">
     <div class="col-md-8">
-      <div class="customwell contentwell">
-        <h1 class="remove-top-margin">{{ song }}
-          {% include "components/content_status_span.html" with item=song %}
-        </h1>
+      <div class="section">
+        <div class="content">
+          <h1 class="remove-top-margin">{{ song }}
+            {% include "components/content_status_span.html" with item=song %}
+          </h1>
 
-        <div class="row song-header">
-          <div class="col-md-6">
-            <div class="song-info">
-              {% if song.original_title %}
-              <p><b>Tytuł oryginalny:</b> <i>{{ song.original_title }}</i></p>
-              {% endif %}
+          <div class="row song-header">
+            <div class="col-md-6">
+              <div class="song-info">
+                {% if song.original_title %}
+                <p><b>Tytuł oryginalny:</b> <i>{{ song.original_title }}</i></p>
+                {% endif %}
 
-              {% if song.text_authors %}
-              <p><b>Tekst:</b>
-              {% for author in song.text_authors %}
-              <a href="{{author.get_absolute_url}}">{{ author }}</a>
-              {% if not forloop.last %},{% endif %}
-              {% endfor %}
-              </p>
-              {% endif %}
+                {% if song.text_authors %}
+                <p><b>Tekst:</b>
+                {% for author in song.text_authors %}
+                <a href="{{author.get_absolute_url}}">{{ author }}</a>
+                {% if not forloop.last %},{% endif %}
+                {% endfor %}
+                </p>
+                {% endif %}
 
-              {% if song.composers %}
-              <p><b>Muzyka:</b>
-              {% for composer in song.composers %}
-              <a href="{{composer.get_absolute_url}}">{{ composer }}</a>
-              {% if not forloop.last %},{% endif %}
-              {% endfor %}
-              </p>
-              {% endif %}
+                {% if song.composers %}
+                <p><b>Muzyka:</b>
+                {% for composer in song.composers %}
+                <a href="{{composer.get_absolute_url}}">{{ composer }}</a>
+                {% if not forloop.last %},{% endif %}
+                {% endfor %}
+                </p>
+                {% endif %}
 
-              {% if song.translators %}
-              <p><b>Tłumaczenie:</b>
-              {% for translator in song.translators %}
-              <a href="{{translator.get_absolute_url}}">{{ translator }}</a>
-              {% if not forloop.last %},{% endif %}
-              {% endfor %}
-              </p>
-              {% endif %}
+                {% if song.translators %}
+                <p><b>Tłumaczenie:</b>
+                {% for translator in song.translators %}
+                <a href="{{translator.get_absolute_url}}">{{ translator }}</a>
+                {% if not forloop.last %},{% endif %}
+                {% endfor %}
+                </p>
+                {% endif %}
 
-              {% if song.performers %}
-              <p><b>Wykonanie:</b>
-              {% for performer in song.performers %}
-              <a href="{{performer.get_absolute_url}}">{{ performer }}</a>
-              {% if not forloop.last %},{% endif %}
-              {% endfor %}
-              </p>
-              {% endif %}
+                {% if song.performers %}
+                <p><b>Wykonanie:</b>
+                {% for performer in song.performers %}
+                <a href="{{performer.get_absolute_url}}">{{ performer }}</a>
+                {% if not forloop.last %},{% endif %}
+                {% endfor %}
+                </p>
+                {% endif %}
 
-              {% if song.capo %}
-              <p><b>Kapodaster:</b> {{ song.capo }} </p>
-              {% endif %}
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="song-gadget hidden-print">
-              <div class="gadget-row">
-                <button type="button" class="btn btn-sm btn-default trans-up-trigger">
-                  <span class="glyphicon glyphicon-arrow-up" title="półton w górę"></span>
-                </button>
-                <button type="button" class="btn btn-sm btn-default trans-home-trigger">
-                  <span class="glyphicon glyphicon-home" title="zapis oryginalny"></span>
-                </button>
-                <button type="button" class="btn btn-sm btn-default trans-down-trigger">
-                  <span class="glyphicon glyphicon-arrow-down" title="półton w dół"></span>
-                </button>
-                <span data-toggle="tooltip" data-placement="right" title="Transponuj
-                akordy w górę lub w dół." class="tip">
-                  <span class="glyphicon glyphicon-question-sign"></span>
-                </span>
-              </div>
-
-              <div class="gadget-row">
-                <button type="button" class="btn btn-primary btn-sm chords-trigger chords-normal-trigger">
-                  <span class="glyphicon glyphicon-music" title="{% if song.has_extra_chords %}podstawowe akordy{% else %}tekst i akordy{% endif %}"></span>
-                </button>
-                <button type="button" class="btn btn-default btn-sm chords-trigger chords-repeated-trigger" {% if not song.has_extra_chords %}disabled{% endif %}>
-                  <span class="glyphicon glyphicon-repeat" title="wszystkie akordy"></span>
-                </button>
-                <button type="button" class="btn btn-default btn-sm chords-trigger chords-none-trigger">
-                  <span class="glyphicon glyphicon-font" title="tylko tekst"></span>
-                </button>
-                <span data-toggle="tooltip" data-placement="right" title="Wyświetl lub
-                ukryj dodatkowe akordy." class="tip">
-                  <span class="glyphicon glyphicon-question-sign"></span>
-                </span>
+                {% if song.capo %}
+                <p><b>Kapodaster:</b> {{ song.capo }} </p>
+                {% endif %}
               </div>
             </div>
+            <div class="col-md-6">
+              <div class="song-gadget hidden-print">
+                <div class="gadget-row">
+                  <button type="button" class="btn btn-sm btn-default trans-up-trigger">
+                    <span class="glyphicon glyphicon-arrow-up" title="półton w górę"></span>
+                  </button>
+                  <button type="button" class="btn btn-sm btn-default trans-home-trigger">
+                    <span class="glyphicon glyphicon-home" title="zapis oryginalny"></span>
+                  </button>
+                  <button type="button" class="btn btn-sm btn-default trans-down-trigger">
+                    <span class="glyphicon glyphicon-arrow-down" title="półton w dół"></span>
+                  </button>
+                  <span data-toggle="tooltip" data-placement="right" title="Transponuj
+                  akordy w górę lub w dół." class="tip">
+                    <span class="glyphicon glyphicon-question-sign"></span>
+                  </span>
+                </div>
+
+                <div class="gadget-row">
+                  <button type="button" class="btn btn-primary btn-sm chords-trigger chords-normal-trigger">
+                    <span class="glyphicon glyphicon-music" title="{% if song.has_extra_chords %}podstawowe akordy{% else %}tekst i akordy{% endif %}"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-sm chords-trigger chords-repeated-trigger" {% if not song.has_extra_chords %}disabled{% endif %}>
+                    <span class="glyphicon glyphicon-repeat" title="wszystkie akordy"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-sm chords-trigger chords-none-trigger">
+                    <span class="glyphicon glyphicon-font" title="tylko tekst"></span>
+                  </button>
+                  <span data-toggle="tooltip" data-placement="right" title="Wyświetl lub
+                  ukryj dodatkowe akordy." class="tip">
+                    <span class="glyphicon glyphicon-question-sign"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <br />
+
+          <div class="lyrics">
+            {{ lyrics|safe }}
+          </div>
+
+          {% include "components/content_foot.html" with action="Dodane" item=song %}
         </div>
-
-        <br />
-
-        <div class="lyrics">
-          {{ lyrics|safe }}
-        </div>
-
-        {% include "components/content_foot.html" with action="Dodane" item=song %}
       </div>
     </div>
 
     <div class="col-md-4 hidden-print">
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Wersja do druku
           <span data-toggle="tooltip" data-placement="bottom" title="Opracowanie
           zostanie wydrukowane w wybranej tonacji, bez nagłówka i bocznego
@@ -125,7 +127,7 @@
       </div>
 
       {% if song.score1 or song.score2 or song.score3 %}
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Nuty</h1>
         {% if song.score1 %}
         <center><a href="{{song.score1.url}}"><img src='{{ song.score1|thumbnail_url:'scorethumb' }}'/></a></center><br />
@@ -140,7 +142,7 @@
       {% endif %}
 
       {% for annotation in annotations %}
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>{{ annotation.title }}
           {% include "components/content_status_span.html" with item=song %}
         </h1>
@@ -150,7 +152,7 @@
       {% endfor %}
 
       {% if song.external_links %}
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Linki</h1>
         <ul class="list-unstyled">
           {% for link in song.external_links %}

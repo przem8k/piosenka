@@ -22,14 +22,14 @@ textarea#id_lyrics {
   <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_song' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
     <div class="row">
       <div class="col-md-6">
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Piosenka</h1>
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
             {% include "components/forms/table_field.html" with name="Wyróżnik" field=form.disambig %}
           </table>
         </div>
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Opracowanie</h1>
           <div class="alert alert-info" role="alert">
             <p>
@@ -57,7 +57,7 @@ textarea#id_lyrics {
         </div>
       </div>
       <div class="col-md-6">
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Autor lub autorzy</h1>
           <div class="alert alert-info" role="alert">
             Przy każdym opracowaniu należy wskazać przynajmniej jednego autora.
@@ -97,7 +97,7 @@ textarea#id_lyrics {
             {% endfor %}
           </table>
         </div>
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Nuty</h1>
           <div class="alert alert-info" role="alert">
             Opcjonalnie: załaduj jeden lub więcej plik graficzny z nutami do piosenki.
@@ -108,7 +108,7 @@ textarea#id_lyrics {
             {% include "components/forms/table_field.html" with name="Plik 3" field=form.score3 %}
           </table>
         </div>
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Dodatkowe informacje</h1>
           <div class="alert alert-info" role="alert">
             Wszystkie pola w tej sekcji są opcjonalne.

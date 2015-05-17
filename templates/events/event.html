@@ -7,52 +7,54 @@
 <div class="container main">
   <div class="row">
     <div class="col-md-8">
-      <div class="customwell contentwell">
-        <h1>{{ event.name }}
-        {% include "components/content_status_span.html" with item=event %}
-        </h1>
-        <table width="100%">
-          <tr><td valign="top" width="60%">
+      <div class="section">
+        <div class="content">
+          <h1>{{ event.name }}
+            {% include "components/content_status_span.html" with item=event %}
+          </h1>
+          <table width="100%">
+            <tr><td valign="top" width="60%">
 
-              <b>Kiedy: </b>
-              {{ event.datetime|date:"d.m.Y H:i" }}
+                <b>Kiedy: </b>
+                {{ event.datetime|date:"d.m.Y H:i" }}
 
-              {% if event.performers %}
-              <br />
-              <b>Kto: </b>
-              {% for entity in event.performers %}
-              <a href="{{ entity.get_gigs_url }}">{{ entity }}</a>
-              {% endfor %}
-              {% endif %}
-              <br />
-              {% if event.price %}
-              <b>Ceny biletów: </b>
-              {{event.price}}
-              <br />
-              {% endif %}
+                {% if event.performers %}
+                <br />
+                <b>Kto: </b>
+                {% for entity in event.performers %}
+                <a href="{{ entity.get_gigs_url }}">{{ entity }}</a>
+                {% endfor %}
+                {% endif %}
+                <br />
+                {% if event.price %}
+                <b>Ceny biletów: </b>
+                {{event.price}}
+                <br />
+                {% endif %}
 
-              {% if event.website %}
-              <b>Strona WWW: </b>
-              <a href="{{event.website}}" target="_blank">link</a>
-              <br />
-              {% endif %}
+                {% if event.website %}
+                <b>Strona WWW: </b>
+                <a href="{{event.website}}" target="_blank">link</a>
+                <br />
+                {% endif %}
 
-            </td>
-            <td valign="top" width="40%">
-              {% if event.venue %}
-              <a href="{{event.venue.get_absolute_url}}">{{event.venue.name}}</a><br />
-              {{event.venue.street}}<br />
-              {{event.venue.town}}<br />
-              {% else %}
-              {{event.address|linebreaksbr}}
-              {% endif %}
-          </td></tr>
-        </table>
+              </td>
+              <td valign="top" width="40%">
+                {% if event.venue %}
+                <a href="{{event.venue.get_absolute_url}}">{{event.venue.name}}</a><br />
+                {{event.venue.street}}<br />
+                {{event.venue.town}}<br />
+                {% else %}
+                {{event.address|linebreaksbr}}
+                {% endif %}
+              </td></tr>
+          </table>
 
-        <br />
-        {{ event.description_html|safe }}
+          <br />
+          {{ event.description_html|safe }}
 
-        {% include "components/content_foot.html" with action="Dodane" item=event %}
+          {% include "components/content_foot.html" with action="Dodane" item=event %}
+        </div>
       </div>
     </div>
     <div class="col-md-4">

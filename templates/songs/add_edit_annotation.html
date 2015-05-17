@@ -28,20 +28,20 @@ $('.tip').tooltip({});
   <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_annotation' song.slug %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
     <div class="row">
       <div class="col-md-6">
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Adnotacja</h1>
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
           </table>
         </div>
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Ilustracja</h1>
           <div class="alert alert-info" role="alert">
             Opcjonalna ilustracja do adnotacji.
           </div>
           {{ form.image }}
         </div>
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Treść</h1>
           <div class="alert alert-info" role="alert">
             Treść adnotacji.
@@ -50,7 +50,7 @@ $('.tip').tooltip({});
         </div>
       </div>
       <div class="col-md-6">
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Źródła</h1>
           <div class="alert alert-info" role="alert">
             Przy każdej adnotacji należy wskazać przynajmniej jedno źródło informacji.

@@ -9,25 +9,27 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <div class="customwell contentwell">
-        <h1 class="remove-top-margin">{{ article.title }}
-        {% include "components/content_status_span.html" with item=article %}</h1>
+      <div class="section">
+        <div class="content">
+          <h1 class="remove-top-margin">{{ article.title }}
+            {% include "components/content_status_span.html" with item=article %}</h1>
 
-        <div class="thumbnail-host">
-          {% if article.cover_image %}
-          <img src="{{article.cover_image|thumbnail_url:'cover'}}" width="100%" class="img-responsive" />
-          <div class="thumbnail-caption">
-            {{ article.cover_credits_html|safe }}
+          <div class="thumbnail-host">
+            {% if article.cover_image %}
+            <img src="{{article.cover_image|thumbnail_url:'cover'}}" width="100%" class="img-responsive" />
+            <div class="thumbnail-caption">
+              {{ article.cover_credits_html|safe }}
+            </div>
+            {% endif %}
           </div>
-          {% endif %}
-        </div>
-        <div class="article-body">
-          {{ article.lead_text_html|safe }}
+          <div class="article-body">
+            {{ article.lead_text_html|safe }}
 
-          {{ article.main_text_html|safe }}
-        </div>
+            {{ article.main_text_html|safe }}
+          </div>
 
-        {% include "components/content_foot.html" with action="Dodany" item=article %}
+          {% include "components/content_foot.html" with action="Dodany" item=article %}
+        </div>
       </div>
     </div>
 

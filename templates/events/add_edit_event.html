@@ -50,7 +50,7 @@ $('.tip').tooltip({});
   <form action="{% if not object or not object.pk %}{% url 'add_event' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
     <div class="row">
       <div class="col-md-6">
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Wydarzenie</h1>
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Nazwa" field=form.name %}
@@ -62,7 +62,7 @@ $('.tip').tooltip({});
           {{ form.non_field_errors }}
 
         </div>
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Opis</h1>
           <div class="alert alert-info" role="alert">
             Opisz dodawane wydarzenie <b>własnymi słowami</b>. Nie dodawaj
@@ -73,7 +73,7 @@ $('.tip').tooltip({});
         </div>
       </div>
       <div class="col-md-6">
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Miejsce</h1>
           <div class="alert alert-info" role="alert">
             Jeśli miejsce jest już w bazie PzT wybierz je z listy. W przeciwnym
@@ -91,7 +91,7 @@ $('.tip').tooltip({});
             </table>
           </div>
         </div>
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Wystąpią</h1>
           {{ entityperformance.management_form }}
 
@@ -120,7 +120,7 @@ $('.tip').tooltip({});
             {% endfor %}
           </table>
         </div>
-        <div class="customwell auxwell">
+        <div class="section">
           <h1>Dodatkowe informacje</h1>
           <div class="alert alert-info" role="alert">
             Wszystkie pola w tej sekcji są opcjonalne.

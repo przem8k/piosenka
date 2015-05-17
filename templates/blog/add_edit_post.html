@@ -35,13 +35,13 @@ $('.tip').tooltip({});
   <form action="{% if not object or not object.pk %}{% url 'add_post' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
   <div class="row">
     <div class="col-md-8">
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Post</h1>
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
           </table>
       </div>
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Lead</h1>
         <div class="alert alert-info" role="alert">
           Lead to pierwsza, obowiązkowa część posta, która będzie wyświetlana
@@ -49,7 +49,7 @@ $('.tip').tooltip({});
         </div>
         {{ form.post_trevor }}
       </div>
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Dalsza treść</h1>
         <div class="alert alert-info" role="alert">
           Dalsza część jest opcjonalna, będzie wyświetlana po kliknięciu na "czytaj dalej".

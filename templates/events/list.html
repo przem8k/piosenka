@@ -4,7 +4,7 @@
 <div class="container main">
   <div class="row">
     <div class="col-md-6">
-      <div class="customwell auxwell">
+      <div class="section">
         {% block content-header %}
         {% endblock content-header %}
         <ul class="list-unstyled">
@@ -21,7 +21,7 @@
     {% if venue %}
       {% if venue.lat and venue.lon %}
     <div class="col-md-6">
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Mapa</h1>
         {% include "base/map.html" with map_width="280" map_height="210" map_center_lat=venue.lat map_center_lng=venue.lon map_zoom="12" mark=venue %}
       </div>
@@ -29,7 +29,7 @@
       {% endif %}
     {% else %}
     <div class="col-md-6">
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Mapa</h1>
         {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
       </div>

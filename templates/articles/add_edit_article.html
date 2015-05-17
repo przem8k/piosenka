@@ -41,13 +41,13 @@ $('.tip').tooltip({});
   <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_article' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
   <div class="row">
     <div class="col-md-8">
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Artykuł</h1>
         <table class="table table-condensed formtable">
           {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
         </table>
       </div>
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Lead (pierwszy akapit)</h1>
         <div class="alert alert-info" role="alert">
           Treść artykułu podzielona jest na dwie części. Pierwszy akapit
@@ -55,7 +55,7 @@ $('.tip').tooltip({});
         </div>
         {{ form.lead_text_trevor }}
       </div>
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Dalsza treść</h1>
         <div class="alert alert-info" role="alert">
           Poniżej wpisz pozostałą część tekstu.
@@ -64,7 +64,7 @@ $('.tip').tooltip({});
       </div>
     </div>
     <div class="col-md-4">
-      <div class="customwell auxwell">
+      <div class="section">
         <h1>Zdjęcie</h1>
           <div class="alert alert-info" role="alert">
             Każdy artykuł musi posiadać zdjęcie lub grafikę okładkową.
