@@ -171,14 +171,15 @@ True iff the lyrics contain repeated chords."""
 
 
 class EntityContribution(models.Model):
-    # TODO: Can we have a unique_together constraint on (song, entity), to
-    # ensure no duplicate contributions to a song?
     song = models.ForeignKey(Song)
     entity = models.ForeignKey(Entity, verbose_name="artysta")
     performed = models.BooleanField(default=False, verbose_name="wyk.")
     texted = models.BooleanField(default=False, verbose_name="tekst")
     translated = models.BooleanField(default=False, verbose_name="tł.")
     composed = models.BooleanField(default=False, verbose_name="muz.")
+
+    class Meta:
+        unique_together = (('song', 'entity'),)
 
     def __str__(self):
         return self.entity.__str__() + " - " + self.song.title
