@@ -185,6 +185,9 @@ THUMBNAIL_ALIASES = {
     'articles.Article.cover_image': {
         'cover': {'size': (600, 300), 'crop': True, 'upscale': True},
         'coverthumb': {'size': (420, 210), 'crop': True, 'upscale': True},
+    },
+    'songs.Annotation.image': {
+        'imagethumb': {'size': (280, 157), 'crop': True, 'upscale': True},
     }
 }
 

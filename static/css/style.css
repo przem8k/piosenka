@@ -146,6 +146,14 @@ body {
     padding: 5px;
 }
 
+.thumbnail-host .on-hover {
+  display: none;
+}
+
+.section:hover .on-hover {
+  display: block;
+}
+
 .article-body {
     margin-top: 10px;
 }

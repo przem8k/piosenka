@@ -146,6 +146,14 @@
         <h1>{{ annotation.title }}
           {% include "components/content_status_span.html" with item=song %}
         </h1>
+        {% if annotation.image %}
+        <div class="thumbnail-host">
+          <img src="{{ annotation.image|thumbnail_url:'imagethumb'}}" width="100%" class="img-responsive" />
+            <div class="thumbnail-caption on-hover">
+              <p class="pull-right"><a href="{{ annotation.image.url }}">pełny rozmiar</a></p>
+            </div>
+        </div>
+        {% endif %}
         {{ annotation.text_html|safe }}
         {% include "components/content_foot.html" with action="Dodane" item=annotation %}
       </div>
