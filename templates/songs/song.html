@@ -155,6 +155,17 @@
         </div>
         {% endif %}
         {{ annotation.text_html|safe }}
+        {% if annotation.source_url1 or annotation.source_url2 or annotation.source_ref1 or annotation.source_ref2 %}
+        <small>
+            <ul class="list-unstyled">
+              <li><b>Źródła</b>:</li>
+              {% if annotation.source_url1 %}<li><a href="{{ annotation.source_url1 }}">{{ annotation.source_url1|truncatechars:50 }}</a></li>{% endif %}
+              {% if annotation.source_url2 %}<li><a href="{{ annotation.source_url2 }}">{{ annotation.source_url2|truncatechars:50 }}</a></li>{% endif %}
+              {% if annotation.source_ref1 %}<li>{{ annotation.source_ref1 }}</li>{% endif %}
+              {% if annotation.source_ref2 %}<li>{{ annotation.source_ref2 }}</li>{% endif %}
+            </ul>
+        </small>
+        {% endif %}
         {% include "components/content_foot.html" with action="Dodane" item=annotation %}
       </div>
       {% endfor %}
