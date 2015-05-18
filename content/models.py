@@ -51,7 +51,8 @@ class ContentItem(models.Model):
                 (user == self.author or user.is_staff))
 
     def can_be_approved_by(self, user):
-        return (user.is_active and
+        return (not self.is_live() and
+                user.is_active and
                 user.is_authenticated() and
                 user.is_staff and
                 user != self.author)

@@ -21,14 +21,6 @@ class ViewContentView(DetailView):
             raise Http404
         return super().dispatch(*args, **kwargs)
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['can_edit'] = self.object.can_be_edited_by(self.request.user)
-        context['can_approve'] = \
-            (self.object.can_be_approved_by(self.request.user) and
-             not self.object.is_live())
-        return context
-
 
 class ReviewContentView(RedirectView):
     """ Redirects to content to be reviewed and puts up a helper message
