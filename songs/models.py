@@ -262,6 +262,9 @@ Used in urls, has to be unique."""
             'slug': self.slug
         }
 
+    def get_absolute_url(self):
+        return self.song.get_absolute_url()
+
     @models.permalink
     def get_edit_url(self):
         return ('edit_annotation', (), self.get_url_params())

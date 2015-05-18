@@ -144,7 +144,7 @@
       {% for annotation in annotations %}
       <div class="section">
         <h1>{{ annotation.title }}
-          {% include "components/content_status_span.html" with item=song %}
+          {% include "components/content_status_span.html" with item=annotation %}
         </h1>
         {% if annotation.image %}
         <div class="thumbnail-host">
