@@ -62,14 +62,10 @@ class SongUrlTest(ContentTestScenarios, PiosenkaTestCase):
         # Verify what happens when the author does.
         response = self.get(song.get_absolute_url(), self.user_alice)
         self.assertEqual(200, response.status_code)
-        self.assertTrue(response.context['can_edit'])
-        self.assertFalse(response.context['can_approve'])
 
         # Verify what happens when another author does.
         response = self.get(song.get_absolute_url(), self.user_bob)
         self.assertEqual(200, response.status_code)
-        self.assertFalse(response.context['can_edit'])
-        self.assertFalse(response.context['can_approve'])
 
     def test_edit_song(self):
         entity = self.new_entity()

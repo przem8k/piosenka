@@ -83,11 +83,7 @@ class ContentTestScenarios(object):
         # Verify what happens now that the item is approved.
         response = self.get(item.get_absolute_url())
         self.assertEqual(200, response.status_code)
-        self.assertFalse(response.context['can_edit'])
-        self.assertFalse(response.context['can_approve'])
 
         # Now that the item is approved, there should be no approve link.
         response = self.get(item.get_absolute_url(), self.user_approver_zoe)
         self.assertEqual(200, response.status_code)
-        self.assertTrue(response.context['can_edit'])
-        self.assertFalse(response.context['can_approve'])
