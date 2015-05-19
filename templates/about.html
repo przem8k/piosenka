@@ -18,18 +18,17 @@
           </p>
 
           <p>
-          Strona działa dzięki pracy <b>zespołu</b> ochotników. W ramach dbałości o
-          jakość zamieszczanych treści, każdy materiał przed publikacją
-          przechodzi <b>korektę</b>.
+          Strona działa dzięki pracy <b>zespołu</b> ochotników.
           </p>
 
           <h2>Zespół</h2>
           <table class="table table-striped table-condensed scoreboard">
-            <tr><th></th><th>Piosenki</th><th>Wydarzenia</th><th>Artykuły</th><th>Suma<th></tr>
+            <tr><th></th><th>Piosenki</th><th>Adnotacje</th><th>Wydarzenia</th><th>Artykuły</th><th>Suma<th></tr>
             {% for author in authors %}
             <tr>
               <td>{{ author.user.first_name }} {{ author.user.last_name }}</td>
               <td>{{ author.songs }}</td>
+              <td>{{ author.annotations }}</td>
               <td>{{ author.events }}</td>
               <td>{{ author.articles }}</td>
               <td>{{ author.total }}</td>

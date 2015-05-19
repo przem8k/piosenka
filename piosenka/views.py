@@ -14,7 +14,7 @@ from articles.models import Article
 from blog.models import Post
 from events.models import Event
 from frontpage.models import CarouselItem
-from songs.models import Song
+from songs.models import Annotation, Song
 from content.mixins import CheckStaffMixin
 
 
@@ -24,8 +24,6 @@ class SiteIndex(TemplateView):
     SONG_COUNT = 10
 
     def get_context_data(self, **kwargs):
-        all_posts = Post.objects.all().order_by('-pub_date')
-
         context = super().get_context_data(**kwargs)
         context['carousel_items'] = CarouselItem.objects.filter(archived=False)
         context['events'] = Event.items_visible_to(self.request.user)\
@@ -47,13 +45,16 @@ class About(TemplateView):
         for user in User.objects.filter(is_active=True):
             author = {}
             author['user'] = user
+            author['annotations'] = Annotation.live.filter(author=user).count()
             author['songs'] = Song.live.filter(author=user).count()
             author['articles'] = Article.live.filter(author=user).count()
             author['events'] = Event.live.filter(author=user).count()
-            author['total'] = author['songs'] + author['articles'] + author['events']
+            author['total'] = (author['annotations'] + author['songs'] +
+                               author['articles'] + author['events'])
             if author['total']:
                 authors.append(author)
-        context['authors'] = sorted(authors, key=lambda k: k['total'], reverse=True)
+        context['authors'] = sorted(authors, key=lambda k: k['total'],
+                                    reverse=True)
         return context
 
 
@@ -102,6 +103,7 @@ class ChangePassword(FormView):
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
+
 
 class ToReview(CheckStaffMixin, TemplateView):
     template_name = "to_review.html"
