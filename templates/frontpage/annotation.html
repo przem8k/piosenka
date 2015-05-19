@@ -1,0 +1,13 @@
+{% load thumbnail %}
+<div class="section">
+  <h1>{{ annotation }}
+    {% include "components/content_status_span.html" with item=annotation %}
+  </h1>
+  {% if annotation.image %}
+  <div class="thumbnail-host">
+    <img src="{{ annotation.image|thumbnail_url:'imagethumb'}}" width="100%" class="img-responsive" />
+  </div>
+  {% endif %}
+  {{ annotation.text_html|safe }}
+  <p style="text-align: right;"><a href="{{ annotation.song.get_absolute_url }}">{{ annotation.song }}</a></p>
+</div>

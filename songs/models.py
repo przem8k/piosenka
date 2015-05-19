@@ -255,7 +255,7 @@ Used in urls, has to be unique."""
         raise NotImplementedError()
 
     def __str__(self):
-        return "%s - adnotacja do %s" % (self.title, self.song.title)
+        return "%s - adnotacja do piosenki %s" % (self.title, self.song.title)
 
     def get_url_params(self):
         return {
