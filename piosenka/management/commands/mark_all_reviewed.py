@@ -1,6 +1,4 @@
-"""
-Marks all items of all content types as reviewed.
-"""
+"""Marks all items of all content types as reviewed."""
 
 from django.core.management.base import BaseCommand
 

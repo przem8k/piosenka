@@ -61,7 +61,7 @@ class About(TemplateView):
 
 
 class Format(TemplateView):
-    template_name = "format.html"
+    template_name = "format.generated"
 
 
 class Hello(FormView):
