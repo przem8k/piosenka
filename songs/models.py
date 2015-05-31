@@ -214,17 +214,15 @@ class EntityContribution(models.Model):
 
 class Annotation(SlugMixin, ContentItem):
     HELP_TITLE = """\
-Tytuł adnotacji, np. "Aspazja", "Francuska choroba", "Rok 1788". Adnotacje
-poświęcone dziełom artystycznym tytułuj wg schematu "Nazwa - Autor", np.
-"Fortepian Chopina - Cyprian Kamil Norwid" lub "Wojna postu z karnawałem - Piotr
-Breugel."""
+Tytuł adnotacji, np. "Aspazja" lub "Fortepian Chopina"."""
     HELP_IMAGE = """\
 Ilustracja adnotacji. Pamiętaj o wskazaniu źródła tak samo jak w przypadku
 treści zawartych w tekście adnotacji."""
     HELP_SOURCE_URL = """\
 Link do źródła informacji, jeśli źródłem jest strona internetowa."""
     HELP_SOURCE_REF = """\
-Nazwa publikacji źródłowej, jeśli adnotacja jest oparta na publikacjii."""
+Tytuł i autor publikacji źródłowej, jeśli adnotacja jest oparta na
+publikacjii."""
     HELP_SLUG = """\
 Used in urls, has to be unique."""
 

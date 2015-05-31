@@ -27,24 +27,75 @@ $('.tip').tooltip({});
 <div class="container main">
   <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_annotation' song.slug %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
     <div class="row">
+      <div class="col-md-12">
+        <div class="section">
+          <h1>Uwagi</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="alert alert-info" role="alert">
+                <p>Dobra adnotacja wzbogaca odbiór utworu przez wskazanie
+                obiektywnych informacji o jego kontekście. Przykładowym tematem
+                adnotacji mogą być:
+                </p>
+                <ul>
+                  <li><b>nawiązania</b> - n.p. znaczenie roku 1788 lub
+                  określenia "francuska choroba" w piosence 1788.</li>
+                  <li><b>okoliczności powstania</b> - n.p. anegdota o piosence
+                  "Czołg", pisanej wg nigdy nie powstałej piosenki
+                  Wysockiego.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="alert alert-warning" role="alert">
+                <p>Unikaj dodawania adnotacji niewiele wnoszących lub subiektywnych:
+                </p>
+                <ul>
+                  <li><b>subiektywne interpretacje</b> bez umocowania w literaturze
+                  <li><b>oceny</b> "jakości" czy wagi piosenki</li>
+                  <li>adnotacje które mogłyby odnosić się do <b>wielu piosenek</b></li>
+                  <li>sama data powstania, o ile nie ma istotnego wpływu na utwór i
+                  nie jest opatrzona szerszym komentarzem</li>
+                </ul>
+                <p>Nie opisuj również <b>wskazówek odnośnie grania</b> danej
+                piosenki do czasu rozstrzygnięcia w jakiej formie będziemy je
+                dodawać.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-md-6">
         <div class="section">
           <h1>Adnotacja</h1>
           <table class="table table-condensed formtable">
-            {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
+            <td><b>Adnotacja do piosenki:</b></td><td>{{ song }}</td>
+            {% include "components/forms/table_field.html" with name="Tytuł adnotacji" field=form.title %}
           </table>
+          <div class="alert alert-warning" role="alert">
+            <p>Adnotacje powinny być zwięzłe i konkretne - nie opisuj w jednej adnotacji niezależnych
+            tematów związanych z tą samą piosenką.
+            </p>
+          </div>
         </div>
         <div class="section">
           <h1>Ilustracja</h1>
           <div class="alert alert-info" role="alert">
-            Opcjonalna ilustracja do adnotacji.
+            <p>Opcjonalna ilustracja do adnotacji. Źródło ewentualnej
+            ilustracji wskaż w sekcji "źródła".</p>
+            <p>Korzystaj tylko z ilustracji na których wykorzystywanie
+            zezwalają <b>prawa autorskie</b> (e.g. z Wikipedii).
+            </p>
           </div>
           {{ form.image }}
         </div>
         <div class="section">
           <h1>Treść</h1>
           <div class="alert alert-info" role="alert">
-            Treść adnotacji.
+            <p>Treść adnotacji zapisz własnymi słowami, na podstawie źródeł.
+            Unikaj obszernych cytatów - jeśli cytat jest konieczny, wybierz
+            kluczowy fragment i opatrz komentarzem.</p>
           </div>
           {{ form.text_trevor }}
         </div>
