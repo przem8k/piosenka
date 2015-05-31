@@ -180,6 +180,15 @@
         </ul>
       </div>
       {% endif %}
+
+      {% if user.is_authenticated %}
+      <div class="section">
+        <h1>Dodaj adnotację</h1>
+        <p style="text-align: center">
+        <a href="{{ song.get_add_annotation_url }}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+        </p>
+      </div>
+      {% endif %}
     </div>
   </div>
   {% include "base/rows/disqus.html" with disqus_id=song.slug %}

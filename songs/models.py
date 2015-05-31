@@ -116,6 +116,10 @@ True iff the lyrics contain repeated chords."""
     def get_approve_url(self):
         return ('approve_song', (), self.get_url_params())
 
+    @models.permalink
+    def get_add_annotation_url(self):
+        return ('add_annotation', (), self.get_url_params())
+
     def clean(self):
         try:
             parsed_lyrics = parse_lyrics(self.lyrics)
