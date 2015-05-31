@@ -61,8 +61,6 @@
       {% if event.venue.lat and event.venue.lon %}
       {% include "base/wells/place.html" with place=event.venue mark=event %}
       {% endif %}
-
-      {% include "base/wells/like.html" with like_what="wydarzenie" %}
     </div>
   </div>
   {% include "base/rows/disqus.html" %}
