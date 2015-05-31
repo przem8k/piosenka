@@ -39,6 +39,7 @@ class SiteIndex(TemplateView):
 
 
 class About(TemplateView):
+    ARTICLE_FACTOR = 5
     template_name = "about.html"
 
     def get_context_data(self, **kwargs):
@@ -52,7 +53,8 @@ class About(TemplateView):
             author['articles'] = Article.live.filter(author=user).count()
             author['events'] = Event.live.filter(author=user).count()
             author['total'] = (author['annotations'] + author['songs'] +
-                               author['articles'] + author['events'])
+                               self.ARTICLE_FACTOR * author['articles'] +
+                               author['events'])
             if author['total']:
                 authors.append(author)
         context['authors'] = sorted(authors, key=lambda k: k['total'],
