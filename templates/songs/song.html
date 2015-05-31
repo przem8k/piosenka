@@ -126,21 +126,6 @@
         </p>
       </div>
 
-      {% if song.score1 or song.score2 or song.score3 %}
-      <div class="section">
-        <h1>Nuty</h1>
-        {% if song.score1 %}
-        <center><a href="{{song.score1.url}}"><img src='{{ song.score1|thumbnail_url:'scorethumb' }}'/></a></center><br />
-        {% endif %}	
-        {% if song.score2 %}
-        <center><a href="{{song.score2.url}}"><img src='{{ song.score2|thumbnail_url:'scorethumb' }}'/></a></center><br />
-        {% endif %}	
-        {% if song.score3 %}
-        <center><a href="{{song.score3.url}}"><img src='{{ song.score3|thumbnail_url:'scorethumb' }}'/></a></center><br />
-        {% endif %}	
-      </div>
-      {% endif %}
-
       {% for annotation in annotations %}
       <div class="section">
         <h1>{{ annotation.title }}
@@ -169,6 +154,21 @@
         {% include "components/content_foot.html" with action="Dodane" item=annotation %}
       </div>
       {% endfor %}
+
+      {% if song.score1 or song.score2 or song.score3 %}
+      <div class="section">
+        <h1>Nuty</h1>
+        {% if song.score1 %}
+        <center><a href="{{song.score1.url}}"><img src='{{ song.score1|thumbnail_url:'scorethumb' }}'/></a></center><br />
+        {% endif %}	
+        {% if song.score2 %}
+        <center><a href="{{song.score2.url}}"><img src='{{ song.score2|thumbnail_url:'scorethumb' }}'/></a></center><br />
+        {% endif %}	
+        {% if song.score3 %}
+        <center><a href="{{song.score3.url}}"><img src='{{ song.score3|thumbnail_url:'scorethumb' }}'/></a></center><br />
+        {% endif %}	
+      </div>
+      {% endif %}
 
       {% if song.external_links %}
       <div class="section">
