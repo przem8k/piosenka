@@ -80,6 +80,15 @@ $('.tip').tooltip({});
           </div>
         </div>
         <div class="section">
+          <h1>Treść</h1>
+          <div class="alert alert-info" role="alert">
+            <p>Treść adnotacji zapisz własnymi słowami, na podstawie źródeł.
+            Unikaj obszernych cytatów - jeśli cytat jest konieczny, wybierz
+            kluczowy fragment i opatrz komentarzem.</p>
+          </div>
+          {{ form.text_trevor }}
+        </div>
+        <div class="section">
           <h1>Ilustracja</h1>
           <div class="alert alert-info" role="alert">
             <p>Opcjonalna ilustracja do adnotacji. Źródło ewentualnej
@@ -89,15 +98,6 @@ $('.tip').tooltip({});
             </p>
           </div>
           {{ form.image }}
-        </div>
-        <div class="section">
-          <h1>Treść</h1>
-          <div class="alert alert-info" role="alert">
-            <p>Treść adnotacji zapisz własnymi słowami, na podstawie źródeł.
-            Unikaj obszernych cytatów - jeśli cytat jest konieczny, wybierz
-            kluczowy fragment i opatrz komentarzem.</p>
-          </div>
-          {{ form.text_trevor }}
         </div>
       </div>
       <div class="col-md-6">
