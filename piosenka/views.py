@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth.views import login, logout
 from django.core.urlresolvers import reverse_lazy
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 from django.utils.decorators import method_decorator
 from django.views.generic import View, TemplateView
 from django.views.generic.edit import FormView
@@ -15,7 +15,6 @@ from blog.models import Post
 from events.models import Event
 from frontpage.models import CarouselItem
 from songs.models import Annotation, Song
-from content.mixins import CheckStaffMixin
 
 
 class SiteIndex(TemplateView):
@@ -109,5 +108,11 @@ class ChangePassword(FormView):
         return super().form_valid(form)
 
 
-class ToReview(CheckStaffMixin, TemplateView):
+class ToReview(TemplateView):
     template_name = "to_review.html"
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        if not (self.request.user.is_staff):
+            raise Http404
+        return super().dispatch(*args, **kwargs)
