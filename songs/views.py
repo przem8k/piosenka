@@ -57,8 +57,7 @@ class SongRedirectView(RedirectView):
         return song.get_absolute_url()
 
 
-class BaseMenuView(TemplateView):
-    # TODO: this should be a mixin, not a base view.
+class SongbookMenuMixin(object):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["bards"] = Entity.objects.filter(
@@ -76,11 +75,11 @@ class BaseMenuView(TemplateView):
         return context
 
 
-class IndexView(BaseMenuView):
+class IndexView(SongbookMenuMixin, TemplateView):
     template_name = "songs/index.html"
 
 
-class EntityView(BaseMenuView):
+class EntityView(SongbookMenuMixin, TemplateView):
     """ Lists the songs associated with the given Entity object. """
     template_name = "songs/list.html"
 
