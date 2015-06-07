@@ -1,6 +1,7 @@
 *.pyc
 *.swp
 *.swo
+*.log
 *~
 settings_production.py
 settings_local.py

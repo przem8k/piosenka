@@ -1,3 +1,5 @@
+import logging
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import Http404, HttpResponseRedirect
@@ -7,6 +9,8 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from piosenka.mail import send_item_approved_mail
 from piosenka.mail import send_new_to_review_mails
+
+_action_logger = logging.getLogger('actions')
 
 
 class ViewContentView(DetailView):
@@ -81,6 +85,8 @@ class AddContentView(FormsetsMixin, CreateView):
             pass
         messages.add_message(self.request, messages.INFO,
                              "Materiał dodany, oczekuje na korektę.")
+        _action_logger.info("%s added %s" % (self.request.user,
+                                             form.instance))
         return ret
 
 
@@ -92,6 +98,12 @@ class EditContentView(FormsetsMixin, UpdateView):
                 self.request.user == self.object.author):
             raise Http404
         return super().dispatch(*args, **kwargs)
+
+    def form_valid(self, form, formsets):
+        ret = super().form_valid(form, formsets)
+        _action_logger.info("%s edited %s" % (self.request.user,
+                                              form.instance))
+        return ret
 
 
 class ReviewContentView(RedirectView):
@@ -153,6 +165,7 @@ class ApproveContentView(RedirectView):
         item.save()
         messages.add_message(self.request, messages.INFO,
                              "Materiał zatwierdzony.")
+        _action_logger.info("%s approved %s" % (self.request.user, item))
         try:
             send_item_approved_mail(item, self.request.user)
         except Exception:

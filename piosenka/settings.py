@@ -198,3 +198,27 @@ LOGIN_URL = reverse_lazy('hello')
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 SITE = 'http://www.piosenkaztekstem.pl'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'basic': {
+            'format': '%(levelname)s %(asctime)s %(message)s',
+        }
+    },
+    'handlers': {
+        'actions_file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'formatter': 'basic',
+            'filename': os.path.join(PROJECT_PATH, 'actions.log')
+        },
+    },
+    'loggers': {
+        'actions': {
+            'level': 'DEBUG',
+            'handlers': ['actions_file'],
+        },
+    },
+}
