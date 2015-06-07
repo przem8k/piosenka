@@ -42,10 +42,6 @@ class AddArticle(AddContentView):
             'main_text_trevor': put_text_in_trevor(initial_main),
         }
 
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
-
     def get_success_url(self):
         return self.object.get_absolute_url()
 

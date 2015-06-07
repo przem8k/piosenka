@@ -9,7 +9,6 @@ from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm, PerformanceFormSet
 from events.mixins import EventMenuMixin
 from content.trevor import put_text_in_trevor
-from content.mixins import ManageInlineFormsetMixin
 from content.views import (AddContentView, EditContentView, ApproveContentView,
                            ReviewContentView, ViewContentView)
 
@@ -101,9 +100,10 @@ class YearArchive(TemplateView):
         return context
 
 
-class AddEvent(ManageInlineFormsetMixin, AddContentView):
+class AddEvent(AddContentView):
     model = Event
     form_class = EventForm
+    formset_classes = [("entityperformance", PerformanceFormSet)]
     template_name = "events/add_edit_event.html"
 
     def get_initial(self):
@@ -113,31 +113,22 @@ class AddEvent(ManageInlineFormsetMixin, AddContentView):
             'description_trevor': put_text_in_trevor(initial_description)
         }
 
-    def get_managed_formset_class(self):
-        return PerformanceFormSet
-
-    def form_valid(self, form):
-        performances = super().get_managed_formset()
-        if not performances.is_valid():
-            return self.form_invalid(form)
-
+    def form_valid(self, form, formsets):
         venue = form.cleaned_data['venue']
         venue.save()
         form.instance.venue = venue
         form.instance.datetime = datetime.combine(form.cleaned_data['date'],
                                                   form.cleaned_data['time'])
-        form.instance.author = self.request.user
-        performances.instance = form.save()
-        performances.save()
-        return super().form_valid(form)
+        return super().form_valid(form, formsets)
 
     def get_success_url(self):
         return self.object.get_absolute_url()
 
 
-class EditEvent(GetEventMixin, ManageInlineFormsetMixin, EditContentView):
+class EditEvent(GetEventMixin, EditContentView):
     model = Event
     form_class = EventForm
+    formset_classes = [("EntityPerformance", PerformanceFormSet)]
     template_name = "events/add_edit_event.html"
 
     def get_initial(self):
@@ -148,22 +139,13 @@ class EditEvent(GetEventMixin, ManageInlineFormsetMixin, EditContentView):
             'description_trevor': self.object.description_trevor,
         }
 
-    def get_managed_formset_class(self):
-        return PerformanceFormSet
-
-    def form_valid(self, form):
-        performances = super().get_managed_formset()
-        if not performances.is_valid():
-            return self.form_invalid(form)
-
+    def form_valid(self, form, formsets):
         venue = form.cleaned_data['venue']
         venue.save()
         form.instance.venue = venue
         form.instance.datetime = datetime.combine(form.cleaned_data['date'],
                                                   form.cleaned_data['time'])
-        performances.instance = form.save()
-        performances.save()
-        return super().form_valid(form)
+        return super().form_valid(form, formsets)
 
     def get_success_url(self):
         return self.object.get_absolute_url()

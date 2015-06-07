@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, RedirectView
 from django.views.generic.edit import CreateView, UpdateView
@@ -24,13 +24,57 @@ class ViewContentView(DetailView):
         return super().dispatch(*args, **kwargs)
 
 
-class AddContentView(CreateView):
+class FormsetsMixin(object):
+    """Manages inline formsets indicated in self.formset_classes."""
+    formset_classes = []
+
+    def get_formset(self, formset_class):
+        if self.request.method == 'POST':
+            return formset_class(self.request.POST, instance=self.object)
+        else:
+            return formset_class(instance=self.object)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.request.method == 'GET':
+            for name, cls in self.formset_classes:
+                context[name] = self.get_formset(cls)
+        return context
+
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        formsets = {name: self.get_formset(cls) for name, cls in
+                    self.formset_classes}
+
+        if form.is_valid() and all(formset.is_valid() for _, formset in
+                                   formsets.items()):
+            return self.form_valid(form, formsets=formsets)
+        else:
+            return self.form_invalid(form, formsets=formsets)
+
+    def form_valid(self, form, formsets):
+        if not self.object:
+            form.instance.author = self.request.user
+        self.object = form.save()
+
+        for _, formset in formsets.items():
+            formset.instance = self.object
+            formset.save()
+        return HttpResponseRedirect(self.get_success_url())
+
+    def form_invalid(self, form, formsets):
+        return self.render_to_response(
+            self.get_context_data(form=form, **formsets))
+
+
+class AddContentView(FormsetsMixin, CreateView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
+        self.object = None
         return super().dispatch(*args, **kwargs)
 
-    def form_valid(self, form):
-        ret = super().form_valid(form)
+    def form_valid(self, form, formsets):
+        ret = super().form_valid(form, formsets)
         try:
             send_new_to_review_mails(form.instance)
         except Exception:
@@ -40,11 +84,12 @@ class AddContentView(CreateView):
         return ret
 
 
-class EditContentView(UpdateView):
+class EditContentView(FormsetsMixin, UpdateView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
-        item = self.get_object()
-        if not (self.request.user.is_staff or self.request.user == item.author):
+        self.object = self.get_object()
+        if not (self.request.user.is_staff or
+                self.request.user == self.object.author):
             raise Http404
         return super().dispatch(*args, **kwargs)
 
