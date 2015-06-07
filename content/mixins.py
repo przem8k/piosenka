@@ -1,38 +1,6 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages
 from django.utils.decorators import method_decorator
 from django.http import Http404
-
-from piosenka.mail import send_new_to_review_mails
-
-# TODO: Some of these throw 404, some redirect to login - unify.
-# TODO: Some of these use standard decorators, other defer to can_be_ABC_by
-# methods. Use the latter everywhere to centralize the decisions in ContentItem?
-
-
-class ContentItemAddMixin(object):
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super().dispatch(*args, **kwargs)
-
-    def form_valid(self, form):
-        ret = super().form_valid(form)
-        try:
-            send_new_to_review_mails(form.instance)
-        except Exception:
-            pass
-        messages.add_message(self.request, messages.INFO,
-                             "Materiał dodany, oczekuje na korektę.")
-        return ret
-
-
-class ContentItemEditMixin(object):
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        item = self.get_object()
-        if not (self.request.user.is_staff or self.request.user == item.author):
-            raise Http404
-        return super().dispatch(*args, **kwargs)
 
 
 class CheckStaffMixin(object):

@@ -2,7 +2,6 @@ from datetime import datetime
 
 from django.core.urlresolvers import reverse
 from django.views.generic import DetailView, RedirectView, TemplateView
-from django.views.generic.edit import CreateView, UpdateView
 from django.http import Http404
 
 from artists.models import Entity
@@ -10,11 +9,9 @@ from events.models import EntityPerformance, Event, Venue
 from events.forms import EventForm, PerformanceFormSet
 from events.mixins import EventMenuMixin
 from content.trevor import put_text_in_trevor
-from content.mixins import ContentItemEditMixin, ContentItemAddMixin
 from content.mixins import ManageInlineFormsetMixin
-from content.views import ReviewContentView
-from content.views import ApproveContentView
-from content.views import ViewContentView
+from content.views import (AddContentView, EditContentView, ApproveContentView,
+                           ReviewContentView, ViewContentView)
 
 
 class GetEventMixin(object):
@@ -104,7 +101,7 @@ class YearArchive(TemplateView):
         return context
 
 
-class AddEvent(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
+class AddEvent(ManageInlineFormsetMixin, AddContentView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"
@@ -138,8 +135,7 @@ class AddEvent(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditEvent(GetEventMixin, ContentItemEditMixin,
-                ManageInlineFormsetMixin, UpdateView):
+class EditEvent(GetEventMixin, ManageInlineFormsetMixin, EditContentView):
     model = Event
     form_class = EventForm
     template_name = "events/add_edit_event.html"

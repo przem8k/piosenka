@@ -1,14 +1,11 @@
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
-from django.views.generic.edit import CreateView, UpdateView
 
 from articles.forms import ArticleForm
 from articles.models import Article
 from content.trevor import put_text_in_trevor
-from content.mixins import ContentItemEditMixin, ContentItemAddMixin
-from content.views import ReviewContentView
-from content.views import ApproveContentView
-from content.views import ViewContentView
+from content.views import (AddContentView, EditContentView, ApproveContentView,
+                           ReviewContentView, ViewContentView)
 
 
 class GetArticleMixin(object):
@@ -31,7 +28,7 @@ class ViewArticle(GetArticleMixin, ViewContentView):
     template_name = "articles/article.html"
 
 
-class AddArticle(ContentItemAddMixin, CreateView):
+class AddArticle(AddContentView):
     model = Article
     form_class = ArticleForm
     template_name = "articles/add_edit_article.html"
@@ -53,7 +50,7 @@ class AddArticle(ContentItemAddMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditArticle(GetArticleMixin, ContentItemEditMixin, UpdateView):
+class EditArticle(GetArticleMixin, EditContentView):
     model = Article
     form_class = ArticleForm
     template_name = "articles/add_edit_article.html"

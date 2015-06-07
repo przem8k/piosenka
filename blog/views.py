@@ -3,14 +3,11 @@ from datetime import datetime
 from django.http import HttpResponsePermanentRedirect
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
-from django.views.generic.edit import CreateView, UpdateView
 
 from blog.forms import PostForm
 from blog.models import Post
-from content.mixins import ContentItemEditMixin, ContentItemAddMixin
-from content.views import ReviewContentView
-from content.views import ApproveContentView
-from content.views import ViewContentView
+from content.views import (AddContentView, EditContentView, ApproveContentView,
+                           ReviewContentView, ViewContentView)
 
 
 class GetPostMixin(object):
@@ -56,7 +53,7 @@ class ViewPost(GetPostMixin, ViewContentView):
         return context
 
 
-class AddPost(ContentItemAddMixin, CreateView):
+class AddPost(AddContentView):
     model = Post
     form_class = PostForm
     template_name = "blog/add_edit_post.html"
@@ -69,7 +66,7 @@ class AddPost(ContentItemAddMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditPost(GetPostMixin, ContentItemEditMixin, UpdateView):
+class EditPost(GetPostMixin, EditContentView):
     model = Post
     form_class = PostForm
     template_name = "blog/add_edit_post.html"

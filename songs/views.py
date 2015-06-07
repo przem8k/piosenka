@@ -3,14 +3,11 @@ import json
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView, RedirectView
-from django.views.generic.edit import CreateView, UpdateView
 
 from artists.models import Entity
-from content.mixins import ContentItemEditMixin, ContentItemAddMixin
 from content.mixins import ManageInlineFormsetMixin
-from content.views import ApproveContentView
-from content.views import ReviewContentView
-from content.views import ViewContentView
+from content.views import (AddContentView, EditContentView, ApproveContentView,
+                           ReviewContentView, ViewContentView)
 from songs.forms import AnnotationForm, SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Annotation, Song, EntityContribution
@@ -52,6 +49,7 @@ def get_song_by_entity_or_404(song_slug, entity_slug):
 
 
 class SongRedirectView(RedirectView):
+    # TODO: this should move elsewhere.
     permanent = True
 
     def get_redirect_url(self, *args, **kwargs):
@@ -60,6 +58,7 @@ class SongRedirectView(RedirectView):
 
 
 class BaseMenuView(TemplateView):
+    # TODO: this should be a mixin, not a base view.
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["bards"] = Entity.objects.filter(
@@ -120,7 +119,7 @@ class ViewSong(GetSongMixin, ViewContentView):
             transposition = 0
         context['lyrics'] = render_lyrics(self.object.lyrics, transposition)
         context['annotations'] = Annotation.items_visible_to(
-                self.request.user).filter(song=self.object)
+            self.request.user).filter(song=self.object)
         return context
 
     def render_to_response(self, context):
@@ -135,7 +134,7 @@ class ViewSong(GetSongMixin, ViewContentView):
                             content_type='application/json')
 
 
-class AddSong(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
+class AddSong(ManageInlineFormsetMixin, AddContentView):
     model = Song
     form_class = SongForm
     template_name = "songs/add_edit_song.html"
@@ -170,8 +169,7 @@ class AddSong(ContentItemAddMixin, ManageInlineFormsetMixin, CreateView):
         return self.object.get_absolute_url()
 
 
-class EditSong(GetSongMixin, ContentItemEditMixin, ManageInlineFormsetMixin,
-               UpdateView):
+class EditSong(GetSongMixin, ManageInlineFormsetMixin, EditContentView):
     model = Song
     form_class = SongForm
     template_name = "songs/add_edit_song.html"
@@ -199,7 +197,7 @@ class ApproveSong(GetSongMixin, ApproveContentView):
     pass
 
 
-class AddAnnotation(ContentItemAddMixin, CreateView):
+class AddAnnotation(AddContentView):
     model = Annotation
     form_class = AnnotationForm
     template_name = "songs/add_edit_annotation.html"
@@ -231,8 +229,7 @@ class GetAnnotationMixin(object):
         return get_object_or_404(Annotation, slug=self.kwargs['slug'])
 
 
-class EditAnnotation(GetAnnotationMixin, ContentItemEditMixin,
-                     UpdateView):
+class EditAnnotation(GetAnnotationMixin, EditContentView):
     model = Annotation
     form_class = AnnotationForm
     template_name = "songs/add_edit_annotation.html"

@@ -3,8 +3,10 @@ from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, RedirectView
+from django.views.generic.edit import CreateView, UpdateView
 
 from piosenka.mail import send_item_approved_mail
+from piosenka.mail import send_new_to_review_mails
 
 
 class ViewContentView(DetailView):
@@ -18,6 +20,31 @@ class ViewContentView(DetailView):
     """
     def dispatch(self, *args, **kwargs):
         if not self.get_object().can_be_seen_by(self.request.user):
+            raise Http404
+        return super().dispatch(*args, **kwargs)
+
+
+class AddContentView(CreateView):
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def form_valid(self, form):
+        ret = super().form_valid(form)
+        try:
+            send_new_to_review_mails(form.instance)
+        except Exception:
+            pass
+        messages.add_message(self.request, messages.INFO,
+                             "Materiał dodany, oczekuje na korektę.")
+        return ret
+
+
+class EditContentView(UpdateView):
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        item = self.get_object()
+        if not (self.request.user.is_staff or self.request.user == item.author):
             raise Http404
         return super().dispatch(*args, **kwargs)
 
