@@ -33,6 +33,8 @@ urlpatterns = [
     url(r'^wyloguj/', piosenka.views.Goodbye.as_view(), name="goodbye"),
     url(r'^zmien-haslo/', piosenka.views.ChangePassword.as_view(),
         name="change_password"),
+    url(r'^zapros/', piosenka.views.InviteView.as_view(),
+        name='invite'),
     # Frontpage.
     url(r'^$', piosenka.views.SiteIndex.as_view(), name="index"),
 ]

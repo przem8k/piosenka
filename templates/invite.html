@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Zaproś do PzT{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="section">
+        <h1>Zaproś do PzT</h1>
+        <form action="{% url 'invite' %}" method="post">{% csrf_token %}
+          <input name="email_address" type="text" class="form-control" placeholder="Adres email" style="margin-bottom: 5px;"/>
+          {{ form.email_address.errors }}
+          <input type="submit" value="Zaproś" style="width: 100%"/>
+        </form>
+        {{ form.non_field_errors }}
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+{% endblock content %}
