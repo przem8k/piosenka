@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Dołącz do PzT{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="section">
+        <h1>Dołącz do PzT</h1>
+        <form action="{% url 'join' invitation.invitation_key %}" method="post">{% csrf_token %}
+          {{ form }}
+          <input type="submit" value="Załóż konto" style="width: 100%"/>
+        </form>
+        {{ form.non_field_errors }}
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+{% endblock content %}

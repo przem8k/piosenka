@@ -35,6 +35,8 @@ urlpatterns = [
         name="change_password"),
     url(r'^zapros/', piosenka.views.InviteView.as_view(),
         name='invite'),
+    url(r'^dolacz/(?P<invitation_key>[-\w]+)/',
+        piosenka.views.JoinView.as_view(), name='join'),
     # Frontpage.
     url(r'^$', piosenka.views.SiteIndex.as_view(), name="index"),
 ]

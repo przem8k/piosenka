@@ -17,7 +17,7 @@ from blog.models import Post
 from events.models import Event
 from frontpage.models import CarouselItem
 from songs.models import Annotation, Song
-from piosenka.forms import InvitationForm
+from piosenka.forms import InvitationForm, JoinForm
 from piosenka.models import Invitation
 
 
@@ -134,6 +134,37 @@ class InviteView(StaffOnlyMixin, CreateView):
         h = hashlib.sha256(text_to_hash.encode('utf-8'))
         form.instance.invitation_key = h.hexdigest()
         form.instance.expires_on = datetime.today() + timedelta(7)
+        form.instance.extended_by = self.request.user
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('index')
+
+
+class JoinView(FormView):
+    form_class = JoinForm
+    template_name = "join.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        invitation = Invitation.objects.get(
+            invitation_key=self.kwargs['invitation_key'])
+        if not invitation.is_valid or invitation.expires_on < datetime.today():
+            raise Http404
+        context['invitation'] = invitation
+        return context
+
+    def form_valid(self, form):
+        user = User.objects.create_user(
+            username=form.cleaned_data['username'],
+            first_name=form.cleaned_data['first_name'],
+            last_name=form.cleaned_data['last_name'],
+            password=form.cleaned_data['password'],
+            is_staff=False,
+            is_superuser=False,
+            is_active=True)
+        user.save()
+        login(self.request, user)
         return super().form_valid(form)
 
     def get_success_url(self):
