@@ -132,6 +132,10 @@
 
     {% block extra-scripts %}{% endblock extra-scripts %}
     <script>
+      $('.tip').tooltip({});
+    </script>
+
+    <script>
       if (typeof(load_location) == "function") {
         $(document).ready(
           function(){

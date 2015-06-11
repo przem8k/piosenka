@@ -5,6 +5,17 @@
 {% block title %}{{ song }} - tekst i akordy{% endblock title %}
 {% block description %}Opracowanie piosenki {{ song.title }} w śpiewniku Piosenki z tekstem{% endblock description %}
 
+{% block extra-scripts %}
+<script>
+var transpositionUrls = []
+{% for t in "a"|rjust:"12" %}
+transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0 }}/");
+{% endfor %}
+</script>
+
+<script src="{% static "scripts/trigger.js" %}?stamp=12"></script>
+{% endblock extra-scripts %}
+
 {% block content %}
 <div class="container main">
   <div class="row">
@@ -194,18 +205,3 @@
   {% include "base/rows/disqus.html" with disqus_id=song.slug %}
 </div>
 {% endblock content %}
-
-{% block extra-scripts %}
-<script>
-var transpositionUrls = []
-{% for t in "a"|rjust:"12" %}
-transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0 }}/");
-{% endfor %}
-</script>
-
-<script>
-$('.tip').tooltip({});
-</script>
-
-<script src="{% static "scripts/trigger.js" %}?stamp=12"></script>
-{% endblock extra-scripts %}

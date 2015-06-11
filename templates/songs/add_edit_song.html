@@ -2,12 +2,6 @@
 
 {% block title %}{% if song %}Edytuj piosenkę: {{ song }}{% else %}Dodaj piosenkę{% endif %}{% endblock title %}
 
-{% block extra-scripts %}
-<script>
-$('.tip').tooltip({});
-</script>
-{% endblock extra-scripts %}
-
 {% block extra-css %}
 <style>
 textarea#id_lyrics {
