@@ -25,3 +25,11 @@ stronie"."""
                                widget=forms.PasswordInput())
     password_again = forms.CharField(label='Hasło (powtórz)', max_length=30,
                                      widget=forms.PasswordInput())
+
+    def clean(self):
+        password = self.cleaned_data.get('password')
+        password_again = self.cleaned_data.get('password_again')
+
+        if password and password != password_again:
+            raise forms.ValidationError("Wpisane hasła się różnią.")
+        return self.cleaned_data
