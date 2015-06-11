@@ -78,7 +78,6 @@ $(document).ready(function(){
           </div>
           {{ form.venue_selection }}
           <button type="button" id="trigger-new-venue">Nowe miejsce</button>
-          {{ form.venue_selection.errors }}
           <div id="new-venue" style="display: none;">
             <table>
               {% include "components/forms/table_field.html" with name="Nazwa" field=form.venue_name %}
@@ -86,6 +85,11 @@ $(document).ready(function(){
               {% include "components/forms/table_field.html" with name="Adres" field=form.venue_street %}
             </table>
           </div>
+          {% if form.venue_selection.errors %}
+          <div class="alert alert-danger" role="alert" style="margin-top: 20px;">
+            {{ form.venue_selection.errors }}
+          </div>
+          {% endif %}
         </div>
         <div class="section">
           <h1>Wystąpią</h1>
