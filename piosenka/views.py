@@ -145,16 +145,23 @@ class JoinView(FormView):
     form_class = JoinForm
     template_name = "join.html"
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+    def get_invitation(self):
         invitation = Invitation.objects.get(
             invitation_key=self.kwargs['invitation_key'])
         if not invitation.is_valid or invitation.expires_on < datetime.today():
             raise Http404
-        context['invitation'] = invitation
+        return invitation
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['invitation'] = self.get_invitation()
         return context
 
     def form_valid(self, form):
+        invitation = self.get_invitation()
+        invitation.is_valid = False
+        invitation.save()
+
         user = User.objects.create_user(
             username=form.cleaned_data['username'],
             first_name=form.cleaned_data['first_name'],
