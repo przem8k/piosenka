@@ -3,21 +3,42 @@
 
 {% block title %}Dołącz do PzT{% endblock %}
 
+{% block extra-scripts %}
+<script>
+$('.tip').tooltip({});
+</script>
+{% endblock extra-scripts %}
+
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
       <div class="section">
         <h1>Dołącz do PzT</h1>
         <form action="{% url 'join' invitation.invitation_key %}" method="post">{% csrf_token %}
-          {{ form }}
+          <table class="table table-condensed formtable">
+            <tr>
+              <td><b>Adres email:</b></td><td>{{ invitation.email_address }}</td>
+              <td>
+                <span data-toggle="tooltip" data-placement="right" title="Twój adres email nie będzie widoczny dla nikogo, poza Tobą." class="tip">
+                  <span class="glyphicon glyphicon-question-sign"></span>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            {% include "components/forms/table_field.html" with name="Nazwa użytkownika" field=form.username %}
+            {% include "components/forms/table_field.html" with name="Imię" field=form.first_name %}
+            {% include "components/forms/table_field.html" with name="Nazwisko" field=form.last_name %}
+            {% include "components/forms/table_field.html" with name="Hasło" field=form.password %}
+            {% include "components/forms/table_field.html" with name="Hasło (ponownie)" field=form.password %}
+          </table>
           <input type="submit" value="Załóż konto" style="width: 100%"/>
         </form>
         {{ form.non_field_errors }}
       </div>
     </div>
-    <div class="col-md-4"></div>
+    <div class="col-md-2"></div>
   </div>
 </div>
 

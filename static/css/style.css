@@ -211,7 +211,7 @@ body {
     width: 100%;
 }
 
-.formtable input[type=text], .formtable input[type=url], .formtable input[type=number] {
+.formtable input[type=text], .formtable input[type=url], .formtable input[type=number], .formtable input[type=password] {
     width: 100%;
 }
 
