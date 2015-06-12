@@ -1,6 +1,6 @@
-from datetime import datetime, timedelta
-import random
-import hashlib
+import logging
+
+from datetime import datetime
 
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth.decorators import login_required
@@ -19,6 +19,8 @@ from frontpage.models import CarouselItem
 from songs.models import Annotation, Song
 from piosenka.forms import InvitationForm, JoinForm
 from piosenka.models import Invitation
+
+_action_logger = logging.getLogger('actions')
 
 
 class StaffOnlyMixin(object):
@@ -130,10 +132,6 @@ class InviteView(StaffOnlyMixin, CreateView):
     template_name = "invite.html"
 
     def form_valid(self, form):
-        text_to_hash = str(random.random()) + form.instance.email_address
-        h = hashlib.sha256(text_to_hash.encode('utf-8'))
-        form.instance.invitation_key = h.hexdigest()
-        form.instance.expires_on = datetime.today() + timedelta(7)
         form.instance.extended_by = self.request.user
         return super().form_valid(form)
 
@@ -144,6 +142,13 @@ class InviteView(StaffOnlyMixin, CreateView):
 class JoinView(FormView):
     form_class = JoinForm
     template_name = "join.html"
+
+    def dispatch(self, *args, **kwargs):
+        if not self.request.user.is_anonymous():
+            _action_logger.warning('%s tried /join while signed in' %
+                                   self.request.user)
+            raise Http404
+        return super().dispatch(*args, **kwargs)
 
     def get_invitation(self):
         invitation = Invitation.objects.get(

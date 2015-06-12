@@ -2,6 +2,7 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase
 
 from piosenka.testing import CreateUserMixin
+from piosenka.models import Invitation
 
 
 class InvitationTest(CreateUserMixin, TestCase):
@@ -47,3 +48,19 @@ class InvitationTest(CreateUserMixin, TestCase):
         response = staff_client.post(reverse('invite'), data)
         self.assertEqual(302, response.status_code)
         self.assertRedirects(response, reverse('index'))  # Redirect on success.
+
+    def test_join_view_get(self):
+        invitation = Invitation.create_for_testing(
+            'alice@example.com', self.create_user(is_staff=True))
+
+        anonymous_client = self.get_client()
+        response = anonymous_client.get(invitation.get_invitation_url())
+        self.assertEqual(200, response.status_code)
+
+        regular_client = self.get_client(self.create_user())
+        response = regular_client.get(invitation.get_invitation_url())
+        self.assertEqual(404, response.status_code)
+
+        staff_client = self.get_client(self.create_user(is_staff=True))
+        response = staff_client.get(invitation.get_invitation_url())
+        self.assertEqual(404, response.status_code)
