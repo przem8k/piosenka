@@ -9,9 +9,27 @@ from artists.models import Entity
 from events.models import Event, Venue
 from songs.models import EntityContribution, Song
 
-PASS = "secret"
-EMAIL = "example@example.com"
-NAME_LEN = 20
+_PASS = "secret"
+_EMAIL = "example@example.com"
+_NAME_LEN = 20
+
+
+class CreateUserMixin(object):
+    """Allows to create a test user and get an authenticated client."""
+    def create_user(self, is_staff=False, email=None):
+        name = str(uuid.uuid4()).replace("-", "")[:_NAME_LEN]
+        user = User.objects.create_user(username=name,
+                                        email=email,
+                                        password=_PASS)
+        user.is_staff = is_staff
+        user.save()
+        return user
+
+    def get_client(self, user=None):
+        c = Client()
+        if user:
+            c.login(username=user.username, password=_PASS)
+        return c
 
 
 class PiosenkaTestCase(TestCase):
@@ -21,6 +39,8 @@ class PiosenkaTestCase(TestCase):
      and two staff users:
      - user_approver_zoe
      - user_approver_jake
+
+    TODO: new_bla() functionality should be folded into Bla.create_for_testing.
     """
     def get(self, url, user=None):
         return self.get_client(user).get(url)
@@ -28,14 +48,14 @@ class PiosenkaTestCase(TestCase):
     def get_client(self, user=None):
         c = Client()
         if user:
-            c.login(username=user.username, password=PASS)
+            c.login(username=user.username, password=_PASS)
         return c
 
     def create_user_for_testing(self):
-        name = str(uuid.uuid4()).replace("-", "")[:NAME_LEN]
+        name = str(uuid.uuid4()).replace("-", "")[:_NAME_LEN]
         return User.objects.create_user(username=name,
-                                        email=EMAIL,
-                                        password=PASS)
+                                        email=_EMAIL,
+                                        password=_PASS)
 
     def setUp(self):
         super().setUp()
