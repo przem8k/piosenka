@@ -1,7 +1,8 @@
 from datetime import datetime, timedelta
 
-from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
+from django.core import mail
+from django.core.urlresolvers import reverse
 from django.test import TestCase
 
 from piosenka.testing import CreateUserMixin
@@ -63,13 +64,17 @@ class InvitationTest(CreateUserMixin, TestCase):
             0,
             len(Invitation.objects.filter(email_address=email_address)))
 
+        self.assertEqual(0, len(mail.outbox))
         staff_client = self.get_client(self.create_user(is_staff=True))
         response = staff_client.post(reverse('invite'), data)
         self.assertEqual(302, response.status_code)
         self.assertRedirects(response, reverse('index'))  # Redirect on success.
+
         self.assertEqual(
             1,
             len(Invitation.objects.filter(email_address=email_address)))
+        self.assertEqual(1, len(mail.outbox))
+        self.assertEqual([email_address], mail.outbox[0].to)
 
     def test_join_view_get(self):
         invitation = Invitation.create_for_testing(

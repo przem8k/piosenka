@@ -19,6 +19,7 @@ from frontpage.models import CarouselItem
 from songs.models import Annotation, Song
 from piosenka.forms import InvitationForm, JoinForm
 from piosenka.models import Invitation
+from piosenka.mail import send_invitation_mail
 
 _action_logger = logging.getLogger('actions')
 
@@ -133,7 +134,12 @@ class InviteView(StaffOnlyMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.extended_by = self.request.user
-        return super().form_valid(form)
+        ret = super().form_valid(form)
+
+        send_invitation_mail(form.instance)
+        _action_logger.info('%s invited %s to join' %
+                            (self.request.user, form.instance.email_address))
+        return ret
 
     def get_success_url(self):
         return reverse('index')
@@ -174,6 +180,7 @@ class JoinView(FormView):
             password=form.cleaned_data['password'],
             email=invitation.email_address)
         user.save()
+        _action_logger.info('%s joined' % user)
         login(self.request, user)
         return super().form_valid(form)
 
