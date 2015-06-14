@@ -37,7 +37,8 @@ def send_item_approved_mail(item, approver):
 
 def send_invitation_mail(invitation):
     subject = "PzT: Zaproszenie."
-    context = Context({'invitation': invitation})
+    context = Context({'invitation': invitation,
+                       'site': settings.SITE})
     html_content = get_template('mail/invitation.html').render(context)
     email = EmailMessage(subject, body=html_content,
                          to=[invitation.email_address])
