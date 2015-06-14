@@ -172,9 +172,7 @@ class JoinView(FormView):
             first_name=form.cleaned_data['first_name'],
             last_name=form.cleaned_data['last_name'],
             password=form.cleaned_data['password'],
-            is_staff=False,
-            is_superuser=False,
-            is_active=True)
+            email=invitation.email_address)
         user.save()
         login(self.request, user)
         return super().form_valid(form)
