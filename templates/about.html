@@ -18,9 +18,15 @@
           zawiera reklam i nie publikuje artykułów sponsorowanych.
           </p>
 
-          <p>
-          Strona działa dzięki pracy <b>zespołu</b> ochotników.
-          </p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="content">
+          <h1 class="remove-top-margin">Zespół
+            <span data-toggle="tooltip" data-placement="right" title="Karty autorów posortowane wg łącznej liczby materiałów, przy czym każdy artykuł, jako forma bardziej obszerna, liczy się pięciokrotnie" class="tip">
+              <span class="glyphicon glyphicon-question-sign"></span>
+            </span>
+          </h1>
 
           {% for row in authors|columns_horizontal:3 %}
           <div class="row contributors">
@@ -39,6 +45,46 @@
             {% if row|length < 2 %} <div class="dummy"></div> {% endif %}
           </div>
           {% endfor %}
+          <p><small>
+          </small></p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="content">
+          <h1 class="remove-top-margin">Jak pomóc</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Merytorycznie</h2>
+              <p>Jeśli interesujesz się piosenką literacką i
+              chciałbyś/chciałabyś zaangażować się w pracę nad serwisem,
+              zapraszamy do redakcyjnej <a
+              href="https://www.facebook.com/groups/291262764226674/">grupy</a>
+            na Facebooku. Po dołączeniu do grupy napisz kilka słów o sobie i
+            swoich pomysłach na rozwój PzT.</p>
+            </div>
+            <div class="col-md-6">
+              <h2>Technicznie</h2>
+              <p>
+              Piosenka z tekstem jest projektem <b>open source</b>, kod źródłowy
+              strony jest <a href="https://github.com/ppiet/piosenka">dostępny
+              publicznie</a>.
+              </p>
+
+              <ul class="list-unstyled badgelist">
+                <li><img src="{% static "images/badges/django.gif" %}"/></li>
+                <li><img src="{% static "images/badges/python.gif" %}"/></li>
+              </ul>
+
+              <p>Jeśli nieobce Ci jest programowanie aplikacji webowych w
+              takie technologiach jak Python/Django i chciałbyś/chciałabyś
+              spróbować swoich sił w pracy nad naszym serwisem, zapraszamy na
+              <a href="https://github.com/ppiet/piosenka">stronę projektu</a>
+              w serwisie GitHub, gdzie poprawki i zmiany kodu można
+              wysyłać za pomocą tzw. "pull requestów".</p>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -64,19 +110,6 @@
         W przypadku wątpliwości odnośnie poszczególnych publikacji, prosimy o
         kontakt mailowy (adres powyżej).
         </p>
-      </div>
-      <div class="section">
-
-        <h1>Technikalia</h1>
-        <p>
-        Strona powstała i jest rozwijana dzięki technologiom open source.
-        </p>
-        <ul class="list-unstyled badgelist">
-          <li><img src="{% static "images/badges/django.gif" %}"/></li>
-          <li><img src="{% static "images/badges/python.gif" %}"/></li>
-          <li><img src="{% static "images/badges/postgres.gif" %}"/></li>
-        </ul>
-        <p>Również kod źródłowy PzT jest <a href="https://github.com/ppiet/piosenka">dostępny publicznie</a>.</p>
       </div>
       <div class="section">
         <h1>Dziękujemy</h1>
