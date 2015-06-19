@@ -128,7 +128,7 @@ class AddEvent(AddContentView):
 class EditEvent(GetEventMixin, EditContentView):
     model = Event
     form_class = EventForm
-    formset_classes = [("EntityPerformance", PerformanceFormSet)]
+    formset_classes = [("entityperformance", PerformanceFormSet)]
     template_name = "events/add_edit_event.html"
 
     def get_initial(self):
