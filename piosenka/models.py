@@ -26,6 +26,9 @@ class Invitation(models.Model):
     is_valid = models.BooleanField(default=True, editable=False)
     extended_by = models.ForeignKey(User, editable=False)
 
+    class Meta:
+        permissions = [('invite', 'Can invite new contributors')]
+
     @staticmethod
     def create_for_testing(email_address, extended_by):
         invitation = Invitation()

@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Permission
 from django.core import mail
 from django.core.urlresolvers import reverse
 from django.test import TestCase
@@ -17,6 +17,14 @@ class InvitationTest(CreateUserMixin, TestCase):
                   'password': 'secret',
                   'password_again': 'secret'}
 
+    def _create_authorized_client(self):
+        permission = Permission.objects.get(codename='invite')
+        authorized_user = self.create_user()
+        authorized_user.user_permissions.add(permission)
+        authorized_user.save()
+        authorized_user.refresh_from_db()
+        return self.get_client(authorized_user)
+
     def test_invite_view_get(self):
         anonymous_client = self.get_client()
         response = anonymous_client.get(reverse('invite'))
@@ -24,9 +32,9 @@ class InvitationTest(CreateUserMixin, TestCase):
 
         regular_client = self.get_client(self.create_user())
         response = regular_client.get(reverse('invite'))
-        self.assertEqual(404, response.status_code)
+        self.assertEqual(403, response.status_code)
 
-        staff_client = self.get_client(self.create_user(is_staff=True))
+        staff_client = self._create_authorized_client()
         response = staff_client.get(reverse('invite'))
         self.assertEqual(200, response.status_code)
 
@@ -37,9 +45,9 @@ class InvitationTest(CreateUserMixin, TestCase):
 
         regular_client = self.get_client(self.create_user())
         response = regular_client.post(reverse('invite'))
-        self.assertEqual(404, response.status_code)
+        self.assertEqual(403, response.status_code)
 
-        staff_client = self.get_client(self.create_user(is_staff=True))
+        staff_client = self._create_authorized_client()
         response = staff_client.post(reverse('invite'))
         self.assertEqual(200, response.status_code)
 
@@ -59,13 +67,13 @@ class InvitationTest(CreateUserMixin, TestCase):
 
         regular_client = self.get_client(self.create_user())
         response = regular_client.post(reverse('invite'), data)
-        self.assertEqual(404, response.status_code)
+        self.assertEqual(403, response.status_code)
         self.assertEqual(
             0,
             len(Invitation.objects.filter(email_address=email_address)))
 
         self.assertEqual(0, len(mail.outbox))
-        staff_client = self.get_client(self.create_user(is_staff=True))
+        staff_client = self._create_authorized_client()
         response = staff_client.post(reverse('invite'), data)
         self.assertEqual(302, response.status_code)
         self.assertRedirects(response, reverse('index'))  # Redirect on success.

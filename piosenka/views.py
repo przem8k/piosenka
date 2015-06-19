@@ -3,7 +3,7 @@ import logging
 from datetime import datetime
 
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import User
 from django.contrib.auth.views import login, logout
 from django.core.urlresolvers import reverse_lazy, reverse
@@ -127,10 +127,16 @@ class ToReview(StaffOnlyMixin, TemplateView):
     template_name = "to_review.html"
 
 
-class InviteView(StaffOnlyMixin, CreateView):
+class InviteView(CreateView):
     model = Invitation
     form_class = InvitationForm
     template_name = "invite.html"
+
+    @method_decorator(login_required)
+    @method_decorator(permission_required('piosenka.invite',
+                                          raise_exception=True))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
 
     def form_valid(self, form):
         form.instance.extended_by = self.request.user
