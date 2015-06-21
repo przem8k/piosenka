@@ -160,10 +160,6 @@ True iff the lyrics contain repeated chords."""
             links.append(("Nagranie (Youtube)", self.link_youtube))
         if self.link_wrzuta:
             links.append(("Nagranie (Wrzuta)", self.link_wrzuta))
-        links += [(x.entity, x.entity.website) for x in
-                  EntityContribution.objects.filter(song=self)
-                                            .select_related('entity')
-                  if x.entity.website]
         return links
 
     def text_authors(self):
