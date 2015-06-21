@@ -9,7 +9,6 @@ class SlugMixin(models.Model):
      - a slug field
      - get_slug_elements"""
     # TODO: define the slug field here.
-    # TODO: add explicit - clean() ? - validation for unique contraint.
     # TODO: add tests
     MAX_SLUG_LENGTH = 200
 
@@ -27,5 +26,10 @@ class SlugMixin(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             slug_elements = self.get_slug_elements()
-            self.slug = SlugMixin.make_slug(slug_elements)
+            candidate = SlugMixin.make_slug(slug_elements)
+            counter = 0
+            while self.__class__.objects.filter(slug=candidate):
+                counter += 1
+                candidate = SlugMixin.make_slug(slug_elements + [str(counter)])
+            self.slug = candidate
         return super().save(*args, **kwargs)
