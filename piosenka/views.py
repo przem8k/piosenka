@@ -35,7 +35,8 @@ class StaffOnlyMixin(object):
 class SiteIndex(TemplateView):
     template_name = "frontpage/index.html"
     POST_COUNT = 1
-    SONG_COUNT = 10
+    SONG_COUNT = 8
+    ANNOTATION_COUNT = 8
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -49,6 +50,9 @@ class SiteIndex(TemplateView):
                             .order_by('-pub_date')[:SiteIndex.SONG_COUNT])
         context['annotation'] = (Annotation.items_visible_to(self.request.user)
                                  .order_by('-pub_date').first())
+        context['annotations'] = (Annotation.items_visible_to(self.request.user)
+                                  .order_by('-pub_date')
+                                  [:SiteIndex.ANNOTATION_COUNT])
         return context
 
 

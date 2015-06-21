@@ -19,6 +19,10 @@
         <h1>Ostatnie komentarze</h1>
           <div id="last-comments"></div>
       </div>
+      <div class="section">
+        <h1>Portale społecznościowe</h1>
+        <div class="fb-like-box" data-href="http://www.facebook.com/piosenkaztekstem" data-width="280" data-show-faces="false" data-stream="false" data-header="false"></div>
+      </div>
     </div>
     <div class="col-md-8">
       {% include "frontpage/carousel.html" %}
@@ -29,10 +33,7 @@
         </div>
         <div class="col-md-6">
           {% include "frontpage/new_songs.html" %}
-          <div class="section">
-            <h1>Portale społecznościowe</h1>
-            <div class="fb-like-box" data-href="http://www.facebook.com/piosenkaztekstem" data-width="280" data-show-faces="false" data-stream="false" data-header="false"></div>
-          </div>
+          {% include "frontpage/new_annotations.html" %}
         </div>
       </div>
     </div>
