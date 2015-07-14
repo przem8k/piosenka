@@ -2,6 +2,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView, RedirectView
 
+import piosenka.debug
 import piosenka.views
 import songs.obsolete
 
@@ -39,6 +40,9 @@ urlpatterns = [
         piosenka.views.JoinView.as_view(), name='join'),
     # Frontpage.
     url(r'^$', piosenka.views.SiteIndex.as_view(), name="index"),
+    # Debug.
+    url(r'^debug/locale$',
+        piosenka.debug.debug_locale, name='debug_locale'),
 ]
 
 from django.conf import settings
