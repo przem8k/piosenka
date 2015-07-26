@@ -62,7 +62,8 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 if DEBUG:
-    # Temp. workaround for https://github.com/cyberdelia/django-pipeline/issues/277 .
+    # Workaround for
+    # https://github.com/cyberdelia/django-pipeline/issues/277 .
     STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 
 PIPELINE_CSS = {
@@ -120,7 +121,8 @@ PIPELINE_JS = {
     },
 }
 
-PIPELINE_YUGLIFY_BINARY = os.path.join(PROJECT_PATH, 'node_modules/yuglify/bin/yuglify')
+PIPELINE_YUGLIFY_BINARY = os.path.join(PROJECT_PATH,
+                                       'node_modules/yuglify/bin/yuglify')
 PIPELINE_DISABLE_WRAPPER = True
 
 # List of callables that know how to import templates from various sources.
@@ -165,6 +167,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'easy_thumbnails',
     'pipeline',
+    'base',
     'blog',
     'artists',
     'articles',

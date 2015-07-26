@@ -1,35 +1,10 @@
-import uuid
-
-from django.contrib.auth.models import User, Permission
-from django.test import Client, TestCase
+from django.test import TestCase
 
 from blog.models import Post
 from articles.models import Article
 from artists.models import Entity
 from events.models import Event, Venue
 from songs.models import EntityContribution, Song
-
-_PASS = "secret"
-_EMAIL = "example@example.com"
-_NAME_LEN = 20
-
-
-class CreateUserMixin(object):
-    """Allows to create a test user and get an authenticated client."""
-    def create_user(self, is_staff=False, email=None):
-        name = str(uuid.uuid4()).replace("-", "")[:_NAME_LEN]
-        user = User.objects.create_user(username=name,
-                                        email=email,
-                                        password=_PASS)
-        user.is_staff = is_staff
-        user.save()
-        return user
-
-    def get_client(self, user=None):
-        c = Client()
-        if user:
-            c.login(username=user.username, password=_PASS)
-        return c
 
 
 class PiosenkaTestCase(TestCase):
@@ -44,32 +19,6 @@ class PiosenkaTestCase(TestCase):
     """
     def get(self, url, user=None):
         return self.get_client(user).get(url)
-
-    def get_client(self, user=None):
-        c = Client()
-        if user:
-            c.login(username=user.username, password=_PASS)
-        return c
-
-    def create_user_for_testing(self):
-        name = str(uuid.uuid4()).replace("-", "")[:_NAME_LEN]
-        return User.objects.create_user(username=name,
-                                        email=_EMAIL,
-                                        password=_PASS)
-
-    def setUp(self):
-        super().setUp()
-        self.user_alice = self.create_user_for_testing()
-        self.user_bob = self.create_user_for_testing()
-        review_permission = Permission.objects.get(codename='review')
-        self.user_approver_zoe = self.create_user_for_testing()
-        self.user_approver_zoe.user_permissions.add(review_permission)
-        self.user_approver_zoe.save()
-        self.user_approver_zoe.refresh_from_db()
-        self.user_approver_jake = self.create_user_for_testing()
-        self.user_approver_jake.user_permissions.add(review_permission)
-        self.user_approver_jake.save()
-        self.user_approver_jake.refresh_from_db()
 
     def new_article(self, author_user):
         article = Article.create_for_testing()

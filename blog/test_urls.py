@@ -1,32 +1,34 @@
 from django.core.urlresolvers import reverse
 
+from base import testing
 from blog.models import Post
-from content.scenarios import ContentTestScenarios
+from content.scenarios import TestScenariosMixin
 from piosenka.testing import PiosenkaTestCase
 
 
-class PostUrlTest(ContentTestScenarios, PiosenkaTestCase):
+class PostUrlTest(TestScenariosMixin, PiosenkaTestCase):
     def test_blog_index(self):
-        response = self.get(reverse('post_index'))
+        response = testing.get_public_client().get(reverse('post_index'))
         self.assertEqual(200, response.status_code)
 
-        post_a = self.new_post(self.user_alice)
+        author = testing.create_user()
+        post_a = self.new_post(author)
         post_a.reviewed = True
         post_a.save()
 
-        post_b = self.new_post(self.user_alice)
+        post_b = self.new_post(author)
         post_b.reviewed = False
         post_b.save()
 
-        response = self.get(reverse('post_index'))
+        response = testing.get_public_client().get(reverse('post_index'))
         self.assertEqual(200, response.status_code)
         self.assertEqual(1, len(response.context['all_posts']))
 
-        response = self.get(reverse('post_index'), self.user_alice)
+        response = testing.get_user_client(author).get(reverse('post_index'))
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['all_posts']))
 
-        response = self.get(reverse('post_index'), self.user_bob)
+        response = testing.get_user_client().get(reverse('post_index'))
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['all_posts']))
 
