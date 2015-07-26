@@ -6,9 +6,9 @@ from django.contrib.auth.models import User
 
 
 def send_new_to_review_mails(item):
-    reviewers = [x for x in
-                 User.objects.filter(is_staff=True, is_active=True)
-                 if x != item.author]
+    reviewers = [user for user in
+                 User.objects.filter(is_active=True)
+                 if item.can_be_approved_by(user)]
     subject = "PzT: Nowy materiał czeka na Twoją korektę."
     for reviewer in reviewers:
         if not reviewer.email:

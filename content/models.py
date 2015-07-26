@@ -28,8 +28,9 @@ class ContentItem(models.Model):
 
     @classmethod
     def items_visible_to(cls, user):
-        """ Returns the manager representing the set of instances visible to the
-        particular user. """
+        """Returns the manager representing the set of instances visible to the
+        particular user.
+        """
         # TODO call this objects_visible_to as it returns a manager, not items.
         if user and user.is_authenticated():
             return cls.objects
@@ -37,7 +38,7 @@ class ContentItem(models.Model):
 
     @classmethod
     def items_reviewable_by(cls, user):
-        if user and user.is_authenticated() and user.is_staff:
+        if user and user.is_authenticated() and user.has_perm('content.review'):
             return cls.objects.filter(reviewed=False).exclude(author=user)
         else:
             return []
@@ -48,13 +49,13 @@ class ContentItem(models.Model):
     def can_be_edited_by(self, user):
         return (user.is_active and
                 user.is_authenticated() and
-                (user == self.author or user.is_staff))
+                (user == self.author or user.has_perm('content.review')))
 
     def can_be_approved_by(self, user):
         return (not self.is_live() and
                 user.is_active and
                 user.is_authenticated() and
-                user.is_staff and
+                user.has_perm('content.review') and
                 user != self.author)
 
     def is_live(self):
@@ -62,3 +63,12 @@ class ContentItem(models.Model):
 
     def status_str(self):
         return "opublikowany" if self.reviewed else "w korekcie"
+
+
+class ContentPermissions(models.Model):
+    """Dummy model used to define additional permissions not tied to a
+    particular model.
+    """
+
+    class Meta:
+        permissions = [('review', 'Can review content items.')]

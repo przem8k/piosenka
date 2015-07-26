@@ -1,6 +1,6 @@
 import uuid
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Permission
 from django.test import Client, TestCase
 
 from blog.models import Post
@@ -61,12 +61,15 @@ class PiosenkaTestCase(TestCase):
         super().setUp()
         self.user_alice = self.create_user_for_testing()
         self.user_bob = self.create_user_for_testing()
+        review_permission = Permission.objects.get(codename='review')
         self.user_approver_zoe = self.create_user_for_testing()
-        self.user_approver_zoe.is_staff = True
+        self.user_approver_zoe.user_permissions.add(review_permission)
         self.user_approver_zoe.save()
+        self.user_approver_zoe.refresh_from_db()
         self.user_approver_jake = self.create_user_for_testing()
-        self.user_approver_jake.is_staff = True
+        self.user_approver_jake.user_permissions.add(review_permission)
         self.user_approver_jake.save()
+        self.user_approver_jake.refresh_from_db()
 
     def new_article(self, author_user):
         article = Article.create_for_testing()

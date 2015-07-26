@@ -93,9 +93,9 @@ class AddContentView(FormsetsMixin, CreateView):
 class EditContentView(FormsetsMixin, UpdateView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
-        self.object = self.get_object()
-        if not (self.request.user.is_staff or
-                self.request.user == self.object.author):
+        item = self.get_object()
+        self.object = item
+        if not item.can_be_edited_by(self.request.user):
             raise Http404
         return super().dispatch(*args, **kwargs)
 
