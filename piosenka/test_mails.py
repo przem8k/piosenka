@@ -6,7 +6,7 @@ from piosenka.mail import send_new_to_review_mails
 from piosenka.mail import send_item_approved_mail
 
 
-class EventUrlTest(PiosenkaTestCase):
+class MailTest(PiosenkaTestCase):
     def test_new_to_review_mails(self):
         author = testing.create_user()
         reviewer_a = testing.create_user(perms=['content.review'])
