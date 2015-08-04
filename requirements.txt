@@ -2,7 +2,6 @@ Django==1.8
 Markdown==2.6.2
 awscli==1.7.25
 easy-thumbnails==2.2
-psycopg2==2.6
 pygeocoder==1.2.5
 django-pipeline==1.5.0
 Unidecode==0.04.17
