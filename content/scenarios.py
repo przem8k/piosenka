@@ -8,15 +8,14 @@ from base import testing
 
 class TestScenariosMixin(object):
     """This is intended to be used in a TestCase implementation, so that
-    self.assertXyz() functions are available."""
+    self.assertXyz() functions are available.
+    """
 
     def content_review(self, cls):
         """ Tests the review helper view. """
         # Add a new item.
         author = testing.create_user()
-        item = cls.create_for_testing()
-        item.author = author
-        item.save()
+        item = cls.create_for_testing(author)
         self.assertFalse(item.is_live())
 
         # Verify that anonymous user is redirected to login.
@@ -60,9 +59,7 @@ class TestScenariosMixin(object):
         """ Tests the review helper view. """
         # Add a new item.
         author = testing.create_user()
-        item = cls.create_for_testing()
-        item.author = author
-        item.save()
+        item = cls.create_for_testing(author)
         self.assertFalse(item.is_live())
 
         # Verify that the general public can't access the item.

@@ -1,22 +1,22 @@
 from django.core.urlresolvers import reverse
+from django.test import TestCase
 
 from base import testing
 from content.scenarios import TestScenariosMixin
 from articles.models import Article
-from piosenka.testing import PiosenkaTestCase
 
 
-class ArticleUrlTest(TestScenariosMixin, PiosenkaTestCase):
+class ArticleUrlTest(TestScenariosMixin, TestCase):
     def test_article_index(self):
         response = testing.get_public_client().get(reverse('articles'))
         self.assertEqual(200, response.status_code)
 
         author = testing.create_user()
-        article_a = self.new_article(author)
+        article_a = Article.create_for_testing(author)
         article_a.reviewed = True
         article_a.save()
 
-        article_b = self.new_article(author)
+        article_b = Article.create_for_testing(author)
         article_b.reviewed = False
         article_b.save()
 
@@ -34,7 +34,7 @@ class ArticleUrlTest(TestScenariosMixin, PiosenkaTestCase):
 
     def test_view_new_article(self):
         author = testing.create_user()
-        article = self.new_article(author)
+        article = Article.create_for_testing(author)
 
         # Verify that the general public can't access the article.
         self.assertFalse(article.is_live())

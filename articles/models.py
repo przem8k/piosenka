@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 
 from easy_thumbnails.signal_handlers import generate_aliases
@@ -34,12 +36,13 @@ Main illustration for the article."""
     cover_credits_html = models.TextField(null=True, blank=True, editable=False)
 
     @staticmethod
-    def create_for_testing():
-        import uuid
+    def create_for_testing(author):
         article = Article()
+        article.author = author
         article.title = str(uuid.uuid4()).replace("-", "")
         article.lead_text_trevor = put_text_in_trevor("Abc")
         article.main_text_trevor = put_text_in_trevor("Abc")
+        article.save()
         return article
 
     class Meta:

@@ -1,24 +1,24 @@
 from django.core.urlresolvers import reverse
+from django.test import TestCase
 
 from base import testing
 from content.scenarios import TestScenariosMixin
-from events.models import Event
-from piosenka.testing import PiosenkaTestCase
+from events.models import Event, Venue
 
 
-class EventUrlTest(TestScenariosMixin, PiosenkaTestCase):
+class EventUrlTest(TestScenariosMixin, TestCase):
     def test_event_visibility(self):
         response = testing.get_public_client().get(reverse('event_index'))
         self.assertEqual(200, response.status_code)
 
         author = testing.create_user()
-        venue = self.new_venue()
+        venue = Venue.create_for_testing()
 
-        event_a = self.new_event(venue, author)
+        event_a = Event.create_for_testing(author, venue)
         event_a.reviewed = True
         event_a.save()
 
-        event_b = self.new_event(venue, author)
+        event_b = Event.create_for_testing(author, venue)
         event_b.reviewed = False
         event_b.save()
 

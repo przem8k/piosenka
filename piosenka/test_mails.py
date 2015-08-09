@@ -1,12 +1,13 @@
 from django.core import mail
+from django.test import TestCase
 
+from articles.models import Article
 from base import testing
-from piosenka.testing import PiosenkaTestCase
 from piosenka.mail import send_new_to_review_mails
 from piosenka.mail import send_item_approved_mail
 
 
-class MailTest(PiosenkaTestCase):
+class MailTest(TestCase):
     def test_new_to_review_mails(self):
         author = testing.create_user()
         reviewer_a = testing.create_user(perms=['content.review'])
@@ -14,13 +15,13 @@ class MailTest(PiosenkaTestCase):
 
         # There are two reviewers, both should receive an email about the new
         # article added by Alice.
-        article = self.new_article(author)
+        article = Article.create_for_testing(author)
         send_new_to_review_mails(article)
         self.assertEqual(len(mail.outbox), 2)
 
         # Only one email should be sent when an approver adds a new article -
         # only the other one can review it.
-        article = self.new_article(reviewer_a)
+        article = Article.create_for_testing(reviewer_a)
         send_new_to_review_mails(article)
         self.assertEqual(len(mail.outbox), 3)
 
@@ -29,7 +30,7 @@ class MailTest(PiosenkaTestCase):
         # but the other reviewer should be notified.
         reviewer_a.email = ""
         reviewer_a.save()
-        article = self.new_article(author)
+        article = Article.create_for_testing(author)
         send_new_to_review_mails(article)
         self.assertEqual(len(mail.outbox), 4)
 
@@ -37,6 +38,6 @@ class MailTest(PiosenkaTestCase):
         author = testing.create_user()
         reviewer = testing.create_user(perms=['content.review'])
         self.assertEqual(len(mail.outbox), 0)
-        article = self.new_article(author)
+        article = Article.create_for_testing(author)
         send_item_approved_mail(article, reviewer)
         self.assertEqual(len(mail.outbox), 1)

@@ -1,3 +1,5 @@
+import uuid
+
 from django.core.exceptions import ValidationError
 from django.db import models
 
@@ -39,10 +41,10 @@ class Entity(SlugMixin, models.Model):
 
     @staticmethod
     def create_for_testing():
-        import uuid
         entity = Entity()
         entity.name = str(uuid.uuid4()).replace("-", "")
         entity.slug = entity.name
+        entity.save()
         return entity
 
     class Meta:

@@ -1,3 +1,5 @@
+import uuid
+
 from django.core.exceptions import ValidationError
 from django.db import models
 
@@ -78,11 +80,12 @@ True iff the lyrics contain repeated chords."""
         ordering = ["title", "disambig"]
 
     @staticmethod
-    def create_for_testing():
-        import uuid
+    def create_for_testing(author):
         song = Song()
+        song.author = author
         song.title = str(uuid.uuid4()).replace("-", "")
         song.lyrics = "Abc"
+        song.save()
         return song
 
     def __init__(self, *args, **kwargs):

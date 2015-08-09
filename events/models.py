@@ -1,5 +1,6 @@
 from datetime import datetime
 from datetime import timedelta
+import uuid
 
 from django.core.exceptions import ValidationError
 from django.db import models
@@ -21,13 +22,13 @@ class Venue(SlugMixin, models.Model):
 
     @staticmethod
     def create_for_testing():
-        import uuid
         venue = Venue()
         venue.name = str(uuid.uuid4()).replace("-", "")
         venue.town = "New York"
         venue.street = "233 Madison Avenue"
         venue.lat = 0.0
         venue.lon = 0.0
+        venue.save()
         return venue
 
     class Meta:
@@ -86,15 +87,14 @@ przypadku braku danych pozostaw puste."""
     description_html = models.TextField(editable=False)
 
     @staticmethod
-    def create_for_testing():
-        import uuid
+    def create_for_testing(author, venue=None):
         event = Event()
+        event.author = author
         event.name = str(uuid.uuid4()).replace("-", "")
         event.description_trevor = put_text_in_trevor("Abc")
         event.datetime = datetime.now() + timedelta(days=365)
-        venue = Venue.create_for_testing()
-        venue.save()
-        event.venue = venue
+        event.venue = venue if venue else Venue.create_for_testing()
+        event.save()
         return event
 
     class Meta:

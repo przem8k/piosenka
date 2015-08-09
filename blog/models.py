@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 
 from content.trevor import render_trevor, put_text_in_trevor
@@ -21,12 +23,13 @@ class Post(SlugMixin, ContentItem):
     more_html = models.TextField(null=True, editable=False)
 
     @staticmethod
-    def create_for_testing():
-        import uuid
+    def create_for_testing(author):
         post = Post()
+        post.author = author
         post.title = str(uuid.uuid4()).replace("-", "")
         post.post_trevor = put_text_in_trevor("Abc")
         post.more_trevor = put_text_in_trevor("Abc")
+        post.save()
         return post
 
     class Meta:
