@@ -8,6 +8,8 @@ from songs.models import EntityContribution, Song
 
 
 class SongUrlTest(TestScenariosMixin, TestCase):
+    item_cls = Song
+
     def add_contribution(self, song, entity, performed=False, texted=False,
                          translated=False, composed=False):
         contribution = EntityContribution()
@@ -62,42 +64,3 @@ class SongUrlTest(TestScenariosMixin, TestCase):
         # Signed in user should be able to access it just fine.
         response = testing.get_user_client().get(reverse('add_song'))
         self.assertEqual(200, response.status_code)
-
-    def test_view_new_song(self):
-        author = testing.create_user()
-        entity = Entity.create_for_testing()
-        song = Song.create_for_testing(author)
-        self.add_contribution(song, entity, True, True)
-        song.save()
-
-        # Verify that the general public can't access the song.
-        self.assertFalse(song.is_live())
-        response = testing.get_public_client().get(song.get_absolute_url())
-        self.assertEqual(404, response.status_code)
-
-        # Verify what happens when the author does.
-        response = testing.get_user_client(author).get(song.get_absolute_url())
-        self.assertEqual(200, response.status_code)
-
-        # Verify what happens when another user does.
-        response = testing.get_user_client().get(song.get_absolute_url())
-        self.assertEqual(200, response.status_code)
-
-    def test_edit_song(self):
-        author = testing.create_user()
-        entity = Entity.create_for_testing()
-        song = Song.create_for_testing(author)
-        self.add_contribution(song, entity, True, True)
-        song.save()
-
-        response = testing.get_public_client().get(song.get_edit_url())
-        self.assertEqual(302, response.status_code)
-
-        response = testing.get_user_client(author).get(song.get_edit_url())
-        self.assertEqual(200, response.status_code)
-
-    def test_review_song(self):
-        self.content_review(Song)
-
-    def test_approve_song(self):
-        self.content_approve(Song)

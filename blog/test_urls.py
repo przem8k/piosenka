@@ -7,6 +7,8 @@ from content.scenarios import TestScenariosMixin
 
 
 class PostUrlTest(TestScenariosMixin, TestCase):
+    item_cls = Post
+
     def test_blog_index(self):
         response = testing.get_public_client().get(reverse('post_index'))
         self.assertEqual(200, response.status_code)
@@ -31,9 +33,3 @@ class PostUrlTest(TestScenariosMixin, TestCase):
         response = testing.get_user_client().get(reverse('post_index'))
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['all_posts']))
-
-    def test_approve_post(self):
-        self.content_approve(Post)
-
-    def test_review_post(self):
-        self.content_review(Post)
