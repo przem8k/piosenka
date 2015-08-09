@@ -13,23 +13,35 @@ class TestScenariosMixin(object):
     Requires self.item_cls to be set on the object.
     """
 
+    def assertServedOk(self, item, response):
+        if self.item_cls.is_card:
+            self.assertContains(response, item.get_id(), html=False)
+        else:
+            self.assertEqual(200, response.status_code)
+
+    def assertNotServedOk(self, item, response):
+        if self.item_cls.is_card:
+            self.assertNotContains(response, item.get_id(), html=False)
+        else:
+            self.assertEqual(404, response.status_code)
+
     def test_view_new_item(self):
         author = testing.create_user()
-        song = self.item_cls.create_for_testing(author)
-        song.save()
+        item = self.item_cls.create_for_testing(author)
+        item.save()
 
-        # Verify that the general public can't access the item..
-        self.assertFalse(song.is_live())
-        response = testing.get_public_client().get(song.get_absolute_url())
-        self.assertEqual(404, response.status_code)
+        # Verify that the general public can't access the item.
+        self.assertFalse(item.is_live())
+        response = testing.get_public_client().get(item.get_absolute_url())
+        self.assertNotServedOk(item, response)
 
         # Verify that the author can.
-        response = testing.get_user_client(author).get(song.get_absolute_url())
-        self.assertEqual(200, response.status_code)
+        response = testing.get_user_client(author).get(item.get_absolute_url())
+        self.assertServedOk(item, response)
 
         # Verify that another signed-in user can, too.
-        response = testing.get_user_client().get(song.get_absolute_url())
-        self.assertEqual(200, response.status_code)
+        response = testing.get_user_client().get(item.get_absolute_url())
+        self.assertServedOk(item, response)
 
     def test_edit_item(self):
         author = testing.create_user()
@@ -94,7 +106,7 @@ class TestScenariosMixin(object):
 
         # Verify that the general public can't access the item.
         response = testing.get_public_client().get(item.get_absolute_url())
-        self.assertEqual(404, response.status_code)
+        self.assertNotServedOk(item, response)
 
         # Try to approve the item - the author can't do that.
         response = testing.get_user_client(author).get(
@@ -118,10 +130,10 @@ class TestScenariosMixin(object):
 
         # General public should now be able to access the item.
         response = testing.get_public_client().get(item.get_absolute_url())
-        self.assertEqual(200, response.status_code)
+        self.assertServedOk(item, response)
 
         # The reviewer should still be able to access the item. Ideally we'd
         # verify that the 'approve' link is no longer displayed here anymore.
         response = testing.get_user_client(reviewer).get(
             item.get_absolute_url())
-        self.assertEqual(200, response.status_code)
+        self.assertServedOk(item, response)

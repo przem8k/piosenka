@@ -139,7 +139,7 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
 
       {% for annotation in annotations %}
       <div class="section">
-        <h1>{{ annotation.title }}
+        <h1 id="{{ annotation.get_id }}">{{ annotation.title }}
           {% include "components/content_status_span.html" with item=annotation %}
         </h1>
         {% if annotation.image %}

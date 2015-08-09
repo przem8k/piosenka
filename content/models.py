@@ -14,6 +14,10 @@ class ContentItem(models.Model):
      - objects default manager
      - live manager (LiveContentManager above) """
 
+    # Cards are item types that are displayed alongside the parent item. They
+    # don't have an absolute url of their own, but defer to the parent instead.
+    is_card = False
+
     author = models.ForeignKey(User, editable=False)
     reviewed = models.BooleanField(default=False, editable=False)
     pub_date = models.DateTimeField(editable=False)

@@ -9,7 +9,7 @@ from easy_thumbnails.signal_handlers import generate_aliases
 from artists.models import Entity
 from content.models import ContentItem, LiveContentManager
 from content.slug import SlugMixin
-from content.trevor import render_trevor
+from content.trevor import render_trevor, put_text_in_trevor
 from songs.lyrics import contain_extra_chords
 from songs.lyrics import parse_lyrics
 from songs.transpose import transpose_lyrics
@@ -216,6 +216,8 @@ class EntityContribution(models.Model):
 
 
 class Annotation(SlugMixin, ContentItem):
+    is_card = True
+
     HELP_TITLE = """\
 Tytuł adnotacji, np. "Aspazja" lub "Fortepian Chopina"."""
     HELP_IMAGE = """\
@@ -252,11 +254,22 @@ Used in urls, has to be unique."""
     text_html = models.TextField(editable=False)
 
     @staticmethod
-    def create_for_testing():
-        raise NotImplementedError()
+    def create_for_testing(author):
+        annotation = Annotation()
+        annotation.author = author
+        annotation.song = Song.create_for_testing(author)
+        annotation.song.reviewed = True
+        annotation.song.save()
+        annotation.title = str(uuid.uuid4()).replace("-", "")
+        annotation.text_trevor = put_text_in_trevor("Abc")
+        annotation.save()
+        return annotation
 
     def __str__(self):
         return "%s - adnotacja do piosenki %s" % (self.title, self.song.title)
+
+    def get_id(self):
+        return self.slug
 
     def get_url_params(self):
         return {
