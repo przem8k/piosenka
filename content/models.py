@@ -1,6 +1,7 @@
 import datetime
 
 from django.contrib.auth.models import User
+from django.contrib.contenttypes.models import ContentType
 from django.db import models
 
 
@@ -15,11 +16,17 @@ class ContentItem(models.Model):
 
     class Meta:
         abstract = True
+        default_permissions = ['contribute']
 
     def save(self, *args, **kwargs):
         if not self.pub_date:
             self.pub_date = datetime.datetime.now()
         return super().save(*args, **kwargs)
+
+    @classmethod
+    def permstring(cls):
+        content_type = ContentType.objects.get_for_model(cls)
+        return "%s.contribute_%s" % (content_type.app_label, content_type.model)
 
     @classmethod
     def items_live(cls):

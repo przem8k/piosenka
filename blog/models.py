@@ -29,7 +29,7 @@ class Post(SlugMixin, ContentItem):
         post.save()
         return post
 
-    class Meta:
+    class Meta(ContentItem.Meta):
         ordering = ["-pub_date"]
 
     def __str__(self):

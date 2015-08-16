@@ -94,7 +94,7 @@ przypadku braku danych pozostaw puste."""
         event.save()
         return event
 
-    class Meta:
+    class Meta(ContentItem.Meta):
         ordering = ["datetime"]
 
     def __str__(self):

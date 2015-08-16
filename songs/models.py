@@ -73,7 +73,7 @@ True iff the lyrics contain repeated chords."""
         default=False, blank=True, editable=False,
         help_text=HELP_HAS_EXTRA_CHORDS)
 
-    class Meta:
+    class Meta(ContentItem.Meta):
         ordering = ["title", "disambig"]
 
     @staticmethod
@@ -246,6 +246,9 @@ Used in urls, has to be unique."""
     slug = models.SlugField(max_length=200, unique=True, editable=False,
                             help_text=HELP_SLUG)
     text_html = models.TextField(editable=False)
+
+    class Meta(ContentItem.Meta):
+        pass
 
     @staticmethod
     def create_for_testing(author):

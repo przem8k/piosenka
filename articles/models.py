@@ -42,7 +42,7 @@ Main illustration for the article."""
         article.save()
         return article
 
-    class Meta:
+    class Meta(ContentItem.Meta):
         ordering = ["-pub_date"]
 
     def __str__(self):

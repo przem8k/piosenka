@@ -1,6 +1,7 @@
 """ Test-scenarios mixins to be shared among tests for concrete content types.
 """
 
+from django.contrib.auth.models import Permission
 from django.core.urlresolvers import reverse
 
 from base import testing
@@ -24,6 +25,16 @@ class TestScenariosMixin(object):
             self.assertNotContains(response, item.get_id(), html=False)
         else:
             self.assertEqual(404, response.status_code)
+
+    def test_get_permstring(self):
+        """Verifies that the permission string returned from get_permstring
+        exists in the db.
+        """
+        permstring = self.item_cls.permstring()
+        parts = permstring.split('.')
+        self.assertEquals(2, len(parts))
+        self.assertTrue(Permission.objects.get(content_type__app_label=parts[0],
+                                               codename=parts[1]))
 
     def test_view_new_item(self):
         author = testing.create_user()
