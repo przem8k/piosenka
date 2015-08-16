@@ -56,9 +56,6 @@ class ContentItem(models.Model):
     def is_live(self):
         return self.reviewed
 
-    def status_str(self):
-        return "opublikowany" if self.reviewed else "w korekcie"
-
 
 class Permissions(models.Model):
     """Dummy model used to define additional permissions not tied to a
