@@ -69,7 +69,7 @@ class ContentItem(models.Model):
         return "opublikowany" if self.reviewed else "w korekcie"
 
 
-class ContentPermissions(models.Model):
+class Permissions(models.Model):
     """Dummy model used to define additional permissions not tied to a
     particular model.
     """
