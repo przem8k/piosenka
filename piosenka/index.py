@@ -36,7 +36,7 @@ class EntitySearchIndex(JSONSearchIndexMixin, View):
 class SongSearchIndex(JSONSearchIndexMixin, View):
     def get(self, request, *args, **kwargs):
         index = []
-        for song in Song.live.all():
+        for song in Song.items_live():
             index.append({
                 "name": song.__str__(),
                 "value": song.__str__(),

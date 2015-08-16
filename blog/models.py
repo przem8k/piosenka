@@ -3,15 +3,12 @@ import uuid
 from django.db import models
 
 from content.trevor import render_trevor, put_text_in_trevor
-from content.models import ContentItem, LiveContentManager
+from content.models import ContentItem
 from content.slug import SlugMixin
 
 
 class Post(SlugMixin, ContentItem):
     HELP_TITLE = "Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'."
-
-    objects = models.Manager()
-    live = LiveContentManager()
 
     title = models.CharField(max_length=100,
                              help_text=HELP_TITLE)

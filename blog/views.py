@@ -36,9 +36,9 @@ class PostIndex(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['new_posts'] = Post.items_visible_to(self.request.user)\
-                                   .all()[0:PostIndex.MAX_POSTS]
-        context['all_posts'] = Post.items_visible_to(self.request.user).all()
+        context['new_posts'] = Post.items_visible_to(
+            self.request.user)[0:PostIndex.MAX_POSTS]
+        context['all_posts'] = Post.items_visible_to(self.request.user)
         return context
 
 
@@ -49,7 +49,7 @@ class ViewPost(GetPostMixin, ViewContentView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['all_posts'] = Post.items_visible_to(self.request.user).all()
+        context['all_posts'] = Post.items_visible_to(self.request.user)
         return context
 
 

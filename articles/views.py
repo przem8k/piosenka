@@ -18,7 +18,7 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['articles'] = Article.items_visible_to(self.request.user).all()
+        context['articles'] = Article.items_visible_to(self.request.user)
         return context
 
 

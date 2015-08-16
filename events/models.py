@@ -7,7 +7,7 @@ from django.db import models
 
 from artists.models import Entity
 from content.trevor import render_trevor, put_text_in_trevor
-from content.models import ContentItem, LiveContentManager
+from content.models import ContentItem
 from content.slug import SlugMixin
 
 
@@ -69,9 +69,6 @@ lub 'V Festiwal Piosenki Wymyślnej w Katowicach'."""
 puste."""
     HELP_WEBSITE = """Strona internetowa wydarzenia, źródło informacji. W
 przypadku braku danych pozostaw puste."""
-
-    objects = models.Manager()
-    live = LiveContentManager()
 
     name = models.CharField(max_length=100, help_text=HELP_NAME)
     datetime = models.DateTimeField()

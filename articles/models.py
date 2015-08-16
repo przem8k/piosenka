@@ -6,7 +6,7 @@ from easy_thumbnails.signal_handlers import generate_aliases
 from easy_thumbnails.signals import saved_file
 
 from content.trevor import render_trevor, put_text_in_trevor
-from content.models import ContentItem, LiveContentManager
+from content.models import ContentItem
 from content.slug import SlugMixin
 
 saved_file.connect(generate_aliases)
@@ -18,9 +18,6 @@ Tytuł artykułu, np. 'IX Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego \
 "Nadzieja"'."""
     HELP_COVER_IMAGE = """\
 Main illustration for the article."""
-
-    objects = models.Manager()
-    live = LiveContentManager()
 
     title = models.CharField(max_length=100, help_text=HELP_TITLE)
     lead_text_trevor = models.TextField()

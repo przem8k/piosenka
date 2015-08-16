@@ -66,10 +66,10 @@ class About(TemplateView):
         for user in User.objects.filter(is_active=True):
             author = {}
             author['user'] = user
-            author['annotations'] = Annotation.live.filter(author=user).count()
-            author['songs'] = Song.live.filter(author=user).count()
-            author['articles'] = Article.live.filter(author=user).count()
-            author['events'] = Event.live.filter(author=user).count()
+            author['annotations'] = Annotation.items_live().filter(author=user).count()
+            author['songs'] = Song.items_live().filter(author=user).count()
+            author['articles'] = Article.items_live().filter(author=user).count()
+            author['events'] = Event.items_live().filter(author=user).count()
             author['total'] = (author['annotations'] + author['songs'] +
                                self.ARTICLE_FACTOR * author['articles'] +
                                author['events'])

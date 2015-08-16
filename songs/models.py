@@ -7,7 +7,7 @@ from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
 
 from artists.models import Entity
-from content.models import ContentItem, LiveContentManager
+from content.models import ContentItem
 from content.slug import SlugMixin
 from content.trevor import render_trevor, put_text_in_trevor
 from songs.lyrics import contain_extra_chords
@@ -45,9 +45,6 @@ Old slug, kept to avoid duplicates and maintain redirects."""
 Used in urls, has to be unique."""
     HELP_HAS_EXTRA_CHORDS = """\
 True iff the lyrics contain repeated chords."""
-
-    objects = models.Manager()
-    live = LiveContentManager()
 
     title = models.CharField(
         max_length=100, help_text=HELP_TITLE)
@@ -230,9 +227,6 @@ Tytuł i autor publikacji źródłowej, jeśli adnotacja jest oparta na
 publikacjii."""
     HELP_SLUG = """\
 Used in urls, has to be unique."""
-
-    objects = models.Manager()
-    live = LiveContentManager()
 
     title = models.CharField(max_length=100, help_text=HELP_TITLE)
     text_trevor = models.TextField()
