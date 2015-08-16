@@ -24,11 +24,6 @@ class ContentItem(models.Model):
         return super().save(*args, **kwargs)
 
     @classmethod
-    def permstring(cls):
-        content_type = ContentType.objects.get_for_model(cls)
-        return "%s.contribute_%s" % (content_type.app_label, content_type.model)
-
-    @classmethod
     def items_live(cls):
         return cls.objects.filter(reviewed=True)
 
@@ -44,6 +39,15 @@ class ContentItem(models.Model):
             return cls.objects.filter(reviewed=False).exclude(author=user)
         else:
             return []
+
+    @classmethod
+    def permstring(cls):
+        content_type = ContentType.objects.get_for_model(cls)
+        return "%s.contribute_%s" % (content_type.app_label, content_type.model)
+
+    @classmethod
+    def can_be_contributed_by(cls, user):
+        return user.has_perm(cls.permstring())
 
     def can_be_seen_by(self, user):
         return self.is_live() or (user.is_active and user.is_authenticated())

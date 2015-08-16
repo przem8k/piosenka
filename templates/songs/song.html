@@ -192,7 +192,7 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
       </div>
       {% endif %}
 
-      {% if user.is_authenticated %}
+      {% if user.is_authenticated and perms.songs.contribute_annotation %}
       <div class="section">
         <h1>Dodaj adnotację</h1>
         <p style="text-align: center">
