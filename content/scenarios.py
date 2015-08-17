@@ -36,6 +36,25 @@ class TestScenariosMixin(object):
         self.assertTrue(Permission.objects.get(content_type__app_label=parts[0],
                                                codename=parts[1]))
 
+    def test_add_item(self):
+        if self.item_cls.is_card:
+            return
+
+        # Verify that the general public can't access the add view.
+        response = testing.get_public_client().get(self.item_cls.get_add_url())
+        self.assertEqual(302, response.status_code)
+
+        # Verify that unauthorized user can't access it either.
+        response = testing.get_user_client().get(self.item_cls.get_add_url())
+        self.assertEqual(404, response.status_code)
+
+        # Authorized user should be able to access it just fine.
+        authorized_user = testing.create_user(
+            perms=[self.item_cls.permstring()])
+        response = testing.get_user_client(authorized_user).get(
+            self.item_cls.get_add_url())
+        self.assertEqual(200, response.status_code)
+
     def test_view_new_item(self):
         author = testing.create_user()
         item = self.item_cls.create_for_testing(author)

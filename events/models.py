@@ -3,6 +3,7 @@ from datetime import timedelta
 import uuid
 
 from django.core.exceptions import ValidationError
+from django.core.urlresolvers import reverse_lazy
 from django.db import models
 
 from artists.models import Entity
@@ -111,6 +112,10 @@ przypadku braku danych pozostaw puste."""
             'day': self.datetime.strftime("%d"),
             'slug': self.slug
         }
+
+    @staticmethod
+    def get_add_url():
+        return str(reverse_lazy('add_event'))
 
     @models.permalink
     def get_absolute_url(self):

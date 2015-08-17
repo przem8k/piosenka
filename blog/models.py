@@ -1,5 +1,6 @@
 import uuid
 
+from django.core.urlresolvers import reverse_lazy
 from django.db import models
 
 from content.trevor import render_trevor, put_text_in_trevor
@@ -55,6 +56,10 @@ class Post(SlugMixin, ContentItem):
             'day': self.pub_date.strftime("%d"),
             'slug': self.slug
         }
+
+    @staticmethod
+    def get_add_url():
+        return str(reverse_lazy('add_post'))
 
     @models.permalink
     def get_absolute_url(self):

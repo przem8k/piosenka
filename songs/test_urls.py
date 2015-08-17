@@ -55,19 +55,3 @@ class SongUrlTest(TestScenariosMixin, TestCase):
         response = testing.get_user_client().get(jack_white.get_absolute_url())
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['songs']))
-
-    def test_add_song(self):
-        # General public can't access the add_song view.
-        response = testing.get_public_client().get(reverse('add_song'))
-        self.assertEqual(302, response.status_code)
-
-        # Verify that unauthorized user can't access.
-        response = testing.get_user_client().get(reverse('add_song'))
-        self.assertEqual(404, response.status_code)
-
-        # Authorized user should be able to access it just fine.
-        authorized_user = testing.create_user(
-            perms=[self.item_cls.permstring()])
-        response = testing.get_user_client(authorized_user).get(
-            reverse('add_song'))
-        self.assertEqual(200, response.status_code)

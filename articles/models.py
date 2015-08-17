@@ -1,5 +1,6 @@
 import uuid
 
+from django.core.urlresolvers import reverse_lazy
 from django.db import models
 
 from easy_thumbnails.signal_handlers import generate_aliases
@@ -66,6 +67,10 @@ Main illustration for the article."""
         return {
             'slug': self.slug,
         }
+
+    @staticmethod
+    def get_add_url():
+        return str(reverse_lazy('add_article'))
 
     @models.permalink
     def get_absolute_url(self):

@@ -1,6 +1,7 @@
 import uuid
 
 from django.core.exceptions import ValidationError
+from django.core.urlresolvers import reverse_lazy
 from django.db import models
 
 from easy_thumbnails.signals import saved_file
@@ -99,6 +100,10 @@ True iff the lyrics contain repeated chords."""
         return {
             'slug': self.slug
         }
+
+    @staticmethod
+    def get_add_url():
+        return str(reverse_lazy('add_song'))
 
     @models.permalink
     def get_absolute_url(self):
