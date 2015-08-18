@@ -129,6 +129,11 @@ class InvitationTest(TestCase):
             1,
             len(User.objects.filter(email=email_address)))
 
+        new_user = User.objects.get(email=email_address)
+        self.assertEqual(1, new_user.groups.count())
+        self.assertEqual('everyone', new_user.groups.values_list('name',
+                                                                 flat=True)[0])
+
         another_client = testing.get_client()
         response = another_client.post(invitation.get_invitation_url(),
                                        self._JOIN_DATA)

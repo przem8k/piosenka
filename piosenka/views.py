@@ -4,7 +4,7 @@ from datetime import datetime
 
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth.decorators import login_required, permission_required
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.contrib.auth.views import login, logout
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.http import HttpResponseRedirect, Http404
@@ -66,9 +66,11 @@ class About(TemplateView):
         for user in User.objects.filter(is_active=True):
             author = {}
             author['user'] = user
-            author['annotations'] = Annotation.items_live().filter(author=user).count()
+            author['annotations'] = Annotation.items_live().filter(
+                author=user).count()
             author['songs'] = Song.items_live().filter(author=user).count()
-            author['articles'] = Article.items_live().filter(author=user).count()
+            author['articles'] = Article.items_live().filter(
+                author=user).count()
             author['events'] = Event.items_live().filter(author=user).count()
             author['total'] = (author['annotations'] + author['songs'] +
                                self.ARTICLE_FACTOR * author['articles'] +
@@ -190,6 +192,10 @@ class JoinView(FormView):
             password=form.cleaned_data['password'],
             email=invitation.email_address)
         user.save()
+
+        everyone_group, _ = Group.objects.get_or_create(name='everyone')
+        user.groups.add(everyone_group)
+
         _action_logger.info('%s joined' % user)
         login(self.request, user)
         return super().form_valid(form)
