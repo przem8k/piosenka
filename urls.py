@@ -51,6 +51,7 @@ if settings.DEBUG:
     urlpatterns = [
         url(r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
             {'document_root': settings.SERVE_DIRECTLY_ROOT}),
-        url(r'^500/$', TemplateView.as_view(template_name='500.html')),
+        url(r'^403/$', TemplateView.as_view(template_name='403.html')),
         url(r'^404/$', TemplateView.as_view(template_name='404.html')),
+        url(r'^500/$', TemplateView.as_view(template_name='500.html')),
     ] + urlpatterns
