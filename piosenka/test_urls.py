@@ -15,6 +15,19 @@ class SiteUrlTest(TestCase):
         response = testing.get_public_client().get(reverse('about'))
         self.assertEqual(200, response.status_code)
 
+    def test_to_review(self):
+        login_url = reverse('hello') + '?next=' + reverse('to_review')
+        response = testing.get_public_client().get(reverse('to_review'))
+        self.assertEqual(302, response.status_code)
+        self.assertRedirects(response, login_url)
+
+        response = testing.get_user_client().get(reverse('to_review'))
+        self.assertEqual(403, response.status_code)
+
+        user = testing.create_user(perms=['content.review'])
+        response = testing.get_user_client(user).get(reverse('to_review'))
+        self.assertEqual(200, response.status_code)
+
     def test_public_menu(self):
         response = testing.get_public_client().get(reverse('index'))
         self.assertEqual(200, response.status_code)

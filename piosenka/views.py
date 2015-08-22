@@ -24,14 +24,6 @@ from piosenka.mail import send_invitation_mail
 _action_logger = logging.getLogger('actions')
 
 
-class StaffOnlyMixin(object):
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        if not (self.request.user.is_staff):
-            raise Http404
-        return super().dispatch(*args, **kwargs)
-
-
 class SiteIndex(TemplateView):
     template_name = "frontpage/index.html"
     POST_COUNT = 1
@@ -129,8 +121,14 @@ class ChangePassword(FormView):
         return super().form_valid(form)
 
 
-class ToReview(StaffOnlyMixin, TemplateView):
+class ToReview(TemplateView):
     template_name = "to_review.html"
+
+    @method_decorator(login_required)
+    @method_decorator(permission_required('content.review',
+                                          raise_exception=True))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
 
 
 class InviteView(CreateView):
