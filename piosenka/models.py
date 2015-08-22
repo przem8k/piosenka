@@ -43,3 +43,13 @@ class Invitation(models.Model):
 
     def __str__(self):
         return self.email_address
+
+
+class Permissions(models.Model):
+    """Dummy model used to define additional permissions not tied to a
+    particular model.
+    """
+
+    class Meta:
+        default_permissions = []
+        permissions = [('debug', 'Has access to debug views.')]

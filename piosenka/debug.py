@@ -5,7 +5,7 @@ from django.http import HttpResponse, Http404
 
 
 def debug_locale(request):
-    if not (request.user.is_staff):
+    if not (request.user.has_perm('piosenka.debug')):
         raise Http404
 
     info = ["locale: " + str(locale.getlocale()),
