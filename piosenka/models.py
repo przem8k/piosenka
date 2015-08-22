@@ -52,4 +52,4 @@ class Permissions(models.Model):
 
     class Meta:
         default_permissions = []
-        permissions = [('debug', 'Has access to debug views.')]
+        permissions = [('inspect', 'Has access to debug views.')]

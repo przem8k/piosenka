@@ -1,0 +1,21 @@
+"""Tests special debug pages."""
+
+from django.test import TestCase
+from django.core.urlresolvers import reverse
+
+from base import testing
+
+
+class DebugUrlTest(TestCase):
+    def test_site_urls(self):
+        login_url = reverse('hello') + '?next=' + reverse('inspect_locale')
+        response = testing.get_public_client().get(reverse('inspect_locale'))
+        self.assertEqual(302, response.status_code)
+        self.assertRedirects(response, login_url)
+
+        response = testing.get_user_client().get(reverse('inspect_locale'))
+        self.assertEqual(403, response.status_code)
+
+        user = testing.create_user(perms=['piosenka.inspect'])
+        response = testing.get_user_client(user).get(reverse('inspect_locale'))
+        self.assertEqual(200, response.status_code)

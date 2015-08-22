@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Locale{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="section">
+        <h1>Locale</h1>
+        <ul>
+          <li>locale: {{ locale }}</li>
+          <li>default locale: {{ default_locale }}</li>
+          <li>filesystem encoding: {{ filesystem_encoding }}</li>
+          <li>default encoding: {{ default_encoding }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
