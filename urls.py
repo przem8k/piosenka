@@ -43,6 +43,9 @@ urlpatterns = [
     # Debug.
     url(r'^inspect/locale$',
         piosenka.inspect.InspectLocale.as_view(), name='inspect_locale'),
+    url(r'^inspect/permissions$',
+        piosenka.inspect.InspectPermissions.as_view(),
+        name='inspect_permissions'),
 ]
 
 from django.conf import settings
