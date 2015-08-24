@@ -6,7 +6,7 @@ from django.core.urlresolvers import reverse
 from base import testing
 
 
-class DebugUrlTest(TestCase):
+class InspectUrlTest(TestCase):
     def test_site_urls(self):
         login_url = reverse('hello') + '?next=' + reverse('inspect_locale')
         response = testing.get_public_client().get(reverse('inspect_locale'))

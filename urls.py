@@ -2,7 +2,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView, RedirectView
 
-import piosenka.inspect
 import piosenka.views
 import songs.obsolete
 
@@ -38,14 +37,10 @@ urlpatterns = [
         name='invite'),
     url(r'^dolacz/(?P<invitation_key>[-\w]+)/',
         piosenka.views.JoinView.as_view(), name='join'),
+    # Inspect.
+    url(r'^inspect/', include('piosenka.inspect_urls')),
     # Frontpage.
     url(r'^$', piosenka.views.SiteIndex.as_view(), name="index"),
-    # Debug.
-    url(r'^inspect/locale$',
-        piosenka.inspect.InspectLocale.as_view(), name='inspect_locale'),
-    url(r'^inspect/permissions$',
-        piosenka.inspect.InspectPermissions.as_view(),
-        name='inspect_permissions'),
 ]
 
 from django.conf import settings
