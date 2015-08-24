@@ -138,6 +138,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'urls'
@@ -167,6 +168,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.redirects',
     # Third-party.
     'easy_thumbnails',
     'pipeline',
