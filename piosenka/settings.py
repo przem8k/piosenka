@@ -159,14 +159,18 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    # Django.
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    # Third-party.
     'easy_thumbnails',
     'pipeline',
+    # PzT.
     'base',
     'blog',
     'artists',
