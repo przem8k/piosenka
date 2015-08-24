@@ -28,15 +28,7 @@ urlpatterns = [
     url(r'^index/', include('piosenka.index')),
     # Admin and users.
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^do-korekty/', piosenka.views.ToReview.as_view(), name="to_review"),
-    url(r'^zaloguj/', piosenka.views.Hello.as_view(), name="hello"),
-    url(r'^wyloguj/', piosenka.views.Goodbye.as_view(), name="goodbye"),
-    url(r'^zmien-haslo/', piosenka.views.ChangePassword.as_view(),
-        name="change_password"),
-    url(r'^zapros/', piosenka.views.InviteView.as_view(),
-        name='invite'),
-    url(r'^dolacz/(?P<invitation_key>[-\w]+)/',
-        piosenka.views.JoinView.as_view(), name='join'),
+    url(r'^redakcja/', include('piosenka.user_urls')),
     # Inspect.
     url(r'^inspect/', include('piosenka.inspect_urls')),
     # Frontpage.
