@@ -12,3 +12,4 @@ site_media
 node_modules
 .idea
 .vimrc
+.environment
