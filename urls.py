@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.views.generic import TemplateView, RedirectView
+from django.views.generic import TemplateView
 
 import piosenka.views
 import songs.obsolete
@@ -10,9 +10,6 @@ admin.autodiscover()
 urlpatterns = [
     # Obsolete paths redicrects.
     url(r'^songs/song/(?P<song_id>\d+)/$', songs.obsolete.obsolete_song),
-    url(r'^about/$', RedirectView.as_view(url="/o-stronie/", permanent=True)),
-    url(r'^facebook/$', RedirectView.as_view(url="/o-stronie/",
-                                             permanent=True)),
     # Songbook.
     url(r'^spiewnik/', include('songs.urls_entity')),
     url(r'^opracowanie/', include('songs.urls_song')),
