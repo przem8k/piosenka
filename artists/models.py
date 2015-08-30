@@ -3,15 +3,14 @@ import uuid
 from django.core.exceptions import ValidationError
 from django.db import models
 
-from content.slug import SlugLogicMixin
+from content.slug import SlugFieldMixin
 
-class Entity(SlugLogicMixin, models.Model):
+
+class Entity(SlugFieldMixin, models.Model):
     name = models.CharField(max_length=50,
                             help_text="Name for a band, lastname for a person.")
     first_name = models.CharField(max_length=50, null=True, blank=True,
                                   help_text="First (and possibly second) name if this is a person.")
-    slug = models.SlugField(max_length=100, unique=True, editable=False,
-                            help_text="Used in urls, has to be unique.")
     featured = models.BooleanField(default=False,
                                    help_text="Iff true, it will be included in the songbook menu.")
     still_plays = models.BooleanField(default=False,
@@ -70,7 +69,7 @@ class Entity(SlugLogicMixin, models.Model):
         if self.kind == Entity.TYPE_BAND and self.first_name:
             raise ValidationError("Bands don't have first names.")
 
-    # SlugLogicMixin:
+    # SlugFieldMixin:
     def get_slug_elements(self):
         if self.first_name:
             return [self.first_name, self.name]

@@ -5,10 +5,10 @@ from django.db import models
 
 from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
-from content.slug import SlugLogicMixin
+from content.slug import SlugFieldMixin
 
 
-class Post(SlugLogicMixin, ContentItem):
+class Post(SlugFieldMixin, ContentItem):
     HELP_TITLE = "Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'."
 
     title = models.CharField(max_length=100,
@@ -16,7 +16,6 @@ class Post(SlugLogicMixin, ContentItem):
     post_trevor = models.TextField()
     more_trevor = models.TextField(null=True, blank=True)
 
-    slug = models.SlugField(max_length=100, unique=True, editable=False)
     post_html = models.TextField(null=True, editable=False)
     more_html = models.TextField(null=True, editable=False)
 
@@ -36,7 +35,7 @@ class Post(SlugLogicMixin, ContentItem):
     def __str__(self):
         return self.title
 
-    # SlugLogicMixin:
+    # SlugFieldMixin:
     def get_slug_elements(self):
         assert self.title
         return [self.title]

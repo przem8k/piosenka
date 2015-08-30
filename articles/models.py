@@ -8,12 +8,12 @@ from easy_thumbnails.signals import saved_file
 
 from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
-from content.slug import SlugLogicMixin
+from content.slug import SlugFieldMixin
 
 saved_file.connect(generate_aliases)
 
 
-class Article(SlugLogicMixin, ContentItem):
+class Article(SlugFieldMixin, ContentItem):
     HELP_TITLE = """\
 Tytuł artykułu, np. 'IX Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego \
 "Nadzieja"'."""
@@ -28,7 +28,6 @@ Main illustration for the article."""
                                     help_text=HELP_COVER_IMAGE)
     cover_credits_trevor = models.TextField(null=True, blank=True)
 
-    slug = models.SlugField(max_length=100, unique=True, editable=False)
     lead_text_html = models.TextField(editable=False)
     main_text_html = models.TextField(editable=False)
     cover_credits_html = models.TextField(null=True, blank=True, editable=False)
@@ -49,7 +48,7 @@ Main illustration for the article."""
     def __str__(self):
         return self.title
 
-    # SlugLogicMixin:
+    # SlugFieldMixin:
     def get_slug_elements(self):
         assert self.title
         return [self.title]

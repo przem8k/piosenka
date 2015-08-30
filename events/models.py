@@ -9,15 +9,14 @@ from django.db import models
 from artists.models import Entity
 from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
-from content.slug import SlugLogicMixin
+from content.slug import SlugLogicMixin, SlugFieldMixin
 
 
-class Venue(SlugLogicMixin, models.Model):
+class Venue(SlugFieldMixin, models.Model):
     name = models.CharField(max_length=100)
     town = models.CharField(max_length=100)
     street = models.CharField(max_length=100)
 
-    slug = models.SlugField(max_length=100, unique=True, editable=False)
     lat = models.FloatField(null=True, editable=False, help_text="Latitude.")
     lon = models.FloatField(null=True, editable=False, help_text="Longtitude.")
 
@@ -56,7 +55,7 @@ class Venue(SlugLogicMixin, models.Model):
             'slug': self.slug,
         })
 
-    # SlugLogicMixin:
+    # SlugFieldMixin:
     def get_slug_elements(self):
         assert self.name
         assert self.town
