@@ -41,7 +41,7 @@ Link do nagrania piosenki w serwisie Wrzuta."""
     HELP_CAPO_FRET = """\
 Liczba od 0 do 11, 0 oznacza brak kapodastra."""
     HELP_CORE_SLUG = """\
-Old slug, kept to avoid duplicates and maintain redirects."""
+Old slug kept to maintain redirects."""
     HELP_SLUG = """\
 Used in urls, has to be unique."""
     HELP_HAS_EXTRA_CHORDS = """\
@@ -76,6 +76,7 @@ True iff the lyrics contain repeated chords."""
 
     class Meta(ContentItem.Meta):
         ordering = ["title", "disambig"]
+        unique_together = ["title", "disambig"]
 
     @staticmethod
     def create_for_testing(author):
@@ -132,13 +133,6 @@ True iff the lyrics contain repeated chords."""
         except SyntaxError as m:
             raise ValidationError("Lyrics syntax is incorrect: " + str(m))
 
-        if not self.pk:
-            # New Song, let's see if the core slug is free.
-            proposed_slug = self.make_slug(self.get_slug_elements())
-            if Song.objects.filter(core_slug=proposed_slug).count():
-                raise ValidationError(
-                    "Piosenka o takim tytule i wyróżniku jest już w bazie.")
-
     def set_slug_prepend_elements(self, elements):
         self.slug_prepend_elements = elements
 
@@ -149,8 +143,6 @@ True iff the lyrics contain repeated chords."""
                                                             else [])
 
     def save(self, *args, **kwargs):
-        if not self.core_slug:
-            self.core_slug = self.make_slug(self.get_slug_elements())
         self.has_extra_chords = contain_extra_chords(parse_lyrics(self.lyrics))
         super().save(*args, **kwargs)
 
