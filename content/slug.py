@@ -4,32 +4,33 @@ from django.utils.text import slugify
 from unidecode import unidecode
 
 
-class SlugMixin(models.Model):
-    """ A class that extends this has to have:
-     - a slug field
-     - get_slug_elements"""
-    # TODO: define the slug field here.
-    # TODO: add tests
-    MAX_SLUG_LENGTH = 200
+class SlugLogicMixin(object):
+    """Bring your-own slug field slug mixin.
 
-    class Meta:
-        abstract = True
+    This assumes that a slug field is already defined on the object."""
 
     def get_slug_elements(self):
         raise NotImplementedError
 
-    @staticmethod
-    def make_slug(slug_elements):
+    def make_slug(self, slug_elements):
         normalized_string = unidecode(" ".join(slug_elements))
-        return slugify(normalized_string)[:SlugMixin.MAX_SLUG_LENGTH]
+        max_length = self._meta.get_field('slug').max_length
+        return slugify(normalized_string)[:max_length]
 
     def save(self, *args, **kwargs):
         if not self.slug:
             slug_elements = self.get_slug_elements()
-            candidate = SlugMixin.make_slug(slug_elements)
+            candidate = self.make_slug(slug_elements)
             counter = 0
             while self.__class__.objects.filter(slug=candidate):
                 counter += 1
-                candidate = SlugMixin.make_slug(slug_elements + [str(counter)])
+                candidate = self.make_slug(slug_elements + [str(counter)])
             self.slug = candidate
         return super().save(*args, **kwargs)
+
+
+class SlugFieldMixin(SlugLogicMixin, models.Model):
+    slug = models.SlugField(max_length=100, unique=True, editable=False)
+
+    class Meta:
+        abstract = True

@@ -3,9 +3,9 @@ import uuid
 from django.core.exceptions import ValidationError
 from django.db import models
 
-from content.slug import SlugMixin
+from content.slug import SlugLogicMixin
 
-class Entity(SlugMixin, models.Model):
+class Entity(SlugLogicMixin, models.Model):
     name = models.CharField(max_length=50,
                             help_text="Name for a band, lastname for a person.")
     first_name = models.CharField(max_length=50, null=True, blank=True,
@@ -70,7 +70,7 @@ class Entity(SlugMixin, models.Model):
         if self.kind == Entity.TYPE_BAND and self.first_name:
             raise ValidationError("Bands don't have first names.")
 
-    # SlugMixin:
+    # SlugLogicMixin:
     def get_slug_elements(self):
         if self.first_name:
             return [self.first_name, self.name]

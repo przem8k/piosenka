@@ -9,10 +9,10 @@ from django.db import models
 from artists.models import Entity
 from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
-from content.slug import SlugMixin
+from content.slug import SlugLogicMixin
 
 
-class Venue(SlugMixin, models.Model):
+class Venue(SlugLogicMixin, models.Model):
     name = models.CharField(max_length=100)
     town = models.CharField(max_length=100)
     street = models.CharField(max_length=100)
@@ -56,14 +56,14 @@ class Venue(SlugMixin, models.Model):
             'slug': self.slug,
         })
 
-    # SlugMixin:
+    # SlugLogicMixin:
     def get_slug_elements(self):
         assert self.name
         assert self.town
         return [self.name, self.town]
 
 
-class Event(SlugMixin, ContentItem):
+class Event(SlugLogicMixin, ContentItem):
     HELP_NAME = """Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego'
 lub 'V Festiwal Piosenki Wymyślnej w Katowicach'."""
     HELP_PRICE = """E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw
@@ -133,7 +133,7 @@ przypadku braku danych pozostaw puste."""
     def get_approve_url(self):
         return ('approve_event', (), self.get_url_params())
 
-    # SlugMixin:
+    # SlugLogicMixin:
     def get_slug_elements(self):
         assert self.name
         assert self.venue and self.venue.town

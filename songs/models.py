@@ -9,7 +9,7 @@ from easy_thumbnails.signal_handlers import generate_aliases
 
 from artists.models import Entity
 from content.models import ContentItem
-from content.slug import SlugMixin
+from content.slug import SlugLogicMixin
 from content.trevor import render_trevor, put_text_in_trevor
 from songs.lyrics import contain_extra_chords
 from songs.lyrics import parse_lyrics
@@ -23,7 +23,7 @@ def validate_capo_fret(value):
         raise ValidationError(u'Capo fret has to be in range [0, 11]')
 
 
-class Song(SlugMixin, ContentItem):
+class Song(SlugLogicMixin, ContentItem):
     CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX",
                      "X", "XI", "XII"]
 
@@ -136,7 +136,7 @@ True iff the lyrics contain repeated chords."""
     def set_slug_prepend_elements(self, elements):
         self.slug_prepend_elements = elements
 
-    # SlugMixin:
+    # SlugLogicMixin:
     def get_slug_elements(self):
         return self.slug_prepend_elements + [self.title] + ([self.disambig]
                                                             if self.disambig
@@ -209,7 +209,7 @@ class EntityContribution(models.Model):
         return None
 
 
-class Annotation(SlugMixin, ContentItem):
+class Annotation(SlugLogicMixin, ContentItem):
     is_card = True
 
     HELP_TITLE = """\
@@ -285,7 +285,7 @@ Used in urls, has to be unique."""
     def get_approve_url(self):
         return ('approve_annotation', (), self.get_url_params())
 
-    # SlugMixin:
+    # SlugLogicMixin:
     def get_slug_elements(self):
         return [self.title, self.song.slug]
 

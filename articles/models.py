@@ -8,12 +8,12 @@ from easy_thumbnails.signals import saved_file
 
 from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
-from content.slug import SlugMixin
+from content.slug import SlugLogicMixin
 
 saved_file.connect(generate_aliases)
 
 
-class Article(SlugMixin, ContentItem):
+class Article(SlugLogicMixin, ContentItem):
     HELP_TITLE = """\
 Tytuł artykułu, np. 'IX Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego \
 "Nadzieja"'."""
@@ -49,7 +49,7 @@ Main illustration for the article."""
     def __str__(self):
         return self.title
 
-    # SlugMixin:
+    # SlugLogicMixin:
     def get_slug_elements(self):
         assert self.title
         return [self.title]
