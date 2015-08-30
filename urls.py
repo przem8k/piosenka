@@ -10,6 +10,7 @@ admin.autodiscover()
 urlpatterns = [
     # Obsolete paths redicrects.
     url(r'^songs/song/(?P<song_id>\d+)/$', songs.obsolete.obsolete_song),
+    url(r'^songs/song/(?P<song_id>\d+)/print/$', songs.obsolete.obsolete_song),
     # Songbook.
     url(r'^spiewnik/', include('songs.urls_entity')),
     url(r'^opracowanie/', include('songs.urls_song')),
