@@ -19,7 +19,7 @@ class SongRedirectTest(TestCase):
         contribution.texted = True
         contribution.save()
 
-        song.core_slug = "some-old-slug"
+        song.old_slug = "some-old-slug"
         song.reviewed = True
         song.save()
 
@@ -31,19 +31,19 @@ class SongRedirectTest(TestCase):
         song = self.song
         entity = self.entity
 
-        old_url = "/spiewnik/%s/%s" % (entity.slug, song.core_slug)
+        old_url = "/spiewnik/%s/%s" % (entity.slug, song.old_slug)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
-        old_url = "/spiewnik/%s/%s/" % (entity.slug, song.core_slug)
+        old_url = "/spiewnik/%s/%s/" % (entity.slug, song.old_slug)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
-        old_url = "/spiewnik/%s/%s/drukuj" % (entity.slug, song.core_slug)
+        old_url = "/spiewnik/%s/%s/drukuj" % (entity.slug, song.old_slug)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
-        old_url = "/spiewnik/%s/%s/drukuj/" % (entity.slug, song.core_slug)
+        old_url = "/spiewnik/%s/%s/drukuj/" % (entity.slug, song.old_slug)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 

@@ -40,7 +40,7 @@ Link do nagrania piosenki w serwisie YouTube."""
 Link do nagrania piosenki w serwisie Wrzuta."""
     HELP_CAPO_FRET = """\
 Liczba od 0 do 11, 0 oznacza brak kapodastra."""
-    HELP_CORE_SLUG = """\
+    HELP_OLD_SLUG = """\
 Old slug kept to maintain redirects."""
     HELP_SLUG = """\
 Used in urls, has to be unique."""
@@ -64,9 +64,9 @@ True iff the lyrics contain repeated chords."""
         default=0, validators=[validate_capo_fret], help_text=HELP_CAPO_FRET)
     lyrics = models.TextField()
 
-    core_slug = models.SlugField(
+    old_slug = models.SlugField(
         max_length=100, unique=True, null=True, blank=True, editable=False,
-        help_text=HELP_CORE_SLUG)
+        help_text=HELP_OLD_SLUG)
     slug = models.SlugField(
         max_length=200, unique=True, null=False, blank=False, editable=False,
         help_text=HELP_SLUG)
