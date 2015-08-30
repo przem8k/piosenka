@@ -13,6 +13,8 @@ urlpatterns = [
         songs.redirects.SongRedirectByIdView.as_view()),
     url(r'^songs/song/(?P<song_id>\d+)/print/$',
         songs.redirects.SongRedirectByIdView.as_view()),
+    url(r'^songs/band/(?P<band_id>\d+)/$',
+        songs.redirects.BandRedirect.as_view()),
     # Songbook.
     url(r'^spiewnik/', include('songs.urls_entity')),
     url(r'^opracowanie/', include('songs.urls_song')),

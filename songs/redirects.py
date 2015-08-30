@@ -1,7 +1,8 @@
 """Views for handling obsolete url redirects."""
 
-from django.shortcuts import get_object_or_404
+from django.core.urlresolvers import reverse
 from django.http import Http404
+from django.shortcuts import get_object_or_404
 from django.views.generic import RedirectView
 
 from artists.models import Entity
@@ -31,3 +32,10 @@ class SongRedirectByIdView(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
         song = get_object_or_404(Song, pk=kwargs['song_id'])
         return song.get_absolute_url()
+
+
+class BandRedirect(RedirectView):
+    permanent = True
+
+    def get_redirect_url(self, *args, **kwargs):
+        return reverse('songbook')

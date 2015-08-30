@@ -1,5 +1,6 @@
 """Tests redirects for obsolete song urls."""
 
+from django.core.urlresolvers import reverse
 from django.test import TestCase
 
 from base import testing
@@ -65,3 +66,13 @@ class SongRedirectTest(TestCase):
         old_url = "/songs/song/%d/print/" % (song.pk)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
+
+    def test_band_redirects(self):
+        """Tests for urls in form "/songs/band/id", which we can't handle."""
+        old_url = "/songs/band/12"
+        response = testing.get_public_client().get(old_url, follow=True)
+        self.assertRedirects(response, reverse('songbook'), status_code=301)
+
+        old_url = "/songs/band/12/"
+        response = testing.get_public_client().get(old_url, follow=True)
+        self.assertRedirects(response, reverse('songbook'), status_code=301)
