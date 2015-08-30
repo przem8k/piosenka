@@ -3,14 +3,16 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 import piosenka.views
-import songs.obsolete
+import songs.redirects
 
 admin.autodiscover()
 
 urlpatterns = [
     # Obsolete paths redicrects.
-    url(r'^songs/song/(?P<song_id>\d+)/$', songs.obsolete.obsolete_song),
-    url(r'^songs/song/(?P<song_id>\d+)/print/$', songs.obsolete.obsolete_song),
+    url(r'^songs/song/(?P<song_id>\d+)/$',
+        songs.redirects.SongRedirectByIdView.as_view()),
+    url(r'^songs/song/(?P<song_id>\d+)/print/$',
+        songs.redirects.SongRedirectByIdView.as_view()),
     # Songbook.
     url(r'^spiewnik/', include('songs.urls_entity')),
     url(r'^opracowanie/', include('songs.urls_song')),

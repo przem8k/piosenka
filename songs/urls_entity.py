@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
-from django.views.generic import RedirectView
 
 from songs import views
+from songs import redirects
 
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name="songbook"),
@@ -9,8 +9,7 @@ urlpatterns = [
         name="songbook_entity"),
     # Obsolete url redirects.
     url(r'^(?P<entity_slug>[-\w]+)/(?P<slug>[-\w]+)/', include([
-        url(r'^$', views.SongRedirectView.as_view()),
-        url(r'^drukuj/$', RedirectView.as_view(
-            url='/spiewnik/%(entity_slug)s/%(slug)s/', permanent=True)),
+        url(r'^$', redirects.SongRedirectView.as_view()),
+        url(r'^drukuj/$', redirects.SongRedirectView.as_view()),
         ])),
 ]

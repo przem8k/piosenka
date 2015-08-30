@@ -2,7 +2,7 @@ import json
 
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
-from django.views.generic import TemplateView, RedirectView
+from django.views.generic import TemplateView
 
 from artists.models import Entity
 from content.views import (AddContentView, EditContentView, ApproveContentView,
@@ -36,24 +36,6 @@ I jeszcze jeden i jeszcze raz
 class GetSongMixin(object):
     def get_object(self):
         return get_object_or_404(Song, slug=self.kwargs['slug'])
-
-
-def get_song_by_entity_or_404(song_slug, entity_slug):
-    song = get_object_or_404(Song, core_slug=song_slug)
-    entity = get_object_or_404(Entity, slug=entity_slug)
-    # verify that the song was reached via proper artist or band
-    if EntityContribution.objects.filter(song=song, entity=entity).count() == 0:
-        raise Http404()
-    return song
-
-
-class SongRedirectView(RedirectView):
-    # TODO: this should move elsewhere.
-    permanent = True
-
-    def get_redirect_url(self, *args, **kwargs):
-        song = get_song_by_entity_or_404(kwargs['slug'], kwargs['entity_slug'])
-        return song.get_absolute_url()
 
 
 class SongbookMenuMixin(object):
