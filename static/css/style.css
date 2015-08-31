@@ -158,6 +158,12 @@ body {
     margin-top: 10px;
 }
 
+.annotation-image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 /* about.html */
 
 .badgelist li {

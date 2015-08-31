@@ -196,7 +196,7 @@ THUMBNAIL_ALIASES = {
         'coverthumb': {'size': (420, 210), 'crop': True, 'upscale': True},
     },
     'songs.Annotation.image': {
-        'imagethumb': {'size': (280, 0), 'upscale': True},
+        'imagethumb': {'size': (0, 300), 'upscale': True},
     }
 }
 

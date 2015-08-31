@@ -144,7 +144,7 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
         </h1>
         {% if annotation.image %}
         <div class="thumbnail-host">
-          <img src="{{ annotation.image|thumbnail_url:'imagethumb'}}" width="100%" class="img-responsive" />
+          <img src="{{ annotation.image|thumbnail_url:'imagethumb'}}" class="annotation-image img-responsive"/>
             <div class="thumbnail-caption on-hover">
               <p class="pull-right"><a href="{{ annotation.image.url }}">pełny rozmiar</a></p>
             </div>
