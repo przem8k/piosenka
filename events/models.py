@@ -6,10 +6,36 @@ from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse_lazy
 from django.db import models
 
+from pygeocoder import Geocoder
+from pygeolib import GeocoderError
+
 from artists.models import Entity
 from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
 from content.slug import SlugLogicMixin, SlugFieldMixin
+
+
+class Performer(SlugFieldMixin, models.Model):
+    HELP_NAME = """Imię i nazwisko wykonawcy lub nazwa zespołu."""
+
+    name = models.CharField(max_length=50, help_text=HELP_NAME)
+    website = models.URLField(null=True, blank=True)
+    entity = models.ForeignKey(Entity, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    @staticmethod
+    def create_for_testing():
+        performer = Performer()
+        performer.name = str(uuid.uuid4())
+        performer.save()
+        return performer
+
+    # SlugFieldMixin:
+    def get_slug_elements(self):
+        return [self.name]
+
 
 
 class Venue(SlugFieldMixin, models.Model):
@@ -39,8 +65,6 @@ class Venue(SlugFieldMixin, models.Model):
 
     def clean(self):
         super().clean()
-        from pygeocoder import Geocoder
-        from pygeolib import GeocoderError
         address = str(self.street) + ', ' + str(self.town)
         try:
             geo = Geocoder.geocode(address)
@@ -65,7 +89,7 @@ class Venue(SlugFieldMixin, models.Model):
 class Event(SlugLogicMixin, ContentItem):
     HELP_NAME = """Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego'
 lub 'V Festiwal Piosenki Wymyślnej w Katowicach'."""
-    HELP_PRICE = """E.g. 20zł, wstęp wolny. W przypadku braku danych pozostaw
+    HELP_PRICE = """Np. 20zł, wstęp wolny. W przypadku braku danych pozostaw
 puste."""
     HELP_WEBSITE = """Strona internetowa wydarzenia, źródło informacji. W
 przypadku braku danych pozostaw puste."""
@@ -134,8 +158,6 @@ przypadku braku danych pozostaw puste."""
 
     # SlugLogicMixin:
     def get_slug_elements(self):
-        assert self.name
-        assert self.venue and self.venue.town
         return [self.name, self.venue.town]
 
     def lat(self):
@@ -151,6 +173,7 @@ przypadku braku danych pozostaw puste."""
 class EntityPerformance(models.Model):
     event = models.ForeignKey(Event)
     entity = models.ForeignKey(Entity)
+    performer = models.ForeignKey(Performer, null=True, blank=True)
 
     class Meta:
         unique_together = ("event", "entity")
