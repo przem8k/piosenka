@@ -108,7 +108,7 @@ True iff the lyrics contain repeated chords."""
 
     @models.permalink
     def get_absolute_url(self):
-        return ('song', (), self.get_url_params())
+        return ('view_song', (), self.get_url_params())
 
     @models.permalink
     def get_edit_url(self):

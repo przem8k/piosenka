@@ -73,7 +73,7 @@ Main illustration for the article."""
 
     @models.permalink
     def get_absolute_url(self):
-        return('article', (), self.get_url_params())
+        return('view_article', (), self.get_url_params())
 
     @models.permalink
     def get_edit_url(self):

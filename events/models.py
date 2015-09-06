@@ -142,7 +142,7 @@ przypadku braku danych pozostaw puste."""
 
     @models.permalink
     def get_absolute_url(self):
-        return ('event_detail', (), self.get_url_params())
+        return ('view_event', (), self.get_url_params())
 
     @models.permalink
     def get_edit_url(self):

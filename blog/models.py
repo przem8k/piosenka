@@ -62,7 +62,7 @@ class Post(SlugFieldMixin, ContentItem):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('post_detail', (), self.get_url_params())
+        return ('view_post', (), self.get_url_params())
 
     @models.permalink
     def get_edit_url(self):

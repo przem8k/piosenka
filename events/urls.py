@@ -10,7 +10,7 @@ urlpatterns = [
             url(r'^$', views.MonthArchiveRedirect.as_view(),
                 name="event_month_redirect"),
             url(r'^(?P<day>\d{2})/(?P<slug>[-\w]+)/', include([
-                url(r'^$', views.ViewEvent.as_view(), name="event_detail"),
+                url(r'^$', views.ViewEvent.as_view(), name="view_event"),
                 url(r'^edytuj/$', views.EditEvent.as_view(), name="edit_event"),
                 url(r'^korekta/$', views.ReviewEvent.as_view(),
                     name="review_event"),
