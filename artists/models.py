@@ -62,7 +62,7 @@ class Entity(SlugFieldMixin, models.Model):
 
     @models.permalink
     def get_gigs_url(self):
-        return ('entity_gigs', (), {'slug': self.slug})
+        return ('view_performer', (), {'slug': self.slug})
 
     def clean(self):
         super().clean()

@@ -1,11 +1,10 @@
 from datetime import datetime
+import time
 
 from django.core.urlresolvers import reverse
 from django.views.generic import DetailView, RedirectView, TemplateView
-from django.http import Http404
 
-from artists.models import Entity
-from events.models import EntityPerformance, Event, Venue
+from events.models import EntityPerformance, Event, Performer, Venue
 from events.forms import EventForm, PerformanceFormSet
 from events.mixins import EventMenuMixin
 from content.trevor import put_text_in_trevor
@@ -15,7 +14,6 @@ from content.views import (AddContentView, EditContentView, ApproveContentView,
 
 class GetEventMixin(object):
     def get_object(self):
-        import time
         year = self.kwargs['year']
         month = self.kwargs['month']
         day = self.kwargs['day']
@@ -52,21 +50,16 @@ class VenueDetail(DetailView):
         return context
 
 
-class EntityDetail(DetailView):
-    model = Entity
+class ViewPerformer(DetailView):
+    model = Performer
     context_object_name = "entity"
     template_name = "events/entity.html"
-
-    def dispatch(self, *args, **kwargs):
-        if not self.get_object().still_plays:
-            raise Http404
-        return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['events'] = [x.event for x in
                              EntityPerformance.objects.filter(
-                                 entity=self.object)
+                                 performer=self.object)
                              if x.event.can_be_seen_by(self.request.user)]
         return context
 

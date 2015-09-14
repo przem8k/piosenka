@@ -20,8 +20,8 @@ urlpatterns = [
             ])),
         ])),
     url(r'^dodaj/$', views.AddEvent.as_view(), name="add_event"),
-    url(r'^wykonawca/(?P<slug>[-\w]+)/$', views.EntityDetail.as_view(),
-        name="entity_gigs"),
+    url(r'^wykonawca/(?P<slug>[-\w]+)/$', views.ViewPerformer.as_view(),
+        name="view_performer"),
     url(r'^(?P<slug>[-\w]+)/$', views.VenueDetail.as_view(),
         name="venue_detail"),
 ]

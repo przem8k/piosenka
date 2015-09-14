@@ -32,6 +32,12 @@ class Performer(SlugFieldMixin, models.Model):
         performer.save()
         return performer
 
+    @models.permalink
+    def get_absolute_url(self):
+        return('view_performer', (), {
+            'slug': self.slug,
+        })
+
     # SlugFieldMixin:
     def get_slug_elements(self):
         return [self.name]
@@ -166,7 +172,8 @@ przypadku braku danych pozostaw puste."""
         return self.venue.lon
 
     def performers(self):
-        return [x.entity for x in EntityPerformance.objects.filter(event=self)]
+        return [x.performer for
+                x in EntityPerformance.objects.filter(event=self)]
 
 
 class EntityPerformance(models.Model):
@@ -176,8 +183,3 @@ class EntityPerformance(models.Model):
 
     class Meta:
         unique_together = ("event", "entity")
-
-    def clean(self):
-        super().clean()
-        if not self.entity.still_plays:
-            raise ValidationError("Ten artysta nie koncertuje.")

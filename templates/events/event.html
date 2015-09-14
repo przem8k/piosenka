@@ -21,14 +21,14 @@
                 {% if event.performers %}
                 <br />
                 <b>Kto: </b>
-                {% for entity in event.performers %}
-                <a href="{{ entity.get_gigs_url }}">{{ entity }}</a>
+                {% for performer in event.performers %}
+                <a href="{{ performer.get_absolute_url }}">{{ performer }}</a>
                 {% endfor %}
                 {% endif %}
                 <br />
                 {% if event.price %}
                 <b>Ceny biletów: </b>
-                {{event.price}}
+                {{ event.price }}
                 <br />
                 {% endif %}
 

@@ -1,23 +1,27 @@
 from django import forms
 from django.forms.models import ModelForm, inlineformset_factory
 
-from artists.models import Entity
 from events.models import EntityPerformance, Event, Venue
 
 
 class EventForm(forms.ModelForm):
-    date = forms.DateField(help_text="Dzień w formacie DD.MM.RRRR, np '22.03.2014'.",
-                           widget=forms.TextInput(attrs={'placeholder': 'DD.MM.RRRR'}))
-    time = forms.TimeField(help_text="Godzina w formacie GG:MM, np. '20:00'.",
-                           widget=forms.TextInput(attrs={'placeholder': 'HH:MM'}))
-    venue_selection = forms.ModelChoiceField(required=False, queryset=Venue.objects.all())
-    venue_name = forms.CharField(required=False, max_length=100,
-                                 help_text="Nazwa miejsca, np. 'Klub studencki Żaczek'.")
-    venue_town = forms.CharField(required=False, max_length=100,
-                                 help_text="Nazwa miasta lub miejscowości, np. 'Kraków', "
-                                           "'Kołobrzeg'.")
-    venue_street = forms.CharField(required=False, max_length=100,
-                                   help_text="Adres w ramach miasta, np. 'ul. Podwale 37/38'.")
+    date = forms.DateField(
+        help_text="Dzień w formacie DD.MM.RRRR, np '22.03.2014'.",
+        widget=forms.TextInput(attrs={'placeholder': 'DD.MM.RRRR'}))
+    time = forms.TimeField(
+        help_text="Godzina w formacie GG:MM, np. '20:00'.",
+        widget=forms.TextInput(attrs={'placeholder': 'HH:MM'}))
+    venue_selection = forms.ModelChoiceField(required=False,
+                                             queryset=Venue.objects.all())
+    venue_name = forms.CharField(
+        required=False, max_length=100,
+        help_text="Nazwa miejsca, np. 'Klub studencki Żaczek'.")
+    venue_town = forms.CharField(
+        required=False, max_length=100,
+        help_text="Nazwa miasta lub miejscowości, np. 'Kraków', 'Kołobrzeg'.")
+    venue_street = forms.CharField(
+        required=False, max_length=100,
+        help_text="Adres w ramach miasta, np. 'ul. Podwale 37/38'.")
 
     def clean(self):
         cleaned_data = super().clean()
@@ -49,14 +53,11 @@ class EventForm(forms.ModelForm):
 
 
 class EntityPerformanceForm(ModelForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['entity'].queryset = Entity.objects.filter(still_plays=True)
-
     class Meta:
         model = EntityPerformance
-        exclude = []
+        exclude = ['entity']
 
 
-PerformanceFormSet = inlineformset_factory(Event, EntityPerformance, form=EntityPerformanceForm,
+PerformanceFormSet = inlineformset_factory(Event, EntityPerformance,
+                                           form=EntityPerformanceForm,
                                            exclude=[])
