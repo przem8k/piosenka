@@ -180,6 +180,3 @@ class EntityPerformance(models.Model):
     event = models.ForeignKey(Event)
     entity = models.ForeignKey(Entity, null=True, blank=True)
     performer = models.ForeignKey(Performer, null=True, blank=True)
-
-    class Meta:
-        unique_together = ("event", "entity")
