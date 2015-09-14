@@ -37,7 +37,6 @@ class Performer(SlugFieldMixin, models.Model):
         return [self.name]
 
 
-
 class Venue(SlugFieldMixin, models.Model):
     name = models.CharField(max_length=100)
     town = models.CharField(max_length=100)
