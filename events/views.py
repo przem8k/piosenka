@@ -57,10 +57,11 @@ class ViewPerformer(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['events'] = [x.event for x in
-                             EntityPerformance.objects.filter(
-                                 performer=self.object)
-                             if x.event.can_be_seen_by(self.request.user)]
+        context['events'] = [
+            x.event for x in
+            EntityPerformance.objects.filter(
+                performer=self.object).order_by('event__datetime')
+            if x.event.can_be_seen_by(self.request.user)]
         return context
 
 
