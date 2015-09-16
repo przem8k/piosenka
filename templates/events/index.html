@@ -7,10 +7,8 @@
 {% endblock content-header %}
 
 {% block content-footer %}
-{% if user.is_authenticated %}
 <hr />
 <a href="{% url 'add_event' %}">Dodaj nowe wydarzenie</a>
-{% endif %}
 {% endblock content-footer %}
 
 {% block page-footer %}
