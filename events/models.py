@@ -22,8 +22,8 @@ class Performer(SlugFieldMixin, models.Model):
     website = models.URLField(null=True, blank=True)
     entity = models.ForeignKey(Entity, null=True, blank=True)
 
-    def __str__(self):
-        return self.name
+    class Meta:
+        ordering = ['name']
 
     @staticmethod
     def create_for_testing():
@@ -31,6 +31,9 @@ class Performer(SlugFieldMixin, models.Model):
         performer.name = str(uuid.uuid4())
         performer.save()
         return performer
+
+    def __str__(self):
+        return self.name
 
     @models.permalink
     def get_absolute_url(self):
