@@ -181,5 +181,4 @@ przypadku braku danych pozostaw puste."""
 
 class EntityPerformance(models.Model):
     event = models.ForeignKey(Event)
-    entity = models.ForeignKey(Entity, null=True, blank=True)
     performer = models.ForeignKey(Performer)
