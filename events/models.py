@@ -9,7 +9,6 @@ from django.db import models
 from pygeocoder import Geocoder
 from pygeolib import GeocoderError
 
-from artists.models import Entity
 from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
 from content.slug import SlugLogicMixin, SlugFieldMixin
@@ -20,7 +19,6 @@ class Performer(SlugFieldMixin, models.Model):
 
     name = models.CharField(max_length=50, help_text=HELP_NAME)
     website = models.URLField(null=True, blank=True)
-    entity = models.ForeignKey(Entity, null=True, blank=True)
 
     class Meta:
         ordering = ['name']
