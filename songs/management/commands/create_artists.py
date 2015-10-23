@@ -19,14 +19,14 @@ class Command(BaseCommand):
             artist.website = entity.website
             artist.entity = entity
 
-            if entity.kind == entity.KIND_TEXTER:
-                artist.category = artist.CAT_TEXTER
-            elif entity.kind == entity.KIND_COMPOSER:
-                artist.category = artist.CAT_COMPOSER
-            elif entity.kind == entity.KIND_FOREIGN:
-                artist.category = artist.CAT_FOREIGN
-            elif entity.kind == entity.KIND_BAND:
-                artist.category = artist.CAT_BAND
+            if entity.kind == Entity.TYPE_TEXTER:
+                artist.category = Artist.CAT_TEXTER
+            elif entity.kind == Entity.TYPE_COMPOSER:
+                artist.category = Artist.CAT_COMPOSER
+            elif entity.kind == Entity.TYPE_FOREIGN:
+                artist.category = Artist.CAT_FOREIGN
+            elif entity.kind == Entity.TYPE_BAND:
+                artist.category = Artist.CAT_BAND
 
             artist.save()
             print('Created artist: %s, slug: %s' % (artist.name,
