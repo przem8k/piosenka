@@ -9,13 +9,56 @@ from easy_thumbnails.signal_handlers import generate_aliases
 
 from artists.models import Entity
 from content.models import ContentItem
-from content.slug import SlugLogicMixin
+from content.slug import SlugLogicMixin, SlugFieldMixin
 from content.trevor import render_trevor, put_text_in_trevor
 from songs.lyrics import contain_extra_chords
 from songs.lyrics import parse_lyrics
 from songs.transpose import transpose_lyrics
 
 saved_file.connect(generate_aliases)
+
+
+class Artist(SlugFieldMixin, models.Model):
+    HELP_NAME = """Imię i nazwisko wykonawcy lub nazwa zespołu."""
+    HELP_FEATURED = """Czy artysta powinien być wyświetlany w spisie treści
+śpiewnika."""
+    HELP_CATEGORY = """W której części spisu treści artysta ma być wyświetlony.
+"""
+    CAT_TEXTER = 1
+    CAT_COMPOSER = 2
+    CAT_FOREIGN = 3
+    CAT_BAND = 4
+    FEATURED_CATEGORIES = (
+        (CAT_TEXTER, 'Wykonawca własnych tekstów'),
+        (CAT_COMPOSER, 'Kompozytor'),
+        (CAT_FOREIGN, 'Bard zagraniczny'),
+        (CAT_BAND, 'Zespół'),
+    )
+
+    name = models.CharField(max_length=50, help_text=HELP_NAME)
+    featured = models.BooleanField(default=False, help_text=HELP_FEATURED)
+    category = models.IntegerField(choices=FEATURED_CATEGORIES, null=True,
+                                   blank=True, help_text=HELP_CATEGORY)
+    website = models.URLField(null=True, blank=True)
+    entity = models.ForeignKey(Entity, null=True, blank=True,
+                               help_text='temp')
+
+    class Meta:
+        ordering = ['name']
+
+    @staticmethod
+    def create_for_testing():
+        artist = Artist()
+        artist.name = str(uuid.uuid4())
+        artist.save()
+        return artist
+
+    def __str__(self):
+        return self.name
+
+    # SlugFieldMixin:
+    def get_slug_elements(self):
+        return [self.name]
 
 
 def validate_capo_fret(value):
@@ -178,6 +221,8 @@ True iff the lyrics contain repeated chords."""
 
 class EntityContribution(models.Model):
     song = models.ForeignKey(Song)
+    artist = models.ForeignKey(Artist, verbose_name="artysta (nowy)", null=True,
+                               blank=True)
     entity = models.ForeignKey(Entity, verbose_name="artysta")
     performed = models.BooleanField(default=False, verbose_name="wyk.")
     texted = models.BooleanField(default=False, verbose_name="tekst")
@@ -193,7 +238,7 @@ class EntityContribution(models.Model):
     def clean(self):
         if (not self.performed and not self.texted and not self.translated and
                 not self.composed):
-            raise ValidationError("Zaznacz co najmniej jedną rolę autora.")
+            raise ValidationError("Zaznacz co najmniej jedną rolę artysty.")
 
     @staticmethod
     def head_contribution(contributions):
