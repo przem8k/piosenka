@@ -7,7 +7,6 @@ from django.db import models
 from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
 
-from artists.models import Entity
 from content.models import ContentItem
 from content.slug import SlugLogicMixin, SlugFieldMixin
 from content.trevor import render_trevor, put_text_in_trevor
@@ -40,8 +39,6 @@ class Artist(SlugFieldMixin, models.Model):
     category = models.IntegerField(choices=FEATURED_CATEGORIES, null=True,
                                    blank=True, help_text=HELP_CATEGORY)
     website = models.URLField(null=True, blank=True)
-    entity = models.ForeignKey(Entity, null=True, blank=True,
-                               help_text='temp')
 
     class Meta:
         ordering = ['name']
@@ -228,8 +225,6 @@ True iff the lyrics contain repeated chords."""
 class EntityContribution(models.Model):
     song = models.ForeignKey(Song)
     artist = models.ForeignKey(Artist, verbose_name='artysta')
-    entity = models.ForeignKey(Entity, verbose_name="artysta", null=True,
-                               blank=True)
     performed = models.BooleanField(default=False, verbose_name="wyk.")
     texted = models.BooleanField(default=False, verbose_name="tekst")
     translated = models.BooleanField(default=False, verbose_name="tł.")
