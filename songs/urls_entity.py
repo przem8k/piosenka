@@ -4,9 +4,9 @@ from songs import views
 from songs import redirects
 
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name="songbook"),
-    url(r'^(?P<slug>[-\w]+)/$', views.EntityView.as_view(),
-        name="songbook_entity"),
+    url(r'^$', views.IndexView.as_view(), name='songbook'),
+    url(r'^(?P<slug>[-\w]+)/$', views.ArtistView.as_view(),
+        name='view_artist'),
     # Obsolete url redirects.
     url(r'^(?P<entity_slug>[-\w]+)/(?P<slug>[-\w]+)/', include([
         url(r'^$', redirects.SongRedirectView.as_view()),

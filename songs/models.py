@@ -56,6 +56,12 @@ class Artist(SlugFieldMixin, models.Model):
     def __str__(self):
         return self.name
 
+    @models.permalink
+    def get_absolute_url(self):
+        return('view_artist', (), {
+            'slug': self.slug,
+        })
+
     # SlugFieldMixin:
     def get_slug_elements(self):
         return [self.name]
@@ -203,19 +209,19 @@ True iff the lyrics contain repeated chords."""
         return links
 
     def text_authors(self):
-        return [x.entity for x in
+        return [x.artist for x in
                 EntityContribution.objects.filter(song=self, texted=True)]
 
     def composers(self):
-        return [x.entity for x in
+        return [x.artist for x in
                 EntityContribution.objects.filter(song=self, composed=True)]
 
     def translators(self):
-        return [x.entity for x in
+        return [x.artist for x in
                 EntityContribution.objects.filter(song=self, translated=True)]
 
     def performers(self):
-        return [x.entity for x in
+        return [x.artist for x in
                 EntityContribution.objects.filter(song=self, performed=True)]
 
 

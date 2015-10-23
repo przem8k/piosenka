@@ -4,12 +4,11 @@ from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
 
-from artists.models import Entity
 from content.views import (AddContentView, EditContentView, ApproveContentView,
                            ReviewContentView, ViewContentView)
 from songs.forms import AnnotationForm, SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
-from songs.models import Annotation, Song, EntityContribution
+from songs.models import Annotation, Artist, Song, EntityContribution
 
 
 INITIAL_LYRICS = """\
@@ -41,18 +40,14 @@ class GetSongMixin(object):
 class SongbookMenuMixin(object):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["bards"] = Entity.objects.filter(
-            featured=True, kind=Entity.TYPE_TEXTER)
-        context["composers"] = Entity.objects.filter(
-            featured=True, kind=Entity.TYPE_COMPOSER)
-        context["translators"] = Entity.objects.filter(
-            featured=True, kind=Entity.TYPE_TRANSLATOR)
-        context["performers"] = Entity.objects.filter(
-            featured=True, kind=Entity.TYPE_PERFORMER)
-        context["foreigners"] = Entity.objects.filter(
-            featured=True, kind=Entity.TYPE_FOREIGN)
-        context["bands"] = Entity.objects.filter(
-            featured=True, kind=Entity.TYPE_BAND)
+        context["bards"] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_TEXTER)
+        context["composers"] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_COMPOSER)
+        context["foreigners"] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_FOREIGN)
+        context["bands"] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_BAND)
         return context
 
 
@@ -60,25 +55,25 @@ class IndexView(SongbookMenuMixin, TemplateView):
     template_name = "songs/index.html"
 
 
-class EntityView(SongbookMenuMixin, TemplateView):
-    """ Lists the songs associated with the given Entity object. """
+class ArtistView(SongbookMenuMixin, TemplateView):
+    """Lists the songs associated with the given artist."""
     template_name = "songs/list.html"
 
     def get_context_data(self, **kwargs):
         slug = kwargs['slug']
-        entity = get_object_or_404(Entity, slug=slug)
+        artist = get_object_or_404(Artist, slug=slug)
         contributions = EntityContribution.objects.filter(
-            entity=entity).select_related('song').order_by('song__title')
+            artist=artist).select_related('song').order_by('song__title')
         songs = [contribution.song for contribution in contributions
                  if contribution.song.can_be_seen_by(self.request.user)]
-        if not songs and not entity.featured:
+        if not songs and not artist.featured:
             # TODO: maybe one day throws 404 always if not featured? We would
             # only link to the artist from a Song view if they are featured.
             # Issue: we already have a few not featured pages indexed.
             raise Http404()
         context = super().get_context_data(**kwargs)
         context['songs'] = songs
-        context['entity'] = entity
+        context['artist'] = artist
         return context
 
 

@@ -1,20 +1,19 @@
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 
-from artists.models import Entity
 from base import testing
 from content.scenarios import TestScenariosMixin
-from songs.models import EntityContribution, Song
+from songs.models import Artist, EntityContribution, Song
 
 
 class SongUrlTest(TestScenariosMixin, TestCase):
     item_cls = Song
 
-    def add_contribution(self, song, entity, performed=False, texted=False,
+    def add_contribution(self, song, artist, performed=False, texted=False,
                          translated=False, composed=False):
         contribution = EntityContribution()
         contribution.song = song
-        contribution.entity = entity
+        contribution.artist = artist
         contribution.performed = performed
         contribution.texted = texted
         contribution.translated = translated
@@ -27,7 +26,7 @@ class SongUrlTest(TestScenariosMixin, TestCase):
 
     def test_entity_index(self):
         author = testing.create_user()
-        jack_white = Entity.create_for_testing()
+        jack_white = Artist.create_for_testing()
         seven_nations_army = Song.create_for_testing(author)
         self.add_contribution(seven_nations_army, jack_white, True)
         jolene = Song.create_for_testing(author)

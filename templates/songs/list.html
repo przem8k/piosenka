@@ -2,8 +2,8 @@
 
 {% load list_partition %}
 
-{% block title %}Śpiewnik piosenek {{ entity }} - teksty i akordy{% endblock title %}
-{% block description %}Śpiewnik zawiera teksty i akordy do piosenek - artysta: {{ entity }}.{% endblock description %}
+{% block title %}Śpiewnik piosenek {{ artist }} - teksty i akordy{% endblock title %}
+{% block description %}Śpiewnik zawiera teksty i akordy do piosenek - artysta: {{ artist }}.{% endblock description %}
 
 {% block content %}
 <div class="container">
@@ -11,7 +11,7 @@
     <div class="col-md-12">
       <div class="section">
         <div class="content">
-          <h1 class="remove-top-margin">{{ entity }}</h1>
+          <h1 class="remove-top-margin">{{ artist }}</h1>
 
           <div class="row">
             {% for row in songs|rows:2 %}
