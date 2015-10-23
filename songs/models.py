@@ -227,8 +227,7 @@ True iff the lyrics contain repeated chords."""
 
 class EntityContribution(models.Model):
     song = models.ForeignKey(Song)
-    artist = models.ForeignKey(Artist, verbose_name="artysta (nowy)", null=True,
-                               blank=True)
+    artist = models.ForeignKey(Artist, verbose_name='artysta')
     entity = models.ForeignKey(Entity, verbose_name="artysta", null=True,
                                blank=True)
     performed = models.BooleanField(default=False, verbose_name="wyk.")
