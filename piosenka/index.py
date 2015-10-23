@@ -5,8 +5,7 @@ from django.http import HttpResponse
 from django.views.decorators.cache import cache_control
 from django.views.generic.base import View
 
-from songs.models import Song
-from artists.models import Entity
+from songs.models import Artist, Song
 
 
 class JSONSearchIndexMixin(object):
@@ -20,15 +19,15 @@ class JSONSearchIndexMixin(object):
                             **httpresponse_kwargs)
 
 
-class EntitySearchIndex(JSONSearchIndexMixin, View):
+class ArtistSearchIndex(JSONSearchIndexMixin, View):
     def get(self, request, *args, **kwargs):
         index = []
-        for entity in Entity.objects.all():
+        for artist in Artist.objects.all():
             index.append({
-                "name": entity.__str__(),
-                "value": entity.__str__(),
-                "tokens": entity.__str__().split(),
-                "url": entity.get_absolute_url()
+                "name": artist.__str__(),
+                "value": artist.__str__(),
+                "tokens": artist.__str__().split(),
+                "url": artist.get_absolute_url()
             })
         return self.render_to_response({"index": index})
 
@@ -48,6 +47,6 @@ class SongSearchIndex(JSONSearchIndexMixin, View):
 
 urlpatterns = patterns(
     '',
-    url(r'^artists$', EntitySearchIndex.as_view(), name="search_index_artists"),
+    url(r'^artists$', ArtistSearchIndex.as_view(), name="search_index_artists"),
     url(r'^songs$', SongSearchIndex.as_view(), name="search_index_songs"),
 )
