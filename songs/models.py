@@ -248,7 +248,7 @@ class EntityContribution(models.Model):
                       [x for x in contributions if x.composed] +
                       [x for x in contributions if x.translated])
         for cand in candidates:
-            if cand.entity.featured:
+            if cand.artist.featured:
                 return cand
         for cand in candidates:
             return cand

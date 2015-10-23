@@ -127,7 +127,7 @@ class AddSong(AddContentView):
         head = EntityContribution.head_contribution([x.instance for x in
                                                      contributions])
         assert head
-        form.instance.set_slug_prepend_elements([head.entity.__str__()])
+        form.instance.set_slug_prepend_elements([head.artist.__str__()])
         return super().form_valid(form, formsets)
 
     def get_success_url(self):
