@@ -235,9 +235,8 @@ class EntityContribution(models.Model):
     translated = models.BooleanField(default=False, verbose_name="tł.")
     composed = models.BooleanField(default=False, verbose_name="muz.")
 
-    #TODO: reintroduce as 'song', 'artist'
-    #class Meta:
-    #    unique_together = (('song', 'entity'),)
+    class Meta:
+        unique_together = (('song', 'artist'),)
 
     def __str__(self):
         return self.entity.__str__() + " - " + self.song.title
