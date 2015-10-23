@@ -5,15 +5,14 @@ from django.http import Http404
 from django.shortcuts import get_object_or_404
 from django.views.generic import RedirectView
 
-from artists.models import Entity
-from songs.models import Song, EntityContribution
+from songs.models import Artist, Song, EntityContribution
 
 
 def _get_song_by_entity_or_404(song_old_slug, entity_slug):
     song = get_object_or_404(Song, old_slug=song_old_slug)
-    entity = get_object_or_404(Entity, slug=entity_slug)
+    artist = get_object_or_404(Artist, slug=entity_slug)
     # verify that the song was reached via proper artist or band
-    if EntityContribution.objects.filter(song=song, entity=entity).count() == 0:
+    if EntityContribution.objects.filter(song=song, artist=artist).count() == 0:
         raise Http404()
     return song
 
