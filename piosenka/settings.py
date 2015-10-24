@@ -175,7 +175,6 @@ INSTALLED_APPS = (
     # PzT.
     'base',
     'blog',
-    'artists',
     'articles',
     'songs',
     'events',

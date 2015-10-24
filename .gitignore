@@ -5,8 +5,6 @@
 *~
 settings_production.py
 settings_local.py
-songs/fixtures
-artists/fixtures
 piosenka.db
 site_media
 node_modules
