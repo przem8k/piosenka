@@ -8,8 +8,6 @@ from django.conf import settings
 
 class Migration(migrations.Migration):
 
-    replaces = [('events', '0001_initial'), ('events', '0002_auto_20141213_1704'), ('events', '0003_auto_20141221_2053'), ('events', '0004_auto_20141221_2255'), ('events', '0005_auto_20150305_2228'), ('events', '0006_auto_20150503_1914'), ('events', '0007_auto_20150822_1700'), ('events', '0008_auto_20150906_1511'), ('events', '0009_auto_20150914_2235'), ('events', '0010_auto_20150914_2254'), ('events', '0011_auto_20150916_2337'), ('events', '0012_auto_20151015_0520'), ('events', '0013_remove_entityperformance_entity'), ('events', '0014_remove_performer_entity')]
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('artists', '0001_squashed_0004_delete_entity'),
