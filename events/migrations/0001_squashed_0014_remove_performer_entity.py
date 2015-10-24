@@ -18,7 +18,6 @@ class Migration(migrations.Migration):
             name='EntityPerformance',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('entity', models.ForeignKey(to='artists.Entity')),
             ],
         ),
         migrations.CreateModel(
@@ -65,10 +64,6 @@ class Migration(migrations.Migration):
             name='event',
             field=models.ForeignKey(to='events.Event'),
         ),
-        migrations.AlterUniqueTogether(
-            name='entityperformance',
-            unique_together=set([('event', 'entity')]),
-        ),
         migrations.AddField(
             model_name='event',
             name='reviewed',
@@ -104,7 +99,6 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(unique=True, max_length=100, editable=False)),
                 ('name', models.CharField(help_text='Imię i nazwisko wykonawcy lub nazwa zespołu.', max_length=50)),
                 ('website', models.URLField(null=True, blank=True)),
-                ('entity', models.ForeignKey(null=True, blank=True, to='artists.Entity')),
             ],
             options={
                 'abstract': False,
@@ -123,15 +117,6 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='entityperformance',
-            name='entity',
-            field=models.ForeignKey(null=True, blank=True, to='artists.Entity'),
-        ),
-        migrations.AlterUniqueTogether(
-            name='entityperformance',
-            unique_together=set([]),
-        ),
-        migrations.AlterField(
-            model_name='entityperformance',
             name='performer',
             field=models.ForeignKey(default=1, to='events.Performer'),
             preserve_default=False,
@@ -139,13 +124,5 @@ class Migration(migrations.Migration):
         migrations.AlterModelOptions(
             name='performer',
             options={'ordering': ['name']},
-        ),
-        migrations.RemoveField(
-            model_name='entityperformance',
-            name='entity',
-        ),
-        migrations.RemoveField(
-            model_name='performer',
-            name='entity',
         ),
     ]
