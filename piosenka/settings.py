@@ -58,7 +58,18 @@ SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, "site_media")
 STATICFILES_DIRS = (
     ("", os.path.join(PROJECT_PATH, "static")),
     ("scripts", os.path.join(PROJECT_PATH, "songs", "scripts")),
+    os.path.join(PROJECT_PATH, 'client', 'assets'),
 )
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(PROJECT_PATH,
+                                   'client', 'webpack-stats.json'),
+        'IGNORE': ['.+\.hot-update.js', '.+\.map']
+    },
+}
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 if DEBUG:
@@ -69,9 +80,6 @@ if DEBUG:
 PIPELINE_CSS = {
     'piosenka': {
         'source_filenames': (
-            'css/style.css',
-            'css/search.css',
-            'css/song.css',
             'third_party/bootstrap/css/bootstrap.css',
         ),
         'output_filename': 'css/piosenka.css',
@@ -84,13 +92,6 @@ PIPELINE_CSS = {
         ),
         'output_filename': 'css/sirtrevor.css',
     },
-    'frontpage': {
-        'source_filenames': (
-            'css/carousel.css',
-            'css/comments.css',
-        ),
-        'output_filename': 'css/frontpage.css',
-    },
 }
 
 PIPELINE_JS = {
@@ -99,8 +100,6 @@ PIPELINE_JS = {
             'third_party/jquery/jquery-2.1.1.js',
             'third_party/typeahead/typeahead-0.10.4.js',
             'third_party/bootstrap/js/bootstrap.js',
-            'js/search.js',
-            'js/messages.js',
         ),
         'output_filename': 'js/piosenka.js',
     },
@@ -111,13 +110,6 @@ PIPELINE_JS = {
             'third_party/sirtrevor/js/sir-trevor.js',
         ),
         'output_filename': 'js/sirtrevor.js',
-    },
-    'frontpage': {
-        'source_filenames': (
-            'js/comments.js',
-            'js/start_carousel.js',
-        ),
-        'output_filename': 'js/frontpage.js',
     },
 }
 
@@ -172,6 +164,7 @@ INSTALLED_APPS = (
     # Third-party.
     'easy_thumbnails',
     'pipeline',
+    'webpack_loader',
     # PzT.
     'base',
     'blog',

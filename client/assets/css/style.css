@@ -1,5 +1,5 @@
 body {
-    background: url("../images/patterns/groovepaper.png");
+    background: url("../images/groovepaper.png");
 }
 
 @media screen {
@@ -32,7 +32,7 @@ body {
 
 .header {
     border-bottom: 1px solid #BBB;
-    background: url("../images/patterns/paper.png");
+    background: url("../images/paper.png");
 }
 
 .header h1, .header h2 {
@@ -46,7 +46,7 @@ body {
 .footer {
     padding: 20px 0 20px 0;
     border-top: 1px solid #BBB;
-    background: url("../images/patterns/paper.png");
+    background: url("../images/paper.png");
 }
 
 /* margin tools */
@@ -224,7 +224,7 @@ body {
 /* other */
 
 .date {
-    background: url("../images/date.gif") left no-repeat;
+    background: url("../images/date.png") left no-repeat;
     padding: 0 0 0 15px;
 }
 

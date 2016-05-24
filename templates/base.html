@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load pipeline %}
+{% load render_bundle from webpack_loader %}
 <!DOCTYPE HTML>
 <html lang="pl">
   <head>
@@ -12,6 +13,7 @@
     <link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
     {% stylesheet 'piosenka' %}
+    {% render_bundle 'main' 'css' %}
     {% block extra-css %}{% endblock extra-css %}
   </head>
 
@@ -142,9 +144,10 @@
     {% javascript 'piosenka' %}
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
+    {% render_bundle 'main' 'js' %}
+
     {% block extra-scripts %}{% endblock extra-scripts %}
     <script>
-      $('.tip').tooltip({});
     </script>
 
     <script>
