@@ -12,7 +12,14 @@
 
     <link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
-    {% stylesheet 'piosenka' %}
+
+    <!-- Legacy stylesheets to be included in the webpack bundle -->
+    <link href="{% static "third_party/bootstrap/css/bootstrap.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "third_party/sirtrevor/css/sir-trevor.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "third_party/sirtrevor/css/sir-trevor-icons.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/sirtrevor.css" %}" rel="stylesheet" type="text/css" />
+
+    <!-- Webpack-managed stylesheets. -->
     {% render_bundle 'main' 'css' %}
     {% block extra-css %}{% endblock extra-css %}
   </head>
@@ -141,14 +148,19 @@
       </div>
     </div>
 
-    {% javascript 'piosenka' %}
+    <!-- Legacy scripts to be included in the webpack bundle -->
+    <script type="text/javascript" src="{% static "third_party/jquery/jquery-2.1.1.js" %}" charset="utf-8"></script>
+    <script type="text/javascript" src="{% static "third_party/typeahead/typeahead-0.10.4.js" %}" charset="utf-8"></script>
+    <script type="text/javascript" src="{% static "third_party/bootstrap/js/bootstrap.js" %}" charset="utf-8"></script>
+    <script type="text/javascript" src="{% static "third_party/sirtrevor/js/underscore.js" %}" charset="utf-8"></script>
+    <script type="text/javascript" src="{% static "third_party/sirtrevor/js/eventable.js" %}" charset="utf-8"></script>
+    <script type="text/javascript" src="{% static "third_party/sirtrevor/js/sir-trevor.js" %}" charset="utf-8"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
+    <!-- Webpack-managed js. -->
     {% render_bundle 'main' 'js' %}
 
     {% block extra-scripts %}{% endblock extra-scripts %}
-    <script>
-    </script>
 
     <script>
       if (typeof(load_location) == "function") {

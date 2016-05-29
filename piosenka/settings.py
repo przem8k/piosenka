@@ -77,41 +77,6 @@ if DEBUG:
     # https://github.com/cyberdelia/django-pipeline/issues/277 .
     STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 
-PIPELINE_CSS = {
-    'piosenka': {
-        'source_filenames': (
-            'third_party/bootstrap/css/bootstrap.css',
-        ),
-        'output_filename': 'css/piosenka.css',
-    },
-    'sirtrevor': {
-        'source_filenames': (
-            'third_party/sirtrevor/css/sir-trevor.css',
-            'third_party/sirtrevor/css/sir-trevor-icons.css',
-            'css/sirtrevor.css',
-        ),
-        'output_filename': 'css/sirtrevor.css',
-    },
-}
-
-PIPELINE_JS = {
-    'piosenka': {
-        'source_filenames': (
-            'third_party/jquery/jquery-2.1.1.js',
-            'third_party/typeahead/typeahead-0.10.4.js',
-            'third_party/bootstrap/js/bootstrap.js',
-        ),
-        'output_filename': 'js/piosenka.js',
-    },
-    'sirtrevor': {
-        'source_filenames': (
-            'third_party/sirtrevor/js/underscore.js',
-            'third_party/sirtrevor/js/eventable.js',
-            'third_party/sirtrevor/js/sir-trevor.js',
-        ),
-        'output_filename': 'js/sirtrevor.js',
-    },
-}
 
 PIPELINE_YUGLIFY_BINARY = os.path.join(PROJECT_PATH,
                                        'node_modules/yuglify/bin/yuglify')
