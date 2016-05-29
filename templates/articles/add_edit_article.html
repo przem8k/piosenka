@@ -1,15 +1,8 @@
 {% extends "articles/base.html" %}
-{% load pipeline %}
 
 {% block title %}{% if article %}Edytuj artykuł: {{ article }}{% else %}Dodaj artykuł{% endif %}{% endblock title %}
 
-{% block extra-css %}
-{% stylesheet 'sirtrevor' %}
-{% endblock %}
-
 {% block extra-scripts %}
-{% javascript 'sirtrevor' %}
-
 <script>
 $(document).ready(function(){
     new SirTrevor.Editor({

@@ -1,13 +1,6 @@
 {% extends "songs/base.html" %}
-{% load pipeline %}
-
-{% block extra-css %}
-{% stylesheet 'sirtrevor' %}
-{% endblock %}
 
 {% block extra-scripts %}
-{% javascript 'sirtrevor' %}
-
 <script>
 $(document).ready(function(){
     new SirTrevor.Editor({

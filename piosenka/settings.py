@@ -71,17 +71,6 @@ WEBPACK_LOADER = {
     },
 }
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
-if DEBUG:
-    # Workaround for
-    # https://github.com/cyberdelia/django-pipeline/issues/277 .
-    STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
-
-
-PIPELINE_YUGLIFY_BINARY = os.path.join(PROJECT_PATH,
-                                       'node_modules/yuglify/bin/yuglify')
-PIPELINE_DISABLE_WRAPPER = True
-
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
@@ -128,7 +117,6 @@ INSTALLED_APPS = (
     'django.contrib.redirects',
     # Third-party.
     'easy_thumbnails',
-    'pipeline',
     'webpack_loader',
     # PzT.
     'base',
