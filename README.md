@@ -1,16 +1,12 @@
 # Piosenka z tekstem #
 
-[![Build Status](https://drone.io/github.com/pietrzkiewicz/piosenka/status.png)](https://drone.io/github.com/pietrzkiewicz/piosenka/latest)
+[![Build Status](https://drone.io/github.com/ppiet/piosenka/status.png)](https://drone.io/github.com/pietrzkiewicz/piosenka/latest)
 
 ## Local dev setup ##
 
 Install python requirements by running:
 
 > pip install -r requirements.txt
-
-Install node dependencies by running:
-
-> npm install
 
 ## Restoring from backup ##
 
