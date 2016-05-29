@@ -234,7 +234,7 @@ class EntityContribution(models.Model):
         unique_together = (('song', 'artist'),)
 
     def __str__(self):
-        return self.entity.__str__() + " - " + self.song.title
+        return self.artist.__str__() + " - " + self.song.title
 
     def clean(self):
         if (not self.performed and not self.texted and not self.translated and
