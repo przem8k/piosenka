@@ -306,7 +306,7 @@ Used in urls, has to be unique."""
         return annotation
 
     def __str__(self):
-        return "%s - adnotacja do piosenki %s" % (self.title, self.song.title)
+        return self.title
 
     def get_id(self):
         return self.slug
