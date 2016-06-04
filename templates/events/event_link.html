@@ -1,3 +1,5 @@
 <span class="date">{{ event.datetime|date:"d.m.Y" }}</span>, 
-<b>{{ event.venue.town }}</b>, 
-{% include "components/content_link.html" with item=event %}
+{% if event.location %}
+<b>{{ event.location }}</b>, 
+{% endif %}
+<a href="{{ event.get_absolute_url }}">{{ event }}</a>

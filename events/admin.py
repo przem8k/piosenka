@@ -1,4 +1,4 @@
-from events.models import Event, Venue, EntityPerformance, Performer
+from events.models import Event, FbEvent, Venue, EntityPerformance, Performer
 from django.contrib import admin
 
 
@@ -10,6 +10,9 @@ class EntityPerformanceInlineAdmin(admin.TabularInline):
 class EventAdmin(admin.ModelAdmin):
     inlines = (EntityPerformanceInlineAdmin, )
 
+class FbEventAdmin(admin.ModelAdmin):
+    pass
+
 
 class PerformerAdmin(admin.ModelAdmin):
     pass
@@ -20,4 +23,5 @@ class VenueAdmin(admin.ModelAdmin):
 
 admin.site.register(Performer, PerformerAdmin)
 admin.site.register(Event, EventAdmin)
+admin.site.register(FbEvent, FbEventAdmin)
 admin.site.register(Venue, VenueAdmin)

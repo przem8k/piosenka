@@ -17,12 +17,14 @@ try:
 
     from piosenka.settings_production import S3BUCKET
     from piosenka.settings_production import GOOGLE_MAPS_API_KEY
+
+    from piosenka.settings_production import FB_APP_ID
+    from piosenka.settings_production import FB_APP_SECRET
     DEBUG = False
 except ImportError:
     # Load non-prod settings.
     try:
         from piosenka.settings_local import DATABASES
-        from piosenka.settings_local import GOOGLE_MAPS_API_KEY
     except ImportError:
         DATABASES = {
             'default': {
@@ -30,12 +32,24 @@ except ImportError:
                 'NAME': 'piosenka.db',
             }
         }
+
+    try:
+        from piosenka.settings_local import GOOGLE_MAPS_API_KEY
+    except ImportError:
         GOOGLE_MAPS_API_KEY = ""
+
+    try:
+        from piosenka.settings_local import FB_APP_ID
+        from piosenka.settings_local import FB_APP_SECRET
+    except ImportError:
+        print('FB credentials not set')
+
     SECRET_KEY = "piosenka"
     DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
 
+USE_TZ = True
 TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'pl'
 
@@ -118,6 +132,7 @@ INSTALLED_APPS = (
     # Third-party.
     'easy_thumbnails',
     'webpack_loader',
+    'facebook',
     # PzT.
     'base',
     'blog',

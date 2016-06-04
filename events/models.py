@@ -19,6 +19,8 @@ class Performer(SlugFieldMixin, models.Model):
 
     name = models.CharField(max_length=50, help_text=HELP_NAME)
     website = models.URLField(null=True, blank=True)
+    fb_page_id = models.CharField(max_length=100, unique=True, null=True,
+                                  blank=True)
 
     class Meta:
         ordering = ['name']
@@ -172,6 +174,9 @@ przypadku braku danych pozostaw puste."""
     def lon(self):
         return self.venue.lon
 
+    def location(self):
+        return self.venue.town
+
     def performers(self):
         return [x.performer for
                 x in EntityPerformance.objects.filter(event=self)]
@@ -180,3 +185,20 @@ przypadku braku danych pozostaw puste."""
 class EntityPerformance(models.Model):
     event = models.ForeignKey(Event)
     performer = models.ForeignKey(Performer)
+
+class FbEvent(models.Model):
+    fb_id = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100)
+    datetime = models.DateTimeField()
+    town = models.CharField(max_length=100, null=True)
+    lat = models.FloatField(null=True)
+    lon = models.FloatField(null=True)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return 'https://www.facebook.com/events/%s/' % (self.fb_id)
+
+    def location(self):
+        return self.town

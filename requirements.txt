@@ -5,3 +5,5 @@ easy-thumbnails==2.2
 pygeocoder==1.2.5
 Unidecode==0.04.17
 django-webpack-loader==0.3.0
+facebook-sdk==1.0.0
+pytz==2016.4
