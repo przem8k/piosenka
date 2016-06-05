@@ -29,29 +29,32 @@ class Command(BaseCommand):
             print('Got %d events for %s' % (len(events), performer))
 
             for event_data in events:
-                name = event_data['name']
-
-                datetime = parse_datetime(event_data['start_time'])
-                if datetime < timezone.now():
-                    continue
-
                 fb_id = event_data['id']
-                if FbEvent.objects.filter(fb_id=fb_id).exists():
-                    print('Skipping %s - exists' % (name))
+                start_time = parse_datetime(event_data['start_time'])
+
+                # Don't add new event if it's already passed.
+                exists = FbEvent.objects.filter(fb_id=fb_id).exists()
+                if not exists and start_time < timezone.now():
                     continue
 
-                extra_args = dict()
+                name = event_data['name']
+                if not exists:
+                    fb_event = FbEvent(fb_id=fb_id, name=name,
+                                       datetime=start_time)
+                else:
+                    fb_event = FbEvent.objects.get(fb_id=fb_id)
+                    fb_event.name = name
+                    fb_event.datetime = start_time
+
                 if 'place' in event_data and 'location' in event_data['place']:
                     location_data = event_data['place']['location']
                     if ('latitude' in location_data and
                         'longitude' in location_data):
-                        extra_args['lat'] = location_data['latitude']
-                        extra_args['lon'] = location_data['longitude']
+                        fb_event.lat = location_data['latitude']
+                        fb_event.lon = location_data['longitude']
                     if 'city' in location_data:
-                        extra_args['town'] = location_data['city']
+                        fb_event.town = location_data['city']
 
-                fb_event = FbEvent(fb_id=fb_id, name=name, datetime=datetime,
-                                   **extra_args)
                 fb_event.save()
-
-                print("created %s at %s" % (name, str(datetime)))
+                print("created or updated %s at %s" % (fb_event.name,
+                                                       str(start_time)))
