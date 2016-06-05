@@ -1,4 +1,4 @@
-from datetime import datetime
+import sys
 
 from django.core.management.base import BaseCommand
 from django.conf import settings
@@ -14,6 +14,9 @@ class Command(BaseCommand):
     help = 'Imports events from FB'
 
     def handle(self, *args, **options):
+        # Workaround running from cron encoding problems.
+        sys.stdout = open(1, 'w', encoding='utf-8', closefd=False)
+
         token = facebook.GraphAPI().get_app_access_token(settings.FB_APP_ID,
                                                          settings.FB_APP_SECRET)
         graph = facebook.GraphAPI(access_token=token)

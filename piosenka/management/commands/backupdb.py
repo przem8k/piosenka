@@ -2,9 +2,10 @@
  Command for site backup in the cloud.
 """
 
-import os
-import time
 from io import StringIO
+import os
+import sys
+import time
 
 from django.conf import settings
 from django.core.management.base import BaseCommand
@@ -15,6 +16,9 @@ class Command(BaseCommand):
     help = "Backup the site in the cloud."
 
     def handle(self, *args, **options):
+        # Workaround running from cron encoding problems.
+        sys.stdout = open(1, 'w', encoding='utf-8', closefd=False)
+
         self.engine = settings.DATABASES['default']['ENGINE']
         self.db = settings.DATABASES['default']['NAME']
         self.user = settings.DATABASES['default']['USER']
