@@ -5,6 +5,7 @@ import uuid
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse_lazy
 from django.db import models
+from django.utils import timezone
 
 from pygeocoder import Geocoder
 from pygeolib import GeocoderError
@@ -121,7 +122,7 @@ przypadku braku danych pozostaw puste."""
         event.author = author
         event.name = str(uuid.uuid4()).replace("-", "")
         event.description_trevor = put_text_in_trevor("Abc")
-        event.datetime = datetime.now() + timedelta(days=365)
+        event.datetime = timezone.now() + timedelta(days=365)
         event.venue = venue if venue else Venue.create_for_testing()
         event.save()
         return event
@@ -202,3 +203,11 @@ class FbEvent(models.Model):
 
     def location(self):
         return self.town
+
+
+def get_events_for(user):
+    site_events = Event.items_visible_to(user).filter(
+        datetime__gte=timezone.now())
+    fb_events = FbEvent.objects.filter(datetime__gte=timezone.now())
+    return sorted(list(site_events) + list(fb_events),
+                  key=lambda event: event.datetime)

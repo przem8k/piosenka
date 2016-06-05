@@ -1,9 +1,10 @@
 import hashlib
 import random
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 
 def _get_default_invitation_key():
@@ -13,7 +14,7 @@ def _get_default_invitation_key():
 
 
 def _get_default_expires_on():
-    return datetime.now() + timedelta(days=7)
+    return timezone.now() + timedelta(days=7)
 
 
 class Invitation(models.Model):

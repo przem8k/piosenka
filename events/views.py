@@ -2,9 +2,11 @@ from datetime import datetime
 import time
 
 from django.core.urlresolvers import reverse
+from django.utils import timezone
 from django.views.generic import DetailView, RedirectView, TemplateView
 
 from events.models import EntityPerformance, Event, FbEvent, Performer, Venue
+from events.models import get_events_for
 from events.forms import EventForm, PerformanceFormSet
 from events.mixins import EventMenuMixin
 from content.trevor import put_text_in_trevor
@@ -31,10 +33,7 @@ class EventIndex(EventMenuMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        site_events = Event.items_visible_to(self.request.user)\
-                                 .filter(datetime__gte=datetime.now())
-        fb_events = FbEvent.objects.filter(datetime__gte=datetime.now())
-        context['events'] = list(site_events) + list(fb_events)
+        context['events'] = get_events_for(self.request.user)
         return context
 
 

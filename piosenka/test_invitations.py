@@ -1,9 +1,10 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 from django.contrib.auth.models import User
 from django.core import mail
 from django.core.urlresolvers import reverse
 from django.test import TestCase
+from django.utils import timezone
 
 from base import testing
 from piosenka.models import Invitation
@@ -146,7 +147,7 @@ class InvitationTest(TestCase):
         email_address = 'alice@example.com'
         invitation = Invitation.create_for_testing(
             email_address, testing.create_user())
-        invitation.expires_on = datetime.now() - timedelta(days=1)
+        invitation.expires_on = timezone.now() - timedelta(days=1)
         invitation.save()
         self.assertTrue(invitation.is_valid)
 

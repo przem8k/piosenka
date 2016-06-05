@@ -1,8 +1,7 @@
-import datetime
-
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
+from django.utils import timezone
 
 
 class ContentItem(models.Model):
@@ -20,7 +19,7 @@ class ContentItem(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.pub_date:
-            self.pub_date = datetime.datetime.now()
+            self.pub_date = timezone.now()
         return super().save(*args, **kwargs)
 
     @classmethod

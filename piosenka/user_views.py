@@ -7,6 +7,7 @@ from django.contrib.auth.models import User, Group
 from django.contrib.auth.views import login, logout
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.http import HttpResponseRedirect, Http404
+from django.utils import timezone
 from django.utils.decorators import method_decorator
 from django.views.generic import View, TemplateView
 from django.views.generic.edit import FormView, CreateView
@@ -109,7 +110,7 @@ class JoinView(FormView):
     def get_invitation(self):
         invitation = Invitation.objects.get(
             invitation_key=self.kwargs['invitation_key'])
-        if not invitation.is_valid or invitation.expires_on < datetime.today():
+        if not invitation.is_valid or invitation.expires_on < timezone.now():
             raise Http404
         return invitation
 
