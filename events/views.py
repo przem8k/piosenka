@@ -34,6 +34,8 @@ class EventIndex(EventMenuMixin, TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['events'] = get_events_for(self.request.user)
+        context['performers'] = Performer.objects.filter(
+            fb_page_id__isnull=False).exclude(fb_page_id='')
         return context
 
 

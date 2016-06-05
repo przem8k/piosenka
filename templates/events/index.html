@@ -24,6 +24,25 @@
         <h1>Mapa</h1>
         {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
       </div>
+      <div class="section">
+        <h1>Wykonawcy</h1>
+        <p>Strona śledzi występy drogich naszym sercom wykonawców. Wydarzenia powiązane z oficjalnymi profilami na Facebooku są dodawane automatycznie.</p>
+        {% for performer in performers %}
+        <h3>{{ performer }}</h3>
+        <p>
+        {% if performer.website %}
+        <a href="{{ performer.website }}" target="_blank">strona www
+                <span class="glyphicon glyphicon-new-window"></span>
+        </a>
+        {% endif %}
+        {% if performer.fb_page_id %}
+        <a href="https://www.facebook.com/{{performer.fb_page_id}}" target="_blank">Facebook
+                <span class="glyphicon glyphicon-new-window"></span>
+        </a>
+        {% endif %}
+        </p>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
