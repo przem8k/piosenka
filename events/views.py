@@ -37,32 +37,18 @@ class EventIndex(EventMenuMixin, TemplateView):
         return context
 
 
-class VenueDetail(DetailView):
-    model = Venue
-    context_object_name = "venue"
-    template_name = "events/venue.html"
+class VenueDetailRedirect(RedirectView):
+    permanent = True
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['events'] = Event.items_visible_to(self.request.user)\
-                                 .filter(venue=self.object)\
-                                 .order_by('datetime')
-        return context
+    def get_redirect_url(self, *args, **kwargs):
+        return reverse('event_index')
 
 
-class ViewPerformer(DetailView):
-    model = Performer
-    context_object_name = "entity"
-    template_name = "events/entity.html"
+class ViewPerformerRedirect(RedirectView):
+    permanent = True
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['events'] = [
-            x.event for x in
-            EntityPerformance.objects.filter(
-                performer=self.object).order_by('event__datetime')
-            if x.event.can_be_seen_by(self.request.user)]
-        return context
+    def get_redirect_url(self, *args, **kwargs):
+        return reverse('event_index')
 
 
 class ViewEvent(GetEventMixin, ViewContentView):
@@ -83,15 +69,11 @@ class MonthArchiveRedirect(RedirectView):
         return reverse('event_year', kwargs={'year': kwargs['year']})
 
 
-class YearArchive(TemplateView):
-    template_name = "events/year.html"
+class YearArchiveRedirect(RedirectView):
+    permanent = True
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['events'] = Event.items_visible_to(self.request.user)\
-                                 .filter(datetime__year=kwargs['year'])
-        context['year'] = kwargs['year']
-        return context
+    def get_redirect_url(self, *args, **kwargs):
+        return reverse('event_index')
 
 
 class AddEvent(AddContentView):

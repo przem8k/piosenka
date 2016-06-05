@@ -1,48 +1,30 @@
-{% extends "events/list.html" %}
+{% extends "events/base.html" %}
 
 {% block title %}Koncerty, przeglądy, festiwale - nadchodzące wydarzenia{% endblock %}
 
-{% block content-header %}
-<h1>Nadchodzące wydarzenia</h1>
-{% endblock content-header %}
-
-{% block content-footer %}
-<hr />
-<a href="{% url 'add_event' %}">Dodaj nowe wydarzenie</a>
-{% endblock content-footer %}
-
-{% block page-footer %}
-<div class="row">
-  <div class="col-md-4">
-    <div class="section">
-      <h1>Archiwum wydarzeń</h1>
-      <ul class="list-unstyled">
-        {% for year in years %}
-        <li><a href="{% url "event_year" year=year %}">{{ year }}</a></li>
-        {% endfor %}
-      </ul>
+{% block content %}
+<div class="container main">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="section">
+        <h1>Nadchodzące wydarzenia</h1>
+        <ul class="list-unstyled">
+          {% for event in events %}
+          <li>
+          {% include "events/event_link.html" with event=event %}
+          </li>
+          {% endfor %}
+        </ul>
+        <hr />
+        <a href="{% url 'add_event' %}">Dodaj nowe wydarzenie</a>
+      </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="section">
-      <h1>Popularne miejsca (wg liczby wydarzeń)</h1>
-      <ul class="list-unstyled">
-        {% for venue in popular_venues %}
-        <li><a href="{{ venue.get_absolute_url }}">{{ venue }}</a> ({{ venue.event_count }})</li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="section">
-      <h1>Aktywni artyści (wg liczby wydarzeń)</h1>
-      <ul class="list-unstyled">
-        {% for performer in active_performers %}
-        <li><a href="{{ performer.get_absolute_url }}">{{ performer }}</a>
-            ({{ performer.event_count }})</li>
-        {% endfor %}
-      </ul>
+    <div class="col-md-6">
+      <div class="section">
+        <h1>Mapa</h1>
+        {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
+      </div>
     </div>
   </div>
 </div>
-{% endblock page-footer %}
+{% endblock content %}

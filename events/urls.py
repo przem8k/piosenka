@@ -5,7 +5,7 @@ from events import views
 urlpatterns = [
     url(r'^$', views.EventIndex.as_view(), name="event_index"),
     url(r'^(?P<year>\d{4})/', include([
-        url(r'^$', views.YearArchive.as_view(), name="event_year"),
+        url(r'^$', views.YearArchiveRedirect.as_view(), name="event_year"),
         url(r'^(?P<month>\d{2})/', include([
             url(r'^$', views.MonthArchiveRedirect.as_view(),
                 name="event_month_redirect"),
@@ -20,8 +20,8 @@ urlpatterns = [
             ])),
         ])),
     url(r'^dodaj/$', views.AddEvent.as_view(), name="add_event"),
-    url(r'^wykonawca/(?P<slug>[-\w]+)/$', views.ViewPerformer.as_view(),
+    url(r'^wykonawca/(?P<slug>[-\w]+)/$', views.ViewPerformerRedirect.as_view(),
         name="view_performer"),
-    url(r'^(?P<slug>[-\w]+)/$', views.VenueDetail.as_view(),
+    url(r'^(?P<slug>[-\w]+)/$', views.VenueDetailRedirect.as_view(),
         name="venue_detail"),
 ]

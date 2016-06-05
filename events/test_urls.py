@@ -29,24 +29,12 @@ class EventUrlTest(TestScenariosMixin, TestCase):
         self.assertEqual(200, response.status_code)
         self.assertEqual(1, len(response.context['events']))
 
-        response = testing.get_public_client().get(venue.get_absolute_url())
-        self.assertEqual(200, response.status_code)
-        self.assertEqual(1, len(response.context['events']))
-
         # The author should see both.
         response = testing.get_user_client(author).get(reverse('event_index'))
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['events']))
 
-        response = testing.get_user_client(author).get(venue.get_absolute_url())
-        self.assertEqual(200, response.status_code)
-        self.assertEqual(2, len(response.context['events']))
-
         # Another regular user should also see both.
         response = testing.get_user_client().get(reverse('event_index'))
-        self.assertEqual(200, response.status_code)
-        self.assertEqual(2, len(response.context['events']))
-
-        response = testing.get_user_client().get(venue.get_absolute_url())
         self.assertEqual(200, response.status_code)
         self.assertEqual(2, len(response.context['events']))

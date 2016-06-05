@@ -22,7 +22,7 @@
                 <br />
                 <b>Kto: </b>
                 {% for performer in event.performers %}
-                <a href="{{ performer.get_absolute_url }}">{{ performer }}</a>
+                {{ performer }}
                 {% endfor %}
                 {% endif %}
                 <br />
