@@ -201,6 +201,9 @@ class FbEvent(models.Model):
     def get_absolute_url(self):
         return 'https://www.facebook.com/events/%s/' % (self.fb_id)
 
+    def external_source(self):
+        return 'fb'
+
     def location(self):
         return self.town
 

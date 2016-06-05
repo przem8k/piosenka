@@ -223,11 +223,6 @@ body {
 
 /* other */
 
-.date {
-    background: url("../images/date.png") left no-repeat;
-    padding: 0 0 0 15px;
-}
-
 .tip {
     color: #428bca !important;
     margin-left: 10px;
