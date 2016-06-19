@@ -27,9 +27,11 @@
       <div class="section">
         <h1>Wykonawcy</h1>
         <p>Strona śledzi występy drogich naszym sercom wykonawców. Wydarzenia powiązane z oficjalnymi profilami na Facebooku są dodawane automatycznie.</p>
+        <table class="table table-striped">
         {% for performer in performers %}
-        <h3>{{ performer }}</h3>
-        <p>
+        <tr>
+        <td>{{ performer }}</td>
+        <td>
         {% if performer.website %}
         <a href="{{ performer.website }}" target="_blank">strona www
                 <span class="glyphicon glyphicon-new-window"></span>
@@ -40,8 +42,10 @@
                 <span class="glyphicon glyphicon-new-window"></span>
         </a>
         {% endif %}
-        </p>
+        </td>
+        </tr>
         {% endfor %}
+        </table>
       </div>
     </div>
   </div>
