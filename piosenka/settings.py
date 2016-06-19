@@ -2,50 +2,60 @@ import os
 from django.core.urlresolvers import reverse_lazy
 
 try:
-    # Try importing prod settings.
-    from piosenka.settings_production import DATABASES
-    from piosenka.settings_production import SECRET_KEY
-    from piosenka.settings_production import ALLOWED_HOSTS
-
-    from piosenka.settings_production import ADMINS
-    from piosenka.settings_production import EMAIL_HOST
-    from piosenka.settings_production import EMAIL_HOST_USER
-    from piosenka.settings_production import EMAIL_HOST_PASSWORD
-    from piosenka.settings_production import DEFAULT_FROM_EMAIL
-    from piosenka.settings_production import SERVER_EMAIL
-    from piosenka.settings_production import EMAIL_USE_TLS
-
-    from piosenka.settings_production import S3BUCKET
-    from piosenka.settings_production import GOOGLE_MAPS_API_KEY
-
-    from piosenka.settings_production import FB_APP_ID
-    from piosenka.settings_production import FB_APP_SECRET
-    DEBUG = False
+    from piosenka.settings_local import DEBUG
 except ImportError:
-    # Load non-prod settings.
-    try:
-        from piosenka.settings_local import DATABASES
-    except ImportError:
-        DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': 'piosenka.db',
-            }
-        }
-
-    try:
-        from piosenka.settings_local import GOOGLE_MAPS_API_KEY
-    except ImportError:
-        GOOGLE_MAPS_API_KEY = ""
-
-    try:
-        from piosenka.settings_local import FB_APP_ID
-        from piosenka.settings_local import FB_APP_SECRET
-    except ImportError:
-        print('FB credentials not set')
-
-    SECRET_KEY = "piosenka"
     DEBUG = True
+
+try:
+    from piosenka.settings_local import DATABASES
+except ImportError:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'piosenka.db',
+        }
+    }
+
+try:
+    from piosenka.settings_local import SECRET_KEY
+except ImportError:
+    SECRET_KEY = 'piosenka'
+
+try:
+    from piosenka.settings_local import ALLOWED_HOSTS
+except ImportError:
+    pass
+
+try:
+    from piosenka.settings_local import ADMINS
+except ImportError:
+    pass
+
+try:
+    from piosenka.settings_local import EMAIL_HOST
+    from piosenka.settings_local import EMAIL_HOST_USER
+    from piosenka.settings_local import EMAIL_HOST_PASSWORD
+    from piosenka.settings_local import DEFAULT_FROM_EMAIL
+    from piosenka.settings_local import SERVER_EMAIL
+    from piosenka.settings_local import EMAIL_USE_TLS
+except ImportError:
+    pass
+
+try:
+    from piosenka.settings_local import S3BUCKET
+except ImportError:
+    pass
+
+try:
+    from piosenka.settings_local import GOOGLE_MAPS_API_KEY
+except ImportError:
+    GOOGLE_MAPS_API_KEY = ""
+
+try:
+    from piosenka.settings_local import FB_APP_ID
+    from piosenka.settings_local import FB_APP_SECRET
+except ImportError:
+    print('FB credentials not set')
 
 TEMPLATE_DEBUG = DEBUG
 
