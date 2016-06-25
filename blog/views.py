@@ -34,7 +34,7 @@ def obsolete_post(request, post_id):
 
 class PostIndex(TemplateView):
     MAX_POSTS = 5
-    template_name = 'blog/post_index.html'
+    template_name = 'blog/index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -47,7 +47,7 @@ class PostIndex(TemplateView):
 class ViewPost(GetPostMixin, ViewContentView):
     model = Post
     context_object_name = 'post'
-    template_name = 'blog/post_detail.html'
+    template_name = 'blog/post.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
