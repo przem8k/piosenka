@@ -19,7 +19,7 @@ class SongRedirectTest(TestCase):
         contribution.texted = True
         contribution.save()
 
-        song.old_slug = "some-old-slug"
+        song.old_slug = 'some-old-slug'
         song.reviewed = True
         song.save()
 
@@ -31,19 +31,19 @@ class SongRedirectTest(TestCase):
         song = self.song
         artist = self.artist
 
-        old_url = "/spiewnik/%s/%s" % (artist.slug, song.old_slug)
+        old_url = '/spiewnik/%s/%s' % (artist.slug, song.old_slug)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
-        old_url = "/spiewnik/%s/%s/" % (artist.slug, song.old_slug)
+        old_url = '/spiewnik/%s/%s/' % (artist.slug, song.old_slug)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
-        old_url = "/spiewnik/%s/%s/drukuj" % (artist.slug, song.old_slug)
+        old_url = '/spiewnik/%s/%s/drukuj' % (artist.slug, song.old_slug)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
-        old_url = "/spiewnik/%s/%s/drukuj/" % (artist.slug, song.old_slug)
+        old_url = '/spiewnik/%s/%s/drukuj/' % (artist.slug, song.old_slug)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
@@ -51,28 +51,28 @@ class SongRedirectTest(TestCase):
         """Tests evel older urls in form "/songs/song/id"."""
         song = self.song
 
-        old_url = "/songs/song/%d" % (song.pk)
+        old_url = '/songs/song/%d' % (song.pk)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
-        old_url = "/songs/song/%d/" % (song.pk)
+        old_url = '/songs/song/%d/' % (song.pk)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
-        old_url = "/songs/song/%d/print" % (song.pk)
+        old_url = '/songs/song/%d/print' % (song.pk)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
-        old_url = "/songs/song/%d/print/" % (song.pk)
+        old_url = '/songs/song/%d/print/' % (song.pk)
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, song.get_absolute_url(), status_code=301)
 
     def test_band_redirects(self):
         """Tests for urls in form "/songs/band/id", which we can't handle."""
-        old_url = "/songs/band/12"
+        old_url = '/songs/band/12'
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, reverse('songbook'), status_code=301)
 
-        old_url = "/songs/band/12/"
+        old_url = '/songs/band/12/'
         response = testing.get_public_client().get(old_url, follow=True)
         self.assertRedirects(response, reverse('songbook'), status_code=301)

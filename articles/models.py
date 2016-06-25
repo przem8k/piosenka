@@ -37,14 +37,14 @@ Main illustration for the article."""
     def create_for_testing(author):
         article = Article()
         article.author = author
-        article.title = str(uuid.uuid4()).replace("-", "")
-        article.lead_text_trevor = put_text_in_trevor("Abc")
-        article.main_text_trevor = put_text_in_trevor("Abc")
+        article.title = str(uuid.uuid4()).replace('-', '')
+        article.lead_text_trevor = put_text_in_trevor('Abc')
+        article.main_text_trevor = put_text_in_trevor('Abc')
         article.save()
         return article
 
     class Meta(ContentItem.Meta):
-        ordering = ["-pub_date"]
+        ordering = ['-pub_date']
 
     def __str__(self):
         return self.title
@@ -60,7 +60,7 @@ Main illustration for the article."""
         if self.cover_credits_trevor:
             self.cover_credits_html = render_trevor(self.cover_credits_trevor)
         else:
-            self.cover_credits_html = ""
+            self.cover_credits_html = ''
         super().save(*args, **kwargs)
 
     def get_url_params(self):

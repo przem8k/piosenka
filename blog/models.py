@@ -22,14 +22,14 @@ class Post(SlugFieldMixin, ContentItem):
     def create_for_testing(author):
         post = Post()
         post.author = author
-        post.title = str(uuid.uuid4()).replace("-", "")
-        post.post_trevor = put_text_in_trevor("Abc")
-        post.more_trevor = put_text_in_trevor("Abc")
+        post.title = str(uuid.uuid4()).replace('-', '')
+        post.post_trevor = put_text_in_trevor('Abc')
+        post.more_trevor = put_text_in_trevor('Abc')
         post.save()
         return post
 
     class Meta(ContentItem.Meta):
-        ordering = ["-pub_date"]
+        ordering = ['-pub_date']
 
     def __str__(self):
         return self.title
@@ -44,14 +44,14 @@ class Post(SlugFieldMixin, ContentItem):
         if self.more_trevor:
             self.more_html = render_trevor(self.more_trevor)
         else:
-            self.more_html = ""
+            self.more_html = ''
         super().save(*args, **kwargs)
 
     def get_url_params(self):
         return {
-            'year': self.pub_date.strftime("%Y"),
-            'month': self.pub_date.strftime("%m"),
-            'day': self.pub_date.strftime("%d"),
+            'year': self.pub_date.strftime('%Y'),
+            'month': self.pub_date.strftime('%m'),
+            'day': self.pub_date.strftime('%d'),
             'slug': self.slug
         }
 

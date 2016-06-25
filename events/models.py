@@ -52,25 +52,25 @@ class Venue(SlugFieldMixin, models.Model):
     town = models.CharField(max_length=100)
     street = models.CharField(max_length=100)
 
-    lat = models.FloatField(null=True, editable=False, help_text="Latitude.")
-    lon = models.FloatField(null=True, editable=False, help_text="Longtitude.")
+    lat = models.FloatField(null=True, editable=False, help_text='Latitude.')
+    lon = models.FloatField(null=True, editable=False, help_text='Longtitude.')
 
     @staticmethod
     def create_for_testing():
         venue = Venue()
-        venue.name = str(uuid.uuid4()).replace("-", "")
-        venue.town = "New York"
-        venue.street = "233 Madison Avenue"
+        venue.name = str(uuid.uuid4()).replace('-', '')
+        venue.town = 'New York'
+        venue.street = '233 Madison Avenue'
         venue.lat = 0.0
         venue.lon = 0.0
         venue.save()
         return venue
 
     class Meta:
-        ordering = ["town", "name"]
+        ordering = ['town', 'name']
 
     def __str__(self):
-        return "%s - %s" % (self.town, self.name)
+        return '%s - %s' % (self.town, self.name)
 
     def clean(self):
         super().clean()
@@ -112,7 +112,7 @@ przypadku braku danych pozostaw puste."""
     website = models.URLField(null=True, blank=True, help_text=HELP_WEBSITE)
 
     slug = models.SlugField(max_length=100,
-                            unique_for_date="datetime",
+                            unique_for_date='datetime',
                             editable=False)
     description_html = models.TextField(editable=False)
 
@@ -120,15 +120,15 @@ przypadku braku danych pozostaw puste."""
     def create_for_testing(author, venue=None):
         event = Event()
         event.author = author
-        event.name = str(uuid.uuid4()).replace("-", "")
-        event.description_trevor = put_text_in_trevor("Abc")
+        event.name = str(uuid.uuid4()).replace('-', '')
+        event.description_trevor = put_text_in_trevor('Abc')
         event.datetime = timezone.now() + timedelta(days=365)
         event.venue = venue if venue else Venue.create_for_testing()
         event.save()
         return event
 
     class Meta(ContentItem.Meta):
-        ordering = ["datetime"]
+        ordering = ['datetime']
 
     def __str__(self):
         return self.name
@@ -139,9 +139,9 @@ przypadku braku danych pozostaw puste."""
 
     def get_url_params(self):
         return {
-            'year': self.datetime.strftime("%Y"),
-            'month': self.datetime.strftime("%m"),
-            'day': self.datetime.strftime("%d"),
+            'year': self.datetime.strftime('%Y'),
+            'month': self.datetime.strftime('%m'),
+            'day': self.datetime.strftime('%d'),
             'slug': self.slug
         }
 

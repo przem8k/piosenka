@@ -12,7 +12,7 @@ class JSONSearchIndexMixin(object):
 
     @cache_control(max_age=3600)
     def render_to_response(self, context):
-        return self.get_json_response(json.dumps(context["index"]))
+        return self.get_json_response(json.dumps(context['index']))
 
     def get_json_response(self, content, **httpresponse_kwargs):
         return HttpResponse(content,
@@ -26,12 +26,12 @@ class ArtistSearchIndex(JSONSearchIndexMixin, View):
         index = []
         for artist in Artist.objects.all():
             index.append({
-                "name": artist.__str__(),
-                "value": artist.__str__(),
-                "tokens": artist.__str__().split(),
-                "url": artist.get_absolute_url()
+                'name': artist.__str__(),
+                'value': artist.__str__(),
+                'tokens': artist.__str__().split(),
+                'url': artist.get_absolute_url()
             })
-        return self.render_to_response({"index": index})
+        return self.render_to_response({'index': index})
 
 
 class SongSearchIndex(JSONSearchIndexMixin, View):
@@ -40,18 +40,18 @@ class SongSearchIndex(JSONSearchIndexMixin, View):
         index = []
         for song in Song.items_live():
             index.append({
-                "name": song.__str__(),
-                "value": song.__str__(),
-                "tokens": song.__str__().split(),
-                "url": song.get_absolute_url()
+                'name': song.__str__(),
+                'value': song.__str__(),
+                'tokens': song.__str__().split(),
+                'url': song.get_absolute_url()
             })
-        return self.render_to_response({"index": index})
+        return self.render_to_response({'index': index})
 
 
 urlpatterns = patterns('',
                        url(r'^artists$',
                            ArtistSearchIndex.as_view(),
-                           name="search_index_artists"),
+                           name='search_index_artists'),
                        url(r'^songs$',
                            SongSearchIndex.as_view(),
-                           name="search_index_songs"),)
+                           name='search_index_songs'),)

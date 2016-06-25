@@ -15,7 +15,7 @@ class GetArticleMixin(object):
 
 
 class IndexView(TemplateView):
-    template_name = "articles/index.html"
+    template_name = 'articles/index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -25,19 +25,19 @@ class IndexView(TemplateView):
 
 class ViewArticle(GetArticleMixin, ViewContentView):
     model = Article
-    context_object_name = "article"
-    template_name = "articles/article.html"
+    context_object_name = 'article'
+    template_name = 'articles/article.html'
 
 
 class AddArticle(AddContentView):
     model = Article
     form_class = ArticleForm
-    template_name = "articles/add_edit_article.html"
+    template_name = 'articles/add_edit_article.html'
 
     def get_initial(self):
-        initial_lead = "Tu wpisz **lead** artykułu - " \
-                       "jedno lub dwa zdania otwierające tekst."
-        initial_main = "Tu wpisz resztę artykułu."
+        initial_lead = 'Tu wpisz **lead** artykułu - ' \
+                       'jedno lub dwa zdania otwierające tekst.'
+        initial_main = 'Tu wpisz resztę artykułu.'
         return {
             'lead_text_trevor': put_text_in_trevor(initial_lead),
             'main_text_trevor': put_text_in_trevor(initial_main),
@@ -50,7 +50,7 @@ class AddArticle(AddContentView):
 class EditArticle(GetArticleMixin, EditContentView):
     model = Article
     form_class = ArticleForm
-    template_name = "articles/add_edit_article.html"
+    template_name = 'articles/add_edit_article.html'
 
     def get_success_url(self):
         return self.object.get_absolute_url()

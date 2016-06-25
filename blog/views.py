@@ -18,7 +18,7 @@ class GetPostMixin(object):
         month = self.kwargs['month']
         day = self.kwargs['day']
         slug = self.kwargs['slug']
-        date_stamp = time.strptime(year + month + day, "%Y%m%d")
+        date_stamp = time.strptime(year + month + day, '%Y%m%d')
         pub_date = datetime.fromtimestamp(time.mktime(date_stamp))
         return get_object_or_404(Post,
                                  slug=slug,
@@ -34,7 +34,7 @@ def obsolete_post(request, post_id):
 
 class PostIndex(TemplateView):
     MAX_POSTS = 5
-    template_name = "blog/post_index.html"
+    template_name = 'blog/post_index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -46,8 +46,8 @@ class PostIndex(TemplateView):
 
 class ViewPost(GetPostMixin, ViewContentView):
     model = Post
-    context_object_name = "post"
-    template_name = "blog/post_detail.html"
+    context_object_name = 'post'
+    template_name = 'blog/post_detail.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -58,7 +58,7 @@ class ViewPost(GetPostMixin, ViewContentView):
 class AddPost(AddContentView):
     model = Post
     form_class = PostForm
-    template_name = "blog/add_edit_post.html"
+    template_name = 'blog/add_edit_post.html'
 
     def get_success_url(self):
         return self.object.get_absolute_url()
@@ -67,7 +67,7 @@ class AddPost(AddContentView):
 class EditPost(GetPostMixin, EditContentView):
     model = Post
     form_class = PostForm
-    template_name = "blog/add_edit_post.html"
+    template_name = 'blog/add_edit_post.html'
 
     def get_success_url(self):
         return self.object.get_absolute_url()

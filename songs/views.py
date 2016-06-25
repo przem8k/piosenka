@@ -41,24 +41,24 @@ class SongbookMenuMixin(object):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["bards"] = Artist.objects.filter(featured=True,
+        context['bards'] = Artist.objects.filter(featured=True,
                                                  category=Artist.CAT_TEXTER)
-        context["composers"] = Artist.objects.filter(
+        context['composers'] = Artist.objects.filter(
             featured=True, category=Artist.CAT_COMPOSER)
-        context["foreigners"] = Artist.objects.filter(
+        context['foreigners'] = Artist.objects.filter(
             featured=True, category=Artist.CAT_FOREIGN)
-        context["bands"] = Artist.objects.filter(featured=True,
+        context['bands'] = Artist.objects.filter(featured=True,
                                                  category=Artist.CAT_BAND)
         return context
 
 
 class IndexView(SongbookMenuMixin, TemplateView):
-    template_name = "songs/index.html"
+    template_name = 'songs/index.html'
 
 
 class ArtistView(SongbookMenuMixin, TemplateView):
     """Lists the songs associated with the given artist."""
-    template_name = "songs/list.html"
+    template_name = 'songs/list.html'
 
     def get_context_data(self, **kwargs):
         slug = kwargs['slug']
@@ -114,8 +114,8 @@ class ViewSong(GetSongMixin, ViewContentView):
 class AddSong(AddContentView):
     model = Song
     form_class = SongForm
-    formset_classes = [("entitycontribution", ContributionFormSet)]
-    template_name = "songs/add_edit_song.html"
+    formset_classes = [('entitycontribution', ContributionFormSet)]
+    template_name = 'songs/add_edit_song.html'
 
     def get_initial(self):
         return {'lyrics': INITIAL_LYRICS,}
@@ -137,8 +137,8 @@ class AddSong(AddContentView):
 class EditSong(GetSongMixin, EditContentView):
     model = Song
     form_class = SongForm
-    formset_classes = [("entitycontribution", ContributionFormSet)]
-    template_name = "songs/add_edit_song.html"
+    formset_classes = [('entitycontribution', ContributionFormSet)]
+    template_name = 'songs/add_edit_song.html'
 
     def get_success_url(self):
         return self.object.get_absolute_url()
@@ -155,7 +155,7 @@ class ApproveSong(GetSongMixin, ApproveContentView):
 class AddAnnotation(AddContentView):
     model = Annotation
     form_class = AnnotationForm
-    template_name = "songs/add_edit_annotation.html"
+    template_name = 'songs/add_edit_annotation.html'
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -187,7 +187,7 @@ class GetAnnotationMixin(object):
 class EditAnnotation(GetAnnotationMixin, EditContentView):
     model = Annotation
     form_class = AnnotationForm
-    template_name = "songs/add_edit_annotation.html"
+    template_name = 'songs/add_edit_annotation.html'
 
     def get_success_url(self):
         return self.get_object().song.get_absolute_url()

@@ -3,20 +3,20 @@ import uuid
 from django.contrib.auth.models import User, Permission
 from django.test import Client
 
-_PASS = "secret"
-_EMAIL = "example@example.com"
+_PASS = 'secret'
+_EMAIL = 'example@example.com'
 _NAME_LEN = 20
 
 
 def create_user(perms=None):
-    name = str(uuid.uuid4()).replace("-", "")[:_NAME_LEN]
+    name = str(uuid.uuid4()).replace('-', '')[:_NAME_LEN]
     user = User.objects.create_user(username=name, email=_EMAIL, password=_PASS)
 
     if not perms:
         perms = []
 
     for perm in perms:
-        parts = perm.split(".")
+        parts = perm.split('.')
         assert len(parts) == 2
         permission = Permission.objects.get(content_type__app_label=parts[0],
                                             codename=parts[1])

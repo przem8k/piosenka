@@ -42,7 +42,7 @@ class ContentItem(models.Model):
     @classmethod
     def permstring(cls):
         content_type = ContentType.objects.get_for_model(cls)
-        return "%s.contribute_%s" % (content_type.app_label, content_type.model)
+        return '%s.contribute_%s' % (content_type.app_label, content_type.model)
 
     @classmethod
     def can_be_contributed_by(cls, user):

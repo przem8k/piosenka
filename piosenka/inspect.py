@@ -8,7 +8,7 @@ from django.views.generic import TemplateView
 
 
 class InspectLocale(TemplateView):
-    template_name = "inspect_locale.html"
+    template_name = 'inspect_locale.html'
 
     @method_decorator(login_required)
     @method_decorator(permission_required('piosenka.inspect',
@@ -27,7 +27,7 @@ class InspectLocale(TemplateView):
 
 
 class InspectPermissions(TemplateView):
-    template_name = "inspect_permissions.html"
+    template_name = 'inspect_permissions.html'
 
     @method_decorator(login_required)
     @method_decorator(permission_required('piosenka.inspect',

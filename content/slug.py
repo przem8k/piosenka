@@ -13,7 +13,7 @@ class SlugLogicMixin(object):
         raise NotImplementedError
 
     def make_slug(self, slug_elements):
-        normalized_string = unidecode(" ".join(slug_elements))
+        normalized_string = unidecode(' '.join(slug_elements))
         max_length = self._meta.get_field('slug').max_length
         return slugify(normalized_string)[:max_length]
 

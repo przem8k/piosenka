@@ -25,10 +25,10 @@ urlpatterns = [
     url(r'^wydarzenia/', include('events.urls')),
     url(r'^o-stronie/$',
         piosenka.views.About.as_view(),
-        name="about"),
+        name='about'),
     url(r'^o-stronie/format-opracowan/$',
         piosenka.views.Format.as_view(),
-        name="format"),
+        name='format'),
     # Site-search index.
     url(r'^index/', include('piosenka.index')),
     # Search results.
@@ -41,7 +41,7 @@ urlpatterns = [
     url(r'^inspect/', include('piosenka.inspect_urls')),
     # Frontpage.
     url(r'^$', piosenka.views.SiteIndex.as_view(),
-        name="index"),
+        name='index'),
 ]
 
 from django.conf import settings

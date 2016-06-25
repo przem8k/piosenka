@@ -68,8 +68,8 @@ def validate_capo_fret(value):
 
 
 class Song(SlugLogicMixin, ContentItem):
-    CAPO_TO_ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX",
-                     "X", "XI", "XII"]
+    CAPO_TO_ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX',
+                     'X', 'XI', 'XII']
 
     HELP_DISAMBIG = """\
 Opcjonalna adnotacja rozróżniająca piosenki o tym samym tytule."""
@@ -132,15 +132,15 @@ True iff the lyrics contain repeated chords."""
                                            help_text=HELP_HAS_EXTRA_CHORDS)
 
     class Meta(ContentItem.Meta):
-        ordering = ["title", "disambig"]
-        unique_together = ["title", "disambig"]
+        ordering = ['title', 'disambig']
+        unique_together = ['title', 'disambig']
 
     @staticmethod
     def create_for_testing(author):
         song = Song()
         song.author = author
-        song.title = str(uuid.uuid4()).replace("-", "")
-        song.lyrics = "Abc"
+        song.title = str(uuid.uuid4()).replace('-', '')
+        song.lyrics = 'Abc'
         song.save()
         return song
 
@@ -150,7 +150,7 @@ True iff the lyrics contain repeated chords."""
 
     def __str__(self):
         if self.disambig:
-            return "%s (%s)" % (self.title,
+            return '%s (%s)' % (self.title,
                                 self.disambig,)
         else:
             return self.title
@@ -187,7 +187,7 @@ True iff the lyrics contain repeated chords."""
             parsed_lyrics = parse_lyrics(self.lyrics)
             transpose_lyrics(parsed_lyrics, 0)
         except SyntaxError as m:
-            raise ValidationError("Lyrics syntax is incorrect: " + str(m))
+            raise ValidationError('Lyrics syntax is incorrect: ' + str(m))
 
     def set_slug_prepend_elements(self, elements):
         self.slug_prepend_elements = elements
@@ -209,9 +209,9 @@ True iff the lyrics contain repeated chords."""
         song """
         links = []
         if self.link_youtube:
-            links.append(("Nagranie (Youtube)", self.link_youtube))
+            links.append(('Nagranie (Youtube)', self.link_youtube))
         if self.link_wrzuta:
-            links.append(("Nagranie (Wrzuta)", self.link_wrzuta))
+            links.append(('Nagranie (Wrzuta)', self.link_wrzuta))
         return links
 
     def text_authors(self):
@@ -238,21 +238,21 @@ True iff the lyrics contain repeated chords."""
 class EntityContribution(models.Model):
     song = models.ForeignKey(Song)
     artist = models.ForeignKey(Artist, verbose_name='artysta')
-    performed = models.BooleanField(default=False, verbose_name="wyk.")
-    texted = models.BooleanField(default=False, verbose_name="tekst")
-    translated = models.BooleanField(default=False, verbose_name="tł.")
-    composed = models.BooleanField(default=False, verbose_name="muz.")
+    performed = models.BooleanField(default=False, verbose_name='wyk.')
+    texted = models.BooleanField(default=False, verbose_name='tekst')
+    translated = models.BooleanField(default=False, verbose_name='tł.')
+    composed = models.BooleanField(default=False, verbose_name='muz.')
 
     class Meta:
         unique_together = (('song', 'artist'),)
 
     def __str__(self):
-        return self.artist.__str__() + " - " + self.song.title
+        return self.artist.__str__() + ' - ' + self.song.title
 
     def clean(self):
         if (not self.performed and not self.texted and not self.translated and
                 not self.composed):
-            raise ValidationError("Zaznacz co najmniej jedną rolę artysty.")
+            raise ValidationError('Zaznacz co najmniej jedną rolę artysty.')
 
     @staticmethod
     def head_contribution(contributions):
@@ -320,8 +320,8 @@ Used in urls, has to be unique."""
         annotation.song = Song.create_for_testing(author)
         annotation.song.reviewed = True
         annotation.song.save()
-        annotation.title = str(uuid.uuid4()).replace("-", "")
-        annotation.text_trevor = put_text_in_trevor("Abc")
+        annotation.title = str(uuid.uuid4()).replace('-', '')
+        annotation.text_trevor = put_text_in_trevor('Abc')
         annotation.save()
         return annotation
 

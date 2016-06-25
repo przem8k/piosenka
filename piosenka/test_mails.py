@@ -29,7 +29,7 @@ class MailTest(TestCase):
         # https://github.com/ppiet/piosenka/issues/8
         # Set the first reviewers's email to empty - they should now be skipped,
         # but the other reviewer should be notified.
-        reviewer_a.email = ""
+        reviewer_a.email = ''
         reviewer_a.save()
         article = Article.create_for_testing(author)
         send_new_to_review_mails(article)

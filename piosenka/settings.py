@@ -49,7 +49,7 @@ except ImportError:
 try:
     from piosenka.settings_local import GOOGLE_MAPS_API_KEY
 except ImportError:
-    GOOGLE_MAPS_API_KEY = ""
+    GOOGLE_MAPS_API_KEY = ''
 
 try:
     from piosenka.settings_local import FB_APP_ID
@@ -67,20 +67,20 @@ SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
 
-PROJECT_PATH = os.path.join(os.path.abspath(os.path.split(__file__)[0]), "..")
+PROJECT_PATH = os.path.join(os.path.abspath(os.path.split(__file__)[0]), '..')
 
-MEDIA_ROOT = os.path.join(PROJECT_PATH, "site_media", "upload")
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'site_media', 'upload')
 
-MEDIA_URL = "/site_media/upload/"
+MEDIA_URL = '/site_media/upload/'
 
-STATIC_ROOT = os.path.join(PROJECT_PATH, "site_media", "native")
+STATIC_ROOT = os.path.join(PROJECT_PATH, 'site_media', 'native')
 
 STATIC_URL = '/site_media/native/'
 
-SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, "site_media")
+SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, 'site_media')
 
-STATICFILES_DIRS = (("", os.path.join(PROJECT_PATH, "static")),
-                    ("scripts", os.path.join(PROJECT_PATH, "songs", "scripts")),
+STATICFILES_DIRS = (('', os.path.join(PROJECT_PATH, 'static')),
+                    ('scripts', os.path.join(PROJECT_PATH, 'songs', 'scripts')),
                     os.path.join(PROJECT_PATH, 'client', 'assets'),)
 
 WEBPACK_LOADER = {
@@ -108,7 +108,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'urls'
 
-FILE_CHARSET = "utf-8-sig"
+FILE_CHARSET = 'utf-8-sig'
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -119,7 +119,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     'piosenka.context_processors.to_review',)
 
-TEMPLATE_DIRS = (os.path.join(PROJECT_PATH, "templates"),)
+TEMPLATE_DIRS = (os.path.join(PROJECT_PATH, 'templates'),)
 
 INSTALLED_APPS = (
     # Django.

@@ -21,7 +21,7 @@ _action_logger = logging.getLogger('actions')
 
 class Hello(FormView):
     form_class = AuthenticationForm
-    template_name = "hello.html"
+    template_name = 'hello.html'
     success_url = reverse_lazy('index')
 
     def get_context_data(self, **kwargs):
@@ -46,7 +46,7 @@ class Goodbye(View):
 
 class ChangePassword(FormView):
     form_class = PasswordChangeForm
-    template_name = "change_password.html"
+    template_name = 'change_password.html'
     success_url = reverse_lazy('index')
 
     @method_decorator(login_required)
@@ -64,7 +64,7 @@ class ChangePassword(FormView):
 
 
 class ToReview(TemplateView):
-    template_name = "to_review.html"
+    template_name = 'to_review.html'
 
     @method_decorator(login_required)
     @method_decorator(permission_required('content.review',
@@ -76,7 +76,7 @@ class ToReview(TemplateView):
 class InviteView(CreateView):
     model = Invitation
     form_class = InvitationForm
-    template_name = "invite.html"
+    template_name = 'invite.html'
 
     @method_decorator(login_required)
     @method_decorator(permission_required('piosenka.invite',
@@ -99,7 +99,7 @@ class InviteView(CreateView):
 
 class JoinView(FormView):
     form_class = JoinForm
-    template_name = "join.html"
+    template_name = 'join.html'
 
     def dispatch(self, *args, **kwargs):
         if not self.request.user.is_anonymous():

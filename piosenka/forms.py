@@ -37,5 +37,5 @@ stronie"."""
         password_again = self.cleaned_data.get('password_again')
 
         if password and password != password_again:
-            raise forms.ValidationError("Wpisane hasła się różnią.")
+            raise forms.ValidationError('Wpisane hasła się różnią.')
         return self.cleaned_data

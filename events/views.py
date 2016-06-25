@@ -21,7 +21,7 @@ class GetEventMixin(object):
         month = self.kwargs['month']
         day = self.kwargs['day']
         slug = self.kwargs['slug']
-        date_stamp = time.strptime(year + month + day, "%Y%m%d")
+        date_stamp = time.strptime(year + month + day, '%Y%m%d')
         event_date = datetime.fromtimestamp(time.mktime(date_stamp))
         return Event.objects.get(slug=slug,
                                  datetime__year=event_date.year,
@@ -30,7 +30,7 @@ class GetEventMixin(object):
 
 
 class EventIndex(EventMenuMixin, TemplateView):
-    template_name = "events/index.html"
+    template_name = 'events/index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -56,10 +56,10 @@ class ViewPerformerRedirect(RedirectView):
 
 class ViewEvent(GetEventMixin, ViewContentView):
     model = Event
-    context_object_name = "event"
-    template_name = "events/event.html"
-    date_field = "datetime"
-    month_format = "%m"
+    context_object_name = 'event'
+    template_name = 'events/event.html'
+    date_field = 'datetime'
+    month_format = '%m'
     allow_future = True
 
 
@@ -82,8 +82,8 @@ class YearArchiveRedirect(RedirectView):
 class AddEvent(AddContentView):
     model = Event
     form_class = EventForm
-    formset_classes = [("entityperformance", PerformanceFormSet)]
-    template_name = "events/add_edit_event.html"
+    formset_classes = [('entityperformance', PerformanceFormSet)]
+    template_name = 'events/add_edit_event.html'
 
     def get_initial(self):
         initial_description = """Tutaj opisz wydarzenie. Zaznacz fragment tekstu
@@ -105,13 +105,13 @@ class AddEvent(AddContentView):
 class EditEvent(GetEventMixin, EditContentView):
     model = Event
     form_class = EventForm
-    formset_classes = [("entityperformance", PerformanceFormSet)]
-    template_name = "events/add_edit_event.html"
+    formset_classes = [('entityperformance', PerformanceFormSet)]
+    template_name = 'events/add_edit_event.html'
 
     def get_initial(self):
         return {
-            'date': self.object.datetime.strftime("%d.%m.%Y"),
-            'time': self.object.datetime.strftime("%H:%M"),
+            'date': self.object.datetime.strftime('%d.%m.%Y'),
+            'time': self.object.datetime.strftime('%H:%M'),
             'venue_selection': self.object.venue,
             'description_trevor': self.object.description_trevor,
         }

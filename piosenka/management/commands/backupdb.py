@@ -13,7 +13,7 @@ from django.core.management import call_command
 
 
 class Command(BaseCommand):
-    help = "Backup the site in the cloud."
+    help = 'Backup the site in the cloud.'
 
     def handle(self, *args, **options):
         # Workaround running from cron encoding problems.
@@ -35,7 +35,7 @@ class Command(BaseCommand):
 
 #SQL
         sql_file_path = os.path.join(directory,
-                                     'postgres_' + backup_name + ".tar")
+                                     'postgres_' + backup_name + '.tar')
         print('Doing Postgresql backup to database %s into %s' %
               (self.db, sql_file_path))
         self.dump_sql(sql_file_path)
@@ -44,22 +44,22 @@ class Command(BaseCommand):
         apps = settings.INSTALLED_APPS
         for app in [elem.split('.')[-1] for elem in apps]:
             json_file_path = os.path.join(
-                directory, 'fixture_' + app + '_' + backup_name + ".json")
+                directory, 'fixture_' + app + '_' + backup_name + '.json')
             self.dump_app_fixture(app, json_file_path)
 
 # Total fixture
         json_file_path = os.path.join(directory,
-                                      'fixture_' + backup_name + ".json")
+                                      'fixture_' + backup_name + '.json')
         self.dump_total_fixture(json_file_path)
 
-        push_command = "aws s3 cp %s %sdb/%s/ --recursive" % (
+        push_command = 'aws s3 cp %s %sdb/%s/ --recursive' % (
             directory, settings.S3BUCKET, backup_name)
         os.system(push_command)
         print(push_command)
 
         # Upload sync
         upload_root = settings.MEDIA_ROOT
-        upload_command = "aws s3 sync %s %supload/" % (upload_root,
+        upload_command = 'aws s3 sync %s %supload/' % (upload_root,
                                                        settings.S3BUCKET,)
 
         os.system(upload_command)
@@ -70,13 +70,13 @@ class Command(BaseCommand):
         assert self.db
 
         args = []
-        args += ["--username=%s" % self.user]
+        args += ['--username=%s' % self.user]
         if self.host:
-            args += ["--host=%s" % self.host]
+            args += ['--host=%s' % self.host]
         if self.port:
-            args += ["--port=%s" % self.port]
-        args += ["--format=t"]  # Use tarball backup format.
-        args += ["--clean"]  # When restoring, start with cleaning the database.
+            args += ['--port=%s' % self.port]
+        args += ['--format=t']  # Use tarball backup format.
+        args += ['--clean']  # When restoring, start with cleaning the database.
         args += [self.db]
         command = 'pg_dump %s > %s' % (' '.join(args), out_file_path)
         print(command)
@@ -84,18 +84,18 @@ class Command(BaseCommand):
 
     def dump_app_fixture(self, app, out_file_path):
         json_dump = StringIO()
-        call_command("dumpdata", app, stdout=json_dump)
+        call_command('dumpdata', app, stdout=json_dump)
         json_dump.seek(0)
 
-        outfile = open(out_file_path, "w")
+        outfile = open(out_file_path, 'w')
         outfile.write(json_dump.read())
         outfile.close()
 
     def dump_total_fixture(self, out_file_path):
         json_dump = StringIO()
-        call_command("dumpdata", stdout=json_dump)
+        call_command('dumpdata', stdout=json_dump)
         json_dump.seek(0)
 
-        outfile = open(out_file_path, "w")
+        outfile = open(out_file_path, 'w')
         outfile.write(json_dump.read())
         outfile.close()

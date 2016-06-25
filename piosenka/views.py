@@ -11,7 +11,7 @@ from songs.models import Annotation, Song
 
 
 class SiteIndex(TemplateView):
-    template_name = "frontpage/index.html"
+    template_name = 'frontpage/index.html'
     POST_COUNT = 1
     SONG_COUNT = 8
     ANNOTATION_COUNT = 8
@@ -34,7 +34,7 @@ class SiteIndex(TemplateView):
 
 class About(TemplateView):
     ARTICLE_FACTOR = 5
-    template_name = "about.html"
+    template_name = 'about.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -60,7 +60,7 @@ class About(TemplateView):
 
 
 class Format(TemplateView):
-    template_name = "format.generated"
+    template_name = 'format.generated'
 
 
 class Search(TemplateView):

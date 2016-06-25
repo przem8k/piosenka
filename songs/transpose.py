@@ -35,8 +35,8 @@ ORD_TO_KEY = {
 
 # These chords cause trouble when parsing from the left side, eg. in Asus4 -> As us4.
 KNOWN_CHORD_TYPES = {
-    "sus4": "",
-    "sus2": "",
+    'sus4': '',
+    'sus2': '',
 }
 
 
@@ -65,16 +65,16 @@ def parse_chord(chord):
     >>> parse_chord('H/a')
     ('H', '', 'a')
     """
-    if chord.find("/") != -1:  # for chords with specified base sound
-        if chord.find("/") == 0 or chord.find("/") == len(
-                chord) - 1 or chord.count("/") > 1:
+    if chord.find('/') != -1:  # for chords with specified base sound
+        if chord.find('/') == 0 or chord.find('/') == len(
+                chord) - 1 or chord.count('/') > 1:
             raise SyntaxError(
-                "/ is for base sounds, use it like this: D7/f, a/h (no spaces "
-                "before or after /).")
-        base_sound = chord[chord.find("/") + 1:]
-        rest = chord[:chord.find("/")]
+                '/ is for base sounds, use it like this: D7/f, a/h (no spaces '
+                'before or after /).')
+        base_sound = chord[chord.find('/') + 1:]
+        rest = chord[:chord.find('/')]
     else:
-        base_sound = ""
+        base_sound = ''
         rest = chord
 
     # First check for a known suffix (chord type) to handle chord types that yield bogus root sounds
@@ -127,7 +127,7 @@ def transpose_chord(chord, t):
     root_sound, chord_type, base_sound = parse_chord(chord)
     if base_sound:
         return transpose_sound(
-            root_sound, t) + chord_type + "/" + transpose_sound(base_sound, t)
+            root_sound, t) + chord_type + '/' + transpose_sound(base_sound, t)
     else:
         return transpose_sound(root_sound, t) + chord_type
 
@@ -158,20 +158,20 @@ def transpose_lyrics(parsed_lyrics, transposition):
     for paragraph in parsed_lyrics:
         section = []
         for (text, chords, is_indented, are_chords_replayed) in paragraph:
-            if chords.find("(") != -1:
-                if (chords.count("(") != 1 or chords.count(")") != 1 or
-                        chords.find(")") != len(chords) - 1
-                   ) or chords.find("(") > chords.find(")"):
+            if chords.find('(') != -1:
+                if (chords.count('(') != 1 or chords.count(')') != 1 or
+                        chords.find(')') != len(chords) - 1
+                   ) or chords.find('(') > chords.find(')'):
                     raise SyntaxError(
                         "I don't understand the line: '" + chords + "'. "
                         "'(', ')' brackets should contain "
-                        "chords played without singing at the end of the verse, for "
+                        'chords played without singing at the end of the verse, for '
                         "example: 'a C (H7 C)'. Don't put anything after ')'.")
-                left_bracket = chords.find("(")
-                right_bracket = chords.find(")")
+                left_bracket = chords.find('(')
+                right_bracket = chords.find(')')
                 core = chords[:left_bracket].strip()
                 bracketed = chords[left_bracket + 1:right_bracket].strip()
-                transposed = "%s (%s)" % (
+                transposed = '%s (%s)' % (
                     transpose_sequence(core, transposition),
                     transpose_sequence(bracketed, transposition))
             else:

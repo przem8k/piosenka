@@ -44,8 +44,8 @@ class EventForm(forms.ModelForm):
                 venue.street = street
                 venue.clean()
             else:
-                self.add_error('venue_selection', "Wybierz miejsce z listy "
-                               "lub wypełnij formularz aby dodać nowe miejsce.")
+                self.add_error('venue_selection', 'Wybierz miejsce z listy '
+                               'lub wypełnij formularz aby dodać nowe miejsce.')
 
         cleaned_data['venue'] = venue
         return cleaned_data

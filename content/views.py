@@ -88,8 +88,8 @@ class AddContentView(FormsetsMixin, CreateView):
         except Exception:
             pass
         messages.add_message(self.request, messages.INFO,
-                             "Materiał dodany, oczekuje na korektę.")
-        _action_logger.info("%s added %s" % (self.request.user, form.instance))
+                             'Materiał dodany, oczekuje na korektę.')
+        _action_logger.info('%s added %s' % (self.request.user, form.instance))
         return ret
 
 
@@ -105,7 +105,7 @@ class EditContentView(FormsetsMixin, UpdateView):
 
     def form_valid(self, form, formsets):
         ret = super().form_valid(form, formsets)
-        _action_logger.info("%s edited %s" % (self.request.user, form.instance))
+        _action_logger.info('%s edited %s' % (self.request.user, form.instance))
         return ret
 
 
@@ -127,18 +127,18 @@ class ReviewContentView(RedirectView):
         item = self.get_object()
         if item.is_live():
             messages.add_message(self.request, messages.INFO,
-                                 "Materiał został już wcześniej zatwierdzony.")
+                                 'Materiał został już wcześniej zatwierdzony.')
             return item.get_absolute_url()
 
         if not item.can_be_approved_by(self.request.user):
             messages.add_message(self.request, messages.INFO,
-                                 "Ten materiał nie może być zatwierdzony przez "
-                                 "Ciebie.")
+                                 'Ten materiał nie może być zatwierdzony przez '
+                                 'Ciebie.')
             return item.get_absolute_url()
 
         messages.add_message(self.request, messages.INFO,
-                             "Edytuj lub zatwierdź materiał przy pomocy linków "
-                             "na dole strony.")
+                             'Edytuj lub zatwierdź materiał przy pomocy linków '
+                             'na dole strony.')
         return item.get_absolute_url()
 
 
@@ -161,14 +161,14 @@ class ApproveContentView(RedirectView):
         item = self.get_object()
         if item.is_live():
             messages.add_message(self.request, messages.INFO,
-                                 "Materiał został już wcześniej zatwierdzony.")
+                                 'Materiał został już wcześniej zatwierdzony.')
             return item.get_absolute_url()
 
         item.reviewed = True
         item.save()
         messages.add_message(self.request, messages.INFO,
-                             "Materiał zatwierdzony.")
-        _action_logger.info("%s approved %s" % (self.request.user, item))
+                             'Materiał zatwierdzony.')
+        _action_logger.info('%s approved %s' % (self.request.user, item))
         try:
             send_item_approved_mail(item, self.request.user)
         except Exception:
