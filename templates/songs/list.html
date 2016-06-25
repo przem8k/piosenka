@@ -1,36 +1,31 @@
 {% extends "songs/base.html" %}
 
-{% load list_partition %}
-
 {% block title %}Śpiewnik piosenek {{ artist }} - teksty i akordy{% endblock title %}
 {% block description %}Śpiewnik zawiera teksty i akordy do piosenek - artysta: {{ artist }}.{% endblock description %}
 
 {% block content %}
+<h1>{{ artist }}</h1>
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-8">
       <div class="section">
-        <div class="content">
-          <h1 class="remove-top-margin">{{ artist }}</h1>
-
-          <div class="row">
-            {% for row in songs|rows:2 %}
-            <div class="col-md-6">
-              <ul class="list-unstyled">
-                {% for song in row %}
-                <li><a href="{{ song.get_absolute_url }}">{{ song|truncatechars:50 }}</a>
-                  {% include "components/content_status_span.html" with item=song %}
-                </li>
-                {% endfor %}
-              </ul>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
+        <h1>Piosenki</h1>
+        <ul class="list-unstyled">
+          {% for song in songs %}
+          <li><a href="{{ song.get_absolute_url }}">{{ song|truncatechars:50 }}</a>
+            {% include "components/content_status_span.html" with item=song %}
+          </li>
+          {% endfor %}
+        </ul>
       </div>
-      <hr />
+    </div>
+    <div class="col-md-4">
+      <div class="section">
+        <h1>{{ artist }}</h1>
+      </div>
     </div>
   </div>
+  <hr />
   {% include "songs/menu.html" %}
 </div>
 

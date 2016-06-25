@@ -16,6 +16,11 @@ body {
     }
 }
 
+h1 {
+  text-align: center;
+  margin: 15px 0 15px 0;
+}
+
 /* navbar */
 
 .feather {
@@ -33,14 +38,11 @@ body {
 .header {
     border-bottom: 1px solid #BBB;
     background: url("../images/paper.png");
+    margin: 0 0 20px 0;
 }
 
 .header h1, .header h2 {
     font-weight: bold;
-}
-
-.header+.container {
-    margin-top: 20px;
 }
 
 .footer {
@@ -93,11 +95,12 @@ body {
 }
 
 .section h1 {
-    margin-top: 0;
+    margin: 0 0 10px 0;
     font-size: 14px;
     line-height: 16px;
     font-weight: bold;
     color: #990000;
+    text-align: left;
 }
 
 .section .table th, .section .table td {

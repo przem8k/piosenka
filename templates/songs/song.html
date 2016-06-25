@@ -17,14 +17,14 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
 {% endblock extra-scripts %}
 
 {% block content %}
+<h1>{{ song }}
+    {% include "components/content_status_span.html" with item=song %}
+</h1>
 <div class="container main">
   <div class="row">
     <div class="col-md-8">
       <div class="section">
         <div class="content">
-          <h1 class="remove-top-margin">{{ song }}
-            {% include "components/content_status_span.html" with item=song %}
-          </h1>
 
           <div class="row song-header">
             <div class="col-md-6">
