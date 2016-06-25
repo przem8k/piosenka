@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Szukaj{% endblock %}
+{% block description %}Opis strony internetowej Piosenka z tekstem{% endblock description %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="section">
+        <h1>Szukaj</h1>
+        <div class="content">
+          <div>
+            <script>
+              (function() {
+                var cx = '017245285351694702152:psiepzvmq98';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:search> </gcse:search>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="section">
+        <h1>Nie znaleziono?</h1>
+        <p>
+          Szukasz informacji o konkretnym <b>utworze</b>? Zajrzyj do <a href="/spiewnik">śpiewnika</a>.
+        </p>
+        <p>
+          Szukasz informacji o nadchodzącym <b>wydarzeniu</b>? Kalendarz <a href="/wydarzenia">wydarzeń</a> Twoim przyjacielem jest.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock content %}

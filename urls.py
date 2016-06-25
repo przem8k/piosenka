@@ -28,6 +28,8 @@ urlpatterns = [
         name="format"),
     # Site-search index.
     url(r'^index/', include('piosenka.index')),
+    # Search results.
+    url(r'^szukaj/', piosenka.views.Search.as_view(), name='search'),
     # Admin and users.
     url(r'^admin/', include(admin.site.urls)),
     url(r'^redakcja/', include('piosenka.user_urls')),

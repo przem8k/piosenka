@@ -60,3 +60,7 @@ class About(TemplateView):
 
 class Format(TemplateView):
     template_name = "format.generated"
+
+
+class Search(TemplateView):
+    template_name = 'search.html'

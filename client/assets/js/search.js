@@ -13,6 +13,8 @@ $(document).ready(function(){
     });
     artists.initialize();
 
+    var selected = false;
+
     $('.search input').typeahead({
         hint: false,
         highlight: false,
@@ -29,6 +31,11 @@ $(document).ready(function(){
             header: '<p class="dataset-header">Artyści</p>',
         },
     }).on('typeahead:selected', function($e, data) {
-          window.location = data.url;
+      window.location = data.url;
+      selected = true;
+    }).on( "keydown", function(event) {
+      if(event.which == 13 && !selected) {
+        window.location = '/szukaj/?q=' + encodeURIComponent(this.value);
+      }
     });
 });
