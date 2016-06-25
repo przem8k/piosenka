@@ -66,9 +66,11 @@ def parse_chord(chord):
     ('H', '', 'a')
     """
     if chord.find("/") != -1:  # for chords with specified base sound
-        if chord.find("/") == 0 or chord.find("/") == len(chord) - 1 or chord.count("/") > 1:
-            raise SyntaxError("/ is for base sounds, use it like this: D7/f, a/h (no spaces "
-                              "before or after /).")
+        if chord.find("/") == 0 or chord.find("/") == len(
+                chord) - 1 or chord.count("/") > 1:
+            raise SyntaxError(
+                "/ is for base sounds, use it like this: D7/f, a/h (no spaces "
+                "before or after /).")
         base_sound = chord[chord.find("/") + 1:]
         rest = chord[:chord.find("/")]
     else:
@@ -80,13 +82,17 @@ def parse_chord(chord):
     for start in range(1, len(rest)):
         suf = rest[start:]
         if suf.lower() in KNOWN_CHORD_TYPES:
-            return (rest[:start], suf, base_sound,)
+            return (rest[:start],
+                    suf,
+                    base_sound,)
 
     # Then check for a known prefix (base sound).
     for end in reversed(range(1, 4)):
         pref = rest[:end]
         if pref.lower() in KEY_TO_ORD:
-            return (pref, rest[end:], base_sound,)
+            return (pref,
+                    rest[end:],
+                    base_sound,)
 
     raise SyntaxError("I can't recognize the chord: " + chord)
 
@@ -120,7 +126,8 @@ def transpose_chord(chord, t):
     """
     root_sound, chord_type, base_sound = parse_chord(chord)
     if base_sound:
-        return transpose_sound(root_sound, t) + chord_type + "/" + transpose_sound(base_sound, t)
+        return transpose_sound(
+            root_sound, t) + chord_type + "/" + transpose_sound(base_sound, t)
     else:
         return transpose_sound(root_sound, t) + chord_type
 
@@ -135,7 +142,8 @@ def transpose_sequence(chord_sequence, transposition):
     >>> transpose_sequence('c Gis0/C', 11)
     'h G0/H'
     """
-    return ' '.join([transpose_chord(x, transposition) for x in chord_sequence.split()])
+    return ' '.join(
+        [transpose_chord(x, transposition) for x in chord_sequence.split()])
 
 
 def transpose_lyrics(parsed_lyrics, transposition):
@@ -152,19 +160,25 @@ def transpose_lyrics(parsed_lyrics, transposition):
         for (text, chords, is_indented, are_chords_replayed) in paragraph:
             if chords.find("(") != -1:
                 if (chords.count("(") != 1 or chords.count(")") != 1 or
-                        chords.find(")") != len(chords) - 1) or chords.find("(") > chords.find(")"):
-                    raise SyntaxError("I don't understand the line: '" + chords + "'. "
-                                      "'(', ')' brackets should contain "
-                                      "chords played without singing at the end of the verse, for "
-                                      "example: 'a C (H7 C)'. Don't put anything after ')'.")
+                        chords.find(")") != len(chords) - 1
+                   ) or chords.find("(") > chords.find(")"):
+                    raise SyntaxError(
+                        "I don't understand the line: '" + chords + "'. "
+                        "'(', ')' brackets should contain "
+                        "chords played without singing at the end of the verse, for "
+                        "example: 'a C (H7 C)'. Don't put anything after ')'.")
                 left_bracket = chords.find("(")
                 right_bracket = chords.find(")")
                 core = chords[:left_bracket].strip()
                 bracketed = chords[left_bracket + 1:right_bracket].strip()
-                transposed = "%s (%s)" % (transpose_sequence(core, transposition),
-                                          transpose_sequence(bracketed, transposition))
+                transposed = "%s (%s)" % (
+                    transpose_sequence(core, transposition),
+                    transpose_sequence(bracketed, transposition))
             else:
                 transposed = transpose_sequence(chords, transposition)
-            section.append((text, transposed, is_indented, are_chords_replayed,))
+            section.append((text,
+                            transposed,
+                            is_indented,
+                            are_chords_replayed,))
         result.append(section)
     return result

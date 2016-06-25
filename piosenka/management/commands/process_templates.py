@@ -16,16 +16,16 @@ _REWRITE_LYRICS_END_TAG = r"<!-- rewrite-song-lyrics-end -->"
 
 def _rewrite_lyrics(match):
     template_name = "songs/lyrics_example.html"
-    input_lyrics = '\n'.join(line.strip() for line in
-                             str(match.group(1)).split('\n'))
+    input_lyrics = '\n'.join(line.strip()
+                             for line in str(match.group(1)).split('\n'))
     output_lyrics = render_lyrics(input_lyrics)
-    return loader.get_template(template_name).render(
-        Context({"input_lyrics": input_lyrics,
-                 "output_lyrics": output_lyrics}))
+    return loader.get_template(template_name).render(Context(
+        {"input_lyrics": input_lyrics,
+         "output_lyrics": output_lyrics}))
 
 
 class Command(BaseCommand):
-    help = "Processes templates of the documentation pages."""
+    help = "Processes templates of the documentation pages." ""
 
     def handle(self, *args, **options):
         for dirpath, dirnames, filenames in os.walk(settings.PROJECT_PATH):

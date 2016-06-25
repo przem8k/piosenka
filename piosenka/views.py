@@ -26,9 +26,9 @@ class SiteIndex(TemplateView):
                             .order_by('-pub_date')[:SiteIndex.SONG_COUNT])
         context['annotation'] = (Annotation.items_visible_to(self.request.user)
                                  .order_by('-pub_date').first())
-        context['annotations'] = (Annotation.items_visible_to(self.request.user)
-                                  .order_by('-pub_date')
-                                  [:SiteIndex.ANNOTATION_COUNT])
+        context['annotations'] = (
+            Annotation.items_visible_to(self.request.user)
+            .order_by('-pub_date')[:SiteIndex.ANNOTATION_COUNT])
         return context
 
 
@@ -48,12 +48,13 @@ class About(TemplateView):
             author['articles'] = Article.items_live().filter(
                 author=user).count()
             author['events'] = Event.items_live().filter(author=user).count()
-            author['total'] = (author['annotations'] + author['songs'] +
-                               self.ARTICLE_FACTOR * author['articles'] +
-                               author['events'])
+            author['total'] = (
+                author['annotations'] + author['songs'] + self.ARTICLE_FACTOR *
+                author['articles'] + author['events'])
             if author['total']:
                 authors.append(author)
-        context['authors'] = sorted(authors, key=lambda k: k['total'],
+        context['authors'] = sorted(authors,
+                                    key=lambda k: k['total'],
                                     reverse=True)
         return context
 

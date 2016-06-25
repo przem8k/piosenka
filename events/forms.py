@@ -14,13 +14,16 @@ class EventForm(forms.ModelForm):
     venue_selection = forms.ModelChoiceField(required=False,
                                              queryset=Venue.objects.all())
     venue_name = forms.CharField(
-        required=False, max_length=100,
+        required=False,
+        max_length=100,
         help_text="Nazwa miejsca, np. 'Klub studencki Żaczek'.")
     venue_town = forms.CharField(
-        required=False, max_length=100,
+        required=False,
+        max_length=100,
         help_text="Nazwa miasta lub miejscowości, np. 'Kraków', 'Kołobrzeg'.")
     venue_street = forms.CharField(
-        required=False, max_length=100,
+        required=False,
+        max_length=100,
         help_text="Adres w ramach miasta, np. 'ul. Podwale 37/38'.")
 
     def clean(self):
@@ -53,11 +56,13 @@ class EventForm(forms.ModelForm):
 
 
 class EntityPerformanceForm(ModelForm):
+
     class Meta:
         model = EntityPerformance
         exclude = ['entity']
 
 
-PerformanceFormSet = inlineformset_factory(Event, EntityPerformance,
+PerformanceFormSet = inlineformset_factory(Event,
+                                           EntityPerformance,
                                            form=EntityPerformanceForm,
                                            exclude=[])

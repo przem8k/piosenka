@@ -22,6 +22,7 @@ class ViewContentView(DetailView):
     Requirements for impl:
      - self.get_object() has to return the content item
     """
+
     def dispatch(self, *args, **kwargs):
         if not self.get_object().can_be_seen_by(self.request.user):
             raise Http404
@@ -47,11 +48,11 @@ class FormsetsMixin(object):
 
     def post(self, request, *args, **kwargs):
         form = self.get_form()
-        formsets = {name: self.get_formset(cls) for name, cls in
-                    self.formset_classes}
+        formsets = {name: self.get_formset(cls)
+                    for name, cls in self.formset_classes}
 
-        if form.is_valid() and all(formset.is_valid() for _, formset in
-                                   formsets.items()):
+        if form.is_valid() and all(formset.is_valid()
+                                   for _, formset in formsets.items()):
             return self.form_valid(form, formsets=formsets)
         else:
             return self.form_invalid(form, formsets=formsets)
@@ -67,11 +68,12 @@ class FormsetsMixin(object):
         return HttpResponseRedirect(self.get_success_url())
 
     def form_invalid(self, form, formsets):
-        return self.render_to_response(
-            self.get_context_data(form=form, **formsets))
+        return self.render_to_response(self.get_context_data(form=form,
+                                                             **formsets))
 
 
 class AddContentView(FormsetsMixin, CreateView):
+
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         self.object = None
@@ -87,12 +89,12 @@ class AddContentView(FormsetsMixin, CreateView):
             pass
         messages.add_message(self.request, messages.INFO,
                              "Materiał dodany, oczekuje na korektę.")
-        _action_logger.info("%s added %s" % (self.request.user,
-                                             form.instance))
+        _action_logger.info("%s added %s" % (self.request.user, form.instance))
         return ret
 
 
 class EditContentView(FormsetsMixin, UpdateView):
+
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         item = self.get_object()
@@ -103,8 +105,7 @@ class EditContentView(FormsetsMixin, UpdateView):
 
     def form_valid(self, form, formsets):
         ret = super().form_valid(form, formsets)
-        _action_logger.info("%s edited %s" % (self.request.user,
-                                              form.instance))
+        _action_logger.info("%s edited %s" % (self.request.user, form.instance))
         return ret
 
 

@@ -8,7 +8,8 @@ class EntityPerformanceInlineAdmin(admin.TabularInline):
 
 
 class EventAdmin(admin.ModelAdmin):
-    inlines = (EntityPerformanceInlineAdmin, )
+    inlines = (EntityPerformanceInlineAdmin,)
+
 
 class FbEventAdmin(admin.ModelAdmin):
     pass
@@ -20,6 +21,7 @@ class PerformerAdmin(admin.ModelAdmin):
 
 class VenueAdmin(admin.ModelAdmin):
     pass
+
 
 admin.site.register(Performer, PerformerAdmin)
 admin.site.register(Event, EventAdmin)

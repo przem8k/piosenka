@@ -20,7 +20,8 @@ def _get_default_expires_on():
 class Invitation(models.Model):
     """Represents an invitation to create a contributor profile (site user)."""
     email_address = models.EmailField()
-    invitation_key = models.CharField(max_length=70, editable=False,
+    invitation_key = models.CharField(max_length=70,
+                                      editable=False,
                                       default=_get_default_invitation_key)
     expires_on = models.DateTimeField(editable=False,
                                       default=_get_default_expires_on)

@@ -9,9 +9,7 @@ DATABASES = {
     }
 }
 SECRET_KEY = ''
-ALLOWED_HOSTS = [
-    '.piosenkaztekstem.pl',
-]
+ALLOWED_HOSTS = ['.piosenkaztekstem.pl',]
 
 EMAIL_HOST = ''
 EMAIL_HOST_USER = ''

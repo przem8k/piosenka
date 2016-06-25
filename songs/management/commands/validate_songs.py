@@ -19,11 +19,14 @@ class Command(BaseCommand):
                 try:
                     validate_lyrics(song.lyrics)
                 except ValidationError as m:
-                    print "Song %d %s incorrect: %s" % (song.id, song.title, m,)
+                    print "Song %d %s incorrect: %s" % (song.id,
+                                                        song.title,
+                                                        m,)
                     count_incorrect = count_incorrect + 1
                 count_all = count_all + 1
 
         if count_incorrect == 0:
             print "All good!"
         else:
-            print "Incorrect %d out of %d songs." % (count_incorrect, count_all,)
+            print "Incorrect %d out of %d songs." % (count_incorrect,
+                                                     count_all,)

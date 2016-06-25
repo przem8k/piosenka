@@ -11,6 +11,4 @@ def to_review(request):
     to_review.extend(Event.items_reviewable_by(request.user))
     to_review.extend(Post.items_reviewable_by(request.user))
     to_review.extend(Song.items_reviewable_by(request.user))
-    return {
-        'to_review': to_review
-    }
+    return {'to_review': to_review}

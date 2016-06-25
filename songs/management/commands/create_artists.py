@@ -29,8 +29,7 @@ class Command(BaseCommand):
                 artist.category = Artist.CAT_BAND
 
             artist.save()
-            print('Created artist: %s, slug: %s' % (artist.name,
-                                                    artist.slug))
+            print('Created artist: %s, slug: %s' % (artist.name, artist.slug))
 
         for contribution in EntityContribution.objects.all():
             if contribution.artist:

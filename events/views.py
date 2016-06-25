@@ -15,12 +15,13 @@ from content.views import (AddContentView, EditContentView, ApproveContentView,
 
 
 class GetEventMixin(object):
+
     def get_object(self):
         year = self.kwargs['year']
         month = self.kwargs['month']
         day = self.kwargs['day']
         slug = self.kwargs['slug']
-        date_stamp = time.strptime(year+month+day, "%Y%m%d")
+        date_stamp = time.strptime(year + month + day, "%Y%m%d")
         event_date = datetime.fromtimestamp(time.mktime(date_stamp))
         return Event.objects.get(slug=slug,
                                  datetime__year=event_date.year,
@@ -87,9 +88,7 @@ class AddEvent(AddContentView):
     def get_initial(self):
         initial_description = """Tutaj opisz wydarzenie. Zaznacz fragment tekstu
         aby dodać **pogrubienie** albo [odsyłacz](#)."""
-        return {
-            'description_trevor': put_text_in_trevor(initial_description)
-        }
+        return {'description_trevor': put_text_in_trevor(initial_description)}
 
     def form_valid(self, form, formsets):
         venue = form.cleaned_data['venue']

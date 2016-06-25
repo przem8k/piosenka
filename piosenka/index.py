@@ -9,6 +9,7 @@ from songs.models import Artist, Song
 
 
 class JSONSearchIndexMixin(object):
+
     @cache_control(max_age=3600)
     def render_to_response(self, context):
         return self.get_json_response(json.dumps(context["index"]))
@@ -20,6 +21,7 @@ class JSONSearchIndexMixin(object):
 
 
 class ArtistSearchIndex(JSONSearchIndexMixin, View):
+
     def get(self, request, *args, **kwargs):
         index = []
         for artist in Artist.objects.all():
@@ -33,6 +35,7 @@ class ArtistSearchIndex(JSONSearchIndexMixin, View):
 
 
 class SongSearchIndex(JSONSearchIndexMixin, View):
+
     def get(self, request, *args, **kwargs):
         index = []
         for song in Song.items_live():
@@ -45,8 +48,10 @@ class SongSearchIndex(JSONSearchIndexMixin, View):
         return self.render_to_response({"index": index})
 
 
-urlpatterns = patterns(
-    '',
-    url(r'^artists$', ArtistSearchIndex.as_view(), name="search_index_artists"),
-    url(r'^songs$', SongSearchIndex.as_view(), name="search_index_songs"),
-)
+urlpatterns = patterns('',
+                       url(r'^artists$',
+                           ArtistSearchIndex.as_view(),
+                           name="search_index_artists"),
+                       url(r'^songs$',
+                           SongSearchIndex.as_view(),
+                           name="search_index_songs"),)

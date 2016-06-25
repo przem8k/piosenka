@@ -6,8 +6,7 @@ from django.contrib.auth.models import User
 
 
 def send_new_to_review_mails(item):
-    reviewers = [user for user in
-                 User.objects.filter(is_active=True)
+    reviewers = [user for user in User.objects.filter(is_active=True)
                  if item.can_be_approved_by(user)]
     subject = "PzT: Nowy materiał czeka na Twoją korektę."
     for reviewer in reviewers:
@@ -37,10 +36,10 @@ def send_item_approved_mail(item, approver):
 
 def send_invitation_mail(invitation):
     subject = "PzT: Zaproszenie."
-    context = Context({'invitation': invitation,
-                       'site': settings.SITE})
+    context = Context({'invitation': invitation, 'site': settings.SITE})
     html_content = get_template('mail/invitation.html').render(context)
-    email = EmailMessage(subject, body=html_content,
+    email = EmailMessage(subject,
+                         body=html_content,
                          to=[invitation.email_address])
     email.content_subtype = "html"
     email.send()

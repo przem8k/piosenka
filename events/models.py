@@ -20,7 +20,9 @@ class Performer(SlugFieldMixin, models.Model):
 
     name = models.CharField(max_length=50, help_text=HELP_NAME)
     website = models.URLField(null=True, blank=True)
-    fb_page_id = models.CharField(max_length=100, unique=True, null=True,
+    fb_page_id = models.CharField(max_length=100,
+                                  unique=True,
+                                  null=True,
                                   blank=True)
 
     class Meta:
@@ -38,9 +40,7 @@ class Performer(SlugFieldMixin, models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return('view_performer', (), {
-            'slug': self.slug,
-        })
+        return ('view_performer', (), {'slug': self.slug,})
 
     # SlugFieldMixin:
     def get_slug_elements(self):
@@ -84,9 +84,7 @@ class Venue(SlugFieldMixin, models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return('venue_detail', (), {
-            'slug': self.slug,
-        })
+        return ('venue_detail', (), {'slug': self.slug,})
 
     # SlugFieldMixin:
     def get_slug_elements(self):
@@ -107,12 +105,14 @@ przypadku braku danych pozostaw puste."""
     datetime = models.DateTimeField()
     venue = models.ForeignKey(Venue)
     description_trevor = models.TextField()
-    price = models.CharField(max_length=100, null=True, blank=True,
+    price = models.CharField(max_length=100,
+                             null=True,
+                             blank=True,
                              help_text=HELP_PRICE)
-    website = models.URLField(null=True, blank=True,
-                              help_text=HELP_WEBSITE)
+    website = models.URLField(null=True, blank=True, help_text=HELP_WEBSITE)
 
-    slug = models.SlugField(max_length=100, unique_for_date="datetime",
+    slug = models.SlugField(max_length=100,
+                            unique_for_date="datetime",
                             editable=False)
     description_html = models.TextField(editable=False)
 
@@ -179,13 +179,14 @@ przypadku braku danych pozostaw puste."""
         return self.venue.town
 
     def performers(self):
-        return [x.performer for
-                x in EntityPerformance.objects.filter(event=self)]
+        return [x.performer
+                for x in EntityPerformance.objects.filter(event=self)]
 
 
 class EntityPerformance(models.Model):
     event = models.ForeignKey(Event)
     performer = models.ForeignKey(Performer)
+
 
 class FbEvent(models.Model):
     fb_id = models.CharField(max_length=100, unique=True)
@@ -212,5 +213,6 @@ def get_events_for(user):
     site_events = Event.items_visible_to(user).filter(
         datetime__gte=timezone.now())
     fb_events = FbEvent.objects.filter(datetime__gte=timezone.now())
-    return sorted(list(site_events) + list(fb_events),
-                  key=lambda event: event.datetime)
+    return sorted(
+        list(site_events) + list(fb_events),
+        key=lambda event: event.datetime)

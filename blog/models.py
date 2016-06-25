@@ -11,8 +11,7 @@ from content.slug import SlugFieldMixin
 class Post(SlugFieldMixin, ContentItem):
     HELP_TITLE = "Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'."
 
-    title = models.CharField(max_length=100,
-                             help_text=HELP_TITLE)
+    title = models.CharField(max_length=100, help_text=HELP_TITLE)
     post_trevor = models.TextField()
     more_trevor = models.TextField(null=True, blank=True)
 

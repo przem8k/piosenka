@@ -9,6 +9,7 @@ from content.views import (AddContentView, EditContentView, ApproveContentView,
 
 
 class GetArticleMixin(object):
+
     def get_object(self):
         return get_object_or_404(Article, slug=self.kwargs['slug'])
 

@@ -79,28 +79,24 @@ STATIC_URL = '/site_media/native/'
 
 SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, "site_media")
 
-STATICFILES_DIRS = (
-    ("", os.path.join(PROJECT_PATH, "static")),
-    ("scripts", os.path.join(PROJECT_PATH, "songs", "scripts")),
-    os.path.join(PROJECT_PATH, 'client', 'assets'),
-)
+STATICFILES_DIRS = (("", os.path.join(PROJECT_PATH, "static")),
+                    ("scripts", os.path.join(PROJECT_PATH, "songs", "scripts")),
+                    os.path.join(PROJECT_PATH, 'client', 'assets'),)
 
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
         'BUNDLE_DIR_NAME': 'bundles/',
-        'STATS_FILE': os.path.join(PROJECT_PATH,
-                                   'client', 'webpack-stats.json'),
+        'STATS_FILE': os.path.join(PROJECT_PATH, 'client',
+                                   'webpack-stats.json'),
         'IGNORE': ['.+\.hot-update.js', '.+\.map']
     },
 }
 
 # List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-    'django.template.loaders.eggs.Loader',
-)
+TEMPLATE_LOADERS = ('django.template.loaders.filesystem.Loader',
+                    'django.template.loaders.app_directories.Loader',
+                    'django.template.loaders.eggs.Loader',)
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -108,8 +104,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
-)
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',)
 
 ROOT_URLCONF = 'urls'
 
@@ -122,12 +117,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
-    'piosenka.context_processors.to_review',
-)
+    'piosenka.context_processors.to_review',)
 
-TEMPLATE_DIRS = (
-    os.path.join(PROJECT_PATH, "templates"),
-)
+TEMPLATE_DIRS = (os.path.join(PROJECT_PATH, "templates"),)
 
 INSTALLED_APPS = (
     # Django.
@@ -151,22 +143,29 @@ INSTALLED_APPS = (
     'events',
     'frontpage',
     'piosenka',
-    'content',
-)
+    'content',)
 
 THUMBNAIL_ALIASES = {
     'frontpage.CarouselItem.image': {
-        'carousel': {'size': (900, 400), 'crop': True, 'upscale': True},
+        'carousel': {'size': (900, 400),
+                     'crop': True,
+                     'upscale': True},
     },
     'songs.Song': {
-        'scorethumb': {'size': (180, 0), 'upscale': True},
+        'scorethumb': {'size': (180, 0),
+                       'upscale': True},
     },
     'articles.Article.cover_image': {
-        'cover': {'size': (600, 300), 'crop': True, 'upscale': True},
-        'coverthumb': {'size': (420, 210), 'crop': True, 'upscale': True},
+        'cover': {'size': (600, 300),
+                  'crop': True,
+                  'upscale': True},
+        'coverthumb': {'size': (420, 210),
+                       'crop': True,
+                       'upscale': True},
     },
     'songs.Annotation.image': {
-        'imagethumb': {'size': (0, 300), 'upscale': True},
+        'imagethumb': {'size': (0, 300),
+                       'upscale': True},
     }
 }
 

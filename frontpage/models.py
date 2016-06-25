@@ -9,7 +9,8 @@ saved_file.connect(generate_aliases)
 
 class CarouselItem(models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField(help_text="Description, written in Markdown.")
+    description = models.TextField(
+        help_text="Description, written in Markdown.")
     description_html = models.TextField(null=True, blank=True, editable=False)
     position = models.IntegerField()
     image = models.ImageField(upload_to='carousel_items',

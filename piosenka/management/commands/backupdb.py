@@ -33,29 +33,34 @@ class Command(BaseCommand):
         if not os.path.exists(directory):
             os.makedirs(directory)
 
-        #SQL
-        sql_file_path = os.path.join(directory, 'postgres_' + backup_name + ".tar")
-        print('Doing Postgresql backup to database %s into %s' % (self.db, sql_file_path))
+#SQL
+        sql_file_path = os.path.join(directory,
+                                     'postgres_' + backup_name + ".tar")
+        print('Doing Postgresql backup to database %s into %s' %
+              (self.db, sql_file_path))
         self.dump_sql(sql_file_path)
 
         # App fixtures
         apps = settings.INSTALLED_APPS
         for app in [elem.split('.')[-1] for elem in apps]:
-            json_file_path = os.path.join(directory, 'fixture_' + app + '_' + backup_name + ".json")
+            json_file_path = os.path.join(
+                directory, 'fixture_' + app + '_' + backup_name + ".json")
             self.dump_app_fixture(app, json_file_path)
 
-        # Total fixture
-        json_file_path = os.path.join(directory, 'fixture_' + backup_name + ".json")
+# Total fixture
+        json_file_path = os.path.join(directory,
+                                      'fixture_' + backup_name + ".json")
         self.dump_total_fixture(json_file_path)
 
-        push_command = "aws s3 cp %s %sdb/%s/ --recursive" % (directory, settings.S3BUCKET,
-                                                              backup_name)
+        push_command = "aws s3 cp %s %sdb/%s/ --recursive" % (
+            directory, settings.S3BUCKET, backup_name)
         os.system(push_command)
         print(push_command)
 
         # Upload sync
         upload_root = settings.MEDIA_ROOT
-        upload_command = "aws s3 sync %s %supload/" % (upload_root, settings.S3BUCKET, )
+        upload_command = "aws s3 sync %s %supload/" % (upload_root,
+                                                       settings.S3BUCKET,)
 
         os.system(upload_command)
         print(upload_command)
@@ -71,7 +76,7 @@ class Command(BaseCommand):
         if self.port:
             args += ["--port=%s" % self.port]
         args += ["--format=t"]  # Use tarball backup format.
-        args += ["--clean"]     # When restoring, start with cleaning the database.
+        args += ["--clean"]  # When restoring, start with cleaning the database.
         args += [self.db]
         command = 'pg_dump %s > %s' % (' '.join(args), out_file_path)
         print(command)

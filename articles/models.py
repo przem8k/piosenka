@@ -23,7 +23,8 @@ Main illustration for the article."""
     title = models.CharField(max_length=100, help_text=HELP_TITLE)
     lead_text_trevor = models.TextField()
     main_text_trevor = models.TextField()
-    cover_image = models.ImageField(null=True, blank=True,
+    cover_image = models.ImageField(null=True,
+                                    blank=True,
                                     upload_to='article_covers',
                                     help_text=HELP_COVER_IMAGE)
     cover_credits_trevor = models.TextField(null=True, blank=True)
@@ -63,9 +64,7 @@ Main illustration for the article."""
         super().save(*args, **kwargs)
 
     def get_url_params(self):
-        return {
-            'slug': self.slug,
-        }
+        return {'slug': self.slug,}
 
     @staticmethod
     def get_add_url():
@@ -73,11 +72,11 @@ Main illustration for the article."""
 
     @models.permalink
     def get_absolute_url(self):
-        return('view_article', (), self.get_url_params())
+        return ('view_article', (), self.get_url_params())
 
     @models.permalink
     def get_edit_url(self):
-        return('edit_article', (), self.get_url_params())
+        return ('edit_article', (), self.get_url_params())
 
     @models.permalink
     def get_review_url(self):

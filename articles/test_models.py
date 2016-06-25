@@ -6,8 +6,10 @@ from content.trevor import put_text_in_trevor
 
 
 class ArticleTest(TestCase):
+
     def setUp(self):
-        self.user = User.objects.create_user(username="bob", email="bob@example.com",
+        self.user = User.objects.create_user(username="bob",
+                                             email="bob@example.com",
                                              password="secret")
         self.user.save()
 

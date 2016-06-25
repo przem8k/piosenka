@@ -12,11 +12,12 @@ class EntityContributionInline(admin.TabularInline):
 
 
 class SongAdmin(admin.ModelAdmin):
-    inlines = (EntityContributionInline, )
+    inlines = (EntityContributionInline,)
 
 
 class AnnotationAdmin(admin.ModelAdmin):
     pass
+
 
 admin.site.register(Artist, ArtistAdmin)
 admin.site.register(Annotation, AnnotationAdmin)

@@ -10,9 +10,7 @@ _NAME_LEN = 20
 
 def create_user(perms=None):
     name = str(uuid.uuid4()).replace("-", "")[:_NAME_LEN]
-    user = User.objects.create_user(username=name,
-                                    email=_EMAIL,
-                                    password=_PASS)
+    user = User.objects.create_user(username=name, email=_EMAIL, password=_PASS)
 
     if not perms:
         perms = []

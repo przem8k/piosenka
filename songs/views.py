@@ -10,7 +10,6 @@ from songs.forms import AnnotationForm, SongForm, ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Annotation, Artist, Song, EntityContribution
 
-
 INITIAL_LYRICS = """\
 #zw
 Pierwszy wers zwrotki [C G F E]
@@ -33,21 +32,23 @@ I jeszcze jeden i jeszcze raz
 
 
 class GetSongMixin(object):
+
     def get_object(self):
         return get_object_or_404(Song, slug=self.kwargs['slug'])
 
 
 class SongbookMenuMixin(object):
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["bards"] = Artist.objects.filter(
-            featured=True, category=Artist.CAT_TEXTER)
+        context["bards"] = Artist.objects.filter(featured=True,
+                                                 category=Artist.CAT_TEXTER)
         context["composers"] = Artist.objects.filter(
             featured=True, category=Artist.CAT_COMPOSER)
         context["foreigners"] = Artist.objects.filter(
             featured=True, category=Artist.CAT_FOREIGN)
-        context["bands"] = Artist.objects.filter(
-            featured=True, category=Artist.CAT_BAND)
+        context["bands"] = Artist.objects.filter(featured=True,
+                                                 category=Artist.CAT_BAND)
         return context
 
 
@@ -105,8 +106,9 @@ class ViewSong(GetSongMixin, ViewContentView):
     def get_lyrics_as_json(self, context):
         payload = {'lyrics': context['lyrics'],
                    'transposition': context['transposition']}
-        return HttpResponse(json.dumps(payload),
-                            content_type='application/json')
+        return HttpResponse(
+            json.dumps(payload),
+            content_type='application/json')
 
 
 class AddSong(AddContentView):
@@ -116,16 +118,14 @@ class AddSong(AddContentView):
     template_name = "songs/add_edit_song.html"
 
     def get_initial(self):
-        return {
-            'lyrics': INITIAL_LYRICS,
-        }
+        return {'lyrics': INITIAL_LYRICS,}
 
     def form_valid(self, form, formsets):
         contributions = formsets['entitycontribution']
 
         # Pick head contribution to put into the slug.
-        head = EntityContribution.head_contribution([x.instance for x in
-                                                     contributions])
+        head = EntityContribution.head_contribution([x.instance
+                                                     for x in contributions])
         assert head
         form.instance.set_slug_prepend_elements([head.artist.__str__()])
         return super().form_valid(form, formsets)
@@ -179,6 +179,7 @@ class AddAnnotation(AddContentView):
 
 
 class GetAnnotationMixin(object):
+
     def get_object(self):
         return get_object_or_404(Annotation, slug=self.kwargs['slug'])
 

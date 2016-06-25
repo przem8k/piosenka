@@ -8,6 +8,7 @@ from songs.models import Artist, Song, EntityContribution
 
 
 class SongRedirectTest(TestCase):
+
     def setUp(self):
         author = testing.create_user()
         song = Song.create_for_testing(author)

@@ -97,8 +97,8 @@ class TestScenariosMixin(object):
 
         # The author should be redirected to the actual item with some
         # informative message.
-        response = testing.get_client(author).get(
-            item.get_review_url(), follow=True)
+        response = testing.get_client(author).get(item.get_review_url(),
+                                                  follow=True)
         self.assertRedirects(response, item.get_absolute_url())
         self.assertTrue('messages' in response.context)
         self.assertEqual(1, len(response.context['messages']))
@@ -112,8 +112,8 @@ class TestScenariosMixin(object):
 
         # And the valid approver too.
         reviewer = testing.create_user(perms=['content.review'])
-        response = testing.get_client(reviewer).get(
-            item.get_review_url(), follow=True)
+        response = testing.get_client(reviewer).get(item.get_review_url(),
+                                                    follow=True)
         self.assertRedirects(response, item.get_absolute_url())
         self.assertTrue('messages' in response.context)
         self.assertEqual(1, len(response.context['messages']))
@@ -139,8 +139,7 @@ class TestScenariosMixin(object):
         self.assertNotServedOk(item, response)
 
         # Try to approve the item - the author can't do that.
-        response = testing.get_user_client(author).get(
-            item.get_approve_url())
+        response = testing.get_user_client(author).get(item.get_approve_url())
         self.assertEqual(404, response.status_code)
         item.refresh_from_db()
         self.assertFalse(item.is_live())
@@ -164,6 +163,6 @@ class TestScenariosMixin(object):
 
         # The reviewer should still be able to access the item. Ideally we'd
         # verify that the 'approve' link is no longer displayed here anymore.
-        response = testing.get_user_client(reviewer).get(
-            item.get_absolute_url())
+        response = testing.get_user_client(reviewer).get(item.get_absolute_url(
+        ))
         self.assertServedOk(item, response)
