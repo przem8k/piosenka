@@ -66,6 +66,7 @@ class Artist(SlugFieldMixin, ContentItem):
     def create_for_testing():
         artist = Artist()
         artist.name = str(uuid.uuid4())
+        artist.description_trevor = put_text_in_trevor('Abc')
         artist.save()
         return artist
 

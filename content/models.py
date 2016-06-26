@@ -1,14 +1,25 @@
+import uuid
+
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.utils import timezone
+
+_DUMMY_USERNAME = 'dummy_username'
 
 
 def get_default_author():
     """Hack to upgrade content where we did not track the author to the unified
     system.
     """
-    return User.objects.get(username='DX').pk
+    if User.objects.filter(username='DX').exists():
+        return User.objects.get(username='DX').pk
+    elif User.objects.filter(username=_DUMMY_USERNAME).exists():
+        return User.objects.get(username=_DUMMY_USERNAME).pk
+    else:
+        return User.objects.create_user(_DUMMY_USERNAME,
+                                        'dummy@example.com',
+                                        uuid.uuid4().hex).pk
 
 
 def get_default_pub_date():
