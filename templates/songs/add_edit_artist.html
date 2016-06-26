@@ -25,6 +25,8 @@ $(document).ready(function(){
         <table class="table table-condensed formtable">
           {% include "components/forms/table_field.html" with name="Artysta" field=form.name %}
           {% include "components/forms/table_field.html" with name="Szufladka" field=form.category %}
+          {% include "components/forms/table_field.html" with name="Widoczny w menu" field=form.featured %}
+          {% include "components/forms/table_field.html" with name="Strona www" field=form.website %}
         </table>
       </div>
       <div class="section">

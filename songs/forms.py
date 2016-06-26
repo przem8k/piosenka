@@ -9,6 +9,10 @@ class ArtistForm(forms.ModelForm):
     class Meta:
         model = Artist
         exclude = []
+        widgets = {
+            'born_on': forms.TextInput(attrs={'placeholder': 'DD.MM.RRRR'}),
+            'died_on': forms.TextInput(attrs={'placeholder': 'DD.MM.RRRR'}),
+        }
 
 
 class SongForm(forms.ModelForm):

@@ -21,6 +21,7 @@ class Artist(SlugFieldMixin, ContentItem):
     HELP_NAME = 'Imię i nazwisko wykonawcy lub nazwa zespołu.'
     HELP_FEATURED = 'Czy podmiot ma figurować w spisie treści.'
     HELP_CATEGORY = 'Kategoria w spisie treści śpiewnika.'
+    HELP_WEBSITE = 'Strona internetowa artysty.'
     HELP_IMAGE = 'Ilustracja - zdjęcie artysty.'
     HELP_IMAGE_SOURCE = 'Źródło zdjęcia.'
     HELP_DESCRIPTION = 'Krótki opis podmiotu w stylu encyklopedycznym.'
@@ -42,7 +43,7 @@ class Artist(SlugFieldMixin, ContentItem):
                                    null=True,
                                    blank=True,
                                    help_text=HELP_CATEGORY)
-    website = models.URLField(null=True, blank=True)
+    website = models.URLField(null=True, blank=True, help_text=HELP_WEBSITE)
     image = models.ImageField(null=True,
                               blank=True,
                               upload_to='artists',

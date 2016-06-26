@@ -3,8 +3,11 @@
     <div class="section">
       <h1>Wykonawcy własnych tekstów</h1>
       <ul class="list-unstyled">
-        {% for person in bards %}
-        <li><a href="/spiewnik/{{person.slug}}" title="{{person}}">{{ person }}</a></li>
+        {% for artist in bards %}
+        <li>
+          <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
+          {% include "components/content_status_span.html" with item=artist %}
+        </li>
         {% endfor %}
       </ul>
     </div>
@@ -13,16 +16,22 @@
     <div class="section">
       <h1>Zespoły</h1>
       <ul class="list-unstyled">
-        {% for band in bands %}
-        <li><a href="/spiewnik/{{band.slug}}" title="{{band}}">{{ band }}</a></li>
+        {% for artist in bands %}
+        <li>
+          <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
+          {% include "components/content_status_span.html" with item=artist %}
+        </li>
         {% endfor %}
       </ul>
     </div>
     <div class="section">
       <h1>Kompozytorzy</h1>
       <ul class="list-unstyled">
-        {% for person in composers %}
-        <li><a href="/spiewnik/{{person.slug}}" title="{{person}}">{{ person }}</a></li>
+        {% for artist in composers %}
+        <li>
+          <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
+          {% include "components/content_status_span.html" with item=artist %}
+        </li>
         {% endfor %}
       </ul>
     </div>
@@ -31,8 +40,11 @@
     <div class="section">
       <h1>Twórcy zagraniczni</h1>
       <ul class="list-unstyled">
-        {% for person in foreigners %}
-        <li><a href="/spiewnik/{{person.slug}}" title="{{person}}">{{ person }}</a></li>
+        {% for artist in foreigners %}
+        <li>
+          <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
+          {% include "components/content_status_span.html" with item=artist %}
+        </li>
         {% endfor %}
       </ul>
     </div>
