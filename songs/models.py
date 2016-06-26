@@ -82,7 +82,8 @@ class Artist(SlugFieldMixin, ContentItem):
         return [self.name]
 
     def save(self, *args, **kwargs):
-        self.description_html = render_trevor(self.description_trevor)
+        if self.description_trevor:
+            self.description_html = render_trevor(self.description_trevor)
         super().save(*args, **kwargs)
 
 

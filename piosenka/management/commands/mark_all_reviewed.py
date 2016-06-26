@@ -5,13 +5,18 @@ from django.core.management.base import BaseCommand
 from articles.models import Article
 from blog.models import Post
 from events.models import Event
-from songs.models import Annotation, Song
+from songs.models import Artist, Annotation, Song
 
 
 class Command(BaseCommand):
     help = 'Marks all items of all content types as reviewed.'
 
     def handle(self, *args, **options):
+        for artist in Artist.objects.all():
+            artist.reviewed = True
+            artist.save()
+            print('Reviewed: %s' % (artist))
+
         for article in Article.objects.all():
             article.reviewed = True
             article.save()
