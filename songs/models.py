@@ -17,12 +17,16 @@ from songs.transpose import transpose_lyrics
 saved_file.connect(generate_aliases)
 
 
-class Artist(SlugFieldMixin, models.Model):
-    HELP_NAME = """Imię i nazwisko wykonawcy lub nazwa zespołu."""
-    HELP_FEATURED = """Czy artysta powinien być wyświetlany w spisie treści
-śpiewnika."""
-    HELP_CATEGORY = """W której części spisu treści artysta ma być wyświetlony.
-"""
+class Artist(SlugFieldMixin, ContentItem):
+    HELP_NAME = 'Imię i nazwisko wykonawcy lub nazwa zespołu.'
+    HELP_FEATURED = 'Czy podmiot ma figurować w spisie treści.'
+    HELP_CATEGORY = 'Kategoria w spisie treści śpiewnika.'
+    HELP_IMAGE = 'Ilustracja - zdjęcie artysty.'
+    HELP_IMAGE_SOURCE = 'Źródło zdjęcia.'
+    HELP_DESCRIPTION = 'Krótki opis podmiotu w stylu encyklopedycznym.'
+    HELP_BORN_ON = 'Data urodzin.'
+    HELP_DIED_ON = 'Data śmierci.'
+
     CAT_TEXTER = 1
     CAT_COMPOSER = 2
     CAT_FOREIGN = 3
@@ -39,6 +43,21 @@ class Artist(SlugFieldMixin, models.Model):
                                    blank=True,
                                    help_text=HELP_CATEGORY)
     website = models.URLField(null=True, blank=True)
+    image = models.ImageField(null=True,
+                              blank=True,
+                              upload_to='artists',
+                              help_text=HELP_IMAGE)
+    image_source = models.CharField(max_length=100,
+                                    null=True,
+                                    blank=True,
+                                    help_text=HELP_IMAGE_SOURCE)
+    description_trevor = models.TextField(blank=True,
+                                          null=True,
+                                          help_text=HELP_DESCRIPTION)
+    born_on = models.DateField(blank=True, null=True, help_text=HELP_BORN_ON)
+    died_on = models.DateField(blank=True, null=True, help_text=HELP_DIED_ON)
+
+    description_html = models.TextField(blank=True, null=True, editable=False)
 
     class Meta:
         ordering = ['name']
@@ -55,11 +74,15 @@ class Artist(SlugFieldMixin, models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('view_artist', (), {'slug': self.slug,})
+        return ('view_artist', (), {'slug': self.slug})
 
     # SlugFieldMixin:
     def get_slug_elements(self):
         return [self.name]
+
+    def save(self, *args, **kwargs):
+        self.description_html = render_trevor(self.description_trevor)
+        super().save(*args, **kwargs)
 
 
 def validate_capo_fret(value):

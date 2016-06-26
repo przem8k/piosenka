@@ -4,14 +4,26 @@ from django.db import models
 from django.utils import timezone
 
 
+def get_default_author():
+    """Hack to upgrade content where we did not track the author to the unified
+    system.
+    """
+    return User.objects.get(username='DX').pk
+
+
+def get_default_pub_date():
+    return timezone.now()
+
+
 class ContentItem(models.Model):
     # Cards are item types that are displayed alongside the parent item. They
     # don't have an absolute url of their own, but defer to the parent instead.
     is_card = False
 
-    author = models.ForeignKey(User, editable=False)
+    author = models.ForeignKey(User, editable=False, default=get_default_author)
     reviewed = models.BooleanField(default=False, editable=False)
-    pub_date = models.DateTimeField(editable=False)
+    pub_date = models.DateTimeField(editable=False,
+                                    default=get_default_pub_date)
 
     class Meta:
         abstract = True

@@ -1,5 +1,8 @@
 {% extends "songs/base.html" %}
 
+{% load staticfiles %}
+{% load thumbnail %}
+
 {% block title %}Śpiewnik piosenek {{ artist }} - teksty i akordy{% endblock title %}
 {% block description %}Śpiewnik zawiera teksty i akordy do piosenek - artysta: {{ artist }}.{% endblock description %}
 
@@ -22,6 +25,12 @@
     <div class="col-md-4">
       <div class="section">
         <h1>{{ artist }}</h1>
+        {% if artist.image %}
+        <div class="thumbnail-host">
+          <img src="{{ artist.image|thumbnail_url:'imagethumb'}}" class="annotation-image img-responsive"/>
+        </div>
+        {% endif %}
+        {{ artist.description_html|safe }}
       </div>
     </div>
   </div>

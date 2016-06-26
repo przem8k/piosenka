@@ -6,7 +6,8 @@ from django.views.generic import TemplateView
 
 from content.views import (AddContentView, EditContentView, ApproveContentView,
                            ReviewContentView, ViewContentView)
-from songs.forms import AnnotationForm, SongForm, ContributionFormSet
+from songs.forms import ArtistForm, AnnotationForm, SongForm
+from songs.forms import ContributionFormSet
 from songs.lyrics import render_lyrics
 from songs.models import Annotation, Artist, Song, EntityContribution
 
@@ -37,6 +38,12 @@ class GetSongMixin(object):
         return get_object_or_404(Song, slug=self.kwargs['slug'])
 
 
+class GetArtistMixin(object):
+
+    def get_object(self):
+        return get_object_or_404(Artist, slug=self.kwargs['slug'])
+
+
 class SongbookMenuMixin(object):
 
     def get_context_data(self, **kwargs):
@@ -56,13 +63,14 @@ class IndexView(SongbookMenuMixin, TemplateView):
     template_name = 'songs/index.html'
 
 
-class ArtistView(SongbookMenuMixin, TemplateView):
+class ViewArtist(GetArtistMixin, SongbookMenuMixin, ViewContentView):
     """Lists the songs associated with the given artist."""
-    template_name = 'songs/list.html'
+    model = Artist
+    context_object_name = 'artist'
+    template_name = 'songs/artist.html'
 
     def get_context_data(self, **kwargs):
-        slug = kwargs['slug']
-        artist = get_object_or_404(Artist, slug=slug)
+        artist = self.get_object()
         contributions = EntityContribution.objects.filter(
             artist=artist).select_related('song').order_by('song__title')
         songs = [contribution.song for contribution in contributions
@@ -76,6 +84,32 @@ class ArtistView(SongbookMenuMixin, TemplateView):
         context['songs'] = songs
         context['artist'] = artist
         return context
+
+
+class AddArtist(AddContentView):
+    model = Artist
+    form_class = ArtistForm
+    template_name = 'songs/add_edit_artist.html'
+
+    def get_success_url(self):
+        return self.object.get_absolute_url()
+
+
+class EditArtist(GetArtistMixin, EditContentView):
+    model = Artist
+    form_class = ArtistForm
+    template_name = 'songs/add_edit_artist.html'
+
+    def get_success_url(self):
+        return self.object.get_absolute_url()
+
+
+class ReviewArtist(GetArtistMixin, ReviewContentView):
+    pass
+
+
+class ApproveArtist(GetArtistMixin, ApproveContentView):
+    pass
 
 
 class ViewSong(GetSongMixin, ViewContentView):
@@ -118,7 +152,7 @@ class AddSong(AddContentView):
     template_name = 'songs/add_edit_song.html'
 
     def get_initial(self):
-        return {'lyrics': INITIAL_LYRICS,}
+        return {'lyrics': INITIAL_LYRICS}
 
     def form_valid(self, form, formsets):
         contributions = formsets['entitycontribution']

@@ -1,0 +1,61 @@
+{% extends "songs/base.html" %}
+
+{% block title %}{% if artist %}Edytuj artystę: {{ artist }}{% else %}Dodaj artystę{% endif %}{% endblock title %}
+
+{% block extra-scripts %}
+<script>
+$(document).ready(function(){
+    new SirTrevor.Editor({
+      el: $('#id_description_trevor'),
+      blockTypes: ["Text"],
+      blockLimit: 1,
+      defaultType: "Text",
+    });
+});
+</script>
+{% endblock extra-scripts %}
+
+{% block content %}
+<div class="container main">
+  <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_article' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
+  <div class="row">
+    <div class="col-md-8">
+      <div class="section">
+        <h1>Artysta</h1>
+        <table class="table table-condensed formtable">
+          {% include "components/forms/table_field.html" with name="Artysta" field=form.name %}
+          {% include "components/forms/table_field.html" with name="Szufladka" field=form.category %}
+        </table>
+      </div>
+      <div class="section">
+        <h1>Życie i czasy</h1>
+        <div class="alert alert-info" role="alert">
+          Daty urodzin i śmierci prosimy wypełniać tylko dla jednoosobowych podmiotów artystycznych.
+        </div>
+        <table class="table table-condensed formtable">
+          {% include "components/forms/table_field.html" with name="Urodzony" field=form.born_on %}
+          {% include "components/forms/table_field.html" with name="Zmarły" field=form.died_on %}
+        </table>
+      </div>
+      <div class="section">
+        <h1>Kto zacz</h1>
+        <div class="alert alert-info" role="alert">
+          Jedno lub dwu-zdaniowe przedstawienie postaci lub zespołu (styl encyklopedyczno-dziennikarski).
+        </div>
+        {{ form.description_trevor }}
+      </div>
+      <div class="section">
+        <h1>Zdjęcie</h1>
+          <table class="table table-condensed formtable">
+            {% include "components/forms/table_field.html" with name="Plik" field=form.image %}
+          </table>
+          {% include "components/forms/table_field.html" with name="Źródło" field=form.image_source %}
+      </div>
+    </div>
+    <div class="col-md-4">
+      {% include "components/forms/add.html" with item=object %}
+    </div>
+  </div>
+  </form>
+</div>
+{% endblock content %}
