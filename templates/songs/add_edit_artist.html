@@ -48,10 +48,16 @@ $(document).ready(function(){
       </div>
       <div class="section">
         <h1>Zdjęcie</h1>
-          <table class="table table-condensed formtable">
-            {% include "components/forms/table_field.html" with name="Plik" field=form.image %}
-          </table>
-          {% include "components/forms/table_field.html" with name="Źródło" field=form.image_source %}
+        <div class="alert alert-info" role="alert">
+          Pola "Źródło zdjęcia" i "Autor zdjęcia" są opcjonalne, ale postaraj
+          się wypełnić co najmniej jedno. Dodawaj tylko zdjęcia na
+          wykorzystanie których pozwala prawo autorskie.
+        </div>
+        <table class="table table-condensed formtable">
+          {% include "components/forms/table_field.html" with name="Plik" field=form.image %}
+          {% include "components/forms/table_field.html" with name="Źródło zdjęcia (adres www)" field=form.image_url %}
+          {% include "components/forms/table_field.html" with name="Autor zdjęcia" field=form.image_author %}
+        </table>
       </div>
     </div>
     <div class="col-md-4">

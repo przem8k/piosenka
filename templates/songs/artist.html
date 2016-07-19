@@ -32,22 +32,36 @@
         <div class="thumbnail-host">
           <img src="{{ artist.image|thumbnail_url:'imagethumb'}}" class="annotation-image img-responsive"/>
         </div>
-        {% if artist.image_source %}
-        <p style="text-align: right;">
-          <small><b>Źródło zdjęcia</b>: {{artist.image_source}}</small>
-        </p>
         {% endif %}
-        {% endif %}
+
         {% if artist.description_html %}
           {{ artist.description_html|safe }}
         {% endif %}
-        {% if artist.website %}
-        <p style="text-align: right;">
-          <a href="{{ artist.website }}" target="_blank">strona internetowa
-            <small><span class="glyphicon glyphicon-new-window"></span></small>
-          </a>
+        <small>
+          <ul class="list-unstyled">
+            {% if artist.image and artist.image_author %}
+            <li>
+              <b>autor zdjęcia</b>: {{artist.image_author}}
+            </li>
+            {% endif %}
+            {% if artist.image and artist.image_url %}
+            <li>
+              <b>źródło zdjęcia</b>:
+              <a href="{{ artist.image_url }}" target="_blank">{{ artist.image_url }}
+                <span class="glyphicon glyphicon-new-window"></span>
+              </a>
+            </li>
+            {% endif %}
+            {% if artist.website %}
+            <li>
+              <b>strona internetowa</b>
+              <a href="{{ artist.website }}" target="_blank">{{ artist.website }}
+                <span class="glyphicon glyphicon-new-window"></span>
+              </a>
+            </li>
+            {% endif %}
+          </small>
         </p>
-        {% endif %}
       </div>
     </div>
   </div>

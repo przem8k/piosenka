@@ -23,7 +23,8 @@ class Artist(SlugFieldMixin, ContentItem):
     HELP_CATEGORY = 'Kategoria w spisie treści śpiewnika.'
     HELP_WEBSITE = 'Strona internetowa artysty.'
     HELP_IMAGE = 'Ilustracja - zdjęcie artysty.'
-    HELP_IMAGE_SOURCE = 'Źródło zdjęcia.'
+    HELP_IMAGE_URL = 'Źródło zdjęcia (adres www).'
+    HELP_IMAGE_AUTHOR = 'Źródło zdjęcia (autor).'
     HELP_DESCRIPTION = 'Krótki opis podmiotu w stylu encyklopedycznym.'
     HELP_BORN_ON = 'Data urodzin.'
     HELP_DIED_ON = 'Data śmierci.'
@@ -48,10 +49,9 @@ class Artist(SlugFieldMixin, ContentItem):
                               blank=True,
                               upload_to='artists',
                               help_text=HELP_IMAGE)
-    image_source = models.CharField(max_length=100,
-                                    null=True,
-                                    blank=True,
-                                    help_text=HELP_IMAGE_SOURCE)
+    image_url = models.URLField(null=True, blank=True, help_text=HELP_IMAGE_URL)
+    image_author = models.CharField(null=True, blank=True, max_length=50,
+                                    help_text=HELP_IMAGE_AUTHOR)
     description_trevor = models.TextField(blank=True,
                                           null=True,
                                           help_text=HELP_DESCRIPTION)
