@@ -6,6 +6,8 @@ from songs import redirects
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(),
         name='songbook'),
+    url(r'^dodaj/$', views.AddArtist.as_view(),
+        name='add_artist'),
     url(r'^(?P<slug>[-\w]+)/',
         include([
             url(r'^$', views.ViewArtist.as_view(),
