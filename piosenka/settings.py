@@ -47,6 +47,11 @@ except ImportError:
     pass
 
 try:
+    from piosenka.settings_local import AWS_PATH
+except ImportError:
+    AWS_PATH = 'aws'
+
+try:
     from piosenka.settings_local import GOOGLE_MAPS_API_KEY
 except ImportError:
     GOOGLE_MAPS_API_KEY = ''
