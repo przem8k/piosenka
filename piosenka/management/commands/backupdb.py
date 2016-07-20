@@ -52,15 +52,15 @@ class Command(BaseCommand):
                                       'fixture_' + backup_name + '.json')
         self.dump_total_fixture(json_file_path)
 
-        push_command = settings.AWS_PATH + 's3 cp %s %sdb/%s/ --recursive' % (
+        push_command = settings.AWS_PATH + ' s3 cp %s %sdb/%s/ --recursive' % (
             directory, settings.S3BUCKET, backup_name)
         os.system(push_command)
         print(push_command)
 
         # Upload sync
         upload_root = settings.MEDIA_ROOT
-        upload_command = 'aws s3 sync %s %supload/' % (upload_root,
-                                                       settings.S3BUCKET,)
+        upload_command = settings.AWS_PATH + ' s3 sync %s %supload/' % (
+            upload_root, settings.S3BUCKET)
 
         os.system(upload_command)
         print(upload_command)
