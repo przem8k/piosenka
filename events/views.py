@@ -2,13 +2,11 @@ from datetime import datetime
 import time
 
 from django.core.urlresolvers import reverse
-from django.utils import timezone
-from django.views.generic import DetailView, RedirectView, TemplateView
+from django.views.generic import RedirectView, TemplateView
 
-from events.models import EntityPerformance, Event, FbEvent, Performer, Venue
+from events.models import Event, Performer
 from events.models import get_events_for
-from events.forms import EventForm, PerformanceFormSet
-from events.mixins import EventMenuMixin
+from events.forms import EventForm
 from content.trevor import put_text_in_trevor
 from content.views import (AddContentView, EditContentView, ApproveContentView,
                            ReviewContentView, ViewContentView)
@@ -29,7 +27,7 @@ class GetEventMixin(object):
                                  datetime__day=event_date.day)
 
 
-class EventIndex(EventMenuMixin, TemplateView):
+class EventIndex(TemplateView):
     template_name = 'events/index.html'
 
     def get_context_data(self, **kwargs):
@@ -82,7 +80,6 @@ class YearArchiveRedirect(RedirectView):
 class AddEvent(AddContentView):
     model = Event
     form_class = EventForm
-    formset_classes = [('entityperformance', PerformanceFormSet)]
     template_name = 'events/add_edit_event.html'
 
     def get_initial(self):
@@ -105,7 +102,6 @@ class AddEvent(AddContentView):
 class EditEvent(GetEventMixin, EditContentView):
     model = Event
     form_class = EventForm
-    formset_classes = [('entityperformance', PerformanceFormSet)]
     template_name = 'events/add_edit_event.html'
 
     def get_initial(self):

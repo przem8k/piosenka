@@ -1,8 +1,6 @@
-from datetime import datetime
 from datetime import timedelta
 import uuid
 
-from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse_lazy
 from django.db import models
 from django.utils import timezone
@@ -40,7 +38,7 @@ class Performer(SlugFieldMixin, models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('view_performer', (), {'slug': self.slug,})
+        return ('view_performer', (), {'slug': self.slug})
 
     # SlugFieldMixin:
     def get_slug_elements(self):
@@ -84,7 +82,7 @@ class Venue(SlugFieldMixin, models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('venue_detail', (), {'slug': self.slug,})
+        return ('venue_detail', (), {'slug': self.slug})
 
     # SlugFieldMixin:
     def get_slug_elements(self):
@@ -177,15 +175,6 @@ przypadku braku danych pozostaw puste."""
 
     def location(self):
         return self.venue.town
-
-    def performers(self):
-        return [x.performer
-                for x in EntityPerformance.objects.filter(event=self)]
-
-
-class EntityPerformance(models.Model):
-    event = models.ForeignKey(Event)
-    performer = models.ForeignKey(Performer)
 
 
 class FbEvent(models.Model):

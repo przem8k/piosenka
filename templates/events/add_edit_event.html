@@ -85,35 +85,6 @@ $(document).ready(function(){
           {% endif %}
         </div>
         <div class="section">
-          <h1>Wystąpią</h1>
-          {{ entityperformance.management_form }}
-
-          {% if entityperformance.errors %}
-          {%   for dict in entityperformance.errors %}
-          {%     if dict %}
-          <div class="alert alert-danger" role="alert">
-            {%     for error in dict.values %}
-            {{       error }}
-            {%     endfor %}
-          </div>
-          {%     endif %}
-          {%   endfor %}
-          {% endif %}
-
-          <table class="table table-condensed formset">
-            <tr>
-              <th> </th>
-              <th><span class="glyphicon glyphicon-remove"></span></th>
-            </tr>
-            {% for form in entityperformance %}
-            <tr>
-              <td>{{ form.song }} {{ form.id }} {{ form.performer }}</td>
-              <td>{{ form.DELETE }}</td>
-            </tr>
-            {% endfor %}
-          </table>
-        </div>
-        <div class="section">
           <h1>Dodatkowe informacje</h1>
           <div class="alert alert-info" role="alert">
             Wszystkie pola w tej sekcji są opcjonalne.

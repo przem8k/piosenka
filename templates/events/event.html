@@ -16,15 +16,8 @@
             <tr><td valign="top" width="60%">
                 <b>Kiedy: </b>
                 {{ event.datetime|date:"d.m.Y H:i" }}
+                <br />
 
-                {% if event.performers %}
-                <br />
-                <b>Kto: </b>
-                {% for performer in event.performers %}
-                {{ performer }}
-                {% endfor %}
-                {% endif %}
-                <br />
                 {% if event.price %}
                 <b>Ceny biletów: </b>
                 {{ event.price }}

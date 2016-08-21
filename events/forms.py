@@ -1,7 +1,6 @@
 from django import forms
-from django.forms.models import ModelForm, inlineformset_factory
 
-from events.models import EntityPerformance, Event, Venue
+from events.models import Event, Venue
 
 
 class EventForm(forms.ModelForm):
@@ -53,16 +52,3 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         exclude = ['venue', 'datetime']
-
-
-class EntityPerformanceForm(ModelForm):
-
-    class Meta:
-        model = EntityPerformance
-        exclude = ['entity']
-
-
-PerformanceFormSet = inlineformset_factory(Event,
-                                           EntityPerformance,
-                                           form=EntityPerformanceForm,
-                                           exclude=[])
