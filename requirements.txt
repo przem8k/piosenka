@@ -1,5 +1,5 @@
 Django==1.8.14
-Markdown==2.6.2
+Markdown==2.6.6
 awscli==1.7.25
 easy-thumbnails==2.2
 pygeocoder==1.2.5
