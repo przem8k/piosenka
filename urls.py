@@ -1,6 +1,8 @@
+from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
+import django.views.static
 
 import piosenka.views
 import songs.redirects
@@ -44,11 +46,9 @@ urlpatterns = [
         name='index'),
 ]
 
-from django.conf import settings
-
 if settings.DEBUG:
     urlpatterns = [
-        url(r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
+        url(r'^site_media/(?P<path>.*)$', django.views.static.serve,
             {'document_root': settings.SERVE_DIRECTLY_ROOT}),
         url(r'^403/$', TemplateView.as_view(template_name='403.html')),
         url(r'^404/$', TemplateView.as_view(template_name='404.html')),

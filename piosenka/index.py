@@ -1,6 +1,6 @@
 import json
 
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from django.http import HttpResponse
 from django.views.decorators.cache import cache_control
 from django.views.generic.base import View
@@ -48,10 +48,10 @@ class SongSearchIndex(JSONSearchIndexMixin, View):
         return self.render_to_response({'index': index})
 
 
-urlpatterns = patterns('',
-                       url(r'^artists$',
-                           ArtistSearchIndex.as_view(),
-                           name='search_index_artists'),
-                       url(r'^songs$',
-                           SongSearchIndex.as_view(),
-                           name='search_index_songs'),)
+urlpatterns = [
+    url(r'^artists$',
+        ArtistSearchIndex.as_view(),
+        name='search_index_artists'), url(r'^songs$',
+                                          SongSearchIndex.as_view(),
+                                          name='search_index_songs')
+]
