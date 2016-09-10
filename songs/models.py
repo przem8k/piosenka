@@ -7,6 +7,7 @@ from django.db import models
 from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
 
+from content import url_scheme
 from content.models import ContentItem
 from content.slug import SlugLogicMixin, SlugFieldMixin
 from content.trevor import render_trevor, put_text_in_trevor
@@ -50,7 +51,9 @@ class Artist(SlugFieldMixin, ContentItem):
                               upload_to='artists',
                               help_text=HELP_IMAGE)
     image_url = models.URLField(null=True, blank=True, help_text=HELP_IMAGE_URL)
-    image_author = models.CharField(null=True, blank=True, max_length=50,
+    image_author = models.CharField(null=True,
+                                    blank=True,
+                                    max_length=50,
                                     help_text=HELP_IMAGE_AUTHOR)
     description_trevor = models.TextField(blank=True,
                                           null=True,
@@ -93,7 +96,7 @@ def validate_capo_fret(value):
         raise ValidationError(u'Capo fret has to be in range [0, 11]')
 
 
-class Song(SlugLogicMixin, ContentItem):
+class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     CAPO_TO_ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX',
                      'X', 'XI', 'XII']
 
@@ -189,22 +192,6 @@ True iff the lyrics contain repeated chords."""
         return str(reverse_lazy('add_song'))
 
     @models.permalink
-    def get_absolute_url(self):
-        return ('view_song', (), self.get_url_params())
-
-    @models.permalink
-    def get_edit_url(self):
-        return ('edit_song', (), self.get_url_params())
-
-    @models.permalink
-    def get_review_url(self):
-        return ('review_song', (), self.get_url_params())
-
-    @models.permalink
-    def get_approve_url(self):
-        return ('approve_song', (), self.get_url_params())
-
-    @models.permalink
     def get_add_annotation_url(self):
         return ('add_annotation', (), self.get_url_params())
 
@@ -222,6 +209,10 @@ True iff the lyrics contain repeated chords."""
     def get_slug_elements(self):
         return self.slug_prepend_elements + [self.title] + (
             [self.disambig] if self.disambig else [])
+
+    # url_scheme.ViewEditReviewApprove
+    def get_url_name(self):
+        return 'song'
 
     def save(self, *args, **kwargs):
         self.has_extra_chords = contain_extra_chords(parse_lyrics(self.lyrics))
@@ -294,7 +285,7 @@ class EntityContribution(models.Model):
         return None
 
 
-class Annotation(SlugLogicMixin, ContentItem):
+class Annotation(SlugLogicMixin, url_scheme.EditReviewApprove, ContentItem):
     is_card = True
 
     HELP_TITLE = """\
@@ -363,21 +354,13 @@ Used in urls, has to be unique."""
     def get_absolute_url(self):
         return self.song.get_absolute_url()
 
-    @models.permalink
-    def get_edit_url(self):
-        return ('edit_annotation', (), self.get_url_params())
-
-    @models.permalink
-    def get_review_url(self):
-        return ('review_annotation', (), self.get_url_params())
-
-    @models.permalink
-    def get_approve_url(self):
-        return ('approve_annotation', (), self.get_url_params())
-
     # SlugLogicMixin:
     def get_slug_elements(self):
         return [self.title, self.song.slug]
+
+    # url_scheme.ViewEditReviewApprove
+    def get_url_name(self):
+        return 'annotation'
 
     def save(self, *args, **kwargs):
         self.text_html = render_trevor(self.text_trevor)

@@ -8,9 +8,10 @@ from django.utils import timezone
 from pygeocoder import Geocoder
 from pygeolib import GeocoderError
 
-from content.trevor import render_trevor, put_text_in_trevor
+from content import url_scheme
 from content.models import ContentItem
 from content.slug import SlugLogicMixin, SlugFieldMixin
+from content.trevor import render_trevor, put_text_in_trevor
 
 
 class Performer(SlugFieldMixin, models.Model):
@@ -91,7 +92,7 @@ class Venue(SlugFieldMixin, models.Model):
         return [self.name, self.town]
 
 
-class Event(SlugLogicMixin, ContentItem):
+class Event(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     HELP_NAME = """Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego'
 lub 'V Festiwal Piosenki Wymyślnej w Katowicach'."""
     HELP_PRICE = """Np. 20zł, wstęp wolny. W przypadku braku danych pozostaw
@@ -147,25 +148,13 @@ przypadku braku danych pozostaw puste."""
     def get_add_url():
         return str(reverse_lazy('add_event'))
 
-    @models.permalink
-    def get_absolute_url(self):
-        return ('view_event', (), self.get_url_params())
-
-    @models.permalink
-    def get_edit_url(self):
-        return ('edit_event', (), self.get_url_params())
-
-    @models.permalink
-    def get_review_url(self):
-        return ('review_event', (), self.get_url_params())
-
-    @models.permalink
-    def get_approve_url(self):
-        return ('approve_event', (), self.get_url_params())
-
     # SlugLogicMixin:
     def get_slug_elements(self):
         return [self.name, self.venue.town]
+
+    # url_scheme.ViewEditReviewApprove
+    def get_url_name(self):
+        return 'event'
 
     def lat(self):
         return self.venue.lat

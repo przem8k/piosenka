@@ -6,6 +6,7 @@ from django.db import models
 from easy_thumbnails.signal_handlers import generate_aliases
 from easy_thumbnails.signals import saved_file
 
+from content import url_scheme
 from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
 from content.slug import SlugFieldMixin
@@ -13,7 +14,7 @@ from content.slug import SlugFieldMixin
 saved_file.connect(generate_aliases)
 
 
-class Article(SlugFieldMixin, ContentItem):
+class Article(SlugFieldMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     HELP_TITLE = """\
 Tytuł artykułu, np. 'IX Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego \
 "Nadzieja"'."""
@@ -54,6 +55,10 @@ Main illustration for the article."""
         assert self.title
         return [self.title]
 
+    # url_scheme.ViewEditReviewApprove
+    def get_url_name(self):
+        return 'article'
+
     def save(self, *args, **kwargs):
         self.lead_text_html = render_trevor(self.lead_text_trevor)
         self.main_text_html = render_trevor(self.main_text_trevor)
@@ -64,24 +69,8 @@ Main illustration for the article."""
         super().save(*args, **kwargs)
 
     def get_url_params(self):
-        return {'slug': self.slug,}
+        return {'slug': self.slug}
 
     @staticmethod
     def get_add_url():
         return str(reverse_lazy('add_article'))
-
-    @models.permalink
-    def get_absolute_url(self):
-        return ('view_article', (), self.get_url_params())
-
-    @models.permalink
-    def get_edit_url(self):
-        return ('edit_article', (), self.get_url_params())
-
-    @models.permalink
-    def get_review_url(self):
-        return ('review_article', (), self.get_url_params())
-
-    @models.permalink
-    def get_approve_url(self):
-        return ('approve_article', (), self.get_url_params())

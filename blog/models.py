@@ -3,12 +3,13 @@ import uuid
 from django.core.urlresolvers import reverse_lazy
 from django.db import models
 
-from content.trevor import render_trevor, put_text_in_trevor
+from content import url_scheme
 from content.models import ContentItem
 from content.slug import SlugFieldMixin
+from content.trevor import render_trevor, put_text_in_trevor
 
 
-class Post(SlugFieldMixin, ContentItem):
+class Post(SlugFieldMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     HELP_TITLE = "Tytuł posta, np. 'Nowa wyszukiwarka piosenek.'."
 
     title = models.CharField(max_length=100, help_text=HELP_TITLE)
@@ -39,6 +40,10 @@ class Post(SlugFieldMixin, ContentItem):
         assert self.title
         return [self.title]
 
+    # url_scheme.ViewEditReviewApprove
+    def get_url_name(self):
+        return 'post'
+
     def save(self, *args, **kwargs):
         self.post_html = render_trevor(self.post_trevor)
         if self.more_trevor:
@@ -58,19 +63,3 @@ class Post(SlugFieldMixin, ContentItem):
     @staticmethod
     def get_add_url():
         return str(reverse_lazy('add_post'))
-
-    @models.permalink
-    def get_absolute_url(self):
-        return ('view_post', (), self.get_url_params())
-
-    @models.permalink
-    def get_edit_url(self):
-        return ('edit_post', (), self.get_url_params())
-
-    @models.permalink
-    def get_review_url(self):
-        return ('review_post', (), self.get_url_params())
-
-    @models.permalink
-    def get_approve_url(self):
-        return ('approve_post', (), self.get_url_params())
