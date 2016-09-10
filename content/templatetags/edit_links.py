@@ -1,5 +1,5 @@
-import datetime
 from django import template
+from django.utils.safestring import mark_safe
 
 register = template.Library()
 
@@ -13,4 +13,4 @@ def edit_links(item, user, approve_label, edit_label):
     if item.can_be_edited_by(user):
         elements.append('<a href="%s">%s</a>' % (item.get_edit_url(),
                                                  edit_label))
-    return ' | '.join(elements)
+    return mark_safe(' | '.join(elements))
