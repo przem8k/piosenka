@@ -62,8 +62,6 @@ try:
 except ImportError:
     print('FB credentials not set')
 
-TEMPLATE_DEBUG = DEBUG
-
 USE_TZ = True
 TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'pl'
@@ -98,11 +96,6 @@ WEBPACK_LOADER = {
     },
 }
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = ('django.template.loaders.filesystem.Loader',
-                    'django.template.loaders.app_directories.Loader',
-                    'django.template.loaders.eggs.Loader',)
-
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -115,16 +108,26 @@ ROOT_URLCONF = 'urls'
 
 FILE_CHARSET = 'utf-8-sig'
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.media',
-    'django.core.context_processors.static',
-    'django.core.context_processors.request',
-    'django.contrib.messages.context_processors.messages',
-    'piosenka.context_processors.to_review',)
-
-TEMPLATE_DIRS = (os.path.join(PROJECT_PATH, 'templates'),)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(PROJECT_PATH, 'templates'),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.request',
+                'django.contrib.messages.context_processors.messages',
+                'piosenka.context_processors.to_review',
+            ],
+        },
+    },
+]
 
 INSTALLED_APPS = (
     # Django.

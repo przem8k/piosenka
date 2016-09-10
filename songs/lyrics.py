@@ -109,5 +109,4 @@ def render_lyrics(raw_lyrics,
                   transposition=0,
                   template_name='songs/lyrics.html'):
     lyrics = transpose_lyrics(parse_lyrics(raw_lyrics), transposition)
-    return loader.get_template(template_name).render(Context({'lyrics': lyrics
-                                                             }))
+    return loader.get_template(template_name).render({'lyrics': lyrics})
