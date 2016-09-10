@@ -6,6 +6,7 @@ from django.db import models
 from easy_thumbnails.signal_handlers import generate_aliases
 from easy_thumbnails.signals import saved_file
 
+from base.overrides import overrides
 from content import url_scheme
 from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
@@ -50,12 +51,12 @@ Main illustration for the article."""
     def __str__(self):
         return self.title
 
-    # SlugFieldMixin:
+    @overrides(SlugFieldMixin)
     def get_slug_elements(self):
         assert self.title
         return [self.title]
 
-    # url_scheme.ViewEditReviewApprove
+    @overrides(url_scheme.ViewEditReviewApprove)
     def get_url_name(self):
         return 'article'
 

@@ -8,6 +8,7 @@ from django.utils import timezone
 from pygeocoder import Geocoder
 from pygeolib import GeocoderError
 
+from base.overrides import overrides
 from content import url_scheme
 from content.models import ContentItem
 from content.slug import SlugLogicMixin, SlugFieldMixin
@@ -41,7 +42,7 @@ class Performer(SlugFieldMixin, models.Model):
     def get_absolute_url(self):
         return ('view_performer', (), {'slug': self.slug})
 
-    # SlugFieldMixin:
+    @overrides(SlugFieldMixin)
     def get_slug_elements(self):
         return [self.name]
 
@@ -85,7 +86,7 @@ class Venue(SlugFieldMixin, models.Model):
     def get_absolute_url(self):
         return ('venue_detail', (), {'slug': self.slug})
 
-    # SlugFieldMixin:
+    @overrides(SlugFieldMixin)
     def get_slug_elements(self):
         assert self.name
         assert self.town
@@ -148,11 +149,11 @@ przypadku braku danych pozostaw puste."""
     def get_add_url():
         return str(reverse_lazy('add_event'))
 
-    # SlugLogicMixin:
+    @overrides(SlugLogicMixin)
     def get_slug_elements(self):
         return [self.name, self.venue.town]
 
-    # url_scheme.ViewEditReviewApprove
+    @overrides(url_scheme.ViewEditReviewApprove)
     def get_url_name(self):
         return 'event'
 

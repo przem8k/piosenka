@@ -3,6 +3,7 @@ import uuid
 from django.core.urlresolvers import reverse_lazy
 from django.db import models
 
+from base.overrides import overrides
 from content import url_scheme
 from content.models import ContentItem
 from content.slug import SlugFieldMixin
@@ -35,12 +36,12 @@ class Post(SlugFieldMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     def __str__(self):
         return self.title
 
-    # SlugFieldMixin:
+    @overrides(SlugFieldMixin)
     def get_slug_elements(self):
         assert self.title
         return [self.title]
 
-    # url_scheme.ViewEditReviewApprove
+    @overrides(url_scheme.ViewEditReviewApprove)
     def get_url_name(self):
         return 'post'
 

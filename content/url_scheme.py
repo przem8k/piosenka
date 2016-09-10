@@ -9,6 +9,9 @@ class EditReviewApprove(object):
 
     - get_url_name()
     """
+    def get_url_name(self):
+        raise NotImplementedError
+
     def get_edit_url(self):
         return reverse('edit_' + self.get_url_name(),
                        kwargs=self.get_url_params())

@@ -7,6 +7,7 @@ from django.db import models
 from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
 
+from base.overrides import overrides
 from content import url_scheme
 from content.models import ContentItem
 from content.slug import SlugLogicMixin, SlugFieldMixin
@@ -81,7 +82,7 @@ class Artist(SlugFieldMixin, ContentItem):
     def get_absolute_url(self):
         return ('view_artist', (), {'slug': self.slug})
 
-    # SlugFieldMixin:
+    @overrides(SlugFieldMixin)
     def get_slug_elements(self):
         return [self.name]
 
@@ -205,12 +206,12 @@ True iff the lyrics contain repeated chords."""
     def set_slug_prepend_elements(self, elements):
         self.slug_prepend_elements = elements
 
-    # SlugLogicMixin:
+    @overrides(SlugLogicMixin)
     def get_slug_elements(self):
         return self.slug_prepend_elements + [self.title] + (
             [self.disambig] if self.disambig else [])
 
-    # url_scheme.ViewEditReviewApprove
+    @overrides(url_scheme.ViewEditReviewApprove)
     def get_url_name(self):
         return 'song'
 
@@ -354,11 +355,11 @@ Used in urls, has to be unique."""
     def get_absolute_url(self):
         return self.song.get_absolute_url()
 
-    # SlugLogicMixin:
+    @overrides(SlugLogicMixin)
     def get_slug_elements(self):
         return [self.title, self.song.slug]
 
-    # url_scheme.ViewEditReviewApprove
+    @overrides(url_scheme.EditReviewApprove)
     def get_url_name(self):
         return 'annotation'
 
