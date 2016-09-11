@@ -2,12 +2,17 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase
 
 from base import testing
+from base.overrides import overrides
 from content.scenarios import TestScenariosMixin
 from events.models import Event, Venue
 
 
 class EventUrlTest(TestScenariosMixin, TestCase):
     item_cls = Event
+
+    @overrides(TestScenariosMixin)
+    def get_add_url(self):
+        return reverse('add_event')
 
     def test_event_visibility(self):
         response = testing.get_public_client().get(reverse('event_index'))

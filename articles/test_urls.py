@@ -2,12 +2,17 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase
 
 from base import testing
+from base.overrides import overrides
 from content.scenarios import TestScenariosMixin
 from articles.models import Article
 
 
 class ArticleUrlTest(TestScenariosMixin, TestCase):
     item_cls = Article
+
+    @overrides(TestScenariosMixin)
+    def get_add_url(self):
+        return reverse('add_article')
 
     def test_article_index(self):
         response = testing.get_public_client().get(reverse('articles'))

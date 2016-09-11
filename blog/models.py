@@ -60,7 +60,3 @@ class Post(SlugFieldMixin, url_scheme.ViewEditReviewApprove, ContentItem):
             'day': self.pub_date.strftime('%d'),
             'slug': self.slug
         }
-
-    @staticmethod
-    def get_add_url():
-        return str(reverse_lazy('add_post'))

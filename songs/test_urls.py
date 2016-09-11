@@ -2,12 +2,17 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase
 
 from base import testing
+from base.overrides import overrides
 from content.scenarios import TestScenariosMixin
 from songs.models import Artist, EntityContribution, Song
 
 
 class SongUrlTest(TestScenariosMixin, TestCase):
     item_cls = Song
+
+    @overrides(TestScenariosMixin)
+    def get_add_url(self):
+        return reverse('add_song')
 
     def add_contribution(self,
                          song,

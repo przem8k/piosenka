@@ -188,10 +188,6 @@ True iff the lyrics contain repeated chords."""
     def get_url_params(self):
         return {'slug': self.slug}
 
-    @staticmethod
-    def get_add_url():
-        return str(reverse_lazy('add_song'))
-
     @models.permalink
     def get_add_annotation_url(self):
         return ('add_annotation', (), self.get_url_params())

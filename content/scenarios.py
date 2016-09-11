@@ -14,6 +14,9 @@ class TestScenariosMixin(object):
     Requires self.item_cls to be set on the object.
     """
 
+    def get_add_url(self):
+        raise NotImplementedError
+
     def assertServedOk(self, item, response):
         if self.item_cls.is_card:
             self.assertContains(response, item.get_id(), html=False)
@@ -41,18 +44,18 @@ class TestScenariosMixin(object):
             return
 
         # Verify that the general public can't access the add view.
-        response = testing.get_public_client().get(self.item_cls.get_add_url())
+        response = testing.get_public_client().get(self.get_add_url())
         self.assertEqual(302, response.status_code)
 
         # Verify that unauthorized user can't access it either.
-        response = testing.get_user_client().get(self.item_cls.get_add_url())
+        response = testing.get_user_client().get(self.get_add_url())
         self.assertEqual(404, response.status_code)
 
         # Authorized user should be able to access it just fine.
         authorized_user = testing.create_user(
             perms=[self.item_cls.permstring()])
         response = testing.get_user_client(authorized_user).get(
-            self.item_cls.get_add_url())
+            self.get_add_url())
         self.assertEqual(200, response.status_code)
 
     def test_view_new_item(self):

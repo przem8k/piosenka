@@ -145,10 +145,6 @@ przypadku braku danych pozostaw puste."""
             'slug': self.slug
         }
 
-    @staticmethod
-    def get_add_url():
-        return str(reverse_lazy('add_event'))
-
     @overrides(SlugLogicMixin)
     def get_slug_elements(self):
         return [self.name, self.venue.town]
