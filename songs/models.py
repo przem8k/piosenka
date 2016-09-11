@@ -283,8 +283,6 @@ class EntityContribution(models.Model):
 
 
 class Annotation(SlugLogicMixin, url_scheme.EditReviewApprove, ContentItem):
-    is_card = True
-
     HELP_TITLE = """\
 Tytuł adnotacji, np. "Aspazja" lub "Fortepian Chopina"."""
     HELP_IMAGE = """\

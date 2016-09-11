@@ -18,16 +18,10 @@ class TestScenariosMixin(object):
         raise NotImplementedError
 
     def assertServedOk(self, item, response):
-        if self.item_cls.is_card:
-            self.assertContains(response, item.get_id(), html=False)
-        else:
-            self.assertEqual(200, response.status_code)
+        self.assertEqual(200, response.status_code)
 
     def assertNotServedOk(self, item, response):
-        if self.item_cls.is_card:
-            self.assertNotContains(response, item.get_id(), html=False)
-        else:
-            self.assertEqual(404, response.status_code)
+        self.assertEqual(404, response.status_code)
 
     def test_get_permstring(self):
         """Verifies that the permission string returned from get_permstring
@@ -40,9 +34,6 @@ class TestScenariosMixin(object):
                                                codename=parts[1]))
 
     def test_add_item(self):
-        if self.item_cls.is_card:
-            return
-
         # Verify that the general public can't access the add view.
         response = testing.get_public_client().get(self.get_add_url())
         self.assertEqual(302, response.status_code)

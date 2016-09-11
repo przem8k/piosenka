@@ -17,8 +17,7 @@ def get_default_author():
     elif User.objects.filter(username=_DUMMY_USERNAME).exists():
         return User.objects.get(username=_DUMMY_USERNAME).pk
     else:
-        return User.objects.create_user(_DUMMY_USERNAME,
-                                        'dummy@example.com',
+        return User.objects.create_user(_DUMMY_USERNAME, 'dummy@example.com',
                                         uuid.uuid4().hex).pk
 
 
@@ -27,10 +26,6 @@ def get_default_pub_date():
 
 
 class ContentItem(models.Model):
-    # Cards are item types that are displayed alongside the parent item. They
-    # don't have an absolute url of their own, but defer to the parent instead.
-    is_card = False
-
     author = models.ForeignKey(User, editable=False, default=get_default_author)
     reviewed = models.BooleanField(default=False, editable=False)
     pub_date = models.DateTimeField(editable=False,
