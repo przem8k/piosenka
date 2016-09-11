@@ -5,6 +5,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.utils import timezone
 
+from base.overrides import overrides
 from content.slug import SlugFieldMixin
 import content.trevor as trevor
 
@@ -29,10 +30,9 @@ def get_default_pub_date():
 
 
 class ContentItem(models.Model):
-    author = models.ForeignKey(User, editable=False, default=get_default_author)
+    author = models.ForeignKey(User, editable=False)
     reviewed = models.BooleanField(default=False, editable=False)
-    pub_date = models.DateTimeField(editable=False,
-                                    default=get_default_pub_date)
+    pub_date = models.DateTimeField(editable=False)
 
     class Meta:
         abstract = True
