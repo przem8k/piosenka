@@ -36,7 +36,7 @@ class SongUrlTest(TestScenariosMixin, TestCase):
 
     def test_entity_index(self):
         author = testing.create_user()
-        jack_white = Artist.create_for_testing()
+        jack_white = Artist.create_for_testing(author)
         jack_white.reviewed = True
         jack_white.save()
 

@@ -12,7 +12,7 @@ class AnnotationTest(TestScenariosMixin, TestCase):
     @overrides(TestScenariosMixin)
     def get_add_url(self):
         author = testing.create_user()
-        artist = Artist.create_for_testing()
+        artist = Artist.create_for_testing(author)
         artist.reviewed = True
         artist.save()
         song = Song.create_for_testing(author)

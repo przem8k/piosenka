@@ -12,7 +12,7 @@ class SongRedirectTest(TestCase):
     def setUp(self):
         author = testing.create_user()
         song = Song.create_for_testing(author)
-        artist = Artist.create_for_testing()
+        artist = Artist.create_for_testing(author)
         contribution = EntityContribution()
         contribution.song = song
         contribution.artist = artist

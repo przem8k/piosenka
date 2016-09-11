@@ -68,8 +68,9 @@ class Artist(SlugFieldMixin, ContentItem):
         ordering = ['name']
 
     @staticmethod
-    def create_for_testing():
+    def create_for_testing(author):
         artist = Artist()
+        artist.author = author
         artist.name = str(uuid.uuid4())
         artist.description_trevor = put_text_in_trevor('Abc')
         artist.save()
