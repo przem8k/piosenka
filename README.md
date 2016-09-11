@@ -1,6 +1,6 @@
 # Piosenka z tekstem #
 
-[![Build Status](https://drone.io/github.com/ppiet/piosenka/status.png)](https://drone.io/github.com/pietrzkiewicz/piosenka/latest)
+[![Build Status](https://travis-ci.org/ppiet/piosenka.svg?branch=master)](https://travis-ci.org/ppiet/piosenka)
 
 ## Local dev setup ##
 
