@@ -86,20 +86,14 @@ class ContentItem(models.Model):
 
 
 class Note(SlugFieldMixin, ContentItem):
-    """Represents a note complementing the information from a content item.
-
-    Inheriting class has to have:
-
-      - |parent| a ForeignKey to the parent ContentItem
-    """
+    """Represents a note complementing the information from a main item."""
     HELP_TITLE = 'Tytuł adnotacji.'
     HELP_IMAGE = 'Ilustracja.'
     HELP_IMAGE_URL = 'Źródło zdjęcia (adres www).'
     HELP_IMAGE_AUTHOR = 'Źródło zdjęcia (autor).'
     HELP_TEXT = 'Treść adnotacji.'
-    HELP_SOURCE_URL = 'Źródło (adress www).'
+    HELP_SOURCE_URL = 'Źródło (adres www).'
     HELP_SOURCE_REF = 'Źródło (nazwa i autor publikacji).'
-    is_card = True
 
     title = models.CharField(max_length=100, help_text=HELP_TITLE)
     image = models.ImageField(null=True,
@@ -111,21 +105,16 @@ class Note(SlugFieldMixin, ContentItem):
                                     help_text=HELP_IMAGE_AUTHOR)
     text_trevor = models.TextField(help_text=HELP_TEXT)
     text_html = models.TextField(editable=False)
-    text_url1 = models.URLField(null=True,
-                                blank=True,
-                                help_text=HELP_SOURCE_URL)
-    text_url2 = models.URLField(null=True,
-                                blank=True,
-                                help_text=HELP_SOURCE_URL)
-    text_ref1 = models.TextField(null=True,
-                                 blank=True,
-                                 help_text=HELP_SOURCE_REF)
-    text_ref2 = models.TextField(null=True,
-                                 blank=True,
-                                 help_text=HELP_SOURCE_REF)
+    url1 = models.URLField(null=True, blank=True, help_text=HELP_SOURCE_URL)
+    url2 = models.URLField(null=True, blank=True, help_text=HELP_SOURCE_URL)
+    ref1 = models.TextField(null=True, blank=True, help_text=HELP_SOURCE_REF)
+    ref2 = models.TextField(null=True, blank=True, help_text=HELP_SOURCE_REF)
 
     class Meta:
         abstract = True
+
+    def get_parent(self):
+        raise NotImplementedError
 
     def __str__(self):
         return self.title
@@ -134,15 +123,15 @@ class Note(SlugFieldMixin, ContentItem):
         return self.slug
 
     def get_absolute_url(self):
-        return self.parent.get_absolute_url()
+        return self.get_parent().get_absolute_url()
 
     def save(self, *args, **kwargs):
         self.text_html = trevor.render_trevor(self.text_trevor)
         super().save(*args, **kwargs)
 
-    # SlugLogicMixin:
+    @overrides(SlugFieldMixin)
     def get_slug_elements(self):
-        return [self.title, self.parent.slug]
+        return [self.title, self.get_parent().slug]
 
 
 class Permissions(models.Model):
