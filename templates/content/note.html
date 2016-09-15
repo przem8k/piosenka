@@ -1,0 +1,42 @@
+{% load staticfiles %}
+{% load thumbnail %}
+
+<div class="section">
+  <h1 id="{{ note.get_id }}">{{ note.title }}
+    {% include "components/content_status_span.html" with item=note %}
+  </h1>
+  {% if note.image %}
+  <div class="thumbnail-host">
+    <img src="{{ note.image|thumbnail_url:'imagethumb'}}" class="note-image img-responsive"/>
+      <div class="thumbnail-caption on-hover">
+        <p class="pull-right"><a href="{{ note.image.url }}">pełny rozmiar</a></p>
+      </div>
+  </div>
+  {% endif %}
+  {{ note.text_html|safe }}
+  {% if note.url1 or note.url2 or note.ref1 or note.ref2 or note.image_author or note.image_url %}
+  <small>
+      <ul class="list-unstyled">
+        <li><b>Źródła</b>:</li>
+        {% if note.image and note.image_author %}
+        <li>
+          <b>autor zdjęcia</b>: {{note.image_author}}
+        </li>
+        {% endif %}
+        {% if note.image and note.image_url %}
+        <li>
+          <b>źródło zdjęcia</b>:
+          <a href="{{ artist.image_url }}" target="_blank">{{ artist.image_url }}
+            <span class="glyphicon glyphicon-new-window"></span>
+          </a>
+        </li>
+        {% endif %}
+        {% if note.url1 %}<li><a href="{{ note.url1 }}">{{ note.url1|truncatechars:50 }}</a></li>{% endif %}
+        {% if note.url2 %}<li><a href="{{ note.url2 }}">{{ note.url2|truncatechars:50 }}</a></li>{% endif %}
+        {% if note.ref1 %}<li>{{ note.ref1 }}</li>{% endif %}
+        {% if note.ref2 %}<li>{{ note.ref2 }}</li>{% endif %}
+      </ul>
+  </small>
+  {% endif %}
+  {% include "components/content_foot.html" with action="Dodane" item=note %}
+</div>

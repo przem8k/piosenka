@@ -1,7 +1,8 @@
 from django import forms
 from django.forms.models import inlineformset_factory
 
-from songs.models import Artist, Annotation, EntityContribution, Song
+from songs.models import (Artist, Annotation, ArtistNote, EntityContribution,
+                          Song)
 
 
 class ArtistForm(forms.ModelForm):
@@ -33,4 +34,11 @@ class AnnotationForm(forms.ModelForm):
 
     class Meta:
         model = Annotation
+        exclude = []
+
+
+class ArtistNoteForm(forms.ModelForm):
+
+    class Meta:
+        model = ArtistNote
         exclude = []

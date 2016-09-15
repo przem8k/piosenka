@@ -63,6 +63,20 @@
           </small>
         </p>
       </div>
+
+      {% for note in notes %}
+      {% include "content/note.html" with note=note %}
+      {% endfor %}
+
+      {% if user.is_authenticated and perms.songs.contribute_artist_note %}
+      <div class="section">
+        <h1>Dodaj adnotację</h1>
+        <p style="text-align: center">
+        <a href="{{ artist.get_add_note_url }}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+        </p>
+      </div>
+      {% endif %}
+
     </div>
   </div>
   <hr />

@@ -1,7 +1,6 @@
 import uuid
 
 from django.core.exceptions import ValidationError
-from django.core.urlresolvers import reverse_lazy
 from django.db import models
 
 from easy_thumbnails.signals import saved_file
@@ -9,7 +8,7 @@ from easy_thumbnails.signal_handlers import generate_aliases
 
 from base.overrides import overrides
 from content import url_scheme
-from content.models import ContentItem
+from content.models import ContentItem, Note
 from content.slug import SlugLogicMixin, SlugFieldMixin
 from content.trevor import render_trevor, put_text_in_trevor
 from songs.lyrics import contain_extra_chords
@@ -79,9 +78,16 @@ class Artist(SlugFieldMixin, ContentItem):
     def __str__(self):
         return self.name
 
+    def get_url_params(self):
+        return {'slug': self.slug}
+
     @models.permalink
     def get_absolute_url(self):
-        return ('view_artist', (), {'slug': self.slug})
+        return ('view_artist', (), self.get_url_params())
+
+    @models.permalink
+    def get_add_note_url(self):
+        return ('add_artist_note', (), self.get_url_params())
 
     @overrides(SlugFieldMixin)
     def get_slug_elements(self):
@@ -91,6 +97,23 @@ class Artist(SlugFieldMixin, ContentItem):
         if self.description_trevor:
             self.description_html = render_trevor(self.description_trevor)
         super().save(*args, **kwargs)
+
+
+class ArtistNote(url_scheme.EditReviewApprove, Note):
+    artist = models.ForeignKey(Artist, editable=False)
+
+    class Meta(ContentItem.Meta):
+        pass
+
+    def get_url_params(self):
+        return {'slug': self.slug}
+
+    @overrides(url_scheme.EditReviewApprove)
+    def get_url_name(self):
+        return 'artist_note'
+
+    def get_parent(self):
+        return self.artist
 
 
 def validate_capo_fret(value):

@@ -21,6 +21,9 @@ urlpatterns = [
             url(r'^zatwierdz/$',
                 views.ApproveArtist.as_view(),
                 name='approve_artist'),
+            url(r'^dodaj-adnotacje/$',
+                views.AddArtistNote.as_view(),
+                name='add_artist_note'),
         ])),
     # Obsolete url redirects.
     url(r'^(?P<entity_slug>[-\w]+)/(?P<slug>[-\w]+)/', include([

@@ -1,0 +1,66 @@
+{% extends "songs/base.html" %}
+
+{% block extra-scripts %}
+<script>
+$(document).ready(function(){
+    new SirTrevor.Editor({
+      el: $('#id_text_trevor'),
+      blockTypes: ["Text", "List"],
+      defaultType: "Text",
+    });
+});
+</script>
+{% endblock extra-scripts %}
+
+{% block content %}
+<div class="container main">
+  <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_artist_note' artist.slug %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
+      <div class="col-md-6">
+        <div class="section">
+          <h1>Adnotacja</h1>
+          <table class="table table-condensed formtable">
+            <td><b>Adnotacja do artysty:</b></td><td>{{ artist }}</td>
+            {% include "components/forms/table_field.html" with name="Tytuł adnotacji" field=form.title %}
+          </table>
+        </div>
+        <div class="section">
+          <h1>Treść</h1>
+          <div class="alert alert-info" role="alert">
+            <p>Treść adnotacji zapisz własnymi słowami, na podstawie źródeł.
+            Unikaj obszernych cytatów - jeśli cytat jest konieczny, wybierz
+            kluczowy fragment i opatrz komentarzem.</p>
+          </div>
+          {{ form.text_trevor }}
+        </div>
+        <div class="section">
+          <h1>Ilustracja</h1>
+          <div class="alert alert-info" role="alert">
+            <p>Opcjonalna ilustracja do adnotacji. Źródło ewentualnej
+            ilustracji wskaż w sekcji "źródła".</p>
+            <p>Korzystaj tylko z ilustracji na których wykorzystywanie
+            zezwalają <b>prawa autorskie</b> (e.g. z Wikipedii).
+            </p>
+          </div>
+          <table class="table table-condensed formtable">
+            {% include "components/forms/table_field.html" with name="Plik" field=form.image %}
+            {% include "components/forms/table_field.html" with name="Źródło zdjęcia (adres www)" field=form.image_url %}
+            {% include "components/forms/table_field.html" with name="Autor zdjęcia" field=form.image_author %}
+          </table>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="section">
+          <h1>Źródła</h1>
+          <table class="table table-condensed formtable">
+            {% include "components/forms/table_field.html" with name="Link 1" field=form.url1 %}
+            {% include "components/forms/table_field.html" with name="Link 2" field=form.url2 %}
+            {% include "components/forms/table_field.html" with name="Publikacja 1" field=form.ref1 %}
+            {% include "components/forms/table_field.html" with name="Publikacja 2" field=form.ref2 %}
+          </table>
+        </div>
+        {% include "components/forms/add.html" with item=object %}
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock content %}

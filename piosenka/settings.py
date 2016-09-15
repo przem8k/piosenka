@@ -178,7 +178,11 @@ THUMBNAIL_ALIASES = {
     'songs.Artist.image': {
         'imagethumb': {'size': (0, 300),
                        'upscale': True},
-    }
+    },
+    'songs.ArtistNote.image': {
+        'imagethumb': {'size': (0, 300),
+                       'upscale': True},
+    },
 }
 
 INTERNAL_IPS = ('127.0.0.1',)
