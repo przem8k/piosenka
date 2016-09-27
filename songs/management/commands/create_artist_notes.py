@@ -12,6 +12,10 @@ class Command(BaseCommand):
                 print('No need to create note for: ' + str(artist))
                 continue
 
+            if not artist.description_trevor:
+                print('No interesting info about: ' + str(artist))
+                continue
+
             note = ArtistNote()
             note.artist = artist
             note.title = artist.name
