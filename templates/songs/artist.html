@@ -26,44 +26,6 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="section">
-        <h1>{{ artist }}</h1>
-        {% if artist.image %}
-        <div class="thumbnail-host">
-          <img src="{{ artist.image|thumbnail_url:'imagethumb'}}" class="annotation-image img-responsive"/>
-        </div>
-        {% endif %}
-
-        {% if artist.description_html %}
-          {{ artist.description_html|safe }}
-        {% endif %}
-        <small>
-          <ul class="list-unstyled">
-            {% if artist.image and artist.image_author %}
-            <li>
-              <b>autor zdjęcia</b>: {{artist.image_author}}
-            </li>
-            {% endif %}
-            {% if artist.image and artist.image_url %}
-            <li>
-              <b>źródło zdjęcia</b>:
-              <a href="{{ artist.image_url }}" target="_blank">{{ artist.image_url }}
-                <span class="glyphicon glyphicon-new-window"></span>
-              </a>
-            </li>
-            {% endif %}
-            {% if artist.website %}
-            <li>
-              <b>strona internetowa</b>
-              <a href="{{ artist.website }}" target="_blank">{{ artist.website }}
-                <span class="glyphicon glyphicon-new-window"></span>
-              </a>
-            </li>
-            {% endif %}
-          </small>
-        </p>
-      </div>
-
       {% for note in notes %}
       {% include "content/note.html" with note=note %}
       {% endfor %}
@@ -76,7 +38,6 @@
         </p>
       </div>
       {% endif %}
-
     </div>
   </div>
   <hr />
