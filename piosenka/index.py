@@ -10,7 +10,7 @@ from songs.models import Artist, Song
 
 class JSONSearchIndexMixin(object):
 
-    @cache_control(max_age=3600)
+    @cache_control(max_age=300)
     def render_to_response(self, context):
         return self.get_json_response(json.dumps(context['index']))
 
@@ -24,7 +24,7 @@ class ArtistSearchIndex(JSONSearchIndexMixin, View):
 
     def get(self, request, *args, **kwargs):
         index = []
-        for artist in Artist.objects.all():
+        for artist in Artist.objects.filter(featured=True):
             index.append({
                 'name': artist.__str__(),
                 'value': artist.__str__(),
