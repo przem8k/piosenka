@@ -1,0 +1,8 @@
+{% for artist in artists %}
+{% if artist.featured %}
+<a href="{{artist.get_absolute_url}}">{{ artist }}</a>
+{% else %}
+{{ artist }}
+{% endif %}
+{% if not forloop.last %},{% endif %}
+{% endfor %}

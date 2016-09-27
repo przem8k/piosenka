@@ -35,37 +35,25 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
 
                 {% if song.text_authors %}
                 <p><b>Tekst:</b>
-                {% for author in song.text_authors %}
-                <a href="{{author.get_absolute_url}}">{{ author }}</a>
-                {% if not forloop.last %},{% endif %}
-                {% endfor %}
+                {% include "songs/artist_list.html" with artists=song.text_authors %}
                 </p>
                 {% endif %}
 
                 {% if song.composers %}
                 <p><b>Muzyka:</b>
-                {% for composer in song.composers %}
-                <a href="{{composer.get_absolute_url}}">{{ composer }}</a>
-                {% if not forloop.last %},{% endif %}
-                {% endfor %}
+                {% include "songs/artist_list.html" with artists=song.composers %}
                 </p>
                 {% endif %}
 
                 {% if song.translators %}
                 <p><b>Tłumaczenie:</b>
-                {% for translator in song.translators %}
-                <a href="{{translator.get_absolute_url}}">{{ translator }}</a>
-                {% if not forloop.last %},{% endif %}
-                {% endfor %}
+                {% include "songs/artist_list.html" with artists=song.translators %}
                 </p>
                 {% endif %}
 
                 {% if song.performers %}
                 <p><b>Wykonanie:</b>
-                {% for performer in song.performers %}
-                <a href="{{performer.get_absolute_url}}">{{ performer }}</a>
-                {% if not forloop.last %},{% endif %}
-                {% endfor %}
+                {% include "songs/artist_list.html" with artists=song.performers %}
                 </p>
                 {% endif %}
 
