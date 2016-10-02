@@ -1,6 +1,6 @@
 import json
 
-from django.http import Http404, HttpResponse
+from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
 
@@ -148,33 +148,61 @@ class ViewSong(GetSongMixin, ViewContentView):
             content_type='application/json')
 
 
-class AddSong(AddContentView):
+class ContributionFormsetMixin(object):
+    """Manages inline formset of song contributions."""
+
+    def dispatch(self, *args, **kwargs):
+        if self.request.method == 'POST':
+            self.formset = ContributionFormSet(self.request.POST,
+                                               instance=self.get_object())
+        else:
+            self.formset = ContributionFormSet(instance=self.get_object())
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['entitycontribution'] = self.formset
+        return context
+
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        formset = self.formset
+
+        if form.is_valid() and formset.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
+    def form_valid(self, form):
+        ret = super().form_valid(form)
+        self.formset.instance = form.instance
+        self.formset.save()
+        return ret
+
+
+class AddSong(ContributionFormsetMixin, AddContentView):
     model = Song
     form_class = SongForm
-    formset_classes = [('entitycontribution', ContributionFormSet)]
     template_name = 'songs/add_edit_song.html'
+
+    def form_valid(self, form):
+        # Pick head contribution to put into the slug.
+        head = EntityContribution.head_contribution([x.instance
+                                                     for x in self.formset])
+        assert head
+        form.instance.set_slug_prepend_elements([head.artist.__str__()])
+        return super().form_valid(form)
 
     def get_initial(self):
         return {'lyrics': INITIAL_LYRICS}
-
-    def form_valid(self, form, formsets):
-        contributions = formsets['entitycontribution']
-
-        # Pick head contribution to put into the slug.
-        head = EntityContribution.head_contribution([x.instance
-                                                     for x in contributions])
-        assert head
-        form.instance.set_slug_prepend_elements([head.artist.__str__()])
-        return super().form_valid(form, formsets)
 
     def get_success_url(self):
         return self.object.get_absolute_url()
 
 
-class EditSong(GetSongMixin, EditContentView):
+class EditSong(GetSongMixin, ContributionFormsetMixin, EditContentView):
     model = Song
     form_class = SongForm
-    formset_classes = [('entitycontribution', ContributionFormSet)]
     template_name = 'songs/add_edit_song.html'
 
     def get_success_url(self):
