@@ -69,7 +69,7 @@ class SongTest(GenericTestsMixin, TestCase):
         self.assertEqual(2, len(response.context['songs']))
 
     def test_add_song_empty_form(self):
-        user = testing.create_user(perms=['songs.contribute_song'])
+        user = testing.create_user()
         data = {
             'entitycontribution_set-TOTAL_FORMS': 1,
             'entitycontribution_set-INITIAL_FORMS': 0,
@@ -93,7 +93,7 @@ class SongTest(GenericTestsMixin, TestCase):
                                 'Zaznacz co najmniej jedną rolę artysty.')
 
     def test_add_song(self):
-        user = testing.create_user(perms=['songs.contribute_song'])
+        user = testing.create_user()
         artist = Artist.create_for_testing(user)
         artist.reviewed = True
         artist.save()

@@ -37,8 +37,6 @@ class AddContentView(CreateView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         self.object = None
-        if not self.model.can_be_contributed_by(self.request.user):
-            raise Http404
         return super().dispatch(*args, **kwargs)
 
     def form_valid(self, form):

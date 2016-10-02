@@ -63,18 +63,10 @@
               <span class="badge">{{ to_review|length }}</span>
             </a></li>
             {% endif %}
-            {% if perms.articles.contribute_article %}
             <li><a href="{% url 'add_article' %}">Dodaj artykuł</a></li>
-            {% endif %}
-            {% if perms.songs.contribute_song %}
             <li><a href="{% url 'add_song' %}">Dodaj piosenkę</a></li>
-            {% endif %}
-            {% if perms.blog.contribute_post %}
             <li><a href="{% url 'add_post' %}">Dodaj post</a></li>
-            {% endif %}
-            {% if perms.events.contribute_event %}
             <li><a href="{% url 'add_event' %}">Dodaj wydarzenie</a></li>
-            {% endif %}
             {% if perms.piosenka.invite %}
             <li><a href="{% url 'invite' %}">Zaproś do PzT</a></li>
             {% endif %}
