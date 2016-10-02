@@ -1,4 +1,4 @@
-""" Test-scenarios mixins to be shared among tests for concrete content types.
+""" Test-generic_tests mixins to be shared among tests for concrete content types.
 """
 
 from django.contrib.auth.models import Permission
@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse
 from base import testing
 
 
-class TestScenariosMixin(object):
+class GenericTestsMixin(object):
     """This is intended to be used in a TestCase implementation, so that
     self.assertXyz() functions are available.
 

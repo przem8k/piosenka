@@ -3,14 +3,14 @@ from django.test import TestCase
 
 from base import testing
 from base.overrides import overrides
-from content.scenarios import TestScenariosMixin
+from content.generic_tests import GenericTestsMixin
 from articles.models import Article
 
 
-class ArticleUrlTest(TestScenariosMixin, TestCase):
+class ArticleTest(GenericTestsMixin, TestCase):
     item_cls = Article
 
-    @overrides(TestScenariosMixin)
+    @overrides(GenericTestsMixin)
     def get_add_url(self):
         return reverse('add_article')
 

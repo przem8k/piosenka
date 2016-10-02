@@ -3,14 +3,14 @@ from django.test import TestCase
 
 from base import testing
 from base.overrides import overrides
-from content.scenarios import TestScenariosMixin
-from songs.models import Artist, EntityContribution, Song
+from content.generic_tests import GenericTestsMixin
+from songs.models import Artist, Song, EntityContribution
 
 
-class SongUrlTest(TestScenariosMixin, TestCase):
+class SongTest(GenericTestsMixin, TestCase):
     item_cls = Song
 
-    @overrides(TestScenariosMixin)
+    @overrides(GenericTestsMixin)
     def get_add_url(self):
         return reverse('add_song')
 
