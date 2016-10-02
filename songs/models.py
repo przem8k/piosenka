@@ -46,22 +46,8 @@ class Artist(SlugFieldMixin, ContentItem):
                                    blank=True,
                                    help_text=HELP_CATEGORY)
     website = models.URLField(null=True, blank=True, help_text=HELP_WEBSITE)
-    image = models.ImageField(null=True,
-                              blank=True,
-                              upload_to='artists',
-                              help_text=HELP_IMAGE)
-    image_url = models.URLField(null=True, blank=True, help_text=HELP_IMAGE_URL)
-    image_author = models.CharField(null=True,
-                                    blank=True,
-                                    max_length=50,
-                                    help_text=HELP_IMAGE_AUTHOR)
-    description_trevor = models.TextField(blank=True,
-                                          null=True,
-                                          help_text=HELP_DESCRIPTION)
     born_on = models.DateField(blank=True, null=True, help_text=HELP_BORN_ON)
     died_on = models.DateField(blank=True, null=True, help_text=HELP_DIED_ON)
-
-    description_html = models.TextField(blank=True, null=True, editable=False)
 
     class Meta:
         ordering = ['name']
@@ -71,7 +57,6 @@ class Artist(SlugFieldMixin, ContentItem):
         artist = Artist()
         artist.author = author
         artist.name = str(uuid.uuid4())
-        artist.description_trevor = put_text_in_trevor('Abc')
         artist.save()
         return artist
 
@@ -92,11 +77,6 @@ class Artist(SlugFieldMixin, ContentItem):
     @overrides(SlugFieldMixin)
     def get_slug_elements(self):
         return [self.name]
-
-    def save(self, *args, **kwargs):
-        if self.description_trevor:
-            self.description_html = render_trevor(self.description_trevor)
-        super().save(*args, **kwargs)
 
 
 class ArtistNote(url_scheme.EditReviewApprove, Note):

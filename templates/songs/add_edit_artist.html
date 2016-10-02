@@ -2,19 +2,6 @@
 
 {% block title %}{% if artist %}Edytuj artystę: {{ artist }}{% else %}Dodaj artystę{% endif %}{% endblock title %}
 
-{% block extra-scripts %}
-<script>
-$(document).ready(function(){
-    new SirTrevor.Editor({
-      el: $('#id_description_trevor'),
-      blockTypes: ["Text"],
-      blockLimit: 1,
-      defaultType: "Text",
-    });
-});
-</script>
-{% endblock extra-scripts %}
-
 {% block content %}
 <div class="container main">
   <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_artist' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
@@ -37,26 +24,6 @@ $(document).ready(function(){
         <table class="table table-condensed formtable">
           {% include "components/forms/table_field.html" with name="Urodzony" field=form.born_on %}
           {% include "components/forms/table_field.html" with name="Zmarły" field=form.died_on %}
-        </table>
-      </div>
-      <div class="section">
-        <h1>Kto zacz</h1>
-        <div class="alert alert-info" role="alert">
-          Jedno lub dwu-zdaniowe przedstawienie postaci lub zespołu (styl encyklopedyczno-dziennikarski).
-        </div>
-        {{ form.description_trevor }}
-      </div>
-      <div class="section">
-        <h1>Zdjęcie</h1>
-        <div class="alert alert-info" role="alert">
-          Pola "Źródło zdjęcia" i "Autor zdjęcia" są opcjonalne, ale postaraj
-          się wypełnić co najmniej jedno. Dodawaj tylko zdjęcia na
-          wykorzystanie których pozwala prawo autorskie.
-        </div>
-        <table class="table table-condensed formtable">
-          {% include "components/forms/table_field.html" with name="Plik" field=form.image %}
-          {% include "components/forms/table_field.html" with name="Źródło zdjęcia (adres www)" field=form.image_url %}
-          {% include "components/forms/table_field.html" with name="Autor zdjęcia" field=form.image_author %}
         </table>
       </div>
     </div>
