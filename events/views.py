@@ -87,13 +87,13 @@ class AddEvent(AddContentView):
         aby dodać **pogrubienie** albo [odsyłacz](#)."""
         return {'description_trevor': put_text_in_trevor(initial_description)}
 
-    def form_valid(self, form, formsets):
+    def form_valid(self, form):
         venue = form.cleaned_data['venue']
         venue.save()
         form.instance.venue = venue
         form.instance.datetime = datetime.combine(form.cleaned_data['date'],
                                                   form.cleaned_data['time'])
-        return super().form_valid(form, formsets)
+        return super().form_valid(form)
 
     def get_success_url(self):
         return self.object.get_absolute_url()
@@ -112,13 +112,13 @@ class EditEvent(GetEventMixin, EditContentView):
             'description_trevor': self.object.description_trevor,
         }
 
-    def form_valid(self, form, formsets):
+    def form_valid(self, form):
         venue = form.cleaned_data['venue']
         venue.save()
         form.instance.venue = venue
         form.instance.datetime = datetime.combine(form.cleaned_data['date'],
                                                   form.cleaned_data['time'])
-        return super().form_valid(form, formsets)
+        return super().form_valid(form)
 
     def get_success_url(self):
         return self.object.get_absolute_url()

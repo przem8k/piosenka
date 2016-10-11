@@ -235,9 +235,9 @@ class AddAnnotation(AddContentView):
         context['song'] = self.song
         return context
 
-    def form_valid(self, form, formsets):
+    def form_valid(self, form):
         form.instance.song = self.song
-        return super().form_valid(form, formsets)
+        return super().form_valid(form)
 
     def get_success_url(self):
         return self.song.get_absolute_url()
@@ -284,9 +284,9 @@ class AddArtistNote(AddContentView):
         context['artist'] = self.artist
         return context
 
-    def form_valid(self, form, formsets):
+    def form_valid(self, form):
         form.instance.artist = self.artist
-        return super().form_valid(form, formsets)
+        return super().form_valid(form)
 
     def get_success_url(self):
         return self.artist.get_absolute_url()
