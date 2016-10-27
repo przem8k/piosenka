@@ -1,8 +1,12 @@
 import json
+import logging
 
-from django.http import Http404, HttpResponse, HttpResponseRedirect
+from django.contrib import messages
+from django.core.urlresolvers import reverse
+from django.http import HttpResponse, HttpResponsePermanentRedirect
 from django.shortcuts import get_object_or_404
-from django.views.generic import TemplateView
+from django.views.generic import DetailView, TemplateView
+from django.views.generic.edit import CreateView, UpdateView
 
 from content.views import (AddContentView, EditContentView, ApproveContentView,
                            ReviewContentView, ViewContentView)
@@ -11,6 +15,8 @@ from songs.forms import (ArtistForm, ArtistNoteForm, AnnotationForm, SongForm,
 from songs.lyrics import render_lyrics
 from songs.models import (Annotation, Artist, ArtistNote, Song,
                           EntityContribution)
+
+_action_logger = logging.getLogger('actions')
 
 INITIAL_LYRICS = """\
 #zw
@@ -64,11 +70,17 @@ class IndexView(SongbookMenuMixin, TemplateView):
     template_name = 'songs/index.html'
 
 
-class ViewArtist(GetArtistMixin, SongbookMenuMixin, ViewContentView):
+class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
     """Lists the songs associated with the given artist."""
     model = Artist
     context_object_name = 'artist'
     template_name = 'songs/artist.html'
+
+    def dispatch(self, *args, **kwargs):
+        artist = self.get_object()
+        if not artist.featured and not self.request.user.is_authenticated():
+            return HttpResponsePermanentRedirect(reverse('songbook'))
+        return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
         artist = self.get_object()
@@ -76,11 +88,6 @@ class ViewArtist(GetArtistMixin, SongbookMenuMixin, ViewContentView):
             artist=artist).select_related('song').order_by('song__title')
         songs = [contribution.song for contribution in contributions
                  if contribution.song.can_be_seen_by(self.request.user)]
-        if not songs and not artist.featured:
-            # TODO: maybe one day throws 404 always if not featured? We would
-            # only link to the artist from a Song view if they are featured.
-            # Issue: we already have a few not featured pages indexed.
-            raise Http404()
         context = super().get_context_data(**kwargs)
         context['songs'] = songs
         context['artist'] = artist
@@ -89,7 +96,7 @@ class ViewArtist(GetArtistMixin, SongbookMenuMixin, ViewContentView):
         return context
 
 
-class AddArtist(AddContentView):
+class AddArtist(CreateView):
     model = Artist
     form_class = ArtistForm
     template_name = 'songs/add_edit_artist.html'
@@ -97,8 +104,16 @@ class AddArtist(AddContentView):
     def get_success_url(self):
         return self.object.get_absolute_url()
 
+    def form_valid(self, form):
+        ret = super().form_valid(form)
+        messages.add_message(self.request, messages.INFO,
+                             'Artysta dodany.')
+        _action_logger.info('%s added artist %s' % (self.request.user,
+                                                    form.instance))
+        return ret
 
-class EditArtist(GetArtistMixin, EditContentView):
+
+class EditArtist(GetArtistMixin, UpdateView):
     model = Artist
     form_class = ArtistForm
     template_name = 'songs/add_edit_artist.html'
@@ -106,13 +121,13 @@ class EditArtist(GetArtistMixin, EditContentView):
     def get_success_url(self):
         return self.object.get_absolute_url()
 
-
-class ReviewArtist(GetArtistMixin, ReviewContentView):
-    pass
-
-
-class ApproveArtist(GetArtistMixin, ApproveContentView):
-    pass
+    def form_valid(self, form):
+        ret = super().form_valid(form)
+        messages.add_message(self.request, messages.INFO,
+                             'Zmiany zostały zapisane.')
+        _action_logger.info('%s edited artist %s' % (self.request.user,
+                                                     form.instance))
+        return ret
 
 
 class ViewSong(GetSongMixin, ViewContentView):

@@ -6,7 +6,6 @@
         {% for artist in bards %}
         <li>
           <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
-          {% include "components/content_status_span.html" with item=artist %}
         </li>
         {% endfor %}
       </ul>
@@ -19,7 +18,6 @@
         {% for artist in bands %}
         <li>
           <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
-          {% include "components/content_status_span.html" with item=artist %}
         </li>
         {% endfor %}
       </ul>
@@ -30,7 +28,6 @@
         {% for artist in composers %}
         <li>
           <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
-          {% include "components/content_status_span.html" with item=artist %}
         </li>
         {% endfor %}
       </ul>
@@ -43,7 +40,6 @@
         {% for artist in foreigners %}
         <li>
           <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
-          {% include "components/content_status_span.html" with item=artist %}
         </li>
         {% endfor %}
       </ul>

@@ -30,7 +30,7 @@ class IndexTest(TestCase):
     def test_entity_index(self):
         author = testing.create_user()
         jack_white = Artist.create_for_testing(author)
-        jack_white.reviewed = True
+        jack_white.featured = True
         jack_white.save()
 
         seven_nations_army = Song.create_for_testing(author)

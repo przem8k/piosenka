@@ -9,7 +9,11 @@
 {% block content %}
 <h1>
   {{ artist }}
-  {% include "components/content_status_span.html" with item=artist %}
+  {% if user.is_authenticated %}
+  <a href="{{ artist.get_edit_url }}">
+    <small><span class="glyphicon glyphicon-pencil"></span></small>
+  </a>
+  {% endif %}
 </h1>
 <div class="container">
   <div class="row">

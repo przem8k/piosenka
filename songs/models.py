@@ -18,7 +18,7 @@ from songs.transpose import transpose_lyrics
 saved_file.connect(generate_aliases)
 
 
-class Artist(SlugFieldMixin, ContentItem):
+class Artist(SlugFieldMixin):
     HELP_NAME = 'Imię i nazwisko wykonawcy lub nazwa zespołu.'
     HELP_FEATURED = 'Czy podmiot ma figurować w spisie treści.'
     HELP_CATEGORY = 'Kategoria w spisie treści śpiewnika.'
@@ -69,6 +69,10 @@ class Artist(SlugFieldMixin, ContentItem):
     @models.permalink
     def get_absolute_url(self):
         return ('view_artist', (), self.get_url_params())
+
+    @models.permalink
+    def get_edit_url(self):
+        return ('edit_artist', (), self.get_url_params())
 
     @models.permalink
     def get_add_note_url(self):
