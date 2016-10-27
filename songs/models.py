@@ -109,25 +109,15 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     CAPO_TO_ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX',
                      'X', 'XI', 'XII']
 
-    HELP_DISAMBIG = """\
-Opcjonalna adnotacja rozróżniająca piosenki o tym samym tytule."""
-    HELP_TITLE = """\
-Tytuł piosenki."""
-    HELP_ORIGINAL_TITLE = """\
-Tytuł oryginalnej piosenki w przypadku tłumaczenia, np. 'Mourir pour des \
-idées'."""
-    HELP_LINK_YOUTUBE = """\
-Link do nagrania piosenki w serwisie YouTube."""
-    HELP_LINK_WRZUTA = """\
-Link do nagrania piosenki w serwisie Wrzuta."""
-    HELP_CAPO_FRET = """\
-Liczba od 0 do 11, 0 oznacza brak kapodastra."""
-    HELP_OLD_SLUG = """\
-Old slug kept to maintain redirects."""
-    HELP_SLUG = """\
-Used in urls, has to be unique."""
-    HELP_HAS_EXTRA_CHORDS = """\
-True iff the lyrics contain repeated chords."""
+    HELP_DISAMBIG = 'Adnotacja rozróżniająca piosenki o tym samym tytule.'
+    HELP_TITLE = 'Tytuł piosenki.'
+    HELP_ORIGINAL_TITLE = 'Tytuł oryginalnej piosenki w przypadku tłumaczenia.'
+    HELP_LINK_YOUTUBE = 'Link do nagrania piosenki w serwisie YouTube.'
+    HELP_LINK_WRZUTA = 'Link do nagrania piosenki w serwisie Wrzuta.'
+    HELP_CAPO_FRET = 'Liczba od 0 do 11, 0 oznacza brak kapodastra.'
+    HELP_OLD_SLUG = 'Old slug kept to maintain redirects.'
+    HELP_SLUG = 'Used in urls, has to be unique.'
+    HELP_HAS_EXTRA_CHORDS = 'True iff the lyrics contain repeated chords.'
 
     title = models.CharField(max_length=100, help_text=HELP_TITLE)
     disambig = models.CharField(max_length=100,
