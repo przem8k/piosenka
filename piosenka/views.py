@@ -7,7 +7,7 @@ from articles.models import Article
 from blog.models import Post
 from events.models import Event, get_events_for
 from frontpage.models import CarouselItem
-from songs.models import Annotation, Song
+from songs.models import ArtistNote, SongNote, Song
 
 
 class SiteIndex(TemplateView):
@@ -24,10 +24,10 @@ class SiteIndex(TemplateView):
                             .order_by('-pub_date')[:SiteIndex.POST_COUNT])
         context['songs'] = (Song.items_visible_to(self.request.user)
                             .order_by('-pub_date')[:SiteIndex.SONG_COUNT])
-        context['annotation'] = (Annotation.items_visible_to(self.request.user)
+        context['annotation'] = (SongNote.items_visible_to(self.request.user)
                                  .order_by('-pub_date').first())
         context['annotations'] = (
-            Annotation.items_visible_to(self.request.user)
+            SongNote.items_visible_to(self.request.user)
             .order_by('-pub_date')[:SiteIndex.ANNOTATION_COUNT])
         return context
 
@@ -42,7 +42,8 @@ class About(TemplateView):
         for user in User.objects.filter(is_active=True):
             author = {}
             author['user'] = user
-            author['annotations'] = Annotation.items_live().filter(
+            author['annotations'] = SongNote.items_live().filter(
+                author=user).count() + ArtistNote.items_live().filter(
                 author=user).count()
             author['songs'] = Song.items_live().filter(author=user).count()
             author['articles'] = Article.items_live().filter(

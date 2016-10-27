@@ -12,8 +12,8 @@ from content.views import (AddContentView, EditContentView, ApproveContentView,
                            ReviewContentView, ViewContentView)
 from songs import forms
 from songs.lyrics import render_lyrics
-from songs.models import (Annotation, Artist, ArtistNote, Song, SongNote,
-                          EntityContribution)
+from songs.models import Artist, ArtistNote, Song, SongNote, EntityContribution
+
 
 _action_logger = logging.getLogger('actions')
 
@@ -145,8 +145,6 @@ class ViewSong(GetSongMixin, ViewContentView):
         else:
             transposition = 0
         context['lyrics'] = render_lyrics(self.object.lyrics, transposition)
-        context['annotations'] = Annotation.items_visible_to(
-            self.request.user).filter(song=self.object)
         context['notes'] = SongNote.items_visible_to(
             self.request.user).filter(song=self.object)
         return context
@@ -230,29 +228,6 @@ class ReviewSong(GetSongMixin, ReviewContentView):
 
 
 class ApproveSong(GetSongMixin, ApproveContentView):
-    pass
-
-
-class GetAnnotationMixin(object):
-
-    def get_object(self):
-        return get_object_or_404(Annotation, slug=self.kwargs['slug'])
-
-
-class EditAnnotation(GetAnnotationMixin, EditContentView):
-    model = Annotation
-    form_class = forms.AnnotationForm
-    template_name = 'songs/add_edit_annotation.html'
-
-    def get_success_url(self):
-        return self.get_object().song.get_absolute_url()
-
-
-class ReviewAnnotation(GetAnnotationMixin, ReviewContentView):
-    pass
-
-
-class ApproveAnnotation(GetAnnotationMixin, ApproveContentView):
     pass
 
 
