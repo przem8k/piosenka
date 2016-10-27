@@ -102,7 +102,7 @@ class Note(SlugFieldMixin, ContentItem):
         return self.slug
 
     def get_absolute_url(self):
-        return self.get_parent().get_absolute_url()
+        return self.get_parent().get_absolute_url() + '#' + self.get_id()
 
     def save(self, *args, **kwargs):
         self.text_html = trevor.render_trevor(self.text_trevor)

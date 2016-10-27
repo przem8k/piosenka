@@ -125,6 +125,10 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
         </p>
       </div>
 
+      {% for note in notes %}
+      {% include "content/note.html" with note=note %}
+      {% endfor %}
+
       {% for annotation in annotations %}
       <div class="section">
         <h1 id="{{ annotation.get_id }}">{{ annotation.title }}
@@ -180,11 +184,13 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
       </div>
       {% endif %}
 
-      {% if user.is_authenticated and perms.songs.contribute_annotation %}
+      {% if user.is_authenticated %}
       <div class="section">
         <h1>Dodaj adnotację</h1>
         <p style="text-align: center">
-        <a href="{{ song.get_add_annotation_url }}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+          <a href="{{ song.get_add_note_url }}">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          </a>
         </p>
       </div>
       {% endif %}

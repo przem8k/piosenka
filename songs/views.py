@@ -10,10 +10,9 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from content.views import (AddContentView, EditContentView, ApproveContentView,
                            ReviewContentView, ViewContentView)
-from songs.forms import (ArtistForm, ArtistNoteForm, AnnotationForm, SongForm,
-                         ContributionFormSet)
+from songs import forms
 from songs.lyrics import render_lyrics
-from songs.models import (Annotation, Artist, ArtistNote, Song,
+from songs.models import (Annotation, Artist, ArtistNote, Song, SongNote,
                           EntityContribution)
 
 _action_logger = logging.getLogger('actions')
@@ -98,7 +97,7 @@ class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
 
 class AddArtist(CreateView):
     model = Artist
-    form_class = ArtistForm
+    form_class = forms.ArtistForm
     template_name = 'songs/add_edit_artist.html'
 
     def get_success_url(self):
@@ -115,7 +114,7 @@ class AddArtist(CreateView):
 
 class EditArtist(GetArtistMixin, UpdateView):
     model = Artist
-    form_class = ArtistForm
+    form_class = forms.ArtistForm
     template_name = 'songs/add_edit_artist.html'
 
     def get_success_url(self):
@@ -148,6 +147,8 @@ class ViewSong(GetSongMixin, ViewContentView):
         context['lyrics'] = render_lyrics(self.object.lyrics, transposition)
         context['annotations'] = Annotation.items_visible_to(
             self.request.user).filter(song=self.object)
+        context['notes'] = SongNote.items_visible_to(
+            self.request.user).filter(song=self.object)
         return context
 
     def render_to_response(self, context):
@@ -168,10 +169,10 @@ class ContributionFormsetMixin(object):
 
     def dispatch(self, *args, **kwargs):
         if self.request.method == 'POST':
-            self.formset = ContributionFormSet(self.request.POST,
-                                               instance=self.get_object())
+            self.formset = forms.ContributionFormSet(self.request.POST,
+                                                     instance=self.get_object())
         else:
-            self.formset = ContributionFormSet(instance=self.get_object())
+            self.formset = forms.ContributionFormSet(instance=self.get_object())
         return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
@@ -197,7 +198,7 @@ class ContributionFormsetMixin(object):
 
 class AddSong(ContributionFormsetMixin, AddContentView):
     model = Song
-    form_class = SongForm
+    form_class = forms.SongForm
     template_name = 'songs/add_edit_song.html'
 
     def form_valid(self, form):
@@ -217,7 +218,7 @@ class AddSong(ContributionFormsetMixin, AddContentView):
 
 class EditSong(GetSongMixin, ContributionFormsetMixin, EditContentView):
     model = Song
-    form_class = SongForm
+    form_class = forms.SongForm
     template_name = 'songs/add_edit_song.html'
 
     def get_success_url(self):
@@ -232,32 +233,6 @@ class ApproveSong(GetSongMixin, ApproveContentView):
     pass
 
 
-class AddAnnotation(AddContentView):
-    model = Annotation
-    form_class = AnnotationForm
-    template_name = 'songs/add_edit_annotation.html'
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.song = None
-
-    def dispatch(self, *args, **kwargs):
-        self.song = get_object_or_404(Song, slug=self.kwargs['slug'])
-        return super().dispatch(*args, **kwargs)
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['song'] = self.song
-        return context
-
-    def form_valid(self, form):
-        form.instance.song = self.song
-        return super().form_valid(form)
-
-    def get_success_url(self):
-        return self.song.get_absolute_url()
-
-
 class GetAnnotationMixin(object):
 
     def get_object(self):
@@ -266,7 +241,7 @@ class GetAnnotationMixin(object):
 
 class EditAnnotation(GetAnnotationMixin, EditContentView):
     model = Annotation
-    form_class = AnnotationForm
+    form_class = forms.AnnotationForm
     template_name = 'songs/add_edit_annotation.html'
 
     def get_success_url(self):
@@ -283,7 +258,7 @@ class ApproveAnnotation(GetAnnotationMixin, ApproveContentView):
 
 class AddArtistNote(AddContentView):
     model = ArtistNote
-    form_class = ArtistNoteForm
+    form_class = forms.ArtistNoteForm
     template_name = 'songs/add_edit_artist_note.html'
 
     def __init__(self, *args, **kwargs):
@@ -315,7 +290,7 @@ class GetArtistNoteMixin(object):
 
 class EditArtistNote(GetArtistNoteMixin, EditContentView):
     model = ArtistNote
-    form_class = ArtistNoteForm
+    form_class = forms.ArtistNoteForm
     template_name = 'songs/add_edit_artist_note.html'
 
     def get_success_url(self):
@@ -327,4 +302,53 @@ class ReviewArtistNote(GetArtistNoteMixin, ReviewContentView):
 
 
 class ApproveArtistNote(GetArtistNoteMixin, ApproveContentView):
+    pass
+
+
+class AddSongNote(AddContentView):
+    model = SongNote
+    form_class = forms.SongNoteForm
+    template_name = 'songs/add_edit_song_note.html'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.song = None
+
+    def dispatch(self, *args, **kwargs):
+        self.song = get_object_or_404(Song, slug=self.kwargs['slug'])
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['song'] = self.song
+        return context
+
+    def form_valid(self, form):
+        form.instance.song = self.song
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return self.song.get_absolute_url()
+
+
+class GetSongNoteMixin(object):
+
+    def get_object(self):
+        return get_object_or_404(SongNote, slug=self.kwargs['slug'])
+
+
+class EditSongNote(GetSongNoteMixin, EditContentView):
+    model = SongNote
+    form_class = forms.SongNoteForm
+    template_name = 'songs/add_edit_song_note.html'
+
+    def get_success_url(self):
+        return self.get_object().get_parent().get_absolute_url()
+
+
+class ReviewSongNote(GetSongNoteMixin, ReviewContentView):
+    pass
+
+
+class ApproveSongNote(GetSongNoteMixin, ApproveContentView):
     pass

@@ -14,7 +14,7 @@ urlpatterns = [
                     views.ViewSong.as_view(),
                     name='song-transposition'),
                 url(r'^dodaj-adnotacje/$',
-                    views.AddAnnotation.as_view(),
-                    name='add_annotation'),
+                    views.AddSongNote.as_view(),
+                    name='add_song_note'),
             ])),
 ]

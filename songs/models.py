@@ -89,6 +89,18 @@ class ArtistNote(url_scheme.EditReviewApprove, Note):
     class Meta(ContentItem.Meta):
         pass
 
+    @staticmethod
+    def create_for_testing(author):
+        note = ArtistNote()
+        note.author = author
+        note.artist = Artist.create_for_testing(author)
+        note.artist.featured = True
+        note.artist.save()
+        note.title = str(uuid.uuid4()).replace('-', '')
+        note.text_trevor = put_text_in_trevor('Abc')
+        note.save()
+        return note
+
     def get_url_params(self):
         return {'slug': self.slug}
 
@@ -187,8 +199,8 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         return {'slug': self.slug}
 
     @models.permalink
-    def get_add_annotation_url(self):
-        return ('add_annotation', (), self.get_url_params())
+    def get_add_note_url(self):
+        return ('add_song_note', (), self.get_url_params())
 
     def clean(self):
         try:
@@ -358,3 +370,32 @@ Used in urls, has to be unique."""
     def save(self, *args, **kwargs):
         self.text_html = render_trevor(self.text_trevor)
         super().save(*args, **kwargs)
+
+
+class SongNote(url_scheme.EditReviewApprove, Note):
+    song = models.ForeignKey(Song, editable=False)
+
+    class Meta(ContentItem.Meta):
+        pass
+
+    @staticmethod
+    def create_for_testing(author):
+        note = SongNote()
+        note.author = author
+        note.song = Song.create_for_testing(author)
+        note.song.reviewed = True
+        note.song.save()
+        note.title = str(uuid.uuid4()).replace('-', '')
+        note.text_trevor = put_text_in_trevor('Abc')
+        note.save()
+        return note
+
+    def get_url_params(self):
+        return {'slug': self.slug}
+
+    @overrides(url_scheme.EditReviewApprove)
+    def get_url_name(self):
+        return 'song_note'
+
+    def get_parent(self):
+        return self.song

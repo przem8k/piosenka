@@ -1,14 +1,13 @@
 from django import forms
 from django.forms.models import inlineformset_factory
 
-from songs.models import (Artist, Annotation, ArtistNote, EntityContribution,
-                          Song)
+from songs import models
 
 
 class ArtistForm(forms.ModelForm):
 
     class Meta:
-        model = Artist
+        model = models.Artist
         exclude = []
         widgets = {
             'born_on': forms.TextInput(attrs={'placeholder': 'DD.MM.RRRR'}),
@@ -19,12 +18,12 @@ class ArtistForm(forms.ModelForm):
 class SongForm(forms.ModelForm):
 
     class Meta:
-        model = Song
+        model = models.Song
         exclude = []
 
 
-ContributionFormSet = inlineformset_factory(Song,
-                                            EntityContribution,
+ContributionFormSet = inlineformset_factory(models.Song,
+                                            models.EntityContribution,
                                             exclude=[],
                                             min_num=1,
                                             validate_min=True)
@@ -33,12 +32,19 @@ ContributionFormSet = inlineformset_factory(Song,
 class AnnotationForm(forms.ModelForm):
 
     class Meta:
-        model = Annotation
+        model = models.Annotation
         exclude = []
 
 
 class ArtistNoteForm(forms.ModelForm):
 
     class Meta:
-        model = ArtistNote
+        model = models.ArtistNote
+        exclude = []
+
+
+class SongNoteForm(forms.ModelForm):
+
+    class Meta:
+        model = models.SongNote
         exclude = []
