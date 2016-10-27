@@ -129,35 +129,6 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
       {% include "content/note.html" with note=note %}
       {% endfor %}
 
-      {% for annotation in annotations %}
-      <div class="section">
-        <h1 id="{{ annotation.get_id }}">{{ annotation.title }}
-          {% include "components/content_status_span.html" with item=annotation %}
-        </h1>
-        {% if annotation.image %}
-        <div class="thumbnail-host">
-          <img src="{{ annotation.image|thumbnail_url:'imagethumb'}}" class="annotation-image img-responsive"/>
-            <div class="thumbnail-caption on-hover">
-              <p class="pull-right"><a href="{{ annotation.image.url }}">pełny rozmiar</a></p>
-            </div>
-        </div>
-        {% endif %}
-        {{ annotation.text_html|safe }}
-        {% if annotation.source_url1 or annotation.source_url2 or annotation.source_ref1 or annotation.source_ref2 %}
-        <small>
-            <ul class="list-unstyled">
-              <li><b>Źródła</b>:</li>
-              {% if annotation.source_url1 %}<li><a href="{{ annotation.source_url1 }}">{{ annotation.source_url1|truncatechars:50 }}</a></li>{% endif %}
-              {% if annotation.source_url2 %}<li><a href="{{ annotation.source_url2 }}">{{ annotation.source_url2|truncatechars:50 }}</a></li>{% endif %}
-              {% if annotation.source_ref1 %}<li>{{ annotation.source_ref1 }}</li>{% endif %}
-              {% if annotation.source_ref2 %}<li>{{ annotation.source_ref2 }}</li>{% endif %}
-            </ul>
-        </small>
-        {% endif %}
-        {% include "components/content_foot.html" with action="Dodane" item=annotation %}
-      </div>
-      {% endfor %}
-
       {% if song.score1 or song.score2 or song.score3 %}
       <div class="section">
         <h1>Nuty</h1>
