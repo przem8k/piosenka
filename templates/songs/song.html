@@ -12,8 +12,6 @@ var transpositionUrls = []
 transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0 }}/");
 {% endfor %}
 </script>
-
-<script src="{% static "scripts/trigger.js" %}?stamp=12"></script>
 {% endblock extra-scripts %}
 
 {% block content %}
