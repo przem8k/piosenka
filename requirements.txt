@@ -1,7 +1,7 @@
-Django==1.10.7
+Django==1.11.1
 Markdown==2.6.6
 awscli==1.7.25
-easy-thumbnails==2.2
+easy-thumbnails==2.4.1
 pygeocoder==1.2.5
 Unidecode==0.04.17
 django-webpack-loader==0.3.0
