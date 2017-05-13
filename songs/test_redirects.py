@@ -1,6 +1,6 @@
 """Tests redirects for obsolete song urls."""
 
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.test import TestCase
 
 from base import testing

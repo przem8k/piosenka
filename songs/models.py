@@ -1,5 +1,6 @@
 import uuid
 
+from django import urls
 from django.core.exceptions import ValidationError
 from django.db import models
 
@@ -66,17 +67,14 @@ class Artist(SlugFieldMixin):
     def get_url_params(self):
         return {'slug': self.slug}
 
-    @models.permalink
     def get_absolute_url(self):
-        return ('view_artist', (), self.get_url_params())
+        return urls.reverse('view_artist', kwargs=self.get_url_params())
 
-    @models.permalink
     def get_edit_url(self):
-        return ('edit_artist', (), self.get_url_params())
+        return urls.reverse('edit_artist', kwargs=self.get_url_params())
 
-    @models.permalink
     def get_add_note_url(self):
-        return ('add_artist_note', (), self.get_url_params())
+        return urls.reverse('add_artist_note', kwargs=self.get_url_params())
 
     @overrides(SlugFieldMixin)
     def get_slug_elements(self):
@@ -84,7 +82,7 @@ class Artist(SlugFieldMixin):
 
 
 class ArtistNote(url_scheme.EditReviewApprove, Note):
-    artist = models.ForeignKey(Artist, editable=False)
+    artist = models.ForeignKey(Artist, editable=False, on_delete=models.CASCADE)
 
     class Meta(ContentItem.Meta):
         pass
@@ -198,9 +196,8 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     def get_url_params(self):
         return {'slug': self.slug}
 
-    @models.permalink
     def get_add_note_url(self):
-        return ('add_song_note', (), self.get_url_params())
+        return urls.reverse('add_song_note', kwargs=self.get_url_params())
 
     def clean(self):
         try:
@@ -260,8 +257,8 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
 
 
 class EntityContribution(models.Model):
-    song = models.ForeignKey(Song)
-    artist = models.ForeignKey(Artist, verbose_name='artysta')
+    song = models.ForeignKey(Song, on_delete=models.CASCADE)
+    artist = models.ForeignKey(Artist, on_delete=models.CASCADE, verbose_name='artysta')
     performed = models.BooleanField(default=False, verbose_name='wyk.')
     texted = models.BooleanField(default=False, verbose_name='tekst')
     translated = models.BooleanField(default=False, verbose_name='tł.')
@@ -325,7 +322,7 @@ Used in urls, has to be unique."""
                                    blank=True,
                                    help_text=HELP_SOURCE_REF)
 
-    song = models.ForeignKey(Song, editable=False)
+    song = models.ForeignKey(Song, editable=False, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=200,
                             unique=True,
                             editable=False,
@@ -373,7 +370,7 @@ Used in urls, has to be unique."""
 
 
 class SongNote(url_scheme.EditReviewApprove, Note):
-    song = models.ForeignKey(Song, editable=False)
+    song = models.ForeignKey(Song, editable=False, on_delete=models.CASCADE)
 
     class Meta(ContentItem.Meta):
         pass

@@ -1,7 +1,7 @@
 from datetime import timedelta
 import uuid
 
-from django.core.urlresolvers import reverse_lazy
+from django import urls
 from django.db import models
 from django.utils import timezone
 
@@ -38,9 +38,8 @@ class Performer(SlugFieldMixin, models.Model):
     def __str__(self):
         return self.name
 
-    @models.permalink
     def get_absolute_url(self):
-        return ('view_performer', (), {'slug': self.slug})
+        return urls.reverse('view_performer', kwargs={'slug': self.slug})
 
     @overrides(SlugFieldMixin)
     def get_slug_elements(self):
@@ -82,9 +81,8 @@ class Venue(SlugFieldMixin, models.Model):
             # Geo lookup failed to recognize this address.
             pass
 
-    @models.permalink
     def get_absolute_url(self):
-        return ('venue_detail', (), {'slug': self.slug})
+        return urls.reverse('venue_detail', kwargs={'slug': self.slug})
 
     @overrides(SlugFieldMixin)
     def get_slug_elements(self):
@@ -103,7 +101,7 @@ przypadku braku danych pozostaw puste."""
 
     name = models.CharField(max_length=100, help_text=HELP_NAME)
     datetime = models.DateTimeField()
-    venue = models.ForeignKey(Venue)
+    venue = models.ForeignKey(Venue, on_delete=models.CASCADE)
     description_trevor = models.TextField()
     price = models.CharField(max_length=100,
                              null=True,

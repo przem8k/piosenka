@@ -37,7 +37,7 @@ urlpatterns = [
     url(r'^szukaj/', piosenka.views.Search.as_view(),
         name='search'),
     # Admin and users.
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
     url(r'^redakcja/', include('piosenka.user_urls')),
     # Inspect.
     url(r'^inspect/', include('piosenka.inspect_urls')),

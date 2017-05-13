@@ -18,7 +18,7 @@ def get_default_pub_date():
 
 
 class ContentItem(models.Model):
-    author = models.ForeignKey(User, editable=False)
+    author = models.ForeignKey(User, editable=False, on_delete=models.CASCADE)
     reviewed = models.BooleanField(default=False, editable=False)
     pub_date = models.DateTimeField(editable=False)
 
@@ -37,27 +37,27 @@ class ContentItem(models.Model):
 
     @classmethod
     def items_visible_to(cls, user):
-        if user and user.is_authenticated():
+        if user and user.is_authenticated:
             return cls.objects.all()
         return cls.items_live()
 
     @classmethod
     def items_reviewable_by(cls, user):
-        if user and user.is_authenticated() and user.has_perm('content.review'):
+        if user and user.is_authenticated and user.has_perm('content.review'):
             return cls.objects.filter(reviewed=False).exclude(author=user)
         else:
             return []
 
     def can_be_seen_by(self, user):
-        return self.is_live() or (user.is_active and user.is_authenticated())
+        return self.is_live() or (user.is_active and user.is_authenticated)
 
     def can_be_edited_by(self, user):
-        return (user.is_active and user.is_authenticated() and
+        return (user.is_active and user.is_authenticated and
                 (user == self.author or user.has_perm('content.review')))
 
     def can_be_approved_by(self, user):
         return (not self.is_live() and user.is_active and
-                user.is_authenticated() and user.has_perm('content.review') and
+                user.is_authenticated and user.has_perm('content.review') and
                 user != self.author)
 
     def is_live(self):

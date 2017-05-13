@@ -1,7 +1,7 @@
 """Tests special debug pages."""
 
 from django.test import TestCase
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 from base import testing
 

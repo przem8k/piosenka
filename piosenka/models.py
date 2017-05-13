@@ -2,6 +2,7 @@ import hashlib
 import random
 from datetime import timedelta
 
+from django import urls
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
@@ -26,7 +27,8 @@ class Invitation(models.Model):
     expires_on = models.DateTimeField(editable=False,
                                       default=_get_default_expires_on)
     is_valid = models.BooleanField(default=True, editable=False)
-    extended_by = models.ForeignKey(User, editable=False)
+    extended_by = models.ForeignKey(User, editable=False,
+                                    on_delete=models.CASCADE)
 
     class Meta:
         permissions = [('invite', 'Can invite new contributors')]
@@ -39,9 +41,8 @@ class Invitation(models.Model):
         invitation.save()
         return invitation
 
-    @models.permalink
     def get_invitation_url(self):
-        return ('join', (), {'invitation_key': self.invitation_key})
+        return urls.reverse('join', kwargs={'invitation_key': self.invitation_key})
 
     def __str__(self):
         return self.email_address

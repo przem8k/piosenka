@@ -1,5 +1,5 @@
 import os
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 
 try:
     from piosenka.settings_local import DEBUG

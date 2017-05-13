@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth.models import User, Group
 from django.contrib.auth.views import login, logout
-from django.core.urlresolvers import reverse_lazy, reverse
+from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect, Http404
 from django.utils import timezone
 from django.utils.decorators import method_decorator
@@ -102,7 +102,7 @@ class JoinView(FormView):
     template_name = 'join.html'
 
     def dispatch(self, *args, **kwargs):
-        if not self.request.user.is_anonymous():
+        if not self.request.user.is_anonymous:
             _action_logger.warning('%s tried /join while signed in' %
                                    self.request.user)
             raise Http404

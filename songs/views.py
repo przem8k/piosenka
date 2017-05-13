@@ -2,7 +2,7 @@ import json
 import logging
 
 from django.contrib import messages
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.http import HttpResponse, HttpResponsePermanentRedirect
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, TemplateView
@@ -77,7 +77,7 @@ class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
 
     def dispatch(self, *args, **kwargs):
         artist = self.get_object()
-        if not artist.featured and not self.request.user.is_authenticated():
+        if not artist.featured and not self.request.user.is_authenticated:
             return HttpResponsePermanentRedirect(reverse('songbook'))
         return super().dispatch(*args, **kwargs)
 
