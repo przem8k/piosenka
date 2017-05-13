@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 {% block content %}
 <div class="container main">
-  <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_article' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
+  <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_article' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post" novalidate>{% csrf_token %}
   <div class="row">
     <div class="col-md-8">
       <div class="section">

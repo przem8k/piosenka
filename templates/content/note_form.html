@@ -4,7 +4,7 @@
   {% else %}
     {{ object.get_edit_url }}
   {% endif %}
-  " method="post">{% csrf_token %}
+  " method="post" novalidate>{% csrf_token %}
   <div class="row">
     <div class="col-md-6">
       <div class="section">

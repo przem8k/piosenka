@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container main">
-  <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_artist' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post">{% csrf_token %}
+  <form enctype="multipart/form-data" action="{% if not object or not object.pk %}{% url 'add_artist' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post" novalidate>{% csrf_token %}
   <div class="row">
     <div class="col-md-8">
       <div class="section">
