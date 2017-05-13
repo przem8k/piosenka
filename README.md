@@ -8,6 +8,16 @@ the code to power any other website or to support internationalized, ie.
 non-Polish UI. Hence app strings and the rest of the documentation is in
 Polish.**
 
+## Pozyskanie kodu źródłowego
+
+Aplikacja jest "open source" i jej kod jest dostępny publicznie. Aby ściągnąć
+kod aplikacji, upewnij się że na komputerze zainstalowany jest system
+zarządzania kodem źródłowym `git`.
+
+Następnie uruchom komendę:
+
+> git clone https://github.com/ppiet/piosenka.git
+
 ## Konfiguracja środowiska
 
 Piosenka z tekstem jest napisana w języku programowania Python. Aby uruchomić
@@ -18,6 +28,9 @@ aplikację należy zainstalować moduły wykorzystywane przez aplikację:
 Następnie można uruchomić aplikację lokalnie:
 
 > python3 manage runserver
+
+Lokalna wersja aplikacji jest dostępna w przeglądarce pod adresem
+`http://127.0.0.1:8000`.
 
 ## Przygotowanie zmian
 
