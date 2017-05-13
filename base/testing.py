@@ -18,8 +18,8 @@ def create_user(perms=None):
     for perm in perms:
         parts = perm.split('.')
         assert len(parts) == 2
-        permission = Permission.objects.get(content_type__app_label=parts[0],
-                                            codename=parts[1])
+        permission = Permission.objects.get(
+            content_type__app_label=parts[0], codename=parts[1])
         user.user_permissions.add(permission)
     user.save()
     user.refresh_from_db()

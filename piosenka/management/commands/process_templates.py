@@ -19,9 +19,11 @@ def _rewrite_lyrics(match):
     input_lyrics = '\n'.join(line.strip()
                              for line in str(match.group(1)).split('\n'))
     output_lyrics = render_lyrics(input_lyrics)
-    return loader.get_template(template_name).render(Context(
-        {'input_lyrics': input_lyrics,
-         'output_lyrics': output_lyrics}))
+    return loader.get_template(template_name).render(
+        Context({
+            'input_lyrics': input_lyrics,
+            'output_lyrics': output_lyrics
+        }))
 
 
 class Command(BaseCommand):

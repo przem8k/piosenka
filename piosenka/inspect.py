@@ -11,8 +11,8 @@ class InspectLocale(TemplateView):
     template_name = 'inspect_locale.html'
 
     @method_decorator(login_required)
-    @method_decorator(permission_required('piosenka.inspect',
-                                          raise_exception=True))
+    @method_decorator(
+        permission_required('piosenka.inspect', raise_exception=True))
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
 
@@ -30,8 +30,8 @@ class InspectPermissions(TemplateView):
     template_name = 'inspect_permissions.html'
 
     @method_decorator(login_required)
-    @method_decorator(permission_required('piosenka.inspect',
-                                          raise_exception=True))
+    @method_decorator(
+        permission_required('piosenka.inspect', raise_exception=True))
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
 

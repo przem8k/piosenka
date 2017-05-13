@@ -44,19 +44,18 @@ class About(TemplateView):
             author['user'] = user
             author['annotations'] = SongNote.items_live().filter(
                 author=user).count() + ArtistNote.items_live().filter(
-                author=user).count()
+                    author=user).count()
             author['songs'] = Song.items_live().filter(author=user).count()
             author['articles'] = Article.items_live().filter(
                 author=user).count()
             author['events'] = Event.items_live().filter(author=user).count()
             author['total'] = (
-                author['annotations'] + author['songs'] + self.ARTICLE_FACTOR *
-                author['articles'] + author['events'])
+                author['annotations'] + author['songs'] +
+                self.ARTICLE_FACTOR * author['articles'] + author['events'])
             if author['total']:
                 authors.append(author)
-        context['authors'] = sorted(authors,
-                                    key=lambda k: k['total'],
-                                    reverse=True)
+        context['authors'] = sorted(
+            authors, key=lambda k: k['total'], reverse=True)
         return context
 
 

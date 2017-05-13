@@ -74,23 +74,23 @@ class GenericTestsMixin(object):
 
         # The author should be redirected to the actual item with some
         # informative message.
-        response = testing.get_client(author).get(item.get_review_url(),
-                                                  follow=True)
+        response = testing.get_client(author).get(
+            item.get_review_url(), follow=True)
         self.assertRedirects(response, item.get_absolute_url())
         self.assertTrue('messages' in response.context)
         self.assertEqual(1, len(response.context['messages']))
 
         # Another regular user should be redirected too.
-        response = testing.get_user_client().get(item.get_review_url(),
-                                                 follow=True)
+        response = testing.get_user_client().get(
+            item.get_review_url(), follow=True)
         self.assertRedirects(response, item.get_absolute_url())
         self.assertTrue('messages' in response.context)
         self.assertEqual(1, len(response.context['messages']))
 
         # And the valid approver too.
         reviewer = testing.create_user(perms=['content.review'])
-        response = testing.get_client(reviewer).get(item.get_review_url(),
-                                                    follow=True)
+        response = testing.get_client(reviewer).get(
+            item.get_review_url(), follow=True)
         self.assertRedirects(response, item.get_absolute_url())
         self.assertTrue('messages' in response.context)
         self.assertEqual(1, len(response.context['messages']))
@@ -98,8 +98,8 @@ class GenericTestsMixin(object):
         # After the item is live too.
         item.reviewed = True
         item.save()
-        response = testing.get_client(reviewer).get(item.get_review_url(),
-                                                    follow=True)
+        response = testing.get_client(reviewer).get(
+            item.get_review_url(), follow=True)
         self.assertRedirects(response, item.get_absolute_url())
         self.assertTrue('messages' in response.context)
         self.assertEqual(1, len(response.context['messages']))
@@ -140,6 +140,6 @@ class GenericTestsMixin(object):
 
         # The reviewer should still be able to access the item. Ideally we'd
         # verify that the 'approve' link is no longer displayed here anymore.
-        response = testing.get_user_client(reviewer).get(item.get_absolute_url(
-        ))
+        response = testing.get_user_client(reviewer).get(
+            item.get_absolute_url())
         self.assertServedOk(item, response)

@@ -45,7 +45,8 @@ def parse_lyrics(raw_lyrics):
             # Start new recording.
             if len(line) == 1:
                 raise SyntaxError(
-                    "Section defining tag (for example '#zw') can't have empty name.")
+                    "Section defining tag (for example '#zw') can't have empty name."
+                )
             recorded_section = line[1:]
             recorded_chords = []
             mode = LyricsParserMode.Recording
@@ -87,8 +88,8 @@ def parse_lyrics(raw_lyrics):
                     are_chords_replayed = True
                 replay_index = replay_index + 1
 
-            current_section.append(
-                (textPart, chordsPart, indent, are_chords_replayed))
+            current_section.append((textPart, chordsPart, indent,
+                                    are_chords_replayed))
     if recorded_section is not None:
         recordings[recorded_section] = recorded_chords
         recorded_section = None

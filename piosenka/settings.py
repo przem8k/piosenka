@@ -82,9 +82,9 @@ STATIC_URL = '/site_media/native/'
 
 SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, 'site_media')
 
-STATICFILES_DIRS = (('', os.path.join(PROJECT_PATH, 'static')),
-                    ('scripts', os.path.join(PROJECT_PATH, 'songs', 'scripts')),
-                    os.path.join(PROJECT_PATH, 'client', 'assets'),)
+STATICFILES_DIRS = (('', os.path.join(PROJECT_PATH, 'static')), (
+    'scripts', os.path.join(PROJECT_PATH, 'songs', 'scripts')), os.path.join(
+        PROJECT_PATH, 'client', 'assets'),)
 
 WEBPACK_LOADER = {
     'DEFAULT': {
@@ -155,37 +155,53 @@ INSTALLED_APPS = (
 
 THUMBNAIL_ALIASES = {
     'frontpage.CarouselItem.image': {
-        'carousel': {'size': (900, 400),
-                     'crop': True,
-                     'upscale': True},
+        'carousel': {
+            'size': (900, 400),
+            'crop': True,
+            'upscale': True
+        },
     },
     'songs.Song': {
-        'scorethumb': {'size': (180, 0),
-                       'upscale': True},
+        'scorethumb': {
+            'size': (180, 0),
+            'upscale': True
+        },
     },
     'articles.Article.cover_image': {
-        'cover': {'size': (600, 300),
-                  'crop': True,
-                  'upscale': True},
-        'coverthumb': {'size': (420, 210),
-                       'crop': True,
-                       'upscale': True},
+        'cover': {
+            'size': (600, 300),
+            'crop': True,
+            'upscale': True
+        },
+        'coverthumb': {
+            'size': (420, 210),
+            'crop': True,
+            'upscale': True
+        },
     },
     'songs.Annotation.image': {
-        'imagethumb': {'size': (0, 300),
-                       'upscale': True},
+        'imagethumb': {
+            'size': (0, 300),
+            'upscale': True
+        },
     },
     'songs.Artist.image': {
-        'imagethumb': {'size': (0, 300),
-                       'upscale': True},
+        'imagethumb': {
+            'size': (0, 300),
+            'upscale': True
+        },
     },
     'songs.ArtistNote.image': {
-        'imagethumb': {'size': (0, 300),
-                       'upscale': True},
+        'imagethumb': {
+            'size': (0, 300),
+            'upscale': True
+        },
     },
     'songs.SongNote.image': {
-        'imagethumb': {'size': (0, 300),
-                       'upscale': True},
+        'imagethumb': {
+            'size': (0, 300),
+            'upscale': True
+        },
     },
 }
 

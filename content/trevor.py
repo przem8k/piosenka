@@ -34,8 +34,8 @@ def quote_block(data):
     crazy_unique_tag = 'CrazyUniqueTag'
     # Append the tag before line breaks.
     text = data['text'].replace('\n', crazy_unique_tag + '\n')
-    return markdown(text, safe_mode='escape').replace(crazy_unique_tag,
-                                                      '<br />')
+    return markdown(
+        text, safe_mode='escape').replace(crazy_unique_tag, '<br />')
 
 
 def heading_block(data):

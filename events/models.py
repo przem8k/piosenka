@@ -20,10 +20,8 @@ class Performer(SlugFieldMixin, models.Model):
 
     name = models.CharField(max_length=50, help_text=HELP_NAME)
     website = models.URLField(null=True, blank=True)
-    fb_page_id = models.CharField(max_length=100,
-                                  unique=True,
-                                  null=True,
-                                  blank=True)
+    fb_page_id = models.CharField(
+        max_length=100, unique=True, null=True, blank=True)
 
     class Meta:
         ordering = ['name']
@@ -103,15 +101,12 @@ przypadku braku danych pozostaw puste."""
     datetime = models.DateTimeField()
     venue = models.ForeignKey(Venue, on_delete=models.CASCADE)
     description_trevor = models.TextField()
-    price = models.CharField(max_length=100,
-                             null=True,
-                             blank=True,
-                             help_text=HELP_PRICE)
+    price = models.CharField(
+        max_length=100, null=True, blank=True, help_text=HELP_PRICE)
     website = models.URLField(null=True, blank=True, help_text=HELP_WEBSITE)
 
-    slug = models.SlugField(max_length=100,
-                            unique_for_date='datetime',
-                            editable=False)
+    slug = models.SlugField(
+        max_length=100, unique_for_date='datetime', editable=False)
     description_html = models.TextField(editable=False)
 
     @staticmethod
@@ -187,5 +182,4 @@ def get_events_for(user):
         datetime__gte=timezone.now())
     fb_events = FbEvent.objects.filter(datetime__gte=timezone.now())
     return sorted(
-        list(site_events) + list(fb_events),
-        key=lambda event: event.datetime)
+        list(site_events) + list(fb_events), key=lambda event: event.datetime)

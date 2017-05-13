@@ -21,14 +21,13 @@ def _get_default_expires_on():
 class Invitation(models.Model):
     """Represents an invitation to create a contributor profile (site user)."""
     email_address = models.EmailField()
-    invitation_key = models.CharField(max_length=70,
-                                      editable=False,
-                                      default=_get_default_invitation_key)
-    expires_on = models.DateTimeField(editable=False,
-                                      default=_get_default_expires_on)
+    invitation_key = models.CharField(
+        max_length=70, editable=False, default=_get_default_invitation_key)
+    expires_on = models.DateTimeField(
+        editable=False, default=_get_default_expires_on)
     is_valid = models.BooleanField(default=True, editable=False)
-    extended_by = models.ForeignKey(User, editable=False,
-                                    on_delete=models.CASCADE)
+    extended_by = models.ForeignKey(
+        User, editable=False, on_delete=models.CASCADE)
 
     class Meta:
         permissions = [('invite', 'Can invite new contributors')]
@@ -42,7 +41,8 @@ class Invitation(models.Model):
         return invitation
 
     def get_invitation_url(self):
-        return urls.reverse('join', kwargs={'invitation_key': self.invitation_key})
+        return urls.reverse(
+            'join', kwargs={'invitation_key': self.invitation_key})
 
     def __str__(self):
         return self.email_address

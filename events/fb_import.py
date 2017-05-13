@@ -23,8 +23,8 @@ def _get_event_from_data(event_data):
 
 def update_events(graph):
     for fb_event in FbEvent.objects.all():
-        fresh_fb_event = _get_event_from_data(graph.request(str(
-            fb_event.fb_id)))
+        fresh_fb_event = _get_event_from_data(
+            graph.request(str(fb_event.fb_id)))
         fb_event.name = fresh_fb_event.name
         fb_event.datetime = fresh_fb_event.datetime
         fb_event.town = fresh_fb_event.town

@@ -22,11 +22,12 @@ class SongForm(forms.ModelForm):
         exclude = []
 
 
-ContributionFormSet = inlineformset_factory(models.Song,
-                                            models.EntityContribution,
-                                            exclude=[],
-                                            min_num=1,
-                                            validate_min=True)
+ContributionFormSet = inlineformset_factory(
+    models.Song,
+    models.EntityContribution,
+    exclude=[],
+    min_num=1,
+    validate_min=True)
 
 
 class AnnotationForm(forms.ModelForm):

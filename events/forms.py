@@ -10,8 +10,8 @@ class EventForm(forms.ModelForm):
     time = forms.TimeField(
         help_text="Godzina w formacie GG:MM, np. '20:00'.",
         widget=forms.TextInput(attrs={'placeholder': 'HH:MM'}))
-    venue_selection = forms.ModelChoiceField(required=False,
-                                             queryset=Venue.objects.all())
+    venue_selection = forms.ModelChoiceField(
+        required=False, queryset=Venue.objects.all())
     venue_name = forms.CharField(
         required=False,
         max_length=100,

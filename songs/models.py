@@ -35,17 +35,17 @@ class Artist(SlugFieldMixin):
     CAT_COMPOSER = 2
     CAT_FOREIGN = 3
     CAT_BAND = 4
-    FEATURED_CATEGORIES = ((CAT_TEXTER, 'Wykonawca własnych tekstów'),
-                           (CAT_COMPOSER, 'Kompozytor'),
-                           (CAT_FOREIGN, 'Bard zagraniczny'),
+    FEATURED_CATEGORIES = ((CAT_TEXTER, 'Wykonawca własnych tekstów'), (
+        CAT_COMPOSER, 'Kompozytor'), (CAT_FOREIGN, 'Bard zagraniczny'),
                            (CAT_BAND, 'Zespół'),)
 
     name = models.CharField(max_length=50, help_text=HELP_NAME)
     featured = models.BooleanField(default=False, help_text=HELP_FEATURED)
-    category = models.IntegerField(choices=FEATURED_CATEGORIES,
-                                   null=True,
-                                   blank=True,
-                                   help_text=HELP_CATEGORY)
+    category = models.IntegerField(
+        choices=FEATURED_CATEGORIES,
+        null=True,
+        blank=True,
+        help_text=HELP_CATEGORY)
     website = models.URLField(null=True, blank=True, help_text=HELP_WEBSITE)
     born_on = models.DateField(blank=True, null=True, help_text=HELP_BORN_ON)
     died_on = models.DateField(blank=True, null=True, help_text=HELP_DIED_ON)
@@ -116,8 +116,10 @@ def validate_capo_fret(value):
 
 
 class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
-    CAPO_TO_ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX',
-                     'X', 'XI', 'XII']
+    CAPO_TO_ROMAN = [
+        '', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI',
+        'XII'
+    ]
 
     HELP_DISAMBIG = 'Adnotacja rozróżniająca piosenki o tym samym tytule.'
     HELP_TITLE = 'Tytuł piosenki.'
@@ -130,44 +132,40 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     HELP_HAS_EXTRA_CHORDS = 'True iff the lyrics contain repeated chords.'
 
     title = models.CharField(max_length=100, help_text=HELP_TITLE)
-    disambig = models.CharField(max_length=100,
-                                null=True,
-                                blank=True,
-                                help_text=HELP_DISAMBIG)
-    original_title = models.CharField(max_length=100,
-                                      null=True,
-                                      blank=True,
-                                      help_text=HELP_ORIGINAL_TITLE)
-    link_youtube = models.URLField(null=True,
-                                   blank=True,
-                                   help_text=HELP_LINK_YOUTUBE)
-    link_wrzuta = models.URLField(null=True,
-                                  blank=True,
-                                  help_text=HELP_LINK_WRZUTA)
+    disambig = models.CharField(
+        max_length=100, null=True, blank=True, help_text=HELP_DISAMBIG)
+    original_title = models.CharField(
+        max_length=100, null=True, blank=True, help_text=HELP_ORIGINAL_TITLE)
+    link_youtube = models.URLField(
+        null=True, blank=True, help_text=HELP_LINK_YOUTUBE)
+    link_wrzuta = models.URLField(
+        null=True, blank=True, help_text=HELP_LINK_WRZUTA)
     score1 = models.ImageField(null=True, blank=True, upload_to='scores')
     score2 = models.ImageField(null=True, blank=True, upload_to='scores')
     score3 = models.ImageField(null=True, blank=True, upload_to='scores')
-    capo_fret = models.IntegerField(default=0,
-                                    validators=[validate_capo_fret],
-                                    help_text=HELP_CAPO_FRET)
+    capo_fret = models.IntegerField(
+        default=0, validators=[validate_capo_fret], help_text=HELP_CAPO_FRET)
     lyrics = models.TextField()
 
-    old_slug = models.SlugField(max_length=100,
-                                unique=True,
-                                null=True,
-                                blank=True,
-                                editable=False,
-                                help_text=HELP_OLD_SLUG)
-    slug = models.SlugField(max_length=200,
-                            unique=True,
-                            null=False,
-                            blank=False,
-                            editable=False,
-                            help_text=HELP_SLUG)
-    has_extra_chords = models.BooleanField(default=False,
-                                           blank=True,
-                                           editable=False,
-                                           help_text=HELP_HAS_EXTRA_CHORDS)
+    old_slug = models.SlugField(
+        max_length=100,
+        unique=True,
+        null=True,
+        blank=True,
+        editable=False,
+        help_text=HELP_OLD_SLUG)
+    slug = models.SlugField(
+        max_length=200,
+        unique=True,
+        null=False,
+        blank=False,
+        editable=False,
+        help_text=HELP_SLUG)
+    has_extra_chords = models.BooleanField(
+        default=False,
+        blank=True,
+        editable=False,
+        help_text=HELP_HAS_EXTRA_CHORDS)
 
     class Meta(ContentItem.Meta):
         ordering = ['title', 'disambig']
@@ -188,8 +186,7 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
 
     def __str__(self):
         if self.disambig:
-            return '%s (%s)' % (self.title,
-                                self.disambig,)
+            return '%s (%s)' % (self.title, self.disambig,)
         else:
             return self.title
 
@@ -211,8 +208,9 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
 
     @overrides(SlugLogicMixin)
     def get_slug_elements(self):
-        return self.slug_prepend_elements + [self.title] + (
-            [self.disambig] if self.disambig else [])
+        return self.slug_prepend_elements + [self.title] + ([self.disambig]
+                                                            if self.disambig
+                                                            else [])
 
     @overrides(url_scheme.ViewEditReviewApprove)
     def get_url_name(self):
@@ -236,29 +234,37 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         return links
 
     def text_authors(self):
-        return [x.artist
-                for x in EntityContribution.objects.filter(song=self,
-                                                           texted=True)]
+        return [
+            x.artist
+            for x in EntityContribution.objects.filter(song=self, texted=True)
+        ]
 
     def composers(self):
-        return [x.artist
-                for x in EntityContribution.objects.filter(song=self,
-                                                           composed=True)]
+        return [
+            x.artist
+            for x in EntityContribution.objects.filter(
+                song=self, composed=True)
+        ]
 
     def translators(self):
-        return [x.artist
-                for x in EntityContribution.objects.filter(song=self,
-                                                           translated=True)]
+        return [
+            x.artist
+            for x in EntityContribution.objects.filter(
+                song=self, translated=True)
+        ]
 
     def performers(self):
-        return [x.artist
-                for x in EntityContribution.objects.filter(song=self,
-                                                           performed=True)]
+        return [
+            x.artist
+            for x in EntityContribution.objects.filter(
+                song=self, performed=True)
+        ]
 
 
 class EntityContribution(models.Model):
     song = models.ForeignKey(Song, on_delete=models.CASCADE)
-    artist = models.ForeignKey(Artist, on_delete=models.CASCADE, verbose_name='artysta')
+    artist = models.ForeignKey(
+        Artist, on_delete=models.CASCADE, verbose_name='artysta')
     performed = models.BooleanField(default=False, verbose_name='wyk.')
     texted = models.BooleanField(default=False, verbose_name='tekst')
     translated = models.BooleanField(default=False, verbose_name='tł.')
@@ -277,10 +283,11 @@ class EntityContribution(models.Model):
 
     @staticmethod
     def head_contribution(contributions):
-        candidates = ([x for x in contributions if x.texted] +
-                      [x for x in contributions if x.performed] +
-                      [x for x in contributions if x.composed] +
-                      [x for x in contributions if x.translated])
+        candidates = (
+            [x for x in contributions
+             if x.texted] + [x for x in contributions if x.performed] +
+            [x for x in contributions
+             if x.composed] + [x for x in contributions if x.translated])
         for cand in candidates:
             if cand.artist.featured:
                 return cand
@@ -305,28 +312,23 @@ Used in urls, has to be unique."""
 
     title = models.CharField(max_length=100, help_text=HELP_TITLE)
     text_trevor = models.TextField()
-    image = models.ImageField(null=True,
-                              blank=True,
-                              upload_to='song_annotations',
-                              help_text=HELP_IMAGE)
-    source_url1 = models.URLField(null=True,
-                                  blank=True,
-                                  help_text=HELP_SOURCE_URL)
-    source_url2 = models.URLField(null=True,
-                                  blank=True,
-                                  help_text=HELP_SOURCE_URL)
-    source_ref1 = models.TextField(null=True,
-                                   blank=True,
-                                   help_text=HELP_SOURCE_REF)
-    source_ref2 = models.TextField(null=True,
-                                   blank=True,
-                                   help_text=HELP_SOURCE_REF)
+    image = models.ImageField(
+        null=True,
+        blank=True,
+        upload_to='song_annotations',
+        help_text=HELP_IMAGE)
+    source_url1 = models.URLField(
+        null=True, blank=True, help_text=HELP_SOURCE_URL)
+    source_url2 = models.URLField(
+        null=True, blank=True, help_text=HELP_SOURCE_URL)
+    source_ref1 = models.TextField(
+        null=True, blank=True, help_text=HELP_SOURCE_REF)
+    source_ref2 = models.TextField(
+        null=True, blank=True, help_text=HELP_SOURCE_REF)
 
     song = models.ForeignKey(Song, editable=False, on_delete=models.CASCADE)
-    slug = models.SlugField(max_length=200,
-                            unique=True,
-                            editable=False,
-                            help_text=HELP_SLUG)
+    slug = models.SlugField(
+        max_length=200, unique=True, editable=False, help_text=HELP_SLUG)
     text_html = models.TextField(editable=False)
 
     class Meta(ContentItem.Meta):

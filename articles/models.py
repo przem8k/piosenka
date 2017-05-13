@@ -24,10 +24,11 @@ Main illustration for the article."""
     title = models.CharField(max_length=100, help_text=HELP_TITLE)
     lead_text_trevor = models.TextField()
     main_text_trevor = models.TextField()
-    cover_image = models.ImageField(null=True,
-                                    blank=True,
-                                    upload_to='article_covers',
-                                    help_text=HELP_COVER_IMAGE)
+    cover_image = models.ImageField(
+        null=True,
+        blank=True,
+        upload_to='article_covers',
+        help_text=HELP_COVER_IMAGE)
     cover_credits_trevor = models.TextField(null=True, blank=True)
 
     lead_text_html = models.TextField(editable=False)

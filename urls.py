@@ -25,25 +25,22 @@ urlpatterns = [
     url(r'^blog/', include('blog.urls')),
     url(r'^artykuly/', include('articles.urls')),
     url(r'^wydarzenia/', include('events.urls')),
-    url(r'^o-stronie/$',
-        piosenka.views.About.as_view(),
-        name='about'),
-    url(r'^o-stronie/format-opracowan/$',
+    url(r'^o-stronie/$', piosenka.views.About.as_view(), name='about'),
+    url(
+        r'^o-stronie/format-opracowan/$',
         piosenka.views.Format.as_view(),
         name='format'),
     # Site-search index.
     url(r'^index/', include('piosenka.index')),
     # Search results.
-    url(r'^szukaj/', piosenka.views.Search.as_view(),
-        name='search'),
+    url(r'^szukaj/', piosenka.views.Search.as_view(), name='search'),
     # Admin and users.
     url(r'^admin/', admin.site.urls),
     url(r'^redakcja/', include('piosenka.user_urls')),
     # Inspect.
     url(r'^inspect/', include('piosenka.inspect_urls')),
     # Frontpage.
-    url(r'^$', piosenka.views.SiteIndex.as_view(),
-        name='index'),
+    url(r'^$', piosenka.views.SiteIndex.as_view(), name='index'),
 ]
 
 if settings.DEBUG:

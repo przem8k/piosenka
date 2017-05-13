@@ -15,8 +15,8 @@ class Command(BaseCommand):
         # Workaround running from cron encoding problems.
         sys.stdout = open(1, 'w', encoding='utf-8', closefd=False)
 
-        token = facebook.GraphAPI().get_app_access_token(settings.FB_APP_ID,
-                                                         settings.FB_APP_SECRET)
+        token = facebook.GraphAPI().get_app_access_token(
+            settings.FB_APP_ID, settings.FB_APP_SECRET)
         print('[get access token]')
         graph = facebook.GraphAPI(access_token=token)
 

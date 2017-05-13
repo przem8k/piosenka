@@ -15,9 +15,8 @@ class JSONSearchIndexMixin(object):
         return self.get_json_response(json.dumps(context['index']))
 
     def get_json_response(self, content, **httpresponse_kwargs):
-        return HttpResponse(content,
-                            content_type='application/json',
-                            **httpresponse_kwargs)
+        return HttpResponse(
+            content, content_type='application/json', **httpresponse_kwargs)
 
 
 class ArtistSearchIndex(JSONSearchIndexMixin, View):
@@ -49,9 +48,6 @@ class SongSearchIndex(JSONSearchIndexMixin, View):
 
 
 urlpatterns = [
-    url(r'^artists$',
-        ArtistSearchIndex.as_view(),
-        name='search_index_artists'), url(r'^songs$',
-                                          SongSearchIndex.as_view(),
-                                          name='search_index_songs')
+    url(r'^artists$', ArtistSearchIndex.as_view(), name='search_index_artists'),
+    url(r'^songs$', SongSearchIndex.as_view(), name='search_index_songs')
 ]

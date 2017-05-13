@@ -45,8 +45,8 @@ class IndexTest(TestCase):
         jolene.save()
 
         # General public should see only Jolene.
-        response = testing.get_public_client().get(jack_white.get_absolute_url(
-        ))
+        response = testing.get_public_client().get(
+            jack_white.get_absolute_url())
         self.assertEqual(200, response.status_code)
         self.assertEqual(1, len(response.context['songs']))
 

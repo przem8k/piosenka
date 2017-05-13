@@ -13,8 +13,8 @@ class CarouselItem(models.Model):
         help_text='Description, written in Markdown.')
     description_html = models.TextField(null=True, blank=True, editable=False)
     position = models.IntegerField()
-    image = models.ImageField(upload_to='carousel_items',
-                              help_text='Picture to display in carousel.')
+    image = models.ImageField(
+        upload_to='carousel_items', help_text='Picture to display in carousel.')
     archived = models.BooleanField(default=False)
 
     class Meta:

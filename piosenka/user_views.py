@@ -67,8 +67,8 @@ class ToReview(TemplateView):
     template_name = 'to_review.html'
 
     @method_decorator(login_required)
-    @method_decorator(permission_required('content.review',
-                                          raise_exception=True))
+    @method_decorator(
+        permission_required('content.review', raise_exception=True))
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
 
@@ -79,8 +79,8 @@ class InviteView(CreateView):
     template_name = 'invite.html'
 
     @method_decorator(login_required)
-    @method_decorator(permission_required('piosenka.invite',
-                                          raise_exception=True))
+    @method_decorator(
+        permission_required('piosenka.invite', raise_exception=True))
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
 
@@ -103,8 +103,8 @@ class JoinView(FormView):
 
     def dispatch(self, *args, **kwargs):
         if not self.request.user.is_anonymous:
-            _action_logger.warning('%s tried /join while signed in' %
-                                   self.request.user)
+            _action_logger.warning(
+                '%s tried /join while signed in' % self.request.user)
             raise Http404
         return super().dispatch(*args, **kwargs)
 

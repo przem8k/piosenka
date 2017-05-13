@@ -14,7 +14,6 @@ from songs import forms
 from songs.lyrics import render_lyrics
 from songs.models import Artist, ArtistNote, Song, SongNote, EntityContribution
 
-
 _action_logger = logging.getLogger('actions')
 
 INITIAL_LYRICS = """\
@@ -54,14 +53,14 @@ class SongbookMenuMixin(object):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['bards'] = Artist.objects.filter(featured=True,
-                                                 category=Artist.CAT_TEXTER)
+        context['bards'] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_TEXTER)
         context['composers'] = Artist.objects.filter(
             featured=True, category=Artist.CAT_COMPOSER)
         context['foreigners'] = Artist.objects.filter(
             featured=True, category=Artist.CAT_FOREIGN)
-        context['bands'] = Artist.objects.filter(featured=True,
-                                                 category=Artist.CAT_BAND)
+        context['bands'] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_BAND)
         return context
 
 
@@ -85,8 +84,10 @@ class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
         artist = self.get_object()
         contributions = EntityContribution.objects.filter(
             artist=artist).select_related('song').order_by('song__title')
-        songs = [contribution.song for contribution in contributions
-                 if contribution.song.can_be_seen_by(self.request.user)]
+        songs = [
+            contribution.song for contribution in contributions
+            if contribution.song.can_be_seen_by(self.request.user)
+        ]
         context = super().get_context_data(**kwargs)
         context['songs'] = songs
         context['artist'] = artist
@@ -105,8 +106,7 @@ class AddArtist(CreateView):
 
     def form_valid(self, form):
         ret = super().form_valid(form)
-        messages.add_message(self.request, messages.INFO,
-                             'Artysta dodany.')
+        messages.add_message(self.request, messages.INFO, 'Artysta dodany.')
         _action_logger.info('%s added artist %s' % (self.request.user,
                                                     form.instance))
         return ret
@@ -145,8 +145,8 @@ class ViewSong(GetSongMixin, ViewContentView):
         else:
             transposition = 0
         context['lyrics'] = render_lyrics(self.object.lyrics, transposition)
-        context['notes'] = SongNote.items_visible_to(
-            self.request.user).filter(song=self.object)
+        context['notes'] = SongNote.items_visible_to(self.request.user).filter(
+            song=self.object)
         return context
 
     def render_to_response(self, context):
@@ -155,11 +155,12 @@ class ViewSong(GetSongMixin, ViewContentView):
         return super().render_to_response(context)
 
     def get_lyrics_as_json(self, context):
-        payload = {'lyrics': context['lyrics'],
-                   'transposition': context['transposition']}
+        payload = {
+            'lyrics': context['lyrics'],
+            'transposition': context['transposition']
+        }
         return HttpResponse(
-            json.dumps(payload),
-            content_type='application/json')
+            json.dumps(payload), content_type='application/json')
 
 
 class ContributionFormsetMixin(object):
@@ -167,8 +168,8 @@ class ContributionFormsetMixin(object):
 
     def dispatch(self, *args, **kwargs):
         if self.request.method == 'POST':
-            self.formset = forms.ContributionFormSet(self.request.POST,
-                                                     instance=self.get_object())
+            self.formset = forms.ContributionFormSet(
+                self.request.POST, instance=self.get_object())
         else:
             self.formset = forms.ContributionFormSet(instance=self.get_object())
         return super().dispatch(*args, **kwargs)
@@ -201,8 +202,8 @@ class AddSong(ContributionFormsetMixin, AddContentView):
 
     def form_valid(self, form):
         # Pick head contribution to put into the slug.
-        head = EntityContribution.head_contribution([x.instance
-                                                     for x in self.formset])
+        head = EntityContribution.head_contribution(
+            [x.instance for x in self.formset])
         assert head
         form.instance.set_slug_prepend_elements([head.artist.__str__()])
         return super().form_valid(form)

@@ -21,10 +21,11 @@ class GetEventMixin(object):
         slug = self.kwargs['slug']
         date_stamp = time.strptime(year + month + day, '%Y%m%d')
         event_date = datetime.fromtimestamp(time.mktime(date_stamp))
-        return Event.objects.get(slug=slug,
-                                 datetime__year=event_date.year,
-                                 datetime__month=event_date.month,
-                                 datetime__day=event_date.day)
+        return Event.objects.get(
+            slug=slug,
+            datetime__year=event_date.year,
+            datetime__month=event_date.month,
+            datetime__day=event_date.day)
 
 
 class EventIndex(TemplateView):

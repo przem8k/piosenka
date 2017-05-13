@@ -12,11 +12,13 @@ from piosenka.models import Invitation
 
 class InvitationTest(TestCase):
     _INVITE_LOGIN_URL = reverse('hello') + '?next=' + reverse('invite')
-    _JOIN_DATA = {'username': 'Alice',
-                  'first_name': 'Alice',
-                  'last_name': 'Doe',
-                  'password': 'secret',
-                  'password_again': 'secret'}
+    _JOIN_DATA = {
+        'username': 'Alice',
+        'first_name': 'Alice',
+        'last_name': 'Doe',
+        'password': 'secret',
+        'password_again': 'secret'
+    }
 
     def test_invite_view_get(self):
         anonymous_client = testing.get_client()
@@ -27,8 +29,8 @@ class InvitationTest(TestCase):
         response = regular_client.get(reverse('invite'))
         self.assertEqual(403, response.status_code)
 
-        allowed_client = testing.get_client(testing.create_user(
-            perms=['piosenka.invite']))
+        allowed_client = testing.get_client(
+            testing.create_user(perms=['piosenka.invite']))
         response = allowed_client.get(reverse('invite'))
         self.assertEqual(200, response.status_code)
 
@@ -41,8 +43,8 @@ class InvitationTest(TestCase):
         response = regular_client.post(reverse('invite'))
         self.assertEqual(403, response.status_code)
 
-        allowed_client = testing.get_client(testing.create_user(
-            perms=['piosenka.invite']))
+        allowed_client = testing.get_client(
+            testing.create_user(perms=['piosenka.invite']))
         response = allowed_client.post(reverse('invite'))
         self.assertEqual(200, response.status_code)
 
@@ -65,8 +67,8 @@ class InvitationTest(TestCase):
             0, len(Invitation.objects.filter(email_address=email_address)))
 
         self.assertEqual(0, len(mail.outbox))
-        allowed_client = testing.get_client(testing.create_user(
-            perms=['piosenka.invite']))
+        allowed_client = testing.get_client(
+            testing.create_user(perms=['piosenka.invite']))
         response = allowed_client.post(reverse('invite'), data)
         self.assertEqual(302, response.status_code)
         self.assertRedirects(response, reverse('index'))  # Redirect on success.
@@ -88,8 +90,8 @@ class InvitationTest(TestCase):
         response = regular_client.get(invitation.get_invitation_url())
         self.assertEqual(404, response.status_code)
 
-        allowed_client = testing.get_client(testing.create_user(
-            perms=['piosenka.invite']))
+        allowed_client = testing.get_client(
+            testing.create_user(perms=['piosenka.invite']))
         response = allowed_client.get(invitation.get_invitation_url())
         self.assertEqual(404, response.status_code)
 
