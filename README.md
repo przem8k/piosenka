@@ -1,19 +1,38 @@
-# Piosenka z tekstem #
+# Piosenka z tekstem
 
 [![Build Status](https://travis-ci.org/ppiet/piosenka.svg?branch=master)](https://travis-ci.org/ppiet/piosenka)
 
-## Local dev setup ##
+**This web application powers a website dedicated to Polish singer-songwriters
+hosted at https://www.piosenkaztekstem.pl. We have no ambition of generalizing
+the code to power any other website or to support internationalized, ie.
+non-Polish UI. Hence app strings and the rest of the documentation is in
+Polish.**
 
-Install python requirements by running:
+## Konfiguracja środowiska
 
-> pip install -r requirements.txt
+Piosenka z tekstem jest napisana w języku programowania Python. Aby uruchomić
+aplikację należy zainstalować moduły wykorzystywane przez aplikację:
 
-## Restoring from backup ##
+> pip3 install -r requirements.txt
 
-To restore the upload directory:
+Następnie można uruchomić aplikację lokalnie:
+
+> python3 manage runserver
+
+## Przygotowanie zmian
+
+Przed wysłaniem zmian kodu strony warto sprawdzić, czy testy aplikacji nadal
+działają:
+
+> python3 manage test
+
+## Administracja serwerem
+
+Aby przywrócić pliki załadowane przez użytkowników aplikacji (np. nuty,
+ilustracje do adnotacji).
 
 > aws s3 cp s3://BUCKET/upload/ upload --recursive
 
-To restore the db:
+Aby przywrócić zawartość bazy danych:
 
 > pg_restore -Ft --no-owner --username=USER --dbname=DB BACKUP.tar
