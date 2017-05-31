@@ -1,5 +1,8 @@
-from django.utils.dateparse import parse_datetime
+from django.conf import settings
 from django.utils import timezone
+from django.utils.dateparse import parse_datetime
+
+import facebook
 
 from events.models import FbEvent, Performer
 
@@ -21,15 +24,34 @@ def _get_event_from_data(event_data):
     return fb_event
 
 
-def update_events(graph):
+def _get_event(graph, fb_id):
+    return _get_event_from_data(graph.request(str(fb_id)))
+
+
+def _init_graph_api():
+    token = facebook.GraphAPI().get_app_access_token(settings.FB_APP_ID,
+                                                     settings.FB_APP_SECRET)
+    return facebook.GraphAPI(access_token=token)
+
+
+def get_single_event(fb_id):
+    graph = _init_graph_api()
+    return _get_event(graph, fb_id)
+
+
+def update_events():
+    graph = _init_graph_api()
     for fb_event in FbEvent.objects.all():
-        fresh_fb_event = _get_event_from_data(
-            graph.request(str(fb_event.fb_id)))
-        fb_event.name = fresh_fb_event.name
-        fb_event.datetime = fresh_fb_event.datetime
-        fb_event.town = fresh_fb_event.town
-        fb_event.lat = fresh_fb_event.lat
-        fb_event.lon = fresh_fb_event.lon
+        try:
+            fresh_fb_event = _get_event(graph, fb_event.fb_id)
+            fb_event.name = fresh_fb_event.name
+            fb_event.datetime = fresh_fb_event.datetime
+            fb_event.town = fresh_fb_event.town
+            fb_event.lat = fresh_fb_event.lat
+            fb_event.lon = fresh_fb_event.lon
+        except facebook.GraphAPIError:
+            # maybe the event got deleted? Just not refresh it, we will delete it eventually.
+            pass
 
         if fb_event.datetime > timezone.now():
             fb_event.save()
@@ -39,7 +61,9 @@ def update_events(graph):
             print(' deleted ' + fb_event.name)
 
 
-def import_events(graph):
+def import_events():
+    graph = _init_graph_api()
+
     for performer in Performer.objects.all():
         if not performer.fb_page_id:
             continue

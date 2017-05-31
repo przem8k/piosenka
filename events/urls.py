@@ -22,6 +22,7 @@ urlpatterns = [
                 ])),
         ])),
     url(r'^dodaj/$', views.AddEvent.as_view(), name='add_event'),
+    url(r'^dodaj-fb/$', views.AddFbEvent.as_view(), name='add_fb_event'),
     url(
         r'^wykonawca/(?P<slug>[-\w]+)/$',
         views.ViewPerformerRedirect.as_view(),

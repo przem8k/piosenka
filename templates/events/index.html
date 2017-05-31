@@ -16,7 +16,20 @@
           {% endfor %}
         </ul>
         <hr />
-        <a href="{% url 'add_event' %}">Dodaj nowe wydarzenie</a>
+        <ul class="list-unstyled">
+          <li>
+            <a href="{% url 'add_fb_event' %}">
+              <span class="glyphicon glyphicon-plus"></span>
+              Dodaj nowe wydarzenie (odnośnik do FB)
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'add_event' %}">
+              <span class="glyphicon glyphicon-plus"></span>
+              Dodaj nowe wydarzenie (opis na PzT)
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="col-md-6">

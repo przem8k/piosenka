@@ -2,11 +2,13 @@ from datetime import datetime
 import time
 
 from django.urls import reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import RedirectView, TemplateView
+from django.views.generic.edit import FormView
 
-from events.models import Event, Performer
+from events.models import Event, FbEvent, Performer
 from events.models import get_events_for
-from events.forms import EventForm
+from events.forms import EventForm, AddFbEventForm
 from content.trevor import put_text_in_trevor
 from content.views import (AddContentView, EditContentView, ApproveContentView,
                            ReviewContentView, ViewContentView)
@@ -131,3 +133,16 @@ class ReviewEvent(GetEventMixin, ReviewContentView):
 
 class ApproveEvent(GetEventMixin, ApproveContentView):
     pass
+
+
+class AddFbEvent(LoginRequiredMixin, FormView):
+    form_class = AddFbEventForm
+    template_name = 'events/add_fb_event.html'
+
+    def form_valid(self, form):
+        event = form.cleaned_data['event']
+        event.save()
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('event_index')
