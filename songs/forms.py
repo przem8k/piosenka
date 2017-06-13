@@ -10,8 +10,12 @@ class ArtistForm(forms.ModelForm):
         model = models.Artist
         exclude = []
         widgets = {
-            'born_on': forms.TextInput(attrs={'placeholder': 'DD.MM.RRRR'}),
-            'died_on': forms.TextInput(attrs={'placeholder': 'DD.MM.RRRR'}),
+            'born_on':
+            forms.DateInput(
+                format=('%d.%m.%Y'), attrs={'placeholder': 'DD.MM.RRRR'}),
+            'died_on':
+            forms.DateInput(
+                format=('%d.%m.%Y'), attrs={'placeholder': 'DD.MM.RRRR'}),
         }
 
 
