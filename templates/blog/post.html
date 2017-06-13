@@ -4,10 +4,10 @@
 {% block description %}Post {{ post }} na blogu Piosenki z tekstem{% endblock description %}
 
 {% block content %}
-<h1>{{ post.title }}
-  {% include "components/content_status_span.html" with item=post %}
-</h1>
 <div class="container">
+  <h1 class="remove-top-margin">{{ post.title }}
+    {% include "components/content_status_span.html" with item=post %}
+  </h1>
   <div class="row">
     <div class="col-md-8">
       <div class="section">

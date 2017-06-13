@@ -6,10 +6,10 @@
 {% block description %}Artykuł {{ article }} na Piosence z tekstem{% endblock description %}
 
 {% block content %}
-<h1 class="remove-top-margin">{{ article.title }}
-  {% include "components/content_status_span.html" with item=article %}
-</h1>
 <div class="container">
+  <h1 class="remove-top-margin">{{ article.title }}
+    {% include "components/content_status_span.html" with item=article %}
+  </h1>
   <div class="row">
     <div class="col-md-8">
       <div class="section">
