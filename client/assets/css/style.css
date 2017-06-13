@@ -194,6 +194,12 @@ h1.contributor {
     width: 100%;
 }
 
+/* artist */
+
+.lifetime {
+  text-align: center;
+}
+
 /* other */
 
 .tip {

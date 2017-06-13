@@ -7,15 +7,19 @@
 {% block description %}Śpiewnik zawiera teksty i akordy do piosenek - artysta: {{ artist }}.{% endblock description %}
 
 {% block content %}
-<h1>
-  {{ artist }}
-  {% if user.is_authenticated %}
-  <a href="{{ artist.get_edit_url }}">
-    <small><span class="glyphicon glyphicon-pencil"></span></small>
-  </a>
-  {% endif %}
-</h1>
 <div class="container">
+  <h1 class="remove-top-margin">
+    {{ artist }}
+    {% if user.is_authenticated %}
+    <a href="{{ artist.get_edit_url }}">
+      <small><span class="glyphicon glyphicon-pencil"></span></small>
+    </a>
+    {% endif %}
+  </h1>
+  <p class="lifetime">
+    {% if artist.born_on %} ur. <b>{{ artist.born_on }}</b>{% endif %}{% if artist.born_on and artist.died_on %},{% endif %}
+    {% if artist.died_on %} zm. <b>{{ artist.died_on }}</b> {% endif %}
+  </p>
   <div class="row">
     <div class="col-md-8">
       <div class="section">
