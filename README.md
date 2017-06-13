@@ -34,6 +34,22 @@ Lokalna wersja aplikacji jest dostępna w przeglądarce pod adresem
 
 ## Przygotowanie zmian
 
+### JS / CSS
+
+Zmiany obejmujące arkusze styli CSS oraz kod JavaScript (a więc te obejmujące
+kod wykonywany w przeglądarce użytkownika) wymagają przetworzenia przez
+narzędzie webpack.
+
+```
+cd client
+./node_modules/.bin/webpack --config webpack.config.js
+```
+
+webpack generuje skonsolidawne i skompresowane pliki JS i CSS które łączą wiele
+niezależnych zasobów w pojedynczy plik, zapewniając szybsze ładowanie strony.
+
+### Testy
+
 Przed wysłaniem zmian kodu strony warto sprawdzić, czy testy aplikacji nadal
 działają:
 
