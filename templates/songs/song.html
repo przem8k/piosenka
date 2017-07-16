@@ -123,6 +123,13 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
         </p>
       </div>
 
+      {% if song.youtube_id %}
+      <div class="section">
+        <h1>Nagranie</h1>
+        <iframe width="100%" src="https://www.youtube.com/embed/{{song.youtube_id}}" frameborder="0" allowfullscreen></iframe>
+      </div>
+      {% endif %}
+
       {% for note in notes %}
       {% include "content/note.html" with note=note %}
       {% endfor %}
