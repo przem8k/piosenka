@@ -233,6 +233,13 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
             links.append(('Nagranie (Wrzuta)', self.link_wrzuta))
         return links
 
+    def youtube_id(self):
+        YT_ID_PATTERN = 'watch?v='
+        if not self.link_youtube or self.link_youtube.find(YT_ID_PATTERN) < 0:
+            return None
+        url = self.link_youtube
+        return url[url.find(YT_ID_PATTERN) + len(YT_ID_PATTERN):]
+
     def text_authors(self):
         return [
             x.artist

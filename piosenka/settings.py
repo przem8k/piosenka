@@ -57,6 +57,11 @@ except ImportError:
     GOOGLE_MAPS_API_KEY = ''
 
 try:
+    from piosenka.settings_local import GOOGLE_API_KEY
+except ImportError:
+    GOOGLE_API_KEY = ''
+
+try:
     from piosenka.settings_local import FB_APP_ID
     from piosenka.settings_local import FB_APP_SECRET
 except ImportError:
