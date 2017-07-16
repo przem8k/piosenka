@@ -39,7 +39,9 @@ class Command(BaseCommand):
             if not response['items']:
                 print('Invalid video link: ' + str(song))
                 count_incorrect += 1
+                song.link_youtube = None
+                song.save()
 
         print('all songs: ' + str(count_all))
         print('no link: ' + str(count_none))
-        print('invalid link: ' + str(count_incorrect))
+        print('invalid link (fixed): ' + str(count_incorrect))
