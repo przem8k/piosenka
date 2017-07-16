@@ -109,20 +109,6 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
     </div>
 
     <div class="col-md-4 hidden-print">
-      <div class="section">
-        <h1>Wersja do druku
-          <span data-toggle="tooltip" data-placement="bottom" title="Opracowanie
-          zostanie wydrukowane w wybranej tonacji, bez nagłówka i bocznego
-          menu. Twoja przeglądarka pozwoli dostosować parametry przed
-          rozpoczęciem drukowania." class="tip tip pull-right">
-            <span class="glyphicon glyphicon-question-sign"></span>
-          </span>
-        </h1>
-        <p>
-        <a href="javascript:window.print()" title="drukuj opracowanie">Drukuj</a>
-        </p>
-      </div>
-
       {% if song.youtube_id %}
       <div class="section">
         <h1>Nagranie</h1>
