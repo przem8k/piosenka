@@ -11,9 +11,6 @@ require("script!./tooltips.js");
 require("script!./comments.js");
 require("../css/comments.css");
 
-require("script!./start_carousel.js");
-require("../css/carousel.css");
-
 // Song page.
 require("script!./trigger.js");
 require("../css/song.css");

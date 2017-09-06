@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 from articles.models import Article
 from blog.models import Post
 from events.models import Event, get_events_for
-from frontpage.models import CarouselItem
 from songs.models import ArtistNote, SongNote, Song
 
 
@@ -18,7 +17,8 @@ class SiteIndex(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['carousel_items'] = CarouselItem.objects.filter(archived=False)
+        context['article'] = (Article.items_visible_to(self.request.user)
+                                 .order_by('-pub_date').first())
         context['events'] = get_events_for(self.request.user)
         context['posts'] = (Post.items_visible_to(self.request.user)
                             .order_by('-pub_date')[:SiteIndex.POST_COUNT])

@@ -1,31 +1,13 @@
 {% load thumbnail %}
-
-{% if carousel_items %}
-<div id="front-carousel" class="carousel slide">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    {% for item in carousel_items %}
-    <li data-target="#front-carousel" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %} class="active"{% endif %}></li>
-    {% endfor %}
-  </ol>
-
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-    {% for item in carousel_items %}
-    <div class="{% if forloop.first %}active {% endif %}item">
-      {% if item.image %}
-      <img src="{{item.image|thumbnail_url:'carousel'}}"/>
-      {% endif %}
-      <div class="carousel-caption">
-        <h4>{{ item.title }}</h4>
-        {{ item.description_html|safe }}
+<div class="section">
+  <div class="thumbnail-host">
+    <a href="{{article.get_absolute_url}}">
+      <img src="{{ article.cover_image|thumbnail_url:'cover'}}" width="100%" class="img-responsive" />
+      <div class="thumbnail-caption">
+        <p>{{article.title}}
+          {% include "components/content_status_span.html" with item=article %}
+        </p>
       </div>
-    </div>
-    {% endfor %}
+    </a>
   </div>
-
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#front-carousel" data-slide="prev"><span class="icon-prev"></span></a>
-  <a class="carousel-control right" href="#front-carousel" data-slide="next"><span class="icon-next"></span></a>
 </div>
-{% endif %}
