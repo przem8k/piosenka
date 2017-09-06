@@ -154,7 +154,6 @@ INSTALLED_APPS = (
     'articles',
     'songs',
     'events',
-    'frontpage',
     'piosenka',
     'content',)
 
