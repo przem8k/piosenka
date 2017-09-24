@@ -12,5 +12,5 @@ require("script!./comments.js");
 require("../css/comments.css");
 
 // Song page.
-require("script!./trigger.js");
+require("script!./song.js");
 require("../css/song.css");
