@@ -36,6 +36,12 @@ h2 {
     padding: 0;
 }
 
+/* push lightbox away from the navbar */
+
+.lum-lightbox {
+  margin-top: 40px;
+}
+
 
 /* header & footer */
 
@@ -117,35 +123,6 @@ h2 {
 
 .section .content h2 small {
     font-size: 14px;
-}
-
-/* thumbnails */
-
-.thumbnail-host {
-    position: relative;
-}
-
-.thumbnail-caption {
-    position: absolute;
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    color: white;
-    background: rgba(0,0,0,0.75);
-}
-
-.thumbnail-caption p, .thumbnail-caption h1 {
-    color: white;
-    margin: 0;
-    padding: 5px;
-}
-
-.thumbnail-host .on-hover {
-  display: none;
-}
-
-.section:hover .on-hover {
-  display: block;
 }
 
 .article-body {
@@ -359,4 +336,35 @@ h1.contributor {
     .lyrics .paragraph {
         page-break-inside: avoid;
     }
+}
+/* thumbnails and lightbox */
+
+.pzt-thumbnail {
+  text-align: center;
+}
+
+.pzt-thumbnail img {
+  max-width: 100%;
+  max-height: 300px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.thumbnail-host {
+    position: relative;
+}
+
+.thumbnail-caption {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    color: white;
+    background: rgba(0,0,0,0.75);
+}
+
+.thumbnail-caption p, .thumbnail-caption h1 {
+    color: white;
+    margin: 0;
+    padding: 5px;
 }

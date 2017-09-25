@@ -1,4 +1,3 @@
-{% load staticfiles %}
 {% load thumbnail %}
 
 <div class="section">
@@ -6,12 +5,7 @@
     {% include "components/content_status_span.html" with item=note %}
   </h1>
   {% if note.image %}
-  <div class="thumbnail-host">
-    <img src="{{ note.image|thumbnail_url:'imagethumb'}}" class="note-image img-responsive"/>
-      <div class="thumbnail-caption on-hover">
-        <p class="pull-right"><a href="{{ note.image.url }}">pełny rozmiar</a></p>
-      </div>
-  </div>
+  {% include "components/thumbnail.html" with img=note.image type="imagethumb" %}
   {% endif %}
   {{ note.text_html|safe }}
   {% if note.url1 or note.url2 or note.ref1 or note.ref2 or note.image_author or note.image_url %}

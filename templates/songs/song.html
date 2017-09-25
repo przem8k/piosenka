@@ -124,13 +124,13 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
       <div class="section">
         <h1>Nuty</h1>
         {% if song.score1 %}
-        <center><a href="{{song.score1.url}}"><img src='{{ song.score1|thumbnail_url:'scorethumb' }}'/></a></center><br />
+        {% include "components/thumbnail.html" with img=song.score1 type="scorethumb" %}
         {% endif %}	
         {% if song.score2 %}
-        <center><a href="{{song.score2.url}}"><img src='{{ song.score2|thumbnail_url:'scorethumb' }}'/></a></center><br />
+        {% include "components/thumbnail.html" with img=song.score2 type="scorethumb" %}
         {% endif %}	
         {% if song.score3 %}
-        <center><a href="{{song.score3.url}}"><img src='{{ song.score3|thumbnail_url:'scorethumb' }}'/></a></center><br />
+        {% include "components/thumbnail.html" with img=song.score3 type="scorethumb" %}
         {% endif %}	
       </div>
       {% endif %}

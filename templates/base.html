@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
 
-    <!-- Legacy stylesheets to be included in the webpack bundle -->
+    <!-- Third-party stylesheets -->
     <link href="{% static "third_party/bootstrap/css/bootstrap.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "third_party/luminous/luminous-basic.min.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "third_party/sirtrevor/css/sir-trevor.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "third_party/sirtrevor/css/sir-trevor-icons.css" %}" rel="stylesheet" type="text/css" />
+    <!-- Legacy stylesheets to be included in the webpack bundle -->
     <link href="{% static "css/sirtrevor.css" %}" rel="stylesheet" type="text/css" />
 
     <!-- Webpack-managed stylesheets. -->
@@ -139,10 +141,11 @@
       </div>
     </div>
 
-    <!-- Legacy scripts to be included in the webpack bundle -->
+    <!-- Third-party scripts -->
     <script type="text/javascript" src="{% static "third_party/jquery/jquery-2.1.1.js" %}" charset="utf-8"></script>
     <script type="text/javascript" src="{% static "third_party/typeahead/typeahead-0.10.4.js" %}" charset="utf-8"></script>
     <script type="text/javascript" src="{% static "third_party/bootstrap/js/bootstrap.js" %}" charset="utf-8"></script>
+    <script type="text/javascript" src="{% static "third_party/luminous/luminous.min.js" %}" charset="utf-8"></script>
     <script type="text/javascript" src="{% static "third_party/sirtrevor/js/underscore.js" %}" charset="utf-8"></script>
     <script type="text/javascript" src="{% static "third_party/sirtrevor/js/eventable.js" %}" charset="utf-8"></script>
     <script type="text/javascript" src="{% static "third_party/sirtrevor/js/sir-trevor.js" %}" charset="utf-8"></script>

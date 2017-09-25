@@ -61,6 +61,10 @@
 	__webpack_require__(21);
 	__webpack_require__(23);
 
+	// Lightbox (image viewer).
+	__webpack_require__(25);
+	__webpack_require__(27);
+
 
 /***/ },
 /* 1 */
@@ -166,6 +170,25 @@
 
 /***/ },
 /* 23 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 24 */,
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(9)(__webpack_require__(26))
+
+/***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+	module.exports = "$(document).ready(function() {\n  var elements = document.querySelectorAll('.pzt-lightbox');\n  elements.forEach(function (element) {\n    new Luminous(element);\n  });\n});\n"
+
+/***/ },
+/* 27 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
