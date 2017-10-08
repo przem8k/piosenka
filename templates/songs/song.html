@@ -135,17 +135,6 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
       </div>
       {% endif %}
 
-      {% if song.external_links %}
-      <div class="section">
-        <h1>Linki</h1>
-        <ul class="list-unstyled">
-          {% for link in song.external_links %}
-          <li><a href="{{link.1}}" target="_blank">{{link.0}}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-
       {% if user.is_authenticated %}
       <div class="section">
         <h1>Dodaj adnotację</h1>

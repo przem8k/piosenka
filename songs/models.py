@@ -125,7 +125,6 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     HELP_TITLE = 'Tytuł piosenki.'
     HELP_ORIGINAL_TITLE = 'Tytuł oryginalnej piosenki w przypadku tłumaczenia.'
     HELP_LINK_YOUTUBE = 'Link do nagrania piosenki w serwisie YouTube.'
-    HELP_LINK_WRZUTA = 'Link do nagrania piosenki w serwisie Wrzuta.'
     HELP_CAPO_FRET = 'Liczba od 0 do 11, 0 oznacza brak kapodastra.'
     HELP_OLD_SLUG = 'Old slug kept to maintain redirects.'
     HELP_SLUG = 'Used in urls, has to be unique.'
@@ -138,8 +137,6 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         max_length=100, null=True, blank=True, help_text=HELP_ORIGINAL_TITLE)
     link_youtube = models.URLField(
         null=True, blank=True, help_text=HELP_LINK_YOUTUBE)
-    link_wrzuta = models.URLField(
-        null=True, blank=True, help_text=HELP_LINK_WRZUTA)
     score1 = models.ImageField(null=True, blank=True, upload_to='scores')
     score2 = models.ImageField(null=True, blank=True, upload_to='scores')
     score3 = models.ImageField(null=True, blank=True, upload_to='scores')
@@ -222,16 +219,6 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
 
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]
-
-    def external_links(self):
-        """ returns list of (label, url) describing links associated with the
-        song """
-        links = []
-        if self.link_youtube:
-            links.append(('Nagranie (Youtube)', self.link_youtube))
-        if self.link_wrzuta:
-            links.append(('Nagranie (Wrzuta)', self.link_wrzuta))
-        return links
 
     def youtube_id(self):
         YT_ID_PATTERN = 'watch?v='

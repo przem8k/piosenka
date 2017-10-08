@@ -109,8 +109,7 @@ textarea#id_lyrics {
           </div>
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Tytuł oryginalny" field=form.original_title %}
-            {% include "components/forms/table_field.html" with name="Link (YouTube)" field=form.link_youtube %}
-            {% include "components/forms/table_field.html" with name="Link (Wrzuta)" field=form.link_wrzuta %}
+            {% include "components/forms/table_field.html" with name="Link do nagrania na YouTube" field=form.link_youtube %}
           </table>
         </div>
         {% include "components/forms/add.html" with item=object %}
