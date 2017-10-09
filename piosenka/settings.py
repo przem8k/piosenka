@@ -87,9 +87,8 @@ STATIC_URL = '/site_media/native/'
 
 SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, 'site_media')
 
-STATICFILES_DIRS = (('', os.path.join(PROJECT_PATH, 'static')), (
-    'scripts', os.path.join(PROJECT_PATH, 'songs', 'scripts')), os.path.join(
-        PROJECT_PATH, 'client', 'assets'),)
+STATICFILES_DIRS = (('', os.path.join(PROJECT_PATH, 'static')), os.path.join(
+    PROJECT_PATH, 'client', 'assets'),)
 
 WEBPACK_LOADER = {
     'DEFAULT': {
