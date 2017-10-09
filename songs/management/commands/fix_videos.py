@@ -52,7 +52,7 @@ class Command(BaseCommand):
 
             # The link is missing - try to find a new one.
             head_contribution = EntityContribution.head_contribution(EntityContribution.objects.filter(song=song.id))
-            query = song.title + ' ' + str(head_contribution.artist)
+            query = str(song) + ' ' + str(head_contribution.artist)
             print(' - would look for: ' + query)
             candidates = youtube.search().list(maxResults=1, part='id,snippet',
                                                q=query).execute()
