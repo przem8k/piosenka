@@ -18,7 +18,7 @@ class SiteIndex(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['article'] = (Article.items_visible_to(self.request.user)
-                                 .order_by('-pub_date').first())
+                              .order_by('-pub_date').first())
         context['events'] = get_events_for(self.request.user)
         context['posts'] = (Post.items_visible_to(self.request.user)
                             .order_by('-pub_date')[:SiteIndex.POST_COUNT])
@@ -48,9 +48,8 @@ class About(TemplateView):
             author['songs'] = Song.items_live().filter(author=user).count()
             author['articles'] = Article.items_live().filter(
                 author=user).count()
-            author['total'] = (
-                author['annotations'] + author['songs'] +
-                self.ARTICLE_FACTOR * author['articles'])
+            author['total'] = (author['annotations'] + author['songs'] +
+                               self.ARTICLE_FACTOR * author['articles'])
             if author['total']:
                 authors.append(author)
         context['authors'] = sorted(

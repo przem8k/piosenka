@@ -12,18 +12,20 @@ from songs.models import Song, EntityContribution
 
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
-
-
 """Fixes outdated or missing YT links.
 
 This uses the YT data API: https://developers.google.com/youtube/v3/docs/.
 """
+
+
 class Command(BaseCommand):
     help = 'Check and fix all video links.'
 
     def handle(self, *args, **options):
-        youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,
-                            developerKey=settings.GOOGLE_API_KEY)
+        youtube = build(
+            YOUTUBE_API_SERVICE_NAME,
+            YOUTUBE_API_VERSION,
+            developerKey=settings.GOOGLE_API_KEY)
 
         count_all = 0
         count_none = 0
@@ -37,9 +39,7 @@ class Command(BaseCommand):
             else:
                 id = song.youtube_id()
                 response = youtube.videos().list(
-                    part='id,snippet',
-                    id=id
-                ).execute()
+                    part='id,snippet', id=id).execute()
                 if not response['items']:
                     print(' - incorrect link, deleting')
                     count_incorrect += 1
@@ -51,11 +51,12 @@ class Command(BaseCommand):
                 continue
 
             # The link is missing - try to find a new one.
-            head_contribution = EntityContribution.head_contribution(EntityContribution.objects.filter(song=song.id))
+            head_contribution = EntityContribution.head_contribution(
+                EntityContribution.objects.filter(song=song.id))
             query = str(song) + ' ' + str(head_contribution.artist)
             print(' - would look for: ' + query)
-            candidates = youtube.search().list(maxResults=1, part='id,snippet',
-                                               q=query).execute()
+            candidates = youtube.search().list(
+                maxResults=1, part='id,snippet', q=query).execute()
             if not candidates['items']:
                 print(' - no results :(')
             else:
