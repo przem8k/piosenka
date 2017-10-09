@@ -227,6 +227,9 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         url = self.link_youtube
         return url[url.find(YT_ID_PATTERN) + len(YT_ID_PATTERN):]
 
+    def set_youtube_id(self, yt_id):
+        self.link_youtube = 'https://www.youtube.com/watch?v=' + yt_id
+
     def text_authors(self):
         return [
             x.artist
