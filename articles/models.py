@@ -11,6 +11,7 @@ from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
 from content.slug import SlugFieldMixin
 from songs.models import Song
+from articles.mentions import find_songs_mentioned_in_article
 
 saved_file.connect(generate_aliases)
 
@@ -68,6 +69,20 @@ Main illustration for the article."""
             self.cover_credits_html = render_trevor(self.cover_credits_trevor)
         else:
             self.cover_credits_html = ''
+
+        songs_mentioned = find_songs_mentioned_in_article(self)
+
+        existing_mentions = SongMention.objects.filter(article=self)
+        for mention in existing_mentions:
+            if mention.song not in songs_mentioned:
+                mention.delete()
+
+        for song in songs_mentioned:
+            if not SongMention.objects.filter(article=self,song=song).first():
+                new_mention = SongMention()
+                new_mention.article = self
+                new_mention.song = song
+                new_mention.save()
         super().save(*args, **kwargs)
 
     def get_url_params(self):
