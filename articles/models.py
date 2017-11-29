@@ -10,6 +10,7 @@ from content import url_scheme
 from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
 from content.slug import SlugFieldMixin
+from songs.models import Song
 
 saved_file.connect(generate_aliases)
 
@@ -71,3 +72,14 @@ Main illustration for the article."""
 
     def get_url_params(self):
         return {'slug': self.slug}
+
+
+class SongMention(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    song = models.ForeignKey(Song, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = (('article', 'song'),)
+
+    def __str__(self):
+        return str(self.article) + ' -> ' + str(self.song)
