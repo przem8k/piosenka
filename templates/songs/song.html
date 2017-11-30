@@ -120,6 +120,17 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
       {% include "content/note.html" with note=note %}
       {% endfor %}
 
+      {% if mentions %}
+      <div class="section">
+        <h1>Dowiedz się więcej</h1>
+        <ul class="list-unstyled">
+          {% for mention in mentions %}
+          <li><a href="{{ mention.article.get_absolute_url }}">{{ mention.article }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
       {% if song.score1 or song.score2 or song.score3 %}
       <div class="section">
         <h1>Nuty</h1>

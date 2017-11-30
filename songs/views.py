@@ -13,6 +13,7 @@ from content.views import (AddContentView, EditContentView, ApproveContentView,
 from songs import forms
 from songs.lyrics import render_lyrics
 from songs.models import Artist, ArtistNote, Song, SongNote, EntityContribution
+from articles.models import SongMention
 
 _action_logger = logging.getLogger('actions')
 
@@ -147,6 +148,7 @@ class ViewSong(GetSongMixin, ViewContentView):
         context['lyrics'] = render_lyrics(self.object.lyrics, transposition)
         context['notes'] = SongNote.items_visible_to(self.request.user).filter(
             song=self.object)
+        context['mentions'] = SongMention.objects.filter(song=self.object)
         return context
 
     def render_to_response(self, context):
