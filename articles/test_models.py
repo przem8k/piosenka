@@ -57,6 +57,13 @@ class ArticleTest(TestCase):
         article.save()
         self.assertEqual(self.get_song_mentions_count(), 2)
 
+        song_c = Song.create_for_testing(self.user)
+        # This time with a trailing slash.
+        link_c = '[song_a](https://example.com/opracowanie/%s/)' % song_c.slug
+        article.main_text_trevor = put_text_in_trevor(link_a + ' ' + link_c)
+        article.save()
+        self.assertEqual(self.get_song_mentions_count(), 2)
+
         article.main_text_trevor = put_text_in_trevor('nothing')
         article.save()
         self.assertEqual(self.get_song_mentions_count(), 0)
