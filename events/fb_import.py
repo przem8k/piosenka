@@ -68,7 +68,11 @@ def import_events():
         if not performer.fb_page_id:
             continue
 
-        response = graph.request(performer.fb_page_id + '/events')
+        try:
+            response = graph.request(performer.fb_page_id + '/events')
+        except facebook.GraphAPIError:
+            print(' cannot list events for %s - skipping' % (performer,))
+            continue
         events = response['data']
 
         print(' got %d events for %s' % (len(events), performer))
