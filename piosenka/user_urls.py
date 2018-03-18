@@ -10,6 +10,14 @@ urlpatterns = [
         r'^zmien-haslo/',
         user_views.ChangePassword.as_view(),
         name='change_password'),
+    url(
+        r'^nie-pamietam-hasla/',
+        user_views.ResetPassword.as_view(),
+        name='reset_password'),
+    url(
+        r'^nowe-haslo/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/',
+        user_views.ConfirmPasswordReset.as_view(),
+        name='confirm_password_reset'),
     url(r'^zapros/', user_views.InviteView.as_view(), name='invite'),
     url(
         r'^dolacz/(?P<invitation_key>[-\w]+)/',

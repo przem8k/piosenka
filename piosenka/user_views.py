@@ -1,12 +1,14 @@
 from datetime import datetime
 import logging
 
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth.models import User, Group
-from django.contrib.auth.views import login, logout
-from django.urls import reverse_lazy, reverse
+from django.contrib.auth.views import (login, logout, PasswordResetView,
+                                       PasswordResetConfirmView)
 from django.http import HttpResponseRedirect, Http404
+from django.urls import reverse_lazy, reverse
 from django.utils import timezone
 from django.utils.decorators import method_decorator
 from django.views.generic import View, TemplateView
@@ -34,6 +36,29 @@ class Hello(FormView):
         login(self.request, form.get_user())
         if self.request.GET and 'next' in self.request.GET:
             return HttpResponseRedirect(self.request.GET['next'])
+        return super().form_valid(form)
+
+
+class ResetPassword(PasswordResetView):
+    template_name = 'reset_password.html'
+    success_url = reverse_lazy('index')
+    subject_template_name = 'mail/password_reset.subject.txt'
+    email_template_name = 'mail/password_reset.txt'
+    html_email_template_name = 'mail/password_reset.html'
+
+    def form_valid(self, form):
+        messages.add_message(self.request, messages.INFO,
+                             'Dziękujemy. Sprawdź podany adres email.')
+        return super().form_valid(form)
+
+
+class ConfirmPasswordReset(PasswordResetConfirmView):
+    template_name = 'confirm_password_reset.html'
+    success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        messages.add_message(self.request, messages.INFO,
+                             'Dziękujemy. Hasło zostało zmienione.')
         return super().form_valid(form)
 
 
