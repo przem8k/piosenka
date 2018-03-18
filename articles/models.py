@@ -78,7 +78,7 @@ Main illustration for the article."""
                 mention.delete()
 
         for song in songs_mentioned:
-            if not SongMention.objects.filter(article=self,song=song).first():
+            if not SongMention.objects.filter(article=self, song=song).first():
                 new_mention = SongMention()
                 new_mention.article = self
                 new_mention.song = song
