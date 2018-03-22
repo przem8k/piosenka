@@ -26,9 +26,13 @@ class SiteIndex(TemplateView):
                             .order_by('-pub_date')[:SiteIndex.SONG_COUNT])
         context['annotation'] = (SongNote.items_visible_to(self.request.user)
                                  .order_by('-pub_date').first())
-        context['annotations'] = (
-            SongNote.items_visible_to(self.request.user)
-            .order_by('-pub_date')[:SiteIndex.ANNOTATION_COUNT])
+        song_notes = SongNote.items_visible_to(self.request.user).order_by(
+            '-pub_date')[:SiteIndex.ANNOTATION_COUNT]
+        artist_notes = ArtistNote.items_visible_to(self.request.user).order_by(
+            '-pub_date')[:SiteIndex.ANNOTATION_COUNT]
+        notes = (list(song_notes) + list(artist_notes))
+        notes.sort(key=lambda x: x.pub_date, reverse=True)
+        context['annotations'] = notes[:SiteIndex.ANNOTATION_COUNT]
         return context
 
 
