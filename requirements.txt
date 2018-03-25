@@ -1,4 +1,4 @@
-Django==1.11.1
+Django==1.11.11
 Markdown==2.6.6
 awscli==1.7.25
 easy-thumbnails==2.4.1
