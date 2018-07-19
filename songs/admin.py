@@ -1,4 +1,4 @@
-from songs.models import (Artist, ArtistNote, Annotation, Song, SongNote,
+from songs.models import (Artist, ArtistNote, Song, SongNote,
                           EntityContribution)
 from django.contrib import admin
 
@@ -14,6 +14,5 @@ class SongAdmin(admin.ModelAdmin):
 
 admin.site.register(Artist)
 admin.site.register(ArtistNote)
-admin.site.register(Annotation)
 admin.site.register(Song, SongAdmin)
 admin.site.register(SongNote)

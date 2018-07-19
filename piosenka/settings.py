@@ -178,12 +178,6 @@ THUMBNAIL_ALIASES = {
             'upscale': True
         },
     },
-    'songs.Annotation.image': {
-        'imagethumb': {
-            'size': (0, 300),
-            'upscale': True
-        },
-    },
     'songs.Artist.image': {
         'imagethumb': {
             'size': (0, 300),

@@ -5,7 +5,7 @@ from django.core.management.base import BaseCommand
 from articles.models import Article
 from blog.models import Post
 from events.models import Event
-from songs.models import Artist, Annotation, Song
+from songs.models import Artist, ArtistNote, Song, SongNote
 
 
 class Command(BaseCommand):
@@ -16,6 +16,11 @@ class Command(BaseCommand):
             artist.reviewed = True
             artist.save()
             print('Reviewed: %s' % (artist))
+
+        for note in ArtistNote.objects.all():
+            note.reviewed = True
+            note.save()
+            print('Reviewed: %s' % (note))
 
         for article in Article.objects.all():
             article.reviewed = True
@@ -37,7 +42,7 @@ class Command(BaseCommand):
             song.save()
             print('Reviewed: %s' % (song))
 
-        for annotation in Annotation.objects.all():
-            annotation.reviewed = True
-            annotation.save()
-            print('Reviewed: %s' % (annotation))
+        for note in SongNote.objects.all():
+            note.reviewed = True
+            note.save()
+            print('Reviewed: %s' % (note))

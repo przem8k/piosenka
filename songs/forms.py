@@ -34,13 +34,6 @@ ContributionFormSet = inlineformset_factory(
     validate_min=True)
 
 
-class AnnotationForm(forms.ModelForm):
-
-    class Meta:
-        model = models.Annotation
-        exclude = []
-
-
 class ArtistNoteForm(forms.ModelForm):
 
     class Meta:
