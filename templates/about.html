@@ -8,9 +8,9 @@
 {% block content %}
 <div class="container">
   <h1>O stronie</h1>
-  <div class="row">
+  <div class="row section">
     <div class="col-md-4">
-      <div class="section">
+      <div class="">
         <h1>Misja</h1>
         <p>
           <b>Piosenka z tekstem</b> jest tworzona przez środowisko sympatyków
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="section">
+      <div class="">
         <h1>Kontakt</h1>
         <p>
         Wszelkie uwagi, sugestie, zapytania, informacje o błędach prosimy
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="section">
+      <div class="">
         <h1>Zasady publikacji</h1>
         <p>
         Dokładamy starań, aby materiały publikowane na stronie, w szczególności
@@ -40,6 +40,62 @@
         <p>
         W przypadku wątpliwości odnośnie poszczególnych publikacji, właścicieli
         praw prosimy o kontakt.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <h1>Jak pomóc</h1>
+  <div class="row section">
+    <div class="col-md-4">
+      <div class="">
+        <h1>Merytorycznie</h1>
+        <p>
+          Jeśli interesujesz się piosenką literacką i
+          chciałbyś/chciałabyś zaangażować się w pracę nad serwisem,
+          zapraszamy do redakcyjnej <a
+            href="https://www.facebook.com/groups/291262764226674/">grupy</a>
+          na Facebooku. Po dołączeniu do grupy napisz kilka słów o sobie i
+          swoich pomysłach na rozwój PzT.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="">
+        <h1>Technicznie</h1>
+        <p>
+          Piosenka z tekstem jest projektem <b>open source</b>, kod źródłowy
+          strony jest <a href="https://github.com/ppiet/piosenka">dostępny
+            publicznie</a>.
+        </p>
+
+        <ul class="list-unstyled badgelist">
+          <li><img src="{% static "images/badges/django.gif" %}"/></li>
+          <li><img src="{% static "images/badges/python.gif" %}"/></li>
+        </ul>
+
+        <p>
+          Jeśli nieobce Ci jest programowanie aplikacji webowych w i
+          chciałbyś/chciałabyś spróbować swoich sił w pracy nad naszym
+          serwisem, zapraszamy na <a
+            href="https://github.com/ppiet/piosenka">stronę projektu</a> w
+          serwisie GitHub
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="">
+        <h1>Promocyjnie</h1>
+        <p>
+          Powiedz o naszym serwisie znajomym, zaproś do śledzenia
+          naszej strony na <a
+            href="https://www.facebook.com/piosenkaztekstem">Facebooku</a>.
+        </p>
+
+        <p>
+          Jeśli prowadzisz stronę związaną z piosenką literacką,
+          będziemy wdzięczni za umieszczenie odnośnika do naszej
+          witryny.
         </p>
       </div>
     </div>
@@ -65,66 +121,31 @@
   </div>
   {% endfor %}
 
-  <h1>Jak pomóc</h1>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="section">
-        <h1>Merytorycznie</h1>
+
+  <div class="row section">
+    <div class="col-md-6">
+      <div class="">
+        <h1>Polityka prywatności</h1>
         <p>
-          Jeśli interesujesz się piosenką literacką i
-          chciałbyś/chciałabyś zaangażować się w pracę nad serwisem,
-          zapraszamy do redakcyjnej <a
-            href="https://www.facebook.com/groups/291262764226674/">grupy</a>
-          na Facebooku. Po dołączeniu do grupy napisz kilka słów o sobie i
-          swoich pomysłach na rozwój PzT.
+          Strona <b>nie gromadzi</b> żadnych danych osobowych niezalogowanych
+          użytkowników. Jedyne dane gromadzone przez serwis na temat
+          niezalogowanych użytkowników to zagregowane dane o ruchu na stronie
+          zbierane przy pomocy platformy Google Analytics.
+        </p>
+
+        <p>
+          Opcja zalogowania się na stronie jest dostępna wyłącznie dla
+          <b>zamkniętej grupy</b> redaktorów serwisu (nie ma możliwości
+          samodzielnej rejestracji). W ich przypadku strona gromadzi imię,
+          nazwisko i adres email każdego z redaktorów, na potrzeby wyświetlenia
+          listy redaktorów strony w działe "O stronie", oraz wysyłania
+          notyfikacji o zatwierdzeniu ich materiałów przez korektę.
         </p>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="section">
-        <h1>Technicznie</h1>
-        <p>
-          Piosenka z tekstem jest projektem <b>open source</b>, kod źródłowy
-          strony jest <a href="https://github.com/ppiet/piosenka">dostępny
-            publicznie</a>.
-        </p>
 
-        <ul class="list-unstyled badgelist">
-          <li><img src="{% static "images/badges/django.gif" %}"/></li>
-          <li><img src="{% static "images/badges/python.gif" %}"/></li>
-        </ul>
-
-        <p>
-          Jeśli nieobce Ci jest programowanie aplikacji webowych w i
-          chciałbyś/chciałabyś spróbować swoich sił w pracy nad naszym
-          serwisem, zapraszamy na <a
-            href="https://github.com/ppiet/piosenka">stronę projektu</a> w
-          serwisie GitHub
-        </p>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="section">
-        <h1>Promocyjnie</h1>
-        <p>
-          Powiedz o naszym serwisie znajomym, zaproś do śledzenia
-          naszej strony na <a
-            href="https://www.facebook.com/piosenkaztekstem">Facebooku</a>.
-        </p>
-
-        <p>
-          Jeśli prowadzisz stronę związaną z piosenką literacką,
-          będziemy wdzięczni za umieszczenie odnośnika do naszej
-          witryny.
-        </p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-md-12">
-      <div class="section">
+    <div class="col-md-6">
+      <div class="">
         <h1>Dziękujemy</h1>
         <p>
           Dziękujemy za pomoc w zgromadzeniu opublikowanych materiałów, w
