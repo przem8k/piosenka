@@ -70,6 +70,10 @@ Main illustration for the article."""
         else:
             self.cover_credits_html = ''
 
+        # When adding the article for the first time, it must be saved before we
+        # create song mentions.
+        super().save(*args, **kwargs)
+
         songs_mentioned = find_songs_mentioned_in_article(self)
 
         existing_mentions = SongMention.objects.filter(article=self)
@@ -83,7 +87,6 @@ Main illustration for the article."""
                 new_mention.article = self
                 new_mention.song = song
                 new_mention.save()
-        super().save(*args, **kwargs)
 
     def get_url_params(self):
         return {'slug': self.slug}
