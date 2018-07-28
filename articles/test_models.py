@@ -42,13 +42,21 @@ class ArticleTest(TestCase):
         article = Article.create_for_testing(self.user)
         self.assertEqual(self.get_song_mentions_count(), 0)
 
+        # Mentions should not be added until the article is public.
         song_a = Song.create_for_testing(self.user)
         link_a = '[song_a](https://example.com/opracowanie/%s)' % song_a.slug
         article.main_text_trevor = put_text_in_trevor(link_a)
+        article.full_clean()
+        article.save()
+        self.assertEqual(self.get_song_mentions_count(), 0)
+
+        article.reviewed = True
+        article.full_clean()
         article.save()
         self.assertEqual(self.get_song_mentions_count(), 1)
 
         article.main_text_trevor = put_text_in_trevor(link_a + ' ' + link_a)
+        article.full_clean()
         article.save()
         self.assertEqual(self.get_song_mentions_count(), 1)
 

@@ -71,23 +71,23 @@ Main illustration for the article."""
         else:
             self.cover_credits_html = ''
 
-        # When adding the article for the first time, it must be saved before we
-        # create song mentions.
-        super().save(*args, **kwargs)
+        if self.reviewed:
+            # Only post (or update) mentions once the article is public.
+            songs_mentioned = find_songs_mentioned_in_article(self)
 
-        songs_mentioned = find_songs_mentioned_in_article(self)
+            existing_mentions = SongMention.objects.filter(article=self)
+            for mention in existing_mentions:
+                if mention.song not in songs_mentioned:
+                    mention.delete()
 
-        existing_mentions = SongMention.objects.filter(article=self)
-        for mention in existing_mentions:
-            if mention.song not in songs_mentioned:
-                mention.delete()
+            for song in songs_mentioned:
+                if not SongMention.objects.filter(article=self, song=song).first():
+                    new_mention = SongMention()
+                    new_mention.article = self
+                    new_mention.song = song
+                    new_mention.save()
 
-        for song in songs_mentioned:
-            if not SongMention.objects.filter(article=self, song=song).first():
-                new_mention = SongMention()
-                new_mention.article = self
-                new_mention.song = song
-                new_mention.save()
+        return super().save(*args, **kwargs)
 
     def get_url_params(self):
         return {'slug': self.slug}
