@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 from django.utils.text import slugify
 
 from unidecode import unidecode
@@ -12,21 +13,25 @@ class SlugLogicMixin(object):
     def get_slug_elements(self):
         raise NotImplementedError
 
+    # TODO: make private?
     def make_slug(self, slug_elements):
         normalized_string = unidecode(' '.join(slug_elements))
         max_length = self._meta.get_field('slug').max_length
         return slugify(normalized_string)[:max_length]
 
-    def save(self, *args, **kwargs):
+    def get_slug(self):
+        return self.make_slug(self.get_slug_elements())
+
+    def clean(self):
         if not self.slug:
-            slug_elements = self.get_slug_elements()
-            candidate = self.make_slug(slug_elements)
-            counter = 0
-            while self.__class__.objects.filter(slug=candidate):
-                counter += 1
-                candidate = self.make_slug(slug_elements + [str(counter)])
-            self.slug = candidate
-        return super().save(*args, **kwargs)
+            self.slug = self.get_slug()
+
+        if not self.pk and self.__class__.objects.filter(slug=self.slug):
+            raise ValidationError('Materiał o takich parametrach już jest bazie. '
+                                  'Upewnij się, że nie dodajesz przypadkiem duplikatu. '
+                                  'Jeśli chodzi o piosenkę, możesz użyć wyróżnika '
+                                  'aby wskazać, że to inna piosenka.')
+        return super().clean()
 
 
 class SlugFieldMixin(SlugLogicMixin, models.Model):

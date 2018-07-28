@@ -58,6 +58,7 @@ class Artist(SlugFieldMixin):
         artist = Artist()
         artist.author = author
         artist.name = str(uuid.uuid4())
+        artist.full_clean()
         artist.save()
         return artist
 
@@ -96,6 +97,7 @@ class ArtistNote(url_scheme.EditReviewApprove, Note):
         note.artist.save()
         note.title = str(uuid.uuid4()).replace('-', '')
         note.text_trevor = put_text_in_trevor('Abc')
+        note.full_clean()
         note.save()
         return note
 
@@ -143,6 +145,10 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     capo_fret = models.IntegerField(
         default=0, validators=[validate_capo_fret], help_text=HELP_CAPO_FRET)
     lyrics = models.TextField()
+    # This is a bit of a hack - this field is set in the creation view
+    # so that the head artist name is part of the slug.
+    artist_for_slug = models.CharField(
+        max_length=100, null=False, blank=True)
 
     old_slug = models.SlugField(
         max_length=100,
@@ -174,12 +180,9 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         song.author = author
         song.title = str(uuid.uuid4()).replace('-', '')
         song.lyrics = 'Abc'
+        song.full_clean()
         song.save()
         return song
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.slug_prepend_elements = []
 
     def __str__(self):
         if self.disambig:
@@ -198,16 +201,12 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
             parsed_lyrics = parse_lyrics(self.lyrics)
             transpose_lyrics(parsed_lyrics, 0)
         except SyntaxError as m:
-            raise ValidationError('Lyrics syntax is incorrect: ' + str(m))
-
-    def set_slug_prepend_elements(self, elements):
-        self.slug_prepend_elements = elements
+            raise ValidationError('Niepoprawny format treści piosenki: ' + str(m))
+        return super().clean()
 
     @overrides(SlugLogicMixin)
     def get_slug_elements(self):
-        return self.slug_prepend_elements + [self.title] + ([self.disambig]
-                                                            if self.disambig
-                                                            else [])
+        return [self.artist_for_slug, self.title] + ([self.disambig] if self.disambig else [])
 
     @overrides(url_scheme.ViewEditReviewApprove)
     def get_url_name(self):
@@ -308,6 +307,7 @@ class SongNote(url_scheme.EditReviewApprove, Note):
         note.song.save()
         note.title = str(uuid.uuid4()).replace('-', '')
         note.text_trevor = put_text_in_trevor('Abc')
+        note.full_clean()
         note.save()
         return note
 

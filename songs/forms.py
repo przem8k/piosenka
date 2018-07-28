@@ -25,6 +25,14 @@ class SongForm(forms.ModelForm):
         model = models.Song
         exclude = []
 
+    def set_artist_for_slug(self, artist_for_slug):
+        self.artist_for_slug = artist_for_slug
+
+    def clean(self):
+        data = super().clean()
+        data['artist_for_slug'] = self.artist_for_slug
+        return data
+
 
 ContributionFormSet = inlineformset_factory(
     models.Song,

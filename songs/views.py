@@ -2,6 +2,7 @@ import json
 import logging
 
 from django.contrib import messages
+from django.core.exceptions import ValidationError
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponsePermanentRedirect
 from django.shortcuts import get_object_or_404
@@ -185,7 +186,17 @@ class ContributionFormsetMixin(object):
         form = self.get_form()
         formset = self.formset
 
-        if form.is_valid() and formset.is_valid():
+        # This updates |instance| fields in the formset with parsed objects.
+        if not formset.is_valid():
+            return self.form_invalid(form)
+
+        # Pick head contribution to put into the slug.
+        head = EntityContribution.head_contribution(
+            [x.instance for x in self.formset])
+        assert head
+        form.set_artist_for_slug(head.artist.__str__())
+
+        if form.is_valid():
             return self.form_valid(form)
         else:
             return self.form_invalid(form)
@@ -202,13 +213,6 @@ class AddSong(ContributionFormsetMixin, AddContentView):
     form_class = forms.SongForm
     template_name = 'songs/add_edit_song.html'
 
-    def form_valid(self, form):
-        # Pick head contribution to put into the slug.
-        head = EntityContribution.head_contribution(
-            [x.instance for x in self.formset])
-        assert head
-        form.instance.set_slug_prepend_elements([head.artist.__str__()])
-        return super().form_valid(form)
 
     def get_initial(self):
         return {'lyrics': INITIAL_LYRICS}

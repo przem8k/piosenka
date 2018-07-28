@@ -30,6 +30,7 @@ class Performer(SlugFieldMixin, models.Model):
     def create_for_testing():
         performer = Performer()
         performer.name = str(uuid.uuid4())
+        performer.full_clean()
         performer.save()
         return performer
 
@@ -60,6 +61,7 @@ class Venue(SlugFieldMixin, models.Model):
         venue.street = '233 Madison Avenue'
         venue.lat = 0.0
         venue.lon = 0.0
+        venue.full_clean()
         venue.save()
         return venue
 
@@ -117,6 +119,7 @@ przypadku braku danych pozostaw puste."""
         event.description_trevor = put_text_in_trevor('Abc')
         event.datetime = timezone.now() + timedelta(days=365)
         event.venue = venue if venue else Venue.create_for_testing()
+        event.full_clean()
         event.save()
         return event
 

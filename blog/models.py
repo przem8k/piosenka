@@ -27,6 +27,7 @@ class Post(SlugFieldMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         post.title = str(uuid.uuid4()).replace('-', '')
         post.post_trevor = put_text_in_trevor('Abc')
         post.more_trevor = put_text_in_trevor('Abc')
+        post.full_clean()
         post.save()
         return post
 

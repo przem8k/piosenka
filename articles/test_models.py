@@ -21,6 +21,7 @@ class ArticleTest(TestCase):
         self.assertEqual('', article.slug)
 
         # Save and verify that the slug was correctly set.
+        article.full_clean()
         article.save()
         self.assertEqual('krotka-historia-pewnej-piosenki', article.slug)
 

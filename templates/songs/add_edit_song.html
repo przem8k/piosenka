@@ -22,6 +22,11 @@ textarea#id_lyrics {
             {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
             {% include "components/forms/table_field.html" with name="Wyróżnik" field=form.disambig %}
           </table>
+          {% if form.non_field_errors %}
+          <div class="alert alert-danger" role="alert">
+            {{ form.non_field_errors }}
+          </div>
+          {% endif %}
         </div>
         <div class="section">
           <h1>Opracowanie</h1>
@@ -38,11 +43,6 @@ textarea#id_lyrics {
               <li>tylko opracowania wraz z akordami</li>
             </ul>
           </div>
-          {% if form.non_field_errors %}
-          <div class="alert alert-danger" role="alert">
-            {{ form.non_field_errors }}
-          </div>
-          {% endif %}
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Próg kapodastra" field=form.capo_fret %}
           </table>

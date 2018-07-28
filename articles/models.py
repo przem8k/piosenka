@@ -44,6 +44,7 @@ Main illustration for the article."""
         article.title = str(uuid.uuid4()).replace('-', '')
         article.lead_text_trevor = put_text_in_trevor('Abc')
         article.main_text_trevor = put_text_in_trevor('Abc')
+        article.full_clean()
         article.save()
         return article
 
