@@ -4,7 +4,7 @@ import logging
 from django.contrib import messages
 from django.core.exceptions import ValidationError
 from django.urls import reverse
-from django.http import HttpResponse, HttpResponsePermanentRedirect
+from django.http import HttpResponse, HttpResponsePermanentRedirect, Http404
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView
@@ -256,9 +256,14 @@ class AddArtistNote(AddContentView):
         context['artist'] = self.artist
         return context
 
-    def form_valid(self, form):
-        form.instance.artist = self.artist
-        return super().form_valid(form)
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        form.set_artist(self.artist)
+
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
 
     def get_success_url(self):
         return self.artist.get_absolute_url()
@@ -298,6 +303,9 @@ class AddSongNote(AddContentView):
 
     def dispatch(self, *args, **kwargs):
         self.song = get_object_or_404(Song, slug=self.kwargs['slug'])
+        if not self.song.reviewed:
+            raise Http404('Nie można dodać notki do piosenki zanim piosenka '
+                          'nie zostanie zatwierdzona.')
         return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
@@ -305,9 +313,14 @@ class AddSongNote(AddContentView):
         context['song'] = self.song
         return context
 
-    def form_valid(self, form):
-        form.instance.song = self.song
-        return super().form_valid(form)
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        form.set_song(self.song)
+
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
 
     def get_success_url(self):
         return self.song.get_absolute_url()

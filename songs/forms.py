@@ -48,9 +48,27 @@ class ArtistNoteForm(forms.ModelForm):
         model = models.ArtistNote
         exclude = []
 
+    def set_artist(self, artist):
+        self.artist = artist
+
+    def clean(self):
+        data = super().clean()
+        if self.artist:
+            data['artist'] = self.artist
+        return data
+
 
 class SongNoteForm(forms.ModelForm):
 
     class Meta:
         model = models.SongNote
         exclude = []
+
+    def set_song(self, song):
+        self.song = song
+
+    def clean(self):
+        data = super().clean()
+        if self.song:
+            data['song'] = self.song
+        return data

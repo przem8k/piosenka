@@ -83,7 +83,7 @@ class Artist(SlugFieldMixin):
 
 
 class ArtistNote(url_scheme.EditReviewApprove, Note):
-    artist = models.ForeignKey(Artist, editable=False, on_delete=models.CASCADE)
+    artist = models.ForeignKey(Artist, blank=True, on_delete=models.CASCADE)
 
     class Meta(ContentItem.Meta):
         pass
@@ -194,6 +194,8 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         return {'slug': self.slug}
 
     def get_add_note_url(self):
+        if not self.reviewed:
+            return None
         return urls.reverse('add_song_note', kwargs=self.get_url_params())
 
     def clean(self):
@@ -293,7 +295,7 @@ class EntityContribution(models.Model):
 
 
 class SongNote(url_scheme.EditReviewApprove, Note):
-    song = models.ForeignKey(Song, editable=False, on_delete=models.CASCADE)
+    song = models.ForeignKey(Song, blank=True, on_delete=models.CASCADE)
 
     class Meta(ContentItem.Meta):
         pass
