@@ -114,6 +114,8 @@ class InviteView(CreateView):
         ret = super().form_valid(form)
 
         send_invitation_mail(form.instance)
+        messages.add_message(self.request, messages.INFO,
+                             'Zaproszenie wysłane.')
         _action_logger.info('%s invited %s to join' %
                             (self.request.user, form.instance.email_address))
         return ret
