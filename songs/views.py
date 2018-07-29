@@ -280,6 +280,16 @@ class EditArtistNote(GetArtistNoteMixin, EditContentView):
     form_class = forms.ArtistNoteForm
     template_name = 'songs/add_edit_artist_note.html'
 
+    # TODO: deduplicate w/ above
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        form.set_artist(self.get_object().get_parent())
+
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
     def get_success_url(self):
         return self.get_object().get_parent().get_absolute_url()
 
@@ -336,6 +346,16 @@ class EditSongNote(GetSongNoteMixin, EditContentView):
     model = SongNote
     form_class = forms.SongNoteForm
     template_name = 'songs/add_edit_song_note.html'
+
+    # TODO: deduplicate w/ above
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        form.set_song(self.get_object().get_parent())
+
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
 
     def get_success_url(self):
         return self.get_object().get_parent().get_absolute_url()
