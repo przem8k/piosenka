@@ -64,7 +64,7 @@ class Command(BaseCommand):
         if self.dry_run:
             print(command)
             return
-        subprocess.run(command, check=True)
+        subprocess.check_call(command)
 
     def upload_object(self, local_path, remote_path):
         destination = 'gs://%s/%s' % (settings.GCP_STORAGE_BUCKET, remote_path)
@@ -72,7 +72,7 @@ class Command(BaseCommand):
         if self.dry_run:
             print(command)
             return
-        subprocess.run(command, check=True)
+        subprocess.check_call(command)
 
     def upload_directory(self, local_path, remote_path):
         destination = 'gs://%s/%s' % (settings.GCP_STORAGE_BUCKET, remote_path)
@@ -80,4 +80,4 @@ class Command(BaseCommand):
         if self.dry_run:
             print(command)
             return
-        subprocess.run(command, check=True)
+        subprocess.check_call(command)
