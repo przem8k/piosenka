@@ -128,7 +128,6 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     HELP_ORIGINAL_TITLE = 'Tytuł oryginalnej piosenki w przypadku tłumaczenia.'
     HELP_LINK_YOUTUBE = 'Link do nagrania piosenki w serwisie YouTube.'
     HELP_CAPO_FRET = 'Liczba od 0 do 11, 0 oznacza brak kapodastra.'
-    HELP_OLD_SLUG = 'Old slug kept to maintain redirects.'
     HELP_SLUG = 'Used in urls, has to be unique.'
     HELP_HAS_EXTRA_CHORDS = 'True iff the lyrics contain repeated chords.'
 
@@ -149,13 +148,6 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     # so that the head artist name is part of the slug.
     artist_for_slug = models.CharField(max_length=100, null=False, blank=True)
 
-    old_slug = models.SlugField(
-        max_length=100,
-        unique=True,
-        null=True,
-        blank=True,
-        editable=False,
-        help_text=HELP_OLD_SLUG)
     slug = models.SlugField(
         max_length=200,
         unique=True,
