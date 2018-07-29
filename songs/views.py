@@ -213,7 +213,6 @@ class AddSong(ContributionFormsetMixin, AddContentView):
     form_class = forms.SongForm
     template_name = 'songs/add_edit_song.html'
 
-
     def get_initial(self):
         return {'lyrics': INITIAL_LYRICS}
 

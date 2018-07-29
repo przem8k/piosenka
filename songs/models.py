@@ -147,8 +147,7 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     lyrics = models.TextField()
     # This is a bit of a hack - this field is set in the creation view
     # so that the head artist name is part of the slug.
-    artist_for_slug = models.CharField(
-        max_length=100, null=False, blank=True)
+    artist_for_slug = models.CharField(max_length=100, null=False, blank=True)
 
     old_slug = models.SlugField(
         max_length=100,
@@ -203,12 +202,14 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
             parsed_lyrics = parse_lyrics(self.lyrics)
             transpose_lyrics(parsed_lyrics, 0)
         except SyntaxError as m:
-            raise ValidationError('Niepoprawny format treści piosenki: ' + str(m))
+            raise ValidationError('Niepoprawny format treści piosenki: ' +
+                                  str(m))
         return super().clean()
 
     @overrides(SlugLogicMixin)
     def get_slug_elements(self):
-        return [self.artist_for_slug, self.title] + ([self.disambig] if self.disambig else [])
+        return [self.artist_for_slug, self.title] + ([self.disambig]
+                                                     if self.disambig else [])
 
     @overrides(url_scheme.ViewEditReviewApprove)
     def get_url_name(self):

@@ -8,6 +8,7 @@ import sys
 
 from django.core.management.base import BaseCommand
 
+
 class Command(BaseCommand):
     help = 'Returns a non-zero exit status.'
 

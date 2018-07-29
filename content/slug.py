@@ -27,10 +27,11 @@ class SlugLogicMixin(object):
             self.slug = self.get_slug()
 
         if not self.pk and self.__class__.objects.filter(slug=self.slug):
-            raise ValidationError('Materiał o takich parametrach już jest bazie. '
-                                  'Upewnij się, że nie dodajesz przypadkiem duplikatu. '
-                                  'Jeśli chodzi o piosenkę, możesz użyć wyróżnika '
-                                  'aby wskazać, że to inna piosenka.')
+            raise ValidationError(
+                'Materiał o takich parametrach już jest bazie. '
+                'Upewnij się, że nie dodajesz przypadkiem duplikatu. '
+                'Jeśli chodzi o piosenkę, możesz użyć wyróżnika '
+                'aby wskazać, że to inna piosenka.')
         return super().clean()
 
 

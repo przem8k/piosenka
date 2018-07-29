@@ -74,8 +74,7 @@ class SongNoteTest(GenericTestsMixin, TestCase):
             'title': 'dalsze losy kotka',
             'text_trevor': put_text_in_trevor('Abc')
         }
-        response = testing.get_user_client(user=user).post(
-            url, data=data)
+        response = testing.get_user_client(user=user).post(url, data=data)
         self.assertEqual(404, response.status_code)
         self.assertEqual(len(SongNote.objects.all()), 0)
 
@@ -83,10 +82,7 @@ class SongNoteTest(GenericTestsMixin, TestCase):
         author = testing.create_user()
         note = SongNote.create_for_testing(author)
 
-        data = {
-            'title': 'tytul',
-            'text_trevor': put_text_in_trevor('CDE')
-        }
+        data = {'title': 'tytul', 'text_trevor': put_text_in_trevor('CDE')}
         response = testing.get_user_client(user=author).post(
             note.get_edit_url(), data=data)
         self.assertEqual(302, response.status_code)
