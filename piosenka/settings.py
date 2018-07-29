@@ -42,14 +42,19 @@ except ImportError:
     pass
 
 try:
-    from piosenka.settings_local import S3BUCKET
+    from piosenka.settings_local import GCP_STORAGE_BUCKET
 except ImportError:
-    pass
+    GCP_STORAGE_BUCKET = ''
 
 try:
-    from piosenka.settings_local import AWS_PATH
+    from piosenka.settings_local import GSUTIL_PATH
 except ImportError:
-    AWS_PATH = 'aws'
+    GSUTIL_PATH = 'gsutil'
+
+try:
+    from piosenka.settings_local import TMP_DIR
+except ImportError:
+    TMP_DIR = '/tmp'
 
 try:
     from piosenka.settings_local import GOOGLE_MAPS_API_KEY
