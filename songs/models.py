@@ -153,7 +153,7 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         unique=True,
         null=False,
         blank=False,
-        editable=True,
+        editable=False,
         help_text=HELP_SLUG)
     has_extra_chords = models.BooleanField(
         default=False,
