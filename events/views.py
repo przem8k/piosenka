@@ -3,12 +3,13 @@ import time
 
 from django.urls import reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import RedirectView, TemplateView
 from django.views.generic.edit import FormView
 
-from events.models import Event, FbEvent, Performer
+from events.models import Event, ExternalEvent, FbEvent, Performer
 from events.models import get_events_for
-from events.forms import EventForm, AddFbEventForm
+from events.forms import EventForm, AddFbEventForm, ExternalEventForm
 from content.trevor import put_text_in_trevor
 from content.views import (AddContentView, EditContentView, ApproveContentView,
                            ReviewContentView, ViewContentView)
@@ -143,6 +144,38 @@ class AddFbEvent(LoginRequiredMixin, FormView):
         event = form.cleaned_data['event']
         event.save()
         return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('event_index')
+
+
+class AddExternalEvent(LoginRequiredMixin, CreateView):
+    model = ExternalEvent
+    form_class = ExternalEventForm
+    template_name = 'events/add_external_event.html'
+
+    def get_success_url(self):
+        return reverse('event_index')
+
+
+class EditExternalEvent(LoginRequiredMixin, UpdateView):
+    model = ExternalEvent
+    form_class = ExternalEventForm
+    template_name = 'events/add_external_event.html'
+
+    def get_initial(self):
+        return {
+            'date': self.object.starts_at.date(),
+            'time': self.object.starts_at.strftime('%H:%M')
+        }
+
+    def get_success_url(self):
+        return reverse('event_index')
+
+
+class DeleteExternalEvent(LoginRequiredMixin, DeleteView):
+    model = ExternalEvent
+    form_class = ExternalEventForm
 
     def get_success_url(self):
         return reverse('event_index')

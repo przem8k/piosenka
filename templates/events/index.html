@@ -12,15 +12,22 @@
           {% for event in events %}
           <li>
           {% include "events/event_link.html" with event=event %}
+
+          {% if user %}
+
+          <span class="pull-right">
+            <a href="{{ event.get_edit_url }}">edytuj</a>
+          </span>
+          {% endif %}
           </li>
           {% endfor %}
         </ul>
         <hr />
         <ul class="list-unstyled">
           <li>
-            <a href="{% url 'add_fb_event' %}">
+            <a href="{% url 'add_external_event' %}">
               <span class="glyphicon glyphicon-plus"></span>
-              Dodaj nowe wydarzenie (odnośnik do FB)
+              Dodaj nowe wydarzenie (odnośnik)
             </a>
           </li>
           <li>

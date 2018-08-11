@@ -1,5 +1,12 @@
 <span class="glyphicon glyphicon-calendar"></span>
+{% if event.datetime %}
 {{ event.datetime|date:"d.m.Y" }}, 
+{% endif %}
+
+{% if event.starts_at %}
+{{ event.starts_at|date:"d.m.Y" }}, 
+{% endif %}
+
 {% if event.location %}
 <b>{{ event.location }}</b>
 {% endif %}

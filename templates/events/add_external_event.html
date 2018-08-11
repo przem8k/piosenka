@@ -1,0 +1,42 @@
+{% extends "events/base.html" %}
+
+{% block title %}Dodaj odnośnik do wydarzenia{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="section">
+        <h1>Dodaj odnośnik do wydarzenia</h1>
+          <form action="{% if not object.pk %}{% url 'add_external_event' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post" novalidate>{% csrf_token %}
+          <table class="table table-condensed formtable">
+            {% include "components/forms/table_field.html" with name="Nazwa" field=form.name %}
+            {% include "components/forms/table_field.html" with name="Dzień" field=form.date %}
+            {% include "components/forms/table_field.html" with name="Godzina" field=form.time %}
+            {% include "components/forms/table_field.html" with name="Miejscowość" field=form.town %}
+            {% include "components/forms/table_field.html" with name="Strona internetowa" field=form.url %}
+          </table>
+
+          {{ form.non_field_errors }}
+          <input type="submit" value="Dodaj" style="width: 100%"/>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-4">
+      {% if object.pk %}
+      <div class="section">
+        <h1>Usuń wydarzenie</h1>
+          <div class="alert alert-warning" role="alert">
+            Usunięcie wydarzenia z kalendarza jest nieodwracalne. (ale zawsze
+            można dodać takie samo wydarzenie jeszcze raz)
+          </div>
+          <form action="{{ object.get_delete_url }}" method="post">{% csrf_token %}
+          {{ form.non_field_errors }}
+          <input type="submit" value="Usuń" style="width: 100%"/>
+        </form>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

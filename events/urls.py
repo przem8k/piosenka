@@ -21,8 +21,16 @@ urlpatterns = [
                                 views.ReviewEvent, views.ApproveEvent))),
                 ])),
         ])),
-    url(r'^dodaj/$', views.AddEvent.as_view(), name='add_event'),
+    url(r'^dodaj-pelne/$', views.AddEvent.as_view(), name='add_event'),
     url(r'^dodaj-fb/$', views.AddFbEvent.as_view(), name='add_fb_event'),
+    url(
+        r'^dodaj/$',
+        views.AddExternalEvent.as_view(),
+        name='add_external_event'),
+    url(r'^(?P<pk>\d+)/edytuj', views.EditExternalEvent.as_view(),
+        name='edit_external_event'),
+    url(r'^(?P<pk>\d+)/usun', views.DeleteExternalEvent.as_view(),
+        name='delete_external_event'),
     url(
         r'^wykonawca/(?P<slug>[-\w]+)/$',
         views.ViewPerformerRedirect.as_view(),

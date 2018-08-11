@@ -4,6 +4,7 @@ import uuid
 from django import urls
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 
 from pygeocoder import Geocoder
 from pygeolib import GeocoderError
@@ -158,6 +159,9 @@ przypadku braku danych pozostaw puste."""
     def location(self):
         return self.venue.town
 
+    def sort_order_time(self):
+        return self.datetime
+
 
 class FbEvent(models.Model):
     fb_id = models.CharField(max_length=100, unique=True)
@@ -179,10 +183,62 @@ class FbEvent(models.Model):
     def location(self):
         return self.town
 
+    def sort_order_time(self):
+        return self.datetime
+
+
+class ExternalEvent(models.Model):
+    HELP_NAME = 'Nazwa wydarzenia, w tym występujący artysta lub zespół.'
+    HELP_STARTS_AT = 'Data i godzina rozpoczęcia wydarzenia.'
+    HELP_URL = 'Strona internetowa wydarzenia (może być na Facebooku).'
+    HELP_TOWN = 'Miejscowość w którym odbywa się wydarzenie.'
+
+    name = models.CharField(max_length=100, help_text=HELP_NAME,
+                            verbose_name='Nazwa')
+    starts_at = models.DateTimeField(blank=True, null=False,
+                                     help_text=HELP_STARTS_AT,
+                                     verbose_name='Czas rozpoczęcia')
+    url = models.URLField(help_text=HELP_URL, verbose_name='Strona internetowa')
+    town = models.CharField(max_length=100, help_text=HELP_TOWN,
+                            verbose_name='Miejscowość')
+    lat = models.FloatField(blank=True, null=True)
+    lon = models.FloatField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return self.url
+
+    def get_edit_url(self):
+        return reverse(
+            'edit_external_event', kwargs=self.get_url_params())
+
+    def get_delete_url(self):
+        return reverse(
+            'delete_external_event', kwargs=self.get_url_params())
+
+    def get_url_params(self):
+        return {
+            'pk': self.pk
+        }
+
+    def external_source(self):
+        return True
+
+    def location(self):
+        return self.town
+
+    def sort_order_time(self):
+        return self.starts_at
+
 
 def get_events_for(user):
     site_events = Event.items_visible_to(user).filter(
         datetime__gte=timezone.now())
     fb_events = FbEvent.objects.filter(datetime__gte=timezone.now())
+    external_events = ExternalEvent.objects.filter(
+        starts_at__gte=timezone.now())
     return sorted(
-        list(site_events) + list(fb_events), key=lambda event: event.datetime)
+        list(site_events) + list(fb_events) + list(external_events),
+        key=lambda event: event.sort_order_time())

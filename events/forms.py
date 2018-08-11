@@ -1,6 +1,12 @@
+from datetime import datetime
+from datetime import date
+
 from django import forms
 
-from events.models import Event, FbEvent, Venue
+from pygeocoder import Geocoder
+from pygeolib import GeocoderError
+
+from events.models import Event, FbEvent, ExternalEvent, Venue
 from events import fb_import
 
 
@@ -80,3 +86,38 @@ class AddFbEventForm(forms.Form):
 
         if FbEvent.objects.filter(fb_id=cleaned_data['event'].fb_id):
             raise forms.ValidationError('To wydarzenie jest już w kalendarzu')
+
+
+class ExternalEventForm(forms.ModelForm):
+    date = forms.DateField(
+        help_text="Dzień w formacie DD.MM.RRRR, np '22.03.2014'.",
+        required=True,
+        widget=forms.widgets.DateInput(
+            attrs={'type': 'date'}))
+    time = forms.TimeField(
+        help_text="Godzina w formacie GG:MM, np. '20:00'.",
+        required=True,
+        widget=forms.TextInput(attrs={'placeholder': 'HH:MM'}))
+
+    class Meta:
+        model = ExternalEvent
+        exclude = []
+
+    def clean(self):
+        cleaned_data = super().clean()
+
+        if 'date' in cleaned_data and 'time' in cleaned_data:
+            cleaned_data['starts_at'] = datetime.combine(cleaned_data['date'],
+                                                        cleaned_data['time'])
+            if cleaned_data['starts_at'] < datetime.now():
+                raise forms.ValidationError(
+                    'Nie można dodać wydarzenia w przeszłości')
+
+        if 'town' in cleaned_data:
+            try:
+                geo = Geocoder.geocode(cleaned_data['town'])
+                cleaned_data['lat'], cleaned_data['lon'] = geo[0].coordinates
+            except GeocoderError:
+                # Geo lookup failed to recognize this address.
+                pass
+        return cleaned_data
