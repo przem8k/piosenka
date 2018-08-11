@@ -1,4 +1,4 @@
-from datetime import timedelta
+from datetime import timedelta, date
 import uuid
 
 from django import urls
@@ -165,15 +165,14 @@ przypadku braku danych pozostaw puste."""
 
 class ExternalEvent(models.Model):
     HELP_NAME = 'Nazwa wydarzenia, w tym występujący artysta lub zespół.'
-    HELP_STARTS_AT = 'Data i godzina rozpoczęcia wydarzenia.'
+    HELP_STARTS_ON = 'Data rozpoczęcia wydarzenia.'
     HELP_URL = 'Strona internetowa wydarzenia (może być na Facebooku).'
     HELP_TOWN = 'Miejscowość w którym odbywa się wydarzenie.'
 
     name = models.CharField(max_length=100, help_text=HELP_NAME,
                             verbose_name='Nazwa')
-    starts_at = models.DateTimeField(blank=True, null=False,
-                                     help_text=HELP_STARTS_AT,
-                                     verbose_name='Czas rozpoczęcia')
+    starts_on = models.DateField(help_text=HELP_STARTS_ON,
+                                     verbose_name='Dzień rozpoczęcia')
     url = models.URLField(help_text=HELP_URL, verbose_name='Strona internetowa')
     town = models.CharField(max_length=100, help_text=HELP_TOWN,
                             verbose_name='Miejscowość')
@@ -206,14 +205,14 @@ class ExternalEvent(models.Model):
         return self.town
 
     def sort_order_time(self):
-        return self.starts_at
+        return self.starts_on
 
 
 def get_events_for(user):
     site_events = Event.items_visible_to(user).filter(
         datetime__gte=timezone.now())
     external_events = ExternalEvent.objects.filter(
-        starts_at__gte=timezone.now())
+        starts_on__gte=date.today())
     return sorted(
         list(site_events) + list(external_events),
         key=lambda event: event.sort_order_time())

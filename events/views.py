@@ -150,12 +150,6 @@ class EditExternalEvent(LoginRequiredMixin, UpdateView):
     form_class = ExternalEventForm
     template_name = 'events/add_external_event.html'
 
-    def get_initial(self):
-        return {
-            'date': self.object.starts_at.date(),
-            'time': self.object.starts_at.strftime('%H:%M')
-        }
-
     def get_success_url(self):
         return reverse('event_index')
 

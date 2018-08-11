@@ -3,8 +3,8 @@
 {{ event.datetime|date:"d.m.Y" }}, 
 {% endif %}
 
-{% if event.starts_at %}
-{{ event.starts_at|date:"d.m.Y" }}, 
+{% if event.starts_on %}
+{{ event.starts_on|date:"d.m.Y" }}, 
 {% endif %}
 
 {% if event.location %}

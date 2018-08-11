@@ -61,27 +61,20 @@ class EventForm(forms.ModelForm):
 
 
 class ExternalEventForm(forms.ModelForm):
-    date = forms.DateField(
-        help_text="Dzień w formacie DD.MM.RRRR, np '22.03.2014'.",
-        required=True,
-        widget=forms.widgets.DateInput(
-            attrs={'type': 'date'}))
-    time = forms.TimeField(
-        help_text="Godzina w formacie GG:MM, np. '20:00'.",
-        required=True,
-        widget=forms.TextInput(attrs={'placeholder': 'HH:MM'}))
-
     class Meta:
         model = ExternalEvent
         exclude = []
+        widgets = {
+            'starts_on': forms.widgets.DateInput(
+             format='%Y-%m-%d',
+             attrs={'type': 'date'}),
+        }
 
     def clean(self):
         cleaned_data = super().clean()
 
-        if 'date' in cleaned_data and 'time' in cleaned_data:
-            cleaned_data['starts_at'] = datetime.combine(cleaned_data['date'],
-                                                        cleaned_data['time'])
-            if cleaned_data['starts_at'] < datetime.now():
+        if 'starts_on' in cleaned_data:
+            if cleaned_data['starts_on'] < date.today():
                 raise forms.ValidationError(
                     'Nie można dodać wydarzenia w przeszłości')
 
