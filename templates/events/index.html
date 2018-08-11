@@ -23,20 +23,11 @@
           {% endfor %}
         </ul>
         <hr />
-        <ul class="list-unstyled">
-          <li>
-            <a href="{% url 'add_external_event' %}">
-              <span class="glyphicon glyphicon-plus"></span>
-              Dodaj nowe wydarzenie (odnośnik)
-            </a>
-          </li>
-          <li>
-            <a href="{% url 'add_event' %}">
-              <span class="glyphicon glyphicon-plus"></span>
-              Dodaj nowe wydarzenie (opis na PzT)
-            </a>
-          </li>
-        </ul>
+        <div>
+          <a href="{% url 'add_external_event' %}">
+            <span class="glyphicon glyphicon-plus"></span>
+            Dodaj nowe wydarzenie (odnośnik)
+        </div>
       </div>
     </div>
     <div class="col-md-6">
