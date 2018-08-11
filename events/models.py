@@ -163,30 +163,6 @@ przypadku braku danych pozostaw puste."""
         return self.datetime
 
 
-class FbEvent(models.Model):
-    fb_id = models.CharField(max_length=100, unique=True)
-    name = models.CharField(max_length=100)
-    datetime = models.DateTimeField()
-    town = models.CharField(max_length=100, null=True)
-    lat = models.FloatField(null=True)
-    lon = models.FloatField(null=True)
-
-    def __str__(self):
-        return self.name
-
-    def get_absolute_url(self):
-        return 'https://www.facebook.com/events/%s/' % (self.fb_id)
-
-    def external_source(self):
-        return 'fb'
-
-    def location(self):
-        return self.town
-
-    def sort_order_time(self):
-        return self.datetime
-
-
 class ExternalEvent(models.Model):
     HELP_NAME = 'Nazwa wydarzenia, w tym występujący artysta lub zespół.'
     HELP_STARTS_AT = 'Data i godzina rozpoczęcia wydarzenia.'
@@ -236,9 +212,8 @@ class ExternalEvent(models.Model):
 def get_events_for(user):
     site_events = Event.items_visible_to(user).filter(
         datetime__gte=timezone.now())
-    fb_events = FbEvent.objects.filter(datetime__gte=timezone.now())
     external_events = ExternalEvent.objects.filter(
         starts_at__gte=timezone.now())
     return sorted(
-        list(site_events) + list(fb_events) + list(external_events),
+        list(site_events) + list(external_events),
         key=lambda event: event.sort_order_time())

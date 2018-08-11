@@ -66,12 +66,6 @@ try:
 except ImportError:
     GOOGLE_API_KEY = ''
 
-try:
-    from piosenka.settings_local import FB_APP_ID
-    from piosenka.settings_local import FB_APP_SECRET
-except ImportError:
-    print('FB credentials not set')
-
 USE_TZ = True
 TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'pl'

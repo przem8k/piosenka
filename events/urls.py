@@ -22,7 +22,6 @@ urlpatterns = [
                 ])),
         ])),
     url(r'^dodaj-pelne/$', views.AddEvent.as_view(), name='add_event'),
-    url(r'^dodaj-fb/$', views.AddFbEvent.as_view(), name='add_fb_event'),
     url(
         r'^dodaj/$',
         views.AddExternalEvent.as_view(),

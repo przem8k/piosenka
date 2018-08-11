@@ -1,6 +1,6 @@
 {% extends "events/base.html" %}
 
-{% block title %}Koncerty, przeglądy, festiwale - nadchodzące wydarzenia{% endblock %}
+{% block title %}Koncerty, przeglądy, festiwale – nadchodzące wydarzenia{% endblock %}
 
 {% block content %}
 <div class="container main">
@@ -45,8 +45,7 @@
         {% include "base/map.html" with map_width="458" map_height="275" map_center_lat="52.04" map_center_lng="19.28" map_zoom="5" marks=events %}
       </div>
       <div class="section">
-        <h1>Wykonawcy</h1>
-        <p>Strona śledzi występy drogich naszym sercom wykonawców. Wydarzenia powiązane z oficjalnymi profilami na Facebooku są dodawane automatycznie.</p>
+        <h1>Polecamy i pozdrawiamy</h1>
         <table class="table table-striped">
         {% for performer in performers %}
         <tr>

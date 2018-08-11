@@ -6,8 +6,7 @@ from django import forms
 from pygeocoder import Geocoder
 from pygeolib import GeocoderError
 
-from events.models import Event, FbEvent, ExternalEvent, Venue
-from events import fb_import
+from events.models import Event, ExternalEvent, Venue
 
 
 class EventForm(forms.ModelForm):
@@ -59,33 +58,6 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         exclude = ['venue', 'datetime']
-
-
-class AddFbEventForm(forms.Form):
-    fb_url = forms.URLField()
-    URL_PREFIX = 'https://www.facebook.com/events/'
-
-    def clean(self):
-        cleaned_data = super().clean()
-
-        url = cleaned_data.get('fb_url')
-        if not url:
-            return
-        url = url.strip()
-        if not url.startswith(self.URL_PREFIX):
-            raise forms.ValidationError(
-                'Link do wydarzenia musi zaczynać się od ' + self.URL_PREFIX)
-        id = url[len(self.URL_PREFIX):]
-        if id[-1] == '/':
-            id = id[0:-1]
-        try:
-            cleaned_data['event'] = fb_import.get_single_event(id)
-        except facebook.GraphAPIError:
-            raise forms.ValidationError(
-                'Wygląda na to, że FB nie słyszał o tym wydarzeniu')
-
-        if FbEvent.objects.filter(fb_id=cleaned_data['event'].fb_id):
-            raise forms.ValidationError('To wydarzenie jest już w kalendarzu')
 
 
 class ExternalEventForm(forms.ModelForm):
