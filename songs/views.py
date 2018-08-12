@@ -4,7 +4,7 @@ import logging
 from django.contrib import messages
 from django.core.exceptions import ValidationError
 from django.urls import reverse
-from django.db.models import Count
+from django.db.models import Count, OuterRef, Exists
 from django.http import HttpResponse, HttpResponsePermanentRedirect, Http404
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, TemplateView
@@ -12,6 +12,7 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from content.views import (AddContentView, EditContentView, ApproveContentView,
                            ReviewContentView, ViewContentView)
+from content.models import filter_visible_to_user
 from songs import forms
 from songs.lyrics import render_lyrics
 from songs.models import Artist, ArtistNote, Song, SongNote, EntityContribution
@@ -96,12 +97,12 @@ class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         artist = self.get_object()
-        contributions = EntityContribution.objects.filter(
-            artist=artist).select_related('song').order_by('song__title')
-        songs = [
-            contribution.song for contribution in contributions
-            if contribution.song.can_be_seen_by(self.request.user)
-        ]
+        relevant_contributions = EntityContribution.objects.filter(
+            artist=OuterRef('pk'))
+        songs = filter_visible_to_user(Song.objects.all(),
+                                       self.request.user).annotate(
+          relevant=Exists(relevant_contributions)).filter(relevant=True).annotate(
+              num_notes=Count('songnote'))
         context = super().get_context_data(**kwargs)
         context['songs'] = songs
         context['artist'] = artist
