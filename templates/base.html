@@ -26,7 +26,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top hidden-print" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top hidden-print">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -36,7 +36,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="/" title="Strona główna"><img src="{% static "images/feather_40.png" %}"/></a>
+        <a href="/" title="Strona główna"><img src="{% static "images/feather_40.png" %}" alt="Logo: białe pióro na czarnym tle"/></a>
       </div>
 
       <div class="collapse navbar-collapse navbar-ex1-collapse site-nav">
@@ -134,21 +134,21 @@
     <div class="footer hidden-print">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <center><b>© 2011-2018 Piosenka z tekstem</b></center>
+          <div class="col-md-12 pzt-footer-content">
+            © 2011-2018 Piosenka z tekstem
           </div>
         </div>
       </div>
     </div>
 
     <!-- Third-party scripts -->
-    <script type="text/javascript" src="{% static "third_party/jquery/jquery-2.1.1.js" %}" charset="utf-8"></script>
-    <script type="text/javascript" src="{% static "third_party/typeahead/typeahead-0.10.4.js" %}" charset="utf-8"></script>
-    <script type="text/javascript" src="{% static "third_party/bootstrap/js/bootstrap.js" %}" charset="utf-8"></script>
-    <script type="text/javascript" src="{% static "third_party/luminous/luminous.min.js" %}" charset="utf-8"></script>
-    <script type="text/javascript" src="{% static "third_party/sirtrevor/js/underscore.js" %}" charset="utf-8"></script>
-    <script type="text/javascript" src="{% static "third_party/sirtrevor/js/eventable.js" %}" charset="utf-8"></script>
-    <script type="text/javascript" src="{% static "third_party/sirtrevor/js/sir-trevor.js" %}" charset="utf-8"></script>
+    <script src="{% static "third_party/jquery/jquery-2.1.1.js" %}"></script>
+    <script src="{% static "third_party/typeahead/typeahead-0.10.4.js" %}"></script>
+    <script src="{% static "third_party/bootstrap/js/bootstrap.js" %}"></script>
+    <script src="{% static "third_party/luminous/luminous.min.js" %}"></script>
+    <script src="{% static "third_party/sirtrevor/js/underscore.js" %}"></script>
+    <script src="{% static "third_party/sirtrevor/js/eventable.js" %}"></script>
+    <script src="{% static "third_party/sirtrevor/js/sir-trevor.js" %}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
     <!-- Webpack-managed js. -->

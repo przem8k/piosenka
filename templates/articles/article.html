@@ -16,7 +16,7 @@
         <div class="content">
           <div class="thumbnail-host">
             {% if article.cover_image %}
-            <img src="{{article.cover_image|thumbnail_url:'cover'}}" width="100%" class="img-responsive" />
+            <img src="{{article.cover_image|thumbnail_url:'cover'}}" class="img-responsive pzt-max-width" />
             <div class="thumbnail-caption">
               {{ article.cover_credits_html|safe }}
             </div>

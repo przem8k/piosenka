@@ -3,7 +3,7 @@
     {% include "components/content_status_span.html" with item=annotation %}
   </h1>
   {% if annotation.image %}
-  {% include "components/thumbnail.html" with img=annotation.image type="imagethumb" url=annotation.song.get_absolute_url %}
+  {% include "components/thumbnail.html" with img=annotation.image type="imagethumb" url=annotation.song.get_absolute_url alt="Ilustracja notki" %}
   {% endif %}
   {{ annotation.text_html|safe }}
   <p style="text-align: right;"><a href="{{ annotation.song.get_absolute_url }}">{{ annotation.song }}</a></p>

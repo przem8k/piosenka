@@ -2,12 +2,12 @@
 <div class="section">
   <div class="thumbnail-host">
     <a href="{{article.get_absolute_url}}">
-      <img src="{{ article.cover_image|thumbnail_url:'cover'}}" width="100%" class="img-responsive" />
+      <img src="{{ article.cover_image|thumbnail_url:'cover'}}" alt="Ilustracja artykułu {{article}}" class="img-responsive pzt-max-width" />
       <div class="thumbnail-caption">
         <p>{{article.title}}
           {% include "components/content_status_span.html" with item=article %}
         </p>
-        <p>{{article.lead_text_html|safe}}</p>
+        {{article.lead_text_html|safe}}
       </div>
     </a>
   </div>
