@@ -37,6 +37,6 @@ class SiteUrlTest(TestCase):
         self.assertNotContains(response, reverse('hello'), html=False)
         self.assertContains(response, reverse('goodbye'), html=False)
         self.assertContains(response, reverse('add_article'), html=False)
-        self.assertContains(response, reverse('add_event'), html=False)
+        self.assertContains(response, reverse('add_external_event'), html=False)
         self.assertContains(response, reverse('add_post'), html=False)
         self.assertContains(response, reverse('add_song'), html=False)

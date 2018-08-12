@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 from articles.models import Article
 from blog.models import Post
-from events.models import Event, get_events_for
+from events.models import get_events_for
 from songs.models import ArtistNote, SongNote, Song
 
 

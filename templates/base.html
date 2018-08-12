@@ -68,7 +68,7 @@
             <li><a href="{% url 'add_article' %}">Dodaj artykuł</a></li>
             <li><a href="{% url 'add_song' %}">Dodaj piosenkę</a></li>
             <li><a href="{% url 'add_post' %}">Dodaj post</a></li>
-            <li><a href="{% url 'add_event' %}">Dodaj wydarzenie</a></li>
+            <li><a href="{% url 'add_external_event' %}">Dodaj wydarzenie</a></li>
             {% if perms.piosenka.invite %}
             <li><a href="{% url 'invite' %}">Zaproś do PzT</a></li>
             {% endif %}

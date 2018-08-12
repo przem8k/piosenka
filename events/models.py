@@ -46,123 +46,6 @@ class Performer(SlugFieldMixin, models.Model):
         return [self.name]
 
 
-class Venue(SlugFieldMixin, models.Model):
-    name = models.CharField(max_length=100)
-    town = models.CharField(max_length=100)
-    street = models.CharField(max_length=100)
-
-    lat = models.FloatField(null=True, editable=False, help_text='Latitude.')
-    lon = models.FloatField(null=True, editable=False, help_text='Longtitude.')
-
-    @staticmethod
-    def create_for_testing():
-        venue = Venue()
-        venue.name = str(uuid.uuid4()).replace('-', '')
-        venue.town = 'New York'
-        venue.street = '233 Madison Avenue'
-        venue.lat = 0.0
-        venue.lon = 0.0
-        venue.full_clean()
-        venue.save()
-        return venue
-
-    class Meta:
-        ordering = ['town', 'name']
-
-    def __str__(self):
-        return '%s - %s' % (self.town, self.name)
-
-    def clean(self):
-        super().clean()
-        address = str(self.street) + ', ' + str(self.town)
-        try:
-            geo = Geocoder.geocode(address)
-            self.lat, self.lon = geo[0].coordinates
-        except GeocoderError:
-            # Geo lookup failed to recognize this address.
-            pass
-
-    def get_absolute_url(self):
-        return urls.reverse('venue_detail', kwargs={'slug': self.slug})
-
-    @overrides(SlugFieldMixin)
-    def get_slug_elements(self):
-        assert self.name
-        assert self.town
-        return [self.name, self.town]
-
-
-class Event(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
-    HELP_NAME = """Nazwa wydarzenia, np. 'Koncert pieśni Jacka Kaczmarskiego'
-lub 'V Festiwal Piosenki Wymyślnej w Katowicach'."""
-    HELP_PRICE = """Np. 20zł, wstęp wolny. W przypadku braku danych pozostaw
-puste."""
-    HELP_WEBSITE = """Strona internetowa wydarzenia, źródło informacji. W
-przypadku braku danych pozostaw puste."""
-
-    name = models.CharField(max_length=100, help_text=HELP_NAME)
-    datetime = models.DateTimeField()
-    venue = models.ForeignKey(Venue, on_delete=models.CASCADE)
-    description_trevor = models.TextField()
-    price = models.CharField(
-        max_length=100, null=True, blank=True, help_text=HELP_PRICE)
-    website = models.URLField(null=True, blank=True, help_text=HELP_WEBSITE)
-
-    slug = models.SlugField(
-        max_length=100, unique_for_date='datetime', editable=False)
-    description_html = models.TextField(editable=False)
-
-    @staticmethod
-    def create_for_testing(author, venue=None):
-        event = Event()
-        event.author = author
-        event.name = str(uuid.uuid4()).replace('-', '')
-        event.description_trevor = put_text_in_trevor('Abc')
-        event.datetime = timezone.now() + timedelta(days=365)
-        event.venue = venue if venue else Venue.create_for_testing()
-        event.full_clean()
-        event.save()
-        return event
-
-    class Meta(ContentItem.Meta):
-        ordering = ['datetime']
-
-    def __str__(self):
-        return self.name
-
-    def save(self, *args, **kwargs):
-        self.description_html = render_trevor(self.description_trevor)
-        super().save(*args, **kwargs)
-
-    def get_url_params(self):
-        return {
-            'year': self.datetime.strftime('%Y'),
-            'month': self.datetime.strftime('%m'),
-            'day': self.datetime.strftime('%d'),
-            'slug': self.slug
-        }
-
-    @overrides(SlugLogicMixin)
-    def get_slug_elements(self):
-        return [self.name, self.venue.town]
-
-    @overrides(url_scheme.ViewEditReviewApprove)
-    def get_url_name(self):
-        return 'event'
-
-    def lat(self):
-        return self.venue.lat
-
-    def lon(self):
-        return self.venue.lon
-
-    def location(self):
-        return self.venue.town
-
-    def sort_order_time(self):
-        return self.datetime
-
-
 class ExternalEvent(models.Model):
     HELP_NAME = 'Nazwa wydarzenia, w tym występujący artysta lub zespół.'
     HELP_STARTS_ON = 'Data rozpoczęcia wydarzenia.'
@@ -204,15 +87,10 @@ class ExternalEvent(models.Model):
     def location(self):
         return self.town
 
-    def sort_order_time(self):
-        return self.starts_on
-
 
 def get_events_for(user):
-    site_events = Event.items_visible_to(user).filter(
-        datetime__gte=timezone.now())
     external_events = ExternalEvent.objects.filter(
         starts_on__gte=date.today())
     return sorted(
-        list(site_events) + list(external_events),
-        key=lambda event: event.sort_order_time())
+        list(external_events),
+        key=lambda event: event.starts_on)
