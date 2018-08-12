@@ -1,7 +1,6 @@
 from datetime import date
 
 from django import forms
-
 from pygeocoder import Geocoder
 from pygeolib import GeocoderError
 

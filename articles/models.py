@@ -1,17 +1,16 @@
 import uuid
 
 from django.db import models
-
 from easy_thumbnails.signal_handlers import generate_aliases
 from easy_thumbnails.signals import saved_file
 
+from articles.mentions import find_songs_mentioned_in_article
 from base.overrides import overrides
 from content import url_scheme
-from content.trevor import render_trevor, put_text_in_trevor
 from content.models import ContentItem
 from content.slug import SlugFieldMixin
+from content.trevor import put_text_in_trevor, render_trevor
 from songs.models import Song
-from articles.mentions import find_songs_mentioned_in_article
 
 saved_file.connect(generate_aliases)
 

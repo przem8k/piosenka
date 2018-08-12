@@ -1,19 +1,18 @@
-from datetime import timedelta, date
 import uuid
+from datetime import date, timedelta
 
 from django import urls
 from django.db import models
-from django.utils import timezone
 from django.urls import reverse
-
+from django.utils import timezone
 from pygeocoder import Geocoder
 from pygeolib import GeocoderError
 
 from base.overrides import overrides
 from content import url_scheme
 from content.models import ContentItem
-from content.slug import SlugLogicMixin, SlugFieldMixin
-from content.trevor import render_trevor, put_text_in_trevor
+from content.slug import SlugFieldMixin, SlugLogicMixin
+from content.trevor import put_text_in_trevor, render_trevor
 
 
 class Performer(SlugFieldMixin, models.Model):

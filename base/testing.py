@@ -1,6 +1,6 @@
 import uuid
 
-from django.contrib.auth.models import User, Permission
+from django.contrib.auth.models import Permission, User
 from django.test import Client
 
 _PASS = 'secret'

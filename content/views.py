@@ -7,8 +7,7 @@ from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, RedirectView
 from django.views.generic.edit import CreateView, UpdateView
 
-from piosenka.mail import send_item_approved_mail
-from piosenka.mail import send_new_to_review_mails
+from piosenka.mail import send_item_approved_mail, send_new_to_review_mails
 
 _action_logger = logging.getLogger('actions')
 

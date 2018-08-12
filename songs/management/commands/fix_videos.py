@@ -3,12 +3,11 @@ Command that validates all yt videos referenced by songs and removes the
 obsoletes.
 """
 
-from django.core.management.base import BaseCommand
-from django.conf import settings
-
 from apiclient.discovery import build
+from django.conf import settings
+from django.core.management.base import BaseCommand
 
-from songs.models import Song, EntityContribution
+from songs.models import EntityContribution, Song
 
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"

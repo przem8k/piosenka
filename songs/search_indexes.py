@@ -1,6 +1,7 @@
 import datetime
-from haystack.indexes import *
+
 from haystack import site
+from haystack.indexes import *
 from songs.models import Song
 
 

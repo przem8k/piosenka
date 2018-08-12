@@ -1,7 +1,7 @@
-from django.core.mail import EmailMessage
 from django.conf import settings
-from django.template.loader import get_template
 from django.contrib.auth.models import User
+from django.core.mail import EmailMessage
+from django.template.loader import get_template
 
 
 def send_new_to_review_mails(item):

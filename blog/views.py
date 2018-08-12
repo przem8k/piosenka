@@ -1,5 +1,5 @@
-from datetime import datetime
 import time
+from datetime import datetime
 
 from django.http import HttpResponsePermanentRedirect
 from django.shortcuts import get_object_or_404
@@ -7,7 +7,7 @@ from django.views.generic import TemplateView
 
 from blog.forms import PostForm
 from blog.models import Post
-from content.views import (AddContentView, EditContentView, ApproveContentView,
+from content.views import (AddContentView, ApproveContentView, EditContentView,
                            ReviewContentView, ViewContentView)
 
 

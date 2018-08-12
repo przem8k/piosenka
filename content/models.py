@@ -3,9 +3,9 @@ from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.utils import timezone
 
+import content.trevor as trevor
 from base.overrides import overrides
 from content.slug import SlugFieldMixin
-import content.trevor as trevor
 
 
 def get_default_author():

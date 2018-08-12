@@ -1,13 +1,13 @@
 import uuid
 
-from django.urls import reverse_lazy
 from django.db import models
+from django.urls import reverse_lazy
 
 from base.overrides import overrides
 from content import url_scheme
 from content.models import ContentItem
 from content.slug import SlugFieldMixin
-from content.trevor import render_trevor, put_text_in_trevor
+from content.trevor import put_text_in_trevor, render_trevor
 
 
 class Post(SlugFieldMixin, url_scheme.ViewEditReviewApprove, ContentItem):

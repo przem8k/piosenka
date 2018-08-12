@@ -1,10 +1,10 @@
-from django.urls import reverse
 from django.test import TestCase
+from django.urls import reverse
 
+from articles.models import Article
 from base import testing
 from base.overrides import overrides
 from content.generic_tests import GenericTestsMixin
-from articles.models import Article
 
 
 class ArticleTest(GenericTestsMixin, TestCase):

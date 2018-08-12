@@ -3,17 +3,15 @@ import uuid
 from django import urls
 from django.core.exceptions import ValidationError
 from django.db import models
-
-from easy_thumbnails.signals import saved_file
 from easy_thumbnails.signal_handlers import generate_aliases
+from easy_thumbnails.signals import saved_file
 
 from base.overrides import overrides
 from content import url_scheme
 from content.models import ContentItem, Note
-from content.slug import SlugLogicMixin, SlugFieldMixin
-from content.trevor import render_trevor, put_text_in_trevor
-from songs.lyrics import contain_extra_chords
-from songs.lyrics import parse_lyrics
+from content.slug import SlugFieldMixin, SlugLogicMixin
+from content.trevor import put_text_in_trevor, render_trevor
+from songs.lyrics import contain_extra_chords, parse_lyrics
 from songs.transpose import transpose_lyrics
 
 saved_file.connect(generate_aliases)

@@ -3,20 +3,20 @@ import logging
 
 from django.contrib import messages
 from django.core.exceptions import ValidationError
-from django.urls import reverse
-from django.db.models import Count, OuterRef, Exists
-from django.http import HttpResponse, HttpResponsePermanentRedirect, Http404
+from django.db.models import Count, Exists, OuterRef
+from django.http import Http404, HttpResponse, HttpResponsePermanentRedirect
 from django.shortcuts import get_object_or_404
+from django.urls import reverse
 from django.views.generic import DetailView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView
 
-from content.views import (AddContentView, EditContentView, ApproveContentView,
-                           ReviewContentView, ViewContentView)
+from articles.models import SongMention
 from content.models import filter_visible_to_user
+from content.views import (AddContentView, ApproveContentView, EditContentView,
+                           ReviewContentView, ViewContentView)
 from songs import forms
 from songs.lyrics import render_lyrics
-from songs.models import Artist, ArtistNote, Song, SongNote, EntityContribution
-from articles.models import SongMention
+from songs.models import Artist, ArtistNote, EntityContribution, Song, SongNote
 
 _action_logger = logging.getLogger('actions')
 

@@ -1,6 +1,6 @@
 from articles.models import Article
 from blog.models import Post
-from songs.models import ArtistNote, SongNote, Song
+from songs.models import ArtistNote, Song, SongNote
 
 
 def to_review(request):

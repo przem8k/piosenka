@@ -1,6 +1,6 @@
-from songs.models import (Artist, ArtistNote, Song, SongNote,
-                          EntityContribution)
 from django.contrib import admin
+
+from songs.models import Artist, ArtistNote, EntityContribution, Song, SongNote
 
 
 class EntityContributionInline(admin.TabularInline):

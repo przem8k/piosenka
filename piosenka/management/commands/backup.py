@@ -2,15 +2,15 @@
  Command for backing up the db and site media.
 """
 
-from io import StringIO
 import os
-import sys
 import subprocess
+import sys
 import time
+from io import StringIO
 
 from django.conf import settings
-from django.core.management.base import BaseCommand
 from django.core.management import call_command
+from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):

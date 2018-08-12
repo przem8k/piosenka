@@ -1,5 +1,5 @@
-from django.urls import reverse
 from django.test import TestCase
+from django.urls import reverse
 
 from base import testing
 from songs.models import Artist, EntityContribution, Song

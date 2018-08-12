@@ -1,22 +1,22 @@
-from datetime import datetime
 import logging
+from datetime import datetime
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
-from django.contrib.auth.models import User, Group
-from django.contrib.auth.views import (login, logout, PasswordResetView,
-                                       PasswordResetConfirmView)
-from django.http import HttpResponseRedirect, Http404
-from django.urls import reverse_lazy, reverse
+from django.contrib.auth.models import Group, User
+from django.contrib.auth.views import (PasswordResetConfirmView,
+                                       PasswordResetView, login, logout)
+from django.http import Http404, HttpResponseRedirect
+from django.urls import reverse, reverse_lazy
 from django.utils import timezone
 from django.utils.decorators import method_decorator
-from django.views.generic import View, TemplateView
-from django.views.generic.edit import FormView, CreateView
+from django.views.generic import TemplateView, View
+from django.views.generic.edit import CreateView, FormView
 
 from piosenka.forms import InvitationForm, JoinForm
-from piosenka.models import Invitation
 from piosenka.mail import send_invitation_mail
+from piosenka.models import Invitation
 
 _action_logger = logging.getLogger('actions')
 

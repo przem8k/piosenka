@@ -1,12 +1,12 @@
 from datetime import datetime
 
-from django.views.generic import TemplateView
 from django.contrib.auth.models import User
+from django.views.generic import TemplateView
 
 from articles.models import Article
 from blog.models import Post
 from events.models import get_events_for
-from songs.models import ArtistNote, SongNote, Song
+from songs.models import ArtistNote, Song, SongNote
 
 
 class SiteIndex(TemplateView):

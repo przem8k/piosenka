@@ -1,10 +1,10 @@
-from django.urls import reverse
 from django.test import TestCase
+from django.urls import reverse
 
 from base import testing
 from base.overrides import overrides
 from content.generic_tests import GenericTestsMixin
-from songs.models import Artist, Song, EntityContribution
+from songs.models import Artist, EntityContribution, Song
 
 
 class SongTest(GenericTestsMixin, TestCase):

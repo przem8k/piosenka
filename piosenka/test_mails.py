@@ -3,8 +3,7 @@ from django.test import TestCase
 
 from articles.models import Article
 from base import testing
-from piosenka.mail import send_new_to_review_mails
-from piosenka.mail import send_item_approved_mail
+from piosenka.mail import send_item_approved_mail, send_new_to_review_mails
 
 
 class MailTest(TestCase):

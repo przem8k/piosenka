@@ -2,9 +2,9 @@ from django.test import TestCase
 
 from base import testing
 from base.overrides import overrides
-from content.trevor import put_text_in_trevor
 from content.generic_tests import GenericTestsMixin
-from songs.models import SongNote, Artist, Song
+from content.trevor import put_text_in_trevor
+from songs.models import Artist, Song, SongNote
 
 
 class SongNoteTest(GenericTestsMixin, TestCase):

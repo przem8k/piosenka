@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from articles.forms import ArticleForm
 from articles.models import Article
 from content.trevor import put_text_in_trevor
-from content.views import (AddContentView, EditContentView, ApproveContentView,
+from content.views import (AddContentView, ApproveContentView, EditContentView,
                            ReviewContentView, ViewContentView)
 
 
