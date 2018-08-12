@@ -70,6 +70,7 @@ class Note(SlugFieldMixin, ContentItem):
     HELP_IMAGE = 'Ilustracja.'
     HELP_IMAGE_URL = 'Źródło zdjęcia (adres www).'
     HELP_IMAGE_AUTHOR = 'Źródło zdjęcia (autor).'
+    HELP_IMAGE_LICENSE = 'Źródło zdjęcia (licencja).'
     HELP_TEXT = 'Treść adnotacji.'
     HELP_SOURCE_URL = 'Źródło (adres www).'
     HELP_SOURCE_REF = 'Źródło (nazwa i autor publikacji).'
@@ -80,6 +81,8 @@ class Note(SlugFieldMixin, ContentItem):
     image_url = models.URLField(null=True, blank=True, help_text=HELP_IMAGE_URL)
     image_author = models.CharField(
         null=True, blank=True, max_length=50, help_text=HELP_IMAGE_AUTHOR)
+    image_license = models.CharField(
+        null=True, blank=True, max_length=50, help_text=HELP_IMAGE_LICENSE)
     text_trevor = models.TextField(help_text=HELP_TEXT)
     text_html = models.TextField(editable=False)
     url1 = models.URLField(null=True, blank=True, help_text=HELP_SOURCE_URL)

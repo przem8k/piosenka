@@ -15,13 +15,14 @@
     {% if note.url2 %}<li><span class="glyphicon glyphicon-link"></span> {% include "components/external_link.html" with url=note.url2 %}</a></li>{% endif %}
     {% if note.ref1 %}<li><span class="glyphicon glyphicon-book"></span> {{ note.ref1 }}</li>{% endif %}
     {% if note.ref2 %}<li><span class="glyphicon glyphicon-book"></span> {{ note.ref2 }}</li>{% endif %}
-    {% if note.image_author or note.image_url %}
+    {% if note.image_author or note.image_url or note.image_license %}
     <li>
       <span class="glyphicon glyphicon-camera"></span>
-      {% if note.image_author %} {{note.image_author}}{% endif %}{% if note.image_author and note.image_url %}, {% endif %}
+      {% if note.image_author %} {{note.image_author}}{% endif %}{% if note.image_url or note.image_license %}, {% endif %}
       {% if note.image_url %} 
-      {% include "components/external_link.html" with url=note.image_url %}
+      {% include "components/external_link.html" with url=note.image_url %}{% if note.image_license %},{% endif %}
       {% endif %}
+      {% if note.image_license %} {{ note.image_license }} {% endif %}
     </li>
     {% endif %}
   </ul>
