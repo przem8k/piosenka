@@ -10,21 +10,22 @@
   {{ note.text_html|safe }}
   {% if note.url1 or note.url2 or note.ref1 or note.ref2 or note.image_author or note.image_url %}
   <ul class="list-unstyled" style="font-size: small;">
+    <li><b>źródła:</b></li>
+    {% if note.url1 %}<li><span class="glyphicon glyphicon-link"></span> <a href="{{ note.url1 }}">{{ note.url1|truncatechars:42 }}</a></li>{% endif %}
+    {% if note.url2 %}<li><span class="glyphicon glyphicon-link"></span> <a href="{{ note.url2 }}">{{ note.url2|truncatechars:42 }}</a></li>{% endif %}
+    {% if note.ref1 %}<li><span class="glyphicon glyphicon-book"></span> {{ note.ref1 }}</li>{% endif %}
+    {% if note.ref2 %}<li><span class="glyphicon glyphicon-book"></span> {{ note.ref2 }}</li>{% endif %}
     {% if note.image_author or note.image_url %}
     <li>
-      <b>zdjęcie</b>:
+      <span class="glyphicon glyphicon-camera"></span>
       {% if note.image_author %} {{note.image_author}}{% endif %}{% if note.image_author and note.image_url %}, {% endif %}
       {% if note.image_url %} 
-        <a href="{{ note.image_url }}" target="_blank">{{ note.image_url }}
+      <a href="{{ note.image_url }}" target="_blank">{{ note.image_url|truncatechars:42 }}
           <span class="glyphicon glyphicon-new-window"></span>
         </a>
       {% endif %}
     </li>
     {% endif %}
-    {% if note.url1 %}<li><b>źródło</b>: <a href="{{ note.url1 }}">{{ note.url1|truncatechars:50 }}</a></li>{% endif %}
-    {% if note.url2 %}<li><b>źródło</b>: <a href="{{ note.url2 }}">{{ note.url2|truncatechars:50 }}</a></li>{% endif %}
-    {% if note.ref1 %}<li><b>źródło</b>: {{ note.ref1 }}</li>{% endif %}
-    {% if note.ref2 %}<li><b>źródło</b>: {{ note.ref2 }}</li>{% endif %}
   </ul>
   {% endif %}
   {% include "components/content_foot.html" with action="Dodane" item=note %}
