@@ -41,6 +41,22 @@
       </div>
     </div>
     <div class="col-md-6">
+      {% if form.date %}
+      <div class="section">
+        <h1>Data wydarzenia historycznego</h1>
+        <div class="alert alert-info" role="alert">
+          <p>Jeśli piosenka i dodawana adnotacja odnoszą się do wydarzenia
+            historycznego (i tylko w tym wypadku), wskaż datę wydarzenia i
+            opis w formie równoważnika zdania – małą literą i bez kropki na
+            końcu (np. "konferencja w Jałcie" albo "wybuch Powstania
+            Warszawskiego").</p>
+        </div>
+        <table class="table table-condensed formtable">
+        {% include "components/forms/table_field.html" with name="Data" field=form.date %}
+        {% include "components/forms/table_field.html" with name="Opis" field=form.date_description %}
+        </table>
+      </div>
+      {% endif %}
       <div class="section">
         <h1>Źródła</h1>
         <table class="table table-condensed formtable">

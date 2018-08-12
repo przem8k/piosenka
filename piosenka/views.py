@@ -1,10 +1,12 @@
 from datetime import datetime
+from datetime import date
 
 from django.contrib.auth.models import User
 from django.views.generic import TemplateView
 
 from articles.models import Article
 from blog.models import Post
+from content.models import filter_visible_to_user
 from events.models import get_events_for
 from songs.models import ArtistNote, Song, SongNote
 
@@ -15,6 +17,15 @@ class SiteIndex(TemplateView):
     SONG_COUNT = 8
     ANNOTATION_COUNT = 8
 
+    def get_song_of_the_day(self):
+        today = date.today()
+        return filter_visible_to_user(SongNote.objects.all(),
+                                       self.request.user).filter(
+                    date__isnull=False).exclude(
+                    date_description='').exclude(image='').filter(date__day=today.day,
+                                                                  date__month=today.month).first()
+
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['article'] = (Article.items_visible_to(self.request.user)
@@ -24,6 +35,7 @@ class SiteIndex(TemplateView):
                             .order_by('-pub_date')[:SiteIndex.POST_COUNT])
         context['songs'] = (Song.items_visible_to(self.request.user)
                             .order_by('-pub_date')[:SiteIndex.SONG_COUNT])
+        context['song_of_the_day'] = self.get_song_of_the_day()
         context['annotation'] = (SongNote.items_visible_to(self.request.user)
                                  .order_by('-pub_date').first())
         song_notes = SongNote.items_visible_to(self.request.user).order_by(

@@ -8,9 +8,8 @@
   {% include "components/thumbnail.html" with img=note.image type="imagethumb" alt="Ilustracja notki" %}
   {% endif %}
   {{ note.text_html|safe }}
-  {% if note.url1 or note.url2 or note.ref1 or note.ref2 or note.image_author or note.image_url %}
   <ul class="list-unstyled" style="font-size: small;">
-    <li><b>źródła:</b></li>
+    {% if note.date %}<li>{% include 'components/icon.html' with type='globe' %} {{ note.date|date:"d.m.Y" }} - {{ note.date_description }}</li>{% endif %}
     {% if note.url1 %}<li><span class="glyphicon glyphicon-link"></span> {% include "components/external_link.html" with url=note.url1 %}</li>{% endif %}
     {% if note.url2 %}<li><span class="glyphicon glyphicon-link"></span> {% include "components/external_link.html" with url=note.url2 %}</a></li>{% endif %}
     {% if note.ref1 %}<li><span class="glyphicon glyphicon-book"></span> {{ note.ref1 }}</li>{% endif %}
@@ -26,6 +25,5 @@
     </li>
     {% endif %}
   </ul>
-  {% endif %}
   {% include "components/content_foot.html" with action="Dodane" item=note %}
 </div>

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load thumbnail %}
+{% load list_partition %}
+
+{% block title %}Kalendarium{% endblock title %}
+{% block description %}Piosenki inspirowane wydarzeniami historycznymi.{% endblock description %}
+
+{% block header %}
+<h2>Kalendarium</h2>
+<p>Historia w piosence z tekstem.</p>
+{% endblock header %}
+
+{% block quote %}
+<blockquote class="lyrics-quote">Zbyt stary żeby nosić broń i walczyć jak inni<br />
+  wyznaczono mi z łaski poślednią rolę kronikarza<br />
+  zapisuję – nie wiadomo dla kogo – dzieje oblężenia
+  <small>Zbigniew Herbert – <a href="https://www.piosenkaztekstem.pl/opracowanie/przemyslaw-gintrowski-raport-z-oblezonego-miasta/">Raport z oblężonego miasta</a></small>
+</blockquote>
+{% endblock quote %}
+
+{% block content %}
+<div class="container">
+  {% for row in notes|columns_horizontal:"3" %}
+  <div class="row">
+    {% for note in row %}
+    <div class="col-md-4">
+      <div class="section">
+        <h1>{{ note.date }} – {{ note.date_description}}</h1>
+        {% include "components/thumbnail.html" with img=note.image url=note.song.get_absolute_url type="imagethumb" label=note.song alt="Ilustracja do piosenki {{note.song}}" %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

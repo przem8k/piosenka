@@ -5,6 +5,16 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
+      {% if song_of_the_day %}
+      {% with note=song_of_the_day %}
+      <div class="section">
+        <h1>Piosenka dnia</h1>
+        {% include "components/thumbnail.html" with img=note.image url=note.song.get_absolute_url type="imagethumb" label=note.song alt="Ilustracja do piosenki {{note.song}}" %}
+        <p>{{ note.date }} – {{ note.date_description}}</p>
+        <p>Zobacz pełne <a href="{% url 'calendar' %}">Kalendarium</a>.</p>
+      </div>
+      {% endwith %}
+      {% endif %}
       {% include "frontpage/new_posts.html" %}
       <div class="section">
         <h1>Ostatnie komentarze</h1>

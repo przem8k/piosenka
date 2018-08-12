@@ -63,6 +63,10 @@ class SongNoteForm(forms.ModelForm):
     class Meta:
         model = models.SongNote
         exclude = []
+        widgets = {
+            'date':
+            forms.widgets.DateInput(format='%Y-%m-%d', attrs={'type': 'date'}),
+        }
 
     def set_song(self, song):
         self.song = song

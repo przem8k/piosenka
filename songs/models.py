@@ -294,7 +294,12 @@ class EntityContribution(models.Model):
 
 
 class SongNote(url_scheme.EditReviewApprove, Note):
+    HELP_DATE = 'Data wydarzenia, do którego odnosi się notka'
+    HELP_DATE_DESCRIPTION = 'Opis wydarzenia, do którego odnosi się notka'
     song = models.ForeignKey(Song, blank=True, on_delete=models.CASCADE)
+    date = models.DateField(null=True, blank=True, help_text=HELP_DATE)
+    date_description = models.CharField(null=True, blank=True, max_length=100,
+                                        help_text=HELP_DATE_DESCRIPTION)
 
     class Meta(ContentItem.Meta):
         pass
