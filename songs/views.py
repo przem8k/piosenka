@@ -73,14 +73,11 @@ class IndexView(SongbookMenuMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        hero_artists = Artist.objects.filter(cover_note__isnull=False,
-                                             cover_note__reviewed=True
-                                             ).exclude(
-                                             cover_note__image=''
-        ).annotate(
-            num_songs=Count('entitycontribution')
-        ).order_by(
-                '-num_songs')[:IndexView.HERO_ARTIST_COUNT]
+        hero_artists = Artist.objects.filter(
+            cover_note__isnull=False,
+            cover_note__reviewed=True).exclude(cover_note__image='').annotate(
+                num_songs=Count('entitycontribution')).order_by(
+                    '-num_songs')[:IndexView.HERO_ARTIST_COUNT]
         context['hero_artists'] = hero_artists
         return context
 
