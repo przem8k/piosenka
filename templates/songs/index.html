@@ -1,10 +1,38 @@
 {% extends "songs/base.html" %}
 
+{% load thumbnail %}
+{% load list_partition %}
+
 {% block title %}Piosenki{% endblock title %}
 {% block description %}Śpiewnik, opracowania i interpretacje piosenek.{% endblock description %}
 
 {% block content %}
 <div class="container">
+  {% for row in hero_artists|columns_horizontal:"3" %}
+  <div class="row">
+    {% for artist in row %}
+    <div class="col-md-4">
+      <div class="section">
+        {% include "components/thumbnail.html" with img=artist.cover_image url=artist.get_absolute_url type="imagethumb" alt="Ilustracja notki" %}
+        <a href="{{artist.get_absolute_url}}">
+          <div class="thumbnail-host">
+            <img src="{{artist.cover_image|thumbnail_url:'imagethumb'}}" class="img-responsive pzt-max-width" />
+            <div class="thumbnail-caption">
+              <h1>{{artist}}</h1>
+            </div>
+          </div>
+        </a>
+        {% if artist.num_songs == 1 %} <b>1</b> piosenka
+        {% elif artist.num_songs < 5 %} <b>{{ artist.num_songs }}</b> piosenki
+        {% else %}<b>{{ artist.num_songs }}</b> piosenek
+        {% endif %}
+        {{ artist.cover_image  }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+
   {% include "songs/menu.html" %}
 </div>
 {% endblock content %}
