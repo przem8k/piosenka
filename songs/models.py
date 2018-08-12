@@ -53,6 +53,7 @@ class Artist(SlugFieldMixin):
     cover_note = models.ForeignKey(
         'ArtistNote',
         null=True,
+        blank=True,
         on_delete=models.SET_NULL,
         related_name='artists_covered',
         help_text=HELP_COVER_NOTE)
