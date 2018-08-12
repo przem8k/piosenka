@@ -55,6 +55,16 @@ działają:
 
 > python3 manage test
 
+### Automatyczne poprawki
+
+```
+git ls-files | grep .py | grep -v migrations | grep -v manage.py | grep -v static/images | xargs yapf -i
+```
+
+```
+git ls-files | grep .py | grep -v migrations | grep -v manage.py | grep -v static/images | xargs isort
+```
+
 ## Administracja serwerem
 
 Aby przywrócić pliki załadowane przez użytkowników aplikacji (np. nuty,
