@@ -29,7 +29,7 @@ class EventIndex(TemplateView):
 class AddExternalEvent(LoginRequiredMixin, CreateView):
     model = ExternalEvent
     form_class = ExternalEventForm
-    template_name = 'events/add_external_event.html'
+    template_name = 'events/add_edit_external_event.html'
 
     def get_success_url(self):
         return reverse('event_index')
@@ -38,7 +38,7 @@ class AddExternalEvent(LoginRequiredMixin, CreateView):
 class EditExternalEvent(LoginRequiredMixin, UpdateView):
     model = ExternalEvent
     form_class = ExternalEventForm
-    template_name = 'events/add_external_event.html'
+    template_name = 'events/add_edit_external_event.html'
 
     def get_success_url(self):
         return reverse('event_index')
