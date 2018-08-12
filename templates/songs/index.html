@@ -13,15 +13,7 @@
     {% for artist in row %}
     <div class="col-md-4">
       <div class="section">
-        {% include "components/thumbnail.html" with img=artist.cover_image url=artist.get_absolute_url type="imagethumb" alt="Ilustracja notki" %}
-        <a href="{{artist.get_absolute_url}}">
-          <div class="thumbnail-host">
-            <img src="{{artist.cover_image|thumbnail_url:'imagethumb'}}" class="img-responsive pzt-max-width" />
-            <div class="thumbnail-caption">
-              <h1>{{artist}}</h1>
-            </div>
-          </div>
-        </a>
+        {% include "components/thumbnail.html" with img=artist.cover_note.image url=artist.get_absolute_url type="imagethumb" label=artist alt="Zdjęcie artysty {{ artist }}" %}
         {% if artist.num_songs == 1 %} <b>1</b> piosenka
         {% elif artist.num_songs < 5 %} <b>{{ artist.num_songs }}</b> piosenki
         {% else %}<b>{{ artist.num_songs }}</b> piosenek

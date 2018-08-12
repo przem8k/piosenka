@@ -30,6 +30,7 @@ class Artist(SlugFieldMixin):
     HELP_DESCRIPTION = 'Krótki opis podmiotu w stylu encyklopedycznym.'
     HELP_BORN_ON = 'Data urodzin.'
     HELP_DIED_ON = 'Data śmierci.'
+    HELP_COVER_NOTE = 'Notka której ilustracja może służyć za okładkę.'
 
     CAT_TEXTER = 1
     CAT_COMPOSER = 2
@@ -49,6 +50,10 @@ class Artist(SlugFieldMixin):
     website = models.URLField(null=True, blank=True, help_text=HELP_WEBSITE)
     born_on = models.DateField(blank=True, null=True, help_text=HELP_BORN_ON)
     died_on = models.DateField(blank=True, null=True, help_text=HELP_DIED_ON)
+    cover_note = models.ForeignKey('ArtistNote', null=True,
+                                   on_delete=models.SET_NULL,
+                                   related_name='artists_covered',
+                                   help_text=HELP_COVER_NOTE)
 
     class Meta:
         ordering = ['name']

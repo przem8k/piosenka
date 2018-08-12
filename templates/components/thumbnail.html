@@ -1,6 +1,6 @@
 {% load thumbnail %}
 
-<div class="pzt-thumbnail">
+<div class="pzt-thumbnail thumbnail-host">
   {% if url %}
   <a href="{{ url }}">
     <img src="{{ img|thumbnail_url:type }}" {% if alt %}alt="{{ alt }}"{% endif %}>
@@ -9,5 +9,10 @@
   <a href="{{ img.url }}" class="pzt-lightbox">
     <img src="{{ img|thumbnail_url:type }}" {% if alt %}alt="{{ alt }}"{% endif %}>
   </a>
+  {% endif %}
+  {% if label %}
+  <div class="thumbnail-caption">
+    <h1>{{label}}</h1>
+  </div>
   {% endif %}
 </div>
