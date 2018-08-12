@@ -4,7 +4,6 @@ from django.core.management.base import BaseCommand
 
 from articles.models import Article
 from blog.models import Post
-from events.models import Event
 from songs.models import Artist, ArtistNote, Song, SongNote
 
 
@@ -31,11 +30,6 @@ class Command(BaseCommand):
             post.reviewed = True
             post.save()
             print('Reviewed: %s' % (post))
-
-        for event in Event.objects.all():
-            event.reviewed = True
-            event.save()
-            print('Reviewed: %s' % (event))
 
         for song in Song.objects.all():
             song.reviewed = True
