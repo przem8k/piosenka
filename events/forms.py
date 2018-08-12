@@ -9,13 +9,13 @@ from events.models import ExternalEvent
 
 
 class ExternalEventForm(forms.ModelForm):
+
     class Meta:
         model = ExternalEvent
         exclude = []
         widgets = {
-            'starts_on': forms.widgets.DateInput(
-             format='%Y-%m-%d',
-             attrs={'type': 'date'}),
+            'starts_on':
+            forms.widgets.DateInput(format='%Y-%m-%d', attrs={'type': 'date'}),
         }
 
     def clean(self):

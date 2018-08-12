@@ -52,13 +52,13 @@ class ExternalEvent(models.Model):
     HELP_URL = 'Strona internetowa wydarzenia (może być na Facebooku).'
     HELP_TOWN = 'Miejscowość w którym odbywa się wydarzenie.'
 
-    name = models.CharField(max_length=100, help_text=HELP_NAME,
-                            verbose_name='Nazwa')
-    starts_on = models.DateField(help_text=HELP_STARTS_ON,
-                                     verbose_name='Dzień rozpoczęcia')
+    name = models.CharField(
+        max_length=100, help_text=HELP_NAME, verbose_name='Nazwa')
+    starts_on = models.DateField(
+        help_text=HELP_STARTS_ON, verbose_name='Dzień rozpoczęcia')
     url = models.URLField(help_text=HELP_URL, verbose_name='Strona internetowa')
-    town = models.CharField(max_length=100, help_text=HELP_TOWN,
-                            verbose_name='Miejscowość')
+    town = models.CharField(
+        max_length=100, help_text=HELP_TOWN, verbose_name='Miejscowość')
     lat = models.FloatField(blank=True, null=True)
     lon = models.FloatField(blank=True, null=True)
 
@@ -69,17 +69,13 @@ class ExternalEvent(models.Model):
         return self.url
 
     def get_edit_url(self):
-        return reverse(
-            'edit_external_event', kwargs=self.get_url_params())
+        return reverse('edit_external_event', kwargs=self.get_url_params())
 
     def get_delete_url(self):
-        return reverse(
-            'delete_external_event', kwargs=self.get_url_params())
+        return reverse('delete_external_event', kwargs=self.get_url_params())
 
     def get_url_params(self):
-        return {
-            'pk': self.pk
-        }
+        return {'pk': self.pk}
 
     def external_source(self):
         return True
@@ -89,8 +85,5 @@ class ExternalEvent(models.Model):
 
 
 def get_events_for(user):
-    external_events = ExternalEvent.objects.filter(
-        starts_on__gte=date.today())
-    return sorted(
-        list(external_events),
-        key=lambda event: event.starts_on)
+    external_events = ExternalEvent.objects.filter(starts_on__gte=date.today())
+    return sorted(list(external_events), key=lambda event: event.starts_on)

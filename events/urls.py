@@ -9,8 +9,12 @@ urlpatterns = [
         r'^dodaj/$',
         views.AddExternalEvent.as_view(),
         name='add_external_event'),
-    url(r'^(?P<pk>\d+)/edytuj', views.EditExternalEvent.as_view(),
+    url(
+        r'^(?P<pk>\d+)/edytuj',
+        views.EditExternalEvent.as_view(),
         name='edit_external_event'),
-    url(r'^(?P<pk>\d+)/usun', views.DeleteExternalEvent.as_view(),
+    url(
+        r'^(?P<pk>\d+)/usun',
+        views.DeleteExternalEvent.as_view(),
         name='delete_external_event'),
 ]
