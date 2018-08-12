@@ -26,8 +26,9 @@
     {% for note in row %}
     <div class="col-md-4">
       <div class="section">
-        <h1>{{ note.date }} – {{ note.date_description}}</h1>
+        <h1>{{ note.date }}</h1>
         {% include "components/thumbnail.html" with img=note.image url=note.song.get_absolute_url type="imagethumb" label=note.song alt="Ilustracja do piosenki {{note.song}}" %}
+        <p>{{ note.date }} – {{ note.date_description}}</p>
       </div>
     </div>
     {% endfor %}
