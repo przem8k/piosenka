@@ -11,12 +11,4 @@
 <b>{{ event.location }}</b>
 {% endif %}
 
-{% if event.external_source %}
-<a href="{{ event.get_absolute_url }}" target="_blank">
-  {{ event }}
-  <span class="glyphicon glyphicon-new-window"></span>
-</a>
-{% else %}
-<a href="{{ event.get_absolute_url }}">{{ event }}</a>
-{% include "components/content_status_span.html" with item=event %}
-{% endif %}
+{% include "components/external_link.html" with url=event.get_absolute_url name=event %}

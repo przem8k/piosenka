@@ -11,8 +11,8 @@
   {% if note.url1 or note.url2 or note.ref1 or note.ref2 or note.image_author or note.image_url %}
   <ul class="list-unstyled" style="font-size: small;">
     <li><b>źródła:</b></li>
-    {% if note.url1 %}<li><span class="glyphicon glyphicon-link"></span> <a href="{{ note.url1 }}">{{ note.url1|truncatechars:42 }}</a></li>{% endif %}
-    {% if note.url2 %}<li><span class="glyphicon glyphicon-link"></span> <a href="{{ note.url2 }}">{{ note.url2|truncatechars:42 }}</a></li>{% endif %}
+    {% if note.url1 %}<li><span class="glyphicon glyphicon-link"></span> {% include "components/external_link.html" with url=note.url1 %}</li>{% endif %}
+    {% if note.url2 %}<li><span class="glyphicon glyphicon-link"></span> {% include "components/external_link.html" with url=note.url2 %}</a></li>{% endif %}
     {% if note.ref1 %}<li><span class="glyphicon glyphicon-book"></span> {{ note.ref1 }}</li>{% endif %}
     {% if note.ref2 %}<li><span class="glyphicon glyphicon-book"></span> {{ note.ref2 }}</li>{% endif %}
     {% if note.image_author or note.image_url %}
@@ -20,9 +20,7 @@
       <span class="glyphicon glyphicon-camera"></span>
       {% if note.image_author %} {{note.image_author}}{% endif %}{% if note.image_author and note.image_url %}, {% endif %}
       {% if note.image_url %} 
-      <a href="{{ note.image_url }}" target="_blank">{{ note.image_url|truncatechars:42 }}
-          <span class="glyphicon glyphicon-new-window"></span>
-        </a>
+      {% include "components/external_link.html" with url=note.image_url %}
       {% endif %}
     </li>
     {% endif %}
