@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'^spiewnik/', include('songs.urls_entity')),
     url(r'^opracowanie/', include('songs.urls_song')),
     url(r'^adnotacja/', include('songs.urls_annotation')),
-    url(r'^kalendarium/', songs.views.CalendarView.as_view(), name='calendar'),
+    url(r'^historia/', songs.views.CalendarView.as_view(), name='calendar'),
     # Other sections.
     url(r'^blog/', include('blog.urls')),
     url(r'^artykuly/', include('articles.urls')),
