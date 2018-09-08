@@ -11,7 +11,7 @@
         <h1>Piosenka dnia</h1>
         {% include "components/thumbnail.html" with img=note.image url=note.song.get_absolute_url type="imagethumb" label=note.song alt="Ilustracja do piosenki {{note.song}}" %}
         <p>{{ note.date }} – {{ note.date_description}}</p>
-        <p>Zobacz pełne <a href="{% url 'calendar' %}">Kalendarium</a>.</p>
+        <p style="text-align: right;"><a href="{% url 'calendar' %}">Historia w piosence</a></p>
       </div>
       {% endwith %}
       {% endif %}

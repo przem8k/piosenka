@@ -3,7 +3,7 @@
 {% load thumbnail %}
 {% load list_partition %}
 
-{% block title %}Kalendarium{% endblock title %}
+{% block title %}Historia w piosence{% endblock title %}
 {% block description %}Piosenki inspirowane wydarzeniami historycznymi.{% endblock description %}
 
 {% block header %}
@@ -14,24 +14,38 @@
 <blockquote class="lyrics-quote">Zbyt stary żeby nosić broń i walczyć jak inni<br />
   wyznaczono mi z łaski poślednią rolę kronikarza<br />
   zapisuję – nie wiadomo dla kogo – dzieje oblężenia
-  <small>Zbigniew Herbert – <a href="https://www.piosenkaztekstem.pl/opracowanie/przemyslaw-gintrowski-raport-z-oblezonego-miasta/">Raport z oblężonego miasta</a></small>
+  <small>Zbigniew Herbert – <a href="/opracowanie/przemyslaw-gintrowski-raport-z-oblezonego-miasta/">Raport z oblężonego miasta</a></small>
 </blockquote>
 {% endblock quote %}
 
 {% block content %}
 <div class="container">
-  {% for row in notes|columns_horizontal:"3" %}
-  <div class="row">
-    {% for note in row %}
-    <div class="col-md-4">
-      <div class="section">
-        <h1>{{ note.date }}</h1>
-        {% include "components/thumbnail.html" with img=note.image url=note.song.get_absolute_url type="imagethumb" label=note.song alt="Ilustracja do piosenki {{note.song}}" %}
-        <p>{{ note.date }} – {{ note.date_description}}</p>
+  <div class="col-md-8">
+    {% for row in notes|columns_horizontal:"2" %}
+    <div class="row">
+      {% for note in row %}
+      <div class="col-md-6">
+        <div class="section" id="{{ note.get_id }}">
+          {% include "components/thumbnail.html" with img=note.image url=note.song.get_absolute_url type="imagethumb" label=note.song alt="Ilustracja do piosenki {{note.song}}" %}
+          <p>{{ note.date }} – {{ note.date_description}}</p>
+        </div>
       </div>
+      {% endfor %}
     </div>
     {% endfor %}
   </div>
-  {% endfor %}
+  <div class="col-md-4">
+    <div class="section">
+      <h1>Kalendarium</h1>
+      <ul class="list-unstyled">
+        {% for note in notes %}
+        <li>
+          <b>{{ note.date|date:"Y-m-d" }}</b>
+             – <a href="#{{note.get_id}}">{{ note.date_description }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </div>
 {% endblock content %}

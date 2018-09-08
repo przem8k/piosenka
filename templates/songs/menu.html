@@ -10,6 +10,16 @@
         {% endfor %}
       </ul>
     </div>
+    <div class="section">
+      <h1>Twórcy zagraniczni</h1>
+      <ul class="list-unstyled">
+        {% for artist in foreigners %}
+        <li>
+          <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
   <div class="col-md-4">
     <div class="section">
@@ -35,13 +45,11 @@
   </div>
   <div class="col-md-4">
     <div class="section">
-      <h1>Twórcy zagraniczni</h1>
+      <h1>Dowiedz się więcej</h1>
       <ul class="list-unstyled">
-        {% for artist in foreigners %}
         <li>
-          <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
+          <a href="{% url 'calendar' %}">Historia w piosence</a>
         </li>
-        {% endfor %}
       </ul>
     </div>
   </div>
