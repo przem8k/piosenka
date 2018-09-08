@@ -1,5 +1,4 @@
-from datetime import datetime
-from datetime import date
+from datetime import date, datetime
 
 from django.contrib.auth.models import User
 from django.views.generic import TemplateView
@@ -19,12 +18,11 @@ class SiteIndex(TemplateView):
 
     def get_song_of_the_day(self):
         today = date.today()
-        return filter_visible_to_user(SongNote.objects.all(),
-                                       self.request.user).filter(
-                    date__isnull=False).exclude(
-                    date_description='').exclude(image='').filter(date__day=today.day,
-                                                                  date__month=today.month).first()
-
+        return filter_visible_to_user(
+            SongNote.objects.all(), self.request.user).filter(
+                date__isnull=False).exclude(date_description='').exclude(
+                    image='').filter(
+                        date__day=today.day, date__month=today.month).first()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

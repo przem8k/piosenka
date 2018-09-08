@@ -90,8 +90,9 @@ class CalendarView(TemplateView):
         context = super().get_context_data(**kwargs)
         notes = filter_visible_to_user(SongNote.objects.all(),
                                        self.request.user).filter(
-                    date__isnull=False).exclude(
-                    date_description='').exclude(image='').order_by('-date')
+                                           date__isnull=False).exclude(
+                                               date_description='').exclude(
+                                                   image='').order_by('-date')
         context['notes'] = notes
         return context
 
@@ -111,12 +112,11 @@ class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
     def get_context_data(self, **kwargs):
         artist = self.get_object()
         relevant_contributions = EntityContribution.objects.filter(
-            song=OuterRef('pk'),
-            artist=artist)
-        songs = filter_visible_to_user(Song.objects.all(),
-                                       self.request.user).annotate(
-          relevant=Exists(relevant_contributions)).filter(relevant=True).annotate(
-              num_notes=Count('songnote'))
+            song=OuterRef('pk'), artist=artist)
+        songs = filter_visible_to_user(
+            Song.objects.all(), self.request.user).annotate(
+                relevant=Exists(relevant_contributions)).filter(
+                    relevant=True).annotate(num_notes=Count('songnote'))
         context = super().get_context_data(**kwargs)
         context['songs'] = songs
         context['artist'] = artist

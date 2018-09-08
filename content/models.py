@@ -63,6 +63,7 @@ class ContentItem(models.Model):
     def is_live(self):
         return self.reviewed
 
+
 def filter_visible_to_user(query_set, user):
     if user.is_active and user.is_authenticated:
         return query_set
