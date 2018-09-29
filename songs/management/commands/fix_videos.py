@@ -24,7 +24,7 @@ class Command(BaseCommand):
         youtube = build(
             YOUTUBE_API_SERVICE_NAME,
             YOUTUBE_API_VERSION,
-            developerKey=settings.GOOGLE_API_KEY)
+            developerKey=settings.GOOGLE_API_SERVER_KEY)
 
         count_all = 0
         count_none = 0

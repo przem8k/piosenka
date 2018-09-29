@@ -9,4 +9,4 @@ DATABASES = {
     }
 }
 
-GOOGLE_MAPS_API_KEY = ''
+GOOGLE_API_BROWSER_KEY = ''

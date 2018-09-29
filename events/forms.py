@@ -1,6 +1,7 @@
 from datetime import date
 
 from django import forms
+from django.conf import settings
 from pygeocoder import Geocoder
 from pygeolib import GeocoderError
 
@@ -27,7 +28,11 @@ class ExternalEventForm(forms.ModelForm):
 
         if 'town' in cleaned_data:
             try:
-                geo = Geocoder.geocode(cleaned_data['town'])
+                if settings.GOOGLE_API_SERVER_KEY:
+                    geocoder = Geocoder(api_key=settings.GOOGLE_API_SERVER_KEY)
+                    geo = geocoder.geocode(cleaned_data['town'])
+                else:
+                    geo = Geocoder.geocode(cleaned_data['town'])
                 cleaned_data['lat'], cleaned_data['lon'] = geo[0].coordinates
             except GeocoderError:
                 # Geo lookup failed to recognize this address.

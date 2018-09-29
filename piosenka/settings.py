@@ -58,14 +58,14 @@ except ImportError:
     TMP_DIR = '/tmp'
 
 try:
-    from piosenka.settings_local import GOOGLE_MAPS_API_KEY
+    from piosenka.settings_local import GOOGLE_API_BROWSER_KEY
 except ImportError:
-    GOOGLE_MAPS_API_KEY = ''
+    GOOGLE_API_BROWSER_KEY = ''
 
 try:
-    from piosenka.settings_local import GOOGLE_API_KEY
+    from piosenka.settings_local import GOOGLE_API_SERVER_KEY
 except ImportError:
-    GOOGLE_API_KEY = ''
+    GOOGLE_API_SERVER_KEY = ''
 
 USE_TZ = True
 TIME_ZONE = 'Europe/Warsaw'
