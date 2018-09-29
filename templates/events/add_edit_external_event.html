@@ -17,7 +17,7 @@
           </table>
 
           {{ form.non_field_errors }}
-          <input type="submit" value="Dodaj" style="width: 100%"/>
+          <input type="submit" value="{% if not object.pk %}Dodaj{% else %}Zapisz{% endif %}" style="width: 100%"/>
         </form>
       </div>
     </div>
