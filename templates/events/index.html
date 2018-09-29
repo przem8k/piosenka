@@ -14,7 +14,7 @@
           {% include "events/event_link.html" with event=event %}
 
           {% if user %}
-          (<a href="{{ event.get_edit_url }}">edytuj</a>)
+          <a href="{{ event.get_edit_url }}">{% include 'components/icon.html' with type='pencil' %}</a>
           {% endif %}
           </li>
           {% endfor %}
@@ -22,7 +22,7 @@
         <hr />
         <div>
           <a href="{% url 'add_external_event' %}">
-            <span class="glyphicon glyphicon-plus"></span>
+            {% include 'components/icon.html' with type='plus' %}
             Dodaj nowe wydarzenie (odnośnik)
           </a>
         </div>
@@ -42,12 +42,12 @@
         <td>
         {% if performer.website %}
         <a href="{{ performer.website }}" target="_blank">strona internetowa
-                <span class="glyphicon glyphicon-new-window"></span>
+          {% include 'components/icon.html' with type='new-window' %}
         </a>
         {% endif %}
         {% if performer.fb_page_id %}
         <a href="https://www.facebook.com/{{performer.fb_page_id}}" target="_blank">Facebook
-                <span class="glyphicon glyphicon-new-window"></span>
+          {% include 'components/icon.html' with type='new-window' %}
         </a>
         {% endif %}
         </td>
