@@ -14,10 +14,7 @@
           {% include "events/event_link.html" with event=event %}
 
           {% if user %}
-
-          <span class="pull-right">
-            <a href="{{ event.get_edit_url }}">edytuj</a>
-          </span>
+          (<a href="{{ event.get_edit_url }}">edytuj</a>)
           {% endif %}
           </li>
           {% endfor %}
