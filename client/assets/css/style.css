@@ -187,6 +187,12 @@ h1.contributor {
   text-align: center;
 }
 
+/* frontpage */
+
+.pzt-social-button {
+  margin: 5px;
+}
+
 /* other */
 
 .tip {
