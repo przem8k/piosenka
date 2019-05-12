@@ -44,7 +44,7 @@
       {% include "content/note.html" with note=note %}
       {% endfor %}
 
-      {% if user.is_authenticated and perms.songs.contribute_artist_note %}
+      {% if user.is_authenticated and artist.get_add_note_url %}
       <div class="section">
         <h1>Dodaj adnotację</h1>
         <p style="text-align: center">
