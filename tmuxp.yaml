@@ -1,30 +1,20 @@
 session_name: 'piosenka'
 shell_command_before: 
-  - 'cd ~/projects/piosenka && source .virtualenv/bin/activate'
+  - cd ~/projects/piosenka
+  - source .virtualenv/bin/activate
+  - tmux set status-style bg=colour254,fg=black
+  - clear
 windows:
-- focus: 'true'
-  layout: main-horizontal
-  options: {}
+- window_name: shell
+  focus: 'true'
+  panes:
+    -
+- window_name: nvim
+  panes:
+  - shell_command: nvim
+- window_name: server
+  panes:
+  - shell_command: python manage.py runserver
+- window_name: remote
   panes:
   - focus: 'true'
-  window_name: shell
-  shell_command_before:
-    - tmux set status-style bg=colour254,fg=black
-    - clear
-- layout: main-horizontal
-  options: {}
-  panes:
-  - focus: 'true'
-    shell_command: nvim
-  window_name: nvim
-- layout: main-horizontal
-  options: {}
-  panes:
-  - focus: 'true'
-    shell_command: python manage.py runserver
-  window_name: server
-- layout: main-horizontal
-  options: {}
-  panes:
-  - focus: 'true'
-  window_name: remote
