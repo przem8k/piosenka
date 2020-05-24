@@ -1,4 +1,6 @@
 {% load staticfiles %}
+{% load compress %}
+
 <!DOCTYPE HTML>
 <html lang="pl">
   <head>
@@ -11,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
 
-    <!-- Third-party stylesheets -->
+    {% compress css %}
     <link href="{% static "third_party/bootstrap/css/bootstrap.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "third_party/luminous/luminous-basic.min.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "third_party/sirtrevor/css/sir-trevor.css" %}" rel="stylesheet" type="text/css" />
@@ -23,6 +25,7 @@
     <link href="{% static "css/search.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "css/song.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />
+    {% endcompress %}
 
     {% block extra-css %}{% endblock extra-css %}
   </head>
@@ -143,7 +146,7 @@
       </div>
     </div>
 
-    <!-- Third-party scripts -->
+    {% compress js %}
     <script src="{% static "third_party/jquery/jquery-2.1.1.js" %}"></script>
     <script src="{% static "third_party/typeahead/typeahead-0.10.4.js" %}"></script>
     <script src="{% static "third_party/bootstrap/js/bootstrap.js" %}"></script>
@@ -151,15 +154,16 @@
     <script src="{% static "third_party/sirtrevor/js/underscore.js" %}"></script>
     <script src="{% static "third_party/sirtrevor/js/eventable.js" %}"></script>
     <script src="{% static "third_party/sirtrevor/js/sir-trevor.js" %}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
-    <!-- TODO: add below what was before Webpack-managed js. -->
     <script src="{% static "js/comments.js" %}"></script>
     <script src="{% static "js/lightbox.js" %}"></script>
     <script src="{% static "js/messages.js" %}"></script>
     <script src="{% static "js/search.js" %}"></script>
     <script src="{% static "js/song.js" %}"></script>
     <script src="{% static "js/tooltips.js" %}"></script>
+    {% endcompress %}
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
     {% block extra-scripts %}{% endblock extra-scripts %}
 

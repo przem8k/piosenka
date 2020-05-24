@@ -87,8 +87,15 @@ STATIC_URL = '/site_media/native/'
 
 SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, 'site_media')
 
-STATICFILES_DIRS = (('', os.path.join(PROJECT_PATH, 'static')), os.path.join(
-    PROJECT_PATH, 'client', 'assets'),)
+STATICFILES_DIRS = (('', os.path.join(PROJECT_PATH, 'static')),)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+COMPRESS_OFFLINE = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -138,6 +145,7 @@ INSTALLED_APPS = (
     'django.contrib.redirects',
     # Third-party.
     'easy_thumbnails',
+    'compressor',
     # PzT.
     'base',
     'blog',
