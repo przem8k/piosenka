@@ -1,5 +1,5 @@
 body {
-    background: url("../images/groovepaper.png");
+    background: url("../images/patterns/groovepaper.png");
 }
 
 @media screen {
@@ -47,7 +47,7 @@ h2 {
 
 .header {
     border-bottom: 1px solid #BBB;
-    background: url("../images/paper.png");
+    background: url("../images/patterns/paper.png");
     margin: 0 0 20px 0;
 }
 
@@ -59,7 +59,7 @@ h2 {
 .footer {
     padding: 20px 0 20px 0;
     border-top: 1px solid #BBB;
-    background: url("../images/paper.png");
+    background: url("../images/patterns/paper.png");
 }
 
 .pzt-footer-content {

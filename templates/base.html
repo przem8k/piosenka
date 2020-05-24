@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% load render_bundle from webpack_loader %}
 <!DOCTYPE HTML>
 <html lang="pl">
   <head>
@@ -17,11 +16,14 @@
     <link href="{% static "third_party/luminous/luminous-basic.min.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "third_party/sirtrevor/css/sir-trevor.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "third_party/sirtrevor/css/sir-trevor-icons.css" %}" rel="stylesheet" type="text/css" />
-    <!-- Legacy stylesheets to be included in the webpack bundle -->
-    <link href="{% static "css/sirtrevor.css" %}" rel="stylesheet" type="text/css" />
 
-    <!-- Webpack-managed stylesheets. -->
-    {% render_bundle 'main' 'css' %}
+    <link href="{% static "css/sirtrevor.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/comments.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/lightbox.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/search.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/song.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />
+
     {% block extra-css %}{% endblock extra-css %}
   </head>
 
@@ -151,8 +153,13 @@
     <script src="{% static "third_party/sirtrevor/js/sir-trevor.js" %}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA&sensor=false"></script> 
 
-    <!-- Webpack-managed js. -->
-    {% render_bundle 'main' 'js' %}
+    <!-- TODO: add below what was before Webpack-managed js. -->
+    <script src="{% static "js/comments.js" %}"></script>
+    <script src="{% static "js/lightbox.js" %}"></script>
+    <script src="{% static "js/messages.js" %}"></script>
+    <script src="{% static "js/search.js" %}"></script>
+    <script src="{% static "js/song.js" %}"></script>
+    <script src="{% static "js/tooltips.js" %}"></script>
 
     {% block extra-scripts %}{% endblock extra-scripts %}
 

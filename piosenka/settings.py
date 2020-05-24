@@ -90,16 +90,6 @@ SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, 'site_media')
 STATICFILES_DIRS = (('', os.path.join(PROJECT_PATH, 'static')), os.path.join(
     PROJECT_PATH, 'client', 'assets'),)
 
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'CACHE': not DEBUG,
-        'BUNDLE_DIR_NAME': 'bundles/',
-        'STATS_FILE': os.path.join(PROJECT_PATH, 'client',
-                                   'webpack-stats.json'),
-        'IGNORE': ['.+\.hot-update.js', '.+\.map']
-    },
-}
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -148,7 +138,6 @@ INSTALLED_APPS = (
     'django.contrib.redirects',
     # Third-party.
     'easy_thumbnails',
-    'webpack_loader',
     # PzT.
     'base',
     'blog',
