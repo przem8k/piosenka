@@ -1,4 +1,4 @@
-Django==1.11.20
+Django==1.11.28
 Markdown==2.6.6
 easy-thumbnails==2.4.1
 pygeocoder==1.2.5
