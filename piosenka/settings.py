@@ -149,7 +149,6 @@ INSTALLED_APPS = (
     # Third-party.
     'easy_thumbnails',
     'webpack_loader',
-    'facebook',
     # PzT.
     'base',
     'blog',
