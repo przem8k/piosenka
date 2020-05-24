@@ -5,6 +5,8 @@
 *~
 settings_production.py
 settings_local.py
+private_*
+cloud_sql_proxy
 piosenka.db
 site_media
 node_modules

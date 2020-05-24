@@ -2,69 +2,41 @@ import os
 
 from django.urls import reverse_lazy
 
-try:
-    from piosenka.settings_local import DEBUG
-except ImportError:
-    DEBUG = True
+if os.getenv('GAE_APPLICATION', None):
+    DEBUG = False
 
-try:
-    from piosenka.settings_local import DATABASES
-except ImportError:
+    # App Engine's security features ensure that it is safe to
+    # have ALLOWED_HOSTS = ['*'] when the app is deployed. 
+    ALLOWED_HOSTS = ['*']
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.getenv('PIOSENKA_DB_NAME'),
+            'USER': os.getenv('PIOSENKA_DB_USER'),
+            'PASSWORD': os.getenv('PIOSENKA_DB_PASSWORD'),
+            'HOST': os.getenv('PIOSENKA_DB_HOST'),
+        }
+    }
+
+    SECRET_KEY = os.getenv('PIOSENKA_SECRET_KEY')
+    GOOGLE_API_BROWSER_KEY = os.getenv('PIOSENKA_GOOGLE_API_BROWSER_KEY')
+    GOOGLE_API_SERVER_KEY = os.getenv('PIOSENKA_GOOGLE_API_SERVER_KEY')
+
+    import google.cloud.logging
+    client = google.cloud.logging.Client()
+    client.get_default_handler()
+    client.setup_logging()
+else:
+    DEBUG = True
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': 'piosenka.db',
         }
     }
-
-try:
-    from piosenka.settings_local import SECRET_KEY
-except ImportError:
-    SECRET_KEY = 'piosenka'
-
-try:
-    from piosenka.settings_local import ALLOWED_HOSTS
-except ImportError:
-    pass
-
-try:
-    from piosenka.settings_local import ADMINS
-except ImportError:
-    pass
-
-try:
-    from piosenka.settings_local import EMAIL_HOST
-    from piosenka.settings_local import EMAIL_HOST_USER
-    from piosenka.settings_local import EMAIL_HOST_PASSWORD
-    from piosenka.settings_local import DEFAULT_FROM_EMAIL
-    from piosenka.settings_local import SERVER_EMAIL
-    from piosenka.settings_local import EMAIL_USE_TLS
-except ImportError:
-    pass
-
-try:
-    from piosenka.settings_local import GCP_STORAGE_BUCKET
-except ImportError:
-    GCP_STORAGE_BUCKET = ''
-
-try:
-    from piosenka.settings_local import GSUTIL_PATH
-except ImportError:
-    GSUTIL_PATH = 'gsutil'
-
-try:
-    from piosenka.settings_local import TMP_DIR
-except ImportError:
-    TMP_DIR = '/tmp'
-
-try:
-    from piosenka.settings_local import GOOGLE_API_BROWSER_KEY
-except ImportError:
+    SECRET_KEY = 'piosenka-local-dev-not-really-secret'
     GOOGLE_API_BROWSER_KEY = ''
-
-try:
-    from piosenka.settings_local import GOOGLE_API_SERVER_KEY
-except ImportError:
     GOOGLE_API_SERVER_KEY = ''
 
 USE_TZ = True
@@ -200,28 +172,4 @@ LOGIN_URL = reverse_lazy('hello')
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
-SITE = 'http://www.piosenkaztekstem.pl'
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'basic': {
-            'format': '%(levelname)s %(asctime)s %(message)s',
-        }
-    },
-    'handlers': {
-        'actions_file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'formatter': 'basic',
-            'filename': os.path.join(PROJECT_PATH, 'actions.log')
-        },
-    },
-    'loggers': {
-        'actions': {
-            'level': 'DEBUG',
-            'handlers': ['actions_file'],
-        },
-    },
-}
+SITE = 'https://www.piosenkaztekstem.pl'
