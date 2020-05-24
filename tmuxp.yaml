@@ -9,9 +9,6 @@ windows:
   focus: 'true'
   panes:
     -
-- window_name: nvim
-  panes:
-  - shell_command: nvim
 - window_name: server
   panes:
   - shell_command: python manage.py runserver
