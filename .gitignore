@@ -12,3 +12,4 @@ node_modules
 .vimrc
 .environment
 .virtualenv
+.vscode
