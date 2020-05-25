@@ -41,13 +41,26 @@ if os.getenv('GAE_APPLICATION', None):
     client.setup_logging()
 else:
     DEBUG = True
-    DATABASES = {
-        'default':
-            {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': 'piosenka.db',
+    if os.getenv('PROXY_TO_PROD'):
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql',
+                'HOST': '127.0.0.1',
+                'PORT': '3306',
+                'NAME': os.getenv('PIOSENKA_DB_NAME'),
+                'USER': os.getenv('PIOSENKA_DB_USER'),
+                'PASSWORD': os.getenv('PIOSENKA_DB_PASSWORD'),
             }
-    }
+        }
+    else:
+        # local sqllite file
+        DATABASES = {
+            'default':
+                {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': 'piosenka.db',
+                }
+        }
     SECRET_KEY = 'piosenka-local-dev-not-really-secret'
     GOOGLE_API_BROWSER_KEY = ''
     GOOGLE_API_SERVER_KEY = ''
