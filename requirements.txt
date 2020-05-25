@@ -8,3 +8,4 @@ google-api-python-client==1.6.2
 django-compressor==2.4
 psycopg2==2.8.5
 google-cloud-logging==1.15.0
+google-python-cloud-debugger==2.14
