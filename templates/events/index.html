@@ -59,3 +59,17 @@
   </div>
 </div>
 {% endblock content %}
+
+{% block extra-scripts %}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA"></script> 
+
+<script>
+  if (typeof(load_location) == "function") {
+    $(document).ready(
+      function(){
+        load_location();
+      }
+    );
+  }
+</script>
+{% endblock extra-scripts %}
