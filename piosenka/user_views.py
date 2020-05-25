@@ -18,8 +18,6 @@ from piosenka.forms import InvitationForm, JoinForm
 from piosenka.mail import send_invitation_mail
 from piosenka.models import Invitation
 
-_action_logger = logging.getLogger('actions')
-
 
 class Hello(FormView):
     form_class = AuthenticationForm
@@ -117,7 +115,7 @@ class InviteView(CreateView):
         send_invitation_mail(form.instance)
         messages.add_message(
             self.request, messages.INFO, 'Zaproszenie wysłane.')
-        _action_logger.info(
+        logging.info(
             '%s invited %s to join' %
             (self.request.user, form.instance.email_address))
         return ret
@@ -132,7 +130,7 @@ class JoinView(FormView):
 
     def dispatch(self, *args, **kwargs):
         if not self.request.user.is_anonymous:
-            _action_logger.warning(
+            logging.warning(
                 '%s tried /join while signed in' % self.request.user)
             raise Http404
         return super().dispatch(*args, **kwargs)
@@ -165,7 +163,7 @@ class JoinView(FormView):
         everyone_group, _ = Group.objects.get_or_create(name='everyone')
         user.groups.add(everyone_group)
 
-        _action_logger.info('%s joined' % user)
+        logging.info('%s joined' % user)
         login(self.request, user)
         return super().form_valid(form)
 

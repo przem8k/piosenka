@@ -18,7 +18,6 @@ from songs import forms
 from songs.lyrics import render_lyrics
 from songs.models import Artist, ArtistNote, EntityContribution, Song, SongNote
 
-_action_logger = logging.getLogger('actions')
 
 INITIAL_LYRICS = """\
 #zw
@@ -135,7 +134,7 @@ class AddArtist(CreateView):
     def form_valid(self, form):
         ret = super().form_valid(form)
         messages.add_message(self.request, messages.INFO, 'Artysta dodany.')
-        _action_logger.info(
+        logging.info(
             '%s added artist %s' % (self.request.user, form.instance))
         return ret
 
@@ -152,7 +151,7 @@ class EditArtist(GetArtistMixin, UpdateView):
         ret = super().form_valid(form)
         messages.add_message(
             self.request, messages.INFO, 'Zmiany zostały zapisane.')
-        _action_logger.info(
+        logging.info(
             '%s edited artist %s' % (self.request.user, form.instance))
         return ret
 

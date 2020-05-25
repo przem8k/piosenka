@@ -9,8 +9,6 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from piosenka.mail import send_item_approved_mail, send_new_to_review_mails
 
-_action_logger = logging.getLogger('actions')
-
 
 class ViewContentView(DetailView):
     """Adds information needed to render controls (e.g. if the link to the edit
@@ -48,7 +46,7 @@ class AddContentView(CreateView):
         messages.add_message(
             self.request, messages.INFO,
             'Materiał dodany, oczekuje na korektę.')
-        _action_logger.info('%s added %s' % (self.request.user, form.instance))
+        logging.info('%s added %s' % (self.request.user, form.instance))
         return ret
 
 
@@ -64,7 +62,7 @@ class EditContentView(UpdateView):
 
     def form_valid(self, form):
         ret = super().form_valid(form)
-        _action_logger.info('%s edited %s' % (self.request.user, form.instance))
+        logging.info('%s edited %s' % (self.request.user, form.instance))
         return ret
 
 
@@ -131,7 +129,7 @@ class ApproveContentView(RedirectView):
         item.save()
         messages.add_message(
             self.request, messages.INFO, 'Materiał zatwierdzony.')
-        _action_logger.info('%s approved %s' % (self.request.user, item))
+        logging.info('%s approved %s' % (self.request.user, item))
         try:
             send_item_approved_mail(item, self.request.user)
         except Exception:
