@@ -5,8 +5,6 @@ from django import urls
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
-from pygeocoder import Geocoder
-from pygeolib import GeocoderError
 
 from base.overrides import overrides
 from content import url_scheme

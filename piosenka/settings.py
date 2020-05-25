@@ -24,7 +24,6 @@ if os.getenv('GAE_APPLICATION', None):
 
     SECRET_KEY = os.getenv('PIOSENKA_SECRET_KEY')
     GOOGLE_API_BROWSER_KEY = os.getenv('PIOSENKA_GOOGLE_API_BROWSER_KEY')
-    GOOGLE_API_SERVER_KEY = os.getenv('PIOSENKA_GOOGLE_API_SERVER_KEY')
 
     DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
     GS_BUCKET_NAME = os.getenv('PIOSENKA_GS_BUCKET_NAME')
@@ -76,6 +75,8 @@ else:
 
     EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
     EMAIL_FILE_PATH = '/tmp/django-emails'
+
+PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY = os.getenv('PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY')
 
 USE_TZ = True
 TIME_ZONE = 'Europe/Warsaw'

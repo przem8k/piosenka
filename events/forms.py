@@ -1,9 +1,9 @@
 from datetime import date
+import logging
 
 from django import forms
 from django.conf import settings
-from pygeocoder import Geocoder
-from pygeolib import GeocoderError
+import geocoder
 
 from events.models import ExternalEvent
 
@@ -29,13 +29,14 @@ class ExternalEventForm(forms.ModelForm):
 
         if 'town' in cleaned_data:
             try:
-                if settings.GOOGLE_API_SERVER_KEY:
-                    geocoder = Geocoder(api_key=settings.GOOGLE_API_SERVER_KEY)
-                    geo = geocoder.geocode(cleaned_data['town'])
-                else:
-                    geo = Geocoder.geocode(cleaned_data['town'])
-                cleaned_data['lat'], cleaned_data['lon'] = geo[0].coordinates
+                if not settings.PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY:
+                    logging.warning('PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY not set')
+                g = geocoder.google(cleaned_data['town'], components="country:PL", key=settings.PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY)
+
+                cleaned_data['lat'] = g.latlng[0]
+                cleaned_data['lon'] = g.latlng[1]
             except GeocoderError:
-                # Geo lookup failed to recognize this address.
-                pass
+                logging.error('Geocoder lookup failed')
+                raise forms.ValidationError(
+                    'Nie udało się nam odnaleźć tej miejscowości na mapie.')
         return cleaned_data
