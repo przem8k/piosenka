@@ -20,3 +20,6 @@ __pycache__/
 
 .virtualenv
 .vscode
+
+# assets should be gather under static by collectstatic before deployment
+assets

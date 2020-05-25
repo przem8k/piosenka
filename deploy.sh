@@ -5,8 +5,7 @@ if [[ -n $(git status --porcelain) ]]; then
     exit 1
 fi
 
-python3 manage.py backupdb
-git pull
-python3 manage.py migrate
-python3 manage.py collectstatic --noinput
-appctl restart piosenka
+rm -rf static
+python manage.py collectstatic --noinput
+python manage.py compress --force
+gcloud app deploy

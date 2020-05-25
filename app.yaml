@@ -3,8 +3,8 @@ runtime: python37
 handlers:
 # This configures Google App Engine to serve the files in the app's static
 # directory.
-- url: /site_media/native
-  static_dir: site_media/native
+- url: /static
+  static_dir: static
 
 - url: /favicon\.ico
   static_files: site_media/native/images/favicon.ico

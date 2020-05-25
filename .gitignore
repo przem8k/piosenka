@@ -9,6 +9,7 @@ private_*
 cloud_sql_proxy
 piosenka.db
 site_media
+static
 node_modules
 .idea
 .vimrc

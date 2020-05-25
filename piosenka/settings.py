@@ -50,8 +50,8 @@ else:
     GOOGLE_API_BROWSER_KEY = ''
     GOOGLE_API_SERVER_KEY = ''
 
-    MEDIA_ROOT = os.path.join(PROJECT_PATH, 'site_media', 'upload')
-    MEDIA_URL = '/site_media/upload/'
+    MEDIA_ROOT = os.path.join(PROJECT_PATH, 'site_media')
+    MEDIA_URL = '/site_media/'
 
 USE_TZ = True
 TIME_ZONE = 'Europe/Warsaw'
@@ -61,13 +61,15 @@ SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
 
-STATIC_ROOT = os.path.join(PROJECT_PATH, 'site_media', 'native')
+# Where static files are served from by the dev server.
+STATIC_ROOT = os.path.join(PROJECT_PATH, 'static')
 
-STATIC_URL = '/site_media/native/'
+# URL prefix used for static files, in development and in production.
+STATIC_URL = '/static/'
 
 SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, 'site_media')
 
-STATICFILES_DIRS = (('', os.path.join(PROJECT_PATH, 'static')),)
+STATICFILES_DIRS = (('', os.path.join(PROJECT_PATH, 'assets')),)
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
