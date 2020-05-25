@@ -39,6 +39,12 @@ if os.getenv('GAE_APPLICATION', None):
     client = google.cloud.logging.Client()
     client.get_default_handler()
     client.setup_logging()
+
+    EMAIL_BACKEND = "anymail.backends.mailjet.EmailBackend"
+    ANYMAIL = {
+        "MAILJET_API_KEY": os.getenv('PIOSENKA_MAILJET_API_KEY'),
+        "MAILJET_SECRET_KEY": os.getenv('PIOSENKA_MAILJET_API_SECRET'),
+    }
 else:
     DEBUG = True
     if os.getenv('PROXY_TO_PROD'):
@@ -67,6 +73,9 @@ else:
 
     MEDIA_ROOT = os.path.join(PROJECT_PATH, 'site_media')
     MEDIA_URL = '/site_media/'
+
+    EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+    EMAIL_FILE_PATH = '/tmp/django-emails'
 
 USE_TZ = True
 TIME_ZONE = 'Europe/Warsaw'
@@ -201,3 +210,5 @@ LOGIN_URL = reverse_lazy('hello')
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 SITE = 'https://www.piosenkaztekstem.pl'
+
+DEFAULT_FROM_EMAIL = 'noreply@piosenkaztekstem.pl'
