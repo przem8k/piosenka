@@ -1,11 +1,13 @@
 Django==1.11.28
 Markdown==2.6.6
-easy-thumbnails==2.4.1
+easy-thumbnails==2.7
 pygeocoder==1.2.5
 Unidecode==0.04.17
 pytz==2016.4
 google-api-python-client==1.6.2
 django-compressor==2.4
-psycopg2==2.8.5
 google-cloud-logging==1.15.0
+django-storages==1.9.1
+google-cloud-storage==1.28.1
+psycopg2==2.8.5
 google-python-cloud-debugger==2.14

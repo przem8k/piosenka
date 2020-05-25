@@ -2,6 +2,8 @@ import os
 
 from django.urls import reverse_lazy
 
+PROJECT_PATH = os.path.join(os.path.abspath(os.path.split(__file__)[0]), '..')
+
 if os.getenv('GAE_APPLICATION', None):
     DEBUG = False
 
@@ -23,6 +25,15 @@ if os.getenv('GAE_APPLICATION', None):
     GOOGLE_API_BROWSER_KEY = os.getenv('PIOSENKA_GOOGLE_API_BROWSER_KEY')
     GOOGLE_API_SERVER_KEY = os.getenv('PIOSENKA_GOOGLE_API_SERVER_KEY')
 
+    DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+    GS_BUCKET_NAME = os.getenv('PIOSENKA_GS_BUCKET_NAME')
+    GS_LOCATION = os.getenv('PIOSENKA_GS_LOCATION')
+    GS_DEFAULT_ACL = 'publicRead' 
+    MEDIA_URL = os.getenv('PIOSENKA_MEDIA_URL')
+
+    THUMBNAIL_DEFAULT_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+    # THUMBNAIL_DEBUG = True
+
     import google.cloud.logging
     client = google.cloud.logging.Client()
     client.get_default_handler()
@@ -39,6 +50,9 @@ else:
     GOOGLE_API_BROWSER_KEY = ''
     GOOGLE_API_SERVER_KEY = ''
 
+    MEDIA_ROOT = os.path.join(PROJECT_PATH, 'site_media', 'upload')
+    MEDIA_URL = '/site_media/upload/'
+
 USE_TZ = True
 TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'pl'
@@ -46,12 +60,6 @@ LANGUAGE_CODE = 'pl'
 SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
-
-PROJECT_PATH = os.path.join(os.path.abspath(os.path.split(__file__)[0]), '..')
-
-MEDIA_ROOT = os.path.join(PROJECT_PATH, 'site_media', 'upload')
-
-MEDIA_URL = '/site_media/upload/'
 
 STATIC_ROOT = os.path.join(PROJECT_PATH, 'site_media', 'native')
 
