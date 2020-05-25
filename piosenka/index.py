@@ -24,12 +24,13 @@ class ArtistSearchIndex(JSONSearchIndexMixin, View):
     def get(self, request, *args, **kwargs):
         index = []
         for artist in Artist.objects.filter(featured=True):
-            index.append({
-                'name': artist.__str__(),
-                'value': artist.__str__(),
-                'tokens': artist.__str__().split(),
-                'url': artist.get_absolute_url()
-            })
+            index.append(
+                {
+                    'name': artist.__str__(),
+                    'value': artist.__str__(),
+                    'tokens': artist.__str__().split(),
+                    'url': artist.get_absolute_url()
+                })
         return self.render_to_response({'index': index})
 
 
@@ -38,12 +39,13 @@ class SongSearchIndex(JSONSearchIndexMixin, View):
     def get(self, request, *args, **kwargs):
         index = []
         for song in Song.items_live():
-            index.append({
-                'name': song.__str__(),
-                'value': song.__str__(),
-                'tokens': song.__str__().split(),
-                'url': song.get_absolute_url()
-            })
+            index.append(
+                {
+                    'name': song.__str__(),
+                    'value': song.__str__(),
+                    'tokens': song.__str__().split(),
+                    'url': song.get_absolute_url()
+                })
         return self.render_to_response({'index': index})
 
 

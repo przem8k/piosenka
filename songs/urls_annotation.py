@@ -4,14 +4,16 @@ from content import url_scheme
 from songs import views
 
 urlpatterns = [
-    url(r'^piosenka/(?P<slug>[-\w]+)/',
+    url(
+        r'^piosenka/(?P<slug>[-\w]+)/',
         include(
-            url_scheme.edit_review_approve('song_note', views.EditSongNote,
-                                           views.ReviewSongNote,
-                                           views.ApproveSongNote))),
-    url(r'^artysta/(?P<slug>[-\w]+)/',
+            url_scheme.edit_review_approve(
+                'song_note', views.EditSongNote, views.ReviewSongNote,
+                views.ApproveSongNote))),
+    url(
+        r'^artysta/(?P<slug>[-\w]+)/',
         include(
-            url_scheme.edit_review_approve('artist_note', views.EditArtistNote,
-                                           views.ReviewArtistNote,
-                                           views.ApproveArtistNote))),
+            url_scheme.edit_review_approve(
+                'artist_note', views.EditArtistNote, views.ReviewArtistNote,
+                views.ApproveArtistNote))),
 ]

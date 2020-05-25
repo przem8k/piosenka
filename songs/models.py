@@ -34,9 +34,12 @@ class Artist(SlugFieldMixin):
     CAT_COMPOSER = 2
     CAT_FOREIGN = 3
     CAT_BAND = 4
-    FEATURED_CATEGORIES = ((CAT_TEXTER, 'Wykonawca własnych tekstów'), (
-        CAT_COMPOSER, 'Kompozytor'), (CAT_FOREIGN, 'Bard zagraniczny'),
-                           (CAT_BAND, 'Zespół'),)
+    FEATURED_CATEGORIES = (
+        (CAT_TEXTER, 'Wykonawca własnych tekstów'),
+        (CAT_COMPOSER, 'Kompozytor'),
+        (CAT_FOREIGN, 'Bard zagraniczny'),
+        (CAT_BAND, 'Zespół'),
+    )
 
     name = models.CharField(max_length=50, help_text=HELP_NAME)
     featured = models.BooleanField(default=False, help_text=HELP_FEATURED)
@@ -183,7 +186,10 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
 
     def __str__(self):
         if self.disambig:
-            return '%s (%s)' % (self.title, self.disambig,)
+            return '%s (%s)' % (
+                self.title,
+                self.disambig,
+            )
         else:
             return self.title
 
@@ -200,14 +206,14 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
             parsed_lyrics = parse_lyrics(self.lyrics)
             transpose_lyrics(parsed_lyrics, 0)
         except SyntaxError as m:
-            raise ValidationError('Niepoprawny format treści piosenki: ' +
-                                  str(m))
+            raise ValidationError(
+                'Niepoprawny format treści piosenki: ' + str(m))
         return super().clean()
 
     @overrides(SlugLogicMixin)
     def get_slug_elements(self):
-        return [self.artist_for_slug, self.title] + ([self.disambig]
-                                                     if self.disambig else [])
+        return [self.artist_for_slug, self.title
+               ] + ([self.disambig] if self.disambig else [])
 
     @overrides(url_scheme.ViewEditReviewApprove)
     def get_url_name(self):
@@ -238,22 +244,19 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
 
     def composers(self):
         return [
-            x.artist
-            for x in EntityContribution.objects.filter(
+            x.artist for x in EntityContribution.objects.filter(
                 song=self, composed=True)
         ]
 
     def translators(self):
         return [
-            x.artist
-            for x in EntityContribution.objects.filter(
+            x.artist for x in EntityContribution.objects.filter(
                 song=self, translated=True)
         ]
 
     def performers(self):
         return [
-            x.artist
-            for x in EntityContribution.objects.filter(
+            x.artist for x in EntityContribution.objects.filter(
                 song=self, performed=True)
         ]
 
@@ -281,10 +284,10 @@ class EntityContribution(models.Model):
     @staticmethod
     def head_contribution(contributions):
         candidates = (
-            [x for x in contributions
-             if x.texted] + [x for x in contributions if x.performed] +
-            [x for x in contributions
-             if x.composed] + [x for x in contributions if x.translated])
+            [x for x in contributions if x.texted] +
+            [x for x in contributions if x.performed] +
+            [x for x in contributions if x.composed] +
+            [x for x in contributions if x.translated])
         for cand in candidates:
             if cand.artist.featured:
                 return cand

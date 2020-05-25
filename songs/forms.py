@@ -11,11 +11,11 @@ class ArtistForm(forms.ModelForm):
         exclude = []
         widgets = {
             'born_on':
-            forms.DateInput(
-                format=('%d.%m.%Y'), attrs={'placeholder': 'DD.MM.RRRR'}),
+                forms.DateInput(
+                    format=('%d.%m.%Y'), attrs={'placeholder': 'DD.MM.RRRR'}),
             'died_on':
-            forms.DateInput(
-                format=('%d.%m.%Y'), attrs={'placeholder': 'DD.MM.RRRR'}),
+                forms.DateInput(
+                    format=('%d.%m.%Y'), attrs={'placeholder': 'DD.MM.RRRR'}),
         }
 
 
@@ -65,7 +65,8 @@ class SongNoteForm(forms.ModelForm):
         exclude = []
         widgets = {
             'date':
-            forms.widgets.DateInput(format='%Y-%m-%d', attrs={'type': 'date'}),
+                forms.widgets.DateInput(
+                    format='%Y-%m-%d', attrs={'type': 'date'}),
         }
 
     def set_song(self, song):

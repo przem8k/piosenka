@@ -25,16 +25,18 @@ class SongTest(GenericTestsMixin, TestCase):
         response = testing.get_user_client(user=user).post(
             reverse('add_song'), data=data)
         self.assertEqual(200, response.status_code)
-        self.assertFormError(response, 'form', 'title',
-                             'To pole jest wymagane.')
-        self.assertFormError(response, 'form', 'capo_fret',
-                             'To pole jest wymagane.')
-        self.assertFormError(response, 'form', 'lyrics',
-                             'To pole jest wymagane.')
-        self.assertFormsetError(response, 'entitycontribution', 0, 'artist',
-                                'To pole jest wymagane.')
-        self.assertFormsetError(response, 'entitycontribution', 0, None,
-                                'Zaznacz co najmniej jedną rolę artysty.')
+        self.assertFormError(
+            response, 'form', 'title', 'To pole jest wymagane.')
+        self.assertFormError(
+            response, 'form', 'capo_fret', 'To pole jest wymagane.')
+        self.assertFormError(
+            response, 'form', 'lyrics', 'To pole jest wymagane.')
+        self.assertFormsetError(
+            response, 'entitycontribution', 0, 'artist',
+            'To pole jest wymagane.')
+        self.assertFormsetError(
+            response, 'entitycontribution', 0, None,
+            'Zaznacz co najmniej jedną rolę artysty.')
 
     def test_add_song(self):
         user = testing.create_user()
@@ -55,7 +57,7 @@ class SongTest(GenericTestsMixin, TestCase):
         }
         response = testing.get_user_client(user=user).post(
             reverse('add_song'), data=data)
-        self.assertRedirects(response,
-                             '/opracowanie/' + artist.name + '-wlazlkotek/')
+        self.assertRedirects(
+            response, '/opracowanie/' + artist.name + '-wlazlkotek/')
         song = Song.objects.get(title='wlazlkotek')
         self.assertEqual('wlazl kotek na plotek', song.lyrics)

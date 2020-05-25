@@ -21,7 +21,8 @@ class Command(BaseCommand):
             '--dry-run',
             action='store_true',
             dest='dry_run',
-            help='Print commands instead of executing them.',)
+            help='Print commands instead of executing them.',
+        )
 
     def handle(self, *args, **options):
         # Workaround running from cron encoding problems. Is it still needed?
@@ -57,8 +58,9 @@ class Command(BaseCommand):
         command += ['--host=%s' % host]
         command += ['--port=%s' % port]
         command += ['--format=t']  # Use tarball backup format.
-        command += ['--clean'
-                   ]  # When restoring, start with cleaning the database.
+        command += [
+            '--clean'
+        ]  # When restoring, start with cleaning the database.
         command += ['--file=' + out_file_path]
         command += [db]
         if self.dry_run:

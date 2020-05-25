@@ -88,11 +88,10 @@ class CalendarView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        notes = filter_visible_to_user(SongNote.objects.all(),
-                                       self.request.user).filter(
-                                           date__isnull=False).exclude(
-                                               date_description='').exclude(
-                                                   image='').order_by('-date')
+        notes = filter_visible_to_user(
+            SongNote.objects.all(),
+            self.request.user).filter(date__isnull=False).exclude(
+                date_description='').exclude(image='').order_by('-date')
         context['notes'] = notes
         return context
 
@@ -136,8 +135,8 @@ class AddArtist(CreateView):
     def form_valid(self, form):
         ret = super().form_valid(form)
         messages.add_message(self.request, messages.INFO, 'Artysta dodany.')
-        _action_logger.info('%s added artist %s' % (self.request.user,
-                                                    form.instance))
+        _action_logger.info(
+            '%s added artist %s' % (self.request.user, form.instance))
         return ret
 
 
@@ -151,10 +150,10 @@ class EditArtist(GetArtistMixin, UpdateView):
 
     def form_valid(self, form):
         ret = super().form_valid(form)
-        messages.add_message(self.request, messages.INFO,
-                             'Zmiany zostały zapisane.')
-        _action_logger.info('%s edited artist %s' % (self.request.user,
-                                                     form.instance))
+        messages.add_message(
+            self.request, messages.INFO, 'Zmiany zostały zapisane.')
+        _action_logger.info(
+            '%s edited artist %s' % (self.request.user, form.instance))
         return ret
 
 
@@ -174,8 +173,8 @@ class ViewSong(GetSongMixin, ViewContentView):
         else:
             transposition = 0
         context['lyrics'] = render_lyrics(self.object.lyrics, transposition)
-        context['notes'] = SongNote.items_visible_to(self.request.user).filter(
-            song=self.object)
+        context['notes'] = SongNote.items_visible_to(
+            self.request.user).filter(song=self.object)
         context['mentions'] = SongMention.objects.filter(song=self.object)
         return context
 
@@ -340,8 +339,9 @@ class AddSongNote(AddContentView):
     def dispatch(self, *args, **kwargs):
         self.song = get_object_or_404(Song, slug=self.kwargs['slug'])
         if not self.song.reviewed:
-            raise Http404('Nie można dodać notki do piosenki zanim piosenka '
-                          'nie zostanie zatwierdzona.')
+            raise Http404(
+                'Nie można dodać notki do piosenki zanim piosenka '
+                'nie zostanie zatwierdzona.')
         return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):

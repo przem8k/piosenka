@@ -47,8 +47,9 @@ class ResetPassword(PasswordResetView):
     html_email_template_name = 'mail/password_reset.html'
 
     def form_valid(self, form):
-        messages.add_message(self.request, messages.INFO,
-                             'Dziękujemy. Sprawdź podany adres email.')
+        messages.add_message(
+            self.request, messages.INFO,
+            'Dziękujemy. Sprawdź podany adres email.')
         return super().form_valid(form)
 
 
@@ -57,8 +58,8 @@ class ConfirmPasswordReset(PasswordResetConfirmView):
     success_url = reverse_lazy('index')
 
     def form_valid(self, form):
-        messages.add_message(self.request, messages.INFO,
-                             'Dziękujemy. Hasło zostało zmienione.')
+        messages.add_message(
+            self.request, messages.INFO, 'Dziękujemy. Hasło zostało zmienione.')
         return super().form_valid(form)
 
 
@@ -114,10 +115,11 @@ class InviteView(CreateView):
         ret = super().form_valid(form)
 
         send_invitation_mail(form.instance)
-        messages.add_message(self.request, messages.INFO,
-                             'Zaproszenie wysłane.')
-        _action_logger.info('%s invited %s to join' %
-                            (self.request.user, form.instance.email_address))
+        messages.add_message(
+            self.request, messages.INFO, 'Zaproszenie wysłane.')
+        _action_logger.info(
+            '%s invited %s to join' %
+            (self.request.user, form.instance.email_address))
         return ret
 
     def get_success_url(self):

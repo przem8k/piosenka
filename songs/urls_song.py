@@ -5,7 +5,8 @@ from songs import views
 
 urlpatterns = [
     url(r'^dodaj/$', views.AddSong.as_view(), name='add_song'),
-    url(r'^(?P<slug>[-\w]+)/',
+    url(
+        r'^(?P<slug>[-\w]+)/',
         include(
             url_scheme.view_edit_review_approve(
                 'song', views.ViewSong, views.EditSong, views.ReviewSong,

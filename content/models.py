@@ -52,13 +52,14 @@ class ContentItem(models.Model):
         return self.is_live() or (user.is_active and user.is_authenticated)
 
     def can_be_edited_by(self, user):
-        return (user.is_active and user.is_authenticated and
-                (user == self.author or user.has_perm('content.review')))
+        return (
+            user.is_active and user.is_authenticated and
+            (user == self.author or user.has_perm('content.review')))
 
     def can_be_approved_by(self, user):
-        return (not self.is_live() and user.is_active and
-                user.is_authenticated and user.has_perm('content.review') and
-                user != self.author)
+        return (
+            not self.is_live() and user.is_active and user.is_authenticated and
+            user.has_perm('content.review') and user != self.author)
 
     def is_live(self):
         return self.reviewed

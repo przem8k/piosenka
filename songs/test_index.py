@@ -7,13 +7,14 @@ from songs.models import Artist, EntityContribution, Song
 
 class IndexTest(TestCase):
 
-    def add_contribution(self,
-                         song,
-                         artist,
-                         performed=False,
-                         texted=False,
-                         translated=False,
-                         composed=False):
+    def add_contribution(
+            self,
+            song,
+            artist,
+            performed=False,
+            texted=False,
+            translated=False,
+            composed=False):
         contribution = EntityContribution()
         contribution.song = song
         contribution.artist = artist

@@ -16,8 +16,8 @@ _REWRITE_LYRICS_END_TAG = r"<!-- rewrite-song-lyrics-end -->"
 
 def _rewrite_lyrics(match):
     template_name = 'songs/lyrics_example.html'
-    input_lyrics = '\n'.join(line.strip()
-                             for line in str(match.group(1)).split('\n'))
+    input_lyrics = '\n'.join(
+        line.strip() for line in str(match.group(1)).split('\n'))
     output_lyrics = render_lyrics(input_lyrics)
     return loader.get_template(template_name).render(
         Context({
@@ -38,9 +38,9 @@ class Command(BaseCommand):
                 with open(source_path, 'r') as source_file:
                     template = source_file.read()
 
-                result = re.sub(_REWRITE_LYRICS_BEGIN_TAG + r"((?s).*?)" +
-                                _REWRITE_LYRICS_END_TAG, _rewrite_lyrics,
-                                template)
+                result = re.sub(
+                    _REWRITE_LYRICS_BEGIN_TAG + r"((?s).*?)" +
+                    _REWRITE_LYRICS_END_TAG, _rewrite_lyrics, template)
 
                 with open(dest_path, 'w') as dest_file:
                     dest_file.write(result)

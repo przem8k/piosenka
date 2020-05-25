@@ -82,13 +82,21 @@ def parse_chord(chord):
     for start in range(1, len(rest)):
         suf = rest[start:]
         if suf.lower() in KNOWN_CHORD_TYPES:
-            return (rest[:start], suf, base_sound,)
+            return (
+                rest[:start],
+                suf,
+                base_sound,
+            )
 
     # Then check for a known prefix (base sound).
     for end in reversed(range(1, 4)):
         pref = rest[:end]
         if pref.lower() in KEY_TO_ORD:
-            return (pref, rest[end:], base_sound,)
+            return (
+                pref,
+                rest[end:],
+                base_sound,
+            )
 
     raise SyntaxError("I can't recognize the chord: " + chord)
 
@@ -172,7 +180,12 @@ def transpose_lyrics(parsed_lyrics, transposition):
                     transpose_sequence(bracketed, transposition))
             else:
                 transposed = transpose_sequence(chords, transposition)
-            section.append((text, transposed, is_indented,
-                            are_chords_replayed,))
+            section.append(
+                (
+                    text,
+                    transposed,
+                    is_indented,
+                    are_chords_replayed,
+                ))
         result.append(section)
     return result

@@ -15,7 +15,8 @@ class ExternalEventForm(forms.ModelForm):
         exclude = []
         widgets = {
             'starts_on':
-            forms.widgets.DateInput(format='%Y-%m-%d', attrs={'type': 'date'}),
+                forms.widgets.DateInput(
+                    format='%Y-%m-%d', attrs={'type': 'date'}),
         }
 
     def clean(self):

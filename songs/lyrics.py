@@ -88,8 +88,8 @@ def parse_lyrics(raw_lyrics):
                     are_chords_replayed = True
                 replay_index = replay_index + 1
 
-            current_section.append((textPart, chordsPart, indent,
-                                    are_chords_replayed))
+            current_section.append(
+                (textPart, chordsPart, indent, are_chords_replayed))
     if recorded_section is not None:
         recordings[recorded_section] = recorded_chords
         recorded_section = None
@@ -106,8 +106,7 @@ def contain_extra_chords(raw_lyrics):
     return False
 
 
-def render_lyrics(raw_lyrics,
-                  transposition=0,
-                  template_name='songs/lyrics.html'):
+def render_lyrics(
+        raw_lyrics, transposition=0, template_name='songs/lyrics.html'):
     lyrics = transpose_lyrics(parse_lyrics(raw_lyrics), transposition)
     return loader.get_template(template_name).render({'lyrics': lyrics})

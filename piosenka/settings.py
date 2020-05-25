@@ -8,17 +8,18 @@ if os.getenv('GAE_APPLICATION', None):
     DEBUG = False
 
     # App Engine's security features ensure that it is safe to
-    # have ALLOWED_HOSTS = ['*'] when the app is deployed. 
+    # have ALLOWED_HOSTS = ['*'] when the app is deployed.
     ALLOWED_HOSTS = ['*']
 
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.getenv('PIOSENKA_DB_NAME'),
-            'USER': os.getenv('PIOSENKA_DB_USER'),
-            'PASSWORD': os.getenv('PIOSENKA_DB_PASSWORD'),
-            'HOST': os.getenv('PIOSENKA_DB_HOST'),
-        }
+        'default':
+            {
+                'ENGINE': 'django.db.backends.postgresql_psycopg2',
+                'NAME': os.getenv('PIOSENKA_DB_NAME'),
+                'USER': os.getenv('PIOSENKA_DB_USER'),
+                'PASSWORD': os.getenv('PIOSENKA_DB_PASSWORD'),
+                'HOST': os.getenv('PIOSENKA_DB_HOST'),
+            }
     }
 
     SECRET_KEY = os.getenv('PIOSENKA_SECRET_KEY')
@@ -28,7 +29,7 @@ if os.getenv('GAE_APPLICATION', None):
     DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
     GS_BUCKET_NAME = os.getenv('PIOSENKA_GS_BUCKET_NAME')
     GS_LOCATION = os.getenv('PIOSENKA_GS_LOCATION')
-    GS_DEFAULT_ACL = 'publicRead' 
+    GS_DEFAULT_ACL = 'publicRead'
     MEDIA_URL = os.getenv('PIOSENKA_MEDIA_URL')
 
     THUMBNAIL_DEFAULT_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
@@ -41,10 +42,11 @@ if os.getenv('GAE_APPLICATION', None):
 else:
     DEBUG = True
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'piosenka.db',
-        }
+        'default':
+            {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': 'piosenka.db',
+            }
     }
     SECRET_KEY = 'piosenka-local-dev-not-really-secret'
     GOOGLE_API_BROWSER_KEY = ''
@@ -97,21 +99,21 @@ FILE_CHARSET = 'utf-8-sig'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(PROJECT_PATH, 'templates'),
-        ],
+        'DIRS': [os.path.join(PROJECT_PATH, 'templates'),],
         'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.contrib.auth.context_processors.auth',
-                'django.template.context_processors.debug',
-                'django.template.context_processors.media',
-                'django.template.context_processors.static',
-                'django.template.context_processors.request',
-                'django.contrib.messages.context_processors.messages',
-                'piosenka.context_processors.to_review',
-            ],
-        },
+        'OPTIONS':
+            {
+                'context_processors':
+                    [
+                        'django.contrib.auth.context_processors.auth',
+                        'django.template.context_processors.debug',
+                        'django.template.context_processors.media',
+                        'django.template.context_processors.static',
+                        'django.template.context_processors.request',
+                        'django.contrib.messages.context_processors.messages',
+                        'piosenka.context_processors.to_review',
+                    ],
+            },
     },
 ]
 
@@ -135,7 +137,8 @@ INSTALLED_APPS = (
     'songs',
     'events',
     'piosenka',
-    'content',)
+    'content',
+)
 
 THUMBNAIL_ALIASES = {
     'songs.Song': {
@@ -144,30 +147,32 @@ THUMBNAIL_ALIASES = {
             'upscale': True
         },
     },
-    'articles.Article.cover_image': {
-        'cover': {
-            'size': (600, 300),
-            'crop': True,
-            'upscale': True
+    'articles.Article.cover_image':
+        {
+            'cover': {
+                'size': (600, 300),
+                'crop': True,
+                'upscale': True
+            },
+            'coverthumb': {
+                'size': (420, 210),
+                'crop': True,
+                'upscale': True
+            },
         },
-        'coverthumb': {
-            'size': (420, 210),
-            'crop': True,
-            'upscale': True
-        },
-    },
     'songs.Artist.image': {
         'imagethumb': {
             'size': (0, 300),
             'upscale': True
         },
     },
-    'songs.ArtistNote.image': {
-        'imagethumb': {
-            'size': (0, 300),
-            'upscale': True
+    'songs.ArtistNote.image':
+        {
+            'imagethumb': {
+                'size': (0, 300),
+                'upscale': True
+            },
         },
-    },
     'songs.SongNote.image': {
         'imagethumb': {
             'size': (0, 300),
