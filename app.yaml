@@ -7,8 +7,8 @@ handlers:
   static_dir: static
 
 - url: /favicon\.ico
-  static_files: site_media/native/images/favicon.ico
-  upload: site_media/native/images/favicon\.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon\.ico
 
 # This handler routes all requests not caught above to your main app. It is
 # required when static routes are defined, but can be omitted (along with
