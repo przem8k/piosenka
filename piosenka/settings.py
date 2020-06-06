@@ -207,6 +207,8 @@ THUMBNAIL_ALIASES = {
 INTERNAL_IPS = ('127.0.0.1',)
 
 LOGIN_URL = reverse_lazy('hello')
+LOGIN_REDIRECT_URL = reverse_lazy('index')
+LOGOUT_REDIRECT_URL = reverse_lazy('index')
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 

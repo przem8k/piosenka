@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth.models import Group, User
 from django.contrib.auth.views import (PasswordResetConfirmView,
-                                       PasswordResetView, login, logout)
+                                       PasswordResetView)
 from django.http import Http404, HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.utils import timezone
@@ -17,24 +17,6 @@ from django.views.generic.edit import CreateView, FormView
 from piosenka.forms import InvitationForm, JoinForm
 from piosenka.mail import send_invitation_mail
 from piosenka.models import Invitation
-
-
-class Hello(FormView):
-    form_class = AuthenticationForm
-    template_name = 'hello.html'
-    success_url = reverse_lazy('index')
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        if self.request.GET and 'next' in self.request.GET:
-            context['next'] = self.request.GET['next']
-        return context
-
-    def form_valid(self, form):
-        login(self.request, form.get_user())
-        if self.request.GET and 'next' in self.request.GET:
-            return HttpResponseRedirect(self.request.GET['next'])
-        return super().form_valid(form)
 
 
 class ResetPassword(PasswordResetView):
@@ -59,13 +41,6 @@ class ConfirmPasswordReset(PasswordResetConfirmView):
         messages.add_message(
             self.request, messages.INFO, 'Dziękujemy. Hasło zostało zmienione.')
         return super().form_valid(form)
-
-
-class Goodbye(View):
-
-    def get(self, request, *args, **kwargs):
-        logout(request)
-        return HttpResponseRedirect(reverse_lazy('index'))
 
 
 class ChangePassword(FormView):

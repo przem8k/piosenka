@@ -1,11 +1,12 @@
 from django.conf.urls import url
+from django.contrib.auth import views as auth_views
 
 from piosenka import user_views
 
 urlpatterns = [
     url(r'^do-korekty/', user_views.ToReview.as_view(), name='to_review'),
-    url(r'^zaloguj/', user_views.Hello.as_view(), name='hello'),
-    url(r'^wyloguj/', user_views.Goodbye.as_view(), name='goodbye'),
+    url(r'^zaloguj/', auth_views.LoginView.as_view(template_name = 'hello.html'), name='hello'),
+    url(r'^wyloguj/', auth_views.LogoutView.as_view(), name='goodbye'),
     url(
         r'^zmien-haslo/',
         user_views.ChangePassword.as_view(),
