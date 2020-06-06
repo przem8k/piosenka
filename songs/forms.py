@@ -21,6 +21,10 @@ class ArtistForm(forms.ModelForm):
 
 class SongForm(forms.ModelForm):
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.artist_for_slug = None
+
     class Meta:
         model = models.Song
         exclude = []
@@ -30,6 +34,8 @@ class SongForm(forms.ModelForm):
 
     def clean(self):
         data = super().clean()
+        if not self.artist_for_slug:
+            raise forms.ValidationError("arist_for_slug not set")
         data['artist_for_slug'] = self.artist_for_slug
         return data
 
