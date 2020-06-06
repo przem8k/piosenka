@@ -139,8 +139,7 @@ class JoinView(FormView):
         user.groups.add(everyone_group)
 
         logging.info('%s joined' % user)
-        login(self.request, user)
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('index')
+        return reverse('hello')

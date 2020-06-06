@@ -118,7 +118,7 @@ class InvitationTest(TestCase):
         anonymous_client = testing.get_client()
         response = anonymous_client.post(
             invitation.get_invitation_url(), self._JOIN_DATA)
-        self.assertRedirects(response, reverse('index'))  # Redirect on success.
+        self.assertRedirects(response, reverse('hello'))  # Redirect on success.
 
         invitation.refresh_from_db()
         self.assertFalse(invitation.is_valid)
