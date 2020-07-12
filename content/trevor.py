@@ -1,10 +1,13 @@
 import json
 
-import markdown
 import bleach
+import markdown
 
+_BLEACH_ALLOWED_TAGS = [
+    'a', 'abbr', 'acronym', 'b', 'blockquote', 'code', 'em', 'i', 'li', 'ol',
+    'p', 'strong', 'ul'
+]
 
-_BLEACH_ALLOWED_TAGS = ['a', 'abbr', 'acronym', 'b', 'blockquote', 'code', 'em', 'i', 'li', 'ol', 'p', 'strong', 'ul']
 
 def render_trevor(trevor_data):
     parsed = json.loads(trevor_data)
@@ -41,8 +44,7 @@ def _quote_block(data):
     unique_tag = 'ThisIsAUniqueTag'
     # Append the tag before line breaks.
     text = data['text'].replace('\n', unique_tag + '\n')
-    return _render_markdown(
-        text).replace(unique_tag, '<br />')
+    return _render_markdown(text).replace(unique_tag, '<br />')
 
 
 def _heading_block(data):

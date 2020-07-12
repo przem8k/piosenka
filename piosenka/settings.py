@@ -48,14 +48,15 @@ else:
     DEBUG = True
     if os.getenv('PROXY_TO_PROD'):
         DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.postgresql',
-                'HOST': '127.0.0.1',
-                'PORT': '3306',
-                'NAME': os.getenv('PIOSENKA_DB_NAME'),
-                'USER': os.getenv('PIOSENKA_DB_USER'),
-                'PASSWORD': os.getenv('PIOSENKA_DB_PASSWORD'),
-            }
+            'default':
+                {
+                    'ENGINE': 'django.db.backends.postgresql',
+                    'HOST': '127.0.0.1',
+                    'PORT': '3306',
+                    'NAME': os.getenv('PIOSENKA_DB_NAME'),
+                    'USER': os.getenv('PIOSENKA_DB_USER'),
+                    'PASSWORD': os.getenv('PIOSENKA_DB_PASSWORD'),
+                }
         }
     else:
         # local sqllite file
@@ -76,7 +77,8 @@ else:
     EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
     EMAIL_FILE_PATH = '/tmp/django-emails'
 
-PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY = os.getenv('PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY')
+PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY = os.getenv(
+    'PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY')
 
 USE_TZ = True
 TIME_ZONE = 'Europe/Warsaw'

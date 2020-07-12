@@ -1,9 +1,9 @@
-from datetime import date
 import logging
+from datetime import date
 
+import geocoder
 from django import forms
 from django.conf import settings
-import geocoder
 
 from events.models import ExternalEvent
 
@@ -30,8 +30,12 @@ class ExternalEventForm(forms.ModelForm):
         if 'town' in cleaned_data:
             try:
                 if not settings.PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY:
-                    logging.warning('PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY not set')
-                g = geocoder.google(cleaned_data['town'], components="country:PL", key=settings.PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY)
+                    logging.warning(
+                        'PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY not set')
+                g = geocoder.google(
+                    cleaned_data['town'],
+                    components="country:PL",
+                    key=settings.PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY)
 
                 cleaned_data['lat'] = g.latlng[0]
                 cleaned_data['lon'] = g.latlng[1]

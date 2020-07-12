@@ -5,7 +5,10 @@ from piosenka import user_views
 
 urlpatterns = [
     url(r'^do-korekty/', user_views.ToReview.as_view(), name='to_review'),
-    url(r'^zaloguj/', auth_views.LoginView.as_view(template_name = 'hello.html'), name='hello'),
+    url(
+        r'^zaloguj/',
+        auth_views.LoginView.as_view(template_name='hello.html'),
+        name='hello'),
     url(r'^wyloguj/', auth_views.LogoutView.as_view(), name='goodbye'),
     url(
         r'^zmien-haslo/',
