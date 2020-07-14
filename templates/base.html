@@ -45,6 +45,10 @@
       </div>
 
       <div class="collapse navbar-collapse navbar-ex1-collapse site-nav">
+        <div class="navbar-right search pzt-collapsed-navbar-search">
+          <input type="text" class="form-control" placeholder="Jałta, Rublow, Epitafium dla ...">
+        </div>
+        
         <ul class="nav navbar-nav">
           <li><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
           <li><a href="/blog/" title="Blog"><span>Blog</span></a></li>
@@ -85,7 +89,7 @@
           </ul>
           </li>
         </ul>
-        <div class="navbar-right search">
+        <div class="navbar-right search pzt-expanded-navbar-search">
           <input type="text" class="form-control" placeholder="Jałta, Rublow, Epitafium dla ...">
         </div>
       </div>
@@ -172,7 +176,7 @@
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) {return;}
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+      js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>

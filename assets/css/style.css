@@ -36,6 +36,27 @@ h2 {
     padding: 0;
 }
 
+.pzt-collapsed-navbar-search {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .pzt-collapsed-navbar-search {
+        display: none;
+    }
+}
+
+.pzt-expanded-navbar-search {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .pzt-expanded-navbar-search {
+        display: block;
+    }
+}
+
 /* push lightbox away from the navbar */
 
 .lum-lightbox {
