@@ -4,7 +4,6 @@ from content.models import ContentItem
 
 
 class ContentItemTest(TestCase):
-
     def test_is_live(self):
         item = ContentItem()
 

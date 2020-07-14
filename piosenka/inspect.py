@@ -8,15 +8,14 @@ from django.views.generic import TemplateView
 
 
 class InspectPermissions(TemplateView):
-    template_name = 'inspect_permissions.html'
+    template_name = "inspect_permissions.html"
 
     @method_decorator(login_required)
-    @method_decorator(
-        permission_required('piosenka.inspect', raise_exception=True))
+    @method_decorator(permission_required("piosenka.inspect", raise_exception=True))
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['users'] = User.objects.all()
+        context["users"] = User.objects.all()
         return context

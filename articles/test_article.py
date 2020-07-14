@@ -12,10 +12,10 @@ class ArticleTest(GenericTestsMixin, TestCase):
 
     @overrides(GenericTestsMixin)
     def get_add_url(self):
-        return reverse('add_article')
+        return reverse("add_article")
 
     def test_article_index(self):
-        response = testing.get_public_client().get(reverse('articles'))
+        response = testing.get_public_client().get(reverse("articles"))
         self.assertEqual(200, response.status_code)
 
         author = testing.create_user()
@@ -27,14 +27,14 @@ class ArticleTest(GenericTestsMixin, TestCase):
         article_b.reviewed = False
         article_b.save()
 
-        response = testing.get_public_client().get(reverse('articles'))
+        response = testing.get_public_client().get(reverse("articles"))
         self.assertEqual(200, response.status_code)
-        self.assertEqual(1, len(response.context['articles']))
+        self.assertEqual(1, len(response.context["articles"]))
 
-        response = testing.get_user_client(author).get(reverse('articles'))
+        response = testing.get_user_client(author).get(reverse("articles"))
         self.assertEqual(200, response.status_code)
-        self.assertEqual(2, len(response.context['articles']))
+        self.assertEqual(2, len(response.context["articles"]))
 
-        response = testing.get_user_client().get(reverse('articles'))
+        response = testing.get_user_client().get(reverse("articles"))
         self.assertEqual(200, response.status_code)
-        self.assertEqual(2, len(response.context['articles']))
+        self.assertEqual(2, len(response.context["articles"]))

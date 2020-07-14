@@ -12,8 +12,13 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from articles.models import SongMention
 from content.models import filter_visible_to_user
-from content.views import (AddContentView, ApproveContentView, EditContentView,
-                           ReviewContentView, ViewContentView)
+from content.views import (
+    AddContentView,
+    ApproveContentView,
+    EditContentView,
+    ReviewContentView,
+    ViewContentView,
+)
 from songs import forms
 from songs.lyrics import render_lyrics
 from songs.models import Artist, ArtistNote, EntityContribution, Song, SongNote
@@ -40,168 +45,179 @@ I jeszcze jeden i jeszcze raz
 
 
 class GetSongMixin(object):
-
     def get_object(self):
-        return get_object_or_404(Song, slug=self.kwargs['slug'])
+        return get_object_or_404(Song, slug=self.kwargs["slug"])
 
 
 class GetArtistMixin(object):
-
     def get_object(self):
-        return get_object_or_404(Artist, slug=self.kwargs['slug'])
+        return get_object_or_404(Artist, slug=self.kwargs["slug"])
 
 
 class SongbookMenuMixin(object):
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['bards'] = Artist.objects.filter(
-            featured=True, category=Artist.CAT_TEXTER)
-        context['composers'] = Artist.objects.filter(
-            featured=True, category=Artist.CAT_COMPOSER)
-        context['foreigners'] = Artist.objects.filter(
-            featured=True, category=Artist.CAT_FOREIGN)
-        context['bands'] = Artist.objects.filter(
-            featured=True, category=Artist.CAT_BAND)
+        context["bards"] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_TEXTER
+        )
+        context["composers"] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_COMPOSER
+        )
+        context["foreigners"] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_FOREIGN
+        )
+        context["bands"] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_BAND
+        )
         return context
 
 
 class IndexView(SongbookMenuMixin, TemplateView):
-    template_name = 'songs/index.html'
+    template_name = "songs/index.html"
     HERO_ARTIST_COUNT = 6
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        hero_artists = Artist.objects.filter(
-            cover_note__isnull=False,
-            cover_note__reviewed=True).exclude(cover_note__image='').annotate(
-                num_songs=Count('entitycontribution')).order_by(
-                    '-num_songs')[:IndexView.HERO_ARTIST_COUNT]
-        context['hero_artists'] = hero_artists
+        hero_artists = (
+            Artist.objects.filter(cover_note__isnull=False, cover_note__reviewed=True)
+            .exclude(cover_note__image="")
+            .annotate(num_songs=Count("entitycontribution"))
+            .order_by("-num_songs")[: IndexView.HERO_ARTIST_COUNT]
+        )
+        context["hero_artists"] = hero_artists
         return context
 
 
 class CalendarView(TemplateView):
-    template_name = 'songs/calendar.html'
+    template_name = "songs/calendar.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        notes = filter_visible_to_user(
-            SongNote.objects.all(),
-            self.request.user).filter(date__isnull=False).exclude(
-                date_description='').exclude(image='').order_by('-date')
-        context['notes'] = notes
+        notes = (
+            filter_visible_to_user(SongNote.objects.all(), self.request.user)
+            .filter(date__isnull=False)
+            .exclude(date_description="")
+            .exclude(image="")
+            .order_by("-date")
+        )
+        context["notes"] = notes
         return context
 
 
 class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
     """Lists the songs associated with the given artist."""
+
     model = Artist
-    context_object_name = 'artist'
-    template_name = 'songs/artist.html'
+    context_object_name = "artist"
+    template_name = "songs/artist.html"
 
     def dispatch(self, *args, **kwargs):
         artist = self.get_object()
         if not artist.featured and not self.request.user.is_authenticated:
-            return HttpResponsePermanentRedirect(reverse('songbook'))
+            return HttpResponsePermanentRedirect(reverse("songbook"))
         return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
         artist = self.get_object()
         relevant_contributions = EntityContribution.objects.filter(
-            song=OuterRef('pk'), artist=artist)
-        songs = filter_visible_to_user(
-            Song.objects.all(), self.request.user).annotate(
-                relevant=Exists(relevant_contributions)).filter(
-                    relevant=True).annotate(num_notes=Count('songnote'))
+            song=OuterRef("pk"), artist=artist
+        )
+        songs = (
+            filter_visible_to_user(Song.objects.all(), self.request.user)
+            .annotate(relevant=Exists(relevant_contributions))
+            .filter(relevant=True)
+            .annotate(num_notes=Count("songnote"))
+        )
         context = super().get_context_data(**kwargs)
-        context['songs'] = songs
-        context['artist'] = artist
-        context['notes'] = ArtistNote.items_visible_to(
-            self.request.user).filter(artist=self.object)
+        context["songs"] = songs
+        context["artist"] = artist
+        context["notes"] = ArtistNote.items_visible_to(self.request.user).filter(
+            artist=self.object
+        )
         return context
 
 
 class AddArtist(CreateView):
     model = Artist
     form_class = forms.ArtistForm
-    template_name = 'songs/add_edit_artist.html'
+    template_name = "songs/add_edit_artist.html"
 
     def get_success_url(self):
         return self.object.get_absolute_url()
 
     def form_valid(self, form):
         ret = super().form_valid(form)
-        messages.add_message(self.request, messages.INFO, 'Artysta dodany.')
-        logging.info('%s added artist %s' % (self.request.user, form.instance))
+        messages.add_message(self.request, messages.INFO, "Artysta dodany.")
+        logging.info("%s added artist %s" % (self.request.user, form.instance))
         return ret
 
 
 class EditArtist(GetArtistMixin, UpdateView):
     model = Artist
     form_class = forms.ArtistForm
-    template_name = 'songs/add_edit_artist.html'
+    template_name = "songs/add_edit_artist.html"
 
     def get_success_url(self):
         return self.object.get_absolute_url()
 
     def form_valid(self, form):
         ret = super().form_valid(form)
-        messages.add_message(
-            self.request, messages.INFO, 'Zmiany zostały zapisane.')
-        logging.info('%s edited artist %s' % (self.request.user, form.instance))
+        messages.add_message(self.request, messages.INFO, "Zmiany zostały zapisane.")
+        logging.info("%s edited artist %s" % (self.request.user, form.instance))
         return ret
 
 
 class ViewSong(GetSongMixin, ViewContentView):
     """ Displays a song by default, returns transposed lyrics part in json if
     asked. """
+
     model = Song
-    context_object_name = 'song'
-    template_name = 'songs/song.html'
+    context_object_name = "song"
+    template_name = "songs/song.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        if 'transposition' in self.kwargs:
-            context['json'] = True
-            transposition = int(self.kwargs['transposition'])
-            context['transposition'] = transposition
+        if "transposition" in self.kwargs:
+            context["json"] = True
+            transposition = int(self.kwargs["transposition"])
+            context["transposition"] = transposition
         else:
             transposition = 0
-        context['lyrics'] = render_lyrics(self.object.lyrics, transposition)
-        context['notes'] = SongNote.items_visible_to(
-            self.request.user).filter(song=self.object)
-        context['mentions'] = SongMention.objects.filter(song=self.object)
+        context["lyrics"] = render_lyrics(self.object.lyrics, transposition)
+        context["notes"] = SongNote.items_visible_to(self.request.user).filter(
+            song=self.object
+        )
+        context["mentions"] = SongMention.objects.filter(song=self.object)
         return context
 
     def render_to_response(self, context):
-        if context.get('json'):
+        if context.get("json"):
             return self.get_lyrics_as_json(context)
         return super().render_to_response(context)
 
     def get_lyrics_as_json(self, context):
         payload = {
-            'lyrics': context['lyrics'],
-            'transposition': context['transposition']
+            "lyrics": context["lyrics"],
+            "transposition": context["transposition"],
         }
-        return HttpResponse(
-            json.dumps(payload), content_type='application/json')
+        return HttpResponse(json.dumps(payload), content_type="application/json")
 
 
 class ContributionFormsetMixin(object):
     """Manages inline formset of song contributions."""
 
     def dispatch(self, *args, **kwargs):
-        if self.request.method == 'POST':
+        if self.request.method == "POST":
             self.formset = forms.ContributionFormSet(
-                self.request.POST, instance=self.get_object())
+                self.request.POST, instance=self.get_object()
+            )
         else:
             self.formset = forms.ContributionFormSet(instance=self.get_object())
         return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['entitycontribution'] = self.formset
+        context["entitycontribution"] = self.formset
         return context
 
     def post(self, request, *args, **kwargs):
@@ -213,8 +229,7 @@ class ContributionFormsetMixin(object):
             return self.form_invalid(form)
 
         # Pick head contribution to put into the slug.
-        head = EntityContribution.head_contribution(
-            [x.instance for x in self.formset])
+        head = EntityContribution.head_contribution([x.instance for x in self.formset])
         assert head
         form.set_artist_for_slug(head.artist.__str__())
 
@@ -233,10 +248,10 @@ class ContributionFormsetMixin(object):
 class AddSong(ContributionFormsetMixin, AddContentView):
     model = Song
     form_class = forms.SongForm
-    template_name = 'songs/add_edit_song.html'
+    template_name = "songs/add_edit_song.html"
 
     def get_initial(self):
-        return {'lyrics': INITIAL_LYRICS}
+        return {"lyrics": INITIAL_LYRICS}
 
     def get_success_url(self):
         return self.object.get_absolute_url()
@@ -245,7 +260,7 @@ class AddSong(ContributionFormsetMixin, AddContentView):
 class EditSong(GetSongMixin, ContributionFormsetMixin, EditContentView):
     model = Song
     form_class = forms.SongForm
-    template_name = 'songs/add_edit_song.html'
+    template_name = "songs/add_edit_song.html"
 
     def get_success_url(self):
         return self.object.get_absolute_url()
@@ -262,19 +277,19 @@ class ApproveSong(GetSongMixin, ApproveContentView):
 class AddArtistNote(AddContentView):
     model = ArtistNote
     form_class = forms.ArtistNoteForm
-    template_name = 'songs/add_edit_artist_note.html'
+    template_name = "songs/add_edit_artist_note.html"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.artist = None
 
     def dispatch(self, *args, **kwargs):
-        self.artist = get_object_or_404(Artist, slug=self.kwargs['slug'])
+        self.artist = get_object_or_404(Artist, slug=self.kwargs["slug"])
         return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['artist'] = self.artist
+        context["artist"] = self.artist
         return context
 
     def post(self, request, *args, **kwargs):
@@ -291,15 +306,14 @@ class AddArtistNote(AddContentView):
 
 
 class GetArtistNoteMixin(object):
-
     def get_object(self):
-        return get_object_or_404(ArtistNote, slug=self.kwargs['slug'])
+        return get_object_or_404(ArtistNote, slug=self.kwargs["slug"])
 
 
 class EditArtistNote(GetArtistNoteMixin, EditContentView):
     model = ArtistNote
     form_class = forms.ArtistNoteForm
-    template_name = 'songs/add_edit_artist_note.html'
+    template_name = "songs/add_edit_artist_note.html"
 
     # TODO: deduplicate w/ above
     def post(self, request, *args, **kwargs):
@@ -326,23 +340,24 @@ class ApproveArtistNote(GetArtistNoteMixin, ApproveContentView):
 class AddSongNote(AddContentView):
     model = SongNote
     form_class = forms.SongNoteForm
-    template_name = 'songs/add_edit_song_note.html'
+    template_name = "songs/add_edit_song_note.html"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.song = None
 
     def dispatch(self, *args, **kwargs):
-        self.song = get_object_or_404(Song, slug=self.kwargs['slug'])
+        self.song = get_object_or_404(Song, slug=self.kwargs["slug"])
         if not self.song.reviewed:
             raise Http404(
-                'Nie można dodać notki do piosenki zanim piosenka '
-                'nie zostanie zatwierdzona.')
+                "Nie można dodać notki do piosenki zanim piosenka "
+                "nie zostanie zatwierdzona."
+            )
         return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['song'] = self.song
+        context["song"] = self.song
         return context
 
     def post(self, request, *args, **kwargs):
@@ -359,15 +374,14 @@ class AddSongNote(AddContentView):
 
 
 class GetSongNoteMixin(object):
-
     def get_object(self):
-        return get_object_or_404(SongNote, slug=self.kwargs['slug'])
+        return get_object_or_404(SongNote, slug=self.kwargs["slug"])
 
 
 class EditSongNote(GetSongNoteMixin, EditContentView):
     model = SongNote
     form_class = forms.SongNoteForm
-    template_name = 'songs/add_edit_song_note.html'
+    template_name = "songs/add_edit_song_note.html"
 
     # TODO: deduplicate w/ above
     def post(self, request, *args, **kwargs):

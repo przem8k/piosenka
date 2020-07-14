@@ -14,8 +14,8 @@ class SlugLogicMixin(object):
 
     # TODO: make private?
     def make_slug(self, slug_elements):
-        normalized_string = unidecode(' '.join(slug_elements))
-        max_length = self._meta.get_field('slug').max_length
+        normalized_string = unidecode(" ".join(slug_elements))
+        max_length = self._meta.get_field("slug").max_length
         return slugify(normalized_string)[:max_length]
 
     def get_slug(self):
@@ -27,10 +27,11 @@ class SlugLogicMixin(object):
 
         if not self.pk and self.__class__.objects.filter(slug=self.slug):
             raise ValidationError(
-                'Materiał o takich parametrach już jest bazie. '
-                'Upewnij się, że nie dodajesz przypadkiem duplikatu. '
-                'Jeśli chodzi o piosenkę, możesz użyć wyróżnika '
-                'aby wskazać, że to inna piosenka.')
+                "Materiał o takich parametrach już jest bazie. "
+                "Upewnij się, że nie dodajesz przypadkiem duplikatu. "
+                "Jeśli chodzi o piosenkę, możesz użyć wyróżnika "
+                "aby wskazać, że to inna piosenka."
+            )
         return super().clean()
 
 

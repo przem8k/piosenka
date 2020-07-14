@@ -14,16 +14,13 @@ class EditReviewApprove(object):
         raise NotImplementedError
 
     def get_edit_url(self):
-        return reverse(
-            'edit_' + self.get_url_name(), kwargs=self.get_url_params())
+        return reverse("edit_" + self.get_url_name(), kwargs=self.get_url_params())
 
     def get_review_url(self):
-        return reverse(
-            'review_' + self.get_url_name(), kwargs=self.get_url_params())
+        return reverse("review_" + self.get_url_name(), kwargs=self.get_url_params())
 
     def get_approve_url(self):
-        return reverse(
-            'approve_' + self.get_url_name(), kwargs=self.get_url_params())
+        return reverse("approve_" + self.get_url_name(), kwargs=self.get_url_params())
 
 
 class ViewEditReviewApprove(EditReviewApprove):
@@ -33,8 +30,7 @@ class ViewEditReviewApprove(EditReviewApprove):
     """
 
     def get_absolute_url(self):
-        return reverse(
-            'view_' + self.get_url_name(), kwargs=self.get_url_params())
+        return reverse("view_" + self.get_url_name(), kwargs=self.get_url_params())
 
 
 def edit_review_approve(name, edit, review, approve):
@@ -43,14 +39,14 @@ def edit_review_approve(name, edit, review, approve):
     Three views are suitable for notes, which do not have their own view view.
     """
     return [
-        url(r'^edytuj/$', edit.as_view(), name='edit_' + name),
-        url(r'^korekta/$', review.as_view(), name='review_' + name),
-        url(r'^zatwierdz/$', approve.as_view(), name='approve_' + name),
+        url(r"^edytuj/$", edit.as_view(), name="edit_" + name),
+        url(r"^korekta/$", review.as_view(), name="review_" + name),
+        url(r"^zatwierdz/$", approve.as_view(), name="approve_" + name),
     ]
 
 
 def view_edit_review_approve(name, view, edit, review, approve):
     """Returns the standard scheme of four views for a content item type."""
-    return [
-        url(r'^$', view.as_view(), name='view_' + name),
-    ] + edit_review_approve(name, edit, review, approve)
+    return [url(r"^$", view.as_view(), name="view_" + name),] + edit_review_approve(
+        name, edit, review, approve
+    )

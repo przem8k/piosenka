@@ -43,7 +43,7 @@ class ContentItem(models.Model):
 
     @classmethod
     def items_reviewable_by(cls, user):
-        if user and user.is_authenticated and user.has_perm('content.review'):
+        if user and user.is_authenticated and user.has_perm("content.review"):
             return cls.objects.filter(reviewed=False).exclude(author=user)
         else:
             return []
@@ -53,13 +53,19 @@ class ContentItem(models.Model):
 
     def can_be_edited_by(self, user):
         return (
-            user.is_active and user.is_authenticated and
-            (user == self.author or user.has_perm('content.review')))
+            user.is_active
+            and user.is_authenticated
+            and (user == self.author or user.has_perm("content.review"))
+        )
 
     def can_be_approved_by(self, user):
         return (
-            not self.is_live() and user.is_active and user.is_authenticated and
-            user.has_perm('content.review') and user != self.author)
+            not self.is_live()
+            and user.is_active
+            and user.is_authenticated
+            and user.has_perm("content.review")
+            and user != self.author
+        )
 
     def is_live(self):
         return self.reviewed
@@ -73,23 +79,27 @@ def filter_visible_to_user(query_set, user):
 
 class Note(SlugFieldMixin, ContentItem):
     """Represents a note complementing the information from a main item."""
-    HELP_TITLE = 'Tytuł adnotacji.'
-    HELP_IMAGE = 'Ilustracja.'
-    HELP_IMAGE_URL = 'Źródło zdjęcia (adres www).'
-    HELP_IMAGE_AUTHOR = 'Źródło zdjęcia (autor).'
-    HELP_IMAGE_LICENSE = 'Źródło zdjęcia (licencja).'
-    HELP_TEXT = 'Treść adnotacji.'
-    HELP_SOURCE_URL = 'Źródło (adres www).'
-    HELP_SOURCE_REF = 'Źródło (nazwa i autor publikacji).'
+
+    HELP_TITLE = "Tytuł adnotacji."
+    HELP_IMAGE = "Ilustracja."
+    HELP_IMAGE_URL = "Źródło zdjęcia (adres www)."
+    HELP_IMAGE_AUTHOR = "Źródło zdjęcia (autor)."
+    HELP_IMAGE_LICENSE = "Źródło zdjęcia (licencja)."
+    HELP_TEXT = "Treść adnotacji."
+    HELP_SOURCE_URL = "Źródło (adres www)."
+    HELP_SOURCE_REF = "Źródło (nazwa i autor publikacji)."
 
     title = models.CharField(max_length=100, help_text=HELP_TITLE)
     image = models.ImageField(
-        null=True, blank=True, upload_to='notes', help_text=HELP_IMAGE)
+        null=True, blank=True, upload_to="notes", help_text=HELP_IMAGE
+    )
     image_url = models.URLField(null=True, blank=True, help_text=HELP_IMAGE_URL)
     image_author = models.CharField(
-        null=True, blank=True, max_length=50, help_text=HELP_IMAGE_AUTHOR)
+        null=True, blank=True, max_length=50, help_text=HELP_IMAGE_AUTHOR
+    )
     image_license = models.CharField(
-        null=True, blank=True, max_length=50, help_text=HELP_IMAGE_LICENSE)
+        null=True, blank=True, max_length=50, help_text=HELP_IMAGE_LICENSE
+    )
     text_trevor = models.TextField(help_text=HELP_TEXT)
     text_html = models.TextField(editable=False)
     url1 = models.URLField(null=True, blank=True, help_text=HELP_SOURCE_URL)
@@ -110,7 +120,7 @@ class Note(SlugFieldMixin, ContentItem):
         return self.slug
 
     def get_absolute_url(self):
-        return self.get_parent().get_absolute_url() + '#' + self.get_id()
+        return self.get_parent().get_absolute_url() + "#" + self.get_id()
 
     def save(self, *args, **kwargs):
         self.text_html = trevor.render_trevor(self.text_trevor)
@@ -127,4 +137,4 @@ class Permissions(models.Model):
     """
 
     class Meta:
-        permissions = [('review', 'Can review content items.')]
+        permissions = [("review", "Can review content items.")]

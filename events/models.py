@@ -18,11 +18,10 @@ class Performer(SlugFieldMixin, models.Model):
 
     name = models.CharField(max_length=50, help_text=HELP_NAME)
     website = models.URLField(null=True, blank=True)
-    fb_page_id = models.CharField(
-        max_length=100, unique=True, null=True, blank=True)
+    fb_page_id = models.CharField(max_length=100, unique=True, null=True, blank=True)
 
     class Meta:
-        ordering = ['name']
+        ordering = ["name"]
 
     @staticmethod
     def create_for_testing():
@@ -36,7 +35,7 @@ class Performer(SlugFieldMixin, models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return urls.reverse('view_performer', kwargs={'slug': self.slug})
+        return urls.reverse("view_performer", kwargs={"slug": self.slug})
 
     @overrides(SlugFieldMixin)
     def get_slug_elements(self):
@@ -44,18 +43,19 @@ class Performer(SlugFieldMixin, models.Model):
 
 
 class ExternalEvent(models.Model):
-    HELP_NAME = 'Nazwa wydarzenia, w tym występujący artysta lub zespół.'
-    HELP_STARTS_ON = 'Data rozpoczęcia wydarzenia.'
-    HELP_URL = 'Strona internetowa wydarzenia (może być na Facebooku).'
-    HELP_TOWN = 'Miejscowość w którym odbywa się wydarzenie.'
+    HELP_NAME = "Nazwa wydarzenia, w tym występujący artysta lub zespół."
+    HELP_STARTS_ON = "Data rozpoczęcia wydarzenia."
+    HELP_URL = "Strona internetowa wydarzenia (może być na Facebooku)."
+    HELP_TOWN = "Miejscowość w którym odbywa się wydarzenie."
 
-    name = models.CharField(
-        max_length=100, help_text=HELP_NAME, verbose_name='Nazwa')
+    name = models.CharField(max_length=100, help_text=HELP_NAME, verbose_name="Nazwa")
     starts_on = models.DateField(
-        help_text=HELP_STARTS_ON, verbose_name='Dzień rozpoczęcia')
-    url = models.URLField(help_text=HELP_URL, verbose_name='Strona internetowa')
+        help_text=HELP_STARTS_ON, verbose_name="Dzień rozpoczęcia"
+    )
+    url = models.URLField(help_text=HELP_URL, verbose_name="Strona internetowa")
     town = models.CharField(
-        max_length=100, help_text=HELP_TOWN, verbose_name='Miejscowość')
+        max_length=100, help_text=HELP_TOWN, verbose_name="Miejscowość"
+    )
     lat = models.FloatField(blank=True, null=True)
     lon = models.FloatField(blank=True, null=True)
 
@@ -66,13 +66,13 @@ class ExternalEvent(models.Model):
         return self.url
 
     def get_edit_url(self):
-        return reverse('edit_external_event', kwargs=self.get_url_params())
+        return reverse("edit_external_event", kwargs=self.get_url_params())
 
     def get_delete_url(self):
-        return reverse('delete_external_event', kwargs=self.get_url_params())
+        return reverse("delete_external_event", kwargs=self.get_url_params())
 
     def get_url_params(self):
-        return {'pk': self.pk}
+        return {"pk": self.pk}
 
     def external_source(self):
         return True

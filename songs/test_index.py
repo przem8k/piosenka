@@ -6,15 +6,15 @@ from songs.models import Artist, EntityContribution, Song
 
 
 class IndexTest(TestCase):
-
     def add_contribution(
-            self,
-            song,
-            artist,
-            performed=False,
-            texted=False,
-            translated=False,
-            composed=False):
+        self,
+        song,
+        artist,
+        performed=False,
+        texted=False,
+        translated=False,
+        composed=False,
+    ):
         contribution = EntityContribution()
         contribution.song = song
         contribution.artist = artist
@@ -25,7 +25,7 @@ class IndexTest(TestCase):
         contribution.save()
 
     def test_songbook_index(self):
-        response = testing.get_public_client().get(reverse('songbook'))
+        response = testing.get_public_client().get(reverse("songbook"))
         self.assertEqual(200, response.status_code)
 
     def test_entity_index(self):
@@ -46,18 +46,16 @@ class IndexTest(TestCase):
         jolene.save()
 
         # General public should see only Jolene.
-        response = testing.get_public_client().get(
-            jack_white.get_absolute_url())
+        response = testing.get_public_client().get(jack_white.get_absolute_url())
         self.assertEqual(200, response.status_code)
-        self.assertEqual(1, len(response.context['songs']))
+        self.assertEqual(1, len(response.context["songs"]))
 
         # The author should see both.
-        response = testing.get_user_client(author).get(
-            jack_white.get_absolute_url())
+        response = testing.get_user_client(author).get(jack_white.get_absolute_url())
         self.assertEqual(200, response.status_code)
-        self.assertEqual(2, len(response.context['songs']))
+        self.assertEqual(2, len(response.context["songs"]))
 
         # Any logged-in user should see both, too.
         response = testing.get_user_client().get(jack_white.get_absolute_url())
         self.assertEqual(200, response.status_code)
-        self.assertEqual(2, len(response.context['songs']))
+        self.assertEqual(2, len(response.context["songs"]))

@@ -27,7 +27,6 @@ class ViewContentView(DetailView):
 
 
 class AddContentView(CreateView):
-
     def get_object(self):
         return None
 
@@ -44,14 +43,13 @@ class AddContentView(CreateView):
         except Exception:
             pass
         messages.add_message(
-            self.request, messages.INFO,
-            'Materiał dodany, oczekuje na korektę.')
-        logging.info('%s added %s' % (self.request.user, form.instance))
+            self.request, messages.INFO, "Materiał dodany, oczekuje na korektę."
+        )
+        logging.info("%s added %s" % (self.request.user, form.instance))
         return ret
 
 
 class EditContentView(UpdateView):
-
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         item = self.get_object()
@@ -62,7 +60,7 @@ class EditContentView(UpdateView):
 
     def form_valid(self, form):
         ret = super().form_valid(form)
-        logging.info('%s edited %s' % (self.request.user, form.instance))
+        logging.info("%s edited %s" % (self.request.user, form.instance))
         return ret
 
 
@@ -74,6 +72,7 @@ class ReviewContentView(RedirectView):
     Requirements for impl:
      - self.get_object() has to return the content item
     """
+
     permanent = False
 
     @method_decorator(login_required)
@@ -84,21 +83,25 @@ class ReviewContentView(RedirectView):
         item = self.get_object()
         if item.is_live():
             messages.add_message(
-                self.request, messages.INFO,
-                'Materiał został już wcześniej zatwierdzony.')
+                self.request,
+                messages.INFO,
+                "Materiał został już wcześniej zatwierdzony.",
+            )
             return item.get_absolute_url()
 
         if not item.can_be_approved_by(self.request.user):
             messages.add_message(
-                self.request, messages.INFO,
-                'Ten materiał nie może być zatwierdzony przez '
-                'Ciebie.')
+                self.request,
+                messages.INFO,
+                "Ten materiał nie może być zatwierdzony przez " "Ciebie.",
+            )
             return item.get_absolute_url()
 
         messages.add_message(
-            self.request, messages.INFO,
-            'Edytuj lub zatwierdź materiał przy pomocy linków '
-            'na dole strony.')
+            self.request,
+            messages.INFO,
+            "Edytuj lub zatwierdź materiał przy pomocy linków " "na dole strony.",
+        )
         return item.get_absolute_url()
 
 
@@ -108,6 +111,7 @@ class ApproveContentView(RedirectView):
     Requirements for impl:
      - self.get_object() has to return the content item
     """
+
     permanent = False
 
     @method_decorator(login_required)
@@ -121,15 +125,16 @@ class ApproveContentView(RedirectView):
         item = self.get_object()
         if item.is_live():
             messages.add_message(
-                self.request, messages.INFO,
-                'Materiał został już wcześniej zatwierdzony.')
+                self.request,
+                messages.INFO,
+                "Materiał został już wcześniej zatwierdzony.",
+            )
             return item.get_absolute_url()
 
         item.reviewed = True
         item.save()
-        messages.add_message(
-            self.request, messages.INFO, 'Materiał zatwierdzony.')
-        logging.info('%s approved %s' % (self.request.user, item))
+        messages.add_message(self.request, messages.INFO, "Materiał zatwierdzony.")
+        logging.info("%s approved %s" % (self.request.user, item))
         try:
             send_item_approved_mail(item, self.request.user)
         except Exception:

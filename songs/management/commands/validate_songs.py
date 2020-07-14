@@ -8,10 +8,11 @@ from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):
-    help = 'Check all songs in the database.'
+    help = "Check all songs in the database."
 
     def handle(self, *args, **options):
         from songs.models import Song, validate_lyrics
+
         count_all = 0
         count_incorrect = 0
         for song in Song.objects.all():
@@ -19,7 +20,7 @@ class Command(BaseCommand):
                 try:
                     validate_lyrics(song.lyrics)
                 except ValidationError as m:
-                    print 'Song %d %s incorrect: %s' % (
+                    print "Song %d %s incorrect: %s" % (
                         song.id,
                         song.title,
                         m,
@@ -28,9 +29,9 @@ class Command(BaseCommand):
                 count_all = count_all + 1
 
         if count_incorrect == 0:
-            print 'All good!'
+            print "All good!"
         else:
-            print 'Incorrect %d out of %d songs.' % (
+            print "Incorrect %d out of %d songs." % (
                 count_incorrect,
                 count_all,
             )

@@ -42,13 +42,11 @@ class SongNoteTest(GenericTestsMixin, TestCase):
         song.full_clean()
         song.save()
 
-        data = {
-            'title': 'dalsze losy kotka',
-            'text_trevor': put_text_in_trevor('Abc')
-        }
+        data = {"title": "dalsze losy kotka", "text_trevor": put_text_in_trevor("Abc")}
         self.assertEqual(len(SongNote.objects.all()), 0)
         response = testing.get_user_client(user=user).post(
-            song.get_add_note_url(), data=data)
+            song.get_add_note_url(), data=data
+        )
         self.assertEqual(302, response.status_code)
         self.assertRedirects(response, song.get_absolute_url())
         self.assertEqual(len(SongNote.objects.all()), 1)
@@ -70,10 +68,7 @@ class SongNoteTest(GenericTestsMixin, TestCase):
         song.full_clean()
         song.save()
 
-        data = {
-            'title': 'dalsze losy kotka',
-            'text_trevor': put_text_in_trevor('Abc')
-        }
+        data = {"title": "dalsze losy kotka", "text_trevor": put_text_in_trevor("Abc")}
         response = testing.get_user_client(user=user).post(url, data=data)
         self.assertEqual(404, response.status_code)
         self.assertEqual(len(SongNote.objects.all()), 0)
@@ -82,8 +77,9 @@ class SongNoteTest(GenericTestsMixin, TestCase):
         author = testing.create_user()
         note = SongNote.create_for_testing(author)
 
-        data = {'title': 'tytul', 'text_trevor': put_text_in_trevor('CDE')}
+        data = {"title": "tytul", "text_trevor": put_text_in_trevor("CDE")}
         response = testing.get_user_client(user=author).post(
-            note.get_edit_url(), data=data)
+            note.get_edit_url(), data=data
+        )
         self.assertEqual(302, response.status_code)
         self.assertRedirects(response, note.song.get_absolute_url())

@@ -32,13 +32,11 @@ class ArtistNoteTest(GenericTestsMixin, TestCase):
         artist.featured = True
         artist.save()
 
-        data = {
-            'title': 'cos o artyscie',
-            'text_trevor': put_text_in_trevor('Abc')
-        }
+        data = {"title": "cos o artyscie", "text_trevor": put_text_in_trevor("Abc")}
         self.assertEqual(len(ArtistNote.objects.all()), 0)
         response = testing.get_user_client(user=author).post(
-            artist.get_add_note_url(), data=data)
+            artist.get_add_note_url(), data=data
+        )
         self.assertEqual(302, response.status_code)
         self.assertRedirects(response, artist.get_absolute_url())
         self.assertEqual(len(ArtistNote.objects.all()), 1)
@@ -47,11 +45,9 @@ class ArtistNoteTest(GenericTestsMixin, TestCase):
         author = testing.create_user()
         note = ArtistNote.create_for_testing(author)
 
-        data = {
-            'title': 'cos o artyscie',
-            'text_trevor': put_text_in_trevor('CDE')
-        }
+        data = {"title": "cos o artyscie", "text_trevor": put_text_in_trevor("CDE")}
         response = testing.get_user_client(user=author).post(
-            note.get_edit_url(), data=data)
+            note.get_edit_url(), data=data
+        )
         self.assertEqual(302, response.status_code)
         self.assertRedirects(response, note.artist.get_absolute_url())

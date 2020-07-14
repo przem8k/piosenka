@@ -23,14 +23,15 @@ def parse_lyrics(raw_lyrics):
     replayed_chords = []
     replay_index = -1
     current_section = []
-    for raw_line in raw_lyrics.split('\n'):
+    for raw_line in raw_lyrics.split("\n"):
         line = raw_line.strip()
 
         # Sanity checks.
-        if line.find('{') != -1:
+        if line.find("{") != -1:
             raise SyntaxError(
                 "'{}' brackets are the old way of specifying repeated chords. "
-                "use section tags ('#zw', '@zw') instead.)")
+                "use section tags ('#zw', '@zw') instead.)"
+            )
 
         if len(line) == 0:
             # Empty line - finish current section.
@@ -41,7 +42,7 @@ def parse_lyrics(raw_lyrics):
             if len(current_section) > 0:
                 result.append(current_section)
                 current_section = []
-        elif line.startswith('#'):
+        elif line.startswith("#"):
             # Start new recording.
             if len(line) == 1:
                 raise SyntaxError(
@@ -50,32 +51,34 @@ def parse_lyrics(raw_lyrics):
             recorded_section = line[1:]
             recorded_chords = []
             mode = LyricsParserMode.Recording
-        elif line.startswith('@'):
+        elif line.startswith("@"):
             # Start replaying.
             if len(line) == 1:
                 raise SyntaxError(
                     "Section reference tag (for example '@zw') can't have empty "
-                    'name.')
+                    "name."
+                )
             if not line[1:] in recordings:
                 raise SyntaxError(
                     "Section had to be defined (with '#tag') before it can be "
-                    "referenced (with '@tag').")
+                    "referenced (with '@tag')."
+                )
             replayed_chords = recordings[line[1:]]
             replay_index = 0
             mode = LyricsParserMode.Replaying
         else:
             # Regular line.
-            textPart = ''
-            chordsPart = ''
-            if line.find('[') != -1:
-                chordsStart = line.find('[')
+            textPart = ""
+            chordsPart = ""
+            if line.find("[") != -1:
+                chordsStart = line.find("[")
                 textPart = line[0:chordsStart].strip()
-                chordsPart = line[chordsStart + 1:len(line) - 1].strip()
+                chordsPart = line[chordsStart + 1 : len(line) - 1].strip()
             else:
                 textPart = line
 
             indent = False
-            if textPart.startswith('>'):
+            if textPart.startswith(">"):
                 indent = True
                 textPart = textPart[1:]
 
@@ -88,8 +91,7 @@ def parse_lyrics(raw_lyrics):
                     are_chords_replayed = True
                 replay_index = replay_index + 1
 
-            current_section.append(
-                (textPart, chordsPart, indent, are_chords_replayed))
+            current_section.append((textPart, chordsPart, indent, are_chords_replayed))
     if recorded_section is not None:
         recordings[recorded_section] = recorded_chords
         recorded_section = None
@@ -106,7 +108,6 @@ def contain_extra_chords(raw_lyrics):
     return False
 
 
-def render_lyrics(
-        raw_lyrics, transposition=0, template_name='songs/lyrics.html'):
+def render_lyrics(raw_lyrics, transposition=0, template_name="songs/lyrics.html"):
     lyrics = transpose_lyrics(parse_lyrics(raw_lyrics), transposition)
-    return loader.get_template(template_name).render({'lyrics': lyrics})
+    return loader.get_template(template_name).render({"lyrics": lyrics})

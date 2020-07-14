@@ -7,11 +7,10 @@ from piosenka.mail import send_item_approved_mail, send_new_to_review_mails
 
 
 class MailTest(TestCase):
-
     def test_new_to_review_mails(self):
         author = testing.create_user()
-        reviewer_a = testing.create_user(perms=['content.review'])
-        testing.create_user(perms=['content.review'])
+        reviewer_a = testing.create_user(perms=["content.review"])
+        testing.create_user(perms=["content.review"])
 
         # There are two reviewers, both should receive an email about the new
         # article added by Alice.
@@ -28,7 +27,7 @@ class MailTest(TestCase):
         # https://github.com/ppiet/piosenka/issues/8
         # Set the first reviewers's email to empty - they should now be skipped,
         # but the other reviewer should be notified.
-        reviewer_a.email = ''
+        reviewer_a.email = ""
         reviewer_a.save()
         article = Article.create_for_testing(author)
         send_new_to_review_mails(article)
@@ -36,7 +35,7 @@ class MailTest(TestCase):
 
     def test_item_approved_mail(self):
         author = testing.create_user()
-        reviewer = testing.create_user(perms=['content.review'])
+        reviewer = testing.create_user(perms=["content.review"])
         self.assertEqual(len(mail.outbox), 0)
         article = Article.create_for_testing(author)
         send_item_approved_mail(article, reviewer)

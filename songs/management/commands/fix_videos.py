@@ -18,13 +18,14 @@ This uses the YT data API: https://developers.google.com/youtube/v3/docs/.
 
 
 class Command(BaseCommand):
-    help = 'Check and fix all video links.'
+    help = "Check and fix all video links."
 
     def handle(self, *args, **options):
         youtube = build(
             YOUTUBE_API_SERVICE_NAME,
             YOUTUBE_API_VERSION,
-            developerKey=settings.GOOGLE_API_SERVER_KEY)
+            developerKey=settings.GOOGLE_API_SERVER_KEY,
+        )
 
         count_all = 0
         count_none = 0
@@ -33,43 +34,46 @@ class Command(BaseCommand):
             print(str(song))
             count_all += 1
             if not song.youtube_id():
-                print(' - no link')
+                print(" - no link")
                 count_none += 1
             else:
                 id = song.youtube_id()
-                response = youtube.videos().list(
-                    part='id,snippet', id=id).execute()
-                if not response['items']:
-                    print(' - incorrect link, deleting')
+                response = youtube.videos().list(part="id,snippet", id=id).execute()
+                if not response["items"]:
+                    print(" - incorrect link, deleting")
                     count_incorrect += 1
                     song.link_youtube = None
                     song.save()
 
             if song.youtube_id():
-                print(' - OK')
+                print(" - OK")
                 continue
 
             # The link is missing - try to find a new one.
             head_contribution = EntityContribution.head_contribution(
-                EntityContribution.objects.filter(song=song.id))
-            query = str(song) + ' ' + str(head_contribution.artist)
-            print(' - would look for: ' + query)
-            candidates = youtube.search().list(
-                maxResults=1, part='id,snippet', q=query).execute()
-            if not candidates['items']:
-                print(' - no results :(')
+                EntityContribution.objects.filter(song=song.id)
+            )
+            query = str(song) + " " + str(head_contribution.artist)
+            print(" - would look for: " + query)
+            candidates = (
+                youtube.search()
+                .list(maxResults=1, part="id,snippet", q=query)
+                .execute()
+            )
+            if not candidates["items"]:
+                print(" - no results :(")
             else:
-                candidate = candidates['items'][0]
-                title = candidate['snippet']['title']
-                channelTitle = candidate['snippet']['channelTitle']
-                print(' - top: ' + title + ' (' + channelTitle + ')')
-                print('   does it look good? (y/n)')
+                candidate = candidates["items"][0]
+                title = candidate["snippet"]["title"]
+                channelTitle = candidate["snippet"]["channelTitle"]
+                print(" - top: " + title + " (" + channelTitle + ")")
+                print("   does it look good? (y/n)")
                 answer = input()
-                if answer == 'y' or answer == 'yes':
-                    song.set_youtube_id(candidate['id']['videoId'])
+                if answer == "y" or answer == "yes":
+                    song.set_youtube_id(candidate["id"]["videoId"])
                     song.save()
-                    print(' - set!')
+                    print(" - set!")
 
-        print('all songs: ' + str(count_all))
-        print('no link: ' + str(count_none))
-        print('invalid link (fixed): ' + str(count_incorrect))
+        print("all songs: " + str(count_all))
+        print("no link: " + str(count_none))
+        print("invalid link (fixed): " + str(count_incorrect))

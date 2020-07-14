@@ -1,42 +1,42 @@
 KEY_TO_ORD = {
-    'c': 0,
-    'cis': 1,
-    'des': 1,
-    'd': 2,
-    'dis': 3,
-    'es': 3,
-    'e': 4,
-    'f': 5,
-    'fis': 6,
-    'ges': 6,
-    'g': 7,
-    'gis': 8,
-    'as': 8,
-    'a': 9,
-    'b': 10,
-    'ais': 10,
-    'h': 11
+    "c": 0,
+    "cis": 1,
+    "des": 1,
+    "d": 2,
+    "dis": 3,
+    "es": 3,
+    "e": 4,
+    "f": 5,
+    "fis": 6,
+    "ges": 6,
+    "g": 7,
+    "gis": 8,
+    "as": 8,
+    "a": 9,
+    "b": 10,
+    "ais": 10,
+    "h": 11,
 }
 
 ORD_TO_KEY = {
-    0: 'c',
-    1: 'cis',
-    2: 'd',
-    3: 'dis',
-    4: 'e',
-    5: 'f',
-    6: 'fis',
-    7: 'g',
-    8: 'gis',
-    9: 'a',
-    10: 'b',
-    11: 'h'
+    0: "c",
+    1: "cis",
+    2: "d",
+    3: "dis",
+    4: "e",
+    5: "f",
+    6: "fis",
+    7: "g",
+    8: "gis",
+    9: "a",
+    10: "b",
+    11: "h",
 }
 
 # These chords cause trouble when parsing from the left side, eg. in Asus4 -> As us4.
 KNOWN_CHORD_TYPES = {
-    'sus4': '',
-    'sus2': '',
+    "sus4": "",
+    "sus2": "",
 }
 
 
@@ -65,16 +65,20 @@ def parse_chord(chord):
     >>> parse_chord('H/a')
     ('H', '', 'a')
     """
-    if chord.find('/') != -1:  # for chords with specified base sound
-        if chord.find('/') == 0 or chord.find(
-                '/') == len(chord) - 1 or chord.count('/') > 1:
+    if chord.find("/") != -1:  # for chords with specified base sound
+        if (
+            chord.find("/") == 0
+            or chord.find("/") == len(chord) - 1
+            or chord.count("/") > 1
+        ):
             raise SyntaxError(
-                '/ is for base sounds, use it like this: D7/f, a/h (no spaces '
-                'before or after /).')
-        base_sound = chord[chord.find('/') + 1:]
-        rest = chord[:chord.find('/')]
+                "/ is for base sounds, use it like this: D7/f, a/h (no spaces "
+                "before or after /)."
+            )
+        base_sound = chord[chord.find("/") + 1 :]
+        rest = chord[: chord.find("/")]
     else:
-        base_sound = ''
+        base_sound = ""
         rest = chord
 
     # First check for a known suffix (chord type) to handle chord types that yield bogus root sounds
@@ -130,8 +134,12 @@ def transpose_chord(chord, t):
     """
     root_sound, chord_type, base_sound = parse_chord(chord)
     if base_sound:
-        return transpose_sound(
-            root_sound, t) + chord_type + '/' + transpose_sound(base_sound, t)
+        return (
+            transpose_sound(root_sound, t)
+            + chord_type
+            + "/"
+            + transpose_sound(base_sound, t)
+        )
     else:
         return transpose_sound(root_sound, t) + chord_type
 
@@ -146,8 +154,7 @@ def transpose_sequence(chord_sequence, transposition):
     >>> transpose_sequence('c Gis0/C', 11)
     'h G0/H'
     """
-    return ' '.join(
-        [transpose_chord(x, transposition) for x in chord_sequence.split()])
+    return " ".join([transpose_chord(x, transposition) for x in chord_sequence.split()])
 
 
 def transpose_lyrics(parsed_lyrics, transposition):
@@ -162,30 +169,28 @@ def transpose_lyrics(parsed_lyrics, transposition):
     for paragraph in parsed_lyrics:
         section = []
         for (text, chords, is_indented, are_chords_replayed) in paragraph:
-            if chords.find('(') != -1:
-                if (chords.count('(') != 1 or chords.count(')') != 1 or
-                        chords.find(')') != len(chords) - 1
-                   ) or chords.find('(') > chords.find(')'):
+            if chords.find("(") != -1:
+                if (
+                    chords.count("(") != 1
+                    or chords.count(")") != 1
+                    or chords.find(")") != len(chords) - 1
+                ) or chords.find("(") > chords.find(")"):
                     raise SyntaxError(
                         "I don't understand the line: '" + chords + "'. "
                         "'(', ')' brackets should contain "
-                        'chords played without singing at the end of the verse, for '
-                        "example: 'a C (H7 C)'. Don't put anything after ')'.")
-                left_bracket = chords.find('(')
-                right_bracket = chords.find(')')
+                        "chords played without singing at the end of the verse, for "
+                        "example: 'a C (H7 C)'. Don't put anything after ')'."
+                    )
+                left_bracket = chords.find("(")
+                right_bracket = chords.find(")")
                 core = chords[:left_bracket].strip()
-                bracketed = chords[left_bracket + 1:right_bracket].strip()
-                transposed = '%s (%s)' % (
+                bracketed = chords[left_bracket + 1 : right_bracket].strip()
+                transposed = "%s (%s)" % (
                     transpose_sequence(core, transposition),
-                    transpose_sequence(bracketed, transposition))
+                    transpose_sequence(bracketed, transposition),
+                )
             else:
                 transposed = transpose_sequence(chords, transposition)
-            section.append(
-                (
-                    text,
-                    transposed,
-                    is_indented,
-                    are_chords_replayed,
-                ))
+            section.append((text, transposed, is_indented, are_chords_replayed,))
         result.append(section)
     return result

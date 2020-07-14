@@ -4,7 +4,8 @@ import piosenka.inspect
 
 urlpatterns = [
     url(
-        r'^permissions$',
+        r"^permissions$",
         piosenka.inspect.InspectPermissions.as_view(),
-        name='inspect_permissions'),
+        name="inspect_permissions",
+    ),
 ]

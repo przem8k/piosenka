@@ -5,22 +5,20 @@ from songs import models
 
 
 class ArtistForm(forms.ModelForm):
-
     class Meta:
         model = models.Artist
         exclude = []
         widgets = {
-            'born_on':
-                forms.DateInput(
-                    format=('%d.%m.%Y'), attrs={'placeholder': 'DD.MM.RRRR'}),
-            'died_on':
-                forms.DateInput(
-                    format=('%d.%m.%Y'), attrs={'placeholder': 'DD.MM.RRRR'}),
+            "born_on": forms.DateInput(
+                format=("%d.%m.%Y"), attrs={"placeholder": "DD.MM.RRRR"}
+            ),
+            "died_on": forms.DateInput(
+                format=("%d.%m.%Y"), attrs={"placeholder": "DD.MM.RRRR"}
+            ),
         }
 
 
 class SongForm(forms.ModelForm):
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.artist_for_slug = None
@@ -36,20 +34,16 @@ class SongForm(forms.ModelForm):
         data = super().clean()
         if not self.artist_for_slug:
             raise forms.ValidationError("arist_for_slug not set")
-        data['artist_for_slug'] = self.artist_for_slug
+        data["artist_for_slug"] = self.artist_for_slug
         return data
 
 
 ContributionFormSet = inlineformset_factory(
-    models.Song,
-    models.EntityContribution,
-    exclude=[],
-    min_num=1,
-    validate_min=True)
+    models.Song, models.EntityContribution, exclude=[], min_num=1, validate_min=True
+)
 
 
 class ArtistNoteForm(forms.ModelForm):
-
     class Meta:
         model = models.ArtistNote
         exclude = []
@@ -60,19 +54,16 @@ class ArtistNoteForm(forms.ModelForm):
     def clean(self):
         data = super().clean()
         if self.artist:
-            data['artist'] = self.artist
+            data["artist"] = self.artist
         return data
 
 
 class SongNoteForm(forms.ModelForm):
-
     class Meta:
         model = models.SongNote
         exclude = []
         widgets = {
-            'date':
-                forms.widgets.DateInput(
-                    format='%Y-%m-%d', attrs={'type': 'date'}),
+            "date": forms.widgets.DateInput(format="%Y-%m-%d", attrs={"type": "date"}),
         }
 
     def set_song(self, song):
@@ -81,5 +72,5 @@ class SongNoteForm(forms.ModelForm):
     def clean(self):
         data = super().clean()
         if self.song:
-            data['song'] = self.song
+            data["song"] = self.song
         return data

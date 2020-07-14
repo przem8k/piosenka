@@ -12,10 +12,10 @@ class PostTest(GenericTestsMixin, TestCase):
 
     @overrides(GenericTestsMixin)
     def get_add_url(self):
-        return reverse('add_post')
+        return reverse("add_post")
 
     def test_blog_index(self):
-        response = testing.get_public_client().get(reverse('post_index'))
+        response = testing.get_public_client().get(reverse("post_index"))
         self.assertEqual(200, response.status_code)
 
         author = testing.create_user()
@@ -27,14 +27,14 @@ class PostTest(GenericTestsMixin, TestCase):
         post_b.reviewed = False
         post_b.save()
 
-        response = testing.get_public_client().get(reverse('post_index'))
+        response = testing.get_public_client().get(reverse("post_index"))
         self.assertEqual(200, response.status_code)
-        self.assertEqual(1, len(response.context['all_posts']))
+        self.assertEqual(1, len(response.context["all_posts"]))
 
-        response = testing.get_user_client(author).get(reverse('post_index'))
+        response = testing.get_user_client(author).get(reverse("post_index"))
         self.assertEqual(200, response.status_code)
-        self.assertEqual(2, len(response.context['all_posts']))
+        self.assertEqual(2, len(response.context["all_posts"]))
 
-        response = testing.get_user_client().get(reverse('post_index'))
+        response = testing.get_user_client().get(reverse("post_index"))
         self.assertEqual(200, response.status_code)
-        self.assertEqual(2, len(response.context['all_posts']))
+        self.assertEqual(2, len(response.context["all_posts"]))
