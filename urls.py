@@ -21,9 +21,6 @@ urlpatterns = [
     url(r"^artykuly/", include("articles.urls")),
     url(r"^wydarzenia/", include("events.urls")),
     url(r"^o-stronie/$", piosenka.views.About.as_view(), name="about"),
-    url(
-        r"^o-stronie/format-opracowan/$", piosenka.views.Format.as_view(), name="format"
-    ),
     # Site-search index.
     url(r"^index/", include("piosenka.index")),
     # Search results.

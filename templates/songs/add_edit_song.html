@@ -34,7 +34,7 @@ textarea#id_lyrics {
             <p>
             Wpisz opracowanie w miejsce przykładu poniżej. <b>Przed dodaniem
               piosenki zapoznaj się z
-              <a href="/o-stronie/format-opracowan/" target="_empty">opisem formatu opracowań</a></b>.
+              <a href="#lyrics-format-description">opisem formatu opracowań</a></b>.
             </p>
 
             <p>Uwaga:</p>
@@ -116,5 +116,8 @@ textarea#id_lyrics {
       </div>
     </div>
   </form>
+
+  <div id="lyrics-format-description" style="padding-top: 20px; padding-bottom: 20px;"></div>
+  {% include "songs/lyrics_format_description.html" %}
 </div>
 {% endblock content %}

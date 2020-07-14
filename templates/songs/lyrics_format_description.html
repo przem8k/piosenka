@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="section">
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8">
+            <h1 class="remove-top-margin">Pomoc: dodawanie opracowań</h1>
+            <p>
+              PzT używa specjalnego formatu zapisu opracowań piosenek, który
+              umożliwia m. in. automatyczne <b>przepisywanie powtarzających się
+                akordów</b> i <b>transpozycję</b> opracowań do wybranej tonacji.
+              Poniżej znajduje się przykładowy fragment opracowania piosenki
+              <b>1788</b>.
+            </p>
+          </div>
+        </div>
+
+        {% include "songs/lyrics_format_e_1788.html" %}
+
+
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Powtórzone akordy</h2>
+            <p>Opracowanie piosenki podzielone jest na sekcje
+              przedzielone pustymi wierszami. Akordy odpowiadające poszczególnym
+              wersom są wpisane na końcu wiersza, w nawiasach kwadratowych,
+              przedzielone spacjami.</p>
+
+            <p>Dowolna sekcja opracowania może (ale nie musi) być poprzedzona
+              znacznikiem <b>#NAZWA</b> (gdzie "NAZWA" to dowolnie wybrany ciąg
+              znaków bez spacji). Znacznik zapamiętuje akordy danej sekcji i
+              pozwala na przepisanie ich do dowolnej późniejszej sekcji
+              oznaczonej znacznikiem <b>@NAZWA</b>.</p>
+
+            <h2>Refreny</h2>
+            <p>Każdy wers rozpoczęty znakiem ">" otrzyma dodatkowe wcięcie, co
+              umożliwia formatowanie refrenów jak poniżej.</p>
+          </div>
+        </div>
+
+        {% include "songs/lyrics_format_e_ambasadorowie.html" %}
+        <div class="row">
+          <div class="col-md-8">
+
+            <h2>Miejsce zapisu akordów</h2>
+            <p>Akordy grane w czasie przejścia pomiędzy wersami zapisywane są na
+              końcu poprzedniego wersu, w nawiasach okrągłych (por. przykłady
+              powyżej i poniżej).</p>
+
+            <p>Akordy rozpoczęte na końcu wersu i przypadające jeszcze na
+              pierwsze, <b>nieakcentowane</b> sylaby nowego wersu są pomijane w
+              nowym wersie. Przykładowo, w piosence "O krok" mamy:</p>
+
+            <pre>O krok od źródła konają z pragnienia. [a E a]
+O krok od piekła szaleją z rozkoszy [C d E]
+Trzeźwieją z marzeń o krok od spełnienia. [F A d (F)]
+O krok od celu własny cień ich płoszy. [a E7 a (E)]</pre>
+
+            <p>Pomimo tego, że akord <b>a</b> grany jest jeszcze w czasie
+              pierwszych sylab ("O krok od") drugiego wersu. Pierwszy akcent w
+              wersie pada dopiero na "piekła" i stąd pierwszy wskazany akord to
+              <b>C</b>.</p>
+
+            <p><b>Uwaga</b>: akordy na które przypada akcent są zawsze
+              zapisywane, nawet jeżeli są takie same jak akord kończący poprzedni
+              wers (wers 3 i 4 poniżej).</p>
+            <pre>Właściwy pojedynek [e]
+Apollona z Marsjaszem [H7]
+Słuch absolutny [a]
+Kontra ogromna skala [a]</pre>
+
+            <h2>Śpiewnik to nie antologia poezji</h2>
+            <p>Wcięcia powinny pomagać w śpiewaniu, nie musimy zachowywać układu wersów i wcięć odpowiadająych
+              oficjalnym wydaniom tekstów.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
