@@ -1,9 +1,5 @@
 /* site search - typeahead */
 
-.search {
-    width: 315px;
-}
-
 .search .twitter-typeahead {
     width: 100%;
     margin-top: 5px;

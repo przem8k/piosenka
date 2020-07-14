@@ -36,9 +36,13 @@ h2 {
     padding: 0;
 }
 
+.navbar-header {
+    display: flex;
+}
+
 .pzt-collapsed-navbar-search {
-    display: block;
-    width: 100%;
+    display: inline;
+    flex-grow: 1;
 }
 
 @media (min-width: 768px) {
@@ -54,6 +58,11 @@ h2 {
 @media (min-width: 992px) {
     .pzt-expanded-navbar-search {
         display: block;
+        flex-grow: 1;
+    }
+
+    .site-nav {
+        display: flex !important;
     }
 }
 

@@ -35,20 +35,22 @@
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
+
+        <a href="/" title="Strona główna"><img src="{% static "images/feather_40.png" %}" alt="Logo: białe pióro na czarnym tle"/></a>
+        <div class="search pzt-collapsed-navbar-search">
+          <input type="text" class="form-control" placeholder="Jałta, Rublow, Epitafium dla ...">
+        </div>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="/" title="Strona główna"><img src="{% static "images/feather_40.png" %}" alt="Logo: białe pióro na czarnym tle"/></a>
       </div>
 
       <div class="collapse navbar-collapse navbar-ex1-collapse site-nav">
-        <div class="navbar-right search pzt-collapsed-navbar-search">
-          <input type="text" class="form-control" placeholder="Jałta, Rublow, Epitafium dla ...">
-        </div>
-        
+
+
         <ul class="nav navbar-nav">
           <li><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
           <li><a href="/blog/" title="Blog"><span>Blog</span></a></li>
