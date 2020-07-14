@@ -80,16 +80,12 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
 
                 <div class="gadget-row">
                   <button type="button" class="btn btn-primary btn-sm chords-trigger chords-normal-trigger">
-                    <span class="glyphicon glyphicon-music" title="{% if song.has_extra_chords %}podstawowe akordy{% else %}tekst i akordy{% endif %}"></span>
-                  </button>
-                  <button type="button" class="btn btn-default btn-sm chords-trigger chords-repeated-trigger" {% if not song.has_extra_chords %}disabled{% endif %}>
-                    <span class="glyphicon glyphicon-repeat" title="wszystkie akordy"></span>
+                    <span class="glyphicon glyphicon-music" title="wyświetl akordy"></span>
                   </button>
                   <button type="button" class="btn btn-default btn-sm chords-trigger chords-none-trigger">
                     <span class="glyphicon glyphicon-font" title="tylko tekst"></span>
                   </button>
-                  <span data-toggle="tooltip" data-placement="right" title="Wyświetl lub
-                  ukryj dodatkowe akordy." class="tip">
+                  <span data-toggle="tooltip" data-placement="right" title="Wyświetl lub ukryj akordy." class="tip">
                     <span class="glyphicon glyphicon-question-sign"></span>
                   </span>
                 </div>

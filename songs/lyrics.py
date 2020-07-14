@@ -82,30 +82,20 @@ def parse_lyrics(raw_lyrics):
                 indent = True
                 textPart = textPart[1:]
 
-            are_chords_replayed = False
             if mode == LyricsParserMode.Recording:
                 recorded_chords.append(chordsPart)
             elif mode == LyricsParserMode.Replaying:
                 if replay_index < len(replayed_chords) and len(chordsPart) == 0:
                     chordsPart = replayed_chords[replay_index]
-                    are_chords_replayed = True
                 replay_index = replay_index + 1
 
-            current_section.append((textPart, chordsPart, indent, are_chords_replayed))
+            current_section.append((textPart, chordsPart, indent))
     if recorded_section is not None:
         recordings[recorded_section] = recorded_chords
         recorded_section = None
     if len(current_section) > 0:
         result.append(current_section)
     return result
-
-
-def contain_extra_chords(raw_lyrics):
-    for paragraph in raw_lyrics:
-        for text, chords, is_indented, are_chords_extra in paragraph:
-            if are_chords_extra:
-                return True
-    return False
 
 
 def render_lyrics(raw_lyrics, transposition=0, template_name="songs/lyrics.html"):

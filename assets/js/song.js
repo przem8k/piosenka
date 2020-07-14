@@ -1,10 +1,9 @@
 var GadgetStateEnum = {
-    NORMAL: 0,
-    REPEATED: 1,
-    NONE: 2
+    CHORDS_ON: 0,
+    CHORDS_OFF: 2
 };
 
-var gadgetState = GadgetStateEnum.NORMAL;
+var gadgetState = GadgetStateEnum.CHORDS_ON;
 var transposition = 0;
 
 function enableTransposition() {
@@ -22,17 +21,11 @@ function disableTransposition() {
 function applyState() {
     $(".chords-trigger").removeClass("btn-primary");
     $(".chords-trigger").addClass("btn-default");
-    if (gadgetState == GadgetStateEnum.NORMAL) {
+    if (gadgetState == GadgetStateEnum.CHORDS_ON) {
         $(".chord-section").show();
-        $(".extra-chords").hide();
         $(".chords-normal-trigger").addClass("btn-primary").removeClass("btn-default");
         enableTransposition();
-    } else if (gadgetState == GadgetStateEnum.REPEATED) {
-        $(".chord-section").show();
-        $(".extra-chords").show();
-        $(".chords-repeated-trigger").addClass("btn-primary").removeClass("btn-default");
-        enableTransposition();
-    } else if (gadgetState == GadgetStateEnum.NONE) {
+    } else if (gadgetState == GadgetStateEnum.CHORDS_OFF) {
         $(".chord-section").hide();
         $(".chords-none-trigger").addClass("btn-primary").removeClass("btn-default");
         disableTransposition();
@@ -50,15 +43,11 @@ function transpose() {
 
 $(document).ready(function(){
     $(".chords-normal-trigger").click(function() {
-        gadgetState = GadgetStateEnum.NORMAL;
-        applyState();
-    });
-    $(".chords-repeated-trigger").click(function() {
-        gadgetState = GadgetStateEnum.REPEATED;
+        gadgetState = GadgetStateEnum.CHORDS_ON;
         applyState();
     });
     $(".chords-none-trigger").click(function() {
-        gadgetState = GadgetStateEnum.NONE;
+        gadgetState = GadgetStateEnum.CHORDS_OFF;
         applyState();
     });
 

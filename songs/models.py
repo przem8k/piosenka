@@ -11,7 +11,7 @@ from content import url_scheme
 from content.models import ContentItem, Note
 from content.slug import SlugFieldMixin, SlugLogicMixin
 from content.trevor import put_text_in_trevor, render_trevor
-from songs.lyrics import contain_extra_chords, parse_lyrics
+from songs.lyrics import parse_lyrics
 from songs.transpose import transpose_lyrics
 
 saved_file.connect(generate_aliases)
@@ -177,6 +177,7 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         editable=False,
         help_text=HELP_SLUG,
     )
+    # unused now, to be deleted
     has_extra_chords = models.BooleanField(
         default=False, blank=True, editable=False, help_text=HELP_HAS_EXTRA_CHORDS
     )
@@ -226,10 +227,6 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     @overrides(url_scheme.ViewEditReviewApprove)
     def get_url_name(self):
         return "song"
-
-    def save(self, *args, **kwargs):
-        self.has_extra_chords = contain_extra_chords(parse_lyrics(self.lyrics))
-        super().save(*args, **kwargs)
 
     def capo(self, transposition=0):
         return Song.CAPO_TO_ROMAN[(self.capo_fret + 12 - transposition) % 12]

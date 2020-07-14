@@ -160,15 +160,15 @@ def transpose_sequence(chord_sequence, transposition):
 def transpose_lyrics(parsed_lyrics, transposition):
     """
     Transposes a song represented as a list of paragraphs and returns result in the same format
-    >>> transpose_lyrics([[('Na ziemi.', 'a a/H a/C a/D (a/E a/F a/E a E4/H)', False, False)]], 2)
-    [[('Na ziemi.', 'h h/Cis h/D h/E (h/Fis h/G h/Fis h Fis4/Cis)', False, False)]]
-    >>> transpose_lyrics([[('Abc.', 'e a C H7 C H7 (e Fis0 E0 e C H7)', True, True)]], 5)
-    [[('Abc.', 'a d F E7 F E7 (a H0 A0 a F E7)', True, True)]]
+    >>> transpose_lyrics([[('Na ziemi.', 'a a/H a/C a/D (a/E a/F a/E a E4/H)', False)]], 2)
+    [[('Na ziemi.', 'h h/Cis h/D h/E (h/Fis h/G h/Fis h Fis4/Cis)', False)]]
+    >>> transpose_lyrics([[('Abc.', 'e a C H7 C H7 (e Fis0 E0 e C H7)', True)]], 5)
+    [[('Abc.', 'a d F E7 F E7 (a H0 A0 a F E7)', True)]]
     """
     result = []
     for paragraph in parsed_lyrics:
         section = []
-        for (text, chords, is_indented, are_chords_replayed) in paragraph:
+        for (text, chords, is_indented) in paragraph:
             if chords.find("(") != -1:
                 if (
                     chords.count("(") != 1
@@ -191,6 +191,6 @@ def transpose_lyrics(parsed_lyrics, transposition):
                 )
             else:
                 transposed = transpose_sequence(chords, transposition)
-            section.append((text, transposed, is_indented, are_chords_replayed,))
+            section.append((text, transposed, is_indented,))
         result.append(section)
     return result
