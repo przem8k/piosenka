@@ -1,6 +1,7 @@
 import uuid
 
 from django.db import models
+from django.utils import timezone
 from django.urls import reverse_lazy
 
 from base.overrides import overrides
@@ -55,9 +56,10 @@ class Post(SlugFieldMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         super().save(*args, **kwargs)
 
     def get_url_params(self):
+        local_date = timezone.localtime(self.pub_date)
         return {
-            "year": self.pub_date.strftime("%Y"),
-            "month": self.pub_date.strftime("%m"),
-            "day": self.pub_date.strftime("%d"),
+            "year": local_date.strftime("%Y"),
+            "month": local_date.strftime("%m"),
+            "day": local_date.strftime("%d"),
             "slug": self.slug,
         }
