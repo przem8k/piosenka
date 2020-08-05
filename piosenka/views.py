@@ -7,7 +7,7 @@ from articles.models import Article
 from blog.models import Post
 from content.models import filter_visible_to_user
 from events.models import get_events_for
-from songs.models import ArtistNote, Song, SongNote
+from songs.models import Artist, ArtistNote, Song, SongNote
 
 
 class SiteIndex(TemplateView):
@@ -27,6 +27,26 @@ class SiteIndex(TemplateView):
             .first()
         )
 
+    def get_artist_born_on_the_day(self):
+        today = date.today()
+        return (
+            Artist.objects.all()
+            .filter(featured=True)
+            .filter(born_on__isnull=False)
+            .filter(born_on__day=today.day, born_on__month=today.month)
+            .first()
+        )
+
+    def get_artist_died_on_the_day(self):
+        today = date.today()
+        return (
+            Artist.objects.all()
+            .filter(featured=True)
+            .filter(died_on__isnull=False)
+            .filter(died_on__day=today.day, died_on__month=today.month)
+            .first()
+        )
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["article"] = (
@@ -40,6 +60,8 @@ class SiteIndex(TemplateView):
             "-pub_date"
         )[: SiteIndex.SONG_COUNT]
         context["song_of_the_day"] = self.get_song_of_the_day()
+        context["artist_born_on_the_day"] = self.get_artist_born_on_the_day()    
+        context["artist_died_on_the_day"] = self.get_artist_died_on_the_day()         
         context["annotation"] = (
             SongNote.items_visible_to(self.request.user).order_by("-pub_date").first()
         )
