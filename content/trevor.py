@@ -44,7 +44,7 @@ def put_text_in_trevor(text):
 
 
 def _text_block(data):
-    return _render_markdown(data["text"])
+    return _render_markdown(data["text"]).replace("|", "<br />")
 
 
 def _list_block(data):
