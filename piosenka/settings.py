@@ -22,7 +22,6 @@ if os.getenv("GAE_APPLICATION", None):
     }
 
     SECRET_KEY = os.getenv("PIOSENKA_SECRET_KEY")
-    GOOGLE_API_BROWSER_KEY = os.getenv("PIOSENKA_GOOGLE_API_BROWSER_KEY")
 
     DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
     GS_BUCKET_NAME = os.getenv("PIOSENKA_GS_BUCKET_NAME")
@@ -63,8 +62,6 @@ else:
             "default": {"ENGINE": "django.db.backends.sqlite3", "NAME": "piosenka.db",}
         }
     SECRET_KEY = "piosenka-local-dev-not-really-secret"
-    GOOGLE_API_BROWSER_KEY = ""
-    GOOGLE_API_SERVER_KEY = ""
 
     MEDIA_ROOT = os.path.join(PROJECT_PATH, "site_media")
     MEDIA_URL = "/site_media/"
@@ -75,6 +72,8 @@ else:
 PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY = os.getenv(
     "PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY"
 )
+
+PIOSENKA_GOOGLE_MAPS_JS_API_KEY = os.getenv("PIOSENKA_GOOGLE_MAPS_JS_API_KEY")
 
 USE_TZ = True
 TIME_ZONE = "Europe/Warsaw"
@@ -131,6 +130,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.messages.context_processors.messages",
                 "piosenka.context_processors.to_review",
+                "piosenka.context_processors.api_keys",
             ],
         },
     },

@@ -61,7 +61,7 @@
 {% endblock content %}
 
 {% block extra-scripts %}
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwjKvGXS3SBgTueMCT_i0fANJuoAvsqVA"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_js_api_key }}"></script> 
 
 <script>
   if (typeof(load_location) == "function") {
