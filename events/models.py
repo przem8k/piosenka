@@ -46,7 +46,7 @@ class ExternalEvent(models.Model):
     HELP_NAME = "Nazwa wydarzenia, w tym występujący artysta lub zespół."
     HELP_STARTS_ON = "Data rozpoczęcia wydarzenia."
     HELP_URL = "Strona internetowa wydarzenia (może być na Facebooku)."
-    HELP_TOWN = "Miejscowość w którym odbywa się wydarzenie."
+    HELP_TOWN = "Miejscowość w którym odbywa się wydarzenie (zostaw puste jeśli to wydarzenie online)."
 
     name = models.CharField(max_length=100, help_text=HELP_NAME, verbose_name="Nazwa")
     starts_on = models.DateField(
@@ -54,7 +54,7 @@ class ExternalEvent(models.Model):
     )
     url = models.URLField(help_text=HELP_URL, verbose_name="Strona internetowa")
     town = models.CharField(
-        max_length=100, help_text=HELP_TOWN, verbose_name="Miejscowość"
+        max_length=100, null=True, blank=True, help_text=HELP_TOWN, verbose_name="Miejscowość"
     )
     lat = models.FloatField(blank=True, null=True)
     lon = models.FloatField(blank=True, null=True)

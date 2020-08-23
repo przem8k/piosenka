@@ -25,7 +25,7 @@ class ExternalEventForm(forms.ModelForm):
             if cleaned_data["starts_on"] < date.today():
                 raise forms.ValidationError("Nie można dodać wydarzenia w przeszłości")
 
-        if "town" in cleaned_data:
+        if "town" in cleaned_data and cleaned_data["town"]:
             try:
                 if not settings.PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY:
                     logging.warning("PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY not set")
