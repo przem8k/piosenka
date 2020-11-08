@@ -10,7 +10,7 @@ from base.overrides import overrides
 from content import url_scheme
 from content.models import ContentItem, Note
 from content.slug import SlugFieldMixin, SlugLogicMixin
-from content.trevor import put_text_in_trevor, render_trevor
+from content.trevor import put_text_in_trevor
 from songs.lyrics import parse_lyrics
 from songs.transpose import transpose_lyrics
 
@@ -20,6 +20,7 @@ saved_file.connect(generate_aliases)
 class Artist(SlugFieldMixin):
     HELP_NAME = "Imię i nazwisko wykonawcy lub nazwa zespołu."
     HELP_FEATURED = "Czy podmiot ma figurować w spisie treści."
+    HELP_EPIGONE = "Czy podmiot ma osobną listę piosenek epigońskich."
     HELP_CATEGORY = "Kategoria w spisie treści śpiewnika."
     HELP_WEBSITE = "Strona internetowa artysty."
     HELP_IMAGE = "Ilustracja - zdjęcie artysty."
@@ -47,6 +48,7 @@ class Artist(SlugFieldMixin):
 
     name = models.CharField(max_length=50, help_text=HELP_NAME)
     featured = models.BooleanField(default=False, help_text=HELP_FEATURED)
+    epigone = models.BooleanField(default=False, help_text=HELP_EPIGONE)
     category = models.IntegerField(
         choices=FEATURED_CATEGORIES, null=True, blank=True, help_text=HELP_CATEGORY
     )
@@ -148,6 +150,7 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
 
     HELP_DISAMBIG = "Adnotacja rozróżniająca piosenki o tym samym tytule."
     HELP_TITLE = "Tytuł piosenki."
+    HELP_EPIGONE = "Czy piosenka jest kompozycją epigońską, bez porozumienia z autorem tekstu."
     HELP_ORIGINAL_TITLE = "Tytuł oryginalnej piosenki w przypadku tłumaczenia."
     HELP_LINK_YOUTUBE = "Link do nagrania piosenki w serwisie YouTube."
     HELP_CAPO_FRET = "Liczba od 0 do 11, 0 oznacza brak kapodastra."
@@ -161,6 +164,7 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     original_title = models.CharField(
         max_length=100, null=True, blank=True, help_text=HELP_ORIGINAL_TITLE
     )
+    epigone = models.BooleanField(default=False, help_text=HELP_EPIGONE)
     link_youtube = models.URLField(null=True, blank=True, help_text=HELP_LINK_YOUTUBE)
     score1 = models.ImageField(null=True, blank=True, upload_to="scores")
     score2 = models.ImageField(null=True, blank=True, upload_to="scores")

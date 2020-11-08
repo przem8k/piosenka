@@ -52,6 +52,27 @@
         </p>
       </div>
       {% endif %}
+
+      {% if epigone_songs %}
+      <div class="section">
+        <h1>Kompozycje epigońskie</h1>
+        <p style="text-align: center">
+          <ul class="list-unstyled">
+            {% for song in epigone_songs %}
+            <li><a href="{{ song.get_absolute_url }}">{{ song|truncatechars:50 }}
+              {% if song.num_notes == 1 %}
+              {% include 'components/icon.html' with type='tag' %}
+              {% elif song.num_notes > 1 %}
+              {% include 'components/icon.html' with type='tags' %}
+              {% endif %}
+              </a>
+              {% include "components/content_status_span.html" with item=song %}
+            </li>
+            {% endfor %}
+          </ul>
+        </p>
+      </div>
+      {% endif %}
     </div>
   </div>
   <hr />
