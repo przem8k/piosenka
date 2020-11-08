@@ -56,17 +56,14 @@ class GetArtistMixin:
 class SongbookMenuMixin:
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["bards"] = Artist.objects.filter(
-            featured=True, category=Artist.CAT_TEXTER
-        )
-        context["composers"] = Artist.objects.filter(
-            featured=True, category=Artist.CAT_COMPOSER
-        )
-        context["foreigners"] = Artist.objects.filter(
+        context["foreign"] = Artist.objects.filter(
             featured=True, category=Artist.CAT_FOREIGN
         )
-        context["bands"] = Artist.objects.filter(
-            featured=True, category=Artist.CAT_BAND
+        context["polish"] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_POLISH
+        )
+        context["community"] = Artist.objects.filter(
+            featured=True, category=Artist.CAT_COMMUNITY
         )
         return context
 

@@ -1,19 +1,21 @@
 <div class="row">
   <div class="col-md-4">
     <div class="section">
-      <h1>Wykonawcy własnych tekstów</h1>
+      <h1>Twórcy polscy</h1>
       <ul class="list-unstyled">
-        {% for artist in bards %}
+        {% for artist in polish %}
         <li>
           <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
         </li>
         {% endfor %}
       </ul>
     </div>
+  </div>
+  <div class="col-md-4">
     <div class="section">
       <h1>Twórcy zagraniczni</h1>
       <ul class="list-unstyled">
-        {% for artist in foreigners %}
+        {% for artist in foreign %}
         <li>
           <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
         </li>
@@ -23,19 +25,9 @@
   </div>
   <div class="col-md-4">
     <div class="section">
-      <h1>Zespoły</h1>
+      <h1>Epigoni, wykonawcy, środowisko piosenki literackiej</h1>
       <ul class="list-unstyled">
-        {% for artist in bands %}
-        <li>
-          <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="section">
-      <h1>Kompozytorzy</h1>
-      <ul class="list-unstyled">
-        {% for artist in composers %}
+        {% for artist in community %}
         <li>
           <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
         </li>
@@ -43,15 +35,4 @@
       </ul>
     </div>
   </div>
-  <div class="col-md-4">
-    <div class="section">
-      <h1>Według tematu lub inspiracji</h1>
-      <ul class="list-unstyled">
-        <li>
-          <a href="{% url 'calendar' %}">Historia w piosence</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 </div>

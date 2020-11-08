@@ -34,11 +34,15 @@ class Artist(SlugFieldMixin):
     CAT_COMPOSER = 2
     CAT_FOREIGN = 3
     CAT_BAND = 4
+    CAT_POLISH = 5
+    CAT_COMMUNITY = 6
     FEATURED_CATEGORIES = (
-        (CAT_TEXTER, "Wykonawca własnych tekstów"),
-        (CAT_COMPOSER, "Kompozytor"),
-        (CAT_FOREIGN, "Bard zagraniczny"),
-        (CAT_BAND, "Zespół"),
+        (CAT_TEXTER, "(deprecated) Wykonawca własnych tekstów"),
+        (CAT_COMPOSER, "(deprecated) Kompozytor"),
+        (CAT_FOREIGN, "Twórca zagraniczny"),
+        (CAT_BAND, "(deprecated) Zespół"),
+        (CAT_POLISH, "Twórca polski"),
+        (CAT_COMMUNITY, "Środowisko"),
     )
 
     name = models.CharField(max_length=50, help_text=HELP_NAME)
