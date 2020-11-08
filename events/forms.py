@@ -37,8 +37,10 @@ class ExternalEventForm(forms.ModelForm):
 
                 cleaned_data["lat"] = g.latlng[0]
                 cleaned_data["lon"] = g.latlng[1]
-            except GeocoderError:
-                logging.error("Geocoder lookup failed")
+            except (KeyboardInterrupt, SystemExit):
+                raise
+            except:
+                logging.exception("Geocoder lookup failed")
                 raise forms.ValidationError(
                     "Nie udało się nam odnaleźć tej miejscowości na mapie."
                 )
