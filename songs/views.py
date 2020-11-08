@@ -2,7 +2,6 @@ import json
 import logging
 
 from django.contrib import messages
-from django.core.exceptions import ValidationError
 from django.db.models import Count, Exists, OuterRef
 from django.http import Http404, HttpResponse, HttpResponsePermanentRedirect
 from django.shortcuts import get_object_or_404
@@ -44,17 +43,17 @@ I jeszcze jeden i jeszcze raz
 """
 
 
-class GetSongMixin(object):
+class GetSongMixin:
     def get_object(self):
         return get_object_or_404(Song, slug=self.kwargs["slug"])
 
 
-class GetArtistMixin(object):
+class GetArtistMixin:
     def get_object(self):
         return get_object_or_404(Artist, slug=self.kwargs["slug"])
 
 
-class SongbookMenuMixin(object):
+class SongbookMenuMixin:
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["bards"] = Artist.objects.filter(
@@ -203,7 +202,7 @@ class ViewSong(GetSongMixin, ViewContentView):
         return HttpResponse(json.dumps(payload), content_type="application/json")
 
 
-class ContributionFormsetMixin(object):
+class ContributionFormsetMixin:
     """Manages inline formset of song contributions."""
 
     def dispatch(self, *args, **kwargs):
@@ -305,7 +304,7 @@ class AddArtistNote(AddContentView):
         return self.artist.get_absolute_url()
 
 
-class GetArtistNoteMixin(object):
+class GetArtistNoteMixin:
     def get_object(self):
         return get_object_or_404(ArtistNote, slug=self.kwargs["slug"])
 
@@ -373,7 +372,7 @@ class AddSongNote(AddContentView):
         return self.song.get_absolute_url()
 
 
-class GetSongNoteMixin(object):
+class GetSongNoteMixin:
     def get_object(self):
         return get_object_or_404(SongNote, slug=self.kwargs["slug"])
 

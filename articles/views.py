@@ -13,7 +13,7 @@ from content.views import (
 )
 
 
-class GetArticleMixin(object):
+class GetArticleMixin:
     def get_object(self):
         return get_object_or_404(Article, slug=self.kwargs["slug"])
 

@@ -5,7 +5,7 @@ from django.urls import reverse
 from base import testing
 
 
-class GenericTestsMixin(object):
+class GenericTestsMixin:
     """This is intended to be used in a TestCase implementation, so that
     self.assertXyz() functions are available.
 

@@ -16,7 +16,7 @@ from content.views import (
 )
 
 
-class GetPostMixin(object):
+class GetPostMixin:
     def get_object(self):
         year = self.kwargs["year"]
         month = self.kwargs["month"]

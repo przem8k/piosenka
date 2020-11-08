@@ -8,7 +8,7 @@ from django.views.generic.base import View
 from songs.models import Artist, Song
 
 
-class JSONSearchIndexMixin(object):
+class JSONSearchIndexMixin:
     @cache_control(max_age=300)
     def render_to_response(self, context):
         return self.get_json_response(json.dumps(context["index"]))

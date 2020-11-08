@@ -2,7 +2,7 @@ from django.conf.urls import url
 from django.urls import reverse
 
 
-class EditReviewApprove(object):
+class EditReviewApprove:
     """Url scheme for notes, which do not have their own view view.
 
     Needs the inheriting class to have:

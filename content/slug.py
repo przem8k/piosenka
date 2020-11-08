@@ -4,7 +4,7 @@ from django.utils.text import slugify
 from unidecode import unidecode
 
 
-class SlugLogicMixin(object):
+class SlugLogicMixin:
     """Bring your-own slug field slug mixin.
 
     This assumes that a slug field is already defined on the object."""
