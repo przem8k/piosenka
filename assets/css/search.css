@@ -5,6 +5,12 @@
     margin-top: 5px;
 }
 
+@media (min-width: 992px) {
+    .search .twitter-typeahead {
+        max-width: 450px;
+    }
+}
+
 .search .tt-input, .search .tt-hint {
     height: 30px;
     width: 100%;

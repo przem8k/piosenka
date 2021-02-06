@@ -45,7 +45,7 @@ h2 {
     flex-grow: 1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .pzt-collapsed-navbar-search {
         display: none;
     }
@@ -59,6 +59,7 @@ h2 {
     .pzt-expanded-navbar-search {
         display: block;
         flex-grow: 1;
+        text-align: right;
     }
 
     .site-nav {
