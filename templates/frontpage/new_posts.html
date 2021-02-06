@@ -7,11 +7,15 @@
 
     {{ post.post_html|safe }}
 
+    <p>
     {% if post.more_trevor %}
-    <p><a href="{{ post.get_absolute_url }}">Czytaj dalej i skomentuj</a>.</p>
+    <a href="{{ post.get_absolute_url }}">Czytaj dalej i skomentuj</a>.
     {% else %}
-    <p><a href="{{ post.get_absolute_url }}">Skomentuj</a>.</p>
+    <a href="{{ post.get_absolute_url }}">Komentarze</a>.
     {% endif %}
+    <a href="{% url 'post_index' %}">Więcej postów</a>.
+    </p>
+
     {% include "components/content_foot.html" with action="Dodany" item=post %}
   </div>
 </div>

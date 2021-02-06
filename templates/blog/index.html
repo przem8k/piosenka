@@ -18,7 +18,7 @@
           {% if post.more_trevor %}
           <p><a href="{{ post.get_absolute_url }}">Czytaj dalej i skomentuj</a>.</p>
           {% else %}
-          <p><a href="{{ post.get_absolute_url }}">Skomentuj</a>.</p>
+          <p><a href="{{ post.get_absolute_url }}">Komentarze</a>.</p>
           {% endif %}
 
           {% include "components/content_foot.html" with action="Dodany" item=post %}
