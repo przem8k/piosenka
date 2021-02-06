@@ -3,6 +3,7 @@
 .search .twitter-typeahead {
     width: 100%;
     margin-top: 5px;
+    text-align: left;
 }
 
 @media (min-width: 992px) {
