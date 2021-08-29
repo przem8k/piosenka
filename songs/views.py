@@ -123,6 +123,7 @@ class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
             .annotate(relevant=Exists(relevant_contributions))
             .filter(relevant=True)
             .annotate(num_notes=Count("songnote"))
+            .order_by("title")
         )
         if artist.epigone:
             songs = songs.filter().filter(epigone=False)
@@ -135,6 +136,7 @@ class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
             .filter(relevant=True)
             .filter(epigone=True)
             .annotate(num_notes=Count("songnote"))
+            .order_by("title")
         )
         context["artist"] = artist
         context["notes"] = ArtistNote.items_visible_to(self.request.user).filter(
