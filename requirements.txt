@@ -14,4 +14,4 @@ django-anymail==7.1.0
 geocoder==1.38.1
 # server-only from here below
 psycopg2==2.8.5
-google-python-cloud-debugger==2.14
+google-python-cloud-debugger==3.2
