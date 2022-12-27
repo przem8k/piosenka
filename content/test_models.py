@@ -1,11 +1,11 @@
 from django.test import TestCase
 
-from content.models import ContentItem
+from blog.models import Post
 
 
 class ContentItemTest(TestCase):
     def test_is_live(self):
-        item = ContentItem()
+        item = Post()
 
         item.reviewed = False
         self.assertFalse(item.is_live())
