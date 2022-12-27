@@ -6,6 +6,7 @@
 settings_production.py
 settings_local.py
 private_*
+proxy_manage_py.sh
 cloud_sql_proxy
 piosenka.db
 site_media
