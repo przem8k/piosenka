@@ -152,6 +152,14 @@ transpositionUrls.push("{{ song.get_absolute_url }}transpose/{{ forloop.counter0
         </p>
       </div>
       {% endif %}
+
+      <div class="section">
+        <h1>Zrzutka na serwery 2023</h1>
+        <div style="position: relative; width: 300px; height: 400px; overflow: hidden;">
+          <iframe style="position: absolute; top:0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;"
+            src="https://zrzutka.pl/7yw4bg/widget/13" frameborder="0" scrolling="no"></iframe>
+          </div>
+      </div>
     </div>
   </div>
   {% include "base/rows/disqus.html" with disqus_id=song.slug %}
