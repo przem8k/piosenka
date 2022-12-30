@@ -1,6 +1,6 @@
 Django==3.2.16
 Markdown==3.2.2
-bleach==3.1.5
+bleach==3.3.0
 easy-thumbnails==2.7.2
 Unidecode==0.04.17
 pytz==2016.4
