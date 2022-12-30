@@ -1,7 +1,7 @@
 Django==3.2
 Markdown==3.2.2
 bleach==3.1.5
-easy-thumbnails==2.7
+easy-thumbnails==2.7.2
 Unidecode==0.04.17
 pytz==2016.4
 google-api-python-client==2.70.0
