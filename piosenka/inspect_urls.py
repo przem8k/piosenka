@@ -1,9 +1,9 @@
-from django.conf.urls import url
+from django.urls import re_path
 
 import piosenka.inspect
 
 urlpatterns = [
-    url(
+    re_path(
         r"^permissions$",
         piosenka.inspect.InspectPermissions.as_view(),
         name="inspect_permissions",

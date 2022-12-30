@@ -1,11 +1,11 @@
-from django.conf.urls import include, url
+from django.urls import include, re_path
 
 from content import url_scheme
 from songs import views
 
 urlpatterns = [
-    url(r"^dodaj/$", views.AddSong.as_view(), name="add_song"),
-    url(
+    re_path(r"^dodaj/$", views.AddSong.as_view(), name="add_song"),
+    re_path(
         r"^(?P<slug>[-\w]+)/",
         include(
             url_scheme.view_edit_review_approve(
@@ -16,12 +16,12 @@ urlpatterns = [
                 views.ApproveSong,
             )
             + [
-                url(
+                re_path(
                     r"^transpose/(?P<transposition>\d+)/$",
                     views.ViewSong.as_view(),
                     name="song-transposition",
                 ),
-                url(
+                re_path(
                     r"^dodaj-adnotacje/$",
                     views.AddSongNote.as_view(),
                     name="add_song_note",

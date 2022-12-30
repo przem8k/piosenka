@@ -1,5 +1,4 @@
-from django.conf.urls import url
-from django.urls import reverse
+from django.urls import reverse, re_path
 
 
 class EditReviewApprove:
@@ -39,14 +38,14 @@ def edit_review_approve(name, edit, review, approve):
     Three views are suitable for notes, which do not have their own view view.
     """
     return [
-        url(r"^edytuj/$", edit.as_view(), name="edit_" + name),
-        url(r"^korekta/$", review.as_view(), name="review_" + name),
-        url(r"^zatwierdz/$", approve.as_view(), name="approve_" + name),
+        re_path(r"^edytuj/$", edit.as_view(), name="edit_" + name),
+        re_path(r"^korekta/$", review.as_view(), name="review_" + name),
+        re_path(r"^zatwierdz/$", approve.as_view(), name="approve_" + name),
     ]
 
 
 def view_edit_review_approve(name, view, edit, review, approve):
     """Returns the standard scheme of four views for a content item type."""
-    return [url(r"^$", view.as_view(), name="view_" + name),] + edit_review_approve(
+    return [re_path(r"^$", view.as_view(), name="view_" + name),] + edit_review_approve(
         name, edit, review, approve
     )

@@ -1,10 +1,10 @@
-from django.conf.urls import include, url
+from django.urls import include, re_path
 
 from content import url_scheme
 from songs import views
 
 urlpatterns = [
-    url(
+    re_path(
         r"^piosenka/(?P<slug>[-\w]+)/",
         include(
             url_scheme.edit_review_approve(
@@ -15,7 +15,7 @@ urlpatterns = [
             )
         ),
     ),
-    url(
+    re_path(
         r"^artysta/(?P<slug>[-\w]+)/",
         include(
             url_scheme.edit_review_approve(

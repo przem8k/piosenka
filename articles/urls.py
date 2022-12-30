@@ -1,12 +1,12 @@
-from django.conf.urls import include, url
+from django.urls import include, re_path
 
 from articles import views
 from content import url_scheme
 
 urlpatterns = [
-    url(r"^$", views.IndexView.as_view(), name="articles"),
-    url(r"^dodaj/$", views.AddArticle.as_view(), name="add_article"),
-    url(
+    re_path(r"^$", views.IndexView.as_view(), name="articles"),
+    re_path(r"^dodaj/$", views.AddArticle.as_view(), name="add_article"),
+    re_path(
         r"^(?P<slug>[-\w]+)/",
         include(
             url_scheme.view_edit_review_approve(

@@ -1,6 +1,6 @@
 import json
 
-from django.conf.urls import url
+from django.urls import re_path
 from django.http import HttpResponse
 from django.views.decorators.cache import cache_control
 from django.views.generic.base import View
@@ -50,6 +50,6 @@ class SongSearchIndex(JSONSearchIndexMixin, View):
 
 
 urlpatterns = [
-    url(r"^artists$", ArtistSearchIndex.as_view(), name="search_index_artists"),
-    url(r"^songs$", SongSearchIndex.as_view(), name="search_index_songs"),
+    re_path(r"^artists$", ArtistSearchIndex.as_view(), name="search_index_artists"),
+    re_path(r"^songs$", SongSearchIndex.as_view(), name="search_index_songs"),
 ]
