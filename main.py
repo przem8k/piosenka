@@ -1,11 +1,10 @@
 from piosenka.wsgi import application
 
-try:
-    import googleclouddebugger
-
-    googleclouddebugger.enable()
-except ImportError:
-    pass
+#try:
+#    import googleclouddebugger
+#    googleclouddebugger.enable()
+#except ImportError:
+#    pass
 
 # App Engine by default looks for a main.py file at the root of the app
 # directory with a WSGI-compatible object called app.
