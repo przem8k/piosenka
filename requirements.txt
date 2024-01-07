@@ -1,4 +1,4 @@
-Django==4.0.10
+Django==4.1.13
 Markdown==3.2.2
 bleach==5.0.1
 easy-thumbnails==2.8.3
