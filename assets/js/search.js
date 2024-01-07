@@ -3,7 +3,10 @@ $(document).ready(function(){
         datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         prefetch: '/index/songs',
+        limit: 10,
     });
+    songs.initialize();
+
     // Prefer exact matches, so that "Ja" returns the song "Ja" before "Był Jazz"
     // See https://github.com/twitter/typeahead.js/issues/817 .
     var orig_get = songs.get;
@@ -19,8 +22,6 @@ $(document).ready(function(){
             cb(suggestions);
         } ]);
     };
-
-    songs.initialize();
 
     var artists = new Bloodhound({
         datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
