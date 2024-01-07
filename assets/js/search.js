@@ -4,6 +4,22 @@ $(document).ready(function(){
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         prefetch: '/index/songs',
     });
+    // Prefer exact matches, so that "Ja" returns the song "Ja" before "Był Jazz"
+    // See https://github.com/twitter/typeahead.js/issues/817 .
+    var orig_get = songs.get;
+    songs.get = function (query, cb) {
+        return orig_get.apply( songs, [query, function (suggestions) {
+            if ( !suggestions ) return cb(suggestions);
+            suggestions.forEach(function(s) {
+                s.exact_match = query.toLowerCase() === s.name.toLowerCase()? 1: 0; 
+            });
+            suggestions.sort(function(a, b) {
+                return a.exact_match > b.exact_match? -1 : a.exact_match < b.exact_match? 1 : 0
+            });
+            cb(suggestions);
+        } ]);
+    };
+
     songs.initialize();
 
     var artists = new Bloodhound({
