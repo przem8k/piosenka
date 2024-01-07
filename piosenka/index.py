@@ -2,14 +2,12 @@ import json
 
 from django.urls import re_path
 from django.http import HttpResponse
-from django.views.decorators.cache import cache_control
 from django.views.generic.base import View
 
 from songs.models import Artist, Song
 
 
 class JSONSearchIndexMixin:
-    @cache_control(max_age=300)
     def render_to_response(self, context):
         return self.get_json_response(json.dumps(context["index"]))
 
