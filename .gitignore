@@ -8,6 +8,7 @@ settings_local.py
 private_*
 proxy_manage_py.sh
 cloud_sql_proxy
+cloud-sql-proxy
 piosenka.db
 site_media
 static
