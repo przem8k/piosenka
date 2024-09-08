@@ -50,7 +50,6 @@ class EditExternalEvent(LoginRequiredMixin, UpdateView):
 
 class DeleteExternalEvent(LoginRequiredMixin, DeleteView):
     model = ExternalEvent
-    form_class = ExternalEventForm
 
     def get_success_url(self):
         return reverse("event_index")
