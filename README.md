@@ -12,16 +12,14 @@ git clone https://github.com/ppiet/piosenka.git
 
 ## Set up development environment
 
-The current version uses Python3.9
-
 Install Python and virtualenv (Mac instructions):
 
 ```
-brew install python@3.9
+brew install python@3.11
 ```
 
 ```
-pip3.9 install virtualenv
+pip3.11 install virtualenv
 ```
 
 Initialize a virtualenv environment:
@@ -62,7 +60,9 @@ of the app against the real production database, to make sure the changes work a
 ./deploy.sh
 ```
 
-**Learn more**. The following articles describe the hosting setup of PzT on GCP:
+## Learn more
+
+The following articles describe the hosting setup of PzT on GCP:
 
  - https://pnote.eu/notes/django-app-engine-guide/
  - https://pnote.eu/notes/django-app-engine-user-uploaded-files/
@@ -74,5 +74,5 @@ of the app against the real production database, to make sure the changes work a
 Format source code using this script before sending a pull request:
 
 ```
-./fix.sh
+./format.sh
 ```
