@@ -11,7 +11,9 @@ urlpatterns = [
         name="hello",
     ),
     re_path(r"^wyloguj/", auth_views.LogoutView.as_view(), name="goodbye"),
-    re_path(r"^zmien-haslo/", user_views.ChangePassword.as_view(), name="change_password"),
+    re_path(
+        r"^zmien-haslo/", user_views.ChangePassword.as_view(), name="change_password"
+    ),
     re_path(
         r"^nie-pamietam-hasla/",
         user_views.ResetPassword.as_view(),

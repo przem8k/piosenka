@@ -128,7 +128,7 @@ class ArtistNote(url_scheme.EditReviewApprove, Note):
 
 def validate_capo_fret(value):
     if value < 0 or value > 11:
-        raise ValidationError(u"Capo fret has to be in range [0, 11]")
+        raise ValidationError("Capo fret has to be in range [0, 11]")
 
 
 class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
@@ -150,7 +150,9 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
 
     HELP_DISAMBIG = "Adnotacja rozróżniająca piosenki o tym samym tytule."
     HELP_TITLE = "Tytuł piosenki."
-    HELP_EPIGONE = "Czy piosenka jest kompozycją epigońską, bez porozumienia z autorem tekstu."
+    HELP_EPIGONE = (
+        "Czy piosenka jest kompozycją epigońską, bez porozumienia z autorem tekstu."
+    )
     HELP_ORIGINAL_TITLE = "Tytuł oryginalnej piosenki w przypadku tłumaczenia."
     HELP_LINK_YOUTUBE = "Link do nagrania piosenki w serwisie YouTube."
     HELP_CAPO_FRET = "Liczba od 0 do 11, 0 oznacza brak kapodastra."
@@ -206,7 +208,10 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
 
     def __str__(self):
         if self.disambig:
-            return "%s (%s)" % (self.title, self.disambig,)
+            return "%s (%s)" % (
+                self.title,
+                self.disambig,
+            )
         else:
             return self.title
 

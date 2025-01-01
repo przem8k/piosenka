@@ -1,4 +1,4 @@
-from django.urls import reverse, re_path
+from django.urls import re_path, reverse
 
 
 class EditReviewApprove:
@@ -46,6 +46,6 @@ def edit_review_approve(name, edit, review, approve):
 
 def view_edit_review_approve(name, view, edit, review, approve):
     """Returns the standard scheme of four views for a content item type."""
-    return [re_path(r"^$", view.as_view(), name="view_" + name),] + edit_review_approve(
-        name, edit, review, approve
-    )
+    return [
+        re_path(r"^$", view.as_view(), name="view_" + name),
+    ] + edit_review_approve(name, edit, review, approve)

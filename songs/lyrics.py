@@ -1,4 +1,5 @@
 """ Parsing and rendering of song lyrics. """
+
 from django.template import Context, loader
 
 from songs.transpose import transpose_lyrics

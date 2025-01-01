@@ -1,7 +1,7 @@
 import json
 
-from django.urls import re_path
 from django.http import HttpResponse
+from django.urls import re_path
 from django.views.generic.base import View
 
 from songs.models import Artist, Song

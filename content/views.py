@@ -65,7 +65,7 @@ class EditContentView(UpdateView):
 
 
 class ReviewContentView(RedirectView):
-    """ Redirects to content to be reviewed and puts up a helper message
+    """Redirects to content to be reviewed and puts up a helper message
     depending on whether the item has already been reviewed and whether the user
     has the rights to approve it.
 
@@ -106,7 +106,7 @@ class ReviewContentView(RedirectView):
 
 
 class ApproveContentView(RedirectView):
-    """ Marks the content item as reviewed.
+    """Marks the content item as reviewed.
 
     Requirements for impl:
      - self.get_object() has to return the content item

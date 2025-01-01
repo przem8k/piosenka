@@ -9,7 +9,7 @@ from content.slug import SlugFieldMixin
 
 
 def get_default_author():
-    """ Not used anymore. TODO: delete when migrations are squashed. """
+    """Not used anymore. TODO: delete when migrations are squashed."""
     pass
 
 

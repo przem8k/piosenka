@@ -7,13 +7,8 @@ from django.views.generic import TemplateView
 
 from blog.forms import PostForm
 from blog.models import Post
-from content.views import (
-    AddContentView,
-    ApproveContentView,
-    EditContentView,
-    ReviewContentView,
-    ViewContentView,
-)
+from content.views import (AddContentView, ApproveContentView, EditContentView,
+                           ReviewContentView, ViewContentView)
 
 
 class GetPostMixin:

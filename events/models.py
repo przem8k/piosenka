@@ -54,7 +54,11 @@ class ExternalEvent(models.Model):
     )
     url = models.URLField(help_text=HELP_URL, verbose_name="Strona internetowa")
     town = models.CharField(
-        max_length=100, null=True, blank=True, help_text=HELP_TOWN, verbose_name="Miejscowość"
+        max_length=100,
+        null=True,
+        blank=True,
+        help_text=HELP_TOWN,
+        verbose_name="Miejscowość",
     )
     lat = models.FloatField(blank=True, null=True)
     lon = models.FloatField(blank=True, null=True)

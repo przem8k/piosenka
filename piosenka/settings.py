@@ -59,7 +59,10 @@ else:
     else:
         # local sqllite file
         DATABASES = {
-            "default": {"ENGINE": "django.db.backends.sqlite3", "NAME": "piosenka.db",}
+            "default": {
+                "ENGINE": "django.db.backends.sqlite3",
+                "NAME": "piosenka.db",
+            }
         }
     SECRET_KEY = "piosenka-local-dev-not-really-secret"
 
@@ -119,7 +122,9 @@ FILE_CHARSET = "utf-8-sig"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(PROJECT_PATH, "templates"),],
+        "DIRS": [
+            os.path.join(PROJECT_PATH, "templates"),
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -160,14 +165,22 @@ INSTALLED_APPS = (
 )
 
 THUMBNAIL_ALIASES = {
-    "songs.Song": {"scorethumb": {"size": (180, 0), "upscale": True},},
+    "songs.Song": {
+        "scorethumb": {"size": (180, 0), "upscale": True},
+    },
     "articles.Article.cover_image": {
         "cover": {"size": (600, 300), "crop": True, "upscale": True},
         "coverthumb": {"size": (420, 210), "crop": True, "upscale": True},
     },
-    "songs.Artist.image": {"imagethumb": {"size": (0, 300), "upscale": True},},
-    "songs.ArtistNote.image": {"imagethumb": {"size": (0, 300), "upscale": True},},
-    "songs.SongNote.image": {"imagethumb": {"size": (0, 300), "upscale": True},},
+    "songs.Artist.image": {
+        "imagethumb": {"size": (0, 300), "upscale": True},
+    },
+    "songs.ArtistNote.image": {
+        "imagethumb": {"size": (0, 300), "upscale": True},
+    },
+    "songs.SongNote.image": {
+        "imagethumb": {"size": (0, 300), "upscale": True},
+    },
 }
 
 INTERNAL_IPS = ("127.0.0.1",)

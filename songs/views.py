@@ -11,13 +11,8 @@ from django.views.generic.edit import CreateView, UpdateView
 
 from articles.models import SongMention
 from content.models import filter_visible_to_user
-from content.views import (
-    AddContentView,
-    ApproveContentView,
-    EditContentView,
-    ReviewContentView,
-    ViewContentView,
-)
+from content.views import (AddContentView, ApproveContentView, EditContentView,
+                           ReviewContentView, ViewContentView)
 from songs import forms
 from songs.lyrics import render_lyrics
 from songs.models import Artist, ArtistNote, EntityContribution, Song, SongNote
@@ -131,13 +126,13 @@ class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
         context["songs"] = songs
         if artist.epigone:
             context["epigone_songs"] = (
-            filter_visible_to_user(Song.objects.all(), self.request.user)
-            .annotate(relevant=Exists(relevant_contributions))
-            .filter(relevant=True)
-            .filter(epigone=True)
-            .annotate(num_notes=Count("songnote"))
-            .order_by("title")
-        )
+                filter_visible_to_user(Song.objects.all(), self.request.user)
+                .annotate(relevant=Exists(relevant_contributions))
+                .filter(relevant=True)
+                .filter(epigone=True)
+                .annotate(num_notes=Count("songnote"))
+                .order_by("title")
+            )
         context["artist"] = artist
         context["notes"] = ArtistNote.items_visible_to(self.request.user).filter(
             artist=self.object
@@ -176,8 +171,8 @@ class EditArtist(GetArtistMixin, UpdateView):
 
 
 class ViewSong(GetSongMixin, ViewContentView):
-    """ Displays a song by default, returns transposed lyrics part in json if
-    asked. """
+    """Displays a song by default, returns transposed lyrics part in json if
+    asked."""
 
     model = Song
     context_object_name = "song"

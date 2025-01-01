@@ -60,8 +60,8 @@ class SiteIndex(TemplateView):
             "-pub_date"
         )[: SiteIndex.SONG_COUNT]
         context["song_of_the_day"] = self.get_song_of_the_day()
-        context["artist_born_on_the_day"] = self.get_artist_born_on_the_day()    
-        context["artist_died_on_the_day"] = self.get_artist_died_on_the_day()         
+        context["artist_born_on_the_day"] = self.get_artist_born_on_the_day()
+        context["artist_died_on_the_day"] = self.get_artist_died_on_the_day()
         context["annotation"] = (
             SongNote.items_visible_to(self.request.user).order_by("-pub_date").first()
         )

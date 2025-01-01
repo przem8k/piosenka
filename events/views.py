@@ -4,16 +4,12 @@ from datetime import datetime
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.views.generic import RedirectView, TemplateView
-from django.views.generic.edit import CreateView, DeleteView, FormView, UpdateView
+from django.views.generic.edit import (CreateView, DeleteView, FormView,
+                                       UpdateView)
 
 from content.trevor import put_text_in_trevor
-from content.views import (
-    AddContentView,
-    ApproveContentView,
-    EditContentView,
-    ReviewContentView,
-    ViewContentView,
-)
+from content.views import (AddContentView, ApproveContentView, EditContentView,
+                           ReviewContentView, ViewContentView)
 from events.forms import ExternalEventForm
 from events.models import ExternalEvent, Performer, get_events_for
 

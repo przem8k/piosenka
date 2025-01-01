@@ -168,7 +168,7 @@ def transpose_lyrics(parsed_lyrics, transposition):
     result = []
     for paragraph in parsed_lyrics:
         section = []
-        for (text, chords, is_indented) in paragraph:
+        for text, chords, is_indented in paragraph:
             if chords.find("(") != -1:
                 if (
                     chords.count("(") != 1
@@ -191,6 +191,12 @@ def transpose_lyrics(parsed_lyrics, transposition):
                 )
             else:
                 transposed = transpose_sequence(chords, transposition)
-            section.append((text, transposed, is_indented,))
+            section.append(
+                (
+                    text,
+                    transposed,
+                    is_indented,
+                )
+            )
         result.append(section)
     return result
