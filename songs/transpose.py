@@ -157,6 +157,39 @@ def transpose_sequence(chord_sequence, transposition):
     return " ".join([transpose_chord(x, transposition) for x in chord_sequence.split()])
 
 
+def transpose_line(chords, transposition):
+    """
+    Transposes a line of chords potentially including a sequence in parens at the end.
+    >>> transpose_line('D G (d a)', 2)
+    'E A (e h)'
+    >>> transpose_line('D G', 2)
+    'E A'
+    """
+    if chords.find("(") == -1:
+        return transpose_sequence(chords, transposition)
+
+    if (
+        chords.count("(") != 1
+        or chords.count(")") != 1
+        or chords.find(")") != len(chords) - 1
+    ) or chords.find("(") > chords.find(")"):
+        raise SyntaxError(
+            "Couldn't parse the line: '" + chords + "'. "
+            "'(', ')' parenthesis should contain "
+            "chords played without singing at the end of the verse, for "
+            "example: 'a C (H7 C)'. Don't put anything after ')'."
+        )
+
+    left_paren = chords.find("(")
+    right_paren = chords.find(")")
+    core = chords[:left_paren].strip()
+    bracketed = chords[left_paren + 1 : right_paren].strip()
+    return "%s (%s)" % (
+        transpose_sequence(core, transposition),
+        transpose_sequence(bracketed, transposition),
+    )
+
+
 def transpose_lyrics(parsed_lyrics, transposition):
     """
     Transposes a song represented as a list of paragraphs and returns result in the same format
@@ -169,28 +202,7 @@ def transpose_lyrics(parsed_lyrics, transposition):
     for paragraph in parsed_lyrics:
         section = []
         for text, chords, is_indented in paragraph:
-            if chords.find("(") != -1:
-                if (
-                    chords.count("(") != 1
-                    or chords.count(")") != 1
-                    or chords.find(")") != len(chords) - 1
-                ) or chords.find("(") > chords.find(")"):
-                    raise SyntaxError(
-                        "I don't understand the line: '" + chords + "'. "
-                        "'(', ')' brackets should contain "
-                        "chords played without singing at the end of the verse, for "
-                        "example: 'a C (H7 C)'. Don't put anything after ')'."
-                    )
-                left_bracket = chords.find("(")
-                right_bracket = chords.find(")")
-                core = chords[:left_bracket].strip()
-                bracketed = chords[left_bracket + 1 : right_bracket].strip()
-                transposed = "%s (%s)" % (
-                    transpose_sequence(core, transposition),
-                    transpose_sequence(bracketed, transposition),
-                )
-            else:
-                transposed = transpose_sequence(chords, transposition)
+            transposed = transpose_line(chords, transposition)
             section.append(
                 (
                     text,
