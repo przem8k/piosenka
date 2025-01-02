@@ -72,11 +72,6 @@ else:
     EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
     EMAIL_FILE_PATH = "/tmp/django-emails"
 
-PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY = os.getenv(
-    "PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY"
-)
-
-PIOSENKA_GOOGLE_MAPS_JS_API_KEY = os.getenv("PIOSENKA_GOOGLE_MAPS_JS_API_KEY")
 
 USE_TZ = True
 TIME_ZONE = "Europe/Warsaw"
@@ -135,7 +130,6 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.messages.context_processors.messages",
                 "piosenka.context_processors.to_review",
-                "piosenka.context_processors.api_keys",
             ],
         },
     },

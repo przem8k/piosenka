@@ -1,7 +1,5 @@
-import logging
 from datetime import date
 
-import geocoder
 from django import forms
 from django.conf import settings
 
@@ -25,23 +23,4 @@ class ExternalEventForm(forms.ModelForm):
             if cleaned_data["starts_on"] < date.today():
                 raise forms.ValidationError("Nie można dodać wydarzenia w przeszłości")
 
-        if "town" in cleaned_data and cleaned_data["town"]:
-            try:
-                if not settings.PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY:
-                    logging.warning("PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY not set")
-                g = geocoder.google(
-                    cleaned_data["town"],
-                    components="country:PL",
-                    key=settings.PIOSENKA_GOOGLE_API_GEOCODING_SERVER_KEY,
-                )
-
-                cleaned_data["lat"] = g.latlng[0]
-                cleaned_data["lon"] = g.latlng[1]
-            except (KeyboardInterrupt, SystemExit):
-                raise
-            except:
-                logging.exception("Geocoder lookup failed")
-                raise forms.ValidationError(
-                    "Nie udało się nam odnaleźć tej miejscowości na mapie."
-                )
         return cleaned_data
