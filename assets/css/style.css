@@ -224,6 +224,12 @@ h1.contributor {
   margin: 5px;
 }
 
+/* blog */
+
+.pzt-postlist-date {
+    padding-right: 2px;
+}
+
 /* other */
 
 .tip {

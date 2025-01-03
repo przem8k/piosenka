@@ -33,7 +33,7 @@
         <table class="vtop cleantable">
           {% for post in all_posts %}
           <tr>
-            <td><small>{{ post.pub_date|date:"d.m.Y" }}</small></td>
+            <td class="pzt-postlist-date"><small>{{ post.pub_date|date:"d.m.Y" }}</small></td>
             <td>
             {% include "components/content_link.html" with item=post %}
             </td>
