@@ -17,11 +17,6 @@ urlpatterns = [
             )
             + [
                 re_path(
-                    r"^transpose/(?P<transposition>\d+)/$",
-                    views.ViewSong.as_view(),
-                    name="song-transposition",
-                ),
-                re_path(
                     r"^dodaj-adnotacje/$",
                     views.AddSongNote.as_view(),
                     name="add_song_note",
