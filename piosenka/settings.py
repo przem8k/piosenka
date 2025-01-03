@@ -87,8 +87,6 @@ STATIC_ROOT = os.path.join(PROJECT_PATH, "static")
 # URL prefix used for static files, in development and in production.
 STATIC_URL = "/static/"
 
-SERVE_DIRECTLY_ROOT = os.path.join(PROJECT_PATH, "site_media")
-
 STATICFILES_DIRS = (("", os.path.join(PROJECT_PATH, "assets")),)
 
 STATICFILES_FINDERS = (
