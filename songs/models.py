@@ -226,7 +226,7 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
     def clean(self):
         try:
             parsed_lyrics = parse_lyrics(self.lyrics)
-            transpose_lyrics(parsed_lyrics, 0)
+            transpose_lyrics(parsed_lyrics)
         except SyntaxError as m:
             raise ValidationError("Niepoprawny format treści piosenki: " + str(m))
         return super().clean()

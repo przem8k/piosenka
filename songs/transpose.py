@@ -192,11 +192,7 @@ def transpose_line(chords, transposition):
 
 def transpose_lyrics(parsed_lyrics):
     """
-    Transposes a song represented as a list of paragraphs and returns result in the same format
-    >>> transpose_lyrics([[('Na ziemi.', 'a a/H a/C a/D (a/E a/F a/E a E4/H)', False)]], 2)
-    [[('Na ziemi.', 'h h/Cis h/D h/E (h/Fis h/G h/Fis h Fis4/Cis)', False)]]
-    >>> transpose_lyrics([[('Abc.', 'e a C H7 C H7 (e Fis0 E0 e C H7)', True)]], 5)
-    [[('Abc.', 'a d F E7 F E7 (a H0 A0 a F E7)', True)]]
+    Transposes a song represented as a list of paragraphs and returns result in the same format.
     """
     result = []
     for paragraph in parsed_lyrics:
