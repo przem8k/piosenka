@@ -1,9 +1,9 @@
 {% for post in posts %}
 <div class="section">
   <div class="content">
-    <h1 class="remove-top-margin">Blog: {{ post.title }}
+    <h2 class="remove-top-margin">Blog: {{ post.title }}
       {% include "components/content_status_span.html" with item=post %}
-    </h1>
+    </h2>
 
     {{ post.post_html|safe }}
 

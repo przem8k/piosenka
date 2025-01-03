@@ -8,14 +8,14 @@
 
 {% block content %}
 <div class="container">
-  <h1 class="remove-top-margin">
+  <h2 class="remove-top-margin">
     {{ artist }}
     {% if user.is_authenticated %}
     <a href="{{ artist.get_edit_url }}">
       <small>{% include 'components/icon.html' with type='pencil' %}</small>
     </a>
     {% endif %}
-  </h1>
+  </h2>
   <p class="lifetime">
     {% if artist.born_on %} ur. <b>{{ artist.born_on }}</b>{% endif %}{% if artist.born_on and artist.died_on %},{% endif %}
     {% if artist.died_on %} zm. <b>{{ artist.died_on }}</b> {% endif %}
@@ -23,7 +23,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="section">
-        <h1>Piosenki</h1>
+        <h2>Piosenki</h2>
         <ul class="list-unstyled">
           {% for song in songs %}
           <li><a href="{{ song.get_absolute_url }}">{{ song|truncatechars:50 }}
@@ -46,7 +46,7 @@
 
       {% if user.is_authenticated and artist.get_add_note_url %}
       <div class="section">
-        <h1>Dodaj adnotację</h1>
+        <h2>Dodaj adnotację</h2>
         <p style="text-align: center">
         <a href="{{ artist.get_add_note_url }}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
         </p>
@@ -55,7 +55,7 @@
 
       {% if epigone_songs %}
       <div class="section">
-        <h1>Kompozycje epigońskie</h1>
+        <h2>Kompozycje epigońskie</h2>
         <p style="text-align: center">
           <ul class="list-unstyled">
             {% for song in epigone_songs %}

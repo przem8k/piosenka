@@ -1,9 +1,9 @@
 {% load thumbnail %}
 
 <div class="section">
-  <h1 id="{{ note.get_id }}">{{ note.title }}
+  <h2 id="{{ note.get_id }}">{{ note.title }}
     {% include "components/content_status_span.html" with item=note %}
-  </h1>
+  </h2>
   {% if note.image %}
   {% include "components/thumbnail.html" with img=note.image type="imagethumb" alt="Ilustracja notki" %}
   {% endif %}

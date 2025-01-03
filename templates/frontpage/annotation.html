@@ -1,7 +1,7 @@
 <div class="section">
-  <h1>{{ annotation }}
+  <h2>{{ annotation }}
     {% include "components/content_status_span.html" with item=annotation %}
-  </h1>
+  </h2>
   {% if annotation.image %}
   {% include "components/thumbnail.html" with img=annotation.image type="imagethumb" url=annotation.song.get_absolute_url alt="Ilustracja notki" %}
   {% endif %}

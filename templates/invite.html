@@ -9,7 +9,7 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
       <div class="section">
-        <h1>Zaproś do PzT</h1>
+        <h2>Zaproś do PzT</h2>
         <form action="{% url 'invite' %}" method="post">{% csrf_token %}
           <input name="email_address" type="text" class="form-control" placeholder="Adres email" style="margin-bottom: 5px;"/>
           {{ form.email_address.errors }}

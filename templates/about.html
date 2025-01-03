@@ -7,11 +7,11 @@
 
 {% block content %}
 <div class="container">
-  <h1>O stronie</h1>
   <div class="row section">
+    <h1>O stronie</h1>
     <div class="col-md-4">
       <div class="">
-        <h1>Misja</h1>
+        <h2>Misja</h2>
         <p>
           <b>Piosenka z tekstem</b> jest tworzona przez środowisko sympatyków
           piosenki literackiej hobbystycznie i <b>niekomercyjnie</b>. Serwis nie
@@ -21,7 +21,7 @@
     </div>
     <div class="col-md-4">
       <div class="">
-        <h1>Kontakt</h1>
+        <h2>Kontakt</h2>
         <p>
         Wszelkie uwagi, sugestie, zapytania, informacje o błędach prosimy
         przesyłać na adres <b>kontakt</b> małpa <b>piosenkaztekstem</b> kropka <b>pl</b>.
@@ -30,7 +30,7 @@
     </div>
     <div class="col-md-4">
       <div class="">
-        <h1>Zasady publikacji</h1>
+        <h2>Zasady publikacji</h2>
         <p>
         Dokładamy starań, aby materiały publikowane na stronie, w szczególności
         teksty piosenek, były zamieszczane za zgodą autorów lub właścicieli
@@ -45,11 +45,11 @@
     </div>
   </div>
 
-  <h1>Jak pomóc</h1>
   <div class="row section">
+    <h1>Jak pomóc</h1>
     <div class="col-md-4">
       <div class="">
-        <h1>Merytorycznie</h1>
+        <h2>Merytorycznie</h2>
         <p>
           Jeśli interesujesz się piosenką literacką i
           chciałbyś/chciałabyś zaangażować się w pracę nad serwisem,
@@ -60,7 +60,7 @@
     </div>
     <div class="col-md-4">
       <div class="">
-        <h1>Technicznie</h1>
+        <h2>Technicznie</h2>
         <p>
           Piosenka z tekstem jest projektem <b>open source</b>, kod źródłowy
           strony jest <a href="https://github.com/przem8k/piosenka">dostępny
@@ -83,7 +83,7 @@
     </div>
     <div class="col-md-4">
       <div class="">
-        <h1>Promocyjnie</h1>
+        <h2>Promocyjnie</h2>
         <p>
           Powiedz o naszym serwisie znajomym!
         </p>
@@ -103,7 +103,7 @@
     {% for author in row %}
     <div class="col-md-4">
       <div class="section">
-        <h1 class="contributor">{{ author.user.first_name }} {{ author.user.last_name }}</h1>
+        <h2 class="contributor">{{ author.user.first_name }} {{ author.user.last_name }}</h2>
         <ul class="list-unstyled">
           {% if author.songs %}<li><b>{{ author.songs }}</b> piosenek</li>{% endif %}
           {% if author.annotations %}<li><b>{{ author.annotations }}</b> adnotacji</li>{% endif %}
@@ -121,7 +121,7 @@
   <div class="row section">
     <div class="col-md-6">
       <div class="">
-        <h1>Polityka prywatności</h1>
+        <h2>Polityka prywatności</h2>
         <p>
           Strona <b>nie gromadzi</b> żadnych danych osobowych niezalogowanych
           użytkowników. Jedyne dane gromadzone przez serwis na temat
@@ -142,7 +142,7 @@
 
     <div class="col-md-6">
       <div class="">
-        <h1>Dziękujemy</h1>
+        <h2>Dziękujemy</h2>
         <p>
           Dziękujemy za pomoc w zgromadzeniu opublikowanych materiałów, w
           szczególności za nadesłane opracowania, materiały i poprawki a także za

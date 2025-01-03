@@ -31,13 +31,13 @@ $(document).ready(function(){
   <div class="row">
     <div class="col-md-8">
       <div class="section">
-        <h1>Artykuł</h1>
+        <h2>Artykuł</h2>
         <table class="table table-condensed formtable">
           {% include "components/forms/table_field.html" with name="Tytuł" field=form.title %}
         </table>
       </div>
       <div class="section">
-        <h1>Lead (pierwszy akapit)</h1>
+        <h2>Lead (pierwszy akapit)</h2>
         <div class="alert alert-info" role="alert">
           Treść artykułu podzielona jest na dwie części. Pierwszy akapit
           będzie widoczny w menu artykułów.
@@ -45,7 +45,7 @@ $(document).ready(function(){
         {{ form.lead_text_trevor }}
       </div>
       <div class="section">
-        <h1>Dalsza treść</h1>
+        <h2>Dalsza treść</h2>
         <div class="alert alert-info" role="alert">
           Poniżej wpisz pozostałą część tekstu.
         </div>
@@ -54,7 +54,7 @@ $(document).ready(function(){
     </div>
     <div class="col-md-4">
       <div class="section">
-        <h1>Zdjęcie</h1>
+        <h2>Zdjęcie</h2>
           <div class="alert alert-info" role="alert">
             Każdy artykuł musi posiadać zdjęcie lub grafikę okładkową.
           </div>

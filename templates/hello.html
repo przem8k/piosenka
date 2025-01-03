@@ -9,7 +9,7 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
       <div class="section">
-        <h1>Zaloguj się</h1>
+        <h2>Zaloguj się</h2>
         <form action="{% url "hello" %}{% if next %}?next={{ next }}{% endif %}" method="post">{% csrf_token %}
           <input name="username" type="text" class="form-control" placeholder="Nazwa użytkownika" style="margin-bottom: 5px;"/>
           <input name="password" type="password" class="form-control" placeholder="Hasło" style="margin-bottom: 5px;"/>

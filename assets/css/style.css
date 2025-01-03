@@ -145,16 +145,24 @@ h2 {
     margin-bottom: 5px;
 }
 
-.section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
-    text-align: left;
+.section h1 {
+    margin: 0 0 20px 0;
+    font-size: 40px;
 }
 
-.section h1 {
+.section h2 {
     margin: 0 0 10px 0;
     font-size: 14px;
+    text-align: left;
     line-height: 16px;
     font-weight: bold;
     color: #990000;
+}
+
+.section .thumbnail-caption h2 {
+    color: white;
+    padding: 5px;
+    margin: 0;
 }
 
 .section .table th, .section .table td {
@@ -183,7 +191,7 @@ h2 {
 }
 
 
-h1.contributor {
+.contributor {
     margin-top: 0;
     font-size: 14px;
     line-height: 16px;

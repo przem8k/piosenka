@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="section">
-        <h1>Dodaj odnośnik do wydarzenia</h1>
+        <h2>Dodaj odnośnik do wydarzenia</h2>
           <form action="{% if not object.pk %}{% url 'add_external_event' %}{% else %}{{ object.get_edit_url }}{% endif %}" method="post" novalidate>{% csrf_token %}
           <table class="table table-condensed formtable">
             {% include "components/forms/table_field.html" with name="Nazwa" field=form.name %}
@@ -24,7 +24,7 @@
     <div class="col-md-4">
       {% if object.pk %}
       <div class="section">
-        <h1>Usuń wydarzenie</h1>
+        <h2>Usuń wydarzenie</h2>
           <div class="alert alert-warning" role="alert">
             Usunięcie wydarzenia z kalendarza jest nieodwracalne. (ale zawsze
             można dodać takie samo wydarzenie jeszcze raz)

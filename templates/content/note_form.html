@@ -8,14 +8,14 @@
   <div class="row">
     <div class="col-md-6">
       <div class="section">
-        <h1>Adnotacja</h1>
+        <h2>Adnotacja</h2>
         <table class="table table-condensed formtable">
           <td><b>Adnotacja do materiału:</b></td><td>{{ parent }} ({{ parent_type }})</td>
           {% include "components/forms/table_field.html" with name="Tytuł adnotacji" field=form.title %}
         </table>
       </div>
       <div class="section">
-        <h1>Treść</h1>
+        <h2>Treść</h2>
         <div class="alert alert-info" role="alert">
           <p>Treść adnotacji zapisz własnymi słowami, na podstawie źródeł.
             Unikaj obszernych cytatów - jeśli cytat jest konieczny, wybierz
@@ -24,7 +24,7 @@
         {{ form.text_trevor }}
       </div>
       <div class="section">
-        <h1>Ilustracja</h1>
+        <h2>Ilustracja</h2>
         <div class="alert alert-info" role="alert">
           <p>Opcjonalna ilustracja do adnotacji. Źródło ewentualnej
             ilustracji wskaż w sekcji "źródła".</p>
@@ -43,7 +43,7 @@
     <div class="col-md-6">
       {% if form.date %}
       <div class="section">
-        <h1>Data wydarzenia historycznego</h1>
+        <h2>Data wydarzenia historycznego</h2>
         <div class="alert alert-info" role="alert">
           <p>Jeśli piosenka i dodawana adnotacja odnoszą się do wydarzenia
             historycznego (i tylko w tym wypadku), wskaż datę wydarzenia i
@@ -58,7 +58,7 @@
       </div>
       {% endif %}
       <div class="section">
-        <h1>Źródła</h1>
+        <h2>Źródła</h2>
         <table class="table table-condensed formtable">
           {% include "components/forms/table_field.html" with name="Link 1" field=form.url1 %}
           {% include "components/forms/table_field.html" with name="Link 2" field=form.url2 %}
