@@ -1,14 +1,19 @@
-from django.urls import include, re_path
+from django.urls import include, path
+from django.views.generic.base import RedirectView
 
 from blog import views
 from content import url_scheme
 
 urlpatterns = [
-    re_path(r"^$", views.PostIndex.as_view(), name="post_index"),
-    re_path(r"^post/(?P<post_id>\d+)/$", views.obsolete_post),
-    re_path(r"^dodaj/$", views.AddPost.as_view(), name="add_post"),
-    re_path(
-        r"^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)/",
+    path("", views.PostIndex.as_view(), name="post_index"),
+    path("post/<int:post_id>/", views.obsolete_post),
+    path("dodaj/", views.AddPost.as_view(), name="add_post"),
+    path(
+        "<str:year>/<str:month>/<str:day>/<slug:slug>/",
+        RedirectView.as_view(url="/blog/%(slug)s/", permanent=True),
+    ),
+    path(
+        "<slug:slug>/",
         include(
             url_scheme.view_edit_review_approve(
                 "post",

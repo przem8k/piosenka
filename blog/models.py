@@ -56,10 +56,4 @@ class Post(SlugFieldMixin, url_scheme.ViewEditReviewApprove, ContentItem):
         super().save(*args, **kwargs)
 
     def get_url_params(self):
-        local_date = timezone.localtime(self.pub_date)
-        return {
-            "year": local_date.strftime("%Y"),
-            "month": local_date.strftime("%m"),
-            "day": local_date.strftime("%d"),
-            "slug": self.slug,
-        }
+        return {"slug": self.slug}
