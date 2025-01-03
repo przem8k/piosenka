@@ -202,7 +202,9 @@ def transpose_lyrics(parsed_lyrics):
     for paragraph in parsed_lyrics:
         section = []
         for text, chords, is_indented in paragraph:
-            transposed_chords = [transpose_line(chords, t) for t in range(12)] if chords else []
+            transposed_chords = (
+                [transpose_line(chords, t) for t in range(12)] if chords else []
+            )
             section.append(
                 (
                     text,
