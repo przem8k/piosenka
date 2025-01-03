@@ -180,30 +180,12 @@ class ViewSong(GetSongMixin, ViewContentView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        if "transposition" in self.kwargs:
-            context["json"] = True
-            transposition = int(self.kwargs["transposition"])
-            context["transposition"] = transposition
-        else:
-            transposition = 0
-        context["lyrics"] = render_lyrics(self.object.lyrics, transposition)
+        context["lyrics"] = render_lyrics(self.object.lyrics)
         context["notes"] = SongNote.items_visible_to(self.request.user).filter(
             song=self.object
         )
         context["mentions"] = SongMention.objects.filter(song=self.object)
         return context
-
-    def render_to_response(self, context):
-        if context.get("json"):
-            return self.get_lyrics_as_json(context)
-        return super().render_to_response(context)
-
-    def get_lyrics_as_json(self, context):
-        payload = {
-            "lyrics": context["lyrics"],
-            "transposition": context["transposition"],
-        }
-        return HttpResponse(json.dumps(payload), content_type="application/json")
 
 
 class ContributionFormsetMixin:

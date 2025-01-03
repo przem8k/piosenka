@@ -45,6 +45,10 @@
     font-weight: bold;
 }
 
+.chords-t1, .chords-t2, .chords-t3, .chords-t4, .chords-t5, .chords-t6, .chords-t7, .chords-t8, .chords-t9, .chords-t10, .chords-t11 {
+    display: none;
+}
+
 .lyrics, .container blockquote {
     padding: 0 0 0 5px;
     margin: 0 0 20px 5px;

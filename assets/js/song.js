@@ -3,8 +3,8 @@ var GadgetStateEnum = {
     CHORDS_OFF: 2
 };
 
-var gadgetState = GadgetStateEnum.CHORDS_ON;
-var transposition = 0;
+let gadgetState = GadgetStateEnum.CHORDS_ON;
+let transposition = 0;
 
 function enableTransposition() {
     $(".trans-up-trigger").prop('disabled', false);
@@ -33,12 +33,11 @@ function applyState() {
 }
 
 function transpose() {
-    $.ajax({
-        url: transpositionUrls[transposition],
-    }).done(function(data) {
-        $(".lyrics-content").replaceWith(data['lyrics']);
-        applyState();
-    });
+    for (let i = 0; i <= 11; i++) {
+        $(`.chords-t${i}`).hide();
+    }
+    $(`.chords-t${transposition}`).show();
+    applyState();
 }
 
 $(document).ready(function(){

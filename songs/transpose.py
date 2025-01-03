@@ -190,7 +190,7 @@ def transpose_line(chords, transposition):
     )
 
 
-def transpose_lyrics(parsed_lyrics, transposition):
+def transpose_lyrics(parsed_lyrics):
     """
     Transposes a song represented as a list of paragraphs and returns result in the same format
     >>> transpose_lyrics([[('Na ziemi.', 'a a/H a/C a/D (a/E a/F a/E a E4/H)', False)]], 2)
@@ -202,11 +202,11 @@ def transpose_lyrics(parsed_lyrics, transposition):
     for paragraph in parsed_lyrics:
         section = []
         for text, chords, is_indented in paragraph:
-            transposed = transpose_line(chords, transposition)
+            transposed_chords = [transpose_line(chords, t) for t in range(12)] if chords else []
             section.append(
                 (
                     text,
-                    transposed,
+                    transposed_chords,
                     is_indented,
                 )
             )

@@ -99,6 +99,6 @@ def parse_lyrics(raw_lyrics):
     return result
 
 
-def render_lyrics(raw_lyrics, transposition=0, template_name="songs/lyrics.html"):
-    lyrics = transpose_lyrics(parse_lyrics(raw_lyrics), transposition)
+def render_lyrics(raw_lyrics, template_name="songs/lyrics.html"):
+    lyrics = transpose_lyrics(parse_lyrics(raw_lyrics))
     return loader.get_template(template_name).render({"lyrics": lyrics})
