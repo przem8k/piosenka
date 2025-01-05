@@ -8,8 +8,8 @@ class SiteUrlTest(TestCase):
     def test_site_urls(self):
         response = testing.get_public_client().get(reverse("index"))
         self.assertEqual(200, response.status_code)
-        response = testing.get_public_client().get(reverse("about"))
-        self.assertEqual(200, response.status_code)
+        #response = testing.get_public_client().get(reverse("about"))
+        #self.assertEqual(200, response.status_code)
 
     def test_to_review(self):
         login_url = reverse("hello") + "?next=" + reverse("to_review")

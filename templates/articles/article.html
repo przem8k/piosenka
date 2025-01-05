@@ -11,9 +11,13 @@
     <div class="col-md-8">
       <div class="section">
         <div class="content">
+          {% if title %}
+          <h1>{{ title }}</h1>
+          {% else %}
           <h1 class="remove-top-margin">{{ article.title }}
             {% include "components/content_status_span.html" with item=article %}
           </h1>
+          {% endif %}
           <div class="thumbnail-host">
             {% if article.cover_image %}
             <img src="{{article.cover_image|thumbnail_url:'cover'}}" class="img-responsive pzt-max-width" />
@@ -23,6 +27,8 @@
             {% endif %}
           </div>
           <div class="article-body">
+            {{ content|safe }}
+
             {{ article.lead_text_html|safe }}
 
             {{ article.main_text_html|safe }}

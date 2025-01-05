@@ -6,7 +6,5 @@ if [[ -n $(git status --porcelain) ]]; then
 fi
 
 python manage.py test
-rm -rf static
-python manage.py collectstatic --noinput
-python manage.py compress --force
+./build.sh
 gcloud app deploy

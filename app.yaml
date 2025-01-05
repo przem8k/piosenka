@@ -7,6 +7,11 @@ handlers:
   static_dir: static
   secure: always
 
+- url: /o-stronie/
+  static_files: out/o-stronie/index.html
+  upload: out/o-stronie/index.html
+  secure: always
+
 - url: /favicon\.ico
   static_files: static/images/favicon.ico
   upload: static/images/favicon\.ico

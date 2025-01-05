@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 
 PROJECT_PATH = os.path.join(os.path.abspath(os.path.split(__file__)[0]), "..")
 
-if os.getenv("GAE_APPLICATION", None):
+if os.getenv("GAE_APPLICATION", None) or os.getenv("RELEASE", None):
     DEBUG = False
 
     # App Engine's security features ensure that it is safe to
@@ -87,7 +87,9 @@ STATIC_ROOT = os.path.join(PROJECT_PATH, "static")
 # URL prefix used for static files, in development and in production.
 STATIC_URL = "/static/"
 
-STATICFILES_DIRS = (("", os.path.join(PROJECT_PATH, "assets")),)
+STATICFILES_DIRS = (
+    ("", os.path.join(PROJECT_PATH, "assets")),
+)
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -106,7 +108,12 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.contrib.redirects.middleware.RedirectFallbackMiddleware",
+    "piosenka.middleware.StaticPageFallbackMiddleware",
 ]
+
+# For the middleware that serves the static pages for development.
+# (in prod this is handled by mapping in app.yaml)
+PZT_STATICPAGE_DIR = os.path.join(PROJECT_PATH, "out")
 
 ROOT_URLCONF = "urls"
 

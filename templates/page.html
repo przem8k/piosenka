@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock title %}
+{% block description %}
+    {% if description %}
+    {{ description }}
+    {% else %}
+    Śpiewnik piosenki literackiej, wydarzenia, refleksje
+    {% endif %}
+{% endblock description %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="section">
+        <div class="content">
+          <h1>{{ title }}</h1>
+          
+          {{ content|safe }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 hidden-print"></div>
+  </div>
+</div>
+{% endblock content %}

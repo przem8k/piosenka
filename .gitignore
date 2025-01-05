@@ -13,6 +13,7 @@ piosenka.db
 site_media
 static
 node_modules
+out
 .idea
 .vimrc
 .environment
