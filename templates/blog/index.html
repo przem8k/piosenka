@@ -9,7 +9,7 @@
       {% for post in new_posts %}
       <div class="section">
         <div class="content">
-          <h2>{{ post.title }}
+          <h2 class="pzt-card-title">{{ post.title }}
             {% include "components/content_status_span.html" with item=post %}
           </h2>
 
@@ -29,7 +29,7 @@
 
     <div class="col-md-4">
       <div class="section">
-        <h2>Wszystkie posty</h2>
+        <h2 class="pzt-card-title">Wszystkie posty</h2>
         <table class="vtop cleantable">
           {% for post in all_posts %}
           <tr>

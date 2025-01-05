@@ -21,10 +21,6 @@ h1 {
   margin: 15px 0 15px 0;
 }
 
-h2 {
-  text-align: center;
-}
-
 /* navbar */
 
 .feather {
@@ -150,7 +146,7 @@ h2 {
     font-size: 40px;
 }
 
-.section h2 {
+.pzt-card-title {
     margin: 0 0 10px 0;
     font-size: 14px;
     text-align: left;
@@ -159,8 +155,9 @@ h2 {
     color: #990000;
 }
 
-.section .thumbnail-caption h2 {
+.thumbnail-caption h2 {
     color: white;
+    font-size: 14px;
     padding: 5px;
     margin: 0;
 }

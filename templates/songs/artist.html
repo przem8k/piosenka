@@ -23,7 +23,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="section">
-        <h2>Piosenki</h2>
+        <h2 class="pzt-card-title">Piosenki</h2>
         <ul class="list-unstyled">
           {% for song in songs %}
           <li><a href="{{ song.get_absolute_url }}">{{ song|truncatechars:50 }}
@@ -46,7 +46,7 @@
 
       {% if user.is_authenticated and artist.get_add_note_url %}
       <div class="section">
-        <h2>Dodaj adnotację</h2>
+        <h2 class="pzt-card-title">Dodaj adnotację</h2>
         <p style="text-align: center">
         <a href="{{ artist.get_add_note_url }}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
         </p>
@@ -55,7 +55,7 @@
 
       {% if epigone_songs %}
       <div class="section">
-        <h2>Kompozycje epigońskie</h2>
+        <h2 class="pzt-card-title">Kompozycje epigońskie</h2>
         <p style="text-align: center">
           <ul class="list-unstyled">
             {% for song in epigone_songs %}

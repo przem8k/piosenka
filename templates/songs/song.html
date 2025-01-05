@@ -99,7 +99,7 @@
     <div class="col-md-4 hidden-print">
       <!--
       <div class="section">
-        <h2>Zrzutka na serwery 2025</h2>
+        <h2 class="pzt-card-title">Zrzutka na serwery 2025</h2>
         <div style="position: relative; width: 100%; height: 400px; overflow: hidden;">
           <iframe style="position: absolute; top:0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;"
                   src="https://zrzutka.pl/zvr76k/widget/13" frameborder="0" scrolling="no"></iframe>
@@ -109,7 +109,7 @@
 
       {% if song.youtube_id %}
       <div class="section">
-        <h2>Nagranie</h2>
+        <h2 class="pzt-card-title">Nagranie</h2>
         <iframe src="https://www.youtube.com/embed/{{song.youtube_id}}" class="pzt-max-width" frameborder="0" allowfullscreen></iframe>
       </div>
       {% endif %}
@@ -120,7 +120,7 @@
 
       {% if mentions %}
       <div class="section">
-        <h2>Dowiedz się więcej</h2>
+        <h2 class="pzt-card-title">Dowiedz się więcej</h2>
         <ul class="list-unstyled">
           {% for mention in mentions %}
           <li><a href="{{ mention.article.get_absolute_url }}">{{ mention.article }}</a></li>
@@ -131,7 +131,7 @@
 
       {% if song.score1 or song.score2 or song.score3 %}
       <div class="section">
-        <h2>Nuty</h2>
+        <h2 class="pzt-card-title">Nuty</h2>
         {% if song.score1 %}
         {% include "components/thumbnail.html" with img=song.score1 type="scorethumb" alt="Nuty do piosenki" %}
         {% endif %}	
@@ -146,7 +146,7 @@
 
       {% if user.is_authenticated and song.get_add_note_url %}
       <div class="section">
-        <h2>Dodaj adnotację</h2>
+        <h2 class="pzt-card-title">Dodaj adnotację</h2>
         <p style="text-align: center">
           <a href="{{ song.get_add_note_url }}">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
