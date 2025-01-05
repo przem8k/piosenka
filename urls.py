@@ -27,8 +27,6 @@ urlpatterns = [
     # Admin and users.
     re_path(r"^admin/", admin.site.urls),
     re_path(r"^redakcja/", include("piosenka.user_urls")),
-    # Inspect.
-    re_path(r"^inspect/", include("piosenka.inspect_urls")),
     # Frontpage.
     re_path(r"^$", piosenka.views.SiteIndex.as_view(), name="index"),
 ]
