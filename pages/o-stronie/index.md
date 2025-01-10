@@ -24,7 +24,6 @@ Kamil Brzeski,
 Krzysztof Jabłoński,
 Krzysztof Kania,
 Maciej Kurek,
-Maciej Kurek,
 Marcin Gąbka,
 Mariusz Zadura,
 Mateusz Nagórski,
@@ -45,10 +44,10 @@ Autorem wszystkich opracowań nutowych zamieszczonych w [Śpiewniku](/spiewnik) 
 
 Piosenka z tekstem jest projektem open source, kod źródłowy strony jest dostępny publicznie. Jeśli nieobce Ci jest programowanie aplikacji webowych w i chciałbyś/chciałabyś spróbować swoich sił w pracy nad naszym serwisem, zapraszamy na [stronę projektu](https://github.com/przem8k/piosenka) w serwisie GitHub.
 
-## Kontakt
-
-Wszelkie uwagi, sugestie, zapytania, informacje o błędach prosimy przesyłać na adres **kontakt** małpa **piosenkaztekstem** kropka **pl**.
-
 ## Polityka prywatności
 
 Strona nie gromadzi żadnych danych osobowych niezalogowanych użytkowników. Jedyne dane gromadzone przez serwis na temat niezalogowanych użytkowników to zagregowane dane o ruchu na stronie zbierane przy pomocy platformy Google Analytics.
+
+## Kontakt
+
+Wszelkie uwagi, sugestie, zapytania, informacje o błędach prosimy przesyłać na adres **kontakt** małpa **piosenkaztekstem** kropka **pl**.
