@@ -25,6 +25,11 @@ h2 {
     font-size: 20px;
 }
 
+.pzt-artist-heading {
+    text-align: center;
+    font-size: 30px;
+}
+
 /* navbar */
 
 .feather {
