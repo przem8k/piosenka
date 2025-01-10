@@ -18,7 +18,8 @@ body {
 
 h1 {
   text-align: center;
-  margin: 15px 0 15px 0;
+  margin: 10px 5px 30px 5px;
+  font-size: 40px;
 }
 
 h2 {
@@ -148,11 +149,6 @@ h2 {
 .section hr {
     margin-top: 20px;
     margin-bottom: 5px;
-}
-
-.section h1 {
-    margin: 0 0 20px 0;
-    font-size: 40px;
 }
 
 .pzt-card-title {
