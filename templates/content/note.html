@@ -1,7 +1,7 @@
 {% load thumbnail %}
 
 <div class="section">
-  <h2 id="{{ note.get_id }}">{{ note.title }}
+  <h2 id="{{ note.get_id }}" class="pzt-card-title">{{ note.title }}
     {% include "components/content_status_span.html" with item=note %}
   </h2>
   {% if note.image %}
