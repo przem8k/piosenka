@@ -1,5 +1,5 @@
 ---
-title: IX Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego "Nadzieja"
+title: 'IX Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego "Nadzieja"'
 author: DX
 pub_date: 2012-07-29 22:37:02+00:00
 cover_image: article_covers/nadzieja9_pawel_wojcik_600_327.jpg

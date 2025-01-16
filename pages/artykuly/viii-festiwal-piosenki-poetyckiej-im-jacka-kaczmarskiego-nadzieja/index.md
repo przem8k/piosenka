@@ -1,5 +1,5 @@
 ---
-title: VIII Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego "Nadzieja"
+title: 'VIII Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego "Nadzieja"'
 author: DX
 pub_date: 2011-08-01 16:00:00+00:00
 cover_image: article_covers/antycznie.jpg

@@ -1,5 +1,5 @@
 ---
-title: Wiele się - w Kołobrzegu - nie zmieniło. Z Nadziei 2014 wnioski krytyczne.
+title: 'Wiele się - w Kołobrzegu - nie zmieniło. Z Nadziei 2014 wnioski krytyczne.'
 author: Alek
 pub_date: 2014-08-28 18:32:24.470562+00:00
 cover_image: article_covers/fest2.jpg

@@ -1,5 +1,5 @@
 ---
-title: X Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego "Nadzieja"
+title: 'X Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego "Nadzieja"'
 author: DX
 pub_date: 2013-07-26 15:39:19.906954+00:00
 cover_image: article_covers/IMG_20130726_171647.JPG

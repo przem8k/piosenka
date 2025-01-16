@@ -1,5 +1,5 @@
 ---
-title: O aniołach innym razem - Kaczmarski Underground po raz ósmy
+title: 'O aniołach innym razem - Kaczmarski Underground po raz ósmy'
 author: DX
 pub_date: 2014-10-10 09:42:27.355291+00:00
 cover_image: article_covers/10679578_863929123618620_375524804078038091_o.jpg

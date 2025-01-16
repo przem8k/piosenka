@@ -1,5 +1,5 @@
 ---
-title: "Bractwo zarozumiałych ksiąg", czyli szalenie subiektywny przegląd publikacji o Jacku Kaczmarskim
+title: '"Bractwo zarozumiałych ksiąg", czyli szalenie subiektywny przegląd publikacji o Jacku Kaczmarskim'
 author: Alek
 pub_date: 2014-11-24 20:35:30.413196+00:00
 cover_image: article_covers/DSC_0031.JPG

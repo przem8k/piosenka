@@ -1,5 +1,5 @@
 ---
-title: Kaczmarski Underground 6.0
+title: 'Kaczmarski Underground 6.0'
 author: Alek
 pub_date: 2012-09-04 16:00:00+00:00
 cover_image: article_covers/ku.png

@@ -1,5 +1,5 @@
 ---
-title: 10. festiwal kaczmarskiego undergroundu
+title: '10. festiwal kaczmarskiego undergroundu'
 author: Jabollissimus
 pub_date: 2016-10-13 02:25:30.984419+00:00
 cover_image: article_covers/wIMG_4323.jpg

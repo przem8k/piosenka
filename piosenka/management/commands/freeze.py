@@ -24,7 +24,7 @@ PZT_MEDIA_URL = 'https://storage.googleapis.com/piosenka-media/media/'
 def create_file_content(item, markdown_text):
     frontmatter_lines = ['---']
     if item.title:
-        frontmatter_lines.append(f'title: {item.title}')
+        frontmatter_lines.append(f'title: \'{item.title}\'')
     if item.author:
         frontmatter_lines.append(f'author: {item.author}')
     if item.pub_date:

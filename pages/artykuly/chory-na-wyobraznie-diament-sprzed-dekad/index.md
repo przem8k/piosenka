@@ -1,5 +1,5 @@
 ---
-title: "Chory na wyobraźnię" – diament sprzed dekad
+title: '"Chory na wyobraźnię" – diament sprzed dekad'
 author: DX
 pub_date: 2014-04-28 22:27:30.620817+00:00
 cover_image: article_covers/IMG_20140428_234719_1.jpg

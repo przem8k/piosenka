@@ -1,5 +1,5 @@
 ---
-title: Kaczmarski Underground 7.0
+title: 'Kaczmarski Underground 7.0'
 author: Alek
 pub_date: 2013-09-03 19:35:49.897503+00:00
 cover_image: article_covers/wafsgdhfh.png

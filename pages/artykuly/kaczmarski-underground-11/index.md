@@ -1,5 +1,5 @@
 ---
-title: Kaczmarski Underground 11
+title: 'Kaczmarski Underground 11'
 author: DX
 pub_date: 2017-09-05 13:20:34.455837+00:00
 cover_image: article_covers/600x300ku.jpg

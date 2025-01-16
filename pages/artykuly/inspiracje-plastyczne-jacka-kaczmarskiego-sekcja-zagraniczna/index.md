@@ -1,5 +1,5 @@
 ---
-title: Inspiracje plastyczne Jacka Kaczmarskiego – sekcja zagraniczna
+title: 'Inspiracje plastyczne Jacka Kaczmarskiego – sekcja zagraniczna'
 author: DX
 pub_date: 2018-07-22 15:29:14.568423+00:00
 cover_image: article_covers/carnival_and_lent.jpg
