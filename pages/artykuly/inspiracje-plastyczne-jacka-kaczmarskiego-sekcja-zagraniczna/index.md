@@ -2,7 +2,10 @@
 title: Inspiracje plastyczne Jacka Kaczmarskiego – sekcja zagraniczna
 author: DX
 pub_date: 2018-07-22 15:29:14.568423+00:00
-cover_image: https://storage.googleapis.com/piosenka-media/media/article_covers/carnival_and_lent.jpg
+cover_image: article_covers/carnival_and_lent.jpg
+cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/carnival_and_lent.jpg
+cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/carnival_and_lent.jpg.600x300_q85_crop_upscale.jpg
+cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/carnival_and_lent.jpg.420x210_q85_crop_upscale.jpg
 ---
 
 **Utwory Jacka Kaczmarskiego inspirowane malarstwem, rysunkiem, grafiką i rzeźbą \(ekfrazy\). Część druga: sekcja zagraniczna.**

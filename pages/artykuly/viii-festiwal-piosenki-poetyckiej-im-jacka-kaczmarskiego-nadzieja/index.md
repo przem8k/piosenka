@@ -2,7 +2,11 @@
 title: VIII Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego "Nadzieja"
 author: DX
 pub_date: 2011-08-01 16:00:00+00:00
-cover_image: https://storage.googleapis.com/piosenka-media/media/article_covers/antycznie.jpg
+cover_image: article_covers/antycznie.jpg
+cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/antycznie.jpg
+cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/antycznie.jpg.600x300_q85_crop_upscale.jpg
+cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/antycznie.jpg.420x210_q85_crop_upscale.jpg
+cover_credits: Zdjęcie dzięki uprzejmości [Przemka Lipskiego](http://www.przemeklipski.com/).
 ---
 
 29 i 30 lipca w Kołobrzegu już po raz ósmy odbył się Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego.

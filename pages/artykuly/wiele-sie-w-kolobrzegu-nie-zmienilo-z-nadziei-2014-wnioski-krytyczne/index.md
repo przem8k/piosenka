@@ -2,7 +2,12 @@
 title: Wiele się - w Kołobrzegu - nie zmieniło. Z Nadziei 2014 wnioski krytyczne.
 author: Alek
 pub_date: 2014-08-28 18:32:24.470562+00:00
-cover_image: https://storage.googleapis.com/piosenka-media/media/article_covers/fest2.jpg
+cover_image: article_covers/fest2.jpg
+cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/fest2.jpg
+cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/fest2.jpg.600x300_q85_crop_upscale.jpg
+cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/fest2.jpg.420x210_q85_crop_upscale.jpg
+cover_credits: Fot. Przemysław Lipski
+
 ---
 
 W  sobotę 26 lipca zakończył się kolejny \- **jedenasty** \- Festiwal Piosenki Poetyckiej im. **Jacka Kaczmarskiego „Nadzieja”**.

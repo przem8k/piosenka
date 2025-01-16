@@ -2,7 +2,10 @@
 title: Inspiracje plastyczne Jacka Kaczmarskiego – sekcja polska
 author: DX
 pub_date: 2017-10-08 22:17:32.448066+00:00
-cover_image: https://storage.googleapis.com/piosenka-media/media/article_covers/patrol_powstanczy_1.jpg
+cover_image: article_covers/patrol_powstanczy_1.jpg
+cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/patrol_powstanczy_1.jpg
+cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/patrol_powstanczy_1.jpg.600x300_q85_crop_upscale.jpg
+cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/patrol_powstanczy_1.jpg.420x210_q85_crop_upscale.jpg
 ---
 
 **Utwory Jacka Kaczmarskiego inspirowane malarstwem, rysunkiem, grafiką i rzeźbą \(ekfrazy\). Część pierwsza: sekcja polska.**

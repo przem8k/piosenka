@@ -2,7 +2,10 @@
 title: X Festiwal Piosenki Poetyckiej im. Jacka Kaczmarskiego "Nadzieja"
 author: DX
 pub_date: 2013-07-26 15:39:19.906954+00:00
-cover_image: https://storage.googleapis.com/piosenka-media/media/article_covers/IMG_20130726_171647.JPG
+cover_image: article_covers/IMG_20130726_171647.JPG
+cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/IMG_20130726_171647.JPG
+cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/IMG_20130726_171647.JPG.600x300_q85_crop_upscale.jpg
+cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/IMG_20130726_171647.JPG.420x210_q85_crop_upscale.jpg
 ---
 
 W dniach 26 - 27 lipca w Kołobrzegu już po raz **dziesiąty** odbył się festiwal piosenki literackiej dedykowany pamięci **Jacka Kaczmarskiego "Nadzieja"**.

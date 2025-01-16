@@ -2,7 +2,12 @@
 title: O aniołach innym razem - Kaczmarski Underground po raz ósmy
 author: DX
 pub_date: 2014-10-10 09:42:27.355291+00:00
-cover_image: https://storage.googleapis.com/piosenka-media/media/article_covers/10679578_863929123618620_375524804078038091_o.jpg
+cover_image: article_covers/10679578_863929123618620_375524804078038091_o.jpg
+cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/10679578_863929123618620_375524804078038091_o.jpg
+cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/10679578_863929123618620_375524804078038091_o.jpg.600x300_q85_crop_upscale.jpg
+cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/10679578_863929123618620_375524804078038091_o.jpg.420x210_q85_crop_upscale.jpg
+cover_credits: Źródło zdjęcia: profil Kaczmarski Underground.
+
 ---
 
 Zakończyła się kolejna edycja **Kaczmarski Underground** \- corocznego zlotu sympatyków twórczości poety. 

@@ -2,7 +2,12 @@
 title: Kaczmarski Underground 11
 author: DX
 pub_date: 2017-09-05 13:20:34.455837+00:00
-cover_image: https://storage.googleapis.com/piosenka-media/media/article_covers/600x300ku.jpg
+cover_image: article_covers/600x300ku.jpg
+cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/600x300ku.jpg
+cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/600x300ku.jpg.600x300_q85_crop_upscale.jpg
+cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/600x300ku.jpg.420x210_q85_crop_upscale.jpg
+cover_credits: fot. Przemek Lipski
+
 ---
 
 Jak przystało na wydarzenie “podziemne”, jedenastą edycję festiwalu **Kaczmarski Underground** otworzył koncert w krakowskiej “Piwnicy pod Baranami”; tej samej, w której ponad pół wieku wcześniej Piotr Skrzynecki stworzył słynny krakowski kabaret literacki. 

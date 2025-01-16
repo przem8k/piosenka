@@ -23,15 +23,6 @@ if os.getenv("GAE_APPLICATION", None) or os.getenv("RELEASE", None):
 
     SECRET_KEY = os.getenv("PIOSENKA_SECRET_KEY")
 
-    DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
-    GS_BUCKET_NAME = os.getenv("PIOSENKA_GS_BUCKET_NAME")
-    GS_LOCATION = os.getenv("PIOSENKA_GS_LOCATION")
-    GS_DEFAULT_ACL = "publicRead"
-    MEDIA_URL = os.getenv("PIOSENKA_MEDIA_URL")
-
-    THUMBNAIL_DEFAULT_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
-    # THUMBNAIL_DEBUG = True
-
     import google.cloud.logging
 
     client = google.cloud.logging.Client()
@@ -67,11 +58,16 @@ else:
     SECRET_KEY = "piosenka-local-dev-not-really-secret"
 
     MEDIA_ROOT = os.path.join(PROJECT_PATH, "site_media")
-    MEDIA_URL = "/site_media/"
 
     EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
     EMAIL_FILE_PATH = "/tmp/django-emails"
 
+DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
+GS_BUCKET_NAME = 'piosenka-media'
+GS_LOCATION = 'media'
+GS_DEFAULT_ACL = "publicRead"
+MEDIA_URL = 'https://storage.googleapis.com/piosenka-media/media/'
+THUMBNAIL_DEFAULT_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
 
 USE_TZ = True
 TIME_ZONE = "Europe/Warsaw"
