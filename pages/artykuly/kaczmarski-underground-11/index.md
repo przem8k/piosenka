@@ -7,11 +7,9 @@ cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_co
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/600x300ku.jpg.600x300_q85_crop_upscale.jpg
 cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/600x300ku.jpg.420x210_q85_crop_upscale.jpg
 cover_credits: fot. Przemek Lipski
-
 ---
 
-Jak przystało na wydarzenie “podziemne”, jedenastą edycję festiwalu **Kaczmarski Underground** otworzył koncert w krakowskiej “Piwnicy pod Baranami”; tej samej, w której ponad pół wieku wcześniej Piotr Skrzynecki stworzył słynny krakowski kabaret literacki. 
-
+Jak przystało na wydarzenie “podziemne”, jedenastą edycję festiwalu **Kaczmarski Underground** otworzył koncert w krakowskiej “Piwnicy pod Baranami”; tej samej, w której ponad pół wieku wcześniej Piotr Skrzynecki stworzył słynny krakowski kabaret literacki.
 
 Dziś, jak dawniej, na scenie Piwnicy stoi nastrojony fortepian, a w barze zamówić można materiały pomagające w odbiorze.
 

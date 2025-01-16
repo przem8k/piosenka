@@ -38,4 +38,4 @@ Kolejna "Nadzieja" za nami - dziękuję wszystkich obecnym, artystom i organizat
  [7]: http://youtu.be/1ozh6GtO8-c?t=2m33s
  [8]: http://zbiczek1.wrzuta.pl/audio/2ZJrN84Poug/kacper_gontar_-_dwie_smierci
  [9]: http://www.youtube.com/watch?v=oTviq22qGVY
- [10]: http://youtu.be/1ozh6GtO8-c?t=1m22s  
+ [10]: http://youtu.be/1ozh6GtO8-c?t=1m22s

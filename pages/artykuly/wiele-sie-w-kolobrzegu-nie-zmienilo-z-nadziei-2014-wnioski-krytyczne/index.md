@@ -7,11 +7,9 @@ cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_co
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/fest2.jpg.600x300_q85_crop_upscale.jpg
 cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/fest2.jpg.420x210_q85_crop_upscale.jpg
 cover_credits: Fot. Przemysław Lipski
-
 ---
 
 W  sobotę 26 lipca zakończył się kolejny \- **jedenasty** \- Festiwal Piosenki Poetyckiej im. **Jacka Kaczmarskiego „Nadzieja”**.
-
 
 Jak co roku publiczność mogła wysłuchać przesłuchań konkursowych, koncertu głównego \(w tym roku \- „Noc wojenna”\), a następnego dnia pokopać piłkę z zespołem Fundacji im. Jacka Kaczmarskiego i spróbować swoich sił w Turnieju Wiedzy. Były momenty dobre i słabe. O dobrych mówi się chętnie i często, więc ja skupię się \(tradycyjnie\) na tych słabszych i co być może najważniejsze \- zauważalnych od jakiegoś czasu.
 
@@ -35,12 +33,15 @@ W tym roku stała się natomiast rzecz dla mnie kompletnie niezrozumiała – Pa
 
 > Razem z tępą gawiedzią tańczę w rytm Karmanioli,
 > Nic nie widzę, nie słyszę \- i może tak trzeba
+
 > Jakby nie pamiętali, lub nie chcieli pamiętać
 > Że jesteśmy wszak tylko marnym wierszem idioty
+
 > Noe arkę buduje, ale śmieją się z niego
 > Ufni, że ich nie spotka, to, co kiedyś już było
 > A gdy toną, pytają \- panie Boże, dlaczego?
 > I tak toczy się świat \- wiele się nie zmieniło
+
 Na domiar złego ocierający się o kicz utwór pointuje parafraza z Sieniawskiego. Złośliwie można by dopowiedzieć, że Paweł Wójcik zapomniał o fragmencie z „Warchoła” – tym o szabli. Już dwa lata temu można było zaryzykować tezę, że “Toastom” daleko było do najlepszych piosenek autora \(“Munch”! \- ten od “Krzyku”\) Trochę było szkoda \- w tym roku **szkoda tym bardziej**.
 
 Jaki jest morał tego przydługiego wywodu? Że jury nie bardzo wie, co ocenia? Nie pamiętam Nadziei, kiedy werdykt nie spotkałby się z ironicznymi komentarzami, ale wiadomo – w Polsce każdy jest trenerem reprezentacji, premierem, lekarzem i prawnikiem, więc czemu nie może być znawcą piosenki poetyckiej obdarzonym słuchem absolutnym?

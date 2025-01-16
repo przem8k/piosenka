@@ -7,11 +7,9 @@ cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_co
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/wIMG_4323.jpg.600x300_q85_crop_upscale.jpg
 cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/wIMG_4323.jpg.420x210_q85_crop_upscale.jpg
 cover_credits: Fot. [Przemek Lipski](http://www.przemeklipski.com)
-
 ---
 
-W tej piwnicy zawsze wiele się działo. Oaza dla ptaków niebieskich, gdzie Skrzynecki między występy wtrącał to i owo, potrząsając dzwonkami na patyku. 
-
+W tej piwnicy zawsze wiele się działo. Oaza dla ptaków niebieskich, gdzie Skrzynecki między występy wtrącał to i owo, potrząsając dzwonkami na patyku.
 
 Ponoć spóźnieni na kabaret dostać się tu mogli już tylko małym, węglowym okienkiem, zsuwając się przez nie w dół, by efektownie wylądować... na scenie. Lokal wyjątkowy, Piwnica pod Baranami, tu pod ziemię zszedł 10. festiwal Jacka Kaczmarskiego Underground.
 

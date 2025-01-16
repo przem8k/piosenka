@@ -71,6 +71,6 @@ def trevor_to_md(trevor_data):
     output = []
 
     for block in parsed['data']:
-        output.append(block['data']['text'])
+        output.append(block['data']['text'].strip())
 
-    return ''.join(output)
+    return '\n\n'.join(output)

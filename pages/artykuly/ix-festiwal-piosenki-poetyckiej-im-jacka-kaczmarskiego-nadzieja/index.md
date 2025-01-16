@@ -7,12 +7,9 @@ cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_co
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/nadzieja9_pawel_wojcik_600_327.jpg.600x300_q85_crop_upscale.jpg
 cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/nadzieja9_pawel_wojcik_600_327.jpg.420x210_q85_crop_upscale.jpg
 cover_credits: Zdjęcie dzięki uprzejmości [Przemka Lipskiego](http://www.przemeklipski.com/).
-
 ---
 
 27 i 28 lipca w **Kołobrzegu** odbyła się dziewiąta edycja **Festiwalu Piosenki Poetyckiej im. Jacka Kaczmarskiego "Nadzieja"**.
-
-
 
 Krótko po godzinie 17 w hali „Łuczniczka” zabrzmiała tradycyjna „Nadzieja śmiełowska”, po której na scenie pojawił się gospodarz pierwszego dnia imprezy \- **Jarosław Gugała**. Chwilę później **Marcin Kunicki** i starosta kołobrzeski **Tomasz Tamborski** uroczyście zainaugurowali festiwal, tym samym otwierając także pierwszy punkt programu \- **przegląd konkursowy**.
 
@@ -55,4 +52,3 @@ Drugi dzień festiwalu w telegraficznym skrócie: Fundacja im. Jacka Kaczmarskie
 Kłaniam się nisko wszystkim, którzy dotarli do Kołobrzegu \- publiczności, artystom, wolontariuszom i organizatorom \- i dziękuję za piękne chwile; **Przemkowi Żbikowskiemu** także za korektę tej relacji.
 
 Do zobaczenia za rok!
-
