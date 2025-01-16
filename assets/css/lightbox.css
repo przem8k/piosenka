@@ -1,9 +1,5 @@
 /* thumbnails and lightbox */
 
-.pzt-thumbnail {
-  text-align: center;
-}
-
 .pzt-thumbnail img {
   max-width: 100%;
   max-height: 300px;
