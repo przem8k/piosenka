@@ -20,7 +20,7 @@
     background: rgba(0,0,0,0.75);
 }
 
-.thumbnail-caption p, .thumbnail-caption h1 {
+.pzt .thumbnail-caption p, .pzt .thumbnail-caption h1 {
     /* conflicts with .section h1 color which is red */
     color: white !important;
     margin: 0;

@@ -1,12 +1,12 @@
 ---
 title: 'Kaczmarski Underground 7.0'
 author: Alek
-pub_date: 2013-09-03 19:35:49.897503+00:00
+pub_date: '2013-09-03 19:35:49.897503+00:00'
 cover_image: article_covers/wafsgdhfh.png
 cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/wafsgdhfh.png
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/wafsgdhfh.png.600x300_q85_crop_upscale.jpg
 cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/wafsgdhfh.png.420x210_q85_crop_upscale.jpg
-cover_credits: Źródło zdjęcia: [Kaczmarski Underground](https://www.facebook.com/pages/kaczmarski-underground/134862936525246)
+cover_credits: 'Źródło zdjęcia: [Kaczmarski Underground](https://www.facebook.com/pages/kaczmarski-underground/134862936525246)'
 ---
 
 Kolejny przełom sierpnia i września i kolejny **Kaczmarski Underground**! Po raz siódmy sympatycy twórczości Jacka Kaczmarskiego zebrali się w podkrakowskich Marszowicach by uczestniczyć w koncertach, wykładach i spotkaniach poświęconych twórczości artysty.

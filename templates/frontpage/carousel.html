@@ -1,13 +1,11 @@
-{% load thumbnail %}
+<!-- Freezdry: hard-coding the most recent article for now. -->
 <div class="section">
   <div class="thumbnail-host">
-    <a href="{{article.get_absolute_url}}">
-      <img src="{{ article.cover_image|thumbnail_url:'cover'}}" alt="Ilustracja artykułu {{article}}" class="img-responsive pzt-max-width" />
+    <a href="/artykuly/inspiracje-plastyczne-jacka-kaczmarskiego-sekcja-zagraniczna/">
+      <img src="https://storage.googleapis.com/piosenka-media/media/article_covers/carnival_and_lent.jpg.600x300_q85_crop_upscale.jpg" alt="Ilustracja artykułu Inspiracje plastyczne Jacka Kaczmarskiego – sekcja zagraniczna" class="img-responsive pzt-max-width" />
       <div class="thumbnail-caption">
-        <p>{{article.title}}
-          {% include "components/content_status_span.html" with item=article %}
-        </p>
-        {{article.lead_text_html|safe}}
+        <p>Inspiracje plastyczne Jacka Kaczmarskiego – sekcja zagraniczna</p>
+        <p>Utwory Jacka Kaczmarskiego inspirowane malarstwem, rysunkiem, grafiką i rzeźbą (ekfrazy). Część druga: sekcja zagraniczna.</p>
       </div>
     </a>
   </div>

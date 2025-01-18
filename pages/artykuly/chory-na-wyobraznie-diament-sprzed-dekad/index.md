@@ -1,7 +1,7 @@
 ---
 title: '"Chory na wyobraźnię" – diament sprzed dekad'
 author: DX
-pub_date: 2014-04-28 22:27:30.620817+00:00
+pub_date: '2014-04-28 22:27:30.620817+00:00'
 cover_image: article_covers/IMG_20140428_234719_1.jpg
 cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/IMG_20140428_234719_1.jpg
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/IMG_20140428_234719_1.jpg.600x300_q85_crop_upscale.jpg
@@ -59,7 +59,6 @@ Pola do spekulacji nie zostawiają inspiracje najbardziej **interwencyjnych** pi
 > Kto już próbował pływać przy związanych rękach?
 > Kto pewien jest, że jego nigdy to nie spotka
 > Że tylko przyszli święci konają na mękach?
-
 > Pięć lat, długo czy krótko, dużo to czy mało
 > Zależy \- czy odsiedzieć, czy beztrosko przeżyć
 > \([Pięciolatka](https://www.piosenkaztekstem.pl/opracowanie/mariusz\-zadura\-pieciolatka/)\)
@@ -71,4 +70,3 @@ Wewnętrzna okładka starannie wydanej płyty uzupełnia piosenki jeszcze jednym
 > Byście wreszcie, nie kryjąc swych twarzy
 > Zapłakali, łez się nie wstydząc
 > \([Niepotrzebni](https://www.piosenkaztekstem.pl/opracowanie/mariusz\-zadura\-niepotrzebni/)\)
-> >

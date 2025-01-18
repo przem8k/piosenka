@@ -9,7 +9,6 @@ from django.urls import reverse
 from django.views.generic import DetailView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView
 
-from articles.models import SongMention
 from content.models import filter_visible_to_user
 from content.views import (AddContentView, ApproveContentView, EditContentView,
                            ReviewContentView, ViewContentView)
@@ -184,7 +183,6 @@ class ViewSong(GetSongMixin, ViewContentView):
         context["notes"] = SongNote.items_visible_to(self.request.user).filter(
             song=self.object
         )
-        context["mentions"] = SongMention.objects.filter(song=self.object)
         return context
 
 

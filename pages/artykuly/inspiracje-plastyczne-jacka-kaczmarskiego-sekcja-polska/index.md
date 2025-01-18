@@ -1,7 +1,7 @@
 ---
 title: 'Inspiracje plastyczne Jacka Kaczmarskiego – sekcja polska'
 author: DX
-pub_date: 2017-10-08 22:17:32.448066+00:00
+pub_date: '2017-10-08 22:17:32.448066+00:00'
 cover_image: article_covers/patrol_powstanczy_1.jpg
 cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/patrol_powstanczy_1.jpg
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/patrol_powstanczy_1.jpg.600x300_q85_crop_upscale.jpg
@@ -25,19 +25,19 @@ W pierwszej części pochylamy się nad utworami inspirowanymi dziełami polskic
 **Bronisław Linke** \(1906–1962\) – malarz i rysownik. Tworzył w nurcie określanym jako „realizm metaforyczny”. Do jego najbardziej znanych prac zalicza się powojenny cykl „Kamienie krzyczą” inspirowany ruinami zburzonej Warszawy oraz obraz „Autobus” przedstawiający socrealistyczną metaforę społeczeństwa polskiego.
 
 - [Czerwony autobus](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-czerwony\-autobus/)
- - [Kanapka z człowiekiem](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-kanapka\-z\-czlowiekiem/)
+- [Kanapka z człowiekiem](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-kanapka\-z\-czlowiekiem/)
 
 **Jacek Malczewski** \(1854–1929\) – malarz wykształcony w pracowni Jana Matejki i na studiach w Paryżu, polski przedstawiciel europejskiego symbolizmu – mistycznego nurtu sztuki dążącego do uchwycenia istoty idei wymykających się realistycznym opisom i racjonalnej analizie.
 
 - [Powrót z Syberii](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-powrot\-z\-syberii/)
- - [Wigilia na Syberii](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-wigilia\-na\-syberii/)
- - [Zesłanie studentów](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-zeslanie\-studentow/)
- - [Zatruta studnia](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-zatruta\-studnia/)
+- [Wigilia na Syberii](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-wigilia\-na\-syberii/)
+- [Zesłanie studentów](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-zeslanie\-studentow/)
+- [Zatruta studnia](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-zatruta\-studnia/)
 
 **Jan Matejko** \(1838–1893\) – krakowski mistrz polskiego malarstwa historycznego. Dyrektor Akademii Sztuk Pięknych w Krakowie, nauczyciel m.in. Jacka Malczewskiego i Stanisława Wyspiańskiego.
 
 - [Stańczyk](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-stanczyk/)
- - [Rejtan, czyli raport ambasadora](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-rejtan\-czyli\-raport\-ambasadora/)
+- [Rejtan, czyli raport ambasadora](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-rejtan\-czyli\-raport\-ambasadora/)
 
 **Jan Norblin** \(1745–1830\) – malarz właściwie francuski, choć za sprawą związków z rodziną Czartoryskich i wieloletniej pracy w Polsce zaliczany do nurtu polskiego malarstwa. Twórca obrazów historycznych i rodzajowych; zatrudniony jako oficjalny ilustrator insurekcji warszawskiej \(powstania stolicy w czasie insurekcji kościuszkowskiej\).
 

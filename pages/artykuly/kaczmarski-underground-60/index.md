@@ -1,12 +1,12 @@
 ---
 title: 'Kaczmarski Underground 6.0'
 author: Alek
-pub_date: 2012-09-04 16:00:00+00:00
+pub_date: '2012-09-04 16:00:00+00:00'
 cover_image: article_covers/ku.png
 cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/ku.png
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/ku.png.600x300_q85_crop_upscale.jpg
 cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/ku.png.420x210_q85_crop_upscale.jpg
-cover_credits: Zdjęcie dzięki uprzejmości Kaczmarski Underground.
+cover_credits: 'Zdjęcie dzięki uprzejmości Kaczmarski Underground.'
 ---
 
 Na przełomie sierpnia i września w podkrakowskich Marszowicach odbył się zlot fanów twórczości Jacka Kaczmarskiego o nazwie **Kaczmarski Underground**.

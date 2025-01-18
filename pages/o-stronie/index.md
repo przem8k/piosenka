@@ -10,33 +10,7 @@ Dokładamy starań, aby materiały publikowane na stronie, w szczególności tek
 
 Dziękujemy za pomoc w zgromadzeniu opublikowanych materiałów, poprawki, informacje o nadchodzących wydarzeniach a także pomoc techniczną.
 
-Pomogli:
-Adam Łapacz,
-Adam Leszkiewicz,
-Aleksander Pawluś,
-Ewa Pietkiewicz,
-Jakub Garus,
-Jakub Kwaśniewski,
-Jakub Mędrzycki,
-Jan Bulak,
-Joanna Biega,
-Kamil Brzeski,
-Krzysztof Jabłoński,
-Krzysztof Kania,
-Maciej Kurek,
-Marcin Gąbka,
-Mariusz Zadura,
-Mateusz Nagórski,
-Michał Kaczmarczyk,
-Mikołaj Grygierczyk,
-Piotr Kajetan Matczuk,
-Przemysław Bogusz,
-Przemysław Lipski,
-Przemysław Żbikowski,
-Radosław Książek,
-Tomasz Susmęd,
-Witold Bartoszek.
-
+Pomogli: Adam Łapacz, Adam Leszkiewicz, Aleksander Pawluś, Ewa Pietkiewicz, Jakub Garus, Jakub Kwaśniewski, Jakub Mędrzycki, Jan Bulak, Joanna Biega, Kamil Brzeski, Krzysztof Jabłoński, Krzysztof Kania, Maciej Kurek, Marcin Gąbka, Mariusz Zadura, Mateusz Nagórski, Michał Kaczmarczyk, Mikołaj Grygierczyk, Piotr Kajetan Matczuk, Przemysław Bogusz, Przemysław Lipski, Przemysław Żbikowski, Radosław Książek, Tomasz Susmęd, Witold Bartoszek.
 
 Autorem wszystkich opracowań nutowych zamieszczonych w [Śpiewniku](/spiewnik) jest Tomasz Susmęd.
 

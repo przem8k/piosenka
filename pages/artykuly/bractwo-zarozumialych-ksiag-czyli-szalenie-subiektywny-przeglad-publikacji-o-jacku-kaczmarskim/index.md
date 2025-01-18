@@ -1,7 +1,7 @@
 ---
 title: '"Bractwo zarozumiałych ksiąg", czyli szalenie subiektywny przegląd publikacji o Jacku Kaczmarskim'
 author: Alek
-pub_date: 2014-11-24 20:35:30.413196+00:00
+pub_date: '2014-11-24 20:35:30.413196+00:00'
 cover_image: article_covers/DSC_0031.JPG
 cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/DSC_0031.JPG
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/DSC_0031.JPG.600x300_q85_crop_upscale.jpg

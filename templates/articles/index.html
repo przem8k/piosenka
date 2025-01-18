@@ -1,6 +1,5 @@
-{% extends "articles/base.html" %}
+{% extends "base.html" %}
 
-{% load thumbnail %}
 {% load list_partition %}
 
 {% block title %}Artykuły{% endblock %}
@@ -14,16 +13,14 @@
       <div class="section">
         <a href="{{article.get_absolute_url}}">
           <div class="thumbnail-host">
-            <img src="{{article.cover_image|thumbnail_url:'coverthumb'}}" class="img-responsive pzt-max-width" />
+            <img src="{{article.thumb_url}}" class="img-responsive pzt-max-width" />
             <div class="thumbnail-caption">
               <h2>{{article.title}}
-              {% include "components/content_status_span.html" with item=article %}
               </h2>
             </div>
           </div>
         </a>
-        {{ article.lead_text_html|safe }}
-        {% include "components/content_foot.html" with action="Dodany" item=article %}
+        {{ article.lead_html|safe }}
       </div>
     </div>
     {% endfor %}

@@ -28,7 +28,7 @@ def create_file_content(item, markdown_text):
     if item.author:
         frontmatter_lines.append(f'author: {item.author}')
     if item.pub_date:
-        frontmatter_lines.append(f'pub_date: {item.pub_date}')
+        frontmatter_lines.append(f'pub_date: \'{item.pub_date}\'')
     if item.cover_image:
         frontmatter_lines.append(f'cover_image: {item.cover_image.name}')
         full_url = PZT_MEDIA_URL + item.cover_image.name
@@ -41,7 +41,7 @@ def create_file_content(item, markdown_text):
         frontmatter_lines.append(f'cover_image_thumb_420_210: {thumbnail_mini.url}')
     if item.cover_credits_trevor:
         credits = trevor_to_md(item.cover_credits_trevor)
-        frontmatter_lines.append(f'cover_credits: {credits}')
+        frontmatter_lines.append(f'cover_credits: \'{credits}\'')
     
     # TODO: handle thumbnails, add cover credits
     frontmatter_lines.append('---')

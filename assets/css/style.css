@@ -8,6 +8,10 @@ body {
     }
 }
 
+p, .section p {
+    margin: 10px 0 10px 0;
+}
+
 /* override Bootstrap "display urls in print" behavior */
 
 @media print {

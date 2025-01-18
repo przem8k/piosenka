@@ -1,12 +1,12 @@
 ---
 title: '10. festiwal kaczmarskiego undergroundu'
 author: Jabollissimus
-pub_date: 2016-10-13 02:25:30.984419+00:00
+pub_date: '2016-10-13 02:25:30.984419+00:00'
 cover_image: article_covers/wIMG_4323.jpg
 cover_image_full: https://storage.googleapis.com/piosenka-media/media/article_covers/wIMG_4323.jpg
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/article_covers/wIMG_4323.jpg.600x300_q85_crop_upscale.jpg
 cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/article_covers/wIMG_4323.jpg.420x210_q85_crop_upscale.jpg
-cover_credits: Fot. [Przemek Lipski](http://www.przemeklipski.com)
+cover_credits: 'Fot. [Przemek Lipski](http://www.przemeklipski.com)'
 ---
 
 W tej piwnicy zawsze wiele się działo. Oaza dla ptaków niebieskich, gdzie Skrzynecki między występy wtrącał to i owo, potrząsając dzwonkami na patyku.

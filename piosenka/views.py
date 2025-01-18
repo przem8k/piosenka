@@ -3,7 +3,6 @@ from datetime import date, datetime
 from django.contrib.auth.models import User
 from django.views.generic import TemplateView
 
-from articles.models import Article
 from blog.models import Post
 from content.models import filter_visible_to_user
 from events.models import get_events_for
@@ -49,9 +48,6 @@ class SiteIndex(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["article"] = (
-            Article.items_visible_to(self.request.user).order_by("-pub_date").first()
-        )
         context["events"] = get_events_for(self.request.user)
         context["posts"] = Post.items_visible_to(self.request.user).order_by(
             "-pub_date"
@@ -78,7 +74,6 @@ class SiteIndex(TemplateView):
 
 
 class About(TemplateView):
-    ARTICLE_FACTOR = 5
     template_name = "about.html"
 
     def get_context_data(self, **kwargs):
@@ -92,11 +87,9 @@ class About(TemplateView):
                 + ArtistNote.items_live().filter(author=user).count()
             )
             author["songs"] = Song.items_live().filter(author=user).count()
-            author["articles"] = Article.items_live().filter(author=user).count()
             author["total"] = (
                 author["annotations"]
                 + author["songs"]
-                + self.ARTICLE_FACTOR * author["articles"]
             )
             if author["total"]:
                 authors.append(author)
