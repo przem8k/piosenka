@@ -73,29 +73,5 @@ class SiteIndex(TemplateView):
         return context
 
 
-class About(TemplateView):
-    template_name = "about.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        authors = []
-        for user in User.objects.filter(is_active=True):
-            author = {}
-            author["user"] = user
-            author["annotations"] = (
-                SongNote.items_live().filter(author=user).count()
-                + ArtistNote.items_live().filter(author=user).count()
-            )
-            author["songs"] = Song.items_live().filter(author=user).count()
-            author["total"] = (
-                author["annotations"]
-                + author["songs"]
-            )
-            if author["total"]:
-                authors.append(author)
-        context["authors"] = sorted(authors, key=lambda k: k["total"], reverse=True)
-        return context
-
-
 class Search(TemplateView):
     template_name = "search.html"
