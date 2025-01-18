@@ -63,10 +63,10 @@ else:
     EMAIL_FILE_PATH = "/tmp/django-emails"
 
 DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
-GS_BUCKET_NAME = 'piosenka-media'
-GS_LOCATION = 'media'
+GS_BUCKET_NAME = "piosenka-media"
+GS_LOCATION = "media"
 GS_DEFAULT_ACL = "publicRead"
-MEDIA_URL = 'https://storage.googleapis.com/piosenka-media/media/'
+MEDIA_URL = "https://storage.googleapis.com/piosenka-media/media/"
 THUMBNAIL_DEFAULT_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
 
 USE_TZ = True
@@ -83,9 +83,7 @@ STATIC_ROOT = os.path.join(PROJECT_PATH, "static")
 # URL prefix used for static files, in development and in production.
 STATIC_URL = "/static/"
 
-STATICFILES_DIRS = (
-    ("", os.path.join(PROJECT_PATH, "assets")),
-)
+STATICFILES_DIRS = (("", os.path.join(PROJECT_PATH, "assets")),)
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",

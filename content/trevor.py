@@ -66,11 +66,12 @@ def _render_markdown(text):
     html = markdown.markdown(text)
     return bleach.clean(html, tags=_BLEACH_ALLOWED_TAGS)
 
+
 def trevor_to_md(trevor_data):
     parsed = json.loads(trevor_data)
     output = []
 
-    for block in parsed['data']:
-        output.append(block['data']['text'].strip())
+    for block in parsed["data"]:
+        output.append(block["data"]["text"].strip())
 
-    return '\n\n'.join(output)
+    return "\n\n".join(output)
