@@ -22,10 +22,4 @@ urlpatterns = [
         user_views.ConfirmPasswordReset.as_view(),
         name="confirm_password_reset",
     ),
-    path(r"zapros/", user_views.InviteView.as_view(), name="invite"),
-    path(
-        r"dolacz/<str:invitation_key>/",
-        user_views.JoinView.as_view(),
-        name="join",
-    ),
 ]
