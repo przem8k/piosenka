@@ -5,26 +5,6 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      {% if song_of_the_day or artist_born_on_the_day or artist_died_on_the_day %}
-      <div class="section">
-        <h2 class="pzt-card-title">{% now "j E" %} w piosence</h2>
-        {% if song_of_the_day %}
-        {% with note=song_of_the_day %}
-        {% include "components/thumbnail.html" with img=note.image url=note.song.get_absolute_url type="imagethumb" label=note.song alt="Ilustracja do piosenki {{note.song}}" %}
-        <p>{{ note.date }} – {{ note.date_description}} (<a href="{% url 'calendar' %}">Historia w piosence</a>)</p>
-        {% endwith %}
-        {% endif %}
-
-        {% if artist_born_on_the_day %}
-        <p>{{ artist_born_on_the_day.born_on }} – urodził się <a href="{{ artist_born_on_the_day.get_absolute_url }} "><b>{{artist_born_on_the_day}}</b></a>.</p>
-        {% endif %}
-
-        {% if artist_died_on_the_day %}
-        <p>{{ artist_died_on_the_day.died_on }} – zmarł <a href="{{ artist_died_on_the_day.get_absolute_url }} "><b>{{artist_died_on_the_day}}</b></a>.</p>
-        {% endif %}
-      </div>
-      {% endif %}
-
       {% include "frontpage/new_posts.html" %}
       <div class="section">
         <h2 class="pzt-card-title">Ostatnie komentarze</h2>
