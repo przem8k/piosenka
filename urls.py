@@ -14,7 +14,6 @@ urlpatterns = [
     re_path(r"^spiewnik/", include("songs.urls_entity")),
     re_path(r"^opracowanie/", include("songs.urls_song")),
     re_path(r"^adnotacja/", include("songs.urls_annotation")),
-    re_path(r"^historia/", songs.views.CalendarView.as_view(), name="calendar"),
     # Other sections.
     re_path(r"^wydarzenia/", include("events.urls")),
     # Site-search index.

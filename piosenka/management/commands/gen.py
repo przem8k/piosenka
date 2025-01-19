@@ -7,6 +7,8 @@ from django.core.management.base import BaseCommand
 from django.template import Context, Template, loader
 from markdown2 import markdown
 
+from bs4 import BeautifulSoup
+
 PAGES = ["o-stronie"]
 
 ARTICLE_DIR = "artykuly"
@@ -53,7 +55,11 @@ def make_context_for_page(frontmatter_data, content_markdown, section=None):
     return context_data
 
 def make_context_item_for_article_index(slug, frontmatter_data, content_markdown):
-    content_text = markdown(content_markdown, extras=["strip"])
+    content_html = markdown(content_markdown, extras=["strip"])
+    # Extract text, removing all tags
+    soup = BeautifulSoup(content_html, "html.parser")
+    content_text = soup.get_text(separator=" ", strip=True)
+
     lead = content_text[:200]
     if len(content_text) > 200:
         last_space = lead.rfind(" ")

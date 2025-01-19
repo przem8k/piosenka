@@ -9,7 +9,6 @@
   {% endif %}
   {{ note.text_html|safe }}
   <ul class="list-unstyled" style="font-size: small;">
-    {% if note.date %}<li>{% include 'components/icon.html' with type='globe' %} <a href="{% url 'calendar' %}#{{ note.get_id }}">{{ note.date|date:"d.m.Y" }}</a> – {{ note.date_description }}</li>{% endif %}
     {% if note.url1 %}<li><span class="glyphicon glyphicon-link"></span> {% include "components/external_link.html" with url=note.url1 %}</li>{% endif %}
     {% if note.url2 %}<li><span class="glyphicon glyphicon-link"></span> {% include "components/external_link.html" with url=note.url2 %}</a></li>{% endif %}
     {% if note.ref1 %}<li><span class="glyphicon glyphicon-book"></span> {{ note.ref1 }}</li>{% endif %}

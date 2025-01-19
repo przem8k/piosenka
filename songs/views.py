@@ -78,22 +78,6 @@ class IndexView(SongbookMenuMixin, TemplateView):
         return context
 
 
-class CalendarView(TemplateView):
-    template_name = "songs/calendar.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        notes = (
-            filter_visible_to_user(SongNote.objects.all(), self.request.user)
-            .filter(date__isnull=False)
-            .exclude(date_description="")
-            .exclude(image="")
-            .order_by("-date")
-        )
-        context["notes"] = notes
-        return context
-
-
 class ViewArtist(GetArtistMixin, SongbookMenuMixin, DetailView):
     """Lists the songs associated with the given artist."""
 
