@@ -86,7 +86,6 @@
             </a></li>
             {% endif %}
             <li><a href="{% url 'add_song' %}">Dodaj piosenkę</a></li>
-            <li><a href="{% url 'add_post' %}">Dodaj post</a></li>
             <li><a href="{% url 'add_external_event' %}">Dodaj wydarzenie</a></li>
             {% if perms.piosenka.invite %}
             <li><a href="{% url 'invite' %}">Zaproś do PzT</a></li>
@@ -115,6 +114,9 @@
             {% if section and section == 'articles' %}
               <h2>Artykuły</h2>
               <p>Relacje z imprez, recenzje płyt i książek, wywiady, opisy, pytania, odpowiedzi, konkluzje, konstatacje.</p>
+            {% elif section and section == 'blog' %}
+              <h2>Blog</h2>
+              <p>Nowości na stronie: nowe materiały i zmiany techniczne.</p>
             {% else %}
               <h2>Piosenka z tekstem</h2>
               <p>Strona poświęcona piosence literackiej. Artykuły, relacje z koncertów i opracowania piosenek, których <i>wymiar między konkretem a przestrzenią jest zupełnie niepojęty</i>.</p>
@@ -129,6 +131,10 @@
                 Mniej będą ważyć w kieszeniach<br />
                 Grzeczne z wydawnictw odmowy
                 <small>Przemysław Bogusz – <a href="/opracowanie/przemyslaw-bogusz-wspomnienie-o-andrzeju-bursie/">Wspomnienie o Andrzeju Bursie</a></small>
+              </blockquote>
+            {% elif section and section == 'blog' %}
+              <blockquote class="lyrics-quote">Co tam widać w perspektywie?
+                <small>Jacek Kleyff – <a href="/opracowanie/jacek-kleyff-o-pierwszym-skrzypku-dziad-kaczorowski/">O pierwszym skrzypku</a></small>
               </blockquote>
             {% else %}
               <blockquote class="lyrics-quote">Tylko się pierwszy raz daj objąć <br />

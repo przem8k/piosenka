@@ -1,4 +1,4 @@
-{% extends "blog/base.html" %}
+{% extends "base.html" %}
 
 {% block title %}Blog{% endblock title %}
 
@@ -10,12 +10,11 @@
       <div class="section">
         <div class="content">
           <h2 class="pzt-card-title">{{ post.title }}
-            {% include "components/content_status_span.html" with item=post %}
           </h2>
 
-          {{ post.post_html|safe }}
+          {{ post.lead_html|safe }}
 
-          {% if post.more_trevor %}
+          {% if post.read_more %}
           <p><a href="{{ post.get_absolute_url }}">Czytaj dalej i skomentuj</a>.</p>
           {% else %}
           <p><a href="{{ post.get_absolute_url }}">Komentarze</a>.</p>
@@ -34,9 +33,7 @@
           {% for post in all_posts %}
           <tr>
             <td class="pzt-postlist-date"><small>{{ post.pub_date|date:"d.m.Y" }}</small></td>
-            <td>
-            {% include "components/content_link.html" with item=post %}
-            </td>
+            <td><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></td>
           </tr>
           {% endfor %}
         </table>

@@ -3,7 +3,6 @@ from datetime import date, datetime
 from django.contrib.auth.models import User
 from django.views.generic import TemplateView
 
-from blog.models import Post
 from content.models import filter_visible_to_user
 from events.models import get_events_for
 from songs.models import Artist, ArtistNote, Song, SongNote
@@ -11,7 +10,6 @@ from songs.models import Artist, ArtistNote, Song, SongNote
 
 class SiteIndex(TemplateView):
     template_name = "frontpage/index.html"
-    POST_COUNT = 1
     SONG_COUNT = 8
     ANNOTATION_COUNT = 8
 
@@ -49,9 +47,6 @@ class SiteIndex(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["events"] = get_events_for(self.request.user)
-        context["posts"] = Post.items_visible_to(self.request.user).order_by(
-            "-pub_date"
-        )[: SiteIndex.POST_COUNT]
         context["songs"] = Song.items_visible_to(self.request.user).order_by(
             "-pub_date"
         )[: SiteIndex.SONG_COUNT]

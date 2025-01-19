@@ -1,22 +1,27 @@
-{% for post in posts %}
 <div class="section">
   <div class="content">
-    <h2 class="pzt-card-title">Blog: {{ post.title }}
-      {% include "components/content_status_span.html" with item=post %}
+    <h2 class="pzt-card-title">
+      Blog: Dziękujemy za udział w zbiórce (2025)
     </h2>
 
-    {{ post.post_html|safe }}
+    <p>Dziękujemy za udział w noworocznej <strong><a href="https://zrzutka.pl/zvr76k">zbiórce</a></strong> na utrzymanie naszego serwisu w roku 2025! Dzięki zebranym środkom Piosenka z tekstem w dalszym ciągu będzie mogła funkcjonować jako strona niekomercyjna, wolna od reklam i materiałów sponsorowanych. Wszystkim sympatykom piosenki literackiej w nowym roku życzymy pomyślności, przestrzeni, świeżego powietrza i niezawodnej wrażliwości na piękno! </p>
 
     <p>
-    {% if post.more_trevor %}
-    <a href="{{ post.get_absolute_url }}">Czytaj dalej i skomentuj</a>.
-    {% else %}
-    <a href="{{ post.get_absolute_url }}">Komentarze</a>.
-    {% endif %}
-    <a href="{% url 'post_index' %}">Więcej postów</a>.
+    
+    <a href="/blog/dziekujemy-za-udzial-w-zbiorce-2025/">Komentarze</a>.
+    
+    <a href="/blog/">Więcej postów</a>.
     </p>
 
-    {% include "components/content_foot.html" with action="Dodany" item=post %}
+
+    <hr />
+    <p class="remove-bottom-margin">
+      Dodany
+      <span class="date">03.01.2025</span>
+      przez <b>DX</b>
+      <span class="pull-right">
+      <a href="/blog/dziekujemy-za-udzial-w-zbiorce-2025/edytuj/">edytuj</a>
+      </span>
+    </p>
   </div>
 </div>
-{% endfor %}

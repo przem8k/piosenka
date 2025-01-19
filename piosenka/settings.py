@@ -149,7 +149,6 @@ INSTALLED_APPS = (
     "compressor",
     # PzT.
     "base",
-    "blog",
     "songs",
     "events",
     "piosenka",

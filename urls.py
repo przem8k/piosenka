@@ -16,7 +16,6 @@ urlpatterns = [
     re_path(r"^adnotacja/", include("songs.urls_annotation")),
     re_path(r"^historia/", songs.views.CalendarView.as_view(), name="calendar"),
     # Other sections.
-    re_path(r"^blog/", include("blog.urls")),
     re_path(r"^wydarzenia/", include("events.urls")),
     # Site-search index.
     re_path(r"^index/", include("piosenka.index")),

@@ -10,6 +10,7 @@ from markdown2 import markdown
 PAGES = ["o-stronie"]
 
 ARTICLE_DIR = "artykuly"
+BLOG_DIR = "blog"
 
 CONTENT_DIR = "pages"
 OUT_DIR = "out"
@@ -50,6 +51,43 @@ def make_context_for_page(frontmatter_data, content_markdown, section=None):
         context_data["cover_credits_html"] = cover_credits_html
 
     return context_data
+
+def make_context_item_for_article_index(slug, frontmatter_data, content_markdown):
+    content_text = markdown(content_markdown, extras=["strip"])
+    lead = content_text[:200]
+    if len(content_text) > 200:
+        last_space = lead.rfind(" ")
+        if last_space != -1:
+            lead = lead[:last_space]
+        lead += "..."
+    res = {
+            "title": frontmatter_data.get("title"),
+            "get_absolute_url": f"/artykuly/{slug}/",
+            "lead_html": lead,
+            "thumb_url": frontmatter_data.get("cover_image_thumb_420_210"),
+            "pub_date": frontmatter_data.get("pub_date"),
+        }
+    return res
+
+def make_context_item_for_post_index(slug, frontmatter_data, content_markdown):
+    content_text = markdown(content_markdown, extras=["strip"])
+    lead = content_text[:500]
+    read_more = False
+    if len(content_text) > 500:
+        last_space = lead.rfind(" ")
+        if last_space != -1:
+            lead = lead[:last_space]
+        lead += "..."
+        read_more = True
+    res = {
+            "title": frontmatter_data.get("title"),
+            "get_absolute_url": f"/blog/{slug}/",
+            "lead_html": lead,
+            "read_more": read_more,
+            "pub_date": frontmatter_data.get("pub_date"),
+            "author": frontmatter_data.get("author"),
+        }
+    return res
 
 
 def write_page(context_data, template, out_file):
@@ -94,22 +132,7 @@ class Command(BaseCommand):
             write_page(context, "page.html", out_file_path)
 
             slug = os.path.relpath(subdir, article_dir_path).strip("/")
-            content_text = markdown(content, extras=["strip"])
-            lead = content_text[:200]
-            if len(content_text) > 200:
-                last_space = lead.rfind(" ")
-                if last_space != -1:
-                    lead = lead[:last_space]
-                lead += "..."
-            articles.append(
-                {
-                    "title": frontmatter_data.get("title"),
-                    "get_absolute_url": f"/artykuly/{slug}/",
-                    "lead_html": lead,
-                    "thumb_url": frontmatter_data.get("cover_image_thumb_420_210"),
-                    "pub_date": frontmatter_data.get("pub_date"),
-                }
-            )
+            articles.append(make_context_item_for_article_index(slug, frontmatter_data, content))
         articles.sort(key=lambda x: x["pub_date"], reverse=True)
         context = {
             "articles": articles,
@@ -117,3 +140,31 @@ class Command(BaseCommand):
         }
         out_file_path = os.path.join(OUT_DIR_PATH, ARTICLE_DIR, "index.html")
         write_page(context, "articles/index.html", out_file_path)
+
+        blog_dir_path = os.path.join(content_path, BLOG_DIR)
+        posts = []
+        for subdir, _, _ in os.walk(blog_dir_path):
+            index_md_path = os.path.join(subdir, "index.md")
+            if not os.path.exists(index_md_path):
+                continue
+            frontmatter_data, content = parse_file(index_md_path)
+
+            out_dir = os.path.join(OUT_DIR_PATH, os.path.relpath(subdir, content_path))
+            os.makedirs(out_dir, exist_ok=True)
+            out_file_path = os.path.join(out_dir, "index.html")
+
+            context = make_context_for_page(
+                frontmatter_data, content, section="blog"
+            )
+            write_page(context, "page.html", out_file_path)
+            
+            slug = os.path.relpath(subdir, article_dir_path).strip("/")
+            posts.append(make_context_item_for_post_index(slug, frontmatter_data, content))
+        posts.sort(key=lambda x: x["pub_date"], reverse=True)
+        context = {
+            "all_posts": posts,
+            "new_posts": posts[:5],
+            "user_data": {"is_logged_in": False},
+        }
+        out_file_path = os.path.join(OUT_DIR_PATH, BLOG_DIR, "index.html")
+        write_page(context, "blog/index.html", out_file_path)

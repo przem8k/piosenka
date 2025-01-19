@@ -16,6 +16,15 @@ handlers:
   static_files: out/artykuly/\1/index.html
   upload: out/artykuly/.*/index.html
 
+- url: /blog/
+  static_files: out/blog/index.html
+  upload: out/blog/index.html
+  secure: always
+
+- url: /blog/(.*)/
+  static_files: out/blog/\1/index.html
+  upload: out/blog/.*/index.html
+
 - url: /o-stronie/
   static_files: out/o-stronie/index.html
   upload: out/o-stronie/index.html
