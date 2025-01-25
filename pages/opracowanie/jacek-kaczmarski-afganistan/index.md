@@ -1,8 +1,14 @@
 ---
 title: 'Afganistan'
-author: reuter
+author: 'reuter'
 pub_date: '2014-09-11 22:12:38.548865+00:00'
-link_youtube: https://www.youtube.com/watch?v=vRil0lN9nrs
+link_youtube: 'https://www.youtube.com/watch?v=vRil0lN9nrs'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zw

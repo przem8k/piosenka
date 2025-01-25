@@ -1,8 +1,8 @@
 ---
 title: 'Rycerz, śmierć i diabeł'
-author: DX
+author: 'DX'
 pub_date: '2017-09-30 11:17:10.796396+00:00'
-url1: https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil
+url1: 'https://en.wikipedia.org/wiki/Knight,_Death_and_the_Devil'
 image: notes/knightdeathdevildurer_e9ci8TJ.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/knightdeathdevildurer_e9ci8TJ.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/knightdeathdevildurer_e9ci8TJ.jpg.0x300_q85_upscale.jpg

@@ -1,9 +1,9 @@
 ---
 title: 'Slobodan Praljak'
-author: reuter
+author: 'reuter'
 pub_date: '2018-07-17 21:06:14.213767+00:00'
-url1: https://www.polityka.pl/tygodnikpolityka/swiat/1729480,1,slobodan-praljak-otrul-sie-podczas-rozprawy-przed-trybunalem-w-hadze.read
-url2: https://www.tvn24.pl/wiadomosci-ze-swiata,2/slobodan-praljak-wypil-trucizne-w-czasie-rozprawy-w-hadze,794323.html
+url1: 'https://www.polityka.pl/tygodnikpolityka/swiat/1729480,1,slobodan-praljak-otrul-sie-podczas-rozprawy-przed-trybunalem-w-hadze.read'
+url2: 'https://www.tvn24.pl/wiadomosci-ze-swiata,2/slobodan-praljak-wypil-trucizne-w-czasie-rozprawy-w-hadze,794323.html'
 image: notes/praljak.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/praljak.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/praljak.jpg.0x300_q85_upscale.jpg

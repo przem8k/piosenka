@@ -1,9 +1,9 @@
 ---
 title: 'Mickiewicz i historia najnowsza'
-author: Zbrozło
+author: 'Zbrozło'
 pub_date: '2015-07-02 15:07:51.704493+00:00'
-url1: http://portalwiedzy.onet.pl/5564,106,1,2,1177095,0,biblioteka.html
-url2: https://pl.wikipedia.org/wiki/Radziecka_interwencja_w_Afganistanie
+url1: 'http://portalwiedzy.onet.pl/5564,106,1,2,1177095,0,biblioteka.html'
+url2: 'https://pl.wikipedia.org/wiki/Radziecka_interwencja_w_Afganistanie'
 image: song_annotations/Evstafiev-afghan-apc-passes-russian.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/Evstafiev-afghan-apc-passes-russian.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/Evstafiev-afghan-apc-passes-russian.jpg.0x300_q85_upscale.jpg

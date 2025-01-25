@@ -1,9 +1,9 @@
 ---
 title: 'Na dwóch bliźniaczych zamieszkałem skałach'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-12-13 19:39:06.266293+00:00'
-url1: https://en.wikipedia.org/wiki/Two_Rocks
-url2: http://www.kaczmarski.art.pl/tworczosc/wiersze/dwie-skaly-two-rocks/
+url1: 'https://en.wikipedia.org/wiki/Two_Rocks'
+url2: 'http://www.kaczmarski.art.pl/tworczosc/wiersze/dwie-skaly-two-rocks/'
 image: notes/two_rocks4.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/two_rocks4.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/two_rocks4.jpg.0x300_q85_upscale.jpg

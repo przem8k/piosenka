@@ -1,8 +1,15 @@
 ---
 title: 'Ballada feudalna'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-06-29 10:58:29.972344+00:00'
-link_youtube: https://www.youtube.com/watch?v=ZbfJ4Bg9AUo
+link_youtube: 'https://www.youtube.com/watch?v=ZbfJ4Bg9AUo'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/ballada_feudalna.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ballada_feudalna.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ballada_feudalna.png.180x0_q85_upscale.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Wiosna 1905'
-author: DX
+author: 'DX'
 pub_date: '2017-12-01 20:30:58.337428+00:00'
-link_youtube: https://www.youtube.com/watch?v=ZWPQKtNqiMQ
+link_youtube: 'https://www.youtube.com/watch?v=ZWPQKtNqiMQ'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/wiosna_1905.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wiosna_1905.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wiosna_1905.png.180x0_q85_upscale.png

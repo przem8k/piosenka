@@ -1,9 +1,9 @@
 ---
 title: 'Casanova Federico Felliniego'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-06-29 10:40:15.051449+00:00'
-url1: https://pl.wikipedia.org/wiki/Giacomo_Casanova
-url2: https://www.filmweb.pl/film/Casanova+Federico+Felliniego-1976-4468
+url1: 'https://pl.wikipedia.org/wiki/Giacomo_Casanova'
+url2: 'https://www.filmweb.pl/film/Casanova+Federico+Felliniego-1976-4468'
 image: notes/7e508edb9855f2926faf4f7613dc6ca4.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/7e508edb9855f2926faf4f7613dc6ca4.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/7e508edb9855f2926faf4f7613dc6ca4.jpg.0x300_q85_upscale.jpg

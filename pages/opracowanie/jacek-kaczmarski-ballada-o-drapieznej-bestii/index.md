@@ -1,8 +1,14 @@
 ---
 title: 'Ballada o drapieżnej bestii'
-author: spooky
+author: 'spooky'
 pub_date: '2011-07-27 02:42:55.496162+00:00'
-link_youtube: https://www.youtube.com/watch?v=9XDMLBpP7Mg
+link_youtube: 'https://www.youtube.com/watch?v=9XDMLBpP7Mg'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/ballada_o_drapieznej_bestii.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_drapieznej_bestii.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_drapieznej_bestii.png.180x0_q85_upscale.jpg

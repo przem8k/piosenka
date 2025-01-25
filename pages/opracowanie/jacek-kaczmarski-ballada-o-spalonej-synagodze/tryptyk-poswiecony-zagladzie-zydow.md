@@ -1,9 +1,9 @@
 ---
 title: 'Tryptyk poświęcony zagładzie Żydów'
-author: DX
+author: 'DX'
 pub_date: '2018-08-19 18:10:10.065044+00:00'
-url1: http://www.kaczmarski.art.pl/tworczosc/wiersze/ballada-o-spalonej-synagodze/
-ref1: Rozmowa Jacka Kaczmarskiego z Jolantą Piątek „Za dużo czerwonego”, miesięcznik literacki „Odra”, numery 481–484
+url1: 'http://www.kaczmarski.art.pl/tworczosc/wiersze/ballada-o-spalonej-synagodze/'
+ref1: 'Rozmowa Jacka Kaczmarskiego z Jolantą Piątek „Za dużo czerwonego”, miesięcznik literacki „Odra”, numery 481–484'
 ---
 
 Piosenka „Ballada o spalonej synagodze” jest inspirowana dwiema piosenkami: [Księgą kolejną](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-ksiega\-kolejna/) \(znaną także jako „Ballada o Jankielu”\) i [Schulzem](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kleyff\-schulz/) \(znanym także jako „Ballada o Brunonie Schulzu”\).

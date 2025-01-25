@@ -1,6 +1,6 @@
 ---
 title: 'A w zamian za to tylko posłuszeństwo'
-author: DX
+author: 'DX'
 pub_date: '2018-09-15 21:43:11.360508+00:00'
 ---
 

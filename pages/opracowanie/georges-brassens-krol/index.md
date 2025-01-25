@@ -1,9 +1,17 @@
 ---
 title: 'Król'
-author: DX
+author: 'DX'
 pub_date: '2013-02-25 00:33:54.584931+00:00'
-original_title: Le roi
-link_youtube: https://www.youtube.com/watch?v=PKh68MFd2Do
+original_title: 'Le roi'
+link_youtube: 'https://www.youtube.com/watch?v=PKh68MFd2Do'
+text_authors:
+ - 'georges-brassens'
+composers:
+ - 'georges-brassens'
+translators:
+ - 'filip-lobodzinski'
+performers:
+ - 'zespol-reprezentacyjny'
 ---
 
 #zw

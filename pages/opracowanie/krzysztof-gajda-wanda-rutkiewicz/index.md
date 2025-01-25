@@ -1,8 +1,14 @@
 ---
 title: 'Wanda Rutkiewicz'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-18 12:02:39.849636+00:00'
-link_youtube: https://www.youtube.com/watch?v=wvCZDdkMOG8
+link_youtube: 'https://www.youtube.com/watch?v=wvCZDdkMOG8'
+text_authors:
+ - 'krzysztof-gajda'
+composers:
+ - 'krzysztof-gajda'
+performers:
+ - 'kwartet-proforma'
 ---
 
 Gdzie jest mój szczyt? [a]

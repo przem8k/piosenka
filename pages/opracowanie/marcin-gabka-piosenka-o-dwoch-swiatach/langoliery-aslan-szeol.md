@@ -1,6 +1,6 @@
 ---
 title: 'Langoliery, Aslan, Szeol'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-21 18:38:24.775987+00:00'
 ---
 

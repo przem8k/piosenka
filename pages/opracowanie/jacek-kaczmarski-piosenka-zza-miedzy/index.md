@@ -1,8 +1,14 @@
 ---
 title: 'Piosenka zza miedzy'
-author: spooky
+author: 'spooky'
 pub_date: '2011-09-15 04:48:35.804839+00:00'
-link_youtube: https://www.youtube.com/watch?v=azoV2EozD2U
+link_youtube: 'https://www.youtube.com/watch?v=azoV2EozD2U'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/piosenka_zza_miedzy.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/piosenka_zza_miedzy.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/piosenka_zza_miedzy.png.180x0_q85_upscale.jpg

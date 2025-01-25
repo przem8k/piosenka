@@ -1,8 +1,8 @@
 ---
 title: 'Piosenka o... lustracji?'
-author: reuter
+author: 'reuter'
 pub_date: '2016-10-11 21:03:08.193691+00:00'
-url1: http://www.gintrowski.art.pl/gintrowski/26,artykuly,kanapka_z_czlowiekiem.html
+url1: 'http://www.gintrowski.art.pl/gintrowski/26,artykuly,kanapka_z_czlowiekiem.html'
 ---
 
 W wielu źródłach wiedzy na temat życia i twórczości Przemysława Gintrowskiego można przeczytać, że utwór Modlitwa o Szarfę i Trunek do wiersza Antoniego Słonimskiego jest swoistym spojrzeniem artysty na problem lustracji. Gintrowski zaczął wykonywać tę piosenkę na początku lat 90., kiedy aktywnie działał w społecznym komitecie wyborczym Lecha Wałęsy i wplatał w jej koncertowe zapowiedzi swoje rozważania na temat problemu rozliczeń po okresie komunizmu. 

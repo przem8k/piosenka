@@ -1,8 +1,8 @@
 ---
 title: 'Strzeż się goryla!'
-author: DX
+author: 'DX'
 pub_date: '2017-05-13 19:43:10.341169+00:00'
-url1: https://fr.wikipedia.org/wiki/Le_Gorille_(chanson)
+url1: 'https://fr.wikipedia.org/wiki/Le_Gorille_(chanson)'
 image: notes/Captivity-Eyes-Grid-Imprisoned-Cage-Monkey-Zoo-256420.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Captivity-Eyes-Grid-Imprisoned-Cage-Monkey-Zoo-256420.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Captivity-Eyes-Grid-Imprisoned-Cage-Monkey-Zoo-256420.jpg.0x300_q85_upscale.jpg

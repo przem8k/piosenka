@@ -1,8 +1,15 @@
 ---
 title: 'Przypowieść o ślepcach'
-author: AŁ
+author: 'AŁ'
 pub_date: '2012-06-18 16:02:47.406668+00:00'
-link_youtube: https://www.youtube.com/watch?v=NuP_8zc3apM
+link_youtube: 'https://www.youtube.com/watch?v=NuP_8zc3apM'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/przypowiesc_o_slepcach.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/przypowiesc_o_slepcach.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/przypowiesc_o_slepcach.png.180x0_q85_upscale.jpg

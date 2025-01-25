@@ -1,8 +1,14 @@
 ---
 title: 'Kurwy wędrowniczki'
-author: DX
+author: 'DX'
 pub_date: '2020-05-18 11:51:31.351905+00:00'
-link_youtube: https://www.youtube.com/watch?v=haV4-lu2-bA
+link_youtube: 'https://www.youtube.com/watch?v=haV4-lu2-bA'
+text_authors:
+ - 'stanislaw-staszewski'
+composers:
+ - 'stanislaw-staszewski'
+performers:
+ - 'stanislaw-staszewski'
 ---
 
 #zw

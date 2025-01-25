@@ -1,10 +1,16 @@
 ---
 title: 'Pokolenie'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-02-28 14:10:59.813897+00:00'
-disambig: „Każdy z nas pójdzie własną drogą...”
-link_youtube: https://www.youtube.com/watch?v=FkfYoQ7uOok
+disambig: '„Każdy z nas pójdzie własną drogą...”'
+link_youtube: 'https://www.youtube.com/watch?v=FkfYoQ7uOok'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #1

@@ -1,8 +1,14 @@
 ---
 title: 'Spotkanie w porcie'
-author: DX
+author: 'DX'
 pub_date: '2013-12-22 23:05:19.664146+00:00'
-link_youtube: https://www.youtube.com/watch?v=0drR7ZojdNk
+link_youtube: 'https://www.youtube.com/watch?v=0drR7ZojdNk'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/spotkanie_w_porcie_01.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/spotkanie_w_porcie_01.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/spotkanie_w_porcie_01.png.180x0_q85_upscale.jpg

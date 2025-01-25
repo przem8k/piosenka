@@ -1,9 +1,15 @@
 ---
 title: 'Hymn'
-author: RK
+author: 'RK'
 pub_date: '2012-10-25 20:05:03.606479+00:00'
-link_youtube: https://www.youtube.com/watch?v=9RENqvw5rjs
+link_youtube: 'https://www.youtube.com/watch?v=9RENqvw5rjs'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/hymn.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/hymn.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/hymn.png.180x0_q85_upscale.png

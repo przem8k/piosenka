@@ -1,9 +1,15 @@
 ---
 title: 'Sęp'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-03-22 18:41:54.696852+00:00'
-link_youtube: https://www.youtube.com/watch?v=6-c4Xb2HEQo
+link_youtube: 'https://www.youtube.com/watch?v=6-c4Xb2HEQo'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/sep.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/sep.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/sep.png.180x0_q85_upscale.png

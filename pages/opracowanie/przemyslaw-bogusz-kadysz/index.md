@@ -1,7 +1,15 @@
 ---
 title: 'Kadysz'
-author: DX
+author: 'DX'
 pub_date: '2011-10-07 14:33:57.259301+00:00'
+text_authors:
+ - 'aleksander-galicz'
+composers:
+ - 'przemyslaw-bogusz'
+translators:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zwrotka

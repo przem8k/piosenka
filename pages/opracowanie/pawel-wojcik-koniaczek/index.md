@@ -1,8 +1,14 @@
 ---
 title: 'Koniaczek'
-author: DX
+author: 'DX'
 pub_date: '2013-02-23 21:47:37.905812+00:00'
-link_youtube: http://www.youtube.com/watch?v=DkSgF6LMAmA
+link_youtube: 'http://www.youtube.com/watch?v=DkSgF6LMAmA'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 #zw

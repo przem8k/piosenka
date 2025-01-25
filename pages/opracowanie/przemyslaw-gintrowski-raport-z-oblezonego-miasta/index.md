@@ -1,8 +1,14 @@
 ---
 title: 'Raport z oblężonego miasta'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-08-01 11:17:29.175425+00:00'
-link_youtube: https://www.youtube.com/watch?v=x0HwoGoHj4I
+link_youtube: 'https://www.youtube.com/watch?v=x0HwoGoHj4I'
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #1

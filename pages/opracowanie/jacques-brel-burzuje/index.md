@@ -1,8 +1,12 @@
 ---
 title: 'Burżuje'
-author: gary
+author: 'gary'
 pub_date: '2023-07-16 21:35:31.760298+00:00'
-original_title: Les Bourgeois
+original_title: 'Les Bourgeois'
+text_authors:
+ - 'jacques-brel'
+translators:
+ - 'wojciech-mlynarski'
 ---
 
 #zw

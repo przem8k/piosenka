@@ -1,8 +1,16 @@
 ---
 title: 'Celina'
-author: DX
+author: 'DX'
 pub_date: '2016-10-29 11:41:08.975412+00:00'
-link_youtube: https://www.youtube.com/watch?v=zvJf_EWMJAE
+link_youtube: 'https://www.youtube.com/watch?v=zvJf_EWMJAE'
+text_authors:
+ - 'stanislaw-staszewski'
+composers:
+ - 'stanislaw-staszewski'
+performers:
+ - 'stanislaw-staszewski'
+ - 'jacek-kaczmarski'
+ - 'kazimierz-staszewski'
 ---
 
 #zw

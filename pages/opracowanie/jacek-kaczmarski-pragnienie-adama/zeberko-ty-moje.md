@@ -1,6 +1,6 @@
 ---
 title: 'Żeberko Ty moje'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-21 17:49:39.078438+00:00'
 image: notes/La_création_dEve_1530_anonyme_anversois_origine_inconnue.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/La_création_dEve_1530_anonyme_anversois_origine_inconnue.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Trudno'
-author: DX
+author: 'DX'
 pub_date: '2021-05-02 12:48:52.926661+00:00'
-link_youtube: https://www.youtube.com/watch?v=cm7LnS7li90
+link_youtube: 'https://www.youtube.com/watch?v=cm7LnS7li90'
+text_authors:
+ - 'jacek-kleyff'
+composers:
+ - 'jacek-kleyff'
+performers:
+ - 'jacek-kleyff'
 ---
 
 [G D h e]

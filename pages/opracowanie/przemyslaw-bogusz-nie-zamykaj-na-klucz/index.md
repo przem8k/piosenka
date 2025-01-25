@@ -1,7 +1,13 @@
 ---
 title: 'Nie zamykaj na klucz'
-author: DX
+author: 'DX'
 pub_date: '2011-12-25 01:42:10.744089+00:00'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 Na zachodzie zamknięte granice [cis gis]

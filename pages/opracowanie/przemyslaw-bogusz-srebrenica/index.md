@@ -1,7 +1,13 @@
 ---
 title: 'Srebrenica'
-author: DX
+author: 'DX'
 pub_date: '2011-05-09 15:46:08.175004+00:00'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zw

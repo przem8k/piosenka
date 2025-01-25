@@ -1,8 +1,14 @@
 ---
 title: 'Pochwała teologiczna Świętego Tomasza'
-author: Zbik
+author: 'Zbik'
 pub_date: '2020-05-20 10:15:02.903158+00:00'
-link_youtube: https://www.youtube.com/watch?v=w5Al7y2d9Q0
+link_youtube: 'https://www.youtube.com/watch?v=w5Al7y2d9Q0'
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 #zwrotka

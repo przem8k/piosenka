@@ -1,9 +1,15 @@
 ---
 title: 'Dwie rozmowy z Kremlem (1981–1989)'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-10-15 11:46:16.293248+00:00'
-link_youtube: https://www.youtube.com/watch?v=q8xQWhiYaOI
+link_youtube: 'https://www.youtube.com/watch?v=q8xQWhiYaOI'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/dwie_rozmowy_z_kremlem_01.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/dwie_rozmowy_z_kremlem_01.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/dwie_rozmowy_z_kremlem_01.png.180x0_q85_upscale.png

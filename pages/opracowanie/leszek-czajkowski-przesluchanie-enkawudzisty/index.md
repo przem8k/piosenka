@@ -1,7 +1,13 @@
 ---
 title: 'Przesłuchanie enkawudzisty'
-author: RK
+author: 'RK'
 pub_date: '2013-03-20 19:46:51.551233+00:00'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'leszek-czajkowski'
 ---
 
 #zwrotka1

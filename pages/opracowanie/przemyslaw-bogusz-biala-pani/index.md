@@ -1,9 +1,15 @@
 ---
 title: 'Biała pani'
-author: DX
+author: 'DX'
 pub_date: '2011-05-07 22:47:41.284897+00:00'
-link_youtube: https://www.youtube.com/watch?v=IoGDHKrGcYw
+link_youtube: 'https://www.youtube.com/watch?v=IoGDHKrGcYw'
 capo_fret: 2
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zwrotka

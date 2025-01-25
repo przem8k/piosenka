@@ -1,8 +1,8 @@
 ---
 title: 'Różne wersje tekstu'
-author: Alek
+author: 'Alek'
 pub_date: '2015-06-14 20:49:14.066217+00:00'
-url1: http://www.kaczmarski.art.pl/forum/index.php
+url1: 'http://www.kaczmarski.art.pl/forum/index.php'
 ---
 
 Istnieje kilka wersji tekstu.

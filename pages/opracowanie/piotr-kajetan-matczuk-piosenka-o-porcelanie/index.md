@@ -1,7 +1,13 @@
 ---
 title: 'Piosenka o porcelanie'
-author: DX
+author: 'DX'
 pub_date: '2011-08-15 20:55:11.787082+00:00'
+text_authors:
+ - 'czeslaw-milosz'
+composers:
+ - 'piotr-kajetan-matczuk'
+performers:
+ - 'piotr-kajetan-matczuk'
 ---
 
 Różowe moje spodeczki [a]

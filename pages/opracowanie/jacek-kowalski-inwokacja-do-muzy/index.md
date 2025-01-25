@@ -1,9 +1,15 @@
 ---
 title: 'Inwokacja do muzy'
-author: Zbik
+author: 'Zbik'
 pub_date: '2022-08-09 13:57:53.827437+00:00'
-link_youtube: https://www.youtube.com/watch?v=QhWbu3J0ZUU&t=123s
+link_youtube: 'https://www.youtube.com/watch?v=QhWbu3J0ZUU&t=123s'
 capo_fret: 4
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 O! muzo! rozpal mnie swoim tchnieniem; [C G a e]

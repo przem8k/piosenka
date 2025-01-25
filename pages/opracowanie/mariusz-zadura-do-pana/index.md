@@ -1,7 +1,13 @@
 ---
 title: 'Do Pana'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 08:19:46.626173+00:00'
+text_authors:
+ - 'mariusz-zadura'
+composers:
+ - 'andrzej-schab'
+performers:
+ - 'mariusz-zadura'
 ---
 
 [C F G e a F G]

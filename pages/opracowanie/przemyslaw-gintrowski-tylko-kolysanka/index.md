@@ -1,8 +1,14 @@
 ---
 title: 'Tylko kołysanka'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-23 12:32:12.901189+00:00'
-link_youtube: https://www.youtube.com/watch?v=AtZyXnfvaXs
+link_youtube: 'https://www.youtube.com/watch?v=AtZyXnfvaXs'
+text_authors:
+ - 'justyna-holm'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #1

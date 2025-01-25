@@ -1,9 +1,15 @@
 ---
 title: 'Szkielet Mengele'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-10-24 15:59:32.990303+00:00'
-link_youtube: https://www.youtube.com/watch?v=2VPSG4yVvFw
+link_youtube: 'https://www.youtube.com/watch?v=2VPSG4yVvFw'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #1

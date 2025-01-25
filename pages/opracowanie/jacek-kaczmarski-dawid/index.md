@@ -1,8 +1,14 @@
 ---
 title: 'Dawid'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-18 20:40:39.300740+00:00'
 epigone: True
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 >Prawym bokiem wyczuwam luźnej ręki drżenie [b f b f b]

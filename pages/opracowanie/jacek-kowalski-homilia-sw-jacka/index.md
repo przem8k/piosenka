@@ -1,8 +1,14 @@
 ---
 title: 'Homilia św. Jacka'
-author: RK
+author: 'RK'
 pub_date: '2012-04-08 22:05:04.044741+00:00'
-link_youtube: http://www.youtube.com/watch?v=r5NC5GS-7Tg
+link_youtube: 'http://www.youtube.com/watch?v=r5NC5GS-7Tg'
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 #zwrotka

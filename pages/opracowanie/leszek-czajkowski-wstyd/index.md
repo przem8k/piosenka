@@ -1,9 +1,15 @@
 ---
 title: 'Wstyd'
-author: DX
+author: 'DX'
 pub_date: '2011-07-04 16:06:42.838335+00:00'
-link_youtube: https://www.youtube.com/watch?v=-rlQhA4N5Zs
+link_youtube: 'https://www.youtube.com/watch?v=-rlQhA4N5Zs'
 capo_fret: 2
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'czajkowski-medrzycki-piekarczyk'
 ---
 
 Ojczyznę naszą łotry gryzą [d g d]

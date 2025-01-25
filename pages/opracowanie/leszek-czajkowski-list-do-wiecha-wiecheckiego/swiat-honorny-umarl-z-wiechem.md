@@ -1,8 +1,8 @@
 ---
 title: 'Świat honorny umarł z Wiechem!'
-author: DX
+author: 'DX'
 pub_date: '2018-08-12 18:21:32.501797+00:00'
-url1: https://pl.wikipedia.org/wiki/Stefan_Wiechecki
+url1: 'https://pl.wikipedia.org/wiki/Stefan_Wiechecki'
 image: notes/1200px-Stefan_Wiechecki_w_rozmowie_z_dorozkarzem.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1200px-Stefan_Wiechecki_w_rozmowie_z_dorozkarzem.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1200px-Stefan_Wiechecki_w_rozmowie_z_dorozkarzem.jpg.0x300_q85_upscale.jpg

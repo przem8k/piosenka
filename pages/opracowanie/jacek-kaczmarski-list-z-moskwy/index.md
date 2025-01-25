@@ -1,8 +1,14 @@
 ---
 title: 'List z Moskwy'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-08-02 13:59:55.497332+00:00'
-link_youtube: https://www.youtube.com/watch?v=qCYa1krByLw
+link_youtube: 'https://www.youtube.com/watch?v=qCYa1krByLw'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score2: scores/list_z_moskwy.png
 score2_full: https://storage.googleapis.com/piosenka-media/media/scores/list_z_moskwy.png
 score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/list_z_moskwy.png.180x0_q85_upscale.png

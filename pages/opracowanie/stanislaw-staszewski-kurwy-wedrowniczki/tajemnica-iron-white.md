@@ -1,6 +1,6 @@
 ---
 title: 'Tajemnica „Iron White”'
-author: DX
+author: 'DX'
 pub_date: '2020-05-20 10:24:45.308120+00:00'
 image: notes/baise-en-ville.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/baise-en-ville.jpg

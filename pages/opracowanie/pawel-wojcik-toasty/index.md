@@ -1,8 +1,14 @@
 ---
 title: 'Toasty'
-author: DX
+author: 'DX'
 pub_date: '2012-09-10 04:11:37.383129+00:00'
-link_youtube: https://www.youtube.com/watch?v=she_G7nft3I
+link_youtube: 'https://www.youtube.com/watch?v=she_G7nft3I'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 Rozmawiam w knajpie ze ścianą [d A7]

@@ -1,8 +1,15 @@
 ---
 title: 'Stół Mordechaja Gebirtiga'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-05-10 19:02:02.183989+00:00'
-link_youtube: https://www.youtube.com/watch?v=UGKpMovc-3U
+link_youtube: 'https://www.youtube.com/watch?v=UGKpMovc-3U'
+text_authors:
+ - 'anna-kamienska'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
+ - 'joanna-trzepiecinska'
 ---
 
 #1

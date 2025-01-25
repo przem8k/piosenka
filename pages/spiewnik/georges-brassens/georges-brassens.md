@@ -1,8 +1,8 @@
 ---
 title: 'Georges Brassens'
-author: DX
+author: 'DX'
 pub_date: '2017-05-13 19:20:59.068773+00:00'
-url1: https://fr.wikipedia.org/wiki/Georges_Brassens
+url1: 'https://fr.wikipedia.org/wiki/Georges_Brassens'
 image: notes/Brassens_TNP_1966_f3.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Brassens_TNP_1966_f3.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Brassens_TNP_1966_f3.jpg.0x300_q85_upscale.jpg

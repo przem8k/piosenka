@@ -1,6 +1,6 @@
 ---
 title: 'Jacek Kleyff'
-author: DX
+author: 'DX'
 pub_date: '2017-03-26 19:31:37.410694+00:00'
 image: notes/Jacek-Kleyff-07.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Jacek-Kleyff-07.jpg

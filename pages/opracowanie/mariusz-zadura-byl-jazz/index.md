@@ -1,7 +1,13 @@
 ---
 title: 'Był jazz'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 08:13:59.181484+00:00'
+text_authors:
+ - 'mariusz-zadura'
+composers:
+ - 'tomasz-szczesny'
+performers:
+ - 'mariusz-zadura'
 ---
 
 A przecież oni tylko chcieli grać

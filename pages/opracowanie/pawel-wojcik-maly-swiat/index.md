@@ -1,8 +1,14 @@
 ---
 title: 'Mały Świat'
-author: Boczuś
+author: 'Boczuś'
 pub_date: '2016-05-24 17:24:10.096740+00:00'
-link_youtube: https://www.youtube.com/watch?v=bME8NW2JRww
+link_youtube: 'https://www.youtube.com/watch?v=bME8NW2JRww'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 #zw

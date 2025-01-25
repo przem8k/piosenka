@@ -1,6 +1,6 @@
 ---
 title: 'A jej potrzebne były pieśni'
-author: DX
+author: 'DX'
 pub_date: '2016-04-18 19:40:30.181028+00:00'
 ---
 

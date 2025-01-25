@@ -1,9 +1,9 @@
 ---
 title: 'I jeźdźca dosiąść się da!'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-22 15:05:55.641313+00:00'
-url1: https://en.wikipedia.org/wiki/Los_caprichos
-url2: https://pl.wikipedia.org/wiki/Kaprysy
+url1: 'https://en.wikipedia.org/wiki/Los_caprichos'
+url2: 'https://pl.wikipedia.org/wiki/Kaprysy'
 image: notes/85bab7ad3851aa5e3f707448eaefadd8.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/85bab7ad3851aa5e3f707448eaefadd8.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/85bab7ad3851aa5e3f707448eaefadd8.jpg.0x300_q85_upscale.jpg

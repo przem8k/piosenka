@@ -1,10 +1,10 @@
 ---
 title: 'Ambasadorowie'
-author: DX
+author: 'DX'
 pub_date: '2015-12-13 11:22:10.847450+00:00'
-url1: https://pl.wikipedia.org/wiki/Ambasadorowie
-url2: https://www.google.com/culturalinstitute/asset-viewer/the-ambassadors/bQEWbLB26MG1LA?hl=en
-ref1: Lekcja historii Jacka Kaczmarskiego - Iwona Grabska, Diana Wasilewska
+url1: 'https://pl.wikipedia.org/wiki/Ambasadorowie'
+url2: 'https://www.google.com/culturalinstitute/asset-viewer/the-ambassadors/bQEWbLB26MG1LA?hl=en'
+ref1: 'Lekcja historii Jacka Kaczmarskiego - Iwona Grabska, Diana Wasilewska'
 image: song_annotations/hans_holbein_the_ambassadors.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/hans_holbein_the_ambassadors.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/hans_holbein_the_ambassadors.jpg.0x300_q85_upscale.jpg

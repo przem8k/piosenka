@@ -1,8 +1,14 @@
 ---
 title: 'Teodycea'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-30 18:37:48.154888+00:00'
-link_youtube: https://www.youtube.com/watch?v=RNynq4ddQhE
+link_youtube: 'https://www.youtube.com/watch?v=RNynq4ddQhE'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/teodycea.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/teodycea.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/teodycea.png.180x0_q85_upscale.png

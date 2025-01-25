@@ -1,8 +1,14 @@
 ---
 title: 'Sentymentalna Panna S.'
-author: DX
+author: 'DX'
 pub_date: '2016-04-14 21:46:42.734054+00:00'
-link_youtube: https://www.youtube.com/watch?v=tee3DPp3pPk
+link_youtube: 'https://www.youtube.com/watch?v=tee3DPp3pPk'
+text_authors:
+ - 'jan-krzysztof-kelus'
+composers:
+ - 'jan-krzysztof-kelus'
+performers:
+ - 'jan-krzysztof-kelus'
 ---
 
 #zw

@@ -1,8 +1,14 @@
 ---
 title: 'Spójrz na mnie jeszcze'
-author: Boczuś
+author: 'Boczuś'
 pub_date: '2016-07-01 09:11:47.048283+00:00'
-link_youtube: https://www.youtube.com/watch?v=CUtWiesdjGE
+link_youtube: 'https://www.youtube.com/watch?v=CUtWiesdjGE'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 #zw

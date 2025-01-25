@@ -1,8 +1,14 @@
 ---
 title: 'Ty mnie do pieśni pokornej nie wołaj…'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-18 11:24:46.628756+00:00'
-link_youtube: https://www.youtube.com/watch?v=nYbo0075rww
+link_youtube: 'https://www.youtube.com/watch?v=nYbo0075rww'
+text_authors:
+ - 'cyprian-kamil-norwid'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #zwrotka1

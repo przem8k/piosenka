@@ -1,8 +1,14 @@
 ---
 title: 'Kołysanka dla smoka'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-11-02 20:57:19.050882+00:00'
-link_youtube: https://www.youtube.com/watch?v=J7OR-kp78-I
+link_youtube: 'https://www.youtube.com/watch?v=J7OR-kp78-I'
+text_authors:
+ - 'marcin-gabka'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 #a

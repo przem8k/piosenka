@@ -1,6 +1,6 @@
 ---
 title: 'Nasze klasy'
-author: DX
+author: 'DX'
 pub_date: '2021-01-24 18:09:57.582376+00:00'
 image: notes/jacek_wycieczka_szkolna_1973.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/jacek_wycieczka_szkolna_1973.jpg

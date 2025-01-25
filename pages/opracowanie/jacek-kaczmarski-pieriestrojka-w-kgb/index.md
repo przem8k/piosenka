@@ -1,8 +1,14 @@
 ---
 title: 'Pieriestrojka w KGB'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-08-20 09:24:37.829260+00:00'
-link_youtube: https://www.youtube.com/watch?v=NneugXQBI5k
+link_youtube: 'https://www.youtube.com/watch?v=NneugXQBI5k'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/pierestrojka-w-kgb.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pierestrojka-w-kgb.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pierestrojka-w-kgb.png.180x0_q85_upscale.png

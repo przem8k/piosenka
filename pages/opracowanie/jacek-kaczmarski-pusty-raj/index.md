@@ -1,8 +1,14 @@
 ---
 title: 'Pusty Raj'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-28 12:59:59.209631+00:00'
-link_youtube: https://www.youtube.com/watch?v=hu-ZXZPFAEA
+link_youtube: 'https://www.youtube.com/watch?v=hu-ZXZPFAEA'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/pusty_raj_1.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pusty_raj_1.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pusty_raj_1.png.180x0_q85_upscale.png

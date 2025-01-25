@@ -1,8 +1,14 @@
 ---
 title: 'Czerwcowy wicher przy kominku'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-04-05 19:48:10.405856+00:00'
-link_youtube: http://www.youtube.com/watch?v=DWO81j4y_y8
+link_youtube: 'http://www.youtube.com/watch?v=DWO81j4y_y8'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/czerwcowy_wicher.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/czerwcowy_wicher.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/czerwcowy_wicher.png.180x0_q85_upscale.jpg

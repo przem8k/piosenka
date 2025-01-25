@@ -1,10 +1,18 @@
 ---
 title: 'Ballada dla obywatela miasteczka P.'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-06-17 20:19:09.411242+00:00'
-original_title: Chanson pour l'auvergnat
-link_youtube: https://www.youtube.com/watch?v=J4Vu2uQXcJI
+original_title: 'Chanson pour l'auvergnat'
+link_youtube: 'https://www.youtube.com/watch?v=J4Vu2uQXcJI'
 capo_fret: 3
+text_authors:
+ - 'georges-brassens'
+composers:
+ - 'georges-brassens'
+translators:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zw

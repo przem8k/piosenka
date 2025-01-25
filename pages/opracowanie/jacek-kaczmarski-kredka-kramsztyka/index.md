@@ -1,9 +1,15 @@
 ---
 title: 'Kredka Kramsztyka'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-11-07 16:41:09.767965+00:00'
-link_youtube: https://www.youtube.com/watch?v=KFTWfJ1m9jU
+link_youtube: 'https://www.youtube.com/watch?v=KFTWfJ1m9jU'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 I

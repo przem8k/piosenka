@@ -1,8 +1,14 @@
 ---
 title: 'Pejzaż z szubienicą'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-02-26 11:08:37.875402+00:00'
-link_youtube: https://www.youtube.com/watch?v=K0l4rHOiSI0
+link_youtube: 'https://www.youtube.com/watch?v=K0l4rHOiSI0'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/pejzaz_z_szubienica.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pejzaz_z_szubienica.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pejzaz_z_szubienica.png.180x0_q85_upscale.png

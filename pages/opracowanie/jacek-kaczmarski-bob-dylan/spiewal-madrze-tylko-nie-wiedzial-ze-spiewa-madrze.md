@@ -1,8 +1,8 @@
 ---
 title: 'Śpiewał mądrze, tylko nie wiedział, że śpiewa mądrze'
-author: DX
+author: 'DX'
 pub_date: '2018-08-12 21:29:34.766378+00:00'
-ref1: zapowiedź do piosenki na płycie "Bankiet"
+ref1: 'zapowiedź do piosenki na płycie "Bankiet"'
 image: notes/dylan_live_aid.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/dylan_live_aid.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/dylan_live_aid.jpg.0x300_q85_upscale.jpg

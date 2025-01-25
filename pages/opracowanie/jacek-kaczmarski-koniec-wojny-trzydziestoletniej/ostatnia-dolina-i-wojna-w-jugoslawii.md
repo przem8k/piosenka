@@ -1,9 +1,9 @@
 ---
 title: 'Ostatnia dolina i wojna w Jugosławii'
-author: Zbik
+author: 'Zbik'
 pub_date: '2023-01-09 13:52:59.561321+00:00'
-url1: https://www.polskieradio.pl/68/2461/Audio/318879
-url2: https://www.filmweb.pl/film/Ostatnia+dolina-1971-10560
+url1: 'https://www.polskieradio.pl/68/2461/Audio/318879'
+url2: 'https://www.filmweb.pl/film/Ostatnia+dolina-1971-10560'
 ---
 
 Jak wiele innych utworów programu „Wojna postu z karnawałem”, ten także ma swoje odniesienie do wydarzeń współczesnych – jest nim wojna w Jugosławii. Bezpośrednią inspirację do napisania piosenki stanowił z kolei film Jamesa Clavella „Ostatnia dolina”. Tak opowiadał o tym Jacek Kaczmarski w audycji radiowej Open Slot:

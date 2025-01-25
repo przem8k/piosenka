@@ -1,9 +1,15 @@
 ---
 title: 'K... podła ty'
-author: DX
+author: 'DX'
 pub_date: '2012-06-04 02:11:59.970368+00:00'
-original_title: P... de toi
-link_youtube: http://www.youtube.com/watch?v=v2qMV5vFwHg
+original_title: 'P... de toi'
+link_youtube: 'http://www.youtube.com/watch?v=v2qMV5vFwHg'
+text_authors:
+ - 'georges-brassens'
+composers:
+ - 'georges-brassens'
+performers:
+ - 'zespol-reprezentacyjny'
 ---
 
 #zw

@@ -1,8 +1,8 @@
 ---
 title: 'Sentymentalna Panna S.'
-author: DX
+author: 'DX'
 pub_date: '2016-04-18 20:07:39.275120+00:00'
-url1: https://pl.wikipedia.org/wiki/Niezale%C5%BCny_Samorz%C4%85dny_Zwi%C4%85zek_Zawodowy_%E2%80%9ESolidarno%C5%9B%C4%87%E2%80%9D
+url1: 'https://pl.wikipedia.org/wiki/Niezale%C5%BCny_Samorz%C4%85dny_Zwi%C4%85zek_Zawodowy_%E2%80%9ESolidarno%C5%9B%C4%87%E2%80%9D'
 image: song_annotations/152035-Nz-zakonczenie-strajku-w-Stoczni-Gdanskiej-w-1988-r-Teraz-Solida_332RSGh.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/152035-Nz-zakonczenie-strajku-w-Stoczni-Gdanskiej-w-1988-r-Teraz-Solida_332RSGh.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/152035-Nz-zakonczenie-strajku-w-Stoczni-Gdanskiej-w-1988-r-Teraz-Solida_332RSGh.jpg.0x300_q85_upscale.jpg

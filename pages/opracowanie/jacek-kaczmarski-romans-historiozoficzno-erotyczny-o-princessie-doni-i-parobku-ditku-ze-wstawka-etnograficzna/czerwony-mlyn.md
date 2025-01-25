@@ -1,6 +1,6 @@
 ---
 title: 'Czerwony młyn'
-author: DX
+author: 'DX'
 pub_date: '2018-07-21 17:28:43.720736+00:00'
 image: notes/Cheret_MoulinRouge_ParisCancan.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Cheret_MoulinRouge_ParisCancan.jpg

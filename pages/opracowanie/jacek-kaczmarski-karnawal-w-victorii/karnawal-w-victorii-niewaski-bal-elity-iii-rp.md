@@ -1,6 +1,6 @@
 ---
 title: 'Karnawał w „Victorii” - niewąski bal elity III RP'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-08-08 16:09:49.365379+00:00'
 image: notes/en_magdalenka_walesa_michnik_970.jpeg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/en_magdalenka_walesa_michnik_970.jpeg

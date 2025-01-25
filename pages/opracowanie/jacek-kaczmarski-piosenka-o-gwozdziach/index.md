@@ -1,9 +1,15 @@
 ---
 title: 'Piosenka o gwoździach'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-10-31 13:15:13.703807+00:00'
-link_youtube: https://www.youtube.com/watch?v=WZNVmFL5JFU
+link_youtube: 'https://www.youtube.com/watch?v=WZNVmFL5JFU'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/piosenka_o_gwozdziach.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/piosenka_o_gwozdziach.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/piosenka_o_gwozdziach.png.180x0_q85_upscale.jpg

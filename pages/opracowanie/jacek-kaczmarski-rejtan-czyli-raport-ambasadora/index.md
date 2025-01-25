@@ -1,8 +1,14 @@
 ---
 title: 'Rejtan, czyli raport ambasadora'
-author: DX
+author: 'DX'
 pub_date: '2017-08-27 16:07:31.356690+00:00'
-link_youtube: https://www.youtube.com/watch?v=pe6mqxaclyI
+link_youtube: 'https://www.youtube.com/watch?v=pe6mqxaclyI'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zw1

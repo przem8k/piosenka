@@ -1,10 +1,16 @@
 ---
 title: 'Axolotl'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2022-10-13 11:44:36.180346+00:00'
 epigone: True
-link_youtube: https://www.youtube.com/watch?v=3aT1f1FwcbQ
+link_youtube: 'https://www.youtube.com/watch?v=3aT1f1FwcbQ'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'triada-poetica'
+performers:
+ - 'triada-poetica'
 ---
 
 [a F G a F G a F G a F G] 

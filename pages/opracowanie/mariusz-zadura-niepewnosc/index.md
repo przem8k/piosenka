@@ -1,7 +1,13 @@
 ---
 title: 'Niepewność'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 08:08:22.765487+00:00'
+text_authors:
+ - 'mariusz-zadura'
+composers:
+ - 'mariusz-zadura'
+performers:
+ - 'mariusz-zadura'
 ---
 
 Ten dzień na zawsze w oczach mam

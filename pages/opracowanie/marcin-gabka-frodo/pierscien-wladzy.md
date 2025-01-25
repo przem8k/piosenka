@@ -1,6 +1,6 @@
 ---
 title: 'Pierścień Władzy'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-24 10:36:24.267979+00:00'
 image: notes/1_o56R70R8S5VnuloO4F1mCg.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1_o56R70R8S5VnuloO4F1mCg.jpg

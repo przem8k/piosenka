@@ -1,8 +1,14 @@
 ---
 title: 'Przepowiednia Jana Chrzciciela'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2018-03-10 15:56:24.435402+00:00'
-link_youtube: https://www.youtube.com/watch?v=ziEuTGlt67s
+link_youtube: 'https://www.youtube.com/watch?v=ziEuTGlt67s'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/Przepowiednia_Jana_Chrzciciela.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Przepowiednia_Jana_Chrzciciela.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Przepowiednia_Jana_Chrzciciela.png.180x0_q85_upscale.jpg

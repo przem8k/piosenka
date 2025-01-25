@@ -1,8 +1,14 @@
 ---
 title: 'Świnia'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-06-12 11:17:51.916344+00:00'
-link_youtube: http://www.youtube.com/watch?v=UFjclY4jumw
+link_youtube: 'http://www.youtube.com/watch?v=UFjclY4jumw'
+text_authors:
+ - 'jacek-kleyff'
+composers:
+ - 'jacek-kleyff'
+performers:
+ - 'jacek-kleyff'
 ---
 
 #zwrotka

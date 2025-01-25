@@ -1,8 +1,14 @@
 ---
 title: 'Ballada czarno-biała'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-01-13 22:40:40.676029+00:00'
-link_youtube: https://www.youtube.com/watch?v=vgjY0kTFJEU
+link_youtube: 'https://www.youtube.com/watch?v=vgjY0kTFJEU'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/ballada_czarno_biala.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ballada_czarno_biala.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ballada_czarno_biala.png.180x0_q85_upscale.jpg

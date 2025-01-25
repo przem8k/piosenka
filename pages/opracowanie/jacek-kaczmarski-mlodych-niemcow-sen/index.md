@@ -1,8 +1,14 @@
 ---
 title: 'Młodych Niemców sen'
-author: DX
+author: 'DX'
 pub_date: '2011-07-29 01:20:17.896386+00:00'
-link_youtube: https://www.youtube.com/watch?v=E_HcBpNmlLU
+link_youtube: 'https://www.youtube.com/watch?v=E_HcBpNmlLU'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/mlodych_niemcow_sen.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/mlodych_niemcow_sen.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/mlodych_niemcow_sen.png.180x0_q85_upscale.jpg

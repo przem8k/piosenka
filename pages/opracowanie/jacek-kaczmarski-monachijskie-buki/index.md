@@ -1,9 +1,15 @@
 ---
 title: 'Monachijskie buki'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-10-10 20:38:38.894557+00:00'
-link_youtube: https://www.youtube.com/watch?v=ZomC5t9eR6M
+link_youtube: 'https://www.youtube.com/watch?v=ZomC5t9eR6M'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #1

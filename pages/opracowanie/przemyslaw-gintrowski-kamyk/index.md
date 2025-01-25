@@ -1,8 +1,14 @@
 ---
 title: 'Kamyk'
-author: reuter
+author: 'reuter'
 pub_date: '2014-09-15 22:52:20.515507+00:00'
-link_youtube: https://www.youtube.com/watch?v=ywXj2te3V60
+link_youtube: 'https://www.youtube.com/watch?v=ywXj2te3V60'
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #zw

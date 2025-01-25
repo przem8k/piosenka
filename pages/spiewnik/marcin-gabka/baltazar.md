@@ -1,6 +1,6 @@
 ---
 title: 'Baltazar'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-11-10 22:00:37.438915+00:00'
 image: notes/120505008_1290478824630742_4926679828610476799_o.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/120505008_1290478824630742_4926679828610476799_o.jpg

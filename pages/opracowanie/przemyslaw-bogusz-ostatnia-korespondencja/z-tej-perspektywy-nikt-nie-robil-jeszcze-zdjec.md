@@ -1,6 +1,6 @@
 ---
 title: 'Z tej perspektywy nikt nie robił jeszcze zdjęć'
-author: DX
+author: 'DX'
 pub_date: '2018-08-12 18:01:38.913965+00:00'
 image: notes/wiadomosci_milewicz.jpeg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/wiadomosci_milewicz.jpeg

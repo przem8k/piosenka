@@ -1,9 +1,15 @@
 ---
 title: 'Szklana góra'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2014-09-04 20:26:11.725153+00:00'
-link_youtube: https://www.youtube.com/watch?v=6WyY1OAwjpY
+link_youtube: 'https://www.youtube.com/watch?v=6WyY1OAwjpY'
 capo_fret: 4
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/Szklana_gora.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Szklana_gora.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Szklana_gora.png.180x0_q85_upscale.jpg

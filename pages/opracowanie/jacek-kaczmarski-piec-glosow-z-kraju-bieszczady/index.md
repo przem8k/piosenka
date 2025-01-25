@@ -1,9 +1,15 @@
 ---
 title: 'Pięć głosów z Kraju. Bieszczady'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-12-29 20:43:15.176597+00:00'
-link_youtube: https://www.youtube.com/watch?v=xBWH4-QSlsE
+link_youtube: 'https://www.youtube.com/watch?v=xBWH4-QSlsE'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/bieszczady.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/bieszczady.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/bieszczady.png.180x0_q85_upscale.jpg

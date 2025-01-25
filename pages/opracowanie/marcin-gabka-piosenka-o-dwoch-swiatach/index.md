@@ -1,8 +1,14 @@
 ---
 title: 'Piosenka o dwóch światach'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-19 18:13:58.327678+00:00'
-link_youtube: https://www.youtube.com/watch?v=-zlkExRFPMk
+link_youtube: 'https://www.youtube.com/watch?v=-zlkExRFPMk'
+text_authors:
+ - 'marcin-gabka'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 Sam nie wiem, na ile wystarczy mi weny, [ d  C  B  A7]

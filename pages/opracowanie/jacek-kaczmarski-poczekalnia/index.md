@@ -1,8 +1,14 @@
 ---
 title: 'Poczekalnia'
-author: DX
+author: 'DX'
 pub_date: '2011-05-10 02:28:29.294554+00:00'
-link_youtube: https://www.youtube.com/watch?v=LTC97LojAJI
+link_youtube: 'https://www.youtube.com/watch?v=LTC97LojAJI'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/poczekalnia.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/poczekalnia.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/poczekalnia.png.180x0_q85_upscale.jpg

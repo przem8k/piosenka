@@ -1,8 +1,8 @@
 ---
 title: 'Jaromir Nohavica'
-author: DX
+author: 'DX'
 pub_date: '2018-03-22 20:58:39.634048+00:00'
-url1: https://en.wikipedia.org/wiki/Jarom%C3%ADr_Nohavica
+url1: 'https://en.wikipedia.org/wiki/Jarom%C3%ADr_Nohavica'
 image: notes/nohavica.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/nohavica.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/nohavica.jpg.0x300_q85_upscale.jpg

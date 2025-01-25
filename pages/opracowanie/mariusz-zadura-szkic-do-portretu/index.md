@@ -1,7 +1,13 @@
 ---
 title: 'Szkic do portretu'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 08:01:03.225647+00:00'
+text_authors:
+ - 'mariusz-zadura'
+composers:
+ - 'mariusz-zadura'
+performers:
+ - 'mariusz-zadura'
 ---
 
 Nikt nie grał na gitarze tak jak on	[G D A] 

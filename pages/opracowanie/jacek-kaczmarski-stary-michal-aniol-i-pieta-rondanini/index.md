@@ -1,9 +1,15 @@
 ---
 title: 'Stary Michał Anioł i Pieta Rondanini'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-10-31 12:24:08.060024+00:00'
-link_youtube: https://www.youtube.com/watch?v=FMtx4T2pU48
+link_youtube: 'https://www.youtube.com/watch?v=FMtx4T2pU48'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zw1

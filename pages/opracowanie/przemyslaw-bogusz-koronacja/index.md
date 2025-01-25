@@ -1,8 +1,14 @@
 ---
 title: 'Koronacja'
-author: DX
+author: 'DX'
 pub_date: '2011-05-08 07:24:41.179750+00:00'
-link_youtube: https://www.youtube.com/watch?v=L0Do6V11aZo
+link_youtube: 'https://www.youtube.com/watch?v=L0Do6V11aZo'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zwrotka-intro1

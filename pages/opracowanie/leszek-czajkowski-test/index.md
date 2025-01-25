@@ -1,9 +1,15 @@
 ---
 title: 'Test'
-author: DX
+author: 'DX'
 pub_date: '2011-08-08 16:14:14.270850+00:00'
-link_youtube: https://www.youtube.com/watch?v=6Yf6bTRguN0
+link_youtube: 'https://www.youtube.com/watch?v=6Yf6bTRguN0'
 capo_fret: 2
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'jakub-medrzycki'
+performers:
+ - 'czajkowski-medrzycki-piekarczyk'
 ---
 
 #ref

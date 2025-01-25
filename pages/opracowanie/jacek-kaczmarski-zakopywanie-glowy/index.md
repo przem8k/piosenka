@@ -1,8 +1,14 @@
 ---
 title: 'Zakopywanie głowy'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-29 15:25:36.965896+00:00'
-link_youtube: https://www.youtube.com/watch?v=2sGvpSY2yNw
+link_youtube: 'https://www.youtube.com/watch?v=2sGvpSY2yNw'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/zakopywanie_glowy.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zakopywanie_glowy.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zakopywanie_glowy.png.180x0_q85_upscale.png

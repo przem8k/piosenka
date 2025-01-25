@@ -1,8 +1,14 @@
 ---
 title: 'Zatruta studnia'
-author: DX
+author: 'DX'
 pub_date: '2017-10-08 22:56:41.246163+00:00'
-link_youtube: https://www.youtube.com/watch?v=ndmVKcsqsFM
+link_youtube: 'https://www.youtube.com/watch?v=ndmVKcsqsFM'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/zatruta_studnia.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zatruta_studnia.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zatruta_studnia.png.180x0_q85_upscale.png

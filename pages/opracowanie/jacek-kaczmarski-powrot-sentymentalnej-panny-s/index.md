@@ -1,9 +1,15 @@
 ---
 title: 'Powrót sentymentalnej Panny S.'
-author: DX
+author: 'DX'
 pub_date: '2016-04-16 11:52:01.870385+00:00'
-link_youtube: https://www.youtube.com/watch?v=orvFUMnFKmI
+link_youtube: 'https://www.youtube.com/watch?v=orvFUMnFKmI'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jan-krzysztof-kelus'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/powrot_sentymentalnej_panny_s.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/powrot_sentymentalnej_panny_s.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/powrot_sentymentalnej_panny_s.png.180x0_q85_upscale.png

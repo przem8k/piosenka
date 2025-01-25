@@ -1,9 +1,9 @@
 ---
 title: 'Płynie nad nimi ślepe oko Boga'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-12-27 17:34:29.401029+00:00'
-url1: https://pl.wikipedia.org/wiki/Auschwitz-Birkenau
-ref1: "Lekcja historii Jacka Kaczmarskiego" Iwona Grabska, Iwona Wasilewska
+url1: 'https://pl.wikipedia.org/wiki/Auschwitz-Birkenau'
+ref1: '"Lekcja historii Jacka Kaczmarskiego" Iwona Grabska, Iwona Wasilewska'
 image: notes/094041__nn7Tv94.jpeg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/094041__nn7Tv94.jpeg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/094041__nn7Tv94.jpeg.0x300_q85_upscale.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Ballada o Rzeczypospolitej'
-author: RK
+author: 'RK'
 pub_date: '2011-12-19 09:00:32.480796+00:00'
-link_youtube: https://www.youtube.com/watch?v=1YstThssBOs
+link_youtube: 'https://www.youtube.com/watch?v=1YstThssBOs'
+text_authors:
+ - 'andrzej-kolakowski'
+composers:
+ - 'andrzej-kolakowski'
+performers:
+ - 'andrzej-kolakowski'
 ---
 
 W naszej Rzeczy coraz bardziej pospolitej		[a E7 a]

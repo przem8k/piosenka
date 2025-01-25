@@ -1,9 +1,15 @@
 ---
 title: 'Ballada o spotkaniu'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-30 17:46:54.625778+00:00'
-link_youtube: https://www.youtube.com/watch?v=YZ9XZBvWWGA
+link_youtube: 'https://www.youtube.com/watch?v=YZ9XZBvWWGA'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zwrotka1

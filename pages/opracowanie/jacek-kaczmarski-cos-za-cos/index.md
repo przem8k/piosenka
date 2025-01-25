@@ -1,9 +1,15 @@
 ---
 title: 'Coś za coś'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-31 18:46:14.763646+00:00'
-link_youtube: https://www.youtube.com/watch?v=9U3FO3ofDf0
+link_youtube: 'https://www.youtube.com/watch?v=9U3FO3ofDf0'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/cos_za_cos.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/cos_za_cos.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/cos_za_cos.png.180x0_q85_upscale.png

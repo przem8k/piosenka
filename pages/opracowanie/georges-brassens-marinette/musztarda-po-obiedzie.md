@@ -1,6 +1,6 @@
 ---
 title: 'Musztarda po obiedzie'
-author: DX
+author: 'DX'
 pub_date: '2016-05-18 22:06:32.776933+00:00'
 image: song_annotations/moutard.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/moutard.jpg

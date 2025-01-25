@@ -1,6 +1,6 @@
 ---
 title: 'Folwark Zwierzęcy'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-11-02 21:39:16.640761+00:00'
 image: notes/wae0033-Orwell-George-Folwark-zwierzecy-London-Odnowa-Reprinted-1984-tlum-Jelenska-Animal-.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/wae0033-Orwell-George-Folwark-zwierzecy-London-Odnowa-Reprinted-1984-tlum-Jelenska-Animal-.jpg

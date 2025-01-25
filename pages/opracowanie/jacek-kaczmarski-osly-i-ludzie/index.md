@@ -1,8 +1,15 @@
 ---
 title: 'Osły i ludzie'
-author: DX
+author: 'DX'
 pub_date: '2016-10-21 14:47:19.872991+00:00'
-link_youtube: https://www.youtube.com/watch?v=6GllKJQuLEo
+link_youtube: 'https://www.youtube.com/watch?v=6GllKJQuLEo'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/osly_i_ludzie.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/osly_i_ludzie.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/osly_i_ludzie.png.180x0_q85_upscale.png

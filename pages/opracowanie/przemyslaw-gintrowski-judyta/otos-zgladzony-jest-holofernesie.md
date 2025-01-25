@@ -1,9 +1,9 @@
 ---
 title: 'Otoś zgładzony jest, Holofernesie'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-01-05 16:12:06.369790+00:00'
-url1: https://pl.wikipedia.org/wiki/Ksi%C4%99ga_Judyty
-ref1: Księga Judyty
+url1: 'https://pl.wikipedia.org/wiki/Ksi%C4%99ga_Judyty'
+ref1: 'Księga Judyty'
 image: notes/Judith_Beheading_Holofernes_by_Caravaggio.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Judith_Beheading_Holofernes_by_Caravaggio.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Judith_Beheading_Holofernes_by_Caravaggio.jpg.0x300_q85_upscale.jpg

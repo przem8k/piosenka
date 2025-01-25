@@ -1,9 +1,9 @@
 ---
 title: 'Salamandra meksykańska'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2022-10-14 09:21:07.202790+00:00'
-url1: https://pl.wikipedia.org/wiki/Ambystoma_meksyka%C5%84ska
-url2: https://www.youtube.com/watch?v=34Vkpzb4snk&
+url1: 'https://pl.wikipedia.org/wiki/Ambystoma_meksyka%C5%84ska'
+url2: 'https://www.youtube.com/watch?v=34Vkpzb4snk&'
 image: notes/Axolotl-2193331_1280.webp.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Axolotl-2193331_1280.webp.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Axolotl-2193331_1280.webp.png.0x300_q85_upscale.png

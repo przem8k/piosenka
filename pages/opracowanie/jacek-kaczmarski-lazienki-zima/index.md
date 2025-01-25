@@ -1,10 +1,17 @@
 ---
 title: 'Łazienki zimą'
-author: DX
+author: 'DX'
 pub_date: '2011-07-24 18:48:23.749587+00:00'
 epigone: True
-link_youtube: http://www.youtube.com/watch?v=cohTAaINLEc
+link_youtube: 'http://www.youtube.com/watch?v=cohTAaINLEc'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'tomasz-susmed'
+ - 'pawel-konopacki'
+performers:
+ - 'trio-lodzko-chojnowskie'
 score1: scores/lazienki_zima.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/lazienki_zima.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/lazienki_zima.png.180x0_q85_upscale.jpg

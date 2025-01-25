@@ -1,9 +1,9 @@
 ---
 title: 'Głuchy zdycha mało godnie'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-12-04 22:37:58.980843+00:00'
-url1: https://pl.wikipedia.org/wiki/Francisco_Goya
-url2: https://www.biography.com/people/francisco-de-goya-9317129
+url1: 'https://pl.wikipedia.org/wiki/Francisco_Goya'
+url2: 'https://www.biography.com/people/francisco-de-goya-9317129'
 image: notes/1226.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1226.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1226.jpg.0x300_q85_upscale.jpg

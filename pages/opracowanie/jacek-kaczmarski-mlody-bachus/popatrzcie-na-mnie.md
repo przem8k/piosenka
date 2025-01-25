@@ -1,6 +1,6 @@
 ---
 title: 'Popatrzcie na mnie'
-author: DX
+author: 'DX'
 pub_date: '2018-03-26 20:56:28.630603+00:00'
 image: notes/Bacco_adolescente.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Bacco_adolescente.jpg

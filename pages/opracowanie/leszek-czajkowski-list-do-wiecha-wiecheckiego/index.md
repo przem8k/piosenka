@@ -1,8 +1,14 @@
 ---
 title: 'List do Wiecha Wiecheckiego'
-author: DX
+author: 'DX'
 pub_date: '2011-06-28 01:47:51.452374+00:00'
-link_youtube: https://www.youtube.com/watch?v=Jv9ApwDG7v4
+link_youtube: 'https://www.youtube.com/watch?v=Jv9ApwDG7v4'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'czajkowski-medrzycki-piekarczyk'
 ---
 
 #zw

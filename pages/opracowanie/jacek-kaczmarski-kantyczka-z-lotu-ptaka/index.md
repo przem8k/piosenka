@@ -1,9 +1,15 @@
 ---
 title: 'Kantyczka z lotu ptaka'
-author: DX
+author: 'DX'
 pub_date: '2011-06-15 02:47:34.832746+00:00'
-link_youtube: https://www.youtube.com/watch?v=GXAEIPoxNew
+link_youtube: 'https://www.youtube.com/watch?v=GXAEIPoxNew'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/kantyczka_z_lotu_ptaka.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kantyczka_z_lotu_ptaka.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kantyczka_z_lotu_ptaka.png.180x0_q85_upscale.jpg

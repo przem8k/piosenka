@@ -1,8 +1,14 @@
 ---
 title: 'Stańczyk'
-author: MaciejKurek
+author: 'MaciejKurek'
 pub_date: '2017-02-06 13:06:29.152524+00:00'
-link_youtube: https://www.youtube.com/watch?v=iBGgX8B5AQw
+link_youtube: 'https://www.youtube.com/watch?v=iBGgX8B5AQw'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/stanczyk_nuty.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/stanczyk_nuty.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/stanczyk_nuty.png.180x0_q85_upscale.jpg

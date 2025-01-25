@@ -1,8 +1,14 @@
 ---
 title: 'Walc adieu'
-author: DX
+author: 'DX'
 pub_date: '2011-05-07 14:59:41.421445+00:00'
-link_youtube: https://www.youtube.com/watch?v=lTNu9X0iE88
+link_youtube: 'https://www.youtube.com/watch?v=lTNu9X0iE88'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'czajkowski-medrzycki-piekarczyk'
 ---
 
 #zwrotka

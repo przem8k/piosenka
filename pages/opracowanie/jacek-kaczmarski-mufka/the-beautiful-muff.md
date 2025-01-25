@@ -1,8 +1,8 @@
 ---
 title: 'The beautiful muff'
-author: DX
+author: 'DX'
 pub_date: '2018-07-22 16:02:19.398765+00:00'
-url1: https://www.youtube.com/watch?v=tPeRQuSlGa8
+url1: 'https://www.youtube.com/watch?v=tPeRQuSlGa8'
 image: notes/csardas.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/csardas.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/csardas.jpg.0x300_q85_upscale.jpg

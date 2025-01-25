@@ -1,8 +1,8 @@
 ---
 title: 'Ból'
-author: Alek
+author: 'Alek'
 pub_date: '2015-06-14 12:20:01.699645+00:00'
-url1: http://pl.wikipedia.org/wiki/Aleksander_Wat
+url1: 'http://pl.wikipedia.org/wiki/Aleksander_Wat'
 image: notes/Aleksander_Wat.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Aleksander_Wat.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Aleksander_Wat.jpg.0x300_q85_upscale.jpg

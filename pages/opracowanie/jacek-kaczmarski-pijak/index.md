@@ -1,9 +1,15 @@
 ---
 title: 'Pijak'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2014-09-06 17:30:50.950710+00:00'
-original_title: L'ivrogne
-link_youtube: https://www.youtube.com/watch?v=dWMgc3sX5Zo
+original_title: 'L'ivrogne'
+link_youtube: 'https://www.youtube.com/watch?v=dWMgc3sX5Zo'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/PIJAK.PNG
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/PIJAK.PNG
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/PIJAK.PNG.180x0_q85_upscale.jpg

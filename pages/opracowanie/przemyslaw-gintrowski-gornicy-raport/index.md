@@ -1,9 +1,15 @@
 ---
 title: 'Górnicy'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-30 18:17:49.313867+00:00'
-disambig: „...ich było tylko siedmiu”
-link_youtube: https://www.youtube.com/watch?v=tEGDOqI6yJ0
+disambig: '„...ich było tylko siedmiu”'
+link_youtube: 'https://www.youtube.com/watch?v=tEGDOqI6yJ0'
+text_authors:
+ - 'tomasz-jastrun'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/Górnicy.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Górnicy.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/G%C3%B3rnicy.png.180x0_q85_upscale.jpg

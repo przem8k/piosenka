@@ -1,6 +1,6 @@
 ---
 title: '95 tez'
-author: DX
+author: 'DX'
 pub_date: '2020-08-09 08:15:19.462065+00:00'
 image: notes/756px-Luther_95_Thesen.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/756px-Luther_95_Thesen.png

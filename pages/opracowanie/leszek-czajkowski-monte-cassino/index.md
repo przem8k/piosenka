@@ -1,9 +1,15 @@
 ---
 title: 'Monte Cassino'
-author: DX
+author: 'DX'
 pub_date: '2011-08-08 16:25:54.748972+00:00'
-link_youtube: https://www.youtube.com/watch?v=eDK3b28PQ08
+link_youtube: 'https://www.youtube.com/watch?v=eDK3b28PQ08'
 capo_fret: 3
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'czajkowski-medrzycki-piekarczyk'
 ---
 
 #zw

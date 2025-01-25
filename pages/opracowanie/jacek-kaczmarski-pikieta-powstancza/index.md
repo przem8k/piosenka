@@ -1,8 +1,14 @@
 ---
 title: 'Pikieta powstańcza'
-author: DX
+author: 'DX'
 pub_date: '2017-10-01 15:53:15.804851+00:00'
-link_youtube: https://www.youtube.com/watch?v=JqdSXjTU3ng
+link_youtube: 'https://www.youtube.com/watch?v=JqdSXjTU3ng'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/pikieta_powstancza.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pikieta_powstancza.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pikieta_powstancza.png.180x0_q85_upscale.png

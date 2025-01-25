@@ -1,10 +1,10 @@
 ---
 title: 'Wiszą zdrajcy – takie czasy'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-12-28 20:27:21.510123+00:00'
-url1: https://niezalezna.pl/92164-procesy-zdrajcow-targowiczan
-url2: https://pl.wikipedia.org/wiki/Konfederacja_targowicka
-ref1: "Lekcja historii Jacka Kaczmarskiego" Iwona Grabska, Iwona Wasilewska
+url1: 'https://niezalezna.pl/92164-procesy-zdrajcow-targowiczan'
+url2: 'https://pl.wikipedia.org/wiki/Konfederacja_targowicka'
+ref1: '"Lekcja historii Jacka Kaczmarskiego" Iwona Grabska, Iwona Wasilewska'
 image: notes/Norblin__Wieszanie_na_Rynku_Starego.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Norblin__Wieszanie_na_Rynku_Starego.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Norblin__Wieszanie_na_Rynku_Starego.jpg.0x300_q85_upscale.jpg

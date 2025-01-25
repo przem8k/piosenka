@@ -1,8 +1,14 @@
 ---
 title: 'Powój, perz i mlecz'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-24 22:14:15.661588+00:00'
-link_youtube: https://www.youtube.com/watch?v=aMFdyc-VycU
+link_youtube: 'https://www.youtube.com/watch?v=aMFdyc-VycU'
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 #zwrotka

@@ -1,8 +1,14 @@
 ---
 title: 'Irak'
-author: DX
+author: 'DX'
 pub_date: '2011-05-12 20:22:34.618248+00:00'
-link_youtube: https://www.youtube.com/watch?v=8rPn3nBPIJ8
+link_youtube: 'https://www.youtube.com/watch?v=8rPn3nBPIJ8'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zwrotka

@@ -1,8 +1,15 @@
 ---
 title: 'Targ'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-08-02 20:47:08.798885+00:00'
-link_youtube: https://www.youtube.com/watch?v=5oejMOXZZlQ
+link_youtube: 'https://www.youtube.com/watch?v=5oejMOXZZlQ'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'przemyslaw-gintrowski'
+ - 'jacek-kaczmarski'
 ---
 
 #1

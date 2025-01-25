@@ -1,8 +1,8 @@
 ---
 title: 'Raz w Polsce bard naród wolności chciał uczyć...'
-author: DX
+author: 'DX'
 pub_date: '2020-08-05 20:53:41.556928+00:00'
-url1: http://www.kwartetproforma.com/?pl_limeryki-o-narodach-%E2%80%94-aneks,34
+url1: 'http://www.kwartetproforma.com/?pl_limeryki-o-narodach-%E2%80%94-aneks,34'
 image: notes/pro_forma.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/pro_forma.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/pro_forma.jpg.0x300_q85_upscale.jpg

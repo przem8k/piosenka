@@ -1,8 +1,8 @@
 ---
 title: 'Dziewica Orleańska'
-author: DX
+author: 'DX'
 pub_date: '2020-07-12 18:16:20.552483+00:00'
-url1: https://pl.wikipedia.org/wiki/Joanna_d%E2%80%99Arc
+url1: 'https://pl.wikipedia.org/wiki/Joanna_d%E2%80%99Arc'
 image: notes/Screenshot_2020-07-12_at_20.15.44.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Screenshot_2020-07-12_at_20.15.44.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Screenshot_2020-07-12_at_20.15.44.png.0x300_q85_upscale.png

@@ -1,9 +1,15 @@
 ---
 title: 'Happy end'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-23 09:03:24.202152+00:00'
-disambig: serial Zmiennicy
-link_youtube: https://www.youtube.com/watch?v=PVkhf3xgFcQ
+disambig: 'serial Zmiennicy'
+link_youtube: 'https://www.youtube.com/watch?v=PVkhf3xgFcQ'
+text_authors:
+ - 'jacek-janczarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #1

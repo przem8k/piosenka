@@ -1,6 +1,6 @@
 ---
 title: 'Grający w karty'
-author: DX
+author: 'DX'
 pub_date: '2018-03-26 20:38:24.021875+00:00'
 image: notes/1200px-Cardsharps.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1200px-Cardsharps.jpg

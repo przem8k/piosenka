@@ -1,8 +1,14 @@
 ---
 title: 'Korek'
-author: spooky
+author: 'spooky'
 pub_date: '2013-08-22 05:03:33.379012+00:00'
 capo_fret: 1
+text_authors:
+ - 'michal-zablocki'
+composers:
+ - 'mateusz-nagorski'
+performers:
+ - 'mateusz-nagorski'
 ---
 
 #zw1

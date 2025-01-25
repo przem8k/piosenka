@@ -1,8 +1,14 @@
 ---
 title: 'A my nie chcemy uciekać stąd'
-author: DX
+author: 'DX'
 pub_date: '2011-07-18 15:40:33.212415+00:00'
-link_youtube: https://www.youtube.com/watch?v=Vf6C8RXzF64
+link_youtube: 'https://www.youtube.com/watch?v=Vf6C8RXzF64'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/a_my_nie_chcemy_uciekac_stad.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/a_my_nie_chcemy_uciekac_stad.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/a_my_nie_chcemy_uciekac_stad.png.180x0_q85_upscale.jpg

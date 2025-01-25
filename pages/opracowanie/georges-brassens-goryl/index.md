@@ -1,8 +1,16 @@
 ---
 title: 'Goryl'
-author: DX
+author: 'DX'
 pub_date: '2011-10-17 23:29:30.262328+00:00'
-original_title: Le gorille
+original_title: 'Le gorille'
+text_authors:
+ - 'georges-brassens'
+composers:
+ - 'georges-brassens'
+translators:
+ - 'filip-lobodzinski'
+performers:
+ - 'zespol-reprezentacyjny'
 ---
 
 #zw

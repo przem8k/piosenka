@@ -1,8 +1,14 @@
 ---
 title: 'Zomo – Spokój – Bies'
-author: reuter
+author: 'reuter'
 pub_date: '2014-10-05 21:34:15.974833+00:00'
-link_youtube: https://www.youtube.com/watch?v=v4B9JmmYLZ8
+link_youtube: 'https://www.youtube.com/watch?v=v4B9JmmYLZ8'
+text_authors:
+ - 'tomasz-jastrun'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 Powyciągali nieszczęśliwe ludzkie zwierzęta [e D/Fis]

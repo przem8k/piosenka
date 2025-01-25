@@ -1,8 +1,14 @@
 ---
 title: 'Upadek Związku Radzieckiego'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-02-25 23:44:32.928280+00:00'
-link_youtube: https://www.youtube.com/watch?v=u-vrgiOuy7A
+link_youtube: 'https://www.youtube.com/watch?v=u-vrgiOuy7A'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 ---
 
 E+: 032110

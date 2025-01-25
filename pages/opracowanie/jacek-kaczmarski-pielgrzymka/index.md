@@ -1,8 +1,14 @@
 ---
 title: 'Pielgrzymka'
-author: DX
+author: 'DX'
 pub_date: '2011-05-07 14:06:57.171763+00:00'
-link_youtube: https://www.youtube.com/watch?v=D0qXK6nlvrU
+link_youtube: 'https://www.youtube.com/watch?v=D0qXK6nlvrU'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zw

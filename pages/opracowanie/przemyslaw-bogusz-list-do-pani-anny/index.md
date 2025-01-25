@@ -1,7 +1,13 @@
 ---
 title: 'List do pani Anny'
-author: DX
+author: 'DX'
 pub_date: '2012-02-06 00:30:48.914411+00:00'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zw

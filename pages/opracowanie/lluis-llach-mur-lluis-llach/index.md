@@ -1,10 +1,16 @@
 ---
 title: 'Mur'
-author: DX
+author: 'DX'
 pub_date: '2015-05-05 21:47:01.536319+00:00'
-disambig: Lluis Llach
-original_title: L'Estaca
-link_youtube: https://www.youtube.com/watch?v=OU6US73XaFQ
+disambig: 'Lluis Llach'
+original_title: 'L'Estaca'
+link_youtube: 'https://www.youtube.com/watch?v=OU6US73XaFQ'
+text_authors:
+ - 'lluis-llach'
+composers:
+ - 'lluis-llach'
+performers:
+ - 'zespol-reprezentacyjny'
 ---
 
 #zw

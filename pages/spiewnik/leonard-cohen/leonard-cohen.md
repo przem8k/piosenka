@@ -1,6 +1,6 @@
 ---
 title: 'Leonard Cohen'
-author: DX
+author: 'DX'
 pub_date: '2016-11-12 16:37:39.960749+00:00'
 image: notes/Leonard_Cohen_1_2013.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Leonard_Cohen_1_2013.jpg

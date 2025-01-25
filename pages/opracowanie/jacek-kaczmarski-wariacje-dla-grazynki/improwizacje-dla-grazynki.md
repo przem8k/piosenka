@@ -1,8 +1,8 @@
 ---
 title: 'Improwizacje dla Grażynki'
-author: DX
+author: 'DX'
 pub_date: '2017-10-03 21:06:38.041012+00:00'
-url1: http://www.agraart.pl/nowe/nowe/objectn.php?curr=PLN&idd=13479&aid=216
+url1: 'http://www.agraart.pl/nowe/nowe/objectn.php?curr=PLN&idd=13479&aid=216'
 image: notes/64_gielniaks.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/64_gielniaks.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/64_gielniaks.jpg.0x300_q85_upscale.jpg

@@ -1,9 +1,15 @@
 ---
 title: 'Pięć sonetów o umieraniu komunizmu'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-02-15 19:48:40.932958+00:00'
-link_youtube: https://www.youtube.com/watch?v=CrB27gDv2Co
+link_youtube: 'https://www.youtube.com/watch?v=CrB27gDv2Co'
 capo_fret: 5
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 I

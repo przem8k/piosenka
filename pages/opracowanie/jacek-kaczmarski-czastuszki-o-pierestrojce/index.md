@@ -1,8 +1,14 @@
 ---
 title: 'Czastuszki o pieriestrojce'
-author: spooky
+author: 'spooky'
 pub_date: '2011-12-08 05:21:05.831843+00:00'
-link_youtube: https://www.youtube.com/watch?v=V1EhKiHMr64
+link_youtube: 'https://www.youtube.com/watch?v=V1EhKiHMr64'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/czastuszki_o_pierestrojce.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/czastuszki_o_pierestrojce.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/czastuszki_o_pierestrojce.png.180x0_q85_upscale.jpg

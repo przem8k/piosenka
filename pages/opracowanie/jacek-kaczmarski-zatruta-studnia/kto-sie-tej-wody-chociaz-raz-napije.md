@@ -1,9 +1,9 @@
 ---
 title: 'Kto się tej wody chociaż raz napije'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-12-30 19:37:12.211515+00:00'
-url1: https://biografia24.pl/jacek-malczewski/
-ref1: "Lekcja historii Jacka Kaczmarskiego" Iwona Grabska, Iwona Wasilewska
+url1: 'https://biografia24.pl/jacek-malczewski/'
+ref1: '"Lekcja historii Jacka Kaczmarskiego" Iwona Grabska, Iwona Wasilewska'
 image: notes/bde2d041445da044ffb70a3b1b4f.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/bde2d041445da044ffb70a3b1b4f.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/bde2d041445da044ffb70a3b1b4f.jpg.0x300_q85_upscale.jpg

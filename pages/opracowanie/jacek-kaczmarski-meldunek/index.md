@@ -1,8 +1,14 @@
 ---
 title: 'Meldunek'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-08-16 17:19:13.854940+00:00'
-link_youtube: https://www.youtube.com/watch?v=lBmAWVIo79M
+link_youtube: 'https://www.youtube.com/watch?v=lBmAWVIo79M'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/meldunek.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/meldunek.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/meldunek.png.180x0_q85_upscale.png

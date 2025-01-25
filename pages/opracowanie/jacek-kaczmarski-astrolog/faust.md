@@ -1,9 +1,9 @@
 ---
 title: 'Faust'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-05-01 18:13:32.226436+00:00'
-url1: https://www.nationalgalleries.org/art-and-artists/23964/faust-his-study
-url2: https://fbc.pionier.net.pl/details/nn5cdv1
+url1: 'https://www.nationalgalleries.org/art-and-artists/23964/faust-his-study'
+url2: 'https://fbc.pionier.net.pl/details/nn5cdv1'
 image: notes/Rembrandt_Faust.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Rembrandt_Faust.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Rembrandt_Faust.jpg.0x300_q85_upscale.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Przybycie tytanów'
-author: DX
+author: 'DX'
 pub_date: '2011-05-10 03:36:57.723743+00:00'
-link_youtube: https://www.youtube.com/watch?v=5HOlwSnQayA
+link_youtube: 'https://www.youtube.com/watch?v=5HOlwSnQayA'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/przybycie_tytanow.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/przybycie_tytanow.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/przybycie_tytanow.png.180x0_q85_upscale.jpg

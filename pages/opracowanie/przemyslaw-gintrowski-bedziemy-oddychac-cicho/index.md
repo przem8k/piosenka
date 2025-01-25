@@ -1,8 +1,14 @@
 ---
 title: 'Będziemy oddychać cicho'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-30 18:24:18.393479+00:00'
-link_youtube: https://www.youtube.com/watch?v=q2EA_C0Q4-I
+link_youtube: 'https://www.youtube.com/watch?v=q2EA_C0Q4-I'
+text_authors:
+ - 'ryszard-holzer'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #1

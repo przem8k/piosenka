@@ -1,8 +1,14 @@
 ---
 title: 'Źródło wszelkiego zła'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-12-13 22:28:14.323499+00:00'
-link_youtube: https://www.youtube.com/watch?v=6L7GJW4S-2c
+link_youtube: 'https://www.youtube.com/watch?v=6L7GJW4S-2c'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/zrodlo_wszelkiego_zla.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zrodlo_wszelkiego_zla.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zrodlo_wszelkiego_zla.png.180x0_q85_upscale.png

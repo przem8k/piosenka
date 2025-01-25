@@ -1,9 +1,15 @@
 ---
 title: 'Pejzaż zimowy'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 19:39:07.073407+00:00'
-link_youtube: https://www.youtube.com/watch?v=g58ARITfujI
+link_youtube: 'https://www.youtube.com/watch?v=g58ARITfujI'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/pejzaz_zimowy.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pejzaz_zimowy.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pejzaz_zimowy.png.180x0_q85_upscale.png

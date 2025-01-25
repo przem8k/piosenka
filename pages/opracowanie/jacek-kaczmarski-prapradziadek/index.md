@@ -1,9 +1,15 @@
 ---
 title: 'Prapradziadek'
-author: skislaw
+author: 'skislaw'
 pub_date: '2017-06-14 09:39:03.193473+00:00'
-link_youtube: https://www.youtube.com/watch?v=LLKfQ6Fkv8g
+link_youtube: 'https://www.youtube.com/watch?v=LLKfQ6Fkv8g'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zw

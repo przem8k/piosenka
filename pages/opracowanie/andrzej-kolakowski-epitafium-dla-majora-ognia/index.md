@@ -1,8 +1,14 @@
 ---
 title: 'Epitafium dla majora Ognia'
-author: RK
+author: 'RK'
 pub_date: '2011-12-19 09:12:53.793094+00:00'
-link_youtube: http://www.youtube.com/watch?v=t1InFE0SD-Q
+link_youtube: 'http://www.youtube.com/watch?v=t1InFE0SD-Q'
+text_authors:
+ - 'andrzej-kolakowski'
+composers:
+ - 'andrzej-kolakowski'
+performers:
+ - 'andrzej-kolakowski'
 ---
 
 Jeśli umrzeć mam za ciebie				[C a]

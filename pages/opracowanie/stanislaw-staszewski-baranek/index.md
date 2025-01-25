@@ -1,8 +1,16 @@
 ---
 title: 'Baranek'
-author: DX
+author: 'DX'
 pub_date: '2016-10-29 18:54:13.106478+00:00'
-link_youtube: https://www.youtube.com/watch?v=YtyPc2RfGQg
+link_youtube: 'https://www.youtube.com/watch?v=YtyPc2RfGQg'
+text_authors:
+ - 'stanislaw-staszewski'
+composers:
+ - 'stanislaw-staszewski'
+performers:
+ - 'stanislaw-staszewski'
+ - 'jacek-kaczmarski'
+ - 'kazimierz-staszewski'
 ---
 
 #zw

@@ -1,9 +1,9 @@
 ---
 title: 'Prezydent Francji nie mógł nic poradzić'
-author: DX
+author: 'DX'
 pub_date: '2018-09-28 20:14:46.612624+00:00'
-url1: https://en.wikipedia.org/wiki/Armando_Valladares
-url2: https://www.universalis.fr/evenement/21-octobre-1982-liberation-du-poete-armando-valladares/
+url1: 'https://en.wikipedia.org/wiki/Armando_Valladares'
+url2: 'https://www.universalis.fr/evenement/21-octobre-1982-liberation-du-poete-armando-valladares/'
 image: notes/cuba-2-1024x532.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/cuba-2-1024x532.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/cuba-2-1024x532.jpg.0x300_q85_upscale.jpg

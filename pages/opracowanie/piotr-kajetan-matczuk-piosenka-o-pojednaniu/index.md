@@ -1,7 +1,13 @@
 ---
 title: 'Piosenka o pojednaniu'
-author: DX
+author: 'DX'
 pub_date: '2011-08-15 15:25:06.415427+00:00'
+text_authors:
+ - 'krzysztof-gozdowski'
+composers:
+ - 'piotr-kajetan-matczuk'
+performers:
+ - 'piotr-kajetan-matczuk'
 ---
 
 Ja - bezrobotny kosmonauta [d C G]

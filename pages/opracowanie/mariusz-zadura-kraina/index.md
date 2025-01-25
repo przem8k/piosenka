@@ -1,8 +1,14 @@
 ---
 title: 'Kraina'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 07:52:12.782231+00:00'
-link_youtube: https://www.youtube.com/watch?v=qtjL51L7egU
+link_youtube: 'https://www.youtube.com/watch?v=qtjL51L7egU'
+text_authors:
+ - 'tomasz-olesinski'
+composers:
+ - 'mariusz-zadura'
+performers:
+ - 'mariusz-zadura'
 ---
 
 [G D e C G]

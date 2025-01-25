@@ -1,6 +1,6 @@
 ---
 title: 'Zespół Reprezentacyjny'
-author: DX
+author: 'DX'
 pub_date: '2016-10-31 10:31:11.959052+00:00'
 image: notes/zr1989.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/zr1989.png

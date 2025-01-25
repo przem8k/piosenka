@@ -1,8 +1,14 @@
 ---
 title: 'Anhelli'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-30 19:25:30.214949+00:00'
-link_youtube: https://www.youtube.com/watch?v=Fj9HPKO_sU0
+link_youtube: 'https://www.youtube.com/watch?v=Fj9HPKO_sU0'
+text_authors:
+ - 'jerzy-czech'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/anhelli.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/anhelli.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/anhelli.png.180x0_q85_upscale.png

@@ -1,9 +1,15 @@
 ---
 title: 'Sny i sny'
-author: reuter
+author: 'reuter'
 pub_date: '2014-09-11 21:36:55.520439+00:00'
 epigone: True
-link_youtube: https://www.youtube.com/watch?v=EnstjE97DNM
+link_youtube: 'https://www.youtube.com/watch?v=EnstjE97DNM'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'trio-lodzko-chojnowskie'
+performers:
+ - 'trio-lodzko-chojnowskie'
 ---
 
 #zw

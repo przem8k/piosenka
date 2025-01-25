@@ -1,9 +1,15 @@
 ---
 title: 'Lekcja anatomii doktora Tulpa'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2019-10-07 23:57:03.274298+00:00'
 epigone: True
-link_youtube: https://www.youtube.com/watch?v=djWYTUcn2s4
+link_youtube: 'https://www.youtube.com/watch?v=djWYTUcn2s4'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'kwartet-proforma'
+performers:
+ - 'kwartet-proforma'
 ---
 
 #zw1

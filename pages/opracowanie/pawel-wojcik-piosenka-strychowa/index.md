@@ -1,9 +1,15 @@
 ---
 title: 'Piosenka strychowa'
-author: Boczuś
+author: 'Boczuś'
 pub_date: '2016-05-19 16:06:35.340217+00:00'
-link_youtube: https://www.youtube.com/watch?v=KCbna2Cd6xw
+link_youtube: 'https://www.youtube.com/watch?v=KCbna2Cd6xw'
 capo_fret: 2
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 #zw

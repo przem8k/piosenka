@@ -1,8 +1,14 @@
 ---
 title: 'Hiob'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2018-03-10 18:36:07.342659+00:00'
-link_youtube: https://www.youtube.com/watch?v=bmGZZD2v89s
+link_youtube: 'https://www.youtube.com/watch?v=bmGZZD2v89s'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/Hiob_01.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Hiob_01.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Hiob_01.png.180x0_q85_upscale.jpg

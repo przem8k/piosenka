@@ -1,6 +1,6 @@
 ---
 title: 'Pod ratuszem'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-21 17:55:04.130224+00:00'
 ---
 

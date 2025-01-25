@@ -1,8 +1,14 @@
 ---
 title: 'Tradycja'
-author: DX
+author: 'DX'
 pub_date: '2012-03-10 14:14:50.024698+00:00'
-link_youtube: http://www.youtube.com/watch?v=DMrvS8trNsY
+link_youtube: 'http://www.youtube.com/watch?v=DMrvS8trNsY'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/tradycja_1.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/tradycja_1.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/tradycja_1.png.180x0_q85_upscale.jpg

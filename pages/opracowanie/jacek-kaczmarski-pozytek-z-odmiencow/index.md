@@ -1,10 +1,16 @@
 ---
 title: 'Pożytek z odmieńców'
-author: DX
+author: 'DX'
 pub_date: '2011-07-18 17:26:49.480255+00:00'
 epigone: True
-link_youtube: http://www.youtube.com/watch?v=qMZK-S7XByA
+link_youtube: 'http://www.youtube.com/watch?v=qMZK-S7XByA'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'pawel-konopacki'
+performers:
+ - 'trio-lodzko-chojnowskie'
 ---
 
 #zw1

@@ -1,9 +1,15 @@
 ---
 title: '17 IX'
-author: DX
+author: 'DX'
 pub_date: '2014-01-06 21:29:43.392546+00:00'
-disambig: wersja z albumu „Tren”
-link_youtube: https://www.youtube.com/watch?v=7tvah4e7H7U
+disambig: 'wersja z albumu „Tren”'
+link_youtube: 'https://www.youtube.com/watch?v=7tvah4e7H7U'
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #zw1

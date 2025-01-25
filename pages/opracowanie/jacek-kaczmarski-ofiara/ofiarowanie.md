@@ -1,9 +1,9 @@
 ---
 title: 'Ofiarowanie'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-09-08 14:32:12.853669+00:00'
-url1: https://pl.wikipedia.org/wiki/Ofiarowanie_(film)
-url2: https://www.filmweb.pl/film/Ofiarowanie-1986-32143
+url1: 'https://pl.wikipedia.org/wiki/Ofiarowanie_(film)'
+url2: 'https://www.filmweb.pl/film/Ofiarowanie-1986-32143'
 image: notes/ofiarowanie.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/ofiarowanie.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/ofiarowanie.jpg.0x300_q85_upscale.jpg

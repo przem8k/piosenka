@@ -1,9 +1,15 @@
 ---
 title: 'Ostatnie słowo'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-24 19:27:49.985290+00:00'
 epigone: True
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 #ref

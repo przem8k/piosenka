@@ -1,9 +1,17 @@
 ---
 title: 'Alleluja'
-author: reuter
+author: 'reuter'
 pub_date: '2017-07-20 17:29:14.620787+00:00'
-original_title: Hallelujah
-link_youtube: https://www.youtube.com/watch?v=PR4gAFCGH6Y
+original_title: 'Hallelujah'
+link_youtube: 'https://www.youtube.com/watch?v=PR4gAFCGH6Y'
+text_authors:
+ - 'leonard-cohen'
+composers:
+ - 'leonard-cohen'
+translators:
+ - 'maciej-zembaty'
+performers:
+ - 'maciej-zembaty'
 ---
 
 #zw

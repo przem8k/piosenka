@@ -1,8 +1,14 @@
 ---
 title: 'Bilans'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-10-15 20:59:49.127349+00:00'
-link_youtube: https://www.youtube.com/watch?v=Q1-xi3Cg5kY
+link_youtube: 'https://www.youtube.com/watch?v=Q1-xi3Cg5kY'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'czajkowski-medrzycki-piekarczyk'
 ---
 
 #zw

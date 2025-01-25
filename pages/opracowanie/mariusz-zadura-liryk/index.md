@@ -1,7 +1,13 @@
 ---
 title: 'Liryk'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 08:17:51.136336+00:00'
+text_authors:
+ - 'mariusz-zadura'
+composers:
+ - 'mariusz-zadura'
+performers:
+ - 'mariusz-zadura'
 ---
 
 Wiatrem niesiony po polach, po miedzach

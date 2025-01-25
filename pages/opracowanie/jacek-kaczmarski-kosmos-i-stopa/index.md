@@ -1,10 +1,16 @@
 ---
 title: 'Kosmos i stopa'
-author: spooky
+author: 'spooky'
 pub_date: '2013-12-22 22:33:13.465526+00:00'
 epigone: True
-link_youtube: https://www.youtube.com/watch?v=tFeGdnzj2Rw
+link_youtube: 'https://www.youtube.com/watch?v=tFeGdnzj2Rw'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'mateusz-nagorski'
+performers:
+ - 'mateusz-nagorski'
 ---
 
 #zw

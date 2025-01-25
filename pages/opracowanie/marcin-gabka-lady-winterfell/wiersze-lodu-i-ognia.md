@@ -1,6 +1,6 @@
 ---
 title: 'Wiersze Lodu i Ognia'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-11-10 21:53:54.640444+00:00'
 image: notes/Grafika_czerwona_16_9.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Grafika_czerwona_16_9.jpg

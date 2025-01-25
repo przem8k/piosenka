@@ -1,8 +1,8 @@
 ---
 title: 'Baniola z tygrysem'
-author: DX
+author: 'DX'
 pub_date: '2015-09-22 10:15:03.723618+00:00'
-url1: http://www.20minutes.fr/planete/1659515-20150729-journee-internationale-tigre-connaissez-bien-felins-celebres
+url1: 'http://www.20minutes.fr/planete/1659515-20150729-journee-internationale-tigre-connaissez-bien-felins-celebres'
 image: song_annotations/esso4.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/esso4.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/esso4.jpg.0x300_q85_upscale.jpg

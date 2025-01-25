@@ -1,10 +1,10 @@
 ---
 title: 'Stworzenie świata nie przychodzi łatwo'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-09-06 18:25:43.794698+00:00'
-url1: https://pl.wikipedia.org/wiki/Stworzenie_%C5%9Bwiata_wed%C5%82ug_Biblii
-url2: http://biblia.deon.pl/rozdzial.php?id=1
-ref1: Księga Rodzaju, rozdziały 1-2
+url1: 'https://pl.wikipedia.org/wiki/Stworzenie_%C5%9Bwiata_wed%C5%82ug_Biblii'
+url2: 'http://biblia.deon.pl/rozdzial.php?id=1'
+ref1: 'Księga Rodzaju, rozdziały 1-2'
 image: notes/blake_ancient_of_days.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/blake_ancient_of_days.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/blake_ancient_of_days.jpg.0x300_q85_upscale.jpg

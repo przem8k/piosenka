@@ -1,8 +1,8 @@
 ---
 title: 'Józef Kuraś'
-author: Alek
+author: 'Alek'
 pub_date: '2016-07-25 20:54:59.211682+00:00'
-url1: https://pl.wikipedia.org/wiki/J%C3%B3zef_Kura%C5%9B
+url1: 'https://pl.wikipedia.org/wiki/J%C3%B3zef_Kura%C5%9B'
 image: song_annotations/Jozef_Kuras_Ogien.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/Jozef_Kuras_Ogien.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/Jozef_Kuras_Ogien.jpg.0x300_q85_upscale.jpg

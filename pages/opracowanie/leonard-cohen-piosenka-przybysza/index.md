@@ -1,9 +1,15 @@
 ---
 title: 'Piosenka przybysza'
-author: reuter
+author: 'reuter'
 pub_date: '2017-02-02 21:32:33.321302+00:00'
-original_title: The Stranger Song
-link_youtube: https://www.youtube.com/watch?v=A_cXQeb2JxY
+original_title: 'The Stranger Song'
+link_youtube: 'https://www.youtube.com/watch?v=A_cXQeb2JxY'
+text_authors:
+ - 'leonard-cohen'
+composers:
+ - 'leonard-cohen'
+translators:
+ - 'michal-kaczmarczyk'
 ---
 
 #zw

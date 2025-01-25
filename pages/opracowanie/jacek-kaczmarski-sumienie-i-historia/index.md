@@ -1,9 +1,15 @@
 ---
 title: 'Sumienie i historia'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-30 21:11:28.375524+00:00'
-link_youtube: https://www.youtube.com/watch?v=mtl8SH_dXvE
+link_youtube: 'https://www.youtube.com/watch?v=mtl8SH_dXvE'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/Sumienie_i_historia_01.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Sumienie_i_historia_01.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Sumienie_i_historia_01.png.180x0_q85_upscale.jpg

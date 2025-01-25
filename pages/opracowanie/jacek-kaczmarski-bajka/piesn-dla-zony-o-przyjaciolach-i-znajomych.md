@@ -1,8 +1,8 @@
 ---
 title: 'Pieśń dla żony o przyjaciołach i znajomych'
-author: DX
+author: 'DX'
 pub_date: '2020-08-30 11:24:41.847129+00:00'
-url1: http://kaczmarski.art.pl/forum/showthread.php?tid=4950
+url1: 'http://kaczmarski.art.pl/forum/showthread.php?tid=4950'
 image: notes/Janda_Klosinski.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Janda_Klosinski.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Janda_Klosinski.png.0x300_q85_upscale.png

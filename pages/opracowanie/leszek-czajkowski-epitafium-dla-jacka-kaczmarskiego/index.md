@@ -1,7 +1,13 @@
 ---
 title: 'Epitafium dla Jacka Kaczmarskiego'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-06-28 17:23:58.676294+00:00'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'leszek-czajkowski'
 ---
 
 #zwrotka

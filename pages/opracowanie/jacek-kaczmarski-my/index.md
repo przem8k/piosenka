@@ -1,8 +1,14 @@
 ---
 title: 'My'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-04-23 23:12:00.347802+00:00'
-link_youtube: https://www.youtube.com/watch?v=qY-2iEzQM2U
+link_youtube: 'https://www.youtube.com/watch?v=qY-2iEzQM2U'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/my.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/my.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/my.png.180x0_q85_upscale.jpg

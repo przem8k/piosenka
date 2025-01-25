@@ -1,9 +1,15 @@
 ---
 title: 'Dziewczynka'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-22 18:19:41.221499+00:00'
-disambig: Wiersze Lodu i Ognia
-link_youtube: https://www.youtube.com/watch?v=rr5a5SAeJkg
+disambig: 'Wiersze Lodu i Ognia'
+link_youtube: 'https://www.youtube.com/watch?v=rr5a5SAeJkg'
+text_authors:
+ - 'marek-kaczkowski'
+composers:
+ - 'justyna-panfilewicz'
+performers:
+ - 'justyna-panfilewicz'
 ---
 
 inspirowane "Pieśnią Lodu i Ognia" oraz "Grą o Tron"

@@ -1,8 +1,14 @@
 ---
 title: 'Tango umieram'
-author: Boczuś
+author: 'Boczuś'
 pub_date: '2016-05-30 19:06:50.241367+00:00'
-link_youtube: https://www.youtube.com/watch?v=a7DbzEt_mf8
+link_youtube: 'https://www.youtube.com/watch?v=a7DbzEt_mf8'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 

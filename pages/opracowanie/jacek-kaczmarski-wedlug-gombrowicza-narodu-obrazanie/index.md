@@ -1,8 +1,15 @@
 ---
 title: 'Według Gombrowicza narodu obrażanie'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-26 08:52:18.135802+00:00'
-link_youtube: https://www.youtube.com/watch?v=5o5jouTNNl4
+link_youtube: 'https://www.youtube.com/watch?v=5o5jouTNNl4'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'zbigniew-lapinski'
 score1: scores/wedlug_gombrowicza_narodu_obrazanie.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wedlug_gombrowicza_narodu_obrazanie.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wedlug_gombrowicza_narodu_obrazanie.png.180x0_q85_upscale.png

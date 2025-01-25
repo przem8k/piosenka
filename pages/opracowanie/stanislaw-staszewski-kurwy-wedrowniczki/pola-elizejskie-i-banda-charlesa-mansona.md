@@ -1,12 +1,12 @@
 ---
 title: 'Pola Elizejskie i banda Charlesa Mansona'
-author: DX
+author: 'DX'
 pub_date: '2020-05-20 11:17:17.209890+00:00'
-url1: https://www.salon24.pl/u/coryllus/138801,dlaczego-tata-kazika-wielkim-poeta-byl
-url2: https://pl.wikipedia.org/wiki/Charles_Manson#Morderstwo_w_willi_Pola%C5%84skiego
-ref1: „La, la, la, la” – polityka, obyczaje oraz życie
+url1: 'https://www.salon24.pl/u/coryllus/138801,dlaczego-tata-kazika-wielkim-poeta-byl'
+url2: 'https://pl.wikipedia.org/wiki/Charles_Manson#Morderstwo_w_willi_Pola%C5%84skiego'
+ref1: '„La, la, la, la” – polityka, obyczaje oraz życie
 osobiste obywatela PRL-u i polskiego emigranta w piosenkach
-Stanisława Staszewskiego – Joanna Owczarek
+Stanisława Staszewskiego – Joanna Owczarek'
 image: notes/drugstore.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/drugstore.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/drugstore.jpg.0x300_q85_upscale.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Zmartwychwstanie Mandelsztama'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2014-09-07 13:31:23.558788+00:00'
-link_youtube: https://www.youtube.com/watch?v=_bWlvW4gSNk
+link_youtube: 'https://www.youtube.com/watch?v=_bWlvW4gSNk'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/Zmartwychwstanie_Mandelsztama.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Zmartwychwstanie_Mandelsztama.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Zmartwychwstanie_Mandelsztama.png.180x0_q85_upscale.jpg

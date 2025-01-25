@@ -1,6 +1,6 @@
 ---
 title: 'Susanin'
-author: DX
+author: 'DX'
 pub_date: '2018-11-25 16:32:21.199529+00:00'
 ---
 

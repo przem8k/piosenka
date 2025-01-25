@@ -1,8 +1,14 @@
 ---
 title: 'Traktacik o wyobraźni'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-29 16:03:17.521682+00:00'
-link_youtube: https://www.youtube.com/watch?v=ZTJ65aNSg7I
+link_youtube: 'https://www.youtube.com/watch?v=ZTJ65aNSg7I'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/traktacik_o_wyobrazni.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/traktacik_o_wyobrazni.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/traktacik_o_wyobrazni.png.180x0_q85_upscale.png

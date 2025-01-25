@@ -1,9 +1,9 @@
 ---
 title: 'Utraciliśmy raj'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-09-10 19:06:13.696890+00:00'
-url1: http://biblia.deon.pl/rozdzial.php?id=3
-ref1: Księga Rodzaju, rozdział 3
+url1: 'http://biblia.deon.pl/rozdzial.php?id=3'
+ref1: 'Księga Rodzaju, rozdział 3'
 image: notes/mob1323.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/mob1323.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/mob1323.jpg.0x300_q85_upscale.jpg

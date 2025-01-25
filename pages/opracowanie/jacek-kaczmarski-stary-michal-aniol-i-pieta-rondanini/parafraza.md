@@ -1,9 +1,9 @@
 ---
 title: 'Parafraza'
-author: Alek
+author: 'Alek'
 pub_date: '2015-06-15 21:36:01.256600+00:00'
-url1: http://www.kaczmarski.art.pl/forum/viewtopic.php?f=52&t=6406
-url2: http://www.nuovorinascimento.org/n-rinasc/didattic/html/delbianc/michel-5/rime0267.htm
+url1: 'http://www.kaczmarski.art.pl/forum/viewtopic.php?f=52&t=6406'
+url2: 'http://www.nuovorinascimento.org/n-rinasc/didattic/html/delbianc/michel-5/rime0267.htm'
 ---
 
 Wartą odnotowania ciekawostką jest sparafrazowanie w tym utworze wiersza samego Michała Anioła \(Kaczmarski nawiązuje do niego również w wierszu Wenecka kurtyzana chwali portret Pietra Aretina pędzla Tycjana\).

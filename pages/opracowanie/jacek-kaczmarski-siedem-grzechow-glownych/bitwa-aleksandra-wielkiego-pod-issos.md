@@ -1,8 +1,8 @@
 ---
 title: 'Bitwa Aleksandra Wielkiego pod Issos'
-author: DX
+author: 'DX'
 pub_date: '2017-09-30 11:32:08.476472+00:00'
-url1: https://en.wikipedia.org/wiki/The_Battle_of_Alexander_at_Issus
+url1: 'https://en.wikipedia.org/wiki/The_Battle_of_Alexander_at_Issus'
 image: notes/Albrecht_Altdorfer_-_Schlacht_bei_Issus.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Albrecht_Altdorfer_-_Schlacht_bei_Issus.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Albrecht_Altdorfer_-_Schlacht_bei_Issus.jpg.0x300_q85_upscale.jpg

@@ -1,6 +1,6 @@
 ---
 title: 'A w Idlewild przy barze ruch...'
-author: DX
+author: 'DX'
 pub_date: '2021-08-05 19:32:12.414610+00:00'
 image: notes/idlewild.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/idlewild.png

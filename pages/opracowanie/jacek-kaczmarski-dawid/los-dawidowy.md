@@ -1,6 +1,6 @@
 ---
 title: 'Los dawidowy'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-19 20:56:11.356544+00:00'
 image: notes/David_von_Michelangelo.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/David_von_Michelangelo.jpg

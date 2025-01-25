@@ -1,8 +1,14 @@
 ---
 title: 'Męski strach'
-author: Boczuś
+author: 'Boczuś'
 pub_date: '2016-05-19 15:33:15.141477+00:00'
-link_youtube: https://www.youtube.com/watch?v=PiX147HqiPc
+link_youtube: 'https://www.youtube.com/watch?v=PiX147HqiPc'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 #zw

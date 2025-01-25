@@ -1,8 +1,15 @@
 ---
 title: 'Tyle złota i purpury...'
-author: RK
+author: 'RK'
 pub_date: '2012-11-24 12:11:32.207998+00:00'
-link_youtube: http://www.youtube.com/watch?v=Ta97f14AHv0
+link_youtube: 'http://www.youtube.com/watch?v=Ta97f14AHv0'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'zbigniew-lapinski'
 score1: scores/Tyle_złota_i_purpury.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Tyle_złota_i_purpury.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Tyle_z%C5%82ota_i_purpury.png.180x0_q85_upscale.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Jesień'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 07:53:37.584537+00:00'
 capo_fret: 3
+text_authors:
+ - 'mariusz-zadura'
+composers:
+ - 'mariusz-zadura'
+performers:
+ - 'mariusz-zadura'
 ---
 
 #zwrotka1

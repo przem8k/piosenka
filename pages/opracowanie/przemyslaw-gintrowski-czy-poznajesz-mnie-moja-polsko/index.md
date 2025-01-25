@@ -1,8 +1,14 @@
 ---
 title: 'Czy poznajesz mnie, moja Polsko'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-11-26 15:44:57.691551+00:00'
-link_youtube: https://www.youtube.com/watch?v=-eBPcFYB1pk
+link_youtube: 'https://www.youtube.com/watch?v=-eBPcFYB1pk'
+text_authors:
+ - 'zbigniew-ksiazek'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/czy_poznajesz_mnie_moja_polsko.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/czy_poznajesz_mnie_moja_polsko.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/czy_poznajesz_mnie_moja_polsko.png.180x0_q85_upscale.png

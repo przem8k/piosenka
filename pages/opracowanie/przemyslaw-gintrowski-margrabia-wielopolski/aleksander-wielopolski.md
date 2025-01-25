@@ -1,9 +1,9 @@
 ---
 title: 'Aleksander Wielopolski'
-author: DX
+author: 'DX'
 pub_date: '2016-04-22 19:54:55.326846+00:00'
-url1: https://pl.wikipedia.org/wiki/Aleksander_Wielopolski
-url2: https://pl.wikipedia.org/wiki/Powstanie_styczniowe
+url1: 'https://pl.wikipedia.org/wiki/Aleksander_Wielopolski'
+url2: 'https://pl.wikipedia.org/wiki/Powstanie_styczniowe'
 image: notes/Aleksander_Wielopolski.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Aleksander_Wielopolski.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Aleksander_Wielopolski.png.0x300_q85_upscale.jpg

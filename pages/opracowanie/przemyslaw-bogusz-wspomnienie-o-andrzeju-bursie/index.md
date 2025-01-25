@@ -1,7 +1,13 @@
 ---
 title: 'Wspomnienie o Andrzeju Bursie'
-author: DX
+author: 'DX'
 pub_date: '2011-05-07 22:09:51.730574+00:00'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zwrotka1

@@ -1,8 +1,8 @@
 ---
 title: 'Śmierć Romana Kramsztyka'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-11-16 11:26:30.907202+00:00'
-url1: https://www.jhi.pl/artykuly/malowali-sceny-z-getta-smierc-romana-kramsztyka,35
+url1: 'https://www.jhi.pl/artykuly/malowali-sceny-z-getta-smierc-romana-kramsztyka,35'
 image: notes/kramsztyk.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/kramsztyk.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/kramsztyk.png.0x300_q85_upscale.jpg

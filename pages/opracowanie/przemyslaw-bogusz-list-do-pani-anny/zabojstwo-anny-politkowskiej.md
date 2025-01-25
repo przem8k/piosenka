@@ -1,8 +1,8 @@
 ---
 title: 'Zabójstwo Anny Politkowskiej'
-author: DX
+author: 'DX'
 pub_date: '2018-08-15 16:51:02.210529+00:00'
-url1: https://pl.wikipedia.org/wiki/Anna_Politkowska
+url1: 'https://pl.wikipedia.org/wiki/Anna_Politkowska'
 image: notes/anna_politkowska.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/anna_politkowska.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/anna_politkowska.jpg.0x300_q85_upscale.jpg

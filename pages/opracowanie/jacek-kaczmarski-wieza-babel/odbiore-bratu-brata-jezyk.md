@@ -1,10 +1,10 @@
 ---
 title: 'Odbiorę bratu brata język'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-09-06 16:59:35.005306+00:00'
-url1: https://pl.wikipedia.org/wiki/Wie%C5%BCa_Babel
-url2: http://biblia.deon.pl/
-ref1: Księga Rodzaju, rozdział 11
+url1: 'https://pl.wikipedia.org/wiki/Wie%C5%BCa_Babel'
+url2: 'http://biblia.deon.pl/'
+ref1: 'Księga Rodzaju, rozdział 11'
 image: notes/1.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1.jpg.0x300_q85_upscale.jpg

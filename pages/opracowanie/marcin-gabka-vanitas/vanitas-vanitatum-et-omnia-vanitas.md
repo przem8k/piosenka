@@ -1,6 +1,6 @@
 ---
 title: 'Vanitas vanitatum et omnia vanitas.'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-18 20:12:05.359197+00:00'
 ---
 

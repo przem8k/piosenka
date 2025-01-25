@@ -1,8 +1,8 @@
 ---
 title: 'Akt abdykacji Stanisława Augusta Poniatowskiego'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2020-05-05 23:04:51.167678+00:00'
-ref1: M. Żywirska, Ostatnie lata życia króla Stanisława Augusta, Warszawa 1975 str. 123-124
+ref1: 'M. Żywirska, Ostatnie lata życia króla Stanisława Augusta, Warszawa 1975 str. 123-124'
 image: notes/561px-Vigee_Stanislaw_Augustus.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/561px-Vigee_Stanislaw_Augustus.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/561px-Vigee_Stanislaw_Augustus.jpg.0x300_q85_upscale.jpg

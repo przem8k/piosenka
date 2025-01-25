@@ -1,6 +1,6 @@
 ---
 title: 'Trio Kaczmarski-Gintrowski-Łapiński'
-author: DX
+author: 'DX'
 pub_date: '2017-09-10 12:27:50.399332+00:00'
 image: notes/trio.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/trio.jpg

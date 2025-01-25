@@ -1,8 +1,14 @@
 ---
 title: 'Ballada o poetach współczesnych'
-author: RK
+author: 'RK'
 pub_date: '2011-12-18 22:29:22.651133+00:00'
-link_youtube: http://www.youtube.com/watch?v=R55V2cASuCY
+link_youtube: 'http://www.youtube.com/watch?v=R55V2cASuCY'
+text_authors:
+ - 'andrzej-kolakowski'
+composers:
+ - 'andrzej-kolakowski'
+performers:
+ - 'andrzej-kolakowski'
 ---
 
 #zwrotka

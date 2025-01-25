@@ -1,9 +1,9 @@
 ---
 title: 'Lecz jak gromić Adama, gdy rozterka ta sama'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-11-25 14:25:55.908381+00:00'
-url1: https://regionwielkopolska.pl/dzieje-wielkopolski/wazniejsze-wydarzenia/adam-mickiewicz-w-wielkopolsce.html
-url2: http://www.kaczmarski.art.pl/tworczosc/wiersze/czaty-smielowskie/
+url1: 'https://regionwielkopolska.pl/dzieje-wielkopolski/wazniejsze-wydarzenia/adam-mickiewicz-w-wielkopolsce.html'
+url2: 'http://www.kaczmarski.art.pl/tworczosc/wiersze/czaty-smielowskie/'
 image: notes/smielow-fot.-brunon-cynalewski-mnp-mini.1285591423.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/smielow-fot.-brunon-cynalewski-mnp-mini.1285591423.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/smielow-fot.-brunon-cynalewski-mnp-mini.1285591423.jpg.0x300_q85_upscale.jpg

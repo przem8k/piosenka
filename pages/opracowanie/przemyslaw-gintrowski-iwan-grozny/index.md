@@ -1,8 +1,14 @@
 ---
 title: 'Iwan Groźny'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-25 11:25:57.352310+00:00'
-link_youtube: https://www.youtube.com/watch?v=8w-dTv8pqiY
+link_youtube: 'https://www.youtube.com/watch?v=8w-dTv8pqiY'
+text_authors:
+ - 'jerzy-czech'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/iwan_grozny.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/iwan_grozny.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/iwan_grozny.png.180x0_q85_upscale.png

@@ -1,6 +1,6 @@
 ---
 title: 'Stanisław Staszewski'
-author: DX
+author: 'DX'
 pub_date: '2016-06-26 19:07:26.345218+00:00'
 image: artists/stanislaw_staszewski.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/artists/stanislaw_staszewski.jpg

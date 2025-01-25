@@ -1,8 +1,8 @@
 ---
 title: 'Zbigniew Łapiński'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-05-12 14:22:37.995730+00:00'
-url2: http://zbigniewlapinski.art.pl/?page_id=8
+url2: 'http://zbigniewlapinski.art.pl/?page_id=8'
 image: notes/1993-Spotkania-Zamkowe-Olsztyn.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1993-Spotkania-Zamkowe-Olsztyn.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1993-Spotkania-Zamkowe-Olsztyn.jpg.0x300_q85_upscale.jpg

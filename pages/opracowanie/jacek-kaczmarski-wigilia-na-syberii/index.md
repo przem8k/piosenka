@@ -1,8 +1,14 @@
 ---
 title: 'Wigilia na Syberii'
-author: Zbik
+author: 'Zbik'
 pub_date: '2013-12-18 19:06:41.285176+00:00'
-link_youtube: http://www.youtube.com/watch?v=kidVxZKqpqY
+link_youtube: 'http://www.youtube.com/watch?v=kidVxZKqpqY'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/wigilia_na_syberii.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wigilia_na_syberii.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wigilia_na_syberii.png.180x0_q85_upscale.jpg

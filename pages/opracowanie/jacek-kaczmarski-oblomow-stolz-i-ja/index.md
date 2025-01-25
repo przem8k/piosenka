@@ -1,9 +1,15 @@
 ---
 title: 'Obłomow, Stolz i ja'
-author: spooky
+author: 'spooky'
 pub_date: '2011-09-30 22:51:37.457422+00:00'
-link_youtube: https://www.youtube.com/watch?v=ErfDv_X90gk
+link_youtube: 'https://www.youtube.com/watch?v=ErfDv_X90gk'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/oblomow.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/oblomow.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/oblomow.png.180x0_q85_upscale.jpg

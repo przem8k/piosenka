@@ -1,9 +1,9 @@
 ---
 title: 'Wiosna roku 1905'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-27 13:14:31.051425+00:00'
-url1: https://pl.wikipedia.org/wiki/Rewolucja_1905_roku
-url2: https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Mas%C5%82owski
+url1: 'https://pl.wikipedia.org/wiki/Rewolucja_1905_roku'
+url2: 'https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Mas%C5%82owski'
 image: notes/Stanisław_Masłowski_Świt_1906_Wiosna_1905.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Stanisław_Masłowski_Świt_1906_Wiosna_1905.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Stanis%C5%82aw_Mas%C5%82owski_%C5%9Awit_1906_Wiosna_1905.jpg.0x300_q85_upscale.jpg

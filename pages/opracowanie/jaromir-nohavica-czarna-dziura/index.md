@@ -1,9 +1,15 @@
 ---
 title: 'Czarna dziura'
-author: Boczuś
+author: 'Boczuś'
 pub_date: '2018-03-18 20:29:57.015466+00:00'
-original_title: Černá jama
-link_youtube: https://www.youtube.com/watch?v=OK6qpvQUKS0
+original_title: 'Černá jama'
+link_youtube: 'https://www.youtube.com/watch?v=OK6qpvQUKS0'
+text_authors:
+ - 'jaromir-nohavica'
+composers:
+ - 'jaromir-nohavica'
+performers:
+ - 'jaromir-nohavica'
 ---
 
 #zw

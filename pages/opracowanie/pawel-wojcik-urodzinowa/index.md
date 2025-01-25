@@ -1,8 +1,14 @@
 ---
 title: 'Urodzinowa'
-author: Boczuś
+author: 'Boczuś'
 pub_date: '2016-05-20 10:28:58.247859+00:00'
-link_youtube: https://www.youtube.com/watch?v=M1tEGxKdVTo
+link_youtube: 'https://www.youtube.com/watch?v=M1tEGxKdVTo'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 #zw

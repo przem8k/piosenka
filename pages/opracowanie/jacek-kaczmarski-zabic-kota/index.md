@@ -1,9 +1,15 @@
 ---
 title: 'Zabić kota'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-31 15:05:34.001366+00:00'
-link_youtube: https://www.youtube.com/watch?v=T6CPbF56mp8
+link_youtube: 'https://www.youtube.com/watch?v=T6CPbF56mp8'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/zabic_kota.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zabic_kota.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zabic_kota.png.180x0_q85_upscale.png

@@ -1,8 +1,15 @@
 ---
 title: 'Dylemat'
-author: DX
+author: 'DX'
 pub_date: '2012-10-15 12:47:39.814989+00:00'
-link_youtube: https://www.youtube.com/watch?v=obocyYMgiU8
+link_youtube: 'https://www.youtube.com/watch?v=obocyYMgiU8'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'przemyslaw-gintrowski'
 score1: scores/dylemat.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/dylemat.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/dylemat.png.180x0_q85_upscale.jpg

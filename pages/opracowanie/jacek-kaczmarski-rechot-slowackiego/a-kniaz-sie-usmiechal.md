@@ -1,8 +1,8 @@
 ---
 title: 'A kniaź się uśmiechał'
-author: reuter
+author: 'reuter'
 pub_date: '2017-06-14 18:26:48.949681+00:00'
-url1: http://tujek.linuxpl.info/tworczosc/wiersze/rechot-slowackiego/#iLightbox[e05445879e0c83c188a]/null
+url1: 'http://tujek.linuxpl.info/tworczosc/wiersze/rechot-slowackiego/#iLightbox[e05445879e0c83c188a]/null'
 image: notes/modern_talking.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/modern_talking.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/modern_talking.jpg.0x300_q85_upscale.jpg

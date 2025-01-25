@@ -1,8 +1,8 @@
 ---
 title: 'Śmierć Podbipięty'
-author: DX
+author: 'DX'
 pub_date: '2021-11-09 11:13:03.252375+00:00'
-url1: https://pl.wikipedia.org/wiki/Obrona_Zbara%C5%BCa
+url1: 'https://pl.wikipedia.org/wiki/Obrona_Zbara%C5%BCa'
 image: notes/1623px-Ogniem_i_mieczem_Henryka_Sienkiewicza_-_album_1886_58315384_cropped.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1623px-Ogniem_i_mieczem_Henryka_Sienkiewicza_-_album_1886_58315384_cropped.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1623px-Ogniem_i_mieczem_Henryka_Sienkiewicza_-_album_1886_58315384_cropped.jpg.0x300_q85_upscale.jpg

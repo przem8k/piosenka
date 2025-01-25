@@ -1,8 +1,8 @@
 ---
 title: 'Z migotliwą znika falą z kroplą wosku martwe piórko'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-11-02 17:20:44.783934+00:00'
-url1: https://pl.wikipedia.org/wiki/Pejza%C5%BC_z_upadkiem_Ikara
+url1: 'https://pl.wikipedia.org/wiki/Pejza%C5%BC_z_upadkiem_Ikara'
 image: notes/Bruegel_Pieter_de_Oude_-_De_val_van_icarus_-_hi_res.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Bruegel_Pieter_de_Oude_-_De_val_van_icarus_-_hi_res.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Bruegel_Pieter_de_Oude_-_De_val_van_icarus_-_hi_res.jpg.0x300_q85_upscale.jpg

@@ -1,9 +1,9 @@
 ---
 title: 'Król głupców'
-author: DX
+author: 'DX'
 pub_date: '2015-06-17 17:42:03.205295+00:00'
-url1: http://www.larousse.com/en/dictionaries/french/con/17848?q=con#17722
-url2: http://www.larousse.com/en/dictionaries/french/con/17847?q=con#17721
+url1: 'http://www.larousse.com/en/dictionaries/french/con/17848?q=con#17722'
+url2: 'http://www.larousse.com/en/dictionaries/french/con/17847?q=con#17721'
 ---
 
 Piosenka w oryginale mówi o 'roi des **cons**', czyli królu... no właśnie, królu głupców \- skąd więc w tłumaczeniu Filipa Łobodzińskiego, za przeproszeniem, 'chuj'?

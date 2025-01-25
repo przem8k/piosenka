@@ -1,7 +1,14 @@
 ---
 title: 'Popiół czy diament?'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 08:07:28.155283+00:00'
+text_authors:
+ - 'mariusz-zadura'
+ - 'cyprian-kamil-norwid'
+composers:
+ - 'mariusz-zadura'
+performers:
+ - 'mariusz-zadura'
 ---
 
 Jak długo jeszcze będziesz

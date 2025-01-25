@@ -1,8 +1,8 @@
 ---
 title: 'Autobus'
-author: DX
+author: 'DX'
 pub_date: '2017-10-03 20:46:58.976088+00:00'
-url1: http://culture.pl/pl/dzielo/bronislaw-wojciech-linke-autobus
+url1: 'http://culture.pl/pl/dzielo/bronislaw-wojciech-linke-autobus'
 image: notes/linke_autobus.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/linke_autobus.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/linke_autobus.jpg.0x300_q85_upscale.jpg

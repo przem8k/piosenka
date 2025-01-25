@@ -1,9 +1,9 @@
 ---
 title: 'Zatańczysz, zapanujesz nam na tej szubienicy!'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-05-22 18:08:11.616076+00:00'
-url1: https://pl.wikipedia.org/wiki/Pejza%C5%BC_z_szubienic%C4%85
-ref1: "Lekcja historii Jacka Kaczmarskiego" – Iwona Grabska, Diana Wasilewska
+url1: 'https://pl.wikipedia.org/wiki/Pejza%C5%BC_z_szubienic%C4%85'
+ref1: '"Lekcja historii Jacka Kaczmarskiego" – Iwona Grabska, Diana Wasilewska'
 image: notes/1138px-Pieter_Bruegel_the_Elder-_The_Magpie_on_the_Gallows.JPG
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1138px-Pieter_Bruegel_the_Elder-_The_Magpie_on_the_Gallows.JPG
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1138px-Pieter_Bruegel_the_Elder-_The_Magpie_on_the_Gallows.JPG.0x300_q85_upscale.jpg

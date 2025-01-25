@@ -1,9 +1,15 @@
 ---
 title: 'Nike która się waha'
-author: reuter
+author: 'reuter'
 pub_date: '2014-09-09 21:05:44.635246+00:00'
-link_youtube: https://www.youtube.com/watch?v=imYufbmkfPU
+link_youtube: 'https://www.youtube.com/watch?v=imYufbmkfPU'
 capo_fret: 3
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #zw

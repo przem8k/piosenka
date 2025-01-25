@@ -1,8 +1,14 @@
 ---
 title: 'Bal u Pana Boga'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-08-17 22:51:04.473813+00:00'
-link_youtube: https://www.youtube.com/watch?v=mz2eAkJcmCg
+link_youtube: 'https://www.youtube.com/watch?v=mz2eAkJcmCg'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/bal_u_pana_boga_nuty.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/bal_u_pana_boga_nuty.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/bal_u_pana_boga_nuty.png.180x0_q85_upscale.jpg

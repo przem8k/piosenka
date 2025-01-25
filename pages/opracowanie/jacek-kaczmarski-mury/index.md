@@ -1,8 +1,15 @@
 ---
 title: 'Mury'
-author: DX
+author: 'DX'
 pub_date: '2011-07-19 18:55:15.553287+00:00'
-link_youtube: https://www.youtube.com/watch?v=-YGS9vhmFS0
+link_youtube: 'https://www.youtube.com/watch?v=-YGS9vhmFS0'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'lluis-llach'
+performers:
+ - 'jacek-kaczmarski'
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/mury.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/mury.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/mury.png.180x0_q85_upscale.jpg

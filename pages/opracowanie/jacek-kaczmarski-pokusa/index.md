@@ -1,9 +1,15 @@
 ---
 title: 'Pokusa'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-08-08 13:09:28.287479+00:00'
-link_youtube: https://www.youtube.com/watch?v=qeGTyHH2fBY
+link_youtube: 'https://www.youtube.com/watch?v=qeGTyHH2fBY'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/pokusa.jpg
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pokusa.jpg
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pokusa.jpg.180x0_q85_upscale.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Ostatnie dni Norwida'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-08-20 10:05:41.390825+00:00'
-link_youtube: https://www.youtube.com/watch?v=AQ4o8wqDURY
+link_youtube: 'https://www.youtube.com/watch?v=AQ4o8wqDURY'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/ostatnie_dni_norwida.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ostatnie_dni_norwida.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ostatnie_dni_norwida.png.180x0_q85_upscale.png

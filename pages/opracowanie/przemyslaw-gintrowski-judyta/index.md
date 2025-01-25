@@ -1,8 +1,14 @@
 ---
 title: 'Judyta'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2014-09-05 21:32:55.342723+00:00'
-link_youtube: https://www.youtube.com/watch?v=pvXSYFJu6ak
+link_youtube: 'https://www.youtube.com/watch?v=pvXSYFJu6ak'
+text_authors:
+ - 'jerzy-czech'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/judyta.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/judyta.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/judyta.png.180x0_q85_upscale.jpg

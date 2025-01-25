@@ -1,9 +1,15 @@
 ---
 title: 'Bajeczka z perspektywki'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2014-09-02 21:38:58.844138+00:00'
-link_youtube: https://www.youtube.com/watch?v=ZnzWQmkIU4g
+link_youtube: 'https://www.youtube.com/watch?v=ZnzWQmkIU4g'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #z1

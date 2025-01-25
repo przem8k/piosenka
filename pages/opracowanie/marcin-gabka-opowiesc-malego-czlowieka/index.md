@@ -1,9 +1,15 @@
 ---
 title: 'Opowieść małego człowieka'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-11-03 18:01:58.649278+00:00'
-link_youtube: https://www.youtube.com/watch?v=9cOzOOOJUtU
+link_youtube: 'https://www.youtube.com/watch?v=9cOzOOOJUtU'
 capo_fret: 3
+text_authors:
+ - 'marcin-gabka'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 #a

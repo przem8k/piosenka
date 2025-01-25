@@ -1,7 +1,13 @@
 ---
 title: 'To wszystko nic'
-author: DX
+author: 'DX'
 pub_date: '2012-02-06 00:45:46.040537+00:00'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zw

@@ -1,8 +1,15 @@
 ---
 title: 'Mur'
-author: DX
+author: 'DX'
 pub_date: '2011-05-31 22:34:21.847223+00:00'
-link_youtube: https://www.youtube.com/watch?v=yDB6VlJJbZA
+link_youtube: 'https://www.youtube.com/watch?v=yDB6VlJJbZA'
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/mur.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/mur.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/mur.png.180x0_q85_upscale.jpg

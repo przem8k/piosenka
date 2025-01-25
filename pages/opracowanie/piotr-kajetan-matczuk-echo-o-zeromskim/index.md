@@ -1,7 +1,13 @@
 ---
 title: 'Echo o Żeromskim'
-author: DX
+author: 'DX'
 pub_date: '2011-08-08 19:41:44.881840+00:00'
+text_authors:
+ - 'bruno-jasienski'
+composers:
+ - 'piotr-kajetan-matczuk'
+performers:
+ - 'piotr-kajetan-matczuk'
 ---
 
 Już od dawna z latarni zdarto krepy abażur [a e]

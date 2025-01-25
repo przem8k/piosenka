@@ -1,8 +1,12 @@
 ---
 title: 'Papierowe kwiaty'
-author: Zbik
+author: 'Zbik'
 pub_date: '2023-06-28 20:41:23.284463+00:00'
-link_youtube: https://www.youtube.com/watch?v=291G2Njtt4M
+link_youtube: 'https://www.youtube.com/watch?v=291G2Njtt4M'
+text_authors:
+ - 'agnieszka-osiecka'
+composers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #zw

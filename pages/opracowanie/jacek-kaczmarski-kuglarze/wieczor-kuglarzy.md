@@ -1,8 +1,8 @@
 ---
 title: 'Wieczór kuglarzy'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-06-25 23:16:59.333233+00:00'
-url1: https://www.filmweb.pl/film/Wiecz%C3%B3r+kuglarzy-1953-94314
+url1: 'https://www.filmweb.pl/film/Wiecz%C3%B3r+kuglarzy-1953-94314'
 image: notes/MV5BZjE1MGU4YzQtMWUwMy00MjFiLTlkMTktYjQ3MGMxNDRiZWVhXkEyXkFqcGdeQXVyOTc5MDI5NjE._V1_.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/MV5BZjE1MGU4YzQtMWUwMy00MjFiLTlkMTktYjQ3MGMxNDRiZWVhXkEyXkFqcGdeQXVyOTc5MDI5NjE._V1_.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/MV5BZjE1MGU4YzQtMWUwMy00MjFiLTlkMTktYjQ3MGMxNDRiZWVhXkEyXkFqcGdeQXVyOTc5MDI5NjE._V1_.jpg.0x300_q85_upscale.jpg

@@ -1,9 +1,9 @@
 ---
 title: 'Jeremi Wiśniowiecki - neofita, bo polityk?'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-25 14:13:46.798693+00:00'
-url1: http://www.jarema.art.pl/1612.htm
-url2: https://www.newsweek.pl/wiedza/czarny-pr-kniazia-jeremiego/w29z427
+url1: 'http://www.jarema.art.pl/1612.htm'
+url2: 'https://www.newsweek.pl/wiedza/czarny-pr-kniazia-jeremiego/w29z427'
 image: notes/67277a1cb6912bcd8e210c9912ce1838.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/67277a1cb6912bcd8e210c9912ce1838.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/67277a1cb6912bcd8e210c9912ce1838.jpg.0x300_q85_upscale.jpg

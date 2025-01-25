@@ -1,9 +1,15 @@
 ---
 title: 'Kaligula'
-author: reuter
+author: 'reuter'
 pub_date: '2014-09-08 21:07:48.927347+00:00'
-link_youtube: https://www.youtube.com/watch?v=5S1HuqFHHNg
+link_youtube: 'https://www.youtube.com/watch?v=5S1HuqFHHNg'
 capo_fret: 3
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 Czytając stare kroniki, poematy i żywoty [d]

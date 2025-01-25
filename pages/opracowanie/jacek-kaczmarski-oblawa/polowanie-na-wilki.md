@@ -1,10 +1,10 @@
 ---
 title: 'Polowanie na wilki'
-author: DX
+author: 'DX'
 pub_date: '2021-09-05 09:48:26.136536+00:00'
-url1: https://www.kaczmarski.art.pl/tworczosc/wiersze/oblawa/
-url2: https://www.encyklopedialesna.pl/haslo/polowanie-z-fladrami/
-ref1: Jacek Kaczmarski w rozmowie z Jolantą Piątek - Za dużo czerwonego, przeprowadzonej w Radiu Wrocław w 2001 roku
+url1: 'https://www.kaczmarski.art.pl/tworczosc/wiersze/oblawa/'
+url2: 'https://www.encyklopedialesna.pl/haslo/polowanie-z-fladrami/'
+ref1: 'Jacek Kaczmarski w rozmowie z Jolantą Piątek - Za dużo czerwonego, przeprowadzonej w Radiu Wrocław w 2001 roku'
 image: notes/wolf.jpeg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/wolf.jpeg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/wolf.jpeg.0x300_q85_upscale.jpg

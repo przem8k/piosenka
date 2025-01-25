@@ -1,8 +1,16 @@
 ---
 title: 'Plebs blues'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-12-12 23:27:47.297789+00:00'
-link_youtube: https://www.youtube.com/watch?v=47E6SYDJDrU
+link_youtube: 'https://www.youtube.com/watch?v=47E6SYDJDrU'
+text_authors:
+ - 'jaromir-nohavica'
+composers:
+ - 'jaromir-nohavica'
+translators:
+ - 'antonii-muracki'
+performers:
+ - 'miroslaw-czyzykiewicz'
 ---
 
 Gdy po raz pierwszy zobaczyłem piramidy [e]

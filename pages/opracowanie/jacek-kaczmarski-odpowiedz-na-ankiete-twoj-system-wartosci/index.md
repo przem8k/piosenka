@@ -1,9 +1,15 @@
 ---
 title: 'Odpowiedź na ankietę „Twój system wartości”'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-23 18:26:21.591523+00:00'
-link_youtube: https://www.youtube.com/watch?v=e8N6PH3pSCo
+link_youtube: 'https://www.youtube.com/watch?v=e8N6PH3pSCo'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/odpowiedz_na_ankiete.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/odpowiedz_na_ankiete.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/odpowiedz_na_ankiete.png.180x0_q85_upscale.png

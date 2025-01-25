@@ -1,8 +1,14 @@
 ---
 title: 'Bunkier'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-11-03 17:56:47.851634+00:00'
-link_youtube: https://www.youtube.com/watch?v=zJ8TvbvSZhY
+link_youtube: 'https://www.youtube.com/watch?v=zJ8TvbvSZhY'
+text_authors:
+ - 'marcin-gabka'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 #a

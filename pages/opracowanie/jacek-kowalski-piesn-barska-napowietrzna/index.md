@@ -1,8 +1,14 @@
 ---
 title: 'Pieśń barska napowietrzna'
-author: RK
+author: 'RK'
 pub_date: '2012-04-08 22:11:35.703896+00:00'
-link_youtube: http://www.youtube.com/watch?v=VmcGlxByrlM
+link_youtube: 'http://www.youtube.com/watch?v=VmcGlxByrlM'
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 #zwrotka

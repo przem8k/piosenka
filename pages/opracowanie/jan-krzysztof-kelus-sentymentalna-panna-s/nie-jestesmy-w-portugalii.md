@@ -1,8 +1,8 @@
 ---
 title: 'Nie jesteśmy w Portugalii...'
-author: Alek
+author: 'Alek'
 pub_date: '2016-11-13 13:59:46.627821+00:00'
-url1: https://pt.wikipedia.org/wiki/Revolu%C3%A7%C3%A3o_de_25_de_Abril_de_1974
+url1: 'https://pt.wikipedia.org/wiki/Revolu%C3%A7%C3%A3o_de_25_de_Abril_de_1974'
 image: notes/25_de_Abril_sempre_Henrique_Matos.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/25_de_Abril_sempre_Henrique_Matos.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/25_de_Abril_sempre_Henrique_Matos.jpg.0x300_q85_upscale.jpg

@@ -1,8 +1,8 @@
 ---
 title: 'Zesłanie studentów'
-author: DX
+author: 'DX'
 pub_date: '2017-11-28 21:22:17.039235+00:00'
-ref1: Lekcja historii Jacka Kaczmarskiego – Iwona Grabska, Diana Wasilewska
+ref1: 'Lekcja historii Jacka Kaczmarskiego – Iwona Grabska, Diana Wasilewska'
 image: notes/zeslanie_studentow.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/zeslanie_studentow.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/zeslanie_studentow.jpg.0x300_q85_upscale.jpg

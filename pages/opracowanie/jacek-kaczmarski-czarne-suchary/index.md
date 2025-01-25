@@ -1,9 +1,13 @@
 ---
 title: 'Czarne suchary'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-08-17 22:28:41.042524+00:00'
-link_youtube: https://www.youtube.com/watch?v=56FaVP10XMY
+link_youtube: 'https://www.youtube.com/watch?v=56FaVP10XMY'
 capo_fret: 2
+translators:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zwrotka

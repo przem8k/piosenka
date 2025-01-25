@@ -31,28 +31,53 @@ def create_file_content(item, content):
     if item.title:
         frontmatter_lines.append(f"title: '{item.title}'")
     if item.author:
-        frontmatter_lines.append(f"author: {item.author}")
+        frontmatter_lines.append(f"author: '{item.author}'")
     if item.pub_date:
         frontmatter_lines.append(f"pub_date: '{item.pub_date}'")
     if hasattr(item, "disambig") and item.disambig:
-        frontmatter_lines.append(f"disambig: {item.disambig}")
+        frontmatter_lines.append(f"disambig: '{item.disambig}'")
     if hasattr(item, "original_title") and item.original_title:
-        frontmatter_lines.append(f"original_title: {item.original_title}")
+        frontmatter_lines.append(f"original_title: '{item.original_title}'")
     if hasattr(item, "epigone") and item.epigone:
         frontmatter_lines.append(f"epigone: {item.epigone}")
     if hasattr(item, "link_youtube") and item.link_youtube:
-        frontmatter_lines.append(f"link_youtube: {item.link_youtube}")
+        frontmatter_lines.append(f"link_youtube: '{item.link_youtube}'")
     if hasattr(item, "capo_fret") and item.capo_fret:
         frontmatter_lines.append(f"capo_fret: {item.capo_fret}")
 
     if hasattr(item, "url1") and item.url1:
-        frontmatter_lines.append(f"url1: {item.url1}")
+        frontmatter_lines.append(f"url1: '{item.url1}'")
     if hasattr(item, "url2") and item.url2:
-        frontmatter_lines.append(f"url2: {item.url2}")
+        frontmatter_lines.append(f"url2: '{item.url2}'")
     if hasattr(item, "ref1") and item.ref1:
-        frontmatter_lines.append(f"ref1: {item.ref1}")
+        frontmatter_lines.append(f"ref1: '{item.ref1}'")
     if hasattr(item, "ref2") and item.ref2:
-        frontmatter_lines.append(f"ref2: {item.ref2}")
+        frontmatter_lines.append(f"ref2: '{item.ref2}'")
+
+    if hasattr(item, "text_authors"):
+        artists = item.text_authors()
+        if artists:
+            frontmatter_lines.append(f"text_authors:")
+            for artist in artists:
+                frontmatter_lines.append(f" - '{artist.slug}'")
+    if hasattr(item, "composers"):
+        artists = item.composers()
+        if artists:
+            frontmatter_lines.append(f"composers:")
+            for artist in artists:
+                frontmatter_lines.append(f" - '{artist.slug}'")
+    if hasattr(item, "translators"):
+        artists = item.translators()
+        if artists:
+            frontmatter_lines.append(f"translators:")
+            for artist in artists:
+                frontmatter_lines.append(f" - '{artist.slug}'")
+    if hasattr(item, "performers"):
+        artists = item.performers()
+        if artists:
+            frontmatter_lines.append(f"performers:")
+            for artist in artists:
+                frontmatter_lines.append(f" - '{artist.slug}'")
 
     for score_name in ["score1", "score2", "score3"]:
         if not hasattr(item, score_name):

@@ -1,9 +1,15 @@
 ---
 title: '„Obym się mylił”'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-10-19 15:27:00.283433+00:00'
-link_youtube: https://www.youtube.com/watch?v=_tMUzR7PRig
+link_youtube: 'https://www.youtube.com/watch?v=_tMUzR7PRig'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #1

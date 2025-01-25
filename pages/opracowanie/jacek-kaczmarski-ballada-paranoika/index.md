@@ -1,9 +1,15 @@
 ---
 title: 'Ballada paranoika'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-29 11:59:14.492698+00:00'
-link_youtube: https://www.youtube.com/watch?v=0ssw4MRwZN0
+link_youtube: 'https://www.youtube.com/watch?v=0ssw4MRwZN0'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zwrotka1

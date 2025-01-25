@@ -1,8 +1,8 @@
 ---
 title: 'Dodatkowa zwrotka'
-author: Zbik
+author: 'Zbik'
 pub_date: '2022-06-07 09:36:03.986745+00:00'
-ref1: Krzysztof Maria Sieniawski, Serce transkontynentalne Almapress Studencka Oficyna Wydawnicza ZSP, Warszawa 1986
+ref1: 'Krzysztof Maria Sieniawski, Serce transkontynentalne Almapress Studencka Oficyna Wydawnicza ZSP, Warszawa 1986'
 image: notes/serce_transkontynentalne.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/serce_transkontynentalne.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/serce_transkontynentalne.jpg.0x300_q85_upscale.jpg

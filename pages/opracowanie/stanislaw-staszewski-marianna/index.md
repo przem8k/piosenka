@@ -1,8 +1,14 @@
 ---
 title: 'Marianna'
-author: DX
+author: 'DX'
 pub_date: '2012-03-24 19:02:22.666129+00:00'
-link_youtube: https://www.youtube.com/watch?v=imcql6offzI
+link_youtube: 'https://www.youtube.com/watch?v=imcql6offzI'
+text_authors:
+ - 'stanislaw-staszewski'
+composers:
+ - 'stanislaw-staszewski'
+performers:
+ - 'stanislaw-staszewski'
 ---
 
 #zw

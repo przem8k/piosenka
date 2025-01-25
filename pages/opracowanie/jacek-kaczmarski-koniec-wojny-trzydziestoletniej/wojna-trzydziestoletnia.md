@@ -1,8 +1,8 @@
 ---
 title: 'Wojna trzydziestoletnia'
-author: DX
+author: 'DX'
 pub_date: '2018-09-23 10:59:31.834363+00:00'
-url1: https://pl.wikipedia.org/wiki/Wojna_trzydziestoletnia
+url1: 'https://pl.wikipedia.org/wiki/Wojna_trzydziestoletnia'
 image: notes/Sebastiaan_Vrancx_studio_-_A_landscape_with_travellers_ambushed_outside_a_small_town.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Sebastiaan_Vrancx_studio_-_A_landscape_with_travellers_ambushed_outside_a_small_town.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Sebastiaan_Vrancx_studio_-_A_landscape_with_travellers_ambushed_outside_a_small_town.jpg.0x300_q85_upscale.jpg

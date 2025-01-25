@@ -1,8 +1,14 @@
 ---
 title: 'Książę Józef Poniatowski'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-26 19:26:01.605670+00:00'
-link_youtube: https://www.youtube.com/watch?v=2caS1xG5edY
+link_youtube: 'https://www.youtube.com/watch?v=2caS1xG5edY'
+text_authors:
+ - 'jerzy-czech'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/ks_jozef_poniatowski.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ks_jozef_poniatowski.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ks_jozef_poniatowski.png.180x0_q85_upscale.png

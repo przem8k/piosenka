@@ -1,7 +1,13 @@
 ---
 title: 'Przytułek'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-06-12 10:56:12.726347+00:00'
+text_authors:
+ - 'jacek-kleyff'
+composers:
+ - 'jacek-kleyff'
+performers:
+ - 'jacek-kleyff'
 ---
 
 #zwrotka

@@ -1,8 +1,14 @@
 ---
 title: 'Stalker'
-author: DX
+author: 'DX'
 pub_date: '2011-05-07 13:42:31.471188+00:00'
-link_youtube: https://www.youtube.com/watch?v=nPuHrrdMgFA
+link_youtube: 'https://www.youtube.com/watch?v=nPuHrrdMgFA'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #ref

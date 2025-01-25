@@ -1,6 +1,6 @@
 ---
 title: 'Portrety'
-author: DX
+author: 'DX'
 pub_date: '2017-03-28 20:56:53.474860+00:00'
 image: notes/Frans_Hals_008.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Frans_Hals_008.jpg

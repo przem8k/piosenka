@@ -1,9 +1,15 @@
 ---
 title: 'Jesienna Wiosna Ludów 1989'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-10-29 13:44:43.972427+00:00'
-link_youtube: https://www.youtube.com/watch?v=Qs_b-T5OG6U
+link_youtube: 'https://www.youtube.com/watch?v=Qs_b-T5OG6U'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zwrotka

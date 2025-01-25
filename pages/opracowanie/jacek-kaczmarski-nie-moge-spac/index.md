@@ -1,8 +1,14 @@
 ---
 title: 'Nie mogę spać'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-08-04 16:44:12.536863+00:00'
-link_youtube: https://www.youtube.com/watch?v=FbVLQAlSRac
+link_youtube: 'https://www.youtube.com/watch?v=FbVLQAlSRac'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/nie_moge_spac.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/nie_moge_spac.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/nie_moge_spac.png.180x0_q85_upscale.png

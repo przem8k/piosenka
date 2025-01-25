@@ -1,9 +1,9 @@
 ---
 title: 'A wszak Bastylia wcale nie upadła...'
-author: DX
+author: 'DX'
 pub_date: '2018-08-12 17:39:14.155911+00:00'
-url1: https://pl.wikipedia.org/wiki/Karmaniola
-url2: https://pl.wikipedia.org/wiki/Rewolucja_francuska
+url1: 'https://pl.wikipedia.org/wiki/Karmaniola'
+url2: 'https://pl.wikipedia.org/wiki/Rewolucja_francuska'
 image: notes/delacroix.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/delacroix.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/delacroix.jpg.0x300_q85_upscale.jpg

@@ -1,9 +1,13 @@
 ---
 title: 'Pochód Gustapa (Marsz ORMO)'
-author: reuter
+author: 'reuter'
 pub_date: '2018-09-01 23:58:49.249360+00:00'
-original_title: Pochod Gustapa
-link_youtube: https://www.youtube.com/watch?v=K-V_woexvaY
+original_title: 'Pochod Gustapa'
+link_youtube: 'https://www.youtube.com/watch?v=K-V_woexvaY'
+text_authors:
+ - 'karel-kryl'
+composers:
+ - 'karel-kryl'
 ---
 
 [e D e H7 e D e H7]

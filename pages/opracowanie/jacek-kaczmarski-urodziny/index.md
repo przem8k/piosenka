@@ -1,9 +1,15 @@
 ---
 title: 'Urodziny'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-10-15 12:29:10.170941+00:00'
-link_youtube: https://www.youtube.com/watch?v=C42waL8B31E
+link_youtube: 'https://www.youtube.com/watch?v=C42waL8B31E'
 capo_fret: 4
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 Południe. Na brzuchu pod słońcem jak ołów [a E a E a E a E]

@@ -1,8 +1,8 @@
 ---
 title: 'Alosza Awdiejew'
-author: gary
+author: 'gary'
 pub_date: '2023-05-16 19:44:30.368535+00:00'
-url1: https://pl.wikipedia.org/wiki/Aleksy_Awdiejew
+url1: 'https://pl.wikipedia.org/wiki/Aleksy_Awdiejew'
 image: notes/02018_0673_Aleksy_Awdiejew_Bielsko-Biała.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/02018_0673_Aleksy_Awdiejew_Bielsko-Biała.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/02018_0673_Aleksy_Awdiejew_Bielsko-Bia%C5%82a.jpg.0x300_q85_upscale.jpg

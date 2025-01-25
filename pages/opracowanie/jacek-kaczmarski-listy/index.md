@@ -1,9 +1,15 @@
 ---
 title: 'Listy'
-author: DX
+author: 'DX'
 pub_date: '2016-11-27 12:26:52.929354+00:00'
-link_youtube: https://www.youtube.com/watch?v=mY5ovEojuQE
+link_youtube: 'https://www.youtube.com/watch?v=mY5ovEojuQE'
 capo_fret: 4
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/listy.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/listy.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/listy.png.180x0_q85_upscale.png

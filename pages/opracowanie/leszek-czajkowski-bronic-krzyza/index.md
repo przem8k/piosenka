@@ -1,8 +1,14 @@
 ---
 title: 'Bronić Krzyża'
-author: DX
+author: 'DX'
 pub_date: '2011-09-20 19:53:47.754667+00:00'
-link_youtube: http://www.youtube.com/watch?v=JtZ8kyQQHRk
+link_youtube: 'http://www.youtube.com/watch?v=JtZ8kyQQHRk'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'leszek-czajkowski'
 ---
 
 #zw

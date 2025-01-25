@@ -1,9 +1,18 @@
 ---
 title: 'Siedzimy tu przez nieporozumienie'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2014-08-31 21:43:40.248953+00:00'
-link_youtube: https://www.youtube.com/watch?v=dBi66XnjAK4
+link_youtube: 'https://www.youtube.com/watch?v=dBi66XnjAK4'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+ - 'wlodzimierz-wysocki'
+composers:
+ - 'wlodzimierz-wysocki'
+translators:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #z1

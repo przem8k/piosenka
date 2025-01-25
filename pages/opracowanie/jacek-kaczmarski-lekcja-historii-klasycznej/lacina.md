@@ -1,9 +1,9 @@
 ---
 title: 'Łacina'
-author: Alek
+author: 'Alek'
 pub_date: '2015-06-26 13:47:34.186879+00:00'
-url1: http://www.thelatinlibrary.com/caesar/gall1.shtml
-url2: https://pl.wikipedia.org/wiki/Ave_Caesar_morituri_te_salutant
+url1: 'http://www.thelatinlibrary.com/caesar/gall1.shtml'
+url2: 'https://pl.wikipedia.org/wiki/Ave_Caesar_morituri_te_salutant'
 image: song_annotations/ave.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/ave.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/ave.jpg.0x300_q85_upscale.jpg

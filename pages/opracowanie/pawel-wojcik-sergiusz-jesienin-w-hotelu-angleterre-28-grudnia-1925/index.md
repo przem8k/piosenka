@@ -1,8 +1,14 @@
 ---
 title: 'Sergiusz Jesienin w Hotelu Angleterre 28 grudnia 1925'
-author: Boczuś
+author: 'Boczuś'
 pub_date: '2016-06-11 10:22:16.798111+00:00'
-link_youtube: https://www.youtube.com/watch?v=wT1Srjgec2g
+link_youtube: 'https://www.youtube.com/watch?v=wT1Srjgec2g'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 #zw1

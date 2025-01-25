@@ -1,9 +1,15 @@
 ---
 title: '17 IX'
-author: reuter
+author: 'reuter'
 pub_date: '2020-04-29 15:42:42.201218+00:00'
-disambig: wersja z 1985 roku
-link_youtube: https://www.youtube.com/watch?v=Lk7k6yv0Apc
+disambig: 'wersja z 1985 roku'
+link_youtube: 'https://www.youtube.com/watch?v=Lk7k6yv0Apc'
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 Moja bezbronna ojczyzna przyjmie cię najeźdźco [e h e h]

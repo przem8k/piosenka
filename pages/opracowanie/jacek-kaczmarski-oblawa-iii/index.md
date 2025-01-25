@@ -1,8 +1,14 @@
 ---
 title: 'Obława III'
-author: DX
+author: 'DX'
 pub_date: '2011-06-04 21:32:00.019861+00:00'
-link_youtube: https://www.youtube.com/watch?v=B3BySNYmAN0
+link_youtube: 'https://www.youtube.com/watch?v=B3BySNYmAN0'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/oblawa_iii.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/oblawa_iii.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/oblawa_iii.png.180x0_q85_upscale.jpg

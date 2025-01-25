@@ -1,9 +1,15 @@
 ---
 title: 'Gazety'
-author: spooky
+author: 'spooky'
 pub_date: '2013-01-29 10:05:26.790805+00:00'
-link_youtube: https://www.youtube.com/watch?v=g1bsskPNgQg
+link_youtube: 'https://www.youtube.com/watch?v=g1bsskPNgQg'
 capo_fret: 2
+text_authors:
+ - 'michal-zablocki'
+composers:
+ - 'mateusz-nagorski'
+performers:
+ - 'mateusz-nagorski'
 ---
 
 #zw

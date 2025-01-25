@@ -1,9 +1,15 @@
 ---
 title: 'Elektrokardiogram'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-08-22 06:28:33.326281+00:00'
-link_youtube: https://www.youtube.com/watch?v=nYBqYTAwvKs
+link_youtube: 'https://www.youtube.com/watch?v=nYBqYTAwvKs'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zwrotka1

@@ -1,10 +1,18 @@
 ---
 title: 'Ewa śpi'
-author: spooky
+author: 'spooky'
 pub_date: '2014-01-04 03:56:56.108143+00:00'
 epigone: True
-link_youtube: http://www.youtube.com/watch?v=y5kZeEysEgc
+link_youtube: 'http://www.youtube.com/watch?v=y5kZeEysEgc'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'mateusz-nagorski'
+ - 'andrzej-debowski'
+performers:
+ - 'mateusz-nagorski'
+ - 'andrzej-debowski'
 ---
 
 #zw1

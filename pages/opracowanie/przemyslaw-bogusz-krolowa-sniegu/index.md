@@ -1,7 +1,13 @@
 ---
 title: 'Królowa śniegu'
-author: DX
+author: 'DX'
 pub_date: '2011-05-06 16:56:58.720006+00:00'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zw

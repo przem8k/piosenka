@@ -1,8 +1,14 @@
 ---
 title: 'Śmiech'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 09:12:56.114755+00:00'
-link_youtube: https://www.youtube.com/watch?v=t8KOWdIVsso
+link_youtube: 'https://www.youtube.com/watch?v=t8KOWdIVsso'
+text_authors:
+ - 'krzysztof-maria-sieniawski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/smiech.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/smiech.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/smiech.png.180x0_q85_upscale.png

@@ -1,9 +1,15 @@
 ---
 title: 'Podróże Guliwera. Houyhnhnm'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-04-23 21:47:52.391505+00:00'
-link_youtube: https://www.youtube.com/watch?v=O8FG9aQQVHM
+link_youtube: 'https://www.youtube.com/watch?v=O8FG9aQQVHM'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/huynhynn.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/huynhynn.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/huynhynn.png.180x0_q85_upscale.jpg

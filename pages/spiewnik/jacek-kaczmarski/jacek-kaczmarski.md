@@ -1,6 +1,6 @@
 ---
 title: 'Jacek Kaczmarski'
-author: DX
+author: 'DX'
 pub_date: '2016-06-26 19:07:26.345218+00:00'
 image: artists/kaczmarski-cover-polonicult.png
 image_full: https://storage.googleapis.com/piosenka-media/media/artists/kaczmarski-cover-polonicult.png

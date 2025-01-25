@@ -1,8 +1,14 @@
 ---
 title: 'Potęga smaku'
-author: DX
+author: 'DX'
 pub_date: '2011-08-16 20:59:58.585566+00:00'
-link_youtube: https://www.youtube.com/watch?v=cluvCj0nvpg
+link_youtube: 'https://www.youtube.com/watch?v=cluvCj0nvpg'
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/potega_smaku.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/potega_smaku.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/potega_smaku.png.180x0_q85_upscale.jpg

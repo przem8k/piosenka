@@ -1,9 +1,15 @@
 ---
 title: 'Ballada o wesołym miasteczku'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-04-12 17:20:04.902710+00:00'
-link_youtube: https://www.youtube.com/watch?v=VNMvYeC9zgI
+link_youtube: 'https://www.youtube.com/watch?v=VNMvYeC9zgI'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/ballada_o_wesolym_miasteczku.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_wesolym_miasteczku.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_wesolym_miasteczku.png.180x0_q85_upscale.jpg

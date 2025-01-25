@@ -1,8 +1,8 @@
 ---
 title: 'Stańczyk na dworze królowej Bony po utracie Smoleńska'
-author: DX
+author: 'DX'
 pub_date: '2017-10-08 18:00:18.945854+00:00'
-url1: https://pl.wikipedia.org/wiki/Sta%C5%84czyk_(obraz_Jana_Matejki)
+url1: 'https://pl.wikipedia.org/wiki/Sta%C5%84czyk_(obraz_Jana_Matejki)'
 image: notes/stanczyk_1.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/stanczyk_1.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/stanczyk_1.jpg.0x300_q85_upscale.jpg

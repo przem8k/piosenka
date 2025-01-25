@@ -1,9 +1,16 @@
 ---
 title: 'Somosierra'
-author: DX
+author: 'DX'
 pub_date: '2011-05-09 23:14:53.606780+00:00'
-link_youtube: https://www.youtube.com/watch?v=G2QiddS2TMs
+link_youtube: 'https://www.youtube.com/watch?v=G2QiddS2TMs'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/samosierra.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/samosierra.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/samosierra.png.180x0_q85_upscale.jpg

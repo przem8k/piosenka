@@ -1,9 +1,9 @@
 ---
 title: 'Wypędzenie przekupniów ze świątyni'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-09-03 15:06:32.283822+00:00'
-url1: http://biblia.deon.pl/
-ref1: Ewangelia wg św. Jana, rozdział 2
+url1: 'http://biblia.deon.pl/'
+ref1: 'Ewangelia wg św. Jana, rozdział 2'
 image: notes/1234.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1234.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1234.jpg.0x300_q85_upscale.jpg

@@ -1,9 +1,15 @@
 ---
 title: 'Niech się toczy'
-author: Boczuś
+author: 'Boczuś'
 pub_date: '2016-05-23 07:06:46.295754+00:00'
-link_youtube: https://www.youtube.com/watch?v=RqZWHAbfZrQ
+link_youtube: 'https://www.youtube.com/watch?v=RqZWHAbfZrQ'
 capo_fret: 1
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 #zw

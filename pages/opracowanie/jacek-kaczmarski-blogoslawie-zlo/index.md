@@ -1,9 +1,15 @@
 ---
 title: 'Błogosławię zło'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-25 10:37:21.794104+00:00'
-link_youtube: https://www.youtube.com/watch?v=uBc_WN7K3pE
+link_youtube: 'https://www.youtube.com/watch?v=uBc_WN7K3pE'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/blogoslawie_zlo.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/blogoslawie_zlo.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/blogoslawie_zlo.png.180x0_q85_upscale.png

@@ -1,10 +1,10 @@
 ---
 title: '"To miasto ja zbudowałem!"'
-author: Zbrozło
+author: 'Zbrozło'
 pub_date: '2015-08-05 22:40:18.954780+00:00'
-url1: https://pl.wikipedia.org/wiki/Zamek_Kr%C3%B3lewski_w_Warszawie#XX_wiek
-url2: https://pl.wikipedia.org/wiki/Barbakan_w_Warszawie
-ref1: A. Dudek, Z. Zblewski, Utopia nad Wisłą. Historia Peerelu, Warszawa-Bielsko-Biała 2008, s. 227.
+url1: 'https://pl.wikipedia.org/wiki/Zamek_Kr%C3%B3lewski_w_Warszawie#XX_wiek'
+url2: 'https://pl.wikipedia.org/wiki/Barbakan_w_Warszawie'
+ref1: 'A. Dudek, Z. Zblewski, Utopia nad Wisłą. Historia Peerelu, Warszawa-Bielsko-Biała 2008, s. 227.'
 image: song_annotations/Pracownicy_Biura_Odbudowy_Stolicy_pracownia_Śródmieście.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/Pracownicy_Biura_Odbudowy_Stolicy_pracownia_Śródmieście.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/Pracownicy_Biura_Odbudowy_Stolicy_pracownia_%C5%9Ar%C3%B3dmie%C5%9Bcie.jpg.0x300_q85_upscale.jpg

@@ -1,8 +1,16 @@
 ---
 title: 'Piosenka o radości życia'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-02-25 23:32:12.607311+00:00'
-link_youtube: https://www.youtube.com/watch?v=8AOukgR43XE
+link_youtube: 'https://www.youtube.com/watch?v=8AOukgR43XE'
+text_authors:
+ - 'wlodzimierz-wysocki'
+composers:
+ - 'wlodzimierz-wysocki'
+translators:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/piosenka_o_radosci_zycia.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/piosenka_o_radosci_zycia.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/piosenka_o_radosci_zycia.png.180x0_q85_upscale.png

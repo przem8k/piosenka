@@ -1,8 +1,14 @@
 ---
 title: 'Dzwon'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-08-06 11:48:12.146170+00:00'
-link_youtube: https://www.youtube.com/watch?v=JT2CqD2TM0k
+link_youtube: 'https://www.youtube.com/watch?v=JT2CqD2TM0k'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 Twardy, twardy sznur [a]

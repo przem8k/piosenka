@@ -1,8 +1,14 @@
 ---
 title: 'Pieśń neobarska'
-author: RK
+author: 'RK'
 pub_date: '2012-04-08 22:14:18.083079+00:00'
-link_youtube: https://www.youtube.com/watch?v=Sgi3gIEnY1A
+link_youtube: 'https://www.youtube.com/watch?v=Sgi3gIEnY1A'
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 #zwrotka

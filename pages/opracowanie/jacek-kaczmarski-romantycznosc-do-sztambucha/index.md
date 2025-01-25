@@ -1,8 +1,14 @@
 ---
 title: 'Romantyczność (Do sztambucha)'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-09-10 10:45:37.626065+00:00'
-link_youtube: https://www.youtube.com/watch?v=qZilSW-IwTc
+link_youtube: 'https://www.youtube.com/watch?v=qZilSW-IwTc'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 Wspomnij, Alusiu, jakeśmy byli [C G7 C G7]

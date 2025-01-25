@@ -1,8 +1,8 @@
 ---
 title: 'Zmiana od środka'
-author: Zbik
+author: 'Zbik'
 pub_date: '2024-05-22 13:18:14.533558+00:00'
-ref1: Kwadrans Jacka Kaczmarskiego z 28 maja 1989
+ref1: 'Kwadrans Jacka Kaczmarskiego z 28 maja 1989'
 image: notes/wallenrod.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/wallenrod.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/wallenrod.png.0x300_q85_upscale.png

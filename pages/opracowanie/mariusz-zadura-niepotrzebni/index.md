@@ -1,8 +1,14 @@
 ---
 title: 'Niepotrzebni'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 07:57:39.986076+00:00'
-link_youtube: https://www.youtube.com/watch?v=EMaI-aWaWyY
+link_youtube: 'https://www.youtube.com/watch?v=EMaI-aWaWyY'
+text_authors:
+ - 'mariusz-zadura'
+composers:
+ - 'mariusz-zadura'
+performers:
+ - 'mariusz-zadura'
 ---
 
 [h fis G D]

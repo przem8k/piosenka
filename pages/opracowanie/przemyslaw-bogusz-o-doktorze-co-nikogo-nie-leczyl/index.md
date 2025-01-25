@@ -1,7 +1,13 @@
 ---
 title: 'O doktorze, co nikogo nie leczył'
-author: DX
+author: 'DX'
 pub_date: '2011-05-07 22:42:48.873824+00:00'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zwrotka

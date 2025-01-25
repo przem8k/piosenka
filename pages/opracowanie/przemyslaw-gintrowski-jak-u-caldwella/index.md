@@ -1,8 +1,14 @@
 ---
 title: 'Jak u Caldwella'
-author: reuter
+author: 'reuter'
 pub_date: '2022-07-16 21:34:25.438949+00:00'
-link_youtube: https://www.youtube.com/watch?v=I4ciwckRkdA
+link_youtube: 'https://www.youtube.com/watch?v=I4ciwckRkdA'
+text_authors:
+ - 'krzysztof-maria-sieniawski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #zw1

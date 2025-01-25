@@ -1,8 +1,14 @@
 ---
 title: 'Kometa'
-author: DX
+author: 'DX'
 pub_date: '2018-03-26 21:24:20.546133+00:00'
-link_youtube: https://www.youtube.com/watch?v=KRMnDgV9fU0
+link_youtube: 'https://www.youtube.com/watch?v=KRMnDgV9fU0'
+text_authors:
+ - 'jaromir-nohavica'
+composers:
+ - 'jaromir-nohavica'
+translators:
+ - 'andrzej-ozga'
 ---
 
 #zw

@@ -1,9 +1,15 @@
 ---
 title: 'Generacja'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-12-13 22:54:45.490643+00:00'
-original_title: Pasážová revolta
-link_youtube: https://www.youtube.com/watch?v=ry64zqv0vLk
+original_title: 'Pasážová revolta'
+link_youtube: 'https://www.youtube.com/watch?v=ry64zqv0vLk'
+text_authors:
+ - 'karel-kryl'
+composers:
+ - 'karel-kryl'
+performers:
+ - 'karel-kryl'
 ---
 
 #zw

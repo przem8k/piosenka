@@ -1,8 +1,14 @@
 ---
 title: 'Babilon'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-11-10 18:51:41.896850+00:00'
 epigone: True
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 >W godnym kroku który nie liczy się z chwilą [a G F G a (G F G)]

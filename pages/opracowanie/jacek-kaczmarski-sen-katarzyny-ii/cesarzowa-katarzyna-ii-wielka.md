@@ -1,10 +1,10 @@
 ---
 title: 'Cesarzowa Katarzyna II Wielka'
-author: DX
+author: 'DX'
 pub_date: '2018-08-19 12:51:00.450361+00:00'
-url1: https://pl.wikipedia.org/wiki/Katarzyna_II_Wielka
-url2: https://pl.wikipedia.org/wiki/Stanisław_August_Poniatowski
-ref1: Zapowiedź do piosenki na płycie Chicago Live
+url1: 'https://pl.wikipedia.org/wiki/Katarzyna_II_Wielka'
+url2: 'https://pl.wikipedia.org/wiki/Stanisław_August_Poniatowski'
+ref1: 'Zapowiedź do piosenki na płycie Chicago Live'
 image: notes/catherine_II.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/catherine_II.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/catherine_II.jpg.0x300_q85_upscale.jpg

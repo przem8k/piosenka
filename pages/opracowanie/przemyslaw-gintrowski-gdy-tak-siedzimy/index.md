@@ -1,8 +1,14 @@
 ---
 title: 'Gdy tak siedzimy'
-author: DX
+author: 'DX'
 pub_date: '2011-05-07 13:57:06.323268+00:00'
-link_youtube: https://www.youtube.com/watch?v=FcjhFU__3fo
+link_youtube: 'https://www.youtube.com/watch?v=FcjhFU__3fo'
+text_authors:
+ - 'leszek-szaruga'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #1

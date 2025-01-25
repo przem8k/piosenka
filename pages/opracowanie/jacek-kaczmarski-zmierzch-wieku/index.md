@@ -1,9 +1,15 @@
 ---
 title: 'Zmierzch wieku'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-10-20 18:37:00.066048+00:00'
-link_youtube: https://www.youtube.com/watch?v=n_l-5qlY7ys
+link_youtube: 'https://www.youtube.com/watch?v=n_l-5qlY7ys'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/zmierzch_wieku.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zmierzch_wieku.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zmierzch_wieku.png.180x0_q85_upscale.jpg

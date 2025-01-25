@@ -1,8 +1,14 @@
 ---
 title: 'Karnawał Solidarności'
-author: RK
+author: 'RK'
 pub_date: '2012-12-06 18:50:57.513932+00:00'
-link_youtube: https://www.youtube.com/watch?v=rqeM_2HUh9c
+link_youtube: 'https://www.youtube.com/watch?v=rqeM_2HUh9c'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'leszek-czajkowski'
 ---
 
 #zwrotka

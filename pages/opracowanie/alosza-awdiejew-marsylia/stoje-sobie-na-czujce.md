@@ -1,8 +1,8 @@
 ---
 title: 'Stoję sobie na czujce'
-author: gary
+author: 'gary'
 pub_date: '2023-05-17 12:05:20.919130+00:00'
-url1: http://kaczmarski.art.pl/forum/archive/index.php?thread-3488.html
+url1: 'http://kaczmarski.art.pl/forum/archive/index.php?thread-3488.html'
 ---
 
 Alternatywne, wierniejsze oryginałowi tłumaczenie autorstwa użytkownika „piotrek”:

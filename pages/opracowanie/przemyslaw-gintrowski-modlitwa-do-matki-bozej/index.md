@@ -1,8 +1,12 @@
 ---
 title: 'Modlitwa do Matki Bożej'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-03 13:47:45.721205+00:00'
-link_youtube: https://www.youtube.com/watch?v=Q5sSgd3biGE
+link_youtube: 'https://www.youtube.com/watch?v=Q5sSgd3biGE'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 Tekst: Zygmunt Krasiński 

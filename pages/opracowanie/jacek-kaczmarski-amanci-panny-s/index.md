@@ -1,9 +1,15 @@
 ---
 title: 'Amanci Panny „S”'
-author: DX
+author: 'DX'
 pub_date: '2012-04-25 22:26:05.059063+00:00'
-link_youtube: https://www.youtube.com/watch?v=aAO4fant-qk
+link_youtube: 'https://www.youtube.com/watch?v=aAO4fant-qk'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/amanci_panny_s.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/amanci_panny_s.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/amanci_panny_s.png.180x0_q85_upscale.jpg

@@ -1,9 +1,9 @@
 ---
 title: 'Petrobudowa'
-author: DX
+author: 'DX'
 pub_date: '2016-10-31 07:57:34.808911+00:00'
-url1: http://plock.wyborcza.pl/plock/1,35710,11046948,Petrobudowa_wychowala_pokolenia_inzynierow__Dzis_nie.html
-url2: https://pl.wikipedia.org/wiki/Rafineria_w_P%C5%82ocku
+url1: 'http://plock.wyborcza.pl/plock/1,35710,11046948,Petrobudowa_wychowala_pokolenia_inzynierow__Dzis_nie.html'
+url2: 'https://pl.wikipedia.org/wiki/Rafineria_w_P%C5%82ocku'
 image: notes/petrobudowa1.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/petrobudowa1.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/petrobudowa1.jpg.0x300_q85_upscale.jpg

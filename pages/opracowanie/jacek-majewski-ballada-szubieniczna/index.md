@@ -1,9 +1,15 @@
 ---
 title: 'Ballada szubieniczna'
-author: DX
+author: 'DX'
 pub_date: '2012-04-20 18:29:50.347654+00:00'
-disambig: muz. Jacek Majewski
+disambig: 'muz. Jacek Majewski'
 capo_fret: 3
+text_authors:
+ - 'krzysztof-maria-sieniawski'
+composers:
+ - 'jacek-majewski'
+performers:
+ - 'jacek-majewski'
 ---
 
 #zw

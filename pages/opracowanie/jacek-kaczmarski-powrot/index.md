@@ -1,8 +1,15 @@
 ---
 title: 'Powrót'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-27 12:11:42.662323+00:00'
-link_youtube: https://www.youtube.com/watch?v=Dn4-tAFdOxY
+link_youtube: 'https://www.youtube.com/watch?v=Dn4-tAFdOxY'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/powrot.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/powrot.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/powrot.png.180x0_q85_upscale.png

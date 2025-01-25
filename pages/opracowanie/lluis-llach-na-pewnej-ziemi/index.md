@@ -1,8 +1,16 @@
 ---
 title: 'Na pewnej ziemi'
-author: DX
+author: 'DX'
 pub_date: '2011-08-29 15:48:26.724800+00:00'
-original_title: Damunt d'una terra
+original_title: 'Damunt d'una terra'
+text_authors:
+ - 'lluis-llach'
+composers:
+ - 'lluis-llach'
+translators:
+ - 'carlos-marrodan'
+performers:
+ - 'zespol-reprezentacyjny'
 ---
 
 #zw

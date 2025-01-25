@@ -1,9 +1,9 @@
 ---
 title: 'Na głowie kwietny ma wianek'
-author: DX
+author: 'DX'
 pub_date: '2018-03-24 11:32:52.422791+00:00'
-url1: http://literat.ug.edu.pl/dziady/003.htm
-url2: https://pl.wikipedia.org/wiki/Dziady_cz%C4%99%C5%9B%C4%87_II
+url1: 'http://literat.ug.edu.pl/dziady/003.htm'
+url2: 'https://pl.wikipedia.org/wiki/Dziady_cz%C4%99%C5%9B%C4%87_II'
 image: notes/dziady.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/dziady.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/dziady.jpg.0x300_q85_upscale.jpg

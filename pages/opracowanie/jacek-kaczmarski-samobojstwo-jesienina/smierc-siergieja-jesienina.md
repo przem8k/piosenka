@@ -1,8 +1,8 @@
 ---
 title: 'Śmierć Siergieja Jesienina'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-23 13:51:31.905517+00:00'
-url1: https://pl.wikipedia.org/wiki/Siergiej_Jesienin
+url1: 'https://pl.wikipedia.org/wiki/Siergiej_Jesienin'
 image: notes/Esenin1925ondeathbed.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Esenin1925ondeathbed.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Esenin1925ondeathbed.jpg.0x300_q85_upscale.jpg

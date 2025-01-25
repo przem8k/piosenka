@@ -1,8 +1,14 @@
 ---
 title: 'Pijacy'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-08 15:51:12.023473+00:00'
-link_youtube: https://www.youtube.com/watch?v=BHgn-q3Edkw
+link_youtube: 'https://www.youtube.com/watch?v=BHgn-q3Edkw'
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/pijacy.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pijacy.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pijacy.png.180x0_q85_upscale.png

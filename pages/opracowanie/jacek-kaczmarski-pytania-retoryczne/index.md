@@ -1,8 +1,14 @@
 ---
 title: 'Pytania retoryczne'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-08-09 21:48:51.140390+00:00'
-link_youtube: https://www.youtube.com/watch?v=xFiXjzxlIWs
+link_youtube: 'https://www.youtube.com/watch?v=xFiXjzxlIWs'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/pytania_retoryczne.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pytania_retoryczne.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pytania_retoryczne.png.180x0_q85_upscale.png

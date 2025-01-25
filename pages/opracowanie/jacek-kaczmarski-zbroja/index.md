@@ -1,8 +1,14 @@
 ---
 title: 'Zbroja'
-author: DX
+author: 'DX'
 pub_date: '2011-06-04 21:47:46.876517+00:00'
-link_youtube: https://www.youtube.com/watch?v=ODQ4usDcNOk
+link_youtube: 'https://www.youtube.com/watch?v=ODQ4usDcNOk'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/zbroja1.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zbroja1.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zbroja1.png.180x0_q85_upscale.jpg

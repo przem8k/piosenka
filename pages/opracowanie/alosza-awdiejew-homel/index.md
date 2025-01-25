@@ -1,8 +1,14 @@
 ---
 title: 'Homel'
-author: gary
+author: 'gary'
 pub_date: '2023-05-15 22:38:58.971285+00:00'
-link_youtube: https://youtu.be/r13CSRPym7c
+link_youtube: 'https://youtu.be/r13CSRPym7c'
+text_authors:
+ - 'elzbieta-kurylo'
+composers:
+ - 'andrzej-zarycki'
+performers:
+ - 'alosza-awdiejew'
 ---
 
 #zw

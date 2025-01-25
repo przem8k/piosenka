@@ -1,8 +1,14 @@
 ---
 title: 'Psalm zaręczynowy'
-author: reuter
+author: 'reuter'
 pub_date: '2014-09-16 16:07:22.314087+00:00'
-link_youtube: https://www.youtube.com/watch?v=wfHZbewvvFU
+link_youtube: 'https://www.youtube.com/watch?v=wfHZbewvvFU'
+text_authors:
+ - 'tadeusz-nowak'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #zw

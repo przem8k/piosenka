@@ -1,8 +1,14 @@
 ---
 title: 'Wybacz, wielka Ukraino'
-author: Zbik
+author: 'Zbik'
 pub_date: '2022-02-27 12:19:20.675249+00:00'
-link_youtube: https://www.youtube.com/watch?v=DyyQNDqbjxo
+link_youtube: 'https://www.youtube.com/watch?v=DyyQNDqbjxo'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zwrotka

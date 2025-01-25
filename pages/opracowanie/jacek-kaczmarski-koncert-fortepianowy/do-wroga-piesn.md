@@ -1,8 +1,8 @@
 ---
 title: 'Do wroga (pieśń)'
-author: Zbik
+author: 'Zbik'
 pub_date: '2022-06-20 10:49:58.402175+00:00'
-url1: https://nowynapis.eu/tygodnik/nr-155/artykul/mow-mi-ach-mow-jacka-kaczmarskiego-wyrazanie-emocji-cudzym-glosem
+url1: 'https://nowynapis.eu/tygodnik/nr-155/artykul/mow-mi-ach-mow-jacka-kaczmarskiego-wyrazanie-emocji-cudzym-glosem'
 image: notes/fortepian_chopina.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/fortepian_chopina.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/fortepian_chopina.jpg.0x300_q85_upscale.jpg

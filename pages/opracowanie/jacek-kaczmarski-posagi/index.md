@@ -1,9 +1,15 @@
 ---
 title: 'Posągi'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-02-09 10:35:07.612300+00:00'
-link_youtube: https://www.youtube.com/watch?v=15U53pgdqWQ
+link_youtube: 'https://www.youtube.com/watch?v=15U53pgdqWQ'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #1

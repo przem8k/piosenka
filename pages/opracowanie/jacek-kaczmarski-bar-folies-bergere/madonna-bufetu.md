@@ -1,6 +1,6 @@
 ---
 title: 'Madonna bufetu'
-author: DX
+author: 'DX'
 pub_date: '2020-07-14 17:31:40.355467+00:00'
 image: notes/folies-bergere.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/folies-bergere.jpg

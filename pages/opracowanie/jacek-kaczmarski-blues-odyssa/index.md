@@ -1,8 +1,14 @@
 ---
 title: 'Blues Odyssa'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-08-01 09:01:32.134431+00:00'
-link_youtube: https://www.youtube.com/watch?v=kRJeRCPpYMk
+link_youtube: 'https://www.youtube.com/watch?v=kRJeRCPpYMk'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/blues_odyssa.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/blues_odyssa.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/blues_odyssa.png.180x0_q85_upscale.png

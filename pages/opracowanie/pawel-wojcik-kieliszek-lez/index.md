@@ -1,8 +1,14 @@
 ---
 title: 'Kieliszek łez'
-author: DX
+author: 'DX'
 pub_date: '2013-04-20 12:21:21.832364+00:00'
 capo_fret: 1
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 Jeszcze postaw mi kieliszek próżnych łez [e D e]

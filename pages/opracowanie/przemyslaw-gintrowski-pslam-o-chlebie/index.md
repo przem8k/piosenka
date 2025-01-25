@@ -1,8 +1,14 @@
 ---
 title: 'Psalm o chlebie'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-27 20:57:51.823636+00:00'
-link_youtube: https://www.youtube.com/watch?v=pef-DMVnhtQ
+link_youtube: 'https://www.youtube.com/watch?v=pef-DMVnhtQ'
+text_authors:
+ - 'tadeusz-nowak'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #1

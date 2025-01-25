@@ -1,8 +1,14 @@
 ---
 title: 'Nasza klasa 92'
-author: DX
+author: 'DX'
 pub_date: '2011-10-13 20:43:24.802939+00:00'
-link_youtube: https://www.youtube.com/watch?v=In2sEbv1HjI
+link_youtube: 'https://www.youtube.com/watch?v=In2sEbv1HjI'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zw

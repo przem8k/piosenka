@@ -1,8 +1,15 @@
 ---
 title: 'Starzy ludzie w autobusie'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-06-24 21:19:47.612020+00:00'
-link_youtube: https://www.youtube.com/watch?v=ED7zjC23wDk
+link_youtube: 'https://www.youtube.com/watch?v=ED7zjC23wDk'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/starzy_ludzie_w_autobusie.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/starzy_ludzie_w_autobusie.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/starzy_ludzie_w_autobusie.png.180x0_q85_upscale.jpg

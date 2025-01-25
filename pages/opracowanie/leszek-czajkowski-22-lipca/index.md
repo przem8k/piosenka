@@ -1,8 +1,14 @@
 ---
 title: '22 lipca'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-10-15 21:33:01.363485+00:00'
 capo_fret: 2
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'leszek-czajkowski'
 ---
 
 #zw1

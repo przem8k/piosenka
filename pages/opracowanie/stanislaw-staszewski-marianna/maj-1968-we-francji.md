@@ -1,8 +1,8 @@
 ---
 title: 'Maj 1968 we Francji'
-author: DX
+author: 'DX'
 pub_date: '2018-08-12 19:22:08.357870+00:00'
-url1: https://pl.wikipedia.org/wiki/Maj_1968
+url1: 'https://pl.wikipedia.org/wiki/Maj_1968'
 image: notes/1968_bordeaux.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1968_bordeaux.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1968_bordeaux.jpg.0x300_q85_upscale.jpg

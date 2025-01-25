@@ -1,8 +1,8 @@
 ---
 title: 'Mariusz Zadura'
-author: DX
+author: 'DX'
 pub_date: '2018-03-22 21:32:08.186266+00:00'
-url1: https://pl.wikipedia.org/wiki/Mariusz_Zadura
+url1: 'https://pl.wikipedia.org/wiki/Mariusz_Zadura'
 image: notes/mariuszzadura_1.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/mariuszzadura_1.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/mariuszzadura_1.jpg.0x300_q85_upscale.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Męczennicy sandomierscy anno 1259'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-04-08 22:50:09.802952+00:00'
-link_youtube: http://www.youtube.com/watch?v=42TQlrfLTQE
+link_youtube: 'http://www.youtube.com/watch?v=42TQlrfLTQE'
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 #zw

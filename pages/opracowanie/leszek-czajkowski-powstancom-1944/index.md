@@ -1,8 +1,14 @@
 ---
 title: 'Powstańcom 1944'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-10-15 22:50:15.667790+00:00'
-link_youtube: http://www.youtube.com/watch?v=7XokdJbCijY
+link_youtube: 'http://www.youtube.com/watch?v=7XokdJbCijY'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'leszek-czajkowski'
 ---
 
 #zw

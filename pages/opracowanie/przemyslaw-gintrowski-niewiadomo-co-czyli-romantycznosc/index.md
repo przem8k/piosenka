@@ -1,8 +1,14 @@
 ---
 title: 'Niewiadomo co, czyli Romantyczność'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-06 15:14:57.767410+00:00'
-link_youtube: https://www.youtube.com/watch?v=2VsrcJ3EsL0
+link_youtube: 'https://www.youtube.com/watch?v=2VsrcJ3EsL0'
+text_authors:
+ - 'juliusz-slowacki'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 Tekst: Antoni Edward Odyniec

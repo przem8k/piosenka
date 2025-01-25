@@ -1,9 +1,15 @@
 ---
 title: 'Pompeja lupanar'
-author: RK
+author: 'RK'
 pub_date: '2012-10-25 18:27:18.356194+00:00'
-disambig: 2009
-link_youtube: https://www.youtube.com/watch?v=9FQWuuURfd8
+disambig: '2009'
+link_youtube: 'https://www.youtube.com/watch?v=9FQWuuURfd8'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #zwrotka

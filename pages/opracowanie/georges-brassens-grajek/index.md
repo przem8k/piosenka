@@ -1,9 +1,17 @@
 ---
 title: 'Grajek'
-author: spooky
+author: 'spooky'
 pub_date: '2012-04-27 12:36:58.179273+00:00'
-original_title: Le Petit Joueur de Fluteau
+original_title: 'Le Petit Joueur de Fluteau'
 capo_fret: 1
+text_authors:
+ - 'georges-brassens'
+composers:
+ - 'georges-brassens'
+translators:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/grajek.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/grajek.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/grajek.png.180x0_q85_upscale.jpg

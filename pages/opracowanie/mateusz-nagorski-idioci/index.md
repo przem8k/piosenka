@@ -1,8 +1,14 @@
 ---
 title: 'Idioci'
-author: spooky
+author: 'spooky'
 pub_date: '2013-01-29 09:58:05.997792+00:00'
 capo_fret: 2
+text_authors:
+ - 'michal-zablocki'
+composers:
+ - 'mateusz-nagorski'
+performers:
+ - 'mateusz-nagorski'
 ---
 
 #zw

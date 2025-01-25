@@ -1,7 +1,13 @@
 ---
 title: 'Epitafium dla prezydenta Kazimierza Sabbata'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-06-28 17:28:41.768360+00:00'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'leszek-czajkowski'
 ---
 
 #zwrotka1

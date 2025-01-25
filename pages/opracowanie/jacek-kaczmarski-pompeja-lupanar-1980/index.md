@@ -1,9 +1,15 @@
 ---
 title: 'Pompeja lupanar'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-12-29 17:01:58.245223+00:00'
-disambig: 1980
-link_youtube: https://www.youtube.com/watch?v=otAhwbwHecA
+disambig: '1980'
+link_youtube: 'https://www.youtube.com/watch?v=otAhwbwHecA'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #1

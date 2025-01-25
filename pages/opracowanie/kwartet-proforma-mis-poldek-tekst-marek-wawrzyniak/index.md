@@ -1,8 +1,14 @@
 ---
 title: 'Miś Poldek'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2019-10-07 23:21:15.929638+00:00'
-link_youtube: https://www.youtube.com/watch?v=941gaG9LoPo
+link_youtube: 'https://www.youtube.com/watch?v=941gaG9LoPo'
+text_authors:
+ - 'marek-wawrzyniak'
+composers:
+ - 'kwartet-proforma'
+performers:
+ - 'kwartet-proforma'
 ---
 
 [a F d E a F d E]  

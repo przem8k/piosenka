@@ -1,9 +1,15 @@
 ---
 title: 'Dzieci Hioba'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-06-21 10:36:03.122988+00:00'
-link_youtube: https://www.youtube.com/watch?v=LrJZiQ7KumE
+link_youtube: 'https://www.youtube.com/watch?v=LrJZiQ7KumE'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/dzieci_hioba.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/dzieci_hioba.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/dzieci_hioba.png.180x0_q85_upscale.jpg

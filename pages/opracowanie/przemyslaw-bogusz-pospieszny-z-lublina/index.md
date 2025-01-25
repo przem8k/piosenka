@@ -1,7 +1,13 @@
 ---
 title: 'Pospieszny z Lublina'
-author: DX
+author: 'DX'
 pub_date: '2011-12-25 00:09:13.251540+00:00'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 #zwrotka

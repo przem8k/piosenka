@@ -1,8 +1,8 @@
 ---
 title: 'Stalker'
-author: DX
+author: 'DX'
 pub_date: '2017-08-27 15:36:11.170476+00:00'
-url1: https://en.wikipedia.org/wiki/Stalker_(1979_film)
+url1: 'https://en.wikipedia.org/wiki/Stalker_(1979_film)'
 image: notes/stalker.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/stalker.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/stalker.jpg.0x300_q85_upscale.jpg

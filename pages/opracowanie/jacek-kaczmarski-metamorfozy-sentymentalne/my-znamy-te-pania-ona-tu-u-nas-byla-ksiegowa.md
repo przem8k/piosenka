@@ -1,6 +1,6 @@
 ---
 title: 'My znamy tę panią, ona tu u nas była księgową'
-author: DX
+author: 'DX'
 pub_date: '2017-05-27 08:59:07.425417+00:00'
 image: notes/ŁódzkimDomKultury.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/ŁódzkimDomKultury.jpg

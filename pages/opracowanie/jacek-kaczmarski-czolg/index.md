@@ -1,8 +1,14 @@
 ---
 title: 'Czołg'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-02-25 13:59:37.023222+00:00'
-link_youtube: https://www.youtube.com/watch?v=mkW6Kri5rEA
+link_youtube: 'https://www.youtube.com/watch?v=mkW6Kri5rEA'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/czolg.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/czolg.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/czolg.png.180x0_q85_upscale.png

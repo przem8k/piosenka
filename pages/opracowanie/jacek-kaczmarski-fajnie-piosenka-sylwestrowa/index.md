@@ -1,8 +1,14 @@
 ---
 title: 'Fajnie... (Piosenka sylwestrowa)'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-30 17:35:04.163310+00:00'
-link_youtube: https://www.youtube.com/watch?v=ZnRDJlfaqhw
+link_youtube: 'https://www.youtube.com/watch?v=ZnRDJlfaqhw'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 Fajnie zmarnować kolejny rok, [e H e]

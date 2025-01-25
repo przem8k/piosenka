@@ -1,9 +1,15 @@
 ---
 title: 'Mysi Raj'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-11-02 20:25:10.263392+00:00'
-link_youtube: https://www.youtube.com/watch?v=JuIlXSAps-o
+link_youtube: 'https://www.youtube.com/watch?v=JuIlXSAps-o'
 capo_fret: 3
+text_authors:
+ - 'marcin-gabka'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 W lipcu 1968 roku cztery pary myszy wpuszczono do przestronnej zagrody, w której zapewniono im idealne warunki do życia. [a]

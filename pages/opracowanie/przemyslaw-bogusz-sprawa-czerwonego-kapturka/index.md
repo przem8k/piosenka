@@ -1,7 +1,13 @@
 ---
 title: 'Sprawa Czerwonego Kapturka'
-author: DX
+author: 'DX'
 pub_date: '2012-02-06 00:18:53.197539+00:00'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 Świeci słoneczko na niebie, płynie biała chmurka [A E A D]

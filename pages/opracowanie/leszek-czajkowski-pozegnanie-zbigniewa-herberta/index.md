@@ -1,9 +1,15 @@
 ---
 title: 'Pożegnanie Zbigniewa Herberta'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-10-15 20:46:51.896452+00:00'
-link_youtube: https://www.youtube.com/watch?v=hj5-JfWKUhk
+link_youtube: 'https://www.youtube.com/watch?v=hj5-JfWKUhk'
 capo_fret: 2
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'leszek-czajkowski'
 ---
 
 #zw1

@@ -1,8 +1,8 @@
 ---
 title: 'Agresja ZSRR na Polskę'
-author: DX
+author: 'DX'
 pub_date: '2018-08-12 18:09:41.933727+00:00'
-url1: https://pl.wikipedia.org/wiki/Agresja_ZSRR_na_Polsk%C4%99
+url1: 'https://pl.wikipedia.org/wiki/Agresja_ZSRR_na_Polsk%C4%99'
 image: notes/Polishborder17091939.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Polishborder17091939.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Polishborder17091939.jpg.0x300_q85_upscale.jpg

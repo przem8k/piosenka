@@ -1,9 +1,15 @@
 ---
 title: 'Mój Bóg'
-author: Boczuś
+author: 'Boczuś'
 pub_date: '2016-05-19 15:07:30.437988+00:00'
-original_title: Mój Bóg
-link_youtube: https://www.youtube.com/watch?v=sBWt26GD_SY
+original_title: 'Mój Bóg'
+link_youtube: 'https://www.youtube.com/watch?v=sBWt26GD_SY'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 Taki mi się trafił Bóg [a d]

@@ -1,8 +1,14 @@
 ---
 title: 'Opowieść pewnego emigranta'
-author: DX
+author: 'DX'
 pub_date: '2011-07-18 15:30:47.820202+00:00'
-link_youtube: https://www.youtube.com/watch?v=KV4Rg2UFN0o
+link_youtube: 'https://www.youtube.com/watch?v=KV4Rg2UFN0o'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/opowiesc_pewnego_emigranta.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/opowiesc_pewnego_emigranta.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/opowiesc_pewnego_emigranta.png.180x0_q85_upscale.jpg

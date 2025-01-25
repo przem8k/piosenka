@@ -1,6 +1,6 @@
 ---
 title: 'Paweł Wójcik'
-author: DX
+author: 'DX'
 pub_date: '2016-06-26 19:07:26.345218+00:00'
 image: artists/13528123_496943983830251_3843253094287292952_o.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/artists/13528123_496943983830251_3843253094287292952_o.jpg

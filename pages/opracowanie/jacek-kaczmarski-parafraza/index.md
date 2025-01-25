@@ -1,10 +1,16 @@
 ---
 title: 'Parafraza'
-author: Alek
+author: 'Alek'
 pub_date: '2013-05-28 19:31:38.873464+00:00'
 epigone: True
-link_youtube: http://www.youtube.com/watch?v=y5G4ynkC8Pw
+link_youtube: 'http://www.youtube.com/watch?v=y5G4ynkC8Pw'
 capo_fret: 5
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'pawel-konopacki'
+performers:
+ - 'trio-lodzko-chojnowskie'
 ---
 
 Dobrze, dobrze - wszędzie i zawsze, [a]

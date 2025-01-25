@@ -1,8 +1,14 @@
 ---
 title: 'Przyjaciół nikt nie będzie mi wybierał'
-author: DX
+author: 'DX'
 pub_date: '2018-09-23 11:15:08.461299+00:00'
-link_youtube: https://www.youtube.com/watch?v=dutgGRbvXdw
+link_youtube: 'https://www.youtube.com/watch?v=dutgGRbvXdw'
+text_authors:
+ - 'andrzej-garczarek'
+composers:
+ - 'andrzej-garczarek'
+performers:
+ - 'andrzej-garczarek'
 ---
 
 #ref

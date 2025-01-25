@@ -1,9 +1,9 @@
 ---
 title: 'Frans Hals a Dom Opieki'
-author: Alek
+author: 'Alek'
 pub_date: '2016-09-25 17:21:55.026052+00:00'
-url1: http://www.wga.hu/html_m/h/hals/frans/09-1666/86regen.html
-url2: https://en.wikipedia.org/wiki/Frans_Hals
+url1: 'http://www.wga.hu/html_m/h/hals/frans/09-1666/86regen.html'
+url2: 'https://en.wikipedia.org/wiki/Frans_Hals'
 image: song_annotations/Frans_Hals_-_De_regentessen_van_het_oudemannenhuis.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/Frans_Hals_-_De_regentessen_van_het_oudemannenhuis.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/Frans_Hals_-_De_regentessen_van_het_oudemannenhuis.jpg.0x300_q85_upscale.jpg

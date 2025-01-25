@@ -1,6 +1,6 @@
 ---
 title: 'Kanibalizm'
-author: DX
+author: 'DX'
 pub_date: '2017-10-09 03:12:03.188927+00:00'
 image: notes/kanibalizm.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/kanibalizm.jpg

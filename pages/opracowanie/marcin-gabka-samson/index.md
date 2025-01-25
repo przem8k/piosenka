@@ -1,7 +1,13 @@
 ---
 title: 'Samson'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-11-19 12:56:28.735997+00:00'
+text_authors:
+ - 'marcin-gabka'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 #a

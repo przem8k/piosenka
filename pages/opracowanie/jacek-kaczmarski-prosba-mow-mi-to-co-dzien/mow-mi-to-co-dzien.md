@@ -1,6 +1,6 @@
 ---
 title: 'Mów mi to co dzień...'
-author: DX
+author: 'DX'
 pub_date: '2016-12-11 13:59:08.518428+00:00'
 image: notes/T-55A_Martial_law_Poland.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/T-55A_Martial_law_Poland.jpg

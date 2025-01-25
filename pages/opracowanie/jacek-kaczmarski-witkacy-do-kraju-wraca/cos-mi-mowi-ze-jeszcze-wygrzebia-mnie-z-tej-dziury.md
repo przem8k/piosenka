@@ -1,10 +1,10 @@
 ---
 title: 'Coś mi mówi, że jeszcze wygrzebią mnie z tej dziury'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-09-03 13:12:52.726733+00:00'
-url1: http://nietylkozakopane.info/hollywoodzki-usmiech-witkacego/
-url2: https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Ignacy_Witkiewicz
-ref1: „Witkacy around the World”, Janusz Degler
+url1: 'http://nietylkozakopane.info/hollywoodzki-usmiech-witkacego/'
+url2: 'https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Ignacy_Witkiewicz'
+ref1: '„Witkacy around the World”, Janusz Degler'
 image: notes/ekshumacja-26-xi-1994-3.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/ekshumacja-26-xi-1994-3.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/ekshumacja-26-xi-1994-3.jpg.0x300_q85_upscale.jpg

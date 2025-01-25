@@ -1,10 +1,18 @@
 ---
 title: 'Kołysanka'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-12-07 21:40:11.607967+00:00'
-original_title: Ukolébavka
-link_youtube: https://www.youtube.com/watch?v=CWSEAx1zLCo
+original_title: 'Ukolébavka'
+link_youtube: 'https://www.youtube.com/watch?v=CWSEAx1zLCo'
 capo_fret: 1
+text_authors:
+ - 'karel-kryl'
+composers:
+ - 'karel-kryl'
+translators:
+ - 'witold-bartoszek'
+performers:
+ - 'karel-kryl'
 ---
 
 #zw

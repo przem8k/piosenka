@@ -1,9 +1,15 @@
 ---
 title: 'Bajka o Polsce'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-08-22 06:04:24.394875+00:00'
-link_youtube: https://www.youtube.com/watch?v=39sUrIv4_3c
+link_youtube: 'https://www.youtube.com/watch?v=39sUrIv4_3c'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 Popatrz na Polskę zatopioną we śnie, [a]

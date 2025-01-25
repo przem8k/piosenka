@@ -1,9 +1,15 @@
 ---
 title: 'Cena sławy'
-author: DX
+author: 'DX'
 pub_date: '2015-03-30 19:36:58.046381+00:00'
-original_title: Les trompettes de la renommée
-link_youtube: https://www.youtube.com/watch?v=nRykm192FVs
+original_title: 'Les trompettes de la renommée'
+link_youtube: 'https://www.youtube.com/watch?v=nRykm192FVs'
+text_authors:
+ - 'georges-brassens'
+composers:
+ - 'georges-brassens'
+performers:
+ - 'zespol-reprezentacyjny'
 ---
 
 #zw

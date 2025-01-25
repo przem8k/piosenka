@@ -1,8 +1,16 @@
 ---
 title: 'Żołnierz tego świata'
-author: DX
+author: 'DX'
 pub_date: '2011-10-02 18:01:05.543200+00:00'
-original_title: Universal soldier
+original_title: 'Universal soldier'
+text_authors:
+ - 'buffy-sainte-marie'
+composers:
+ - 'buffy-sainte-marie'
+translators:
+ - 'mariusz-zadura'
+performers:
+ - 'mariusz-zadura'
 ---
 
 #zwrotka

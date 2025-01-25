@@ -1,11 +1,11 @@
 ---
 title: 'Muszkieterowie – już nie ci sami'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-26 13:39:31.428747+00:00'
-url1: https://pl.wikipedia.org/wiki/Dwadzie%C5%9Bcia_lat_p%C3%B3%C5%BAniej
-url2: http://www.kaczmarski.art.pl/tworczosc/wiersze/dwadziescia-lat-pozniej/
-ref1: W dwadzieścia lat później
-Aleksander Dumas (ojciec)
+url1: 'https://pl.wikipedia.org/wiki/Dwadzie%C5%9Bcia_lat_p%C3%B3%C5%BAniej'
+url2: 'http://www.kaczmarski.art.pl/tworczosc/wiersze/dwadziescia-lat-pozniej/'
+ref1: 'W dwadzieścia lat później
+Aleksander Dumas (ojciec)'
 image: notes/347638.1.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/347638.1.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/347638.1.jpg.0x300_q85_upscale.jpg

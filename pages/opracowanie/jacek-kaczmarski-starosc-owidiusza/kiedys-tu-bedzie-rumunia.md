@@ -1,6 +1,6 @@
 ---
 title: 'Kiedyś tu będzie Rumunia'
-author: DX
+author: 'DX'
 pub_date: '2017-05-27 08:25:19.703506+00:00'
 image: notes/ovide-smaller.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/ovide-smaller.jpg

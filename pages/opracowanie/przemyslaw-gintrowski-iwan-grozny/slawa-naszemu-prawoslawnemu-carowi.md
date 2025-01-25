@@ -1,9 +1,9 @@
 ---
 title: 'Sława naszemu prawosławnemu carowi'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-25 20:18:02.881831+00:00'
-url1: https://pl.wikipedia.org/wiki/Iwan_IV_Gro%C5%BAny
-url2: https://sciaga.pl/tekst/88577-89-iwan_iv_grozny
+url1: 'https://pl.wikipedia.org/wiki/Iwan_IV_Gro%C5%BAny'
+url2: 'https://sciaga.pl/tekst/88577-89-iwan_iv_grozny'
 image: notes/Ivan_IV_by_anonim_18th_c._GIM.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Ivan_IV_by_anonim_18th_c._GIM.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Ivan_IV_by_anonim_18th_c._GIM.jpg.0x300_q85_upscale.jpg

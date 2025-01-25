@@ -1,8 +1,14 @@
 ---
 title: 'Mufka'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-10-31 12:50:42.442830+00:00'
-link_youtube: https://www.youtube.com/watch?v=X6unJdM252w
+link_youtube: 'https://www.youtube.com/watch?v=X6unJdM252w'
+composers:
+ - 'tradycyjna'
+translators:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/mufka.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/mufka.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/mufka.png.180x0_q85_upscale.jpg

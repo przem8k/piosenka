@@ -1,6 +1,6 @@
 ---
 title: 'Język dyplomacji'
-author: DX
+author: 'DX'
 pub_date: '2017-08-28 18:58:02.794760+00:00'
 image: notes/selections_contenuon970-1af2a.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/selections_contenuon970-1af2a.jpg

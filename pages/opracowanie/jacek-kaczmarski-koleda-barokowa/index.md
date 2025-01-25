@@ -1,8 +1,15 @@
 ---
 title: 'Kolęda barokowa'
-author: RK
+author: 'RK'
 pub_date: '2012-11-24 13:28:42.638805+00:00'
-link_youtube: http://www.youtube.com/watch?v=eXeUbYLSKTA
+link_youtube: 'http://www.youtube.com/watch?v=eXeUbYLSKTA'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'zbigniew-lapinski'
 score1: scores/koleda_barokowa.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/koleda_barokowa.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/koleda_barokowa.png.180x0_q85_upscale.jpg

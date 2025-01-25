@@ -1,8 +1,14 @@
 ---
 title: 'Frodo'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-21 18:32:51.246349+00:00'
-link_youtube: https://www.youtube.com/watch?v=BAasqLlTzF8
+link_youtube: 'https://www.youtube.com/watch?v=BAasqLlTzF8'
+text_authors:
+ - 'marcin-gabka'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 [a d E7 a d E7]

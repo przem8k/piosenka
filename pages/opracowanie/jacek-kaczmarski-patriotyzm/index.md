@@ -1,9 +1,15 @@
 ---
 title: 'Patriotyzm'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-09-29 13:24:29.295401+00:00'
-link_youtube: https://www.youtube.com/watch?v=M9UUYh0xirc
+link_youtube: 'https://www.youtube.com/watch?v=M9UUYh0xirc'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #1

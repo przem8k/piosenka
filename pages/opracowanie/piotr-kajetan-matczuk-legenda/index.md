@@ -1,7 +1,13 @@
 ---
 title: 'Legenda'
-author: DX
+author: 'DX'
 pub_date: '2011-08-15 23:56:52.791533+00:00'
+text_authors:
+ - 'krzysztof-kamil-baczynski'
+composers:
+ - 'piotr-kajetan-matczuk'
+performers:
+ - 'piotr-kajetan-matczuk'
 ---
 
 Wydęte karawele [a]

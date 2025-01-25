@@ -1,8 +1,14 @@
 ---
 title: 'Kołysanka Króla Artura'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-23 10:53:38.253603+00:00'
-link_youtube: https://www.youtube.com/watch?v=Bhkb0MLi-kU
+link_youtube: 'https://www.youtube.com/watch?v=Bhkb0MLi-kU'
+text_authors:
+ - 'jerzy-czech'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/kolysanka_krola_artura.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kolysanka_krola_artura.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kolysanka_krola_artura.png.180x0_q85_upscale.png

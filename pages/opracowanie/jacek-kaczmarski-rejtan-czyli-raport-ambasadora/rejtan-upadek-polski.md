@@ -1,8 +1,8 @@
 ---
 title: 'Rejtan – Upadek Polski'
-author: DX
+author: 'DX'
 pub_date: '2017-10-08 19:02:32.267421+00:00'
-url1: https://pl.wikipedia.org/wiki/Rejtan_(obraz_Jana_Matejki)
+url1: 'https://pl.wikipedia.org/wiki/Rejtan_(obraz_Jana_Matejki)'
 image: notes/Rejtan_Upadek_Polski_Matejko.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Rejtan_Upadek_Polski_Matejko.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Rejtan_Upadek_Polski_Matejko.jpg.0x300_q85_upscale.jpg

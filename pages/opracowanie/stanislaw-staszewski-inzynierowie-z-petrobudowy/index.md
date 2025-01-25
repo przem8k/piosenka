@@ -1,8 +1,16 @@
 ---
 title: 'Inżynierowie z Petrobudowy'
-author: DX
+author: 'DX'
 pub_date: '2016-10-29 18:57:33.985798+00:00'
-link_youtube: https://www.youtube.com/watch?v=JdsoUtQFmqE
+link_youtube: 'https://www.youtube.com/watch?v=JdsoUtQFmqE'
+text_authors:
+ - 'stanislaw-staszewski'
+composers:
+ - 'stanislaw-staszewski'
+performers:
+ - 'stanislaw-staszewski'
+ - 'jacek-kaczmarski'
+ - 'kazimierz-staszewski'
 ---
 
 #zw

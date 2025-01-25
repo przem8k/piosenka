@@ -1,9 +1,9 @@
 ---
 title: 'Siła, co zdruzgotała'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-30 18:34:07.403073+00:00'
-url1: https://pl.wikipedia.org/wiki/Trz%C4%99sienie_ziemi_w_Armenii_(1988)
-ref1: Zapowiedź z „Kwadransu Jacka Kaczmarskiego”
+url1: 'https://pl.wikipedia.org/wiki/Trz%C4%99sienie_ziemi_w_Armenii_(1988)'
+ref1: 'Zapowiedź z „Kwadransu Jacka Kaczmarskiego”'
 image: notes/ararat.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/ararat.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/ararat.jpg.0x300_q85_upscale.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Obława II'
-author: DX
+author: 'DX'
 pub_date: '2011-05-30 21:27:21.750769+00:00'
-link_youtube: https://www.youtube.com/watch?v=kgAhw68mHkg
+link_youtube: 'https://www.youtube.com/watch?v=kgAhw68mHkg'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/oblawa_ii.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/oblawa_ii.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/oblawa_ii.png.180x0_q85_upscale.jpg

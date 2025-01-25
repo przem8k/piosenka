@@ -1,6 +1,6 @@
 ---
 title: 'Życie i śmierć w oku Hansa Baldunga'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-22 17:48:29.457218+00:00'
 image: notes/three-ages-of-woman-and-death-hans-baldung-grien.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/three-ages-of-woman-and-death-hans-baldung-grien.jpg

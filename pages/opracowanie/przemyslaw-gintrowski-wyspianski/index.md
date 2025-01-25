@@ -1,9 +1,15 @@
 ---
 title: 'Wyspiański'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-01-16 20:31:56.456444+00:00'
-link_youtube: https://www.youtube.com/watch?v=Nu30GKGtYcE
+link_youtube: 'https://www.youtube.com/watch?v=Nu30GKGtYcE'
 capo_fret: 3
+text_authors:
+ - 'jerzy-czech'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/wyspiaski.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wyspiaski.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wyspiaski.png.180x0_q85_upscale.png

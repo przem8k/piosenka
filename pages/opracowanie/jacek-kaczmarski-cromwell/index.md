@@ -1,8 +1,14 @@
 ---
 title: 'Cromwell'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-23 17:02:35.230521+00:00'
-link_youtube: https://www.youtube.com/watch?v=ERBV09Rap2k
+link_youtube: 'https://www.youtube.com/watch?v=ERBV09Rap2k'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/cromwell.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/cromwell.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/cromwell.png.180x0_q85_upscale.png

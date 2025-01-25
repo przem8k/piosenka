@@ -1,8 +1,14 @@
 ---
 title: 'Kantyczka'
-author: DX
+author: 'DX'
 pub_date: '2014-01-06 21:47:45.660147+00:00'
-link_youtube: http://www.youtube.com/watch?v=nMLA-vjxnXE
+link_youtube: 'http://www.youtube.com/watch?v=nMLA-vjxnXE'
+text_authors:
+ - 'krzysztof-maria-sieniawski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/Kantyczka.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Kantyczka.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Kantyczka.png.180x0_q85_upscale.jpg

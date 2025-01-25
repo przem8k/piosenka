@@ -1,8 +1,14 @@
 ---
 title: 'Schulz'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-06-12 12:21:17.424265+00:00'
-link_youtube: https://www.youtube.com/watch?v=gEYdB3ogYMw
+link_youtube: 'https://www.youtube.com/watch?v=gEYdB3ogYMw'
+text_authors:
+ - 'jacek-kleyff'
+composers:
+ - 'jacek-kleyff'
+performers:
+ - 'jacek-kleyff'
 ---
 
 #zwrotka

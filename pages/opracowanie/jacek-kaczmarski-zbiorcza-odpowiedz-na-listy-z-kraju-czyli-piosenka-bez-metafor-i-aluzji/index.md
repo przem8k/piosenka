@@ -1,9 +1,15 @@
 ---
 title: 'Zbiorcza odpowiedź na listy z kraju, czyli piosenka bez metafor i aluzji'
-author: AŁ
+author: 'AŁ'
 pub_date: '2013-05-16 11:59:42.203063+00:00'
-link_youtube: https://www.youtube.com/watch?v=_aF05vYHvpk
+link_youtube: 'https://www.youtube.com/watch?v=_aF05vYHvpk'
 capo_fret: 4
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zwrotka

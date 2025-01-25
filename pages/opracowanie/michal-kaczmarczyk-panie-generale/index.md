@@ -1,9 +1,13 @@
 ---
 title: 'Panie Generale'
-author: reuter
+author: 'reuter'
 pub_date: '2018-07-17 19:55:56.768669+00:00'
-link_youtube: https://www.youtube.com/watch?v=gA5IRhWcXCc
+link_youtube: 'https://www.youtube.com/watch?v=gA5IRhWcXCc'
 capo_fret: 2
+text_authors:
+ - 'michal-kaczmarczyk'
+composers:
+ - 'michal-kaczmarczyk'
 ---
 
 #zw

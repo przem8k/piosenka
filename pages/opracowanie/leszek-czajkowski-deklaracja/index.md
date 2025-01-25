@@ -1,8 +1,14 @@
 ---
 title: 'Deklaracja'
-author: DX
+author: 'DX'
 pub_date: '2011-06-27 14:14:46.490626+00:00'
-link_youtube: https://www.youtube.com/watch?v=hhrIDt2yI50
+link_youtube: 'https://www.youtube.com/watch?v=hhrIDt2yI50'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'jakub-medrzycki'
+performers:
+ - 'czajkowski-medrzycki-piekarczyk'
 ---
 
 #zw

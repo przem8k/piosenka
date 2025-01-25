@@ -1,8 +1,8 @@
 ---
 title: 'Przecież wrócę, gdy zacznie się dzień!'
-author: DX
+author: 'DX'
 pub_date: '2018-08-19 17:46:38.292203+00:00'
-url1: https://pl.wikipedia.org/wiki/W%C5%82adimir_Wysocki
+url1: 'https://pl.wikipedia.org/wiki/W%C5%82adimir_Wysocki'
 image: notes/stamp_wysocki.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/stamp_wysocki.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/stamp_wysocki.jpg.0x300_q85_upscale.jpg

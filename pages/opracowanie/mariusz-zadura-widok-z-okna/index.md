@@ -1,7 +1,13 @@
 ---
 title: 'Widok z okna'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 13:23:32.484692+00:00'
+text_authors:
+ - 'mariusz-zadura'
+composers:
+ - 'mariusz-zadura'
+performers:
+ - 'mariusz-zadura'
 ---
 
 Wymijamy się w milczeniu 

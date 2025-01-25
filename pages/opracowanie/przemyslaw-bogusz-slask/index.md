@@ -1,7 +1,13 @@
 ---
 title: 'Śląsk'
-author: DX
+author: 'DX'
 pub_date: '2011-05-12 20:26:12.204703+00:00'
+text_authors:
+ - 'przemyslaw-bogusz'
+composers:
+ - 'przemyslaw-bogusz'
+performers:
+ - 'przemyslaw-bogusz'
 ---
 
 W kraju szczęśliwych ludzi [h e]

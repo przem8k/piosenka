@@ -1,8 +1,14 @@
 ---
 title: 'Władca Ciemności'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 10:13:17.588338+00:00'
-link_youtube: https://www.youtube.com/watch?v=UAXMVNKTIVU
+link_youtube: 'https://www.youtube.com/watch?v=UAXMVNKTIVU'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/wladca_ciemnosci.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wladca_ciemnosci.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wladca_ciemnosci.png.180x0_q85_upscale.png

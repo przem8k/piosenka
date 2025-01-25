@@ -1,8 +1,15 @@
 ---
 title: 'Rokosz'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-21 20:25:37.608979+00:00'
-link_youtube: https://www.youtube.com/watch?v=sXasr0NxkNI
+link_youtube: 'https://www.youtube.com/watch?v=sXasr0NxkNI'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'zbigniew-lapinski'
 score1: scores/rokosz.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/rokosz.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/rokosz.png.180x0_q85_upscale.png

@@ -1,8 +1,14 @@
 ---
 title: 'Wolny dzień'
-author: reuter
+author: 'reuter'
 pub_date: '2015-05-22 20:00:59.940622+00:00'
-link_youtube: https://www.youtube.com/watch?v=zxE9JY41yB0
+link_youtube: 'https://www.youtube.com/watch?v=zxE9JY41yB0'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 #zw

@@ -1,8 +1,14 @@
 ---
 title: 'Na zakręcie'
-author: reuter
+author: 'reuter'
 pub_date: '2020-05-11 14:32:22.431403+00:00'
-link_youtube: https://www.youtube.com/watch?v=Mz9r9Y74_Ag
+link_youtube: 'https://www.youtube.com/watch?v=Mz9r9Y74_Ag'
+text_authors:
+ - 'agnieszka-osiecka'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'krystyna-janda'
 ---
 
 [e D a e D a]

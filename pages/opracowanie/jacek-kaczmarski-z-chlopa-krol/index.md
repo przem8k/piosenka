@@ -1,9 +1,15 @@
 ---
 title: 'Z chłopa król'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2014-09-04 21:55:28.464727+00:00'
-link_youtube: https://www.youtube.com/watch?v=d0x_Bq95aaU
+link_youtube: 'https://www.youtube.com/watch?v=d0x_Bq95aaU'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/Z_chlopa_krol.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Z_chlopa_krol.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Z_chlopa_krol.png.180x0_q85_upscale.jpg

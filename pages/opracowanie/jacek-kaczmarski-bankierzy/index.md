@@ -1,8 +1,14 @@
 ---
 title: 'Bankierzy'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-29 12:59:28.057248+00:00'
-link_youtube: https://www.youtube.com/watch?v=b-gnTuMZu-4
+link_youtube: 'https://www.youtube.com/watch?v=b-gnTuMZu-4'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/bankierzy01.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/bankierzy01.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/bankierzy01.png.180x0_q85_upscale.png

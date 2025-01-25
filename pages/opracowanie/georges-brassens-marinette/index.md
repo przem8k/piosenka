@@ -1,9 +1,17 @@
 ---
 title: 'Marinette'
-author: DX
+author: 'DX'
 pub_date: '2016-05-18 21:52:50.253283+00:00'
-original_title: Marinette
-link_youtube: https://www.youtube.com/watch?v=5gquJuwEupE
+original_title: 'Marinette'
+link_youtube: 'https://www.youtube.com/watch?v=5gquJuwEupE'
+text_authors:
+ - 'georges-brassens'
+composers:
+ - 'georges-brassens'
+translators:
+ - 'jaroslaw-gugala'
+performers:
+ - 'zespol-reprezentacyjny'
 ---
 
 [D D/Dis D/E D/A]

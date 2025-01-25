@@ -1,8 +1,14 @@
 ---
 title: 'Psalm Rodowodowy'
-author: RK
+author: 'RK'
 pub_date: '2012-04-08 22:23:36.247575+00:00'
-link_youtube: http://www.youtube.com/watch?v=tLcpwwSRx24
+link_youtube: 'http://www.youtube.com/watch?v=tLcpwwSRx24'
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 #zwrotka

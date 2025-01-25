@@ -1,9 +1,15 @@
 ---
 title: 'Dysputa poważna pomiędzy Ojcem z Zakonu Kaznodziejskiego a braciszkiem od Braci Mniejszych'
-author: RK
+author: 'RK'
 pub_date: '2012-04-11 10:31:24.552103+00:00'
-link_youtube: http://www.youtube.com/watch?v=CG4pO_VzLFw
+link_youtube: 'http://www.youtube.com/watch?v=CG4pO_VzLFw'
 capo_fret: 2
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 #zwrotka

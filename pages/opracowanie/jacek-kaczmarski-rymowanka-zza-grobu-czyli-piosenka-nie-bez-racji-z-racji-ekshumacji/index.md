@@ -1,9 +1,15 @@
 ---
 title: 'Rymowanka zza grobu, czyli piosenka nie bez racji, z racji ekshumacji'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-09-04 19:44:54.573706+00:00'
-link_youtube: https://www.youtube.com/watch?v=lY5bH8uzDiQ
+link_youtube: 'https://www.youtube.com/watch?v=lY5bH8uzDiQ'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #1

@@ -1,6 +1,6 @@
 ---
 title: 'Tytuł piosenki'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2018-02-16 16:08:02.797882+00:00'
 ---
 

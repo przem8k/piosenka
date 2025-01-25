@@ -1,7 +1,13 @@
 ---
 title: 'Chłopcy'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 08:15:24.210439+00:00'
+text_authors:
+ - 'mariusz-zadura'
+composers:
+ - 'tomasz-szczesny'
+performers:
+ - 'mariusz-zadura'
 ---
 
 [e A e A]

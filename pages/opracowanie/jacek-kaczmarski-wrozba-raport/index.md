@@ -1,9 +1,15 @@
 ---
 title: 'Wróżba'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-08-01 15:04:14.935706+00:00'
-disambig: Raport z oblężonego miasta
-link_youtube: https://www.youtube.com/watch?v=KJRqPQo_yXU
+disambig: 'Raport z oblężonego miasta'
+link_youtube: 'https://www.youtube.com/watch?v=KJRqPQo_yXU'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #1

@@ -1,8 +1,14 @@
 ---
 title: 'Rzeź niewiniątek'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2014-09-07 13:48:26.815425+00:00'
-link_youtube: https://www.youtube.com/watch?v=yFcQX8NotVw
+link_youtube: 'https://www.youtube.com/watch?v=yFcQX8NotVw'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/Rzez_niewiniatek.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Rzez_niewiniatek.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Rzez_niewiniatek.png.180x0_q85_upscale.jpg

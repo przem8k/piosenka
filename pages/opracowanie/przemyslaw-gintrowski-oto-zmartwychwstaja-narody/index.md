@@ -1,8 +1,12 @@
 ---
 title: 'Oto zmartwychwstają narody'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-02 14:24:04.163416+00:00'
-link_youtube: https://www.youtube.com/watch?v=LA-w5uu0tFs
+link_youtube: 'https://www.youtube.com/watch?v=LA-w5uu0tFs'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 Tekst: Juliusz Słowacki

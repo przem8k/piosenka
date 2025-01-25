@@ -1,9 +1,9 @@
 ---
 title: 'Ksiądz prymas siedział bokiem...'
-author: reuter
+author: 'reuter'
 pub_date: '2017-09-08 22:44:13.474786+00:00'
-url1: http://idziemy.pl/komentarze/apostol-zgody
-url2: https://wpolityce.pl/polityka/149362-wazny-wywiad-ze-sp-prymasem-glempem-o-stanie-wojennym-wyjscie-z-tamtej-trudnej-sytuacji-widzialem-nie-w-kombinacjach-politycznych-lecz-w-zawierzeniu-panu-bogu
+url1: 'http://idziemy.pl/komentarze/apostol-zgody'
+url2: 'https://wpolityce.pl/polityka/149362-wazny-wywiad-ze-sp-prymasem-glempem-o-stanie-wojennym-wyjscie-z-tamtej-trudnej-sytuacji-widzialem-nie-w-kombinacjach-politycznych-lecz-w-zawierzeniu-panu-bogu'
 image: notes/glemp.jpeg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/glemp.jpeg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/glemp.jpeg.0x300_q85_upscale.jpg

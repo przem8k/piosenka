@@ -1,9 +1,9 @@
 ---
 title: 'Otwórzcie mi, stróże anieli…'
-author: Zbik
+author: 'Zbik'
 pub_date: '2020-07-20 11:34:12.889688+00:00'
-url1: https://repozytorium.umk.pl/bitstream/handle/item/1783/sieniawski.pdf
-ref1: Kamil Dźwinel, Małgorzata Lisecka: Krzysztof Maria Sieniawski śpiewany. Wokół muzycznej interpretacji tekstu poetyckiego
+url1: 'https://repozytorium.umk.pl/bitstream/handle/item/1783/sieniawski.pdf'
+ref1: 'Kamil Dźwinel, Małgorzata Lisecka: Krzysztof Maria Sieniawski śpiewany. Wokół muzycznej interpretacji tekstu poetyckiego'
 image: notes/jesienin_i_gorodecki1916.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/jesienin_i_gorodecki1916.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/jesienin_i_gorodecki1916.jpg.0x300_q85_upscale.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Lokalna'
-author: DX
+author: 'DX'
 pub_date: '2012-10-09 22:46:11.462960+00:00'
-link_youtube: http://www.youtube.com/watch?v=K11uzH7Cpmw
+link_youtube: 'http://www.youtube.com/watch?v=K11uzH7Cpmw'
+text_authors:
+ - 'pawel-wojcik'
+composers:
+ - 'pawel-wojcik'
+performers:
+ - 'pawel-wojcik'
 ---
 
 #zw1

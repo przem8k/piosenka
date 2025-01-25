@@ -1,8 +1,14 @@
 ---
 title: 'Niewolnictwo'
-author: RK
+author: 'RK'
 pub_date: '2012-10-25 19:27:46.670651+00:00'
-link_youtube: https://www.youtube.com/watch?v=otqYM2fHXV8
+link_youtube: 'https://www.youtube.com/watch?v=otqYM2fHXV8'
+text_authors:
+ - 'zdzislaw-bronski-uskok'
+composers:
+ - 'andrzej-kolakowski'
+performers:
+ - 'andrzej-kolakowski'
 ---
 
 #zw

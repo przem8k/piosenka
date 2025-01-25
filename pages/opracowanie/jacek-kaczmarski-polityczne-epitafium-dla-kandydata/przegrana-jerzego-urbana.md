@@ -1,9 +1,9 @@
 ---
 title: 'Przegrana Jerzego Urbana'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-10-11 18:04:00.234741+00:00'
-url1: http://prawo.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WMP19890210149
-url2: https://dzieje.pl/aktualnosci/urban-przegrana-mojej-formacji-4-czerwca-89-byla-korzystna-dla-polski
+url1: 'http://prawo.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WMP19890210149'
+url2: 'https://dzieje.pl/aktualnosci/urban-przegrana-mojej-formacji-4-czerwca-89-byla-korzystna-dla-polski'
 image: notes/Ogłoszenie_wybory_1989_ulica_Stalowa_41_w_Warszawie.JPG
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Ogłoszenie_wybory_1989_ulica_Stalowa_41_w_Warszawie.JPG
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Og%C5%82oszenie_wybory_1989_ulica_Stalowa_41_w_Warszawie.JPG.0x300_q85_upscale.jpg

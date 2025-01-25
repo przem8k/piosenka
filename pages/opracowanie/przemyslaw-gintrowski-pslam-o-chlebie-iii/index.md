@@ -1,8 +1,14 @@
 ---
 title: 'Psalm o chlebie III'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-27 21:03:11.657860+00:00'
-link_youtube: https://www.youtube.com/watch?v=Sanwgvr9ElY
+link_youtube: 'https://www.youtube.com/watch?v=Sanwgvr9ElY'
+text_authors:
+ - 'tadeusz-nowak'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #1

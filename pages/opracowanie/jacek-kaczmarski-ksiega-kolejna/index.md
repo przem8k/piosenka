@@ -1,8 +1,15 @@
 ---
 title: 'Księga kolejna'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-29 15:52:07.364856+00:00'
-link_youtube: https://www.youtube.com/watch?v=_AiHhytfY78
+link_youtube: 'https://www.youtube.com/watch?v=_AiHhytfY78'
+text_authors:
+ - 'stanislaw-klawe'
+composers:
+ - 'stanislaw-klawe'
+performers:
+ - 'stanislaw-klawe'
+ - 'jacek-kaczmarski'
 ---
 
 #zwrotka

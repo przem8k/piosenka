@@ -1,9 +1,15 @@
 ---
 title: 'Pociecha'
-author: reuter
+author: 'reuter'
 pub_date: '2020-07-14 20:19:43.751723+00:00'
 epigone: True
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'michal-kaczmarczyk'
+performers:
+ - 'michal-kaczmarczyk'
 ---
 
 [F C B0 E (a)]

@@ -1,8 +1,14 @@
 ---
 title: 'Ambasadorowie'
-author: DX
+author: 'DX'
 pub_date: '2012-04-29 01:26:58.057969+00:00'
-link_youtube: https://www.youtube.com/watch?v=kgZLZmXXXbg
+link_youtube: 'https://www.youtube.com/watch?v=kgZLZmXXXbg'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/ambasadorowie.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ambasadorowie.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ambasadorowie.png.180x0_q85_upscale.jpg

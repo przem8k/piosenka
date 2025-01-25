@@ -1,8 +1,14 @@
 ---
 title: 'Pieśń o bębnie'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-04-13 19:35:11.663732+00:00'
-link_youtube: https://www.youtube.com/watch?v=Vr48XoPOEOI
+link_youtube: 'https://www.youtube.com/watch?v=Vr48XoPOEOI'
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #1

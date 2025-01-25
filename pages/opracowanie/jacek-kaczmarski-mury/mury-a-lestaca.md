@@ -1,8 +1,8 @@
 ---
 title: 'Mury a l'Estaca'
-author: DX
+author: 'DX'
 pub_date: '2016-07-24 20:26:44.723743+00:00'
-url1: http://barcelona.msz.gov.pl/pl/c/MOBILE/aktualnosci/0_na_pewno_runie__1989_rok__mur_runal_w_polsce___
+url1: 'http://barcelona.msz.gov.pl/pl/c/MOBILE/aktualnosci/0_na_pewno_runie__1989_rok__mur_runal_w_polsce___'
 image: song_annotations/hqdefault.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/hqdefault.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/hqdefault.jpg.0x300_q85_upscale.jpg

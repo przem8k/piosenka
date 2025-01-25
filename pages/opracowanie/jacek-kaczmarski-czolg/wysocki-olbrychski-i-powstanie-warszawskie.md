@@ -1,8 +1,8 @@
 ---
 title: 'Wysocki, Olbrychski i Powstanie Warszawskie'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 11:58:14.221238+00:00'
-url1: http://www.kaczmarski.art.pl/tworczosc/wiersze/czolg/
+url1: 'http://www.kaczmarski.art.pl/tworczosc/wiersze/czolg/'
 image: notes/Wyzwolenie_Pragi_wrzesień_1944.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Wyzwolenie_Pragi_wrzesień_1944.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Wyzwolenie_Pragi_wrzesie%C5%84_1944.jpg.0x300_q85_upscale.jpg

@@ -1,8 +1,14 @@
 ---
 title: 'Przypowieść prawdziwa o szaliku'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-10-14 09:07:50.323733+00:00'
-link_youtube: https://www.youtube.com/watch?v=PItZDIdKgH8
+link_youtube: 'https://www.youtube.com/watch?v=PItZDIdKgH8'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #1

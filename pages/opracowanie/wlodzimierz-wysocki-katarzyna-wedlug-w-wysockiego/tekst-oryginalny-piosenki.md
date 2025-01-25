@@ -1,8 +1,8 @@
 ---
 title: 'Tekst oryginalny piosenki'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2019-05-24 22:19:15.719614+00:00'
-url1: http://vysotskiy-lit.ru/vysotskiy/stihi/087.htm
+url1: 'http://vysotskiy-lit.ru/vysotskiy/stihi/087.htm'
 ---
 
 Jeżeli ktoś chciałby spróbować zaśpiewać w oryginale oto tekst po rosyjsku:

@@ -1,8 +1,14 @@
 ---
 title: 'Muszla'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-05-06 18:56:58.242993+00:00'
-link_youtube: https://www.youtube.com/watch?v=5JHE2sXm5vk
+link_youtube: 'https://www.youtube.com/watch?v=5JHE2sXm5vk'
+text_authors:
+ - 'zbigniew-herbert'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #1

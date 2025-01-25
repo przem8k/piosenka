@@ -1,8 +1,15 @@
 ---
 title: 'Autoportret Witkacego'
-author: DX
+author: 'DX'
 pub_date: '2011-05-31 22:27:29.006783+00:00'
-link_youtube: https://www.youtube.com/watch?v=VyXsRzR0ioA
+link_youtube: 'https://www.youtube.com/watch?v=VyXsRzR0ioA'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'kaczmarski-gintrowski-lapinski'
+ - 'przemyslaw-gintrowski'
 score1: scores/autoportret_witkacego.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/autoportret_witkacego.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/autoportret_witkacego.png.180x0_q85_upscale.jpg

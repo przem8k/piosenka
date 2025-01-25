@@ -1,9 +1,15 @@
 ---
 title: 'Baran'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-08-30 15:09:38.613816+00:00'
-link_youtube: https://www.youtube.com/watch?v=j0f7V314JPk
+link_youtube: 'https://www.youtube.com/watch?v=j0f7V314JPk'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/baran1.jpg
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/baran1.jpg
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/baran1.jpg.180x0_q85_upscale.jpg

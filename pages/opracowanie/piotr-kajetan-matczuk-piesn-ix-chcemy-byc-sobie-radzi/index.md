@@ -1,7 +1,13 @@
 ---
 title: 'Pieśń IX "Chcemy być sobie radzi"'
-author: DX
+author: 'DX'
 pub_date: '2011-12-03 11:12:12.468243+00:00'
+text_authors:
+ - 'jan-kochanowski'
+composers:
+ - 'piotr-kajetan-matczuk'
+performers:
+ - 'piotr-kajetan-matczuk'
 ---
 
 #refren

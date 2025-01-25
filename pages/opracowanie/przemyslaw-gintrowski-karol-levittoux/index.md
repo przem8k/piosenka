@@ -1,8 +1,14 @@
 ---
 title: 'Karol Levittoux'
-author: DX
+author: 'DX'
 pub_date: '2013-05-14 22:05:58.378636+00:00'
-link_youtube: https://www.youtube.com/watch?v=1sK-yQAQSDo
+link_youtube: 'https://www.youtube.com/watch?v=1sK-yQAQSDo'
+text_authors:
+ - 'jerzy-czech'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 score1: scores/karol_levittoux.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/karol_levittoux.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/karol_levittoux.png.180x0_q85_upscale.jpg

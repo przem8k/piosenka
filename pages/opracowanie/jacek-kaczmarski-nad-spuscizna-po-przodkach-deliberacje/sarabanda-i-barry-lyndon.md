@@ -1,9 +1,9 @@
 ---
 title: 'Sarabanda i Barry Lyndon'
-author: DX
+author: 'DX'
 pub_date: '2016-08-23 17:32:33.780525+00:00'
-url1: https://pl.wikipedia.org/wiki/9_Suites_de_Pi%C3%A8ces_pour_le_Clavecin
-url2: http://docplayer.pl/6523580-Czuje-sie-jak-odbiornik-wedrujacych-tematow.html
+url1: 'https://pl.wikipedia.org/wiki/9_Suites_de_Pi%C3%A8ces_pour_le_Clavecin'
+url2: 'http://docplayer.pl/6523580-Czuje-sie-jak-odbiornik-wedrujacych-tematow.html'
 image: song_annotations/Barry_Lyndon_A.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/Barry_Lyndon_A.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/Barry_Lyndon_A.jpg.0x300_q85_upscale.jpg

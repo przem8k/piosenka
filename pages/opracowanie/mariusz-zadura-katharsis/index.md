@@ -1,7 +1,13 @@
 ---
 title: 'Katharsis'
-author: Ewus
+author: 'Ewus'
 pub_date: '2011-06-17 07:59:43.512798+00:00'
+text_authors:
+ - 'mariusz-zadura'
+composers:
+ - 'mariusz-zadura'
+performers:
+ - 'mariusz-zadura'
 ---
 
 #zw

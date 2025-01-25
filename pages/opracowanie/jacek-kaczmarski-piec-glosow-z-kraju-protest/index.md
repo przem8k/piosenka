@@ -1,8 +1,14 @@
 ---
 title: 'Pięć głosów z Kraju. Protest'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-12-30 20:21:55.579611+00:00'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/protest.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/protest.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/protest.png.180x0_q85_upscale.jpg

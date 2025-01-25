@@ -1,9 +1,15 @@
 ---
 title: 'Limeryki o narodach'
-author: DX
+author: 'DX'
 pub_date: '2017-09-18 20:14:45.573494+00:00'
-link_youtube: https://www.youtube.com/watch?v=tAyS162QpZY
+link_youtube: 'https://www.youtube.com/watch?v=tAyS162QpZY'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/limeryki_o_narodach.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/limeryki_o_narodach.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/limeryki_o_narodach.png.180x0_q85_upscale.png

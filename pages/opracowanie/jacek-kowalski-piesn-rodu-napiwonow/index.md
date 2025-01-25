@@ -1,8 +1,14 @@
 ---
 title: 'Pieśń rodu Napiwonów'
-author: Zbik
+author: 'Zbik'
 pub_date: '2022-04-12 14:16:30.976588+00:00'
-link_youtube: https://www.youtube.com/watch?v=k3BkLT2YsrI
+link_youtube: 'https://www.youtube.com/watch?v=k3BkLT2YsrI'
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 #zwrotka

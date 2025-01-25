@@ -1,8 +1,14 @@
 ---
 title: 'Nasza klasa'
-author: DX
+author: 'DX'
 pub_date: '2011-05-07 13:49:19.936826+00:00'
-link_youtube: https://www.youtube.com/watch?v=NTNcxGVgn9I
+link_youtube: 'https://www.youtube.com/watch?v=NTNcxGVgn9I'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/nasza_klasa.jpg
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/nasza_klasa.jpg
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/nasza_klasa.jpg.180x0_q85_upscale.jpg

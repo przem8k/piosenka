@@ -1,9 +1,15 @@
 ---
 title: 'List'
-author: reuter
+author: 'reuter'
 pub_date: '2018-11-26 22:10:00.427111+00:00'
-disambig: Raport z Oblężonego Miasta
-link_youtube: https://www.youtube.com/watch?v=zvl53ArGkDk
+disambig: 'Raport z Oblężonego Miasta'
+link_youtube: 'https://www.youtube.com/watch?v=zvl53ArGkDk'
+text_authors:
+ - 'autor-nieznany'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 #zw

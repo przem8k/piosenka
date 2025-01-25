@@ -1,7 +1,13 @@
 ---
 title: 'Amsterdam'
-author: DX
+author: 'DX'
 pub_date: '2012-08-22 21:37:48.665968+00:00'
+text_authors:
+ - 'jacques-brel'
+composers:
+ - 'jacques-brel'
+translators:
+ - 'wojciech-mlynarski'
 ---
 
 #zw

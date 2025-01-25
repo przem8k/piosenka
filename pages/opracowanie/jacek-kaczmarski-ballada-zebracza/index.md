@@ -1,9 +1,15 @@
 ---
 title: 'Ballada żebracza'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-04-05 19:37:45.170157+00:00'
-link_youtube: https://www.youtube.com/watch?v=EODgeIigxlQ
+link_youtube: 'https://www.youtube.com/watch?v=EODgeIigxlQ'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/ballada_zebracza.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ballada_zebracza.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ballada_zebracza.png.180x0_q85_upscale.jpg

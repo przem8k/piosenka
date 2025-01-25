@@ -1,8 +1,15 @@
 ---
 title: 'Kanapka z człowiekiem'
-author: DX
+author: 'DX'
 pub_date: '2017-10-08 22:43:06.909204+00:00'
-link_youtube: https://www.youtube.com/watch?v=MPYlPa-BIL0
+link_youtube: 'https://www.youtube.com/watch?v=MPYlPa-BIL0'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/kanapka_z_czlowiekiem.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kanapka_z_czlowiekiem.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kanapka_z_czlowiekiem.png.180x0_q85_upscale.png

@@ -1,9 +1,9 @@
 ---
 title: 'Andriej Rublow'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-07-03 15:30:30.223092+00:00'
-url1: https://pl.wikipedia.org/wiki/Andriej_Rublow
-url2: https://www.filmweb.pl/film/Andriej+Rublow-1966-32142
+url1: 'https://pl.wikipedia.org/wiki/Andriej_Rublow'
+url2: 'https://www.filmweb.pl/film/Andriej+Rublow-1966-32142'
 image: notes/Beztytułu.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Beztytułu.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Beztytu%C5%82u.jpg.0x300_q85_upscale.jpg

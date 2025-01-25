@@ -1,8 +1,14 @@
 ---
 title: 'Na starej mapie krajobraz utopijny'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-01-04 20:02:34.860469+00:00'
-link_youtube: https://www.youtube.com/watch?v=JRZnKdCO24A
+link_youtube: 'https://www.youtube.com/watch?v=JRZnKdCO24A'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/na_starej_mapie_krajobraz_utopijny.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/na_starej_mapie_krajobraz_utopijny.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/na_starej_mapie_krajobraz_utopijny.png.180x0_q85_upscale.jpg

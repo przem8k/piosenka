@@ -1,8 +1,14 @@
 ---
 title: 'Za trzydzieści srebrników sprzedani'
-author: RK
+author: 'RK'
 pub_date: '2012-10-25 19:13:21.932616+00:00'
-link_youtube: https://www.youtube.com/watch?v=zVD6FnMj6Dg
+link_youtube: 'https://www.youtube.com/watch?v=zVD6FnMj6Dg'
+text_authors:
+ - 'andrzej-kolakowski'
+composers:
+ - 'andrzej-kolakowski'
+performers:
+ - 'andrzej-kolakowski'
 ---
 
 #zwrotka

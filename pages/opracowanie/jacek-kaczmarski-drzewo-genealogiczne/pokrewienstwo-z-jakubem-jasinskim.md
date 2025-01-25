@@ -1,9 +1,9 @@
 ---
 title: '"Pokrewieństwo" z Jakubem Jasińskim'
-author: Adam Leszkiewicz
+author: 'Adam Leszkiewicz'
 pub_date: '2016-06-19 20:13:58.277030+00:00'
-url1: http://www.wielcy.pl
-url2: https://pl.wikipedia.org/wiki/Jakub_Jasi%C5%84ski_(genera%C5%82)
+url1: 'http://www.wielcy.pl'
+url2: 'https://pl.wikipedia.org/wiki/Jakub_Jasi%C5%84ski_(genera%C5%82)'
 image: song_annotations/Jakub_Jasinski._Якуб_Ясінскі_XIX.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/Jakub_Jasinski._Якуб_Ясінскі_XIX.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/Jakub_Jasinski._%D0%AF%D0%BA%D1%83%D0%B1_%D0%AF%D1%81%D1%96%D0%BD%D1%81%D0%BA%D1%96_XIX.jpg.0x300_q85_upscale.jpg

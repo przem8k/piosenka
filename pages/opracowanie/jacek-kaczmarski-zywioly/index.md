@@ -1,9 +1,15 @@
 ---
 title: 'Żywioły'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-12-12 23:49:26.696784+00:00'
-link_youtube: https://www.youtube.com/watch?v=dc-Lj0xaeec
+link_youtube: 'https://www.youtube.com/watch?v=dc-Lj0xaeec'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/zywioly.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zywioly.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zywioly.png.180x0_q85_upscale.png

@@ -1,9 +1,9 @@
 ---
 title: 'Obraz - piosenka - wybory'
-author: DX
+author: 'DX'
 pub_date: '2017-09-06 19:28:00.805551+00:00'
-url1: https://pl.wikipedia.org/wiki/Wybory_prezydenckie_w_Polsce_w_1990_roku
-url2: https://www.youtube.com/watch?v=7v4IwDSJkNo&feature=youtu.be&t=14m38s
+url1: 'https://pl.wikipedia.org/wiki/Wybory_prezydenckie_w_Polsce_w_1990_roku'
+url2: 'https://www.youtube.com/watch?v=7v4IwDSJkNo&feature=youtu.be&t=14m38s'
 image: notes/lent-carnival.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/lent-carnival.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/lent-carnival.jpg.0x300_q85_upscale.jpg

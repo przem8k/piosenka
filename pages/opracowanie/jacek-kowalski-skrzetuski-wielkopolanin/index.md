@@ -1,8 +1,14 @@
 ---
 title: 'Skrzetuski Wielkopolanin'
-author: RK
+author: 'RK'
 pub_date: '2012-04-11 09:30:46.257934+00:00'
-link_youtube: http://www.youtube.com/watch?v=hoVdTYSNA5c
+link_youtube: 'http://www.youtube.com/watch?v=hoVdTYSNA5c'
+text_authors:
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kowalski'
+performers:
+ - 'jacek-kowalski'
 ---
 
 #zwrotka

@@ -1,7 +1,13 @@
 ---
 title: 'Winni'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-10-16 17:47:39.706598+00:00'
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'leszek-czajkowski'
 ---
 
 #ws

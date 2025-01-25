@@ -1,9 +1,15 @@
 ---
 title: 'Odnosimy się'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-11-03 19:17:48.268128+00:00'
-link_youtube: https://www.youtube.com/watch?v=BcQUX7WbtzA
+link_youtube: 'https://www.youtube.com/watch?v=BcQUX7WbtzA'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/odnosimy_sie.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/odnosimy_sie.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/odnosimy_sie.png.180x0_q85_upscale.jpg

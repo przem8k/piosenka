@@ -1,6 +1,6 @@
 ---
 title: 'Gwara warszawska'
-author: DX
+author: 'DX'
 pub_date: '2017-05-01 20:23:15.422006+00:00'
 image: notes/Zabkowska-BrzeskaPraga-z-lat-70-Fotografia-Jerzego-Woropinskiego.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Zabkowska-BrzeskaPraga-z-lat-70-Fotografia-Jerzego-Woropinskiego.jpg

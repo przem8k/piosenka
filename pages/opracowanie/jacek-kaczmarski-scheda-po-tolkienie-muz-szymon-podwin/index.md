@@ -1,11 +1,17 @@
 ---
 title: 'Scheda po Tolkienie'
-author: Zbik
+author: 'Zbik'
 pub_date: '2022-06-03 10:37:51.062485+00:00'
-disambig: muz. Szymon Podwin
+disambig: 'muz. Szymon Podwin'
 epigone: True
-link_youtube: https://www.youtube.com/watch?v=uvwDfWizt1I
+link_youtube: 'https://www.youtube.com/watch?v=uvwDfWizt1I'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'triada-poetica'
+performers:
+ - 'triada-poetica'
 ---
 
 [e D C D]

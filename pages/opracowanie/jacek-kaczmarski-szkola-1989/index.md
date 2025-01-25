@@ -1,8 +1,14 @@
 ---
 title: 'Szkoła'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2014-09-04 18:37:00.250470+00:00'
-disambig: 1989
+disambig: '1989'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 #zw

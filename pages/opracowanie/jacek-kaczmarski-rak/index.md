@@ -1,10 +1,16 @@
 ---
 title: 'Rak'
-author: Zbik
+author: 'Zbik'
 pub_date: '2022-09-08 20:36:25.866288+00:00'
 epigone: True
-link_youtube: https://www.youtube.com/watch?v=bJJyta_Y1ms
+link_youtube: 'https://www.youtube.com/watch?v=bJJyta_Y1ms'
 capo_fret: 4
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'mateusz-nagorski'
+performers:
+ - 'mateusz-nagorski'
 ---
 
 #zwrotka1

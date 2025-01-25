@@ -1,9 +1,17 @@
 ---
 title: 'Polonez biesiadny'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-07-18 10:33:35.521121+00:00'
-link_youtube: https://www.youtube.com/watch?v=Hp2Se6VH36E
+link_youtube: 'https://www.youtube.com/watch?v=Hp2Se6VH36E'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+ - 'jacek-kowalski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'jacek-kowalski'
 ---
 
 #zwrotka1

@@ -1,9 +1,15 @@
 ---
 title: 'Zaproszenie do piekła'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2018-07-31 18:58:25.712895+00:00'
-link_youtube: https://www.youtube.com/watch?v=dQUHQunKbSQ
+link_youtube: 'https://www.youtube.com/watch?v=dQUHQunKbSQ'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/zaproszenie_do_piekla.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zaproszenie_do_piekla.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zaproszenie_do_piekla.png.180x0_q85_upscale.png

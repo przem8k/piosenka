@@ -1,9 +1,15 @@
 ---
 title: 'Ballada o istotkach (Ballada z morałem)'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2018-02-16 16:03:05.736415+00:00'
-link_youtube: https://www.youtube.com/watch?v=1TXLiQDbd1c
+link_youtube: 'https://www.youtube.com/watch?v=1TXLiQDbd1c'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/ballada_o_istotkach.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_istotkach.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_istotkach.png.180x0_q85_upscale.png

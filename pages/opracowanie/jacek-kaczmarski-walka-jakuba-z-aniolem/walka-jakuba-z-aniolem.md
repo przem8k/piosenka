@@ -1,9 +1,9 @@
 ---
 title: 'Walka Jakuba z aniołem'
-author: DX
+author: 'DX'
 pub_date: '2016-04-10 18:49:26.348027+00:00'
-url1: https://pl.wikipedia.org/wiki/Jakub_(posta%C4%87_biblijna)
-url2: http://biblia.deon.pl/rozdzial.php?id=32#P4
+url1: 'https://pl.wikipedia.org/wiki/Jakub_(posta%C4%87_biblijna)'
+url2: 'http://biblia.deon.pl/rozdzial.php?id=32#P4'
 image: song_annotations/Jacob-angel.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/Jacob-angel.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/Jacob-angel.jpg.0x300_q85_upscale.jpg

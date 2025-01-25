@@ -1,8 +1,15 @@
 ---
 title: 'Źródło'
-author: spooky
+author: 'spooky'
 pub_date: '2013-05-24 23:45:54.019844+00:00'
-link_youtube: https://www.youtube.com/watch?v=QCopoCoerRs
+link_youtube: 'https://www.youtube.com/watch?v=QCopoCoerRs'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
+ - 'kaczmarski-gintrowski-lapinski'
 score1: scores/zrodlo.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zrodlo.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zrodlo.png.180x0_q85_upscale.jpg

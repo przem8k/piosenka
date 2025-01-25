@@ -1,9 +1,9 @@
 ---
 title: 'Antyczna rewolta niewolników – powstanie Spartakusa'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-03-24 19:07:58.005768+00:00'
-url1: https://antyczny.blog/2017/10/07/spartakus-gladiator-ktory-zatrzasl-rzymem/
-url2: https://pl.wikipedia.org/wiki/Spartakus
+url1: 'https://antyczny.blog/2017/10/07/spartakus-gladiator-ktory-zatrzasl-rzymem/'
+url2: 'https://pl.wikipedia.org/wiki/Spartakus'
 image: notes/spartakus_1960_kirk_douglas_12.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/spartakus_1960_kirk_douglas_12.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/spartakus_1960_kirk_douglas_12.jpg.0x300_q85_upscale.jpg

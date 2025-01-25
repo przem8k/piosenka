@@ -1,10 +1,10 @@
 ---
 title: 'Portrety trumienne'
-author: Zbrozło
+author: 'Zbrozło'
 pub_date: '2015-07-03 22:00:22.143863+00:00'
-url1: https://pl.wikipedia.org/wiki/Portret_trumienny
-url2: http://www.kaczmarski.art.pl/tworczosc/dyskografia/sarmatia/informacje.php
-ref1: M. Fabianowska, M. Nesteruk, Sakramencki sarmatyzm, Warszawa [b.r.], s. 35.
+url1: 'https://pl.wikipedia.org/wiki/Portret_trumienny'
+url2: 'http://www.kaczmarski.art.pl/tworczosc/dyskografia/sarmatia/informacje.php'
+ref1: 'M. Fabianowska, M. Nesteruk, Sakramencki sarmatyzm, Warszawa [b.r.], s. 35.'
 image: song_annotations/jacek.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/jacek.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/jacek.jpg.0x300_q85_upscale.jpg

@@ -1,9 +1,15 @@
 ---
 title: 'Sara'
-author: Zbik
+author: 'Zbik'
 pub_date: '2012-06-21 10:52:13.757557+00:00'
-link_youtube: https://www.youtube.com/watch?v=I2XJD5cA0zA
+link_youtube: 'https://www.youtube.com/watch?v=I2XJD5cA0zA'
 capo_fret: 1
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/sara1.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/sara1.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/sara1.png.180x0_q85_upscale.jpg

@@ -1,9 +1,9 @@
 ---
 title: 'Damastes z przydomkiem Prokrustes'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-01-12 15:00:47.510114+00:00'
-url1: https://pl.wikipedia.org/wiki/Prokrust
-url2: http://mityczne.pl/prokrust/
+url1: 'https://pl.wikipedia.org/wiki/Prokrust'
+url2: 'http://mityczne.pl/prokrust/'
 image: notes/Prokrustes.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Prokrustes.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Prokrustes.jpg.0x300_q85_upscale.jpg

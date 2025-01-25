@@ -1,8 +1,14 @@
 ---
 title: 'Rublow'
-author: DX
+author: 'DX'
 pub_date: '2011-10-13 20:07:18.643339+00:00'
-link_youtube: http://www.youtube.com/watch?v=ZVCo28AAHkU
+link_youtube: 'http://www.youtube.com/watch?v=ZVCo28AAHkU'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/rublow_1.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/rublow_1.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/rublow_1.png.180x0_q85_upscale.jpg

@@ -1,9 +1,15 @@
 ---
 title: 'Tylko te drzewa (Przeczucie)'
-author: reuter
+author: 'reuter'
 pub_date: '2022-07-16 21:18:52.641401+00:00'
-link_youtube: https://www.youtube.com/watch?v=-RZUKqsWkvo
+link_youtube: 'https://www.youtube.com/watch?v=-RZUKqsWkvo'
 capo_fret: 2
+text_authors:
+ - 'krzysztof-maria-sieniawski'
+composers:
+ - 'przemyslaw-gintrowski'
+performers:
+ - 'przemyslaw-gintrowski'
 ---
 
 [G e G e]

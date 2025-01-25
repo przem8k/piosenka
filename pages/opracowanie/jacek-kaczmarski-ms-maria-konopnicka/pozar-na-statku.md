@@ -1,8 +1,8 @@
 ---
 title: 'Pożar na statku'
-author: Alek
+author: 'Alek'
 pub_date: '2016-06-18 21:25:55.960943+00:00'
-url1: https://pl.wikipedia.org/wiki/Po%C5%BCar_na_MS_Maria_Konopnicka_w_Stoczni_Gda%C5%84skiej
+url1: 'https://pl.wikipedia.org/wiki/Po%C5%BCar_na_MS_Maria_Konopnicka_w_Stoczni_Gda%C5%84skiej'
 image: song_annotations/800px-Ms_Konopnicka_tablica.JPG
 image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations/800px-Ms_Konopnicka_tablica.JPG
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/800px-Ms_Konopnicka_tablica.JPG.0x300_q85_upscale.jpg

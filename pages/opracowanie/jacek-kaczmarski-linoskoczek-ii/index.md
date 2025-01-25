@@ -1,9 +1,15 @@
 ---
 title: 'Linoskoczek II'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-08-22 07:23:17.952103+00:00'
-link_youtube: https://www.youtube.com/watch?v=2dEcR63f878
+link_youtube: 'https://www.youtube.com/watch?v=2dEcR63f878'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 ---
 
 Otworzyli nam nasz cyrk – z pełną pompą, z pełnym szpanem [e H e H e]

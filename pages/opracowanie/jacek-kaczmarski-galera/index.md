@@ -1,8 +1,14 @@
 ---
 title: 'Galera'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-11-02 21:58:58.919603+00:00'
 epigone: True
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'marcin-gabka'
+performers:
+ - 'marcin-gabka'
 ---
 
 #a

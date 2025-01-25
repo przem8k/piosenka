@@ -1,10 +1,18 @@
 ---
 title: 'Anioł'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-12-12 23:33:55.273529+00:00'
-original_title: Anděl
-link_youtube: https://www.youtube.com/watch?v=LtEBglDTUQk
+original_title: 'Anděl'
+link_youtube: 'https://www.youtube.com/watch?v=LtEBglDTUQk'
 capo_fret: 3
+text_authors:
+ - 'karel-kryl'
+composers:
+ - 'karel-kryl'
+translators:
+ - 'leszek-sanetra'
+performers:
+ - 'elzbieta-czyz'
 ---
 
 #zw

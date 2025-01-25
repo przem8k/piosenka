@@ -1,9 +1,15 @@
 ---
 title: 'Górnicy'
-author: Pan_Kmicic4
+author: 'Pan_Kmicic4'
 pub_date: '2019-03-03 13:40:46.596691+00:00'
-disambig: „Schodzimy pod ziemię...”
-link_youtube: https://www.youtube.com/watch?v=2F4G9CjNCyk
+disambig: '„Schodzimy pod ziemię...”'
+link_youtube: 'https://www.youtube.com/watch?v=2F4G9CjNCyk'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/gornicy.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/gornicy.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/gornicy.png.180x0_q85_upscale.png

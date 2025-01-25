@@ -1,9 +1,9 @@
 ---
 title: 'But w butonierce'
-author: DX
+author: 'DX'
 pub_date: '2020-10-16 14:41:52.542925+00:00'
-url1: https://pl.wikipedia.org/wiki/Bruno_Jasie%C5%84ski
-url2: https://pl.wikipedia.org/wiki/Manifest_futuryzmu
+url1: 'https://pl.wikipedia.org/wiki/Bruno_Jasie%C5%84ski'
+url2: 'https://pl.wikipedia.org/wiki/Manifest_futuryzmu'
 image: notes/Screenshot_2020-10-16_at_16.40.50.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Screenshot_2020-10-16_at_16.40.50.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Screenshot_2020-10-16_at_16.40.50.png.0x300_q85_upscale.png

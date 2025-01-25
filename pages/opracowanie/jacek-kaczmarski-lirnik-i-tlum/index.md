@@ -1,9 +1,15 @@
 ---
 title: 'Lirnik i tłum'
-author: Zbik
+author: 'Zbik'
 pub_date: '2018-08-08 12:38:05.846338+00:00'
-link_youtube: https://www.youtube.com/watch?v=XqO2oymeF18
+link_youtube: 'https://www.youtube.com/watch?v=XqO2oymeF18'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/lirnik_i_tlum.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/lirnik_i_tlum.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/lirnik_i_tlum.png.180x0_q85_upscale.png

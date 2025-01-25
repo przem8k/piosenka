@@ -1,13 +1,13 @@
 ---
 title: 'The Beautiful Land of Australia'
-author: PrzemekL
+author: 'PrzemekL'
 pub_date: '2019-11-10 23:49:46.935684+00:00'
-ref1: „The Old Bush Song edited by A.B. Paterson”
+ref1: '„The Old Bush Song edited by A.B. Paterson”
 Sydney: Angus and Robertson, 89 Castlereagh Street 1906
-Websdale, Shoosmith ande Co., Printers, Sydney
-ref2: „Authentic Australian Bush Ballads - Sheet music”
+Websdale, Shoosmith ande Co., Printers, Sydney'
+ref2: '„Authentic Australian Bush Ballads - Sheet music”
 by Hal Evans (piano arrangements) (Author), John Meredith (Editor), Alan Scott (Editor) 
-Southern Music Publishing Co. (A'asia) Pty. Ltd. (1960)
+Southern Music Publishing Co. (A'asia) Pty. Ltd. (1960)'
 ---
 
 Piosenka australijska z XIX wieku.  Zapisana dla potomności w książce Andrew „Banjo” Patersona „The Old Bush Songs”, wydanej w Sydney w 1906 roku.  Inny tytuł tej piosenki to „Pommy's Lament” i chyba pod tym tytułem poznał Kaczmarski  tekst tego utworu, bo oznacza on właśnie lament emigranta \(pommy – stereotypowy Brytyjczyk i brytyjski imigrant\). 

@@ -1,8 +1,15 @@
 ---
 title: 'Kołysanka'
-author: RK
+author: 'RK'
 pub_date: '2012-11-24 13:44:51.782492+00:00'
-disambig: „Po stajence...”
+disambig: '„Po stajence...”'
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'zbigniew-lapinski'
+performers:
+ - 'zbigniew-lapinski'
+ - 'jacek-kaczmarski'
 score1: scores/kolysanka.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kolysanka.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kolysanka.png.180x0_q85_upscale.jpg

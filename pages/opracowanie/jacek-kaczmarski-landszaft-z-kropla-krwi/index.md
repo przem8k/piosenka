@@ -1,9 +1,15 @@
 ---
 title: 'Landszaft z kroplą krwi'
-author: jakubkwa
+author: 'jakubkwa'
 pub_date: '2015-06-24 21:48:48.564189+00:00'
-link_youtube: https://www.youtube.com/watch?v=lgSUBSHG24A
+link_youtube: 'https://www.youtube.com/watch?v=lgSUBSHG24A'
 capo_fret: 2
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/landschaft_z_kropla_krwi.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/landschaft_z_kropla_krwi.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/landschaft_z_kropla_krwi.png.180x0_q85_upscale.jpg

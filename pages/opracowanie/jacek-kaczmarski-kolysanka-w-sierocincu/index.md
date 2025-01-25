@@ -1,10 +1,16 @@
 ---
 title: 'Kołysanka'
-author: RK
+author: 'RK'
 pub_date: '2012-12-09 13:41:57.126631+00:00'
-disambig: „W sierocińcu...”
-link_youtube: https://www.youtube.com/watch?v=XmLTXdnuSpQ
+disambig: '„W sierocińcu...”'
+link_youtube: 'https://www.youtube.com/watch?v=XmLTXdnuSpQ'
 capo_fret: 3
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'jacek-kaczmarski'
+performers:
+ - 'jacek-kaczmarski'
 score1: scores/kolysanka-w_sierocincu.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kolysanka-w_sierocincu.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kolysanka-w_sierocincu.png.180x0_q85_upscale.jpg

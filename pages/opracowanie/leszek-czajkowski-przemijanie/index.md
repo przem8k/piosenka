@@ -1,8 +1,14 @@
 ---
 title: 'Przemijanie'
-author: Zbik
+author: 'Zbik'
 pub_date: '2011-10-16 18:13:43.436885+00:00'
 capo_fret: 2
+text_authors:
+ - 'leszek-czajkowski'
+composers:
+ - 'leszek-czajkowski'
+performers:
+ - 'leszek-czajkowski'
 ---
 
 #zw1

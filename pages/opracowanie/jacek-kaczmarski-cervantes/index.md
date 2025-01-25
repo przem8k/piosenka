@@ -1,10 +1,16 @@
 ---
 title: 'Cervantes'
-author: reuter
+author: 'reuter'
 pub_date: '2014-09-11 21:46:53.048893+00:00'
 epigone: True
-link_youtube: https://www.youtube.com/watch?v=RFjCAE8D7nw
+link_youtube: 'https://www.youtube.com/watch?v=RFjCAE8D7nw'
 capo_fret: 6
+text_authors:
+ - 'jacek-kaczmarski'
+composers:
+ - 'trio-lodzko-chojnowskie'
+performers:
+ - 'trio-lodzko-chojnowskie'
 ---
 
 #zw

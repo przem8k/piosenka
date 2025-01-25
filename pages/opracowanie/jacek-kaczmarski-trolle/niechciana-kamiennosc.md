@@ -1,6 +1,6 @@
 ---
 title: 'Niechciana kamienność'
-author: Baltazar
+author: 'Baltazar'
 pub_date: '2020-10-21 18:22:06.467740+00:00'
 image: notes/efd138eb867abc3b48f75c7069f0bf54.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/efd138eb867abc3b48f75c7069f0bf54.jpg
