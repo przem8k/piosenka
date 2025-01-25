@@ -32,6 +32,15 @@ def create_file_content(item, markdown_text):
         frontmatter_lines.append(f"author: {item.author}")
     if item.pub_date:
         frontmatter_lines.append(f"pub_date: '{item.pub_date}'")
+    if item.url1:
+        frontmatter_lines.append(f"url1: {item.url1}")
+    if item.url2:
+        frontmatter_lines.append(f"url2: {item.url2}")
+    if item.ref1:
+        frontmatter_lines.append(f"ref1: {item.ref1}")
+    if item.ref2:
+        frontmatter_lines.append(f"ref2: {item.ref2}")
+
     if hasattr(item, "cover_image") and item.cover_image:
         frontmatter_lines.append(f"cover_image: {item.cover_image.name}")
         full_url = PZT_MEDIA_URL + item.cover_image.name
@@ -40,11 +49,28 @@ def create_file_content(item, markdown_text):
         thumbnailer = get_thumbnailer(item.cover_image)
         thumbnail_cover = thumbnailer["cover"]
         frontmatter_lines.append(f"cover_image_thumb_600_300: {thumbnail_cover.url}")
+
         thumbnail_mini = thumbnailer["coverthumb"]
         frontmatter_lines.append(f"cover_image_thumb_420_210: {thumbnail_mini.url}")
     if hasattr(item, "cover_credits_trevor") and item.cover_credits_trevor:
         credits = trevor_to_md(item.cover_credits_trevor)
         frontmatter_lines.append(f"cover_credits: '{credits}'")
+    if hasattr(item, "image") and item.image:
+        frontmatter_lines.append(f"image: {item.image.name}")
+
+        full_url = PZT_MEDIA_URL + item.image.name
+        frontmatter_lines.append(f"image_full: {full_url}")
+
+        thumbnailer = get_thumbnailer(item.image)
+        thumbnail = thumbnailer["imagethumb"]
+        frontmatter_lines.append(f"image_thumb: {thumbnail.url}")
+
+        if item.image_url:
+            frontmatter_lines.append(f"image_url: {item.image_url}")
+        if item.image_author:
+            frontmatter_lines.append(f"image_author: {item.image_author}")
+        if item.image_license:
+            frontmatter_lines.append(f"image_license: {item.image_license}")
 
     frontmatter_lines.append("---")
     frontmatter = "\n".join(frontmatter_lines)
