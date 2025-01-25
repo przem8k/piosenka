@@ -8,8 +8,8 @@ ref1: '„Witkacy around the World”, Janusz Degler'
 image: notes/ekshumacja-26-xi-1994-3.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/ekshumacja-26-xi-1994-3.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/ekshumacja-26-xi-1994-3.jpg.0x300_q85_upscale.jpg
-image_url: https://i0.wp.com/nietylkozakopane.info/wp-content/uploads/2015/08/ekshumacja-26-xi-1994-3.jpg
-image_author: nieznany
+image_src_url: https://i0.wp.com/nietylkozakopane.info/wp-content/uploads/2015/08/ekshumacja-26-xi-1994-3.jpg
+image_author: 'nieznany'
 ---
 
 **Stanisław „Witkacy” Witkiewicz** po popełnieniu samobójstwa 18 września 1939 roku został pochowany na cmentarzu we wsi Jeziory, na Polesiu. Kiedy w 1985 roku UNESCO włączyło stulecie urodzin Witkacego do kalendarza rocznic obchodzonych tego roku, władze PRL – chcąc wykorzystać to wydarzenie propagandowo – postanowiły sprowadzić do kraju szczątki artysty.

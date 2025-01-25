@@ -2,7 +2,7 @@
 title: 'Romans historiozoficzno-erotyczny o princessie Doni i parobku Ditku ze wstawką etnograficzną'
 author: 'DX'
 pub_date: '2017-08-29 17:01:04.586096+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=7cxciyZEBkE'
+youtube_id: '7cxciyZEBkE'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

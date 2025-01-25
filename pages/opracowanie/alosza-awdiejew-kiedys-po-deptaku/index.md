@@ -2,7 +2,7 @@
 title: 'Kiedyś po deptaku'
 author: 'gary'
 pub_date: '2023-05-17 00:07:14.441285+00:00'
-link_youtube: 'https://youtu.be/xfidI4Ntk7A'
+youtube_id: 'None'
 text_authors:
  - 'alosza-awdiejew'
 composers:

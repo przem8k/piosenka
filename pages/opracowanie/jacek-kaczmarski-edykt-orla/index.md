@@ -2,7 +2,7 @@
 title: 'Edykt orła'
 author: 'Zbik'
 pub_date: '2018-02-26 10:25:14.357836+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=mYp-8TtcHjs'
+youtube_id: 'mYp-8TtcHjs'
 capo_fret: 4
 text_authors:
  - 'jacek-kaczmarski'

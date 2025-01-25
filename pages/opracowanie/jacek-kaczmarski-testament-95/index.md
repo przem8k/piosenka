@@ -1,8 +1,8 @@
 ---
-title: 'Testament '95'
+title: 'Testament ''95'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-01 08:42:23.010467+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=PM1OfkNDYeQ'
+youtube_id: 'PM1OfkNDYeQ'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

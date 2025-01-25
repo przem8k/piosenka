@@ -2,7 +2,7 @@
 title: 'Pejzaż z trzema krzyżami'
 author: 'Zbik'
 pub_date: '2018-02-26 11:21:40.172575+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=8SRLC56zxlo'
+youtube_id: '8SRLC56zxlo'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

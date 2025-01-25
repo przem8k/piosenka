@@ -2,7 +2,7 @@
 title: 'Brewiarz'
 author: 'reuter'
 pub_date: '2015-05-22 18:08:14.411991+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=GB-8mNSFOMg'
+youtube_id: 'GB-8mNSFOMg'
 text_authors:
  - 'zbigniew-herbert'
 composers:

@@ -2,7 +2,7 @@
 title: 'Dobre rady Pana Ojca'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 17:17:23.902419+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=atio51Azl3E'
+youtube_id: 'atio51Azl3E'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

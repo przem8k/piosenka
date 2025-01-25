@@ -2,7 +2,7 @@
 title: 'A jednak po nas coś zostanie'
 author: 'Pan_Kmicic4'
 pub_date: '2019-04-27 22:05:46.459284+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1rYuTjgCM5E'
+youtube_id: '1rYuTjgCM5E'
 capo_fret: 2
 text_authors:
  - 'boguslaw-zmijewski'

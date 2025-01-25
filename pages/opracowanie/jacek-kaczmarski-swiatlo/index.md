@@ -2,7 +2,7 @@
 title: 'Światło'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-29 15:10:03.216398+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=sSqiktu89Zs'
+youtube_id: 'sSqiktu89Zs'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

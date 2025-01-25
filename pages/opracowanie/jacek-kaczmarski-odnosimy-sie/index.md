@@ -2,7 +2,7 @@
 title: 'Odnosimy się'
 author: 'Zbik'
 pub_date: '2011-11-03 19:17:48.268128+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=BcQUX7WbtzA'
+youtube_id: 'BcQUX7WbtzA'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

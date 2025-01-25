@@ -2,7 +2,7 @@
 title: 'Z chłopa król'
 author: 'PrzemekL'
 pub_date: '2014-09-04 21:55:28.464727+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=d0x_Bq95aaU'
+youtube_id: 'd0x_Bq95aaU'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

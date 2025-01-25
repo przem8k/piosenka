@@ -3,7 +3,7 @@ title: 'Pompeja lupanar'
 author: 'RK'
 pub_date: '2012-10-25 18:27:18.356194+00:00'
 disambig: '2009'
-link_youtube: 'https://www.youtube.com/watch?v=9FQWuuURfd8'
+youtube_id: '9FQWuuURfd8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

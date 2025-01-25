@@ -7,8 +7,8 @@ url2: 'https://www.filmweb.pl/film/Casanova+Federico+Felliniego-1976-4468'
 image: notes/7e508edb9855f2926faf4f7613dc6ca4.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/7e508edb9855f2926faf4f7613dc6ca4.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/7e508edb9855f2926faf4f7613dc6ca4.jpg.0x300_q85_upscale.jpg
-image_url: https://i.pinimg.com/originals/7e/50/8e/7e508edb9855f2926faf4f7613dc6ca4.jpg
-image_author: Giuseppe Rotunno
+image_src_url: https://i.pinimg.com/originals/7e/50/8e/7e508edb9855f2926faf4f7613dc6ca4.jpg
+image_author: 'Giuseppe Rotunno'
 ---
 
 Piosenka inspirowana jest włosko\-amerykańskim filmem biograficznym z 1976 roku, pt. _**Casanova**_, w reżyserii włoskiego reżysera **Federico Felliniego**. Obraz powstał na podstawie pamiętników żyjącego w XVIII wieku, weneckiego awanturnika i uwodziciela **Giacomo Casanovy**.

@@ -2,7 +2,7 @@
 title: 'Doświadczenie (Marzec ’68)'
 author: 'Zbik'
 pub_date: '2018-08-04 19:22:48.491485+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=lHh8UVQnp7w'
+youtube_id: 'lHh8UVQnp7w'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

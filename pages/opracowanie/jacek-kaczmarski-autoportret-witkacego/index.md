@@ -2,7 +2,7 @@
 title: 'Autoportret Witkacego'
 author: 'DX'
 pub_date: '2011-05-31 22:27:29.006783+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=VyXsRzR0ioA'
+youtube_id: 'VyXsRzR0ioA'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Szklana góra'
 author: 'PrzemekL'
 pub_date: '2014-09-04 20:26:11.725153+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=6WyY1OAwjpY'
+youtube_id: '6WyY1OAwjpY'
 capo_fret: 4
 text_authors:
  - 'jacek-kaczmarski'

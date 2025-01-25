@@ -2,7 +2,7 @@
 title: 'Akompaniator'
 author: 'Pan_Kmicic4'
 pub_date: '2018-12-23 15:51:49.280348+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=oKhNaxJW4wM'
+youtube_id: 'oKhNaxJW4wM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

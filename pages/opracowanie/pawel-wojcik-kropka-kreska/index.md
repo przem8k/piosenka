@@ -2,7 +2,7 @@
 title: 'Kropka kreska'
 author: 'Boczuś'
 pub_date: '2016-05-19 15:21:46.157334+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Sk_Jmvd2RyE'
+youtube_id: 'Sk_Jmvd2RyE'
 text_authors:
  - 'pawel-wojcik'
 composers:

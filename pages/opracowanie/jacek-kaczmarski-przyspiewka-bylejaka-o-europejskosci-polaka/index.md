@@ -2,7 +2,7 @@
 title: 'Przyśpiewka bylejaka o europejskości Polaka'
 author: 'spooky'
 pub_date: '2011-10-04 03:59:44.637117+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=uAB3GS0E_m4'
+youtube_id: 'uAB3GS0E_m4'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

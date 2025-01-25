@@ -6,8 +6,8 @@ url1: 'https://pl.wikipedia.org/wiki/Stefan_Wiechecki'
 image: notes/1200px-Stefan_Wiechecki_w_rozmowie_z_dorozkarzem.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1200px-Stefan_Wiechecki_w_rozmowie_z_dorozkarzem.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1200px-Stefan_Wiechecki_w_rozmowie_z_dorozkarzem.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/Category:Stefan_Wiechecki#/media/File:Stefan_Wiechecki_w_rozmowie_z_doro%C5%BCkarzem.jpg
-image_author: Leszek Wysznacki
+image_src_url: https://commons.wikimedia.org/wiki/Category:Stefan_Wiechecki#/media/File:Stefan_Wiechecki_w_rozmowie_z_doro%C5%BCkarzem.jpg
+image_author: 'Leszek Wysznacki'
 image_license: domena publiczna
 ---
 

@@ -2,7 +2,7 @@
 title: 'Machiavelli'
 author: 'DX'
 pub_date: '2011-05-07 14:02:14.938013+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=fQr71MLg1cM'
+youtube_id: 'fQr71MLg1cM'
 text_authors:
  - 'jerzy-czech'
 composers:

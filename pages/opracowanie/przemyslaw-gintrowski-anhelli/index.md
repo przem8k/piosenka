@@ -2,7 +2,7 @@
 title: 'Anhelli'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-30 19:25:30.214949+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Fj9HPKO_sU0'
+youtube_id: 'Fj9HPKO_sU0'
 text_authors:
  - 'jerzy-czech'
 composers:

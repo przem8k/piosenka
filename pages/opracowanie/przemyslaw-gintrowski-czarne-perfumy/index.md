@@ -2,7 +2,7 @@
 title: 'Czarne perfumy'
 author: 'Zbik'
 pub_date: '2022-08-30 17:01:58.289469+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=rmgC36-sysw'
+youtube_id: 'rmgC36-sysw'
 text_authors:
  - 'agnieszka-osiecka'
 composers:

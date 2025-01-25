@@ -2,7 +2,7 @@
 title: 'Autoportret z psem'
 author: 'spooky'
 pub_date: '2011-10-31 02:18:12.019119+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=4Q0O2eYV_mg'
+youtube_id: '4Q0O2eYV_mg'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

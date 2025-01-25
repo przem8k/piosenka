@@ -2,7 +2,7 @@
 title: 'Zbigniewowi Herbertowi'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-22 19:43:15.634704+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=5-0SLnHof3A'
+youtube_id: '5-0SLnHof3A'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

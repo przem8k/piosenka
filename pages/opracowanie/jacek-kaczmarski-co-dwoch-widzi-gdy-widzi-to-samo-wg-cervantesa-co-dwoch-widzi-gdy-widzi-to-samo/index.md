@@ -3,7 +3,7 @@ title: 'Co dwóch widzi, gdy widzi to samo'
 author: 'reuter'
 pub_date: '2016-07-19 17:28:10.533475+00:00'
 epigone: True
-link_youtube: 'https://www.youtube.com/watch?v=soeyddAjj1w'
+youtube_id: 'soeyddAjj1w'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

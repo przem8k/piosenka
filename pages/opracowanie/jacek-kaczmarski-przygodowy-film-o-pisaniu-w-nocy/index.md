@@ -2,7 +2,7 @@
 title: 'Przygodowy film o pisaniu w nocy'
 author: 'Zbik'
 pub_date: '2018-08-04 15:42:13.076377+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=cjJgl7EQK7E'
+youtube_id: 'cjJgl7EQK7E'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

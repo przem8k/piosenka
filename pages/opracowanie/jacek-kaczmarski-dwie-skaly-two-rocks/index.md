@@ -2,7 +2,7 @@
 title: 'Dwie Skały'
 author: 'reuter'
 pub_date: '2017-06-14 18:00:17.944575+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=qsBma7jJsOI'
+youtube_id: 'qsBma7jJsOI'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

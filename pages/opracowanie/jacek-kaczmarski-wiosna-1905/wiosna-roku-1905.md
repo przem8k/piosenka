@@ -7,8 +7,8 @@ url2: 'https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Mas%C5%82owski'
 image: notes/Stanisław_Masłowski_Świt_1906_Wiosna_1905.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Stanisław_Masłowski_Świt_1906_Wiosna_1905.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Stanis%C5%82aw_Mas%C5%82owski_%C5%9Awit_1906_Wiosna_1905.jpg.0x300_q85_upscale.jpg
-image_url: http://cyfrowe.mnw.art.pl/dmuseion/docmetadata?id=5024
-image_author: Stanisław Masłowski
+image_src_url: http://cyfrowe.mnw.art.pl/dmuseion/docmetadata?id=5024
+image_author: 'Stanisław Masłowski'
 ---
 
 Piosenka inspirowana jest obrazem **Stanisława Masłowskiego** z 1906 roku.

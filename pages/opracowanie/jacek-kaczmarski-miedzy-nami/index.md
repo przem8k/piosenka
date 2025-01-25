@@ -2,7 +2,7 @@
 title: 'Między nami'
 author: 'spooky'
 pub_date: '2011-07-22 21:35:46.219107+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=r1vZATm6pRk'
+youtube_id: 'r1vZATm6pRk'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

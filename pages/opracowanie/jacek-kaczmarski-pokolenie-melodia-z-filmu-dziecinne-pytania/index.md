@@ -3,7 +3,7 @@ title: 'Pokolenie'
 author: 'Pan_Kmicic4'
 pub_date: '2019-02-28 14:55:49.903095+00:00'
 disambig: 'melodia z filmu „Dziecinne pytania”'
-link_youtube: 'https://www.youtube.com/watch?v=H9_8nQM-GHg'
+youtube_id: 'H9_8nQM-GHg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Dwie rozmowy z Kremlem (1981–1989)'
 author: 'Zbik'
 pub_date: '2018-10-15 11:46:16.293248+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=q8xQWhiYaOI'
+youtube_id: 'q8xQWhiYaOI'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

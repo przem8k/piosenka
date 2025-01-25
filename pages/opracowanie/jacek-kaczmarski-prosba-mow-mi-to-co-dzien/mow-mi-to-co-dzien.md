@@ -5,8 +5,8 @@ pub_date: '2016-12-11 13:59:08.518428+00:00'
 image: notes/T-55A_Martial_law_Poland.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/T-55A_Martial_law_Poland.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/T-55A_Martial_law_Poland.jpg.0x300_q85_upscale.jpg
-image_url: https://pl.wikipedia.org/wiki/Stan_wojenny_w_Polsce_(1981%E2%80%931983)
-image_author: J. Żołnierkiewicz
+image_src_url: https://pl.wikipedia.org/wiki/Stan_wojenny_w_Polsce_(1981%E2%80%931983)
+image_author: 'J. Żołnierkiewicz'
 ---
 
 Wprowadzenie stanu wojennego w Polsce 13 grudnia 1981 r. zastaje Jacka Kaczmarskiego w Paryżu. Napisana miesiąc później „Prośba” jest wyrazem bezsilnego gniewu artysty, do którego dochodzą echa tragicznych wydarzeń w ojczyźnie.

@@ -2,7 +2,7 @@
 title: 'Mistrz Hieronimus van Aeken z Hertogenbosch zwany Boschem'
 author: 'AŁ'
 pub_date: '2012-06-19 14:56:50.956316+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=UvW_SMY6Pig'
+youtube_id: 'UvW_SMY6Pig'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

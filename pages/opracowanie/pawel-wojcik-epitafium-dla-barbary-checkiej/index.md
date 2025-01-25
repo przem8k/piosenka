@@ -2,7 +2,7 @@
 title: 'Epitafium dla Barbary Chęckiej'
 author: 'Boczuś'
 pub_date: '2016-05-19 16:18:56.178139+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1OPoOLQVB-o'
+youtube_id: '1OPoOLQVB-o'
 text_authors:
  - 'pawel-wojcik'
 composers:

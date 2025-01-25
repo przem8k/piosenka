@@ -7,8 +7,8 @@ ref1: '"Lekcja historii Jacka Kaczmarskiego" Iwona Grabska, Iwona Wasilewska'
 image: notes/bde2d041445da044ffb70a3b1b4f.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/bde2d041445da044ffb70a3b1b4f.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/bde2d041445da044ffb70a3b1b4f.jpg.0x300_q85_upscale.jpg
-image_url: https://f.allegroimg.com/original/031f29/bde2d041445da044ffb70a3b1b4f
-image_author: Jacek Malczewski
+image_src_url: https://f.allegroimg.com/original/031f29/bde2d041445da044ffb70a3b1b4f
+image_author: 'Jacek Malczewski'
 image_license: Domena publiczna
 ---
 

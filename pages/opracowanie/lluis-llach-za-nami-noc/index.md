@@ -3,7 +3,7 @@ title: 'Za nami noc'
 author: 'DX'
 pub_date: '2013-02-25 00:04:59.284147+00:00'
 original_title: 'Venim del nord, venim del sud'
-link_youtube: 'https://www.youtube.com/watch?v=11WY3wr2zwE'
+youtube_id: '11WY3wr2zwE'
 capo_fret: 1
 text_authors:
  - 'lluis-llach'

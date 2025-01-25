@@ -2,7 +2,7 @@
 title: 'Dzielnica żebraków'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-22 13:56:46.762437+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=lWpA9G-tnJo'
+youtube_id: 'lWpA9G-tnJo'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

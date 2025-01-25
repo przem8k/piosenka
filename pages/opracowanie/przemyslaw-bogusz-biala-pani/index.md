@@ -2,7 +2,7 @@
 title: 'Biała pani'
 author: 'DX'
 pub_date: '2011-05-07 22:47:41.284897+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=IoGDHKrGcYw'
+youtube_id: 'IoGDHKrGcYw'
 capo_fret: 2
 text_authors:
  - 'przemyslaw-bogusz'

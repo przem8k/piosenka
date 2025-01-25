@@ -2,7 +2,7 @@
 title: 'Postrzał w gnieźnieńskiej potrzebie'
 author: 'RK'
 pub_date: '2012-04-08 22:18:18.180145+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=fr5SOadV80A'
+youtube_id: 'fr5SOadV80A'
 text_authors:
  - 'jacek-kowalski'
 composers:

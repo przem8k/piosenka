@@ -1,8 +1,8 @@
 ---
-title: 'Joanna d'Arc'
+title: 'Joanna d''Arc'
 author: 'PrzemekL'
 pub_date: '2014-09-06 17:10:36.901338+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=qF4DOUk3qvQ'
+youtube_id: 'qF4DOUk3qvQ'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

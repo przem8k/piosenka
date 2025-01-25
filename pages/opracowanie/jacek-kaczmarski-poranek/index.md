@@ -2,7 +2,7 @@
 title: 'Poranek'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-27 18:14:46.667634+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=DIS08s3oNA8'
+youtube_id: 'DIS08s3oNA8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

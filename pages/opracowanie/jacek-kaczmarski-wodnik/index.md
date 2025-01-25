@@ -2,7 +2,7 @@
 title: 'Wodnik'
 author: 'Pan_Kmicic4'
 pub_date: '2019-03-27 15:20:14.755682+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=iWGwcoJHxbg'
+youtube_id: 'iWGwcoJHxbg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

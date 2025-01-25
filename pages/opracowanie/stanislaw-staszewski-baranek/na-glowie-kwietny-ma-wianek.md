@@ -7,7 +7,7 @@ url2: 'https://pl.wikipedia.org/wiki/Dziady_cz%C4%99%C5%9B%C4%87_II'
 image: notes/dziady.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/dziady.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/dziady.jpg.0x300_q85_upscale.jpg
-image_url: https://pl.wikipedia.org/wiki/Dziady_(zwyczaj)
+image_src_url: https://pl.wikipedia.org/wiki/Dziady_(zwyczaj)
 ---
 
 Refren piosenki jest niedokładnym cytatem z **II części** **„Dziadów”Adama Mickiewicza:**

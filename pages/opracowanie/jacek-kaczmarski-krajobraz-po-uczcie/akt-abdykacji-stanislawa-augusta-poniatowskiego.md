@@ -6,8 +6,8 @@ ref1: 'M. Żywirska, Ostatnie lata życia króla Stanisława Augusta, Warszawa 1
 image: notes/561px-Vigee_Stanislaw_Augustus.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/561px-Vigee_Stanislaw_Augustus.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/561px-Vigee_Stanislaw_Augustus.jpg.0x300_q85_upscale.jpg
-image_url: https://pl.wikipedia.org/wiki/Stanis%C5%82aw_August_Poniatowski#/media/Plik:Vigee_Stanislaw_Augustus.jpg
-image_author: Élisabeth Vigée-Lebrun
+image_src_url: https://pl.wikipedia.org/wiki/Stanis%C5%82aw_August_Poniatowski#/media/Plik:Vigee_Stanislaw_Augustus.jpg
+image_author: 'Élisabeth Vigée-Lebrun'
 image_license: domena publiczna
 ---
 

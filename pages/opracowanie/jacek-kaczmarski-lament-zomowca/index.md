@@ -2,7 +2,7 @@
 title: 'Lament zomowca'
 author: 'Pan_Kmicic4'
 pub_date: '2019-02-09 11:04:46.074716+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=x8wBMCHaSqo'
+youtube_id: 'x8wBMCHaSqo'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

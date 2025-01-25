@@ -2,7 +2,7 @@
 title: 'Bajka średniowieczna'
 author: 'Zbik'
 pub_date: '2018-07-29 11:43:45.558880+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=FiDsTVtEiBE'
+youtube_id: 'FiDsTVtEiBE'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

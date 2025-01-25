@@ -2,7 +2,7 @@
 title: 'Jankiel'
 author: 'DX'
 pub_date: '2011-07-04 16:40:31.634209+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=D917bXqXitU'
+youtube_id: 'D917bXqXitU'
 capo_fret: 3
 text_authors:
  - 'leszek-czajkowski'

@@ -2,7 +2,7 @@
 title: 'O fryzjerze na parterze'
 author: 'PrzemekL'
 pub_date: '2014-09-05 23:18:46.647648+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=QglFdT3_1sU'
+youtube_id: 'QglFdT3_1sU'
 capo_fret: 4
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Litania'
 author: 'DX'
 pub_date: '2011-06-04 17:22:51.994256+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=kezw2LRJZ2U'
+youtube_id: 'kezw2LRJZ2U'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

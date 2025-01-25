@@ -3,7 +3,7 @@ title: 'Lady Winterfell'
 author: 'Baltazar'
 pub_date: '2020-10-21 21:40:29.467878+00:00'
 disambig: 'Wiersze Lodu i Ognia'
-link_youtube: 'https://www.youtube.com/watch?v=B-Va_Boue9c'
+youtube_id: 'B-Va_Boue9c'
 text_authors:
  - 'marek-kaczkowski'
 composers:

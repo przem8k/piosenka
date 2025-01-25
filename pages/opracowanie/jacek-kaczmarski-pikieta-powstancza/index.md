@@ -2,7 +2,7 @@
 title: 'Pikieta powstańcza'
 author: 'DX'
 pub_date: '2017-10-01 15:53:15.804851+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=JqdSXjTU3ng'
+youtube_id: 'JqdSXjTU3ng'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

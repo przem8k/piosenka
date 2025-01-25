@@ -7,7 +7,7 @@ url2: 'http://www.kaczmarski.art.pl/tworczosc/wiersze/czaty-smielowskie/'
 image: notes/smielow-fot.-brunon-cynalewski-mnp-mini.1285591423.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/smielow-fot.-brunon-cynalewski-mnp-mini.1285591423.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/smielow-fot.-brunon-cynalewski-mnp-mini.1285591423.jpg.0x300_q85_upscale.jpg
-image_url: http://regionwielkopolska.pl
+image_src_url: http://regionwielkopolska.pl
 ---
 
 Utwór został napisany w 1995 roku jako podsumowanie pobytu Kaczmarskiego w zabytkowym, wielkopolskim **pałacu w Śmiełowie.** Owocem przebywania w tym malowniczym miejscu był wydany rok później program _Pochwała Łotrostwa_. 

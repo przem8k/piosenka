@@ -3,7 +3,7 @@ title: 'Dzień gniewu II'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-28 15:30:14.582579+00:00'
 disambig: 'Czarnobyl'
-link_youtube: 'https://www.youtube.com/watch?v=vGd1Ug-jZrI'
+youtube_id: 'vGd1Ug-jZrI'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

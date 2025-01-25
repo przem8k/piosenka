@@ -2,7 +2,7 @@
 title: 'Encore, jeszcze raz'
 author: 'DX'
 pub_date: '2017-09-10 12:45:46.368365+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=nKoqGkB9l3A'
+youtube_id: 'nKoqGkB9l3A'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

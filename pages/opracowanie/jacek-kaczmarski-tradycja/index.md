@@ -2,7 +2,7 @@
 title: 'Tradycja'
 author: 'DX'
 pub_date: '2012-03-10 14:14:50.024698+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=DMrvS8trNsY'
+youtube_id: 'DMrvS8trNsY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

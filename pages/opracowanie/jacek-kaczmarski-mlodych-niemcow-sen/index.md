@@ -2,7 +2,7 @@
 title: 'Młodych Niemców sen'
 author: 'DX'
 pub_date: '2011-07-29 01:20:17.896386+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=E_HcBpNmlLU'
+youtube_id: 'E_HcBpNmlLU'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

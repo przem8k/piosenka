@@ -3,7 +3,7 @@ title: 'Kolęda'
 author: 'Zbik'
 pub_date: '2024-12-21 16:03:52.523076+00:00'
 disambig: 'Gwiazda jeszcze nie spadła...'
-link_youtube: 'https://www.youtube.com/watch?v=jphFNY5ncz0'
+youtube_id: 'jphFNY5ncz0'
 capo_fret: 2
 composers:
  - 'zbigniew-lapinski'

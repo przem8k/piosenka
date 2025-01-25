@@ -7,8 +7,8 @@ url2: 'https://www.filmweb.pl/film/Andriej+Rublow-1966-32142'
 image: notes/Beztytułu.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Beztytułu.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Beztytu%C5%82u.jpg.0x300_q85_upscale.jpg
-image_url: http://filmweb.pl
-image_author: Vadim Yusov
+image_src_url: http://filmweb.pl
+image_author: 'Vadim Yusov'
 ---
 
 Utwór powstał na podstawie radzieckiego dramatu historycznego pt. _**Andriej Rublow**_, nakręconego w 1966 roku przez rosyjskiego reżysera **Andrieja Tarkowskiego**. Dzieło opowiada o życiu **Andrieja Rublowa**; średniowiecznego, ruskiego pisarza ikon, mnicha, świętego Rosyjskiego Kościoła Prawosławnego.

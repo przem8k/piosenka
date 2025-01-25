@@ -2,7 +2,7 @@
 title: 'Pejzaż zimowy'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 19:39:07.073407+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=g58ARITfujI'
+youtube_id: 'g58ARITfujI'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

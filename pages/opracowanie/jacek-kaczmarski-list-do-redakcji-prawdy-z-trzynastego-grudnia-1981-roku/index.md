@@ -2,7 +2,7 @@
 title: 'List do redakcji „Prawdy” z trzynastego grudnia 1981 roku'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-26 06:37:11.584064+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1h0bmA2W_n4'
+youtube_id: '1h0bmA2W_n4'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

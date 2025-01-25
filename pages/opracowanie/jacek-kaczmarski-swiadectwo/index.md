@@ -2,7 +2,7 @@
 title: 'Świadectwo'
 author: 'DX'
 pub_date: '2015-05-24 09:32:54.186230+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=cThFP8tJvOc'
+youtube_id: 'cThFP8tJvOc'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

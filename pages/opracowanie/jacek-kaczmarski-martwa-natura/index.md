@@ -2,7 +2,7 @@
 title: 'Martwa natura'
 author: 'Zbik'
 pub_date: '2011-08-30 19:35:59.601163+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=1FT_IJ6bLiM'
+youtube_id: '1FT_IJ6bLiM'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

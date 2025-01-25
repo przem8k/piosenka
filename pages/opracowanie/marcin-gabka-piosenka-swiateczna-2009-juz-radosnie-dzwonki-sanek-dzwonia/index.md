@@ -2,7 +2,7 @@
 title: 'Piosenka Świąteczna 2009 (Już radośnie dzwonki sanek dzwonią)'
 author: 'Baltazar'
 pub_date: '2020-12-13 15:50:39.626568+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=DCpVXp7Jo9E'
+youtube_id: 'DCpVXp7Jo9E'
 text_authors:
  - 'marcin-gabka'
 composers:

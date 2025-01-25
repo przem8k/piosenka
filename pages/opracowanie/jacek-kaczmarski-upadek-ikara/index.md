@@ -2,7 +2,7 @@
 title: 'Upadek Ikara'
 author: 'Pan_Kmicic4'
 pub_date: '2018-09-06 19:05:05.585633+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Rx7oTKXZqUw'
+youtube_id: 'Rx7oTKXZqUw'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Marcin Luter'
 author: 'DX'
 pub_date: '2011-07-17 20:49:37.777825+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=OkjG7IEzXOs'
+youtube_id: 'OkjG7IEzXOs'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

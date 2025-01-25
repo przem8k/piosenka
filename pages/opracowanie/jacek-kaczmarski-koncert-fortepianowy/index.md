@@ -2,7 +2,7 @@
 title: 'Koncert fortepianowy'
 author: 'DX'
 pub_date: '2012-04-08 04:36:45.097898+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=DAU9v8RafKI'
+youtube_id: 'DAU9v8RafKI'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

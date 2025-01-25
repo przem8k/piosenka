@@ -2,7 +2,7 @@
 title: 'Przybycie tytanów'
 author: 'DX'
 pub_date: '2011-05-10 03:36:57.723743+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=5HOlwSnQayA'
+youtube_id: '5HOlwSnQayA'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -3,7 +3,7 @@ title: 'Król'
 author: 'DX'
 pub_date: '2013-02-25 00:33:54.584931+00:00'
 original_title: 'Le roi'
-link_youtube: 'https://www.youtube.com/watch?v=PKh68MFd2Do'
+youtube_id: 'PKh68MFd2Do'
 text_authors:
  - 'georges-brassens'
 composers:

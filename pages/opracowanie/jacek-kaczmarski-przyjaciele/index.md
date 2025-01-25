@@ -2,7 +2,7 @@
 title: 'Przyjaciele'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-16 17:03:08.672956+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=wdvtAFWQusY'
+youtube_id: 'wdvtAFWQusY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

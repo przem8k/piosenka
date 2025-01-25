@@ -3,7 +3,7 @@ title: 'Prośba'
 author: 'reuter'
 pub_date: '2014-09-19 22:33:50.807420+00:00'
 disambig: '„Naucz nas także...”'
-link_youtube: 'https://www.youtube.com/watch?v=z-ydKBdO_2Y'
+youtube_id: 'z-ydKBdO_2Y'
 capo_fret: 3
 text_authors:
  - 'zbigniew-herbert'

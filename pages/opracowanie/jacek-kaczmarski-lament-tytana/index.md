@@ -2,7 +2,7 @@
 title: 'Lament Tytana'
 author: 'Zbik'
 pub_date: '2018-08-03 10:10:10.688880+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=dHAIXSxU40Y'
+youtube_id: 'dHAIXSxU40Y'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

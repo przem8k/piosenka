@@ -2,7 +2,7 @@
 title: 'Ogłoszenie w Kosmos'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-30 21:26:56.707035+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ewXIReK7SMs'
+youtube_id: 'ewXIReK7SMs'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Czastuszki o pieriestrojce'
 author: 'spooky'
 pub_date: '2011-12-08 05:21:05.831843+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=V1EhKiHMr64'
+youtube_id: 'V1EhKiHMr64'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

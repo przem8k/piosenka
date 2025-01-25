@@ -2,7 +2,7 @@
 title: 'Romantyczność (Do sztambucha)'
 author: 'Zbik'
 pub_date: '2018-09-10 10:45:37.626065+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=qZilSW-IwTc'
+youtube_id: 'qZilSW-IwTc'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Szwaczka'
 author: 'reuter'
 pub_date: '2014-09-10 18:09:00.326867+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=JNY4ZwVXnuU'
+youtube_id: 'JNY4ZwVXnuU'
 text_authors:
  - 'zbigniew-herbert'
 composers:

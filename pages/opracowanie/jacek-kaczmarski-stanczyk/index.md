@@ -2,7 +2,7 @@
 title: 'Stańczyk'
 author: 'MaciejKurek'
 pub_date: '2017-02-06 13:06:29.152524+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=iBGgX8B5AQw'
+youtube_id: 'iBGgX8B5AQw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

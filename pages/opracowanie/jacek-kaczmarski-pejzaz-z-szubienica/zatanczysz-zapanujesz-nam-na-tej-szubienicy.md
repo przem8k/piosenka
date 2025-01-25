@@ -7,8 +7,8 @@ ref1: '"Lekcja historii Jacka Kaczmarskiego" – Iwona Grabska, Diana Wasilewska
 image: notes/1138px-Pieter_Bruegel_the_Elder-_The_Magpie_on_the_Gallows.JPG
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1138px-Pieter_Bruegel_the_Elder-_The_Magpie_on_the_Gallows.JPG
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1138px-Pieter_Bruegel_the_Elder-_The_Magpie_on_the_Gallows.JPG.0x300_q85_upscale.jpg
-image_url: https://upload.wikimedia.org/wikipedia/commons/2/24/Pieter_Bruegel_the_Elder-_The_Magpie_on_the_Gallows.JPG
-image_author: Pieter Breughel starszy
+image_src_url: https://upload.wikimedia.org/wikipedia/commons/2/24/Pieter_Bruegel_the_Elder-_The_Magpie_on_the_Gallows.JPG
+image_author: 'Pieter Breughel starszy'
 image_license: domena publiczna
 ---
 

@@ -2,7 +2,7 @@
 title: 'Dwadzieścia lat później'
 author: 'spooky'
 pub_date: '2011-08-06 07:26:40.285776+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=c7MEoJtWqcQ'
+youtube_id: 'c7MEoJtWqcQ'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

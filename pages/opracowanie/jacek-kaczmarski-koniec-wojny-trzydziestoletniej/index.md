@@ -2,7 +2,7 @@
 title: 'Koniec wojny trzydziestoletniej'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-27 17:17:45.626737+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=umhGhNCfOpM'
+youtube_id: 'umhGhNCfOpM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

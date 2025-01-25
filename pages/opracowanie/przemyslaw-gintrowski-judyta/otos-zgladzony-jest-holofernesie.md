@@ -7,8 +7,8 @@ ref1: 'Księga Judyty'
 image: notes/Judith_Beheading_Holofernes_by_Caravaggio.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Judith_Beheading_Holofernes_by_Caravaggio.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Judith_Beheading_Holofernes_by_Caravaggio.jpg.0x300_q85_upscale.jpg
-image_url: https://upload.wikimedia.org/wikipedia/commons/3/38/Judith_Beheading_Holofernes_by_Caravaggio.jpg
-image_author: Michelangelo Merisi da Caravaggio
+image_src_url: https://upload.wikimedia.org/wikipedia/commons/3/38/Judith_Beheading_Holofernes_by_Caravaggio.jpg
+image_author: 'Michelangelo Merisi da Caravaggio'
 image_license: Domena publiczna
 ---
 

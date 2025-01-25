@@ -2,7 +2,7 @@
 title: 'Damastes z przydomkiem Prokrustes mówi'
 author: 'reuter'
 pub_date: '2018-09-12 00:31:48.611063+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=XdS297Wr7fA'
+youtube_id: 'XdS297Wr7fA'
 text_authors:
  - 'zbigniew-herbert'
 composers:

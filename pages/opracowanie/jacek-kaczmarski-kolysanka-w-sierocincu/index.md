@@ -3,7 +3,7 @@ title: 'Kołysanka'
 author: 'RK'
 pub_date: '2012-12-09 13:41:57.126631+00:00'
 disambig: '„W sierocińcu...”'
-link_youtube: 'https://www.youtube.com/watch?v=XmLTXdnuSpQ'
+youtube_id: 'XmLTXdnuSpQ'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

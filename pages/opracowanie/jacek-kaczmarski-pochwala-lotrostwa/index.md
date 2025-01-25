@@ -2,7 +2,7 @@
 title: 'Pochwała łotrostwa'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-27 11:35:13.991154+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=JrDVIOgdEWM'
+youtube_id: 'JrDVIOgdEWM'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

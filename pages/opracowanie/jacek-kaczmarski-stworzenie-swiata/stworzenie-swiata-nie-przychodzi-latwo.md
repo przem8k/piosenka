@@ -8,8 +8,8 @@ ref1: 'Księga Rodzaju, rozdziały 1-2'
 image: notes/blake_ancient_of_days.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/blake_ancient_of_days.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/blake_ancient_of_days.jpg.0x300_q85_upscale.jpg
-image_url: https://artforus.files.wordpress.com/2013/05/blake_ancient_of_days.jpg?w=768
-image_author: William Blake
+image_src_url: https://artforus.files.wordpress.com/2013/05/blake_ancient_of_days.jpg?w=768
+image_author: 'William Blake'
 image_license: Domena publiczna
 ---
 

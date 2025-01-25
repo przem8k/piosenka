@@ -1,5 +1,5 @@
 ---
-title: 'Mury a l'Estaca'
+title: 'Mury a l''Estaca'
 author: 'DX'
 pub_date: '2016-07-24 20:26:44.723743+00:00'
 url1: 'http://barcelona.msz.gov.pl/pl/c/MOBILE/aktualnosci/0_na_pewno_runie__1989_rok__mur_runal_w_polsce___'

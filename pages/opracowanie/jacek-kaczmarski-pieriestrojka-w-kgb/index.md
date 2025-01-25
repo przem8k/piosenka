@@ -2,7 +2,7 @@
 title: 'Pieriestrojka w KGB'
 author: 'Zbik'
 pub_date: '2018-08-20 09:24:37.829260+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=NneugXQBI5k'
+youtube_id: 'NneugXQBI5k'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

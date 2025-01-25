@@ -5,8 +5,8 @@ pub_date: '2016-11-12 16:37:39.960749+00:00'
 image: notes/Leonard_Cohen_1_2013.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Leonard_Cohen_1_2013.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Leonard_Cohen_1_2013.jpg.0x300_q85_upscale.jpg
-image_url: https://en.wikipedia.org/wiki/Leonard_Cohen
-image_author: Takahiro Kyono
+image_src_url: https://en.wikipedia.org/wiki/Leonard_Cohen
+image_author: 'Takahiro Kyono'
 ---
 
 Kanadyjski poeta, pisarz, autor i wykonawca refleksyjnych utworów z nurtu piosenki literackiej.

@@ -2,7 +2,7 @@
 title: 'Kariera Nikodema Dyzmy'
 author: 'Zbik'
 pub_date: '2011-10-16 00:20:22.320774+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=41YUT4EcJF8'
+youtube_id: '41YUT4EcJF8'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

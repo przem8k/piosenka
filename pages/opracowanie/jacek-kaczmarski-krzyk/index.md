@@ -2,7 +2,7 @@
 title: 'Krzyk'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-25 11:55:03.697855+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=8IaWemVjIhY'
+youtube_id: '8IaWemVjIhY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

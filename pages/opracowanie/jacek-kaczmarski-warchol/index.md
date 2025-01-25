@@ -2,7 +2,7 @@
 title: 'Warchoł'
 author: 'DX'
 pub_date: '2011-05-08 07:16:25.957175+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=8JFJapTbc-E'
+youtube_id: '8JFJapTbc-E'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Epitafium dla Sowizdrzała'
 author: 'DX'
 pub_date: '2017-05-14 09:33:15.932859+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=L5sCm9-FX2Y'
+youtube_id: 'L5sCm9-FX2Y'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

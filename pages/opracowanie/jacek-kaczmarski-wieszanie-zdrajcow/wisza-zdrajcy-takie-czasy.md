@@ -8,8 +8,8 @@ ref1: '"Lekcja historii Jacka Kaczmarskiego" Iwona Grabska, Iwona Wasilewska'
 image: notes/Norblin__Wieszanie_na_Rynku_Starego.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Norblin__Wieszanie_na_Rynku_Starego.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Norblin__Wieszanie_na_Rynku_Starego.jpg.0x300_q85_upscale.jpg
-image_url: http://altiok.blox.pl/resource/Norblin__Wieszanie_na_Rynku_Starego.jpg
-image_author: Jan Piotr Norblin
+image_src_url: http://altiok.blox.pl/resource/Norblin__Wieszanie_na_Rynku_Starego.jpg
+image_author: 'Jan Piotr Norblin'
 image_license: Domena publiczna
 ---
 

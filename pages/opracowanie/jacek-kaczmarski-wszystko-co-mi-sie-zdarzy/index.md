@@ -2,7 +2,7 @@
 title: 'Wszystko, co mi się zdarzy...'
 author: 'Zbik'
 pub_date: '2018-07-28 17:04:11.518658+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=xfiaWVYl9R8'
+youtube_id: 'xfiaWVYl9R8'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

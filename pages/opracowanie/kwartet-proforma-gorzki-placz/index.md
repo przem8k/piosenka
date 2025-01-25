@@ -3,7 +3,7 @@ title: 'Gorzki płacz'
 author: 'Zbik'
 pub_date: '2022-11-18 11:37:15.160695+00:00'
 original_title: 'The Weeping Song'
-link_youtube: 'https://www.youtube.com/watch?v=6rTwB5dUyok'
+youtube_id: '6rTwB5dUyok'
 text_authors:
  - 'nick-cave'
 composers:

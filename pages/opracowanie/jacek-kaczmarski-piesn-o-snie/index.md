@@ -2,7 +2,7 @@
 title: 'Pieśń o śnie'
 author: 'Zbik'
 pub_date: '2018-07-29 14:34:00.281714+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=jwpVcNXQpi8'
+youtube_id: 'jwpVcNXQpi8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

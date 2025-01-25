@@ -2,7 +2,7 @@
 title: 'Dzieci Hioba'
 author: 'Zbik'
 pub_date: '2012-06-21 10:36:03.122988+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=LrJZiQ7KumE'
+youtube_id: 'LrJZiQ7KumE'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

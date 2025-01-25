@@ -2,7 +2,7 @@
 title: 'Zaproszenie do piekła'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-31 18:58:25.712895+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=dQUHQunKbSQ'
+youtube_id: 'dQUHQunKbSQ'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

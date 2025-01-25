@@ -2,7 +2,7 @@
 title: 'Starość Piotra Wysockiego'
 author: 'PrzemekL'
 pub_date: '2014-09-07 21:02:14.428226+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=kgT7gtGsoz0'
+youtube_id: 'kgT7gtGsoz0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

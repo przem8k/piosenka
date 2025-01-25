@@ -2,7 +2,7 @@
 title: 'Pięć głosów z Kraju. Bieszczady'
 author: 'Zbik'
 pub_date: '2011-12-29 20:43:15.176597+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=xBWH4-QSlsE'
+youtube_id: 'xBWH4-QSlsE'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Requiem'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-09 21:29:53.749861+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Xe0bzkS1oOU'
+youtube_id: 'Xe0bzkS1oOU'
 text_authors:
  - 'krzysztof-maria-sieniawski'
 composers:

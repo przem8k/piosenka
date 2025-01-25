@@ -2,7 +2,7 @@
 title: 'Nie będzie przebaczenia'
 author: 'Pan_Kmicic4'
 pub_date: '2018-10-12 17:07:12.354023+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=-DnDex-fml0'
+youtube_id: '-DnDex-fml0'
 text_authors:
  - 'lothar-herbst'
 composers:

@@ -2,7 +2,7 @@
 title: 'Śniadanie z Bogiem'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-07 12:38:29.569610+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=GGcOTbchMqA'
+youtube_id: 'GGcOTbchMqA'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

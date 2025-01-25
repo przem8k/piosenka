@@ -2,7 +2,7 @@
 title: 'Ballada o Wieży Babel'
 author: 'Baltazar'
 pub_date: '2020-10-18 19:57:10.647680+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=XuWLXeQmGVg'
+youtube_id: 'XuWLXeQmGVg'
 capo_fret: 3
 text_authors:
  - 'marcin-gabka'

@@ -5,8 +5,8 @@ pub_date: '2017-03-26 19:31:37.410694+00:00'
 image: notes/Jacek-Kleyff-07.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Jacek-Kleyff-07.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Jacek-Kleyff-07.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/Category:Jacek_Kleyff
-image_author: Anna Książek i Adam Rżysko
+image_src_url: https://commons.wikimedia.org/wiki/Category:Jacek_Kleyff
+image_author: 'Anna Książek i Adam Rżysko'
 ---
 
 Twórca i wykonawca piosenek podejmujących tematy społeczne i polityczne, współtwórca warszawskiej grupy kabaretowej Salon Niezależnych, aktor i malarz.

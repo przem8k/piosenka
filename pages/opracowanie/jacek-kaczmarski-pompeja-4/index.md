@@ -2,7 +2,7 @@
 title: 'Pompeja'
 author: 'Alek'
 pub_date: '2018-03-17 17:56:24.466603+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=zowOUuV9z-c'
+youtube_id: 'zowOUuV9z-c'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

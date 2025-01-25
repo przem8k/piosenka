@@ -2,7 +2,7 @@
 title: 'Marsz intelektualistów'
 author: 'Zbik'
 pub_date: '2018-08-04 15:25:17.292711+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=59KYyJ4wzmg'
+youtube_id: '59KYyJ4wzmg'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

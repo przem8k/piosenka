@@ -2,7 +2,7 @@
 title: 'Elekcja'
 author: 'AŁ'
 pub_date: '2012-06-18 15:55:11.807160+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=X_eitsafGWw'
+youtube_id: 'X_eitsafGWw'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

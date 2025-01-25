@@ -2,7 +2,7 @@
 title: 'Ballada żebracza'
 author: 'Zbik'
 pub_date: '2012-04-05 19:37:45.170157+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=EODgeIigxlQ'
+youtube_id: 'EODgeIigxlQ'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

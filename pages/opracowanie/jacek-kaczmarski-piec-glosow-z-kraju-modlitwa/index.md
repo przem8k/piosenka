@@ -2,7 +2,7 @@
 title: 'Pięć głosów z Kraju. Modlitwa'
 author: 'Zbik'
 pub_date: '2011-12-30 20:01:48.316870+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=DuxqT2CWBow'
+youtube_id: 'DuxqT2CWBow'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

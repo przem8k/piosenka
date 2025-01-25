@@ -2,7 +2,7 @@
 title: 'Popiel'
 author: 'Baltazar'
 pub_date: '2020-11-03 19:56:33.658338+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=A4xpC9HksOQ'
+youtube_id: 'A4xpC9HksOQ'
 text_authors:
  - 'marcin-gabka'
 composers:

@@ -2,7 +2,7 @@
 title: 'Sumienie i historia'
 author: 'Zbik'
 pub_date: '2018-07-30 21:11:28.375524+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=mtl8SH_dXvE'
+youtube_id: 'mtl8SH_dXvE'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

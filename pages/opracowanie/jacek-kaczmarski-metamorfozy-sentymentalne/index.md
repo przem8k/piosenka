@@ -2,7 +2,7 @@
 title: 'Metamorfozy sentymentalne'
 author: 'PrzemekL'
 pub_date: '2014-09-07 21:23:08.469073+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Xi3efnqyR30'
+youtube_id: 'Xi3efnqyR30'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

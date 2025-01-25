@@ -2,7 +2,7 @@
 title: 'Ostatnie dni Norwida'
 author: 'Zbik'
 pub_date: '2018-08-20 10:05:41.390825+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=AQ4o8wqDURY'
+youtube_id: 'AQ4o8wqDURY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -5,7 +5,7 @@ pub_date: '2017-03-28 20:56:53.474860+00:00'
 image: notes/Frans_Hals_008.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Frans_Hals_008.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Frans_Hals_008.jpg.0x300_q85_upscale.jpg
-image_url: https://en.wikipedia.org/wiki/The_Gypsy_Girl
+image_src_url: https://en.wikipedia.org/wiki/The_Gypsy_Girl
 ---
 
 Tytuł piosenki odnosi się do trzech obrazów Fransa Halsa na podstawie których została napisania: Wesoły pijak, Cyganka \(na ilustracji\) oraz Śmiejący się kawaler. Piosenka funkcjonowała początkowo pod tytułem "Hals".

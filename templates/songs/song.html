@@ -12,43 +12,42 @@
     <div class="col-md-8">
       <div class="section">
         <div class="content">
-          <h1>{{ song }}
-            {% include "components/content_status_span.html" with item=song %}
+          <h1>{{ title }}
           </h1>
 
           <div class="row song-header">
             <div class="col-md-6">
               <div class="song-info">
-                {% if song.original_title %}
-                <p><b>Tytuł oryginalny:</b> <i>{{ song.original_title }}</i></p>
+                {% if original_title %}
+                <p><b>Tytuł oryginalny:</b> <i>{{ original_title }}</i></p>
                 {% endif %}
 
-                {% if song.text_authors %}
+                {% if text_authors %}
                 <p><b>Tekst:</b>
-                {% include "songs/artist_list.html" with artists=song.text_authors %}
+                {% include "songs/artist_list.html" with artists=text_authors %}
                 </p>
                 {% endif %}
 
-                {% if song.composers %}
+                {% if composers %}
                 <p><b>Muzyka:</b>
-                {% include "songs/artist_list.html" with artists=song.composers %}
+                {% include "songs/artist_list.html" with artists=composers %}
                 </p>
                 {% endif %}
 
-                {% if song.translators %}
+                {% if translators %}
                 <p><b>Tłumaczenie:</b>
-                {% include "songs/artist_list.html" with artists=song.translators %}
+                {% include "songs/artist_list.html" with artists=translators %}
                 </p>
                 {% endif %}
 
-                {% if song.performers %}
+                {% if performers %}
                 <p><b>Wykonanie:</b>
-                {% include "songs/artist_list.html" with artists=song.performers %}
+                {% include "songs/artist_list.html" with artists=performers %}
                 </p>
                 {% endif %}
 
-                {% if song.capo %}
-                <p><b>Kapodaster:</b> {{ song.capo }} </p>
+                {% if capo_fret %}
+                <p><b>Kapodaster:</b> {{ capo_fret }} </p>
                 {% endif %}
               </div>
             </div>
@@ -88,10 +87,10 @@
           <br />
 
           <div class="lyrics">
-            {{ lyrics|safe }}
+            {{ content_html|safe }}
           </div>
 
-          {% include "components/content_foot.html" with action="Dodane" item=song %}
+          {% include "components/content_foot.html" with action="Dodane" %}
         </div>
       </div>
     </div>
@@ -107,10 +106,10 @@
       </div>
       -->
 
-      {% if song.youtube_id %}
+      {% if youtube_id %}
       <div class="section">
         <h2 class="pzt-card-title">Nagranie</h2>
-        <iframe src="https://www.youtube.com/embed/{{song.youtube_id}}" class="pzt-max-width" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/{{youtube_id}}" class="pzt-max-width" frameborder="0" allowfullscreen></iframe>
       </div>
       {% endif %}
 
@@ -118,42 +117,35 @@
       {% include "content/note.html" with note=note %}
       {% endfor %}
 
-      {% if mentions %}
-      <div class="section">
-        <h2 class="pzt-card-title">Dowiedz się więcej</h2>
-        <ul class="list-unstyled">
-          {% for mention in mentions %}
-          <li><a href="{{ mention.article.get_absolute_url }}">{{ mention.article }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-
-      {% if song.score1 or song.score2 or song.score3 %}
+      {% if score1_thumb or score2_thumb or score3_thumb %}
       <div class="section">
         <h2 class="pzt-card-title">Nuty</h2>
-        {% if song.score1 %}
-        {% include "components/thumbnail.html" with img=song.score1 type="scorethumb" alt="Nuty do piosenki" %}
+        {% if score1_thumb %}
+        <div class="pzt-thumbnail thumbnail-host">
+          <a href="{{ score1_full }}" class="pzt-lightbox">
+            <img src="{{ score1_thumb }}" />
+          </a>
+        </div>
         {% endif %}	
-        {% if song.score2 %}
-        {% include "components/thumbnail.html" with img=song.score2 type="scorethumb" alt="Nuty do piosenki" %}
+
+        {% if score2_thumb %}
+        <div class="pzt-thumbnail thumbnail-host">
+          <a href="{{ score2_full }}" class="pzt-lightbox">
+            <img src="{{ score2_thumb }}" />
+          </a>
+        </div>
         {% endif %}	
-        {% if song.score3 %}
-        {% include "components/thumbnail.html" with img=song.score3 type="scorethumb" alt="Nuty do piosenki" %}
+
+        {% if score3_thumb %}
+        <div class="pzt-thumbnail thumbnail-host">
+          <a href="{{ score3_full }}" class="pzt-lightbox">
+            <img src="{{ score3_thumb }}" />
+          </a>
+        </div>
         {% endif %}	
       </div>
       {% endif %}
 
-      {% if user.is_authenticated and song.get_add_note_url %}
-      <div class="section">
-        <h2 class="pzt-card-title">Dodaj adnotację</h2>
-        <p style="text-align: center">
-          <a href="{{ song.get_add_note_url }}">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          </a>
-        </p>
-      </div>
-      {% endif %}
     </div>
   </div>
   {% include "base/rows/disqus.html" with disqus_id=song.slug %}

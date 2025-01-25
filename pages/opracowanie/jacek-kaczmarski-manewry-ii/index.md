@@ -2,7 +2,7 @@
 title: 'Manewry II'
 author: 'Pan_Kmicic4'
 pub_date: '2018-09-04 20:06:37.650185+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=L1ipEun_inE'
+youtube_id: 'L1ipEun_inE'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

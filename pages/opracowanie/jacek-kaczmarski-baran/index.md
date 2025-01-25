@@ -2,7 +2,7 @@
 title: 'Baran'
 author: 'Zbik'
 pub_date: '2011-08-30 15:09:38.613816+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=j0f7V314JPk'
+youtube_id: 'j0f7V314JPk'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

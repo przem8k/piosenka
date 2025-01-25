@@ -2,7 +2,7 @@
 title: 'Pożegnanie Okudżawy'
 author: 'Zbik'
 pub_date: '2011-10-31 11:48:06.102912+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=a4Pon0cZET0'
+youtube_id: 'a4Pon0cZET0'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

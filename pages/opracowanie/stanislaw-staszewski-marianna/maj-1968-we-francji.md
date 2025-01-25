@@ -6,8 +6,8 @@ url1: 'https://pl.wikipedia.org/wiki/Maj_1968'
 image: notes/1968_bordeaux.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1968_bordeaux.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1968_bordeaux.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/Category:May_1968_protests_in_Bordeaux#/media/File:1968-05_%C3%89v%C3%A8nements_de_mai_%C3%A0_Bordeaux_-_Rue_Paul-Bert_2.jpg
-image_author: Tangopaso
+image_src_url: https://commons.wikimedia.org/wiki/Category:May_1968_protests_in_Bordeaux#/media/File:1968-05_%C3%89v%C3%A8nements_de_mai_%C3%A0_Bordeaux_-_Rue_Paul-Bert_2.jpg
+image_author: 'Tangopaso'
 image_license: domena publiczna
 ---
 

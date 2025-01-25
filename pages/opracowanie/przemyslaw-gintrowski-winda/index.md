@@ -2,7 +2,7 @@
 title: 'Winda'
 author: 'Zbik'
 pub_date: '2011-08-30 15:47:07.313961+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=qalMQ9aoQd4'
+youtube_id: 'qalMQ9aoQd4'
 text_authors:
  - 'tomasz-jastrun'
 composers:

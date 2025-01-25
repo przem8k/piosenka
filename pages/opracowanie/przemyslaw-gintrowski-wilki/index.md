@@ -2,7 +2,7 @@
 title: 'Wilki'
 author: 'reuter'
 pub_date: '2014-09-09 21:14:22.213419+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=_qir5OcMNhY'
+youtube_id: '_qir5OcMNhY'
 text_authors:
  - 'zbigniew-herbert'
 composers:

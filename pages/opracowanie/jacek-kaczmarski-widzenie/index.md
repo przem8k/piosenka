@@ -2,7 +2,7 @@
 title: 'Widzenie'
 author: 'Zbik'
 pub_date: '2018-07-30 20:07:09.639407+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=gQGzTzmSb-M'
+youtube_id: 'gQGzTzmSb-M'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

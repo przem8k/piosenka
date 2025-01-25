@@ -2,7 +2,7 @@
 title: 'Epitafium dla Brunona Jasieńskiego'
 author: 'AŁ'
 pub_date: '2012-04-06 16:18:21.594827+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Pd69GqxEsdY'
+youtube_id: 'Pd69GqxEsdY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

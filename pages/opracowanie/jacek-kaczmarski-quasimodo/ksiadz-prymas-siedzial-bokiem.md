@@ -7,7 +7,7 @@ url2: 'https://wpolityce.pl/polityka/149362-wazny-wywiad-ze-sp-prymasem-glempem-
 image: notes/glemp.jpeg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/glemp.jpeg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/glemp.jpeg.0x300_q85_upscale.jpg
-image_url: http://lasbielanski.pl
+image_src_url: http://lasbielanski.pl
 ---
 
 _Jedna z rzadziej śpiewanych piosenek, pisana w roku 1982 \(...\) po oświadczeniu kardynała Glempa, namawiającym społeczeństwo polskie do zgody na stan wojenny_ \- tak zapowiedział utwór Jacek Kaczmarski podczas koncertu w Górze Kalwarii \(woj. mazowieckie\). Artysta zapewne miał na myśli kazanie, jakie prymas Polski \(pełniący swoją funkcję zaledwie od kilku miesięcy\) wygłosił 13 grudnia 1981 roku w sanktuarium Matki Bożej Łaskawej.

@@ -2,7 +2,7 @@
 title: 'Rytmy'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-07 11:55:22.408365+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1o78c7GKqU8'
+youtube_id: '1o78c7GKqU8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

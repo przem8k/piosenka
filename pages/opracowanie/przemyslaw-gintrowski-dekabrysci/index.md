@@ -2,7 +2,7 @@
 title: 'Dekabryści'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-30 19:02:50.509364+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=HAfqJJE-dMA'
+youtube_id: 'HAfqJJE-dMA'
 text_authors:
  - 'jerzy-czech'
 composers:

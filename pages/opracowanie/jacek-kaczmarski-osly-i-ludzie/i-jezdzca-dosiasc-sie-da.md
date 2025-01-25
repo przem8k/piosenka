@@ -7,8 +7,8 @@ url2: 'https://pl.wikipedia.org/wiki/Kaprysy'
 image: notes/85bab7ad3851aa5e3f707448eaefadd8.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/85bab7ad3851aa5e3f707448eaefadd8.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/85bab7ad3851aa5e3f707448eaefadd8.jpg.0x300_q85_upscale.jpg
-image_url: https://i.pinimg.com/originals/85/ba/b7/85bab7ad3851aa5e3f707448eaefadd8.jpg
-image_author: Francisco Goya
+image_src_url: https://i.pinimg.com/originals/85/ba/b7/85bab7ad3851aa5e3f707448eaefadd8.jpg
+image_author: 'Francisco Goya'
 image_license: Domena publiczna
 ---
 

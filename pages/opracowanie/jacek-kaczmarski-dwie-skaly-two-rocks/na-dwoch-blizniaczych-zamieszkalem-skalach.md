@@ -7,7 +7,7 @@ url2: 'http://www.kaczmarski.art.pl/tworczosc/wiersze/dwie-skaly-two-rocks/'
 image: notes/two_rocks4.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/two_rocks4.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/two_rocks4.jpg.0x300_q85_upscale.jpg
-image_url: http://kaczmarski.art
+image_src_url: http://kaczmarski.art
 ---
 
 _„Jest tam niewielki port rybacko\-jachtowy, podupadająca przetwórnia krewetek, ślady po japońskim parku rozrywki, który zbankrutował przed dziesięciu laty, kilkadziesiąt domków i właśnie dwie skały sterczące z oceanu opodal wybrzeża”._

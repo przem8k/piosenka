@@ -2,7 +2,7 @@
 title: 'Z pasa słuckiego pożytek'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-26 11:34:38.837991+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ZYysKBjUgAQ'
+youtube_id: 'ZYysKBjUgAQ'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

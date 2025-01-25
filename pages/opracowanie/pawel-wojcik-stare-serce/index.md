@@ -2,7 +2,7 @@
 title: 'Stare serce'
 author: 'Boczuś'
 pub_date: '2016-05-20 10:11:10.176481+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ZVzd_3jM8uo'
+youtube_id: 'ZVzd_3jM8uo'
 text_authors:
  - 'pawel-wojcik'
 composers:

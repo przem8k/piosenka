@@ -2,7 +2,7 @@
 title: 'Konfesjonał'
 author: 'AŁ'
 pub_date: '2012-06-19 15:20:39.541966+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=hpMFsn-b86g'
+youtube_id: 'hpMFsn-b86g'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Pokusa'
 author: 'Zbik'
 pub_date: '2018-08-08 13:09:28.287479+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=qeGTyHH2fBY'
+youtube_id: 'qeGTyHH2fBY'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

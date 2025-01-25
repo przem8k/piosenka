@@ -8,7 +8,7 @@ ref1: 'Zapowiedź do piosenki na płycie Chicago Live'
 image: notes/catherine_II.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/catherine_II.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/catherine_II.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/Category:Catherine_II_of_Russia#/media/File:Profile_portrait_of_Catherine_II_by_Fedor_Rokotov_(1763,_Tretyakov_gallery).jpg
+image_src_url: https://commons.wikimedia.org/wiki/Category:Catherine_II_of_Russia#/media/File:Profile_portrait_of_Catherine_II_by_Fedor_Rokotov_(1763,_Tretyakov_gallery).jpg
 image_license: domena publiczna
 ---
 

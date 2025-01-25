@@ -2,7 +2,7 @@
 title: 'Wykopaliska'
 author: 'Pan_Kmicic4'
 pub_date: '2019-02-10 10:56:52.854260+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=AwpHp_VmSEs'
+youtube_id: 'AwpHp_VmSEs'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

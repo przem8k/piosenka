@@ -3,7 +3,7 @@ title: 'Kwestia odwagi'
 author: 'DX'
 pub_date: '2011-06-08 19:36:35.423948+00:00'
 disambig: 'melodia z roku 1998'
-link_youtube: 'http://www.youtube.com/watch?v=9iXC3x2hoLY'
+youtube_id: '9iXC3x2hoLY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Potęga smaku'
 author: 'DX'
 pub_date: '2011-08-16 20:59:58.585566+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=cluvCj0nvpg'
+youtube_id: 'cluvCj0nvpg'
 text_authors:
  - 'zbigniew-herbert'
 composers:

@@ -3,7 +3,7 @@ title: 'Płonie ogień'
 author: 'DX'
 pub_date: '2011-12-22 06:10:56.765666+00:00'
 original_title: 'Горит огонь'
-link_youtube: 'http://www.youtube.com/watch?v=gnF9TXSwv8c'
+youtube_id: 'gnF9TXSwv8c'
 text_authors:
  - 'timur-mucurajew'
 composers:

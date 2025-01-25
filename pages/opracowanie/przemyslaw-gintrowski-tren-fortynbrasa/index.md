@@ -2,7 +2,7 @@
 title: 'Tren Fortynbrasa'
 author: 'reuter'
 pub_date: '2014-09-10 20:08:14.597571+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=sCnl1T-I02M'
+youtube_id: 'sCnl1T-I02M'
 capo_fret: 3
 text_authors:
  - 'zbigniew-herbert'

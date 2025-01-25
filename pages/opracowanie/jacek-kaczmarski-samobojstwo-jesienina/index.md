@@ -2,7 +2,7 @@
 title: 'Samobójstwo Jesienina'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-22 08:11:07.360285+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Zi9dMUaG5X4'
+youtube_id: 'Zi9dMUaG5X4'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

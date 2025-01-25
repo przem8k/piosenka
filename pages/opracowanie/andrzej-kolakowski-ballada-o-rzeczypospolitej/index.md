@@ -2,7 +2,7 @@
 title: 'Ballada o Rzeczypospolitej'
 author: 'RK'
 pub_date: '2011-12-19 09:00:32.480796+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1YstThssBOs'
+youtube_id: '1YstThssBOs'
 text_authors:
  - 'andrzej-kolakowski'
 composers:

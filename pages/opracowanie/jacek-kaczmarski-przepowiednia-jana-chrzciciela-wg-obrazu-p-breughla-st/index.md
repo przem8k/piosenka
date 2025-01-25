@@ -2,7 +2,7 @@
 title: 'Przepowiednia Jana Chrzciciela'
 author: 'PrzemekL'
 pub_date: '2018-03-10 15:56:24.435402+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ziEuTGlt67s'
+youtube_id: 'ziEuTGlt67s'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Legenda o miłości'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-16 14:15:39.652482+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=LwlvCphsBCQ'
+youtube_id: 'LwlvCphsBCQ'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

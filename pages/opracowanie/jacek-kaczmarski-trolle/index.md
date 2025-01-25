@@ -2,7 +2,7 @@
 title: 'Trolle'
 author: 'Zbik'
 pub_date: '2018-07-28 19:25:49.872760+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=L41BK_SyG7s'
+youtube_id: 'L41BK_SyG7s'
 capo_fret: 4
 text_authors:
  - 'jacek-kaczmarski'

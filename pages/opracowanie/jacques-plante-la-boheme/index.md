@@ -2,7 +2,7 @@
 title: 'La Bohème'
 author: 'DX'
 pub_date: '2018-11-25 20:41:38.995177+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=yab_269ndjY'
+youtube_id: 'yab_269ndjY'
 capo_fret: 3
 text_authors:
  - 'jacques-plante'

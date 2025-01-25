@@ -3,7 +3,7 @@ title: 'Hank, ja i Joe'
 author: 'PrzemekL'
 pub_date: '2014-09-03 19:21:48.393366+00:00'
 original_title: 'Hank and Joe and me'
-link_youtube: 'https://www.youtube.com/watch?v=0pkDPURLuCI'
+youtube_id: '0pkDPURLuCI'
 text_authors:
  - 'jacek-kaczmarski'
 translators:

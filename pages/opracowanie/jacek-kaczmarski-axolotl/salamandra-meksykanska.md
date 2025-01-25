@@ -7,8 +7,8 @@ url2: 'https://www.youtube.com/watch?v=34Vkpzb4snk&'
 image: notes/Axolotl-2193331_1280.webp.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Axolotl-2193331_1280.webp.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Axolotl-2193331_1280.webp.png.0x300_q85_upscale.png
-image_url: https://en.wikipedia.org/wiki/File:Axolotl-2193331_1280.webp
-image_author: LaDameBucolique
+image_src_url: https://en.wikipedia.org/wiki/File:Axolotl-2193331_1280.webp
+image_author: 'LaDameBucolique'
 ---
 
 Salamandra \(ambystoma\) meksykańska \(potocznie aksolotl\) to endemiczny gatunek płaza zamieszkujący pierwotnie zimne wody dwóch meksykańskich jezior [Xochimilco](https://pl.wikipedia.org/wiki/Xochimilco) i [Chalco](https://pl.wikipedia.org/wiki/Chalco) \(2300 m n.p.m.\), aktualnie jeśli w ogóle da się ją jeszcze spotkać na wolności, to tylko w południowej części pierwszego z wymienionych jezior. Aksolotl pozostaje natomiast popularnym i łatwo dostępnym zwierzęciem hodowlanym.

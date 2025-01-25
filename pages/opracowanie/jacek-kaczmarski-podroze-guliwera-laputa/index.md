@@ -2,7 +2,7 @@
 title: 'Podróże Guliwera. Laputa'
 author: 'Zbik'
 pub_date: '2012-04-23 21:58:55.946473+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=2fvjjzesprw'
+youtube_id: '2fvjjzesprw'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

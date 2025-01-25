@@ -5,7 +5,7 @@ pub_date: '2018-07-21 17:28:43.720736+00:00'
 image: notes/Cheret_MoulinRouge_ParisCancan.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Cheret_MoulinRouge_ParisCancan.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Cheret_MoulinRouge_ParisCancan.jpg.0x300_q85_upscale.jpg
-image_url: https://en.wikipedia.org/wiki/Moulin_Rouge
+image_src_url: https://en.wikipedia.org/wiki/Moulin_Rouge
 ---
 
 Dwoje bohaterów piosenki daje się porwać dwóm różnym „czerwonym młynom”:

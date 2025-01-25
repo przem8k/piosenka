@@ -2,7 +2,7 @@
 title: 'Teza Don Kichota'
 author: 'DX'
 pub_date: '2012-07-22 21:19:16.801757+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=PP3NDSHrg34'
+youtube_id: 'PP3NDSHrg34'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

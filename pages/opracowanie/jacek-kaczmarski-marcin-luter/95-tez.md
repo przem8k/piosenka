@@ -5,7 +5,7 @@ pub_date: '2020-08-09 08:15:19.462065+00:00'
 image: notes/756px-Luther_95_Thesen.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/756px-Luther_95_Thesen.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/756px-Luther_95_Thesen.png.0x300_q85_upscale.jpg
-image_url: https://pl.wikipedia.org/wiki/95_tez#/media/Plik:Luther_95_Thesen.png
+image_src_url: https://pl.wikipedia.org/wiki/95_tez#/media/Plik:Luther_95_Thesen.png
 image_license: domena publiczna
 ---
 

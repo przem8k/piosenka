@@ -2,7 +2,7 @@
 title: 'Świnia'
 author: 'Zbik'
 pub_date: '2012-06-12 11:17:51.916344+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=UFjclY4jumw'
+youtube_id: 'UFjclY4jumw'
 text_authors:
  - 'jacek-kleyff'
 composers:

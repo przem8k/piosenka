@@ -4,7 +4,7 @@ author: 'PrzemekL'
 pub_date: '2019-05-17 20:35:36.835019+00:00'
 disambig: 'według W. Wysockiego'
 original_title: 'Так случилось, мужчины ушли'
-link_youtube: 'https://www.youtube.com/watch?v=QyXQrnmlG_0'
+youtube_id: 'QyXQrnmlG_0'
 capo_fret: 1
 text_authors:
  - 'pawel-wojcik'

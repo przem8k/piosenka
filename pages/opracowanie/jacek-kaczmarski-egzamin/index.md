@@ -2,7 +2,7 @@
 title: 'Egzamin'
 author: 'Zbik'
 pub_date: '2018-10-15 10:09:20.923511+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=IQmRvqhxPlo'
+youtube_id: 'IQmRvqhxPlo'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

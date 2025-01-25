@@ -2,7 +2,7 @@
 title: 'Psalm o powrocie'
 author: 'reuter'
 pub_date: '2018-08-22 19:01:13.483367+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=SN7IVWQ9xrM'
+youtube_id: 'SN7IVWQ9xrM'
 text_authors:
  - 'tadeusz-nowak'
 composers:

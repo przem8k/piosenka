@@ -2,7 +2,7 @@
 title: 'Bal u Pana Boga'
 author: 'jakubkwa'
 pub_date: '2015-08-17 22:51:04.473813+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=mz2eAkJcmCg'
+youtube_id: 'mz2eAkJcmCg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

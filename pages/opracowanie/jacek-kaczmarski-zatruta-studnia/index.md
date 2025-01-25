@@ -2,7 +2,7 @@
 title: 'Zatruta studnia'
 author: 'DX'
 pub_date: '2017-10-08 22:56:41.246163+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ndmVKcsqsFM'
+youtube_id: 'ndmVKcsqsFM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

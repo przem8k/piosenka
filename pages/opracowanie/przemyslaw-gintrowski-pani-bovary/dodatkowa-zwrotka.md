@@ -6,7 +6,7 @@ ref1: 'Krzysztof Maria Sieniawski, Serce transkontynentalne Almapress Studencka 
 image: notes/serce_transkontynentalne.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/serce_transkontynentalne.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/serce_transkontynentalne.jpg.0x300_q85_upscale.jpg
-image_author: projekt okładki: Ryszard Wojtyński
+image_author: 'projekt okładki: Ryszard Wojtyński'
 ---
 
 Wiersz Krzysztofa Marii Sieniawskiego w wersji śpiewanej przez Gintrowskiego składa się z pięciu zwrotek. W wydanym w 1986 roku debiutanckim tomiku Sieniawskiego „Serce transkontynentalne” znajdziemy ich jednak sześć. Po wersie „nad przerażonym miastem mknie” pojawia się następująca zwrotka:

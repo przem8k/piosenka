@@ -2,7 +2,7 @@
 title: 'Źródło'
 author: 'spooky'
 pub_date: '2013-05-24 23:45:54.019844+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=QCopoCoerRs'
+youtube_id: 'QCopoCoerRs'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Antylitania na czasy przejściowe'
 author: 'spooky'
 pub_date: '2011-08-15 23:53:45.076028+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=eNzCit7d9Kw'
+youtube_id: 'eNzCit7d9Kw'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

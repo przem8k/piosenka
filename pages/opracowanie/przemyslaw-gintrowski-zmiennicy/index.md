@@ -2,7 +2,7 @@
 title: 'Zmiennicy'
 author: 'reuter'
 pub_date: '2018-09-16 21:29:26.390395+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=4hqFPNSyMhM'
+youtube_id: '4hqFPNSyMhM'
 text_authors:
  - 'jacek-janczarski'
 composers:

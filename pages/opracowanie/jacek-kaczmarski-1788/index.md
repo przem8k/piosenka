@@ -2,7 +2,7 @@
 title: '1788'
 author: 'DX'
 pub_date: '2011-05-07 14:05:33.684435+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=VtsMVI8Fles'
+youtube_id: 'VtsMVI8Fles'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

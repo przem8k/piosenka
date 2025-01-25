@@ -2,7 +2,7 @@
 title: 'Pieśń o hufcu'
 author: 'DX'
 pub_date: '2011-07-24 19:10:32.965243+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=rJP0yOwKfHE'
+youtube_id: 'rJP0yOwKfHE'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

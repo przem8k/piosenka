@@ -2,7 +2,7 @@
 title: 'Rozstrzelana Armia'
 author: 'RK'
 pub_date: '2012-10-25 18:45:31.395174+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=JZuMPhxLmJA'
+youtube_id: 'JZuMPhxLmJA'
 text_authors:
  - 'andrzej-kolakowski'
 composers:

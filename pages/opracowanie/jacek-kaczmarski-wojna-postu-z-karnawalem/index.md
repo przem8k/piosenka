@@ -2,7 +2,7 @@
 title: 'Wojna postu z karnawałem'
 author: 'DX'
 pub_date: '2011-06-05 21:59:07.859179+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Ckj0lJHw1pM'
+youtube_id: 'Ckj0lJHw1pM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

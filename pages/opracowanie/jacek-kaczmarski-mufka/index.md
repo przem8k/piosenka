@@ -2,7 +2,7 @@
 title: 'Mufka'
 author: 'Zbik'
 pub_date: '2011-10-31 12:50:42.442830+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=X6unJdM252w'
+youtube_id: 'X6unJdM252w'
 composers:
  - 'tradycyjna'
 translators:

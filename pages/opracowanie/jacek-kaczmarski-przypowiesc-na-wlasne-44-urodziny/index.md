@@ -2,7 +2,7 @@
 title: 'Przypowieść na własne 44. urodziny'
 author: 'spooky'
 pub_date: '2011-09-10 18:53:18.269782+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=CK5d1qE4-5E'
+youtube_id: 'CK5d1qE4-5E'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Ballada o istotkach (Ballada z morałem)'
 author: 'PrzemekL'
 pub_date: '2018-02-16 16:03:05.736415+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1TXLiQDbd1c'
+youtube_id: '1TXLiQDbd1c'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

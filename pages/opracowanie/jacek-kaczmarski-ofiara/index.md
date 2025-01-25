@@ -2,7 +2,7 @@
 title: 'Ofiara'
 author: 'Zbik'
 pub_date: '2018-02-25 17:14:44.956483+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1ZJ5x-GAuoc'
+youtube_id: '1ZJ5x-GAuoc'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

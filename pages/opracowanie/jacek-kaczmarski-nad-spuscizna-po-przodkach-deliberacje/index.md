@@ -2,7 +2,7 @@
 title: 'Nad spuścizną po przodkach deliberacje'
 author: 'DX'
 pub_date: '2016-08-23 17:15:39.449827+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=u8Yy2lI_cjA'
+youtube_id: 'u8Yy2lI_cjA'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

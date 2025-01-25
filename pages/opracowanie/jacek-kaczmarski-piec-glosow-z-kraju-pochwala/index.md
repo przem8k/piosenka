@@ -2,7 +2,7 @@
 title: 'Pięć głosów z Kraju. Pochwała'
 author: 'Zbik'
 pub_date: '2011-12-30 20:14:14.436028+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=PvBdybSbV1k'
+youtube_id: 'PvBdybSbV1k'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

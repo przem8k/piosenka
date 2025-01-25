@@ -2,7 +2,7 @@
 title: 'Wigilia na Syberii'
 author: 'Zbik'
 pub_date: '2013-12-18 19:06:41.285176+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=kidVxZKqpqY'
+youtube_id: 'kidVxZKqpqY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

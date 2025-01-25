@@ -2,7 +2,7 @@
 title: 'Zrodził się dzieciaczek...'
 author: 'Zbik'
 pub_date: '2018-10-11 16:47:27.684260+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=oZLYp-cbShc'
+youtube_id: 'oZLYp-cbShc'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

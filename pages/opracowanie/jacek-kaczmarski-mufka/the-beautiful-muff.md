@@ -6,7 +6,7 @@ url1: 'https://www.youtube.com/watch?v=tPeRQuSlGa8'
 image: notes/csardas.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/csardas.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/csardas.jpg.0x300_q85_upscale.jpg
-image_url: https://www.cmuse.org/six-famous-csardas-you-must-listen-to/
+image_src_url: https://www.cmuse.org/six-famous-csardas-you-must-listen-to/
 ---
 
 Piosenka jest tłumaczeniem tradycyjnej australijskiej piosenki „The beautiful muff”. W oryginale utwór rozpoczyna się od słów:

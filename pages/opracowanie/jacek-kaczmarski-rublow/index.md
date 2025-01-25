@@ -2,7 +2,7 @@
 title: 'Rublow'
 author: 'DX'
 pub_date: '2011-10-13 20:07:18.643339+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=ZVCo28AAHkU'
+youtube_id: 'ZVCo28AAHkU'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

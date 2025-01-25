@@ -2,7 +2,7 @@
 title: '*** (A jeżeli przyszłoby umierać...)'
 author: 'reuter'
 pub_date: '2024-06-02 20:18:37.948325+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=7GpkQ8oYCTo'
+youtube_id: '7GpkQ8oYCTo'
 capo_fret: 1
 text_authors:
  - 'hanka-wlodarczyk'

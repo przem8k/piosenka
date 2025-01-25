@@ -3,7 +3,7 @@ title: 'Śmierć za idee'
 author: 'DX'
 pub_date: '2011-10-26 23:18:11.295321+00:00'
 original_title: 'Mourir pour des idees'
-link_youtube: 'http://www.youtube.com/watch?v=W-Gbgw9IPBI'
+youtube_id: 'W-Gbgw9IPBI'
 text_authors:
  - 'georges-brassens'
 composers:

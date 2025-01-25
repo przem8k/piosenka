@@ -2,7 +2,7 @@
 title: 'Ursuski Czerwiec 1976'
 author: 'Zbik'
 pub_date: '2011-10-15 23:36:08.404077+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=w7Nl01ldtSo'
+youtube_id: 'w7Nl01ldtSo'
 text_authors:
  - 'leszek-czajkowski'
 composers:

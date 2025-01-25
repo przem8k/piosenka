@@ -2,7 +2,7 @@
 title: 'M/S Maria Konopnicka'
 author: 'PrzemekL'
 pub_date: '2014-09-06 17:01:50.335309+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=8c_KoiHXiJI'
+youtube_id: '8c_KoiHXiJI'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

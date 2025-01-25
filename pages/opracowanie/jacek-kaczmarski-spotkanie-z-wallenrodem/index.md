@@ -2,7 +2,7 @@
 title: 'Spotkanie z Wallenrodem'
 author: 'Zbik'
 pub_date: '2011-10-31 12:35:29.450427+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=jnfpZISNCfA'
+youtube_id: 'jnfpZISNCfA'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Zmartwychwstanie Mandelsztama'
 author: 'PrzemekL'
 pub_date: '2014-09-07 13:31:23.558788+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=_bWlvW4gSNk'
+youtube_id: '_bWlvW4gSNk'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Wygnanie z raju'
 author: 'Zbik'
 pub_date: '2018-07-17 21:33:20.179684+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=VptMR08Ie3s'
+youtube_id: 'VptMR08Ie3s'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

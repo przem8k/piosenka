@@ -2,7 +2,7 @@
 title: 'Zaparcie się apostoła Piotra'
 author: 'PrzemekL'
 pub_date: '2014-09-05 22:20:35.155730+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=m6Tf7CLNmwc'
+youtube_id: 'm6Tf7CLNmwc'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Czaty śmiełowskie'
 author: 'AŁ'
 pub_date: '2012-06-19 14:39:41.294301+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=s05Qw3Hb4VY'
+youtube_id: 's05Qw3Hb4VY'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

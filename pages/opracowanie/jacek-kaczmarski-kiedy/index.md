@@ -2,7 +2,7 @@
 title: 'Kiedy'
 author: 'DX'
 pub_date: '2011-07-29 01:32:49.393097+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Ka-rqH4g2Ps'
+youtube_id: 'Ka-rqH4g2Ps'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

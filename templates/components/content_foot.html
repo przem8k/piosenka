@@ -1,10 +1,6 @@
-{% load edit_links %}
 <hr />
 <p class="remove-bottom-margin">
   {{ action }}
-  {% if item.pub_date %}<span class="date">{{ item.pub_date|date:"d.m.Y" }}</span>{% endif %}
-  przez <b>{{ item.author }}</b>
-  <span class="pull-right">
-  {% edit_links item user "zatwierdź" "edytuj" %}
-  </span>
+  {% if pub_date %}<span class="date">{{ pub_date|date:"d.m.Y" }}</span>{% endif %}
+  przez <b>{{ author }}</b>
 </p>

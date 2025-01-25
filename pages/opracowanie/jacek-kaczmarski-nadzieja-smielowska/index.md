@@ -2,7 +2,7 @@
 title: 'Nadzieja śmiełowska'
 author: 'PrzemekL'
 pub_date: '2018-02-16 17:07:56.475969+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=b-dBD-d6ggs'
+youtube_id: 'b-dBD-d6ggs'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

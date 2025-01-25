@@ -2,7 +2,7 @@
 title: 'Błędy wróżbitów'
 author: 'Zbik'
 pub_date: '2012-10-24 16:42:35.351256+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=F2Otp5a35kA'
+youtube_id: 'F2Otp5a35kA'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

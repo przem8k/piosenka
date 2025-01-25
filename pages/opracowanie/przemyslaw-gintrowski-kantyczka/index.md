@@ -2,7 +2,7 @@
 title: 'Kantyczka'
 author: 'DX'
 pub_date: '2014-01-06 21:47:45.660147+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=nMLA-vjxnXE'
+youtube_id: 'nMLA-vjxnXE'
 text_authors:
  - 'krzysztof-maria-sieniawski'
 composers:

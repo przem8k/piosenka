@@ -2,7 +2,7 @@
 title: 'Pan Kmicic'
 author: 'DX'
 pub_date: '2011-05-13 02:05:02.479044+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=fxY6QwVMzkI'
+youtube_id: 'fxY6QwVMzkI'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

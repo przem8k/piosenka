@@ -2,7 +2,7 @@
 title: '... Jaki miły i mądry facet'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-31 09:37:54.031372+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=RfiRALXCh3w'
+youtube_id: 'RfiRALXCh3w'
 text_authors:
  - 'andrzej-bursa'
 composers:

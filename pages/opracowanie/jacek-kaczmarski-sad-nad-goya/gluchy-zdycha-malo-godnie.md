@@ -7,8 +7,8 @@ url2: 'https://www.biography.com/people/francisco-de-goya-9317129'
 image: notes/1226.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1226.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1226.jpg.0x300_q85_upscale.jpg
-image_url: https://1.api.artsmia.org/800/1226.jpg
-image_author: Francisco Goya
+image_src_url: https://1.api.artsmia.org/800/1226.jpg
+image_author: 'Francisco Goya'
 image_license: domena publiczna
 ---
 

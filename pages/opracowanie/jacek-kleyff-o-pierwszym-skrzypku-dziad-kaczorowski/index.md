@@ -2,7 +2,7 @@
 title: 'O pierwszym skrzypku (Dziad Kaczorowski)'
 author: 'Zbik'
 pub_date: '2012-06-12 13:01:32.739224+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=1cV7piRXOeA'
+youtube_id: '1cV7piRXOeA'
 text_authors:
  - 'jacek-kleyff'
 composers:

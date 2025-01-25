@@ -6,8 +6,8 @@ url1: 'https://pl.wikipedia.org/wiki/Anna_Politkowska'
 image: notes/anna_politkowska.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/anna_politkowska.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/anna_politkowska.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/Category:Anna_Politkovskaya#/media/File:Anna_Politkovskaja_auf_dem_Blaue_Sofa_(6343055435).jpg
-image_author: Das blaue Sofa / Club Bertelsmann
+image_src_url: https://commons.wikimedia.org/wiki/Category:Anna_Politkovskaya#/media/File:Anna_Politkovskaja_auf_dem_Blaue_Sofa_(6343055435).jpg
+image_author: 'Das blaue Sofa / Club Bertelsmann'
 image_license: CC BY 2.0
 ---
 

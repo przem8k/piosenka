@@ -2,7 +2,7 @@
 title: 'Tyle złota i purpury...'
 author: 'RK'
 pub_date: '2012-11-24 12:11:32.207998+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=Ta97f14AHv0'
+youtube_id: 'Ta97f14AHv0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

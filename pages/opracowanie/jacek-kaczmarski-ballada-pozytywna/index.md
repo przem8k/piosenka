@@ -2,7 +2,7 @@
 title: 'Ballada pozytywna'
 author: 'jakubkwa'
 pub_date: '2015-12-13 23:12:27.018148+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=9Yt4ODG71Gg'
+youtube_id: '9Yt4ODG71Gg'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

@@ -7,8 +7,8 @@ url2: 'https://dzieje.pl/aktualnosci/urban-przegrana-mojej-formacji-4-czerwca-89
 image: notes/Ogłoszenie_wybory_1989_ulica_Stalowa_41_w_Warszawie.JPG
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Ogłoszenie_wybory_1989_ulica_Stalowa_41_w_Warszawie.JPG
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Og%C5%82oszenie_wybory_1989_ulica_Stalowa_41_w_Warszawie.JPG.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/File:Og%C5%82oszenie_wybory_1989_ulica_Stalowa_41_w_Warszawie.JPG
-image_author: Adrian Grycuk
+image_src_url: https://commons.wikimedia.org/wiki/File:Og%C5%82oszenie_wybory_1989_ulica_Stalowa_41_w_Warszawie.JPG
+image_author: 'Adrian Grycuk'
 image_license: CC-BY-SA 3.0
 ---
 

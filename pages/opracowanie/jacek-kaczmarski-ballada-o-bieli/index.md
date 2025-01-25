@@ -2,7 +2,7 @@
 title: 'Ballada o bieli'
 author: 'Alek'
 pub_date: '2016-10-11 17:04:25.383772+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=9LrEzTkZo2Y'
+youtube_id: '9LrEzTkZo2Y'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

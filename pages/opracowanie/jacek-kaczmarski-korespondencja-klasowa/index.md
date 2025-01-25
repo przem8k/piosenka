@@ -2,7 +2,7 @@
 title: 'Korespondencja klasowa'
 author: 'DX'
 pub_date: '2014-04-11 21:30:54.572838+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=LwaDoEs0st4'
+youtube_id: 'LwaDoEs0st4'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

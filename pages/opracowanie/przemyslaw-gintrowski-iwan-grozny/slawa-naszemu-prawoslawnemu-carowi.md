@@ -7,8 +7,8 @@ url2: 'https://sciaga.pl/tekst/88577-89-iwan_iv_grozny'
 image: notes/Ivan_IV_by_anonim_18th_c._GIM.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Ivan_IV_by_anonim_18th_c._GIM.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Ivan_IV_by_anonim_18th_c._GIM.jpg.0x300_q85_upscale.jpg
-image_url: http://www.vidania.ru/ivangrozny.html
-image_author: nieznany
+image_src_url: http://www.vidania.ru/ivangrozny.html
+image_author: 'nieznany'
 ---
 
 **Iwan IV Groźny** \(1530–1584\) – wielki książę moskiewski i car "Wszechrusi".

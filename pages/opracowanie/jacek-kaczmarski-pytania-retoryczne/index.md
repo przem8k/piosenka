@@ -2,7 +2,7 @@
 title: 'Pytania retoryczne'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-09 21:48:51.140390+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=xFiXjzxlIWs'
+youtube_id: 'xFiXjzxlIWs'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

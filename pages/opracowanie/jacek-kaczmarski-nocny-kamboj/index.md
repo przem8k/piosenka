@@ -2,7 +2,7 @@
 title: 'Nocny Kamboj'
 author: 'Pan_Kmicic4'
 pub_date: '2019-06-20 19:48:17.481362+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=uP5ZbMfVTqA'
+youtube_id: 'uP5ZbMfVTqA'
 capo_fret: 1
 performers:
  - 'jacek-kaczmarski'

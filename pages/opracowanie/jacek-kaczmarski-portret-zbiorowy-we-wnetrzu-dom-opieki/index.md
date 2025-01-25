@@ -2,7 +2,7 @@
 title: 'Portret zbiorowy we wnętrzu - Dom Opieki'
 author: 'Zbik'
 pub_date: '2012-01-04 19:25:42.434223+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1TZzL_9v0FA'
+youtube_id: '1TZzL_9v0FA'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

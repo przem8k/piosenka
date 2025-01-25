@@ -2,7 +2,7 @@
 title: 'Barykada (Śmierć Baczyńskiego)'
 author: 'Zbik'
 pub_date: '2018-02-25 13:42:13.028567+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=2to9I6lX2_Q'
+youtube_id: '2to9I6lX2_Q'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

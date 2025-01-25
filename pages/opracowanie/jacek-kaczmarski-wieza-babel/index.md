@@ -2,7 +2,7 @@
 title: 'Wieża Babel'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-28 13:17:28.708596+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=CDszMl2cTJo'
+youtube_id: 'CDszMl2cTJo'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

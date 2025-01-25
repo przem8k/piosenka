@@ -2,7 +2,7 @@
 title: 'Czerwony autobus'
 author: 'spooky'
 pub_date: '2011-07-28 03:19:40.640638+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=zeF_q1n0HNY'
+youtube_id: 'zeF_q1n0HNY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

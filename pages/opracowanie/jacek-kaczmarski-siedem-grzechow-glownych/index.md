@@ -2,7 +2,7 @@
 title: 'Siedem grzechów głównych'
 author: 'Zbik'
 pub_date: '2017-06-19 21:19:29.296021+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=GQGymatU9Ww'
+youtube_id: 'GQGymatU9Ww'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

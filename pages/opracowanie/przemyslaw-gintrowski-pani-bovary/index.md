@@ -2,7 +2,7 @@
 title: 'Pani Bovary'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-27 09:20:29.597222+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=MpxqWWAh4AE'
+youtube_id: 'MpxqWWAh4AE'
 text_authors:
  - 'krzysztof-maria-sieniawski'
 composers:

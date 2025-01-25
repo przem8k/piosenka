@@ -6,7 +6,7 @@ url1: 'https://pl.wikipedia.org/wiki/W%C5%82adimir_Wysocki'
 image: notes/stamp_wysocki.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/stamp_wysocki.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/stamp_wysocki.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/File:Russia_stamp_V.Vysotsky_1999_2r.jpg
+image_src_url: https://commons.wikimedia.org/wiki/File:Russia_stamp_V.Vysotsky_1999_2r.jpg
 image_license: domena publiczna
 ---
 

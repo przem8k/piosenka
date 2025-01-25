@@ -5,7 +5,7 @@ pub_date: '2016-06-26 19:07:26.345218+00:00'
 image: notes/Gintrowski_Przemyslaw_20090516_uMC2Wyu.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Gintrowski_Przemyslaw_20090516_uMC2Wyu.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Gintrowski_Przemyslaw_20090516_uMC2Wyu.jpg.0x300_q85_upscale.jpg
-image_author: Piotr Kosela
+image_author: 'Piotr Kosela'
 ---
 
 Kompozytor, pieśniarz, twórca muzyki filmowej, wykładowca Warszawskiej Szkoły Filmowej.

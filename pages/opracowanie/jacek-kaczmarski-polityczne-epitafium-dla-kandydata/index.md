@@ -2,7 +2,7 @@
 title: 'Polityczne epitafium dla kandydata'
 author: 'Pan_Kmicic4'
 pub_date: '2018-10-11 15:14:32.536438+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=4HQLwaNhl6k'
+youtube_id: '4HQLwaNhl6k'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

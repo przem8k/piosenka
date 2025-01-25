@@ -2,7 +2,7 @@
 title: 'Mucha w szklance lemoniady'
 author: 'spooky'
 pub_date: '2011-07-29 04:32:26.717859+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=lrFmiuJhIOw'
+youtube_id: 'lrFmiuJhIOw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

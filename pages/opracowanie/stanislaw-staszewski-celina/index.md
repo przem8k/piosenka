@@ -2,7 +2,7 @@
 title: 'Celina'
 author: 'DX'
 pub_date: '2016-10-29 11:41:08.975412+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=zvJf_EWMJAE'
+youtube_id: 'zvJf_EWMJAE'
 text_authors:
  - 'stanislaw-staszewski'
 composers:

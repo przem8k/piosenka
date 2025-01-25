@@ -2,7 +2,7 @@
 title: 'Żywioły'
 author: 'jakubkwa'
 pub_date: '2015-12-12 23:49:26.696784+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=dc-Lj0xaeec'
+youtube_id: 'dc-Lj0xaeec'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

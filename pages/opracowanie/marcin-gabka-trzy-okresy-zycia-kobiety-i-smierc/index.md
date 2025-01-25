@@ -2,7 +2,7 @@
 title: 'Trzy okresy życia kobiety i śmierć'
 author: 'Baltazar'
 pub_date: '2020-10-21 17:38:23.496386+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ii3LGFa9VKU'
+youtube_id: 'ii3LGFa9VKU'
 text_authors:
  - 'marcin-gabka'
 composers:

@@ -2,7 +2,7 @@
 title: 'Przypowieść o ślepcach'
 author: 'AŁ'
 pub_date: '2012-06-18 16:02:47.406668+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=NuP_8zc3apM'
+youtube_id: 'NuP_8zc3apM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

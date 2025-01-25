@@ -7,8 +7,8 @@ url2: 'https://pl.wikipedia.org/wiki/Spartakus'
 image: notes/spartakus_1960_kirk_douglas_12.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/spartakus_1960_kirk_douglas_12.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/spartakus_1960_kirk_douglas_12.jpg.0x300_q85_upscale.jpg
-image_url: https://wypozycz-film.pl/wp-content/uploads/2019/01/spartakus_1960_kirk_douglas_12.jpg
-image_author: Russell Metty
+image_src_url: https://wypozycz-film.pl/wp-content/uploads/2019/01/spartakus_1960_kirk_douglas_12.jpg
+image_author: 'Russell Metty'
 ---
 
 Utwór inspirowany jest historią **Spartakusa**, żyjącego w latach ok. 109–71 p.n.e. gladiatora, który stanął na czele największego w historii starożytnego Rzymu powstania niewolników.

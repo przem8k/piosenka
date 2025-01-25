@@ -2,7 +2,7 @@
 title: 'Przyjaciół nikt nie będzie mi wybierał'
 author: 'DX'
 pub_date: '2018-09-23 11:15:08.461299+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=dutgGRbvXdw'
+youtube_id: 'dutgGRbvXdw'
 text_authors:
  - 'andrzej-garczarek'
 composers:

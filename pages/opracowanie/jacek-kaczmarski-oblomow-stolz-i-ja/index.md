@@ -2,7 +2,7 @@
 title: 'Obłomow, Stolz i ja'
 author: 'spooky'
 pub_date: '2011-09-30 22:51:37.457422+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ErfDv_X90gk'
+youtube_id: 'ErfDv_X90gk'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

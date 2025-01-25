@@ -2,7 +2,7 @@
 title: 'Wielki cud'
 author: 'DX'
 pub_date: '2012-09-05 23:00:28.658124+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=8Uoyhsweuqs'
+youtube_id: '8Uoyhsweuqs'
 text_authors:
  - 'pawel-wojcik'
 composers:

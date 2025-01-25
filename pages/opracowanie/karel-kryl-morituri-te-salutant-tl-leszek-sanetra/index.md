@@ -3,7 +3,7 @@ title: 'Morituri te salutant'
 author: 'DX'
 pub_date: '2012-11-02 15:53:15.046588+00:00'
 disambig: 'tł. Leszek Sanetra'
-link_youtube: 'http://www.youtube.com/watch?v=WTcUUzmTvEk'
+youtube_id: 'WTcUUzmTvEk'
 text_authors:
  - 'karel-kryl'
 composers:

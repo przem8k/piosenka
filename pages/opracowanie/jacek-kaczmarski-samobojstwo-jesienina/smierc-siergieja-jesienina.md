@@ -6,8 +6,8 @@ url1: 'https://pl.wikipedia.org/wiki/Siergiej_Jesienin'
 image: notes/Esenin1925ondeathbed.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Esenin1925ondeathbed.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Esenin1925ondeathbed.jpg.0x300_q85_upscale.jpg
-image_url: https://russiainphoto.ru/search/photo/?index=9&page=2&year_from=1925&year_to=1925&
-image_author: nieznany
+image_src_url: https://russiainphoto.ru/search/photo/?index=9&page=2&year_from=1925&year_to=1925&
+image_author: 'nieznany'
 ---
 
 28 grudnia 1925 roku leningradzka milicja została wezwana do hotelu „Internacjonał”. We wskazanym przez zarządcę pokoju funkcjonariusze zastali mężczyznę wiszącego na rurze grzewczej.

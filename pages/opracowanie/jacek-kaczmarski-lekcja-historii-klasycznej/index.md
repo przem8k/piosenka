@@ -2,7 +2,7 @@
 title: 'Lekcja historii klasycznej'
 author: 'DX'
 pub_date: '2011-05-12 20:16:12.496343+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=YgiqvHS3mcM'
+youtube_id: 'YgiqvHS3mcM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

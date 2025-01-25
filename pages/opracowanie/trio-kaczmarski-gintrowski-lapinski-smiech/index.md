@@ -2,7 +2,7 @@
 title: 'Śmiech'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 09:12:56.114755+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=t8KOWdIVsso'
+youtube_id: 't8KOWdIVsso'
 text_authors:
  - 'krzysztof-maria-sieniawski'
 composers:

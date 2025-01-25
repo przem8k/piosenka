@@ -2,7 +2,7 @@
 title: 'Walka Jakuba z aniołem'
 author: 'DX'
 pub_date: '2016-04-10 16:16:52.788152+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=dKzGDc5nuYU'
+youtube_id: 'dKzGDc5nuYU'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

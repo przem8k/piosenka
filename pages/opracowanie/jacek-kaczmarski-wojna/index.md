@@ -2,7 +2,7 @@
 title: 'Wojna'
 author: 'Zbik'
 pub_date: '2011-08-30 19:41:37.895004+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=BOsGgWTPiAE'
+youtube_id: 'BOsGgWTPiAE'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Ifigenia'
 author: 'Pan_Kmicic4'
 pub_date: '2018-10-17 20:24:51.794082+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=spqFXHebv1Q'
+youtube_id: 'spqFXHebv1Q'
 capo_fret: 4
 text_authors:
  - 'jerzy-czech'

@@ -2,7 +2,7 @@
 title: 'Rehabilitacja komunistów'
 author: 'PrzemekL'
 pub_date: '2014-09-04 22:21:26.266343+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=W0C31lYeiXE'
+youtube_id: 'W0C31lYeiXE'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

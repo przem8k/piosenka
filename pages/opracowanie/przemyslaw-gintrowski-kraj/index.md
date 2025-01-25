@@ -2,7 +2,7 @@
 title: 'Kraj'
 author: 'DX'
 pub_date: '2013-05-14 22:21:01.742549+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=wFX3pxoDOzA'
+youtube_id: 'wFX3pxoDOzA'
 text_authors:
  - 'zbigniew-herbert'
 composers:

@@ -2,7 +2,7 @@
 title: 'Linoskoczek'
 author: 'DX'
 pub_date: '2011-05-08 07:10:44.073437+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=mYIZS5ID-zw'
+youtube_id: 'mYIZS5ID-zw'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

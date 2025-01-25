@@ -2,7 +2,7 @@
 title: 'My'
 author: 'Zbik'
 pub_date: '2012-04-23 23:12:00.347802+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=qY-2iEzQM2U'
+youtube_id: 'qY-2iEzQM2U'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

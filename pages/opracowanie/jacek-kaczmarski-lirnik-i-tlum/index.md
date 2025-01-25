@@ -2,7 +2,7 @@
 title: 'Lirnik i tłum'
 author: 'Zbik'
 pub_date: '2018-08-08 12:38:05.846338+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=XqO2oymeF18'
+youtube_id: 'XqO2oymeF18'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

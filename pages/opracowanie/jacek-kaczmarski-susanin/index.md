@@ -3,7 +3,7 @@ title: 'Susanin'
 author: 'PrzemekL'
 pub_date: '2018-11-25 16:22:55.568037+00:00'
 original_title: 'Сусанин'
-link_youtube: 'https://www.youtube.com/watch?v=FGvJ7jjGZGY'
+youtube_id: 'FGvJ7jjGZGY'
 composers:
  - 'tradycyjna'
 translators:

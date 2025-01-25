@@ -2,7 +2,7 @@
 title: 'Ornamentatorzy'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-01 13:14:34.639634+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=PVUKtigcwgc'
+youtube_id: 'PVUKtigcwgc'
 text_authors:
  - 'zbigniew-herbert'
 composers:

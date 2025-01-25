@@ -3,7 +3,7 @@ title: 'W szpitalu'
 author: 'PrzemekL'
 pub_date: '2019-05-24 21:54:34.465801+00:00'
 original_title: 'Песня о госпитале (Жил я с матерью и батей на Арбате — здесь бы так!..)'
-link_youtube: 'https://www.youtube.com/watch?v=9-mrWboVgKI'
+youtube_id: '9-mrWboVgKI'
 text_authors:
  - 'wlodzimierz-wysocki'
 composers:

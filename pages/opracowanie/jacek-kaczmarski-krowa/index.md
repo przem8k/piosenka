@@ -2,7 +2,7 @@
 title: 'Krowa'
 author: 'DX'
 pub_date: '2011-07-29 01:09:53.520267+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=CqJzKr9EmA4'
+youtube_id: 'CqJzKr9EmA4'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

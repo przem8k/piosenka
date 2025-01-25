@@ -2,7 +2,7 @@
 title: 'Pan Podbipięta'
 author: 'Zbik'
 pub_date: '2012-04-24 22:47:36.094680+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=cYZ8cHAKYqo'
+youtube_id: 'cYZ8cHAKYqo'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Czołg'
 author: 'Zbik'
 pub_date: '2018-02-25 13:59:37.023222+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=mkW6Kri5rEA'
+youtube_id: 'mkW6Kri5rEA'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

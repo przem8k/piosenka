@@ -2,7 +2,7 @@
 title: 'Świadkowie'
 author: 'Zbik'
 pub_date: '2018-08-31 12:38:53.935489+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=F-gY6DoQSI0'
+youtube_id: 'F-gY6DoQSI0'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

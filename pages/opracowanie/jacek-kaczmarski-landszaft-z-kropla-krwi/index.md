@@ -2,7 +2,7 @@
 title: 'Landszaft z kroplą krwi'
 author: 'jakubkwa'
 pub_date: '2015-06-24 21:48:48.564189+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=lgSUBSHG24A'
+youtube_id: 'lgSUBSHG24A'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

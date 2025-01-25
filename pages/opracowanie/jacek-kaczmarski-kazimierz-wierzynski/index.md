@@ -2,7 +2,7 @@
 title: 'Kazimierz Wierzyński'
 author: 'Zbik'
 pub_date: '2012-04-23 22:51:49.984613+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=gEOTKM8S4y0'
+youtube_id: 'gEOTKM8S4y0'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Pustynia ’80'
 author: 'Zbik'
 pub_date: '2018-02-28 15:13:22.058589+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=gSSyob0izi8'
+youtube_id: 'gSSyob0izi8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

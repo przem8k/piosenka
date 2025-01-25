@@ -6,7 +6,7 @@ ref1: 'Kwadrans Jacka Kaczmarskiego z 28 maja 1989'
 image: notes/wallenrod.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/wallenrod.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/wallenrod.png.0x300_q85_upscale.png
-image_author: Michał Kluczewski (wg rysunku Michała Andriollego)
+image_author: 'Michał Kluczewski (wg rysunku Michała Andriollego)'
 image_license: domena publiczna
 ---
 

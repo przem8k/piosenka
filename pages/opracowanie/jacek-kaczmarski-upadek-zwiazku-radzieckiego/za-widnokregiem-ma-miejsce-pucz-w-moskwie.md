@@ -7,8 +7,8 @@ url2: 'https://pl.wikipedia.org/wiki/Pucz_moskiewski'
 image: notes/f444f690-0387-4b03-a586-39f880a75d16_600x.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/f444f690-0387-4b03-a586-39f880a75d16_600x.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/f444f690-0387-4b03-a586-39f880a75d16_600x.jpg.0x300_q85_upscale.jpg
-image_url: http://polityka.pl
-image_author: nieznany
+image_src_url: http://polityka.pl
+image_author: 'nieznany'
 ---
 
 Piosenka odnosi się do wydarzeń mających miejsce w dniach 19\-22 sierpnia 1991 roku, znanych jako **pucz Janajewa** lub **pucz Moskiewski**. Był to nieudany zamach stanu w ZSRR mający na celu zatrzymanie demokratyzacji i reform prowadzonych przez **Michaiła Gorbaczowa**. Upadek puczu przyczynił się do przyspieszenia reform i ostatecznego rozpadu Związku Radzieckiego.

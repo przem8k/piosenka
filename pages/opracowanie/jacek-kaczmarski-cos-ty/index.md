@@ -2,7 +2,7 @@
 title: 'Coś Ty!'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-06 11:43:01.819525+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=AbMFRoRQkig'
+youtube_id: 'AbMFRoRQkig'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

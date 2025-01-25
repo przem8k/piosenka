@@ -2,6 +2,7 @@
 
 import datetime
 import os
+import json
 
 from django.core.management.base import BaseCommand
 from django.utils.text import slugify
@@ -25,34 +26,40 @@ SONGS_DIR_PATH = os.path.join(ROOT_PATH, "pages", "opracowanie")
 
 PZT_MEDIA_URL = "https://storage.googleapis.com/piosenka-media/media/"
 
+def escape(text):
+    if not text:
+        return None
+    # YAML escaping of single quotes
+    return text.replace("'", "''")
+
 
 def create_file_content(item, content):
     frontmatter_lines = ["---"]
     if item.title:
-        frontmatter_lines.append(f"title: '{item.title}'")
+        frontmatter_lines.append(f"title: '{escape(item.title)}'")
     if item.author:
         frontmatter_lines.append(f"author: '{item.author}'")
     if item.pub_date:
         frontmatter_lines.append(f"pub_date: '{item.pub_date}'")
     if hasattr(item, "disambig") and item.disambig:
-        frontmatter_lines.append(f"disambig: '{item.disambig}'")
+        frontmatter_lines.append(f"disambig: '{escape(item.disambig)}'")
     if hasattr(item, "original_title") and item.original_title:
-        frontmatter_lines.append(f"original_title: '{item.original_title}'")
+        frontmatter_lines.append(f"original_title: '{escape(item.original_title)}'")
     if hasattr(item, "epigone") and item.epigone:
         frontmatter_lines.append(f"epigone: {item.epigone}")
     if hasattr(item, "link_youtube") and item.link_youtube:
-        frontmatter_lines.append(f"link_youtube: '{item.link_youtube}'")
+        frontmatter_lines.append(f"youtube_id: '{escape(item.youtube_id())}'")
     if hasattr(item, "capo_fret") and item.capo_fret:
         frontmatter_lines.append(f"capo_fret: {item.capo_fret}")
 
     if hasattr(item, "url1") and item.url1:
-        frontmatter_lines.append(f"url1: '{item.url1}'")
+        frontmatter_lines.append(f"url1: '{escape(item.url1)}'")
     if hasattr(item, "url2") and item.url2:
-        frontmatter_lines.append(f"url2: '{item.url2}'")
+        frontmatter_lines.append(f"url2: '{escape(item.url2)}'")
     if hasattr(item, "ref1") and item.ref1:
-        frontmatter_lines.append(f"ref1: '{item.ref1}'")
+        frontmatter_lines.append(f"ref1: '{escape(item.ref1)}'")
     if hasattr(item, "ref2") and item.ref2:
-        frontmatter_lines.append(f"ref2: '{item.ref2}'")
+        frontmatter_lines.append(f"ref2: '{escape(item.ref2)}'")
 
     if hasattr(item, "text_authors"):
         artists = item.text_authors()
@@ -122,9 +129,9 @@ def create_file_content(item, content):
         frontmatter_lines.append(f"image_thumb: {thumbnail.url}")
 
         if item.image_url:
-            frontmatter_lines.append(f"image_url: {item.image_url}")
+            frontmatter_lines.append(f"image_src_url: {item.image_url}")
         if item.image_author:
-            frontmatter_lines.append(f"image_author: {item.image_author}")
+            frontmatter_lines.append(f"image_author: '{escape(item.image_author)}'")
         if item.image_license:
             frontmatter_lines.append(f"image_license: {item.image_license}")
 

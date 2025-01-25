@@ -2,7 +2,7 @@
 title: 'Schulz'
 author: 'Zbik'
 pub_date: '2012-06-12 12:21:17.424265+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=gEYdB3ogYMw'
+youtube_id: 'gEYdB3ogYMw'
 text_authors:
  - 'jacek-kleyff'
 composers:

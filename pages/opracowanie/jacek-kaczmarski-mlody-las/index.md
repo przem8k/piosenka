@@ -2,7 +2,7 @@
 title: 'Młody las'
 author: 'Pan_Kmicic4'
 pub_date: '2018-10-14 09:54:15.633022+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=VNZM9sYs18U'
+youtube_id: 'VNZM9sYs18U'
 capo_fret: 4
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Misja'
 author: 'Zbik'
 pub_date: '2018-02-25 17:24:16.431997+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=KsasReRVn-Q'
+youtube_id: 'KsasReRVn-Q'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Cesarz'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-30 18:31:03.730933+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=sAFCpNLuWms'
+youtube_id: 'sAFCpNLuWms'
 text_authors:
  - 'zbigniew-herbert'
 composers:

@@ -2,7 +2,7 @@
 title: 'Jeśli ocalę w sobie ciebie'
 author: 'reuter'
 pub_date: '2019-04-23 17:09:57.365921+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=RqwYRFxSUHQ'
+youtube_id: 'RqwYRFxSUHQ'
 text_authors:
  - 'justyna-holm'
 composers:

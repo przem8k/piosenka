@@ -2,7 +2,7 @@
 title: 'Narodziny'
 author: 'reuter'
 pub_date: '2020-05-23 18:39:21.368660+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=6TYXnSk0Ddg'
+youtube_id: '6TYXnSk0Ddg'
 text_authors:
  - 'tadeusz-nowak'
 composers:

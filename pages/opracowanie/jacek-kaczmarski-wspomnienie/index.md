@@ -2,7 +2,7 @@
 title: 'Wspomnienie'
 author: 'PrzemekL'
 pub_date: '2014-09-06 17:41:47.444039+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=W-vSUjk75rY'
+youtube_id: 'W-vSUjk75rY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

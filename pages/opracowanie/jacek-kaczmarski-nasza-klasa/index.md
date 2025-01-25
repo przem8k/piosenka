@@ -2,7 +2,7 @@
 title: 'Nasza klasa'
 author: 'DX'
 pub_date: '2011-05-07 13:49:19.936826+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=NTNcxGVgn9I'
+youtube_id: 'NTNcxGVgn9I'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

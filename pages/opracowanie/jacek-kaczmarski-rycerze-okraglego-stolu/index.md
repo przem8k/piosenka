@@ -2,7 +2,7 @@
 title: 'Rycerze Okrągłego Stołu'
 author: 'DX'
 pub_date: '2011-05-07 14:09:11.854701+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=mIhO-3kC8RI'
+youtube_id: 'mIhO-3kC8RI'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Rzeź niewiniątek'
 author: 'PrzemekL'
 pub_date: '2014-09-07 13:48:26.815425+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=yFcQX8NotVw'
+youtube_id: 'yFcQX8NotVw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

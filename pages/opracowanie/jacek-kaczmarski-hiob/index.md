@@ -2,7 +2,7 @@
 title: 'Hiob'
 author: 'PrzemekL'
 pub_date: '2018-03-10 18:36:07.342659+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=bmGZZD2v89s'
+youtube_id: 'bmGZZD2v89s'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

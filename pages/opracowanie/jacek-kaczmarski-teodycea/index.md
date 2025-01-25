@@ -2,7 +2,7 @@
 title: 'Teodycea'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-30 18:37:48.154888+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=RNynq4ddQhE'
+youtube_id: 'RNynq4ddQhE'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

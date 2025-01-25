@@ -2,7 +2,7 @@
 title: 'Margrabia Wielopolski'
 author: 'DX'
 pub_date: '2011-07-17 20:34:03.727053+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Fsm2XR4NTi8'
+youtube_id: 'Fsm2XR4NTi8'
 capo_fret: 1
 text_authors:
  - 'jerzy-czech'

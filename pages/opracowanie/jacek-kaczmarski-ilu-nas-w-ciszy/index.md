@@ -2,7 +2,7 @@
 title: 'Ilu nas w ciszy...'
 author: 'Zbik'
 pub_date: '2018-08-04 15:12:32.253075+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=uiEZEZ5abJ0'
+youtube_id: 'uiEZEZ5abJ0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -6,7 +6,7 @@ url2: 'http://zbigniewlapinski.art.pl/?page_id=8'
 image: notes/1993-Spotkania-Zamkowe-Olsztyn.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1993-Spotkania-Zamkowe-Olsztyn.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1993-Spotkania-Zamkowe-Olsztyn.jpg.0x300_q85_upscale.jpg
-image_url: http://zbigniewlapinski.art.pl/wp-content/uploads/Galeria/1993-Spotkania-Zamkowe-Olsztyn.jpg?fbclid=IwAR3e_Ve43whUaLslTtNR680aiHCaIpXDoyMoRjKekIULG1d37qIku2We4bI
+image_src_url: http://zbigniewlapinski.art.pl/wp-content/uploads/Galeria/1993-Spotkania-Zamkowe-Olsztyn.jpg?fbclid=IwAR3e_Ve43whUaLslTtNR680aiHCaIpXDoyMoRjKekIULG1d37qIku2We4bI
 ---
 
 Muzyk,wykonawca,kompozytor, pianista, akompaniator, aranżer i dyrygent.

@@ -2,7 +2,7 @@
 title: 'Piosenka ze szkłem'
 author: 'Boczuś'
 pub_date: '2016-05-19 16:49:56.872092+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=s22UKVmsRkQ'
+youtube_id: 's22UKVmsRkQ'
 text_authors:
  - 'pawel-wojcik'
 composers:

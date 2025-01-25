@@ -2,7 +2,7 @@
 title: 'Ballada o przegranych'
 author: 'Baltazar'
 pub_date: '2020-11-19 19:22:31.284866+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=02BKgG7GdeQ'
+youtube_id: '02BKgG7GdeQ'
 composers:
  - 'jaroslaw-chojnacki'
 performers:

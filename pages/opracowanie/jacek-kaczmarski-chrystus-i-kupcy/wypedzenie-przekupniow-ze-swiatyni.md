@@ -7,8 +7,8 @@ ref1: 'Ewangelia wg św. Jana, rozdział 2'
 image: notes/1234.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1234.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1234.jpg.0x300_q85_upscale.jpg
-image_url: https://pl.wikipedia.org/wiki/Wyp%C4%99dzenie_przekupni%C3%B3w_ze_%C5%9Bwi%C4%85tyni_(obraz_El_Greca_z_1575)#/media/File:El_Greco_(Domenikos_Theotokopoulos)_-_Christ_Driving_the_Money_Changers_from_th
-image_author: El Greco
+image_src_url: https://pl.wikipedia.org/wiki/Wyp%C4%99dzenie_przekupni%C3%B3w_ze_%C5%9Bwi%C4%85tyni_(obraz_El_Greca_z_1575)#/media/File:El_Greco_(Domenikos_Theotokopoulos)_-_Christ_Driving_the_Money_Changers_from_th
+image_author: 'El Greco'
 image_license: Domena publiczna
 ---
 

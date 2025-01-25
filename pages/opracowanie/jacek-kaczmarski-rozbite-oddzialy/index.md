@@ -2,7 +2,7 @@
 title: 'Rozbite oddziały'
 author: 'DX'
 pub_date: '2012-04-23 21:13:25.488636+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=jw7lGg9CT6A'
+youtube_id: 'jw7lGg9CT6A'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

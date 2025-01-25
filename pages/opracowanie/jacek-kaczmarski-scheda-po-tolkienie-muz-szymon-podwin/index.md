@@ -4,7 +4,7 @@ author: 'Zbik'
 pub_date: '2022-06-03 10:37:51.062485+00:00'
 disambig: 'muz. Szymon Podwin'
 epigone: True
-link_youtube: 'https://www.youtube.com/watch?v=uvwDfWizt1I'
+youtube_id: 'uvwDfWizt1I'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

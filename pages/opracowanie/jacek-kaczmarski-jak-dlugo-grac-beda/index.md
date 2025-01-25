@@ -2,7 +2,7 @@
 title: 'Jak długo grać będą...'
 author: 'Zbik'
 pub_date: '2018-08-08 12:30:17.445924+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Vcf0XrNKchQ'
+youtube_id: 'Vcf0XrNKchQ'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

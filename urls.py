@@ -5,14 +5,12 @@ from django.urls import include, re_path
 from django.views.generic import TemplateView
 
 import piosenka.views
-import songs.views
 
 admin.autodiscover()
 
 urlpatterns = [
     # Songbook.
     re_path(r"^spiewnik/", include("songs.urls_entity")),
-    re_path(r"^opracowanie/", include("songs.urls_song")),
     re_path(r"^adnotacja/", include("songs.urls_annotation")),
     # Other sections.
     re_path(r"^wydarzenia/", include("events.urls")),

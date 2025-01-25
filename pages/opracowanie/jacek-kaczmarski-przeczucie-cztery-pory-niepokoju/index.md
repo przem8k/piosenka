@@ -2,7 +2,7 @@
 title: 'Przeczucie (Cztery pory niepokoju)'
 author: 'Zbik'
 pub_date: '2018-02-25 17:46:35.361485+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=4fydufgrbIs'
+youtube_id: '4fydufgrbIs'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

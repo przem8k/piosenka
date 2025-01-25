@@ -2,7 +2,7 @@
 title: 'Pobojowisko'
 author: 'Zbik'
 pub_date: '2012-03-28 22:10:46.244033+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=9akA6JLDTfU'
+youtube_id: '9akA6JLDTfU'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

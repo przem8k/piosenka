@@ -2,8 +2,8 @@
 title: 'Pijak'
 author: 'PrzemekL'
 pub_date: '2014-09-06 17:30:50.950710+00:00'
-original_title: 'L'ivrogne'
-link_youtube: 'https://www.youtube.com/watch?v=dWMgc3sX5Zo'
+original_title: 'L''ivrogne'
+youtube_id: 'dWMgc3sX5Zo'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

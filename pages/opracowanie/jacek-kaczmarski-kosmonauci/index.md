@@ -2,7 +2,7 @@
 title: 'Kosmonauci'
 author: 'Zbik'
 pub_date: '2018-07-30 17:29:19.264813+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=JcPZRfDKWcI'
+youtube_id: 'JcPZRfDKWcI'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Pan Wołodyjowski'
 author: 'spooky'
 pub_date: '2011-07-24 20:14:09.466577+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=pp7-xud4glA'
+youtube_id: 'pp7-xud4glA'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

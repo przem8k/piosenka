@@ -2,7 +2,7 @@
 title: 'Knajpa morderców'
 author: 'DX'
 pub_date: '2016-10-29 19:29:48.891955+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=S7rHpe5F9j8'
+youtube_id: 'S7rHpe5F9j8'
 text_authors:
  - 'stanislaw-staszewski'
 composers:

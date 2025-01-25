@@ -3,7 +3,7 @@ title: 'W karczmie nad morzem'
 author: 'DX'
 pub_date: '2013-02-24 21:28:05.095789+00:00'
 original_title: 'A la taverna del mar'
-link_youtube: 'https://www.youtube.com/watch?v=9AlxFXA461c'
+youtube_id: '9AlxFXA461c'
 text_authors:
  - 'lluis-llach'
 composers:

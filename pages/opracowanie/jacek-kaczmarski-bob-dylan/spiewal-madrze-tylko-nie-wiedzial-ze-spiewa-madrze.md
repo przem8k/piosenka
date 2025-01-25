@@ -6,7 +6,7 @@ ref1: 'zapowiedź do piosenki na płycie "Bankiet"'
 image: notes/dylan_live_aid.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/dylan_live_aid.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/dylan_live_aid.jpg.0x300_q85_upscale.jpg
-image_url: https://www.rollingstone.com/music/music-lists/bob-dylan-through-the-years-11101/live-aid-1985-4-239681/
+image_src_url: https://www.rollingstone.com/music/music-lists/bob-dylan-through-the-years-11101/live-aid-1985-4-239681/
 ---
 
 Piosenka została napisana po występie Boba Dylana na koncercie „Live Aid”, który odbył się 13 lipca 1985 roku. Koncert \(a właściwie dwa koncerty pod tym samym szyldem, zagrane tego samego dnia w Londynie i w Filadelfii\) był częścią ogólnoświatowej akcji zbierania funduszy na rzecz głodującej Etiopii i zgromadził plejadę prominentnych grup rockowych lat 80. XX wieku, w tym zespoły Queen, U2, Led Zeppelin czy Erica Claptona.

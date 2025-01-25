@@ -2,7 +2,7 @@
 title: 'Upadek Związku Radzieckiego'
 author: 'Zbik'
 pub_date: '2018-02-25 23:44:32.928280+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=u-vrgiOuy7A'
+youtube_id: 'u-vrgiOuy7A'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

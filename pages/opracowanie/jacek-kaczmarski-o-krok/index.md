@@ -2,7 +2,7 @@
 title: 'O krok'
 author: 'PrzemekL'
 pub_date: '2014-09-04 22:45:36.231010+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=dyHFpo38o70'
+youtube_id: 'dyHFpo38o70'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

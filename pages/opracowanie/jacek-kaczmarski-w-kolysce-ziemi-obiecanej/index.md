@@ -2,7 +2,7 @@
 title: 'W kołysce Ziemi Obiecanej'
 author: 'RK'
 pub_date: '2012-12-08 18:37:51.959383+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=NJUK-M_YATc'
+youtube_id: 'NJUK-M_YATc'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

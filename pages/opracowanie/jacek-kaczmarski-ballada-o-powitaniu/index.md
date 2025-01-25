@@ -2,7 +2,7 @@
 title: 'Ballada o powitaniu'
 author: 'DX'
 pub_date: '2011-07-29 01:16:30.586413+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=YqInc2WzLHo'
+youtube_id: 'YqInc2WzLHo'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Według Gombrowicza narodu obrażanie'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-26 08:52:18.135802+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=5o5jouTNNl4'
+youtube_id: '5o5jouTNNl4'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

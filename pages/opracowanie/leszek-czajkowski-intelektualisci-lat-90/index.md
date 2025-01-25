@@ -1,8 +1,8 @@
 ---
-title: 'Intelektualiści lata 90''
+title: 'Intelektualiści lata 90'''
 author: 'DX'
 pub_date: '2011-06-27 12:25:07.356930+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=GzXXBXWdZhs'
+youtube_id: 'GzXXBXWdZhs'
 text_authors:
  - 'leszek-czajkowski'
 composers:

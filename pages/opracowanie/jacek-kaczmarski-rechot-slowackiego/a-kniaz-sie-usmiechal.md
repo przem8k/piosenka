@@ -6,8 +6,8 @@ url1: 'http://tujek.linuxpl.info/tworczosc/wiersze/rechot-slowackiego/#iLightbox
 image: notes/modern_talking.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/modern_talking.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/modern_talking.jpg.0x300_q85_upscale.jpg
-image_url: https://farm2.staticflickr.com/1222/786762641_d4162d21a5_b.jpg
-image_author: PAP
+image_src_url: https://farm2.staticflickr.com/1222/786762641_d4162d21a5_b.jpg
+image_author: 'PAP'
 ---
 
 Kniaź Jur Heretyk, który pojawia się w piosence dwukrotnie, to nikt inny jak **Jerzy Buzek** \(wyznania ewangelicko\-augsburskiego\), który rozpoczął swoją kadencję premiera RP w tym samym roku, w którym powstał utwór – 1997. Znamienną ciekawostką \(nie wiadomo, czy znaną samemu Kaczmarskiemu\) jest fakt, że Buzek jest absolwentem chorzowskiego I Liceum Ogólnokształcącego imienia Juliusza Słowackiego.

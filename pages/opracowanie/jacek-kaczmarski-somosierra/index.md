@@ -2,7 +2,7 @@
 title: 'Somosierra'
 author: 'DX'
 pub_date: '2011-05-09 23:14:53.606780+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=G2QiddS2TMs'
+youtube_id: 'G2QiddS2TMs'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

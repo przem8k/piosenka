@@ -6,8 +6,8 @@ url1: 'https://pl.wikipedia.org/wiki/Pejza%C5%BC_z_upadkiem_Ikara'
 image: notes/Bruegel_Pieter_de_Oude_-_De_val_van_icarus_-_hi_res.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Bruegel_Pieter_de_Oude_-_De_val_van_icarus_-_hi_res.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Bruegel_Pieter_de_Oude_-_De_val_van_icarus_-_hi_res.jpg.0x300_q85_upscale.jpg
-image_url: http://manosuelta.files.wordpress.com
-image_author: Pieter Bruegel (starszy)
+image_src_url: http://manosuelta.files.wordpress.com
+image_author: 'Pieter Bruegel (starszy)'
 image_license: Domena publiczna
 ---
 

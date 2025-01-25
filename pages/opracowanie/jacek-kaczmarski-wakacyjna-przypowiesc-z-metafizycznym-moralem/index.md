@@ -2,7 +2,7 @@
 title: 'Wakacyjna przypowieść z metafizycznym morałem'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-02 13:40:41.652080+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=vtBX3RLqOwk&t=15s'
+youtube_id: 'vtBX3RLqOwk&t=15s'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

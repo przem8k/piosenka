@@ -2,7 +2,7 @@
 title: 'A my nie chcemy uciekać stąd'
 author: 'DX'
 pub_date: '2011-07-18 15:40:33.212415+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Vf6C8RXzF64'
+youtube_id: 'Vf6C8RXzF64'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

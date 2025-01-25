@@ -2,7 +2,7 @@
 title: 'Ballada czarno-biała'
 author: 'Zbik'
 pub_date: '2012-01-13 22:40:40.676029+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=vgjY0kTFJEU'
+youtube_id: 'vgjY0kTFJEU'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

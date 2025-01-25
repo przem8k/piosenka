@@ -2,7 +2,7 @@
 title: 'Statki'
 author: 'Zbik'
 pub_date: '2018-08-20 10:33:33.223799+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=JWy-huReTes'
+youtube_id: 'JWy-huReTes'
 text_authors:
  - 'wlodzimierz-wysocki'
 composers:

@@ -2,7 +2,7 @@
 title: 'Kantyczka z lotu ptaka'
 author: 'DX'
 pub_date: '2011-06-15 02:47:34.832746+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=GXAEIPoxNew'
+youtube_id: 'GXAEIPoxNew'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

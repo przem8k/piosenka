@@ -3,7 +3,7 @@ title: 'Górnicy'
 author: 'Pan_Kmicic4'
 pub_date: '2019-03-03 13:40:46.596691+00:00'
 disambig: '„Schodzimy pod ziemię...”'
-link_youtube: 'https://www.youtube.com/watch?v=2F4G9CjNCyk'
+youtube_id: '2F4G9CjNCyk'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

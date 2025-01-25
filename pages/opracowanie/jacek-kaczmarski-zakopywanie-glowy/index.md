@@ -2,7 +2,7 @@
 title: 'Zakopywanie głowy'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-29 15:25:36.965896+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=2sGvpSY2yNw'
+youtube_id: '2sGvpSY2yNw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -1,3 +1,4 @@
+set -e
 rm -rf static
 python manage.py compress --force
 python manage.py gen

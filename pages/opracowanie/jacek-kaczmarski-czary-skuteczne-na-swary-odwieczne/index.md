@@ -2,7 +2,7 @@
 title: 'Czary skuteczne na swary odwieczne'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-26 11:01:56.941665+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=pzSgbL9ngTY'
+youtube_id: 'pzSgbL9ngTY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

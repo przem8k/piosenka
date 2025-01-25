@@ -2,7 +2,7 @@
 title: 'Raisa, Maggie i Nancy'
 author: 'PrzemekL'
 pub_date: '2017-04-05 18:58:40.090670+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=N5mz4uEa_Ds'
+youtube_id: 'N5mz4uEa_Ds'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

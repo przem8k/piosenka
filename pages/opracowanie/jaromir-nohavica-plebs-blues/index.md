@@ -2,7 +2,7 @@
 title: 'Plebs blues'
 author: 'jakubkwa'
 pub_date: '2015-12-12 23:27:47.297789+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=47E6SYDJDrU'
+youtube_id: '47E6SYDJDrU'
 text_authors:
  - 'jaromir-nohavica'
 composers:

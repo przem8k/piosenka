@@ -2,7 +2,7 @@
 title: 'Sąd nad Goyą'
 author: 'AŁ'
 pub_date: '2012-04-06 16:07:52.126505+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=SDfEbp8iFgs'
+youtube_id: 'SDfEbp8iFgs'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

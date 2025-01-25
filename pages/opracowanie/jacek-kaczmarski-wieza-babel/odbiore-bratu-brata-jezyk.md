@@ -8,8 +8,8 @@ ref1: 'Księga Rodzaju, rozdział 11'
 image: notes/1.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1.jpg.0x300_q85_upscale.jpg
-image_url: https://pl.wikipedia.org/wiki/Wie%C5%BCa_Babel#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project_-_edited.jpg
-image_author: Pieter Bruegel (starszy)
+image_src_url: https://pl.wikipedia.org/wiki/Wie%C5%BCa_Babel#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project_-_edited.jpg
+image_author: 'Pieter Bruegel (starszy)'
 image_license: Domena publiczna
 ---
 

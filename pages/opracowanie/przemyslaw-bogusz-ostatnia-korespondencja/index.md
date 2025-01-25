@@ -2,7 +2,7 @@
 title: 'Ostatnia korespondencja'
 author: 'DX'
 pub_date: '2011-05-06 16:56:31.161626+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=FZpz5vyY67w'
+youtube_id: 'FZpz5vyY67w'
 text_authors:
  - 'przemyslaw-bogusz'
 composers:

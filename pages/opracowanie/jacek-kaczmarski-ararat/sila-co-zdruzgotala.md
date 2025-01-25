@@ -7,8 +7,8 @@ ref1: 'Zapowiedź z „Kwadransu Jacka Kaczmarskiego”'
 image: notes/ararat.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/ararat.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/ararat.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/File:Armenia1.jpg
-image_author: LoMit
+image_src_url: https://commons.wikimedia.org/wiki/File:Armenia1.jpg
+image_author: 'LoMit'
 image_license: CC-BY-SA 4.0
 ---
 

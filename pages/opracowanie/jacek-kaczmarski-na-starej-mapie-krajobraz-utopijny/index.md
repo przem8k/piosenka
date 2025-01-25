@@ -2,7 +2,7 @@
 title: 'Na starej mapie krajobraz utopijny'
 author: 'Zbik'
 pub_date: '2012-01-04 20:02:34.860469+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=JRZnKdCO24A'
+youtube_id: 'JRZnKdCO24A'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Przyczynek do legendy o świętym Jerzym'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-28 10:52:55.835786+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Cb14EgyAyr8'
+youtube_id: 'Cb14EgyAyr8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

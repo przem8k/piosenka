@@ -2,7 +2,7 @@
 title: 'Zabić kota'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-31 15:05:34.001366+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=T6CPbF56mp8'
+youtube_id: 'T6CPbF56mp8'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

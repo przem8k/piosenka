@@ -2,7 +2,7 @@
 title: 'Małe serce'
 author: 'Pan_Kmicic4'
 pub_date: '2019-04-13 19:18:19.059346+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=qAcWFtfDsf0'
+youtube_id: 'qAcWFtfDsf0'
 text_authors:
  - 'zbigniew-herbert'
 composers:

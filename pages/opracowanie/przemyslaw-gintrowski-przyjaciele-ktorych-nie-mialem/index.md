@@ -2,7 +2,7 @@
 title: 'Przyjaciele, których nie miałem'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-29 14:35:45.591416+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=WtW7x3jBGm4'
+youtube_id: 'WtW7x3jBGm4'
 text_authors:
  - 'krzysztof-maria-sieniawski'
 composers:

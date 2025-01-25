@@ -2,7 +2,7 @@
 title: 'Głupi Jasio'
 author: 'DX'
 pub_date: '2012-05-21 11:43:40.393066+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=rQtLXhn6YNA'
+youtube_id: 'rQtLXhn6YNA'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

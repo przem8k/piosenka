@@ -25,6 +25,10 @@ handlers:
   static_files: out/blog/\1/index.html
   upload: out/blog/.*/index.html
 
+- url: /opracowanie/(.*)/
+  static_files: out/opracowanie/\1/index.html
+  upload: out/opracowanie/.*/index.html
+
 - url: /o-stronie/
   static_files: out/o-stronie/index.html
   upload: out/o-stronie/index.html

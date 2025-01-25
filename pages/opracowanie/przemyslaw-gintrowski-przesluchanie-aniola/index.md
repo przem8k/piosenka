@@ -2,7 +2,7 @@
 title: 'Przesłuchanie anioła'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-25 15:12:51.782040+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=uXIRjuNWWhY'
+youtube_id: 'uXIRjuNWWhY'
 text_authors:
  - 'zbigniew-herbert'
 composers:

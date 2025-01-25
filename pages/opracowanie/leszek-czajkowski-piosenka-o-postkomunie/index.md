@@ -2,7 +2,7 @@
 title: 'Piosenka o postkomunie'
 author: 'RK'
 pub_date: '2012-09-13 19:17:47.413343+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=xB5wr7GPrT8'
+youtube_id: 'xB5wr7GPrT8'
 text_authors:
  - 'leszek-czajkowski'
 composers:

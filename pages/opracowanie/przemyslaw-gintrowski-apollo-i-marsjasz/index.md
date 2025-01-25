@@ -2,7 +2,7 @@
 title: 'Apollo i Marsjasz'
 author: 'reuter'
 pub_date: '2014-09-10 17:53:23.936201+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=W6BRG77OvIY'
+youtube_id: 'W6BRG77OvIY'
 text_authors:
  - 'zbigniew-herbert'
 composers:

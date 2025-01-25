@@ -2,7 +2,7 @@
 title: 'Czy poznajesz mnie, moja Polsko'
 author: 'Zbik'
 pub_date: '2018-11-26 15:44:57.691551+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=-eBPcFYB1pk'
+youtube_id: '-eBPcFYB1pk'
 text_authors:
  - 'zbigniew-ksiazek'
 composers:

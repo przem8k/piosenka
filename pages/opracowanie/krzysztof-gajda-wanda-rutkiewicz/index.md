@@ -2,7 +2,7 @@
 title: 'Wanda Rutkiewicz'
 author: 'Zbik'
 pub_date: '2018-07-18 12:02:39.849636+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=wvCZDdkMOG8'
+youtube_id: 'wvCZDdkMOG8'
 text_authors:
  - 'krzysztof-gajda'
 composers:

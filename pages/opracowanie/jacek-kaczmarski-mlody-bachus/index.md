@@ -2,7 +2,7 @@
 title: 'Młody Bachus'
 author: 'Zbik'
 pub_date: '2011-10-31 13:06:30.926737+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=y9HrqjJ9BVQ'
+youtube_id: 'y9HrqjJ9BVQ'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

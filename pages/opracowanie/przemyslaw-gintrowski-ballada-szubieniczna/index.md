@@ -3,7 +3,7 @@ title: 'Ballada szubieniczna'
 author: 'reuter'
 pub_date: '2020-04-10 11:21:11.700253+00:00'
 disambig: 'muz. Przemysław Gintrowski'
-link_youtube: 'https://www.youtube.com/watch?v=t0Xl28PWbz0'
+youtube_id: 't0Xl28PWbz0'
 capo_fret: 1
 text_authors:
  - 'krzysztof-maria-sieniawski'

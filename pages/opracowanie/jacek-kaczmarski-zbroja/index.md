@@ -2,7 +2,7 @@
 title: 'Zbroja'
 author: 'DX'
 pub_date: '2011-06-04 21:47:46.876517+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ODQ4usDcNOk'
+youtube_id: 'ODQ4usDcNOk'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

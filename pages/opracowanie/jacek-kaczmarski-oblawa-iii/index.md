@@ -2,7 +2,7 @@
 title: 'Obława III'
 author: 'DX'
 pub_date: '2011-06-04 21:32:00.019861+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=B3BySNYmAN0'
+youtube_id: 'B3BySNYmAN0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

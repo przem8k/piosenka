@@ -2,7 +2,7 @@
 title: 'Listy'
 author: 'DX'
 pub_date: '2016-11-27 12:26:52.929354+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=mY5ovEojuQE'
+youtube_id: 'mY5ovEojuQE'
 capo_fret: 4
 text_authors:
  - 'jacek-kaczmarski'

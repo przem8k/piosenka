@@ -2,7 +2,7 @@
 title: 'Kanapka z człowiekiem'
 author: 'DX'
 pub_date: '2017-10-08 22:43:06.909204+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=MPYlPa-BIL0'
+youtube_id: 'MPYlPa-BIL0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -5,7 +5,7 @@ pub_date: '2021-08-05 19:32:12.414610+00:00'
 image: notes/idlewild.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/idlewild.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/idlewild.png.0x300_q85_upscale.jpg
-image_url: https://www.boweryboyshistory.com/2017/05/story-idlewild-airport-renamed-john-f-kennedy.html
+image_src_url: https://www.boweryboyshistory.com/2017/05/story-idlewild-airport-renamed-john-f-kennedy.html
 ---
 
 Najdłużej nierozwiązaną zagadką związaną z tekstem piosenki była do roku 2021 fraza: _A w Iron White brzy barze ruch..._ Pomimo starań nie udało się znaleźć śladów żadnego lokalu o nazwie "Iron White", który byłby znany w latach 60. W oryginalnym [nagraniu](https://www.youtube.com/watch?v=haV4\-lu2\-bA) słychać również, że Stanisław Staszewski nie śpiewa wcale "Iron White".

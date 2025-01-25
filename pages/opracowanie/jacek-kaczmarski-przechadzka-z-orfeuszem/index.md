@@ -2,7 +2,7 @@
 title: 'Przechadzka z Orfeuszem'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-12 17:16:22.366941+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=brkf04HWgLU'
+youtube_id: 'brkf04HWgLU'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

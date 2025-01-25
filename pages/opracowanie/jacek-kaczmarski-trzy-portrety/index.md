@@ -2,7 +2,7 @@
 title: 'Trzy portrety'
 author: 'DX'
 pub_date: '2011-05-07 14:14:01.131851+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=cbifjvquWUA'
+youtube_id: 'cbifjvquWUA'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

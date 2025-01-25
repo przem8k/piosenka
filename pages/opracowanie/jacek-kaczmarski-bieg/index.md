@@ -2,7 +2,7 @@
 title: 'Bieg'
 author: 'Zbik'
 pub_date: '2018-02-25 16:50:32.674379+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=DIhjJWd2Sb0'
+youtube_id: 'DIhjJWd2Sb0'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

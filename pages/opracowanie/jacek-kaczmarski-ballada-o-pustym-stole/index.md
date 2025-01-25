@@ -2,7 +2,7 @@
 title: 'Blues o pustym stole'
 author: 'Pan_Kmicic4'
 pub_date: '2019-03-27 15:36:26.509533+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=mcVeBzlFnBU'
+youtube_id: 'mcVeBzlFnBU'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

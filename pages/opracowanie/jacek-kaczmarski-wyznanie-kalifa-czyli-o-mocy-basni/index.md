@@ -2,7 +2,7 @@
 title: 'Wyznanie kalifa, czyli o mocy baśni'
 author: 'Zbik'
 pub_date: '2018-10-15 19:51:44.001064+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=nJ17pHHXFN0'
+youtube_id: 'nJ17pHHXFN0'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

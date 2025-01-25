@@ -4,7 +4,7 @@ author: 'reuter'
 pub_date: '2016-07-20 20:31:22.032479+00:00'
 disambig: 'muz. Michał Kaczmarczyk'
 epigone: True
-link_youtube: 'https://www.youtube.com/watch?v=21C_M68sJYs'
+youtube_id: '21C_M68sJYs'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Podróże Guliwera. Liliput'
 author: 'Zbik'
 pub_date: '2012-04-23 22:31:43.760533+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=zfbefw2zjTI'
+youtube_id: 'zfbefw2zjTI'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

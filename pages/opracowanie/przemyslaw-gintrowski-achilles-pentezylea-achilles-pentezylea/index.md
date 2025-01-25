@@ -2,7 +2,7 @@
 title: 'Achilles. Pentezylea'
 author: 'reuter'
 pub_date: '2014-09-08 20:19:04.880174+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=_n4udQBOLbE'
+youtube_id: '_n4udQBOLbE'
 text_authors:
  - 'zbigniew-herbert'
 composers:

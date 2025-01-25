@@ -2,7 +2,7 @@
 title: 'Żegluga'
 author: 'Zbik'
 pub_date: '2011-08-30 19:47:42.154678+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=39DQa6gExzc'
+youtube_id: '39DQa6gExzc'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

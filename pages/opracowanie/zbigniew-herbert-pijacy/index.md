@@ -2,7 +2,7 @@
 title: 'Pijacy'
 author: 'Pan_Kmicic4'
 pub_date: '2019-04-08 15:51:12.023473+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=BHgn-q3Edkw'
+youtube_id: 'BHgn-q3Edkw'
 text_authors:
  - 'zbigniew-herbert'
 composers:

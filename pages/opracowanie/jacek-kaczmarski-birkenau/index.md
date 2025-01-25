@@ -2,7 +2,7 @@
 title: 'Birkenau'
 author: 'DX'
 pub_date: '2017-10-08 16:50:44.521966+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=DTZeLN-FhHw'
+youtube_id: 'DTZeLN-FhHw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

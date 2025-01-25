@@ -2,7 +2,7 @@
 title: 'Jan Kochanowski'
 author: 'DX'
 pub_date: '2011-06-05 21:11:34.728471+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=hCc-OPnHiEk'
+youtube_id: 'hCc-OPnHiEk'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

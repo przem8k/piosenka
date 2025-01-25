@@ -2,7 +2,7 @@
 title: 'Powrót z Syberii'
 author: 'DX'
 pub_date: '2017-12-03 11:11:36.783225+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=mC5RJLjGTiw'
+youtube_id: 'mC5RJLjGTiw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

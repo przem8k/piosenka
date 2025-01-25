@@ -2,7 +2,7 @@
 title: 'Zgasły dla nas nadziei promienie'
 author: 'reuter'
 pub_date: '2020-05-11 14:20:56.586191+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=_HHIr-2ezCg'
+youtube_id: '_HHIr-2ezCg'
 text_authors:
  - 'edmund-wasilewski'
 composers:

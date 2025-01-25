@@ -2,7 +2,7 @@
 title: 'Wariacje dla Grażynki'
 author: 'DX'
 pub_date: '2017-10-01 16:13:36.638228+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=wAWDMs6JGr4'
+youtube_id: 'wAWDMs6JGr4'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

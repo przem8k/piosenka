@@ -8,10 +8,13 @@ from django.core.management.base import BaseCommand
 from django.template import Context, Template, loader
 from markdown2 import markdown
 
+from songs import lyrics
+
 PAGES = ["o-stronie"]
 
 ARTICLE_DIR = "artykuly"
 BLOG_DIR = "blog"
+SONGS_DIR = "opracowanie"
 
 CONTENT_DIR = "pages"
 OUT_DIR = "out"
@@ -34,9 +37,7 @@ def parse_file(src_path):
         return (frontmatter_data, content)
 
 
-def make_context_for_page(frontmatter_data, content_markdown, section=None):
-    content_html = markdown(content_markdown, extras=["break-on-newline"])
-
+def make_context_for_page(frontmatter_data, content_html, section=None):
     context_data = {
         "title": frontmatter_data.get("title"),
         "content_html": content_html,
@@ -45,6 +46,31 @@ def make_context_for_page(frontmatter_data, content_markdown, section=None):
         "cover_url": frontmatter_data.get("cover_image_thumb_600_300"),
         "pub_date": frontmatter_data.get("pub_date"),
         "author": frontmatter_data.get("author"),
+        # Song-specific:
+        "original_title": frontmatter_data.get("original_title"),
+        "text_authors": frontmatter_data.get("text_authors"),
+        "composers": frontmatter_data.get("composers"),
+        "translators": frontmatter_data.get("translators"),
+        "performers": frontmatter_data.get("performers"),
+        "capo": frontmatter_data.get("capo_fret"),
+        "youtube_id": frontmatter_data.get("youtube_id"),
+        # Note-specific:
+        "url1": frontmatter_data.get("url1"),
+        "url2": frontmatter_data.get("url2"),
+        "ref1": frontmatter_data.get("ref1"),
+        "ref2": frontmatter_data.get("ref2"),
+        "ref2": frontmatter_data.get("ref2"),
+        "image_full": frontmatter_data.get("image_full"),
+        "image_thumb": frontmatter_data.get("image_thumb"),
+        "score1_full": frontmatter_data.get("score1_full"),
+        "score1_thumb": frontmatter_data.get("score1_thumb"),
+        "score2_full": frontmatter_data.get("score2_full"),
+        "score2_thumb": frontmatter_data.get("score2_thumb"),
+        "score3_full": frontmatter_data.get("score3_full"),
+        "score3_thumb": frontmatter_data.get("score3_thumb"),
+        "image_src_url": frontmatter_data.get("image_src_url"),
+        "image_author": frontmatter_data.get("image_author"),
+        "image_license": frontmatter_data.get("image_license"),
     }
 
     if "cover_credits" in frontmatter_data:
@@ -118,7 +144,8 @@ class Command(BaseCommand):
             os.makedirs(out_dir, exist_ok=True)
             out_file_path = os.path.join(out_dir, "index.html")
 
-            context = make_context_for_page(frontmatter_data, content)
+            content_html = markdown(content, extras=["break-on-newline"])
+            context = make_context_for_page(frontmatter_data, content_html)
             write_page(context, "page.html", out_file_path)
 
         article_dir_path = os.path.join(content_path, ARTICLE_DIR)
@@ -133,8 +160,9 @@ class Command(BaseCommand):
             os.makedirs(out_dir, exist_ok=True)
             out_file_path = os.path.join(out_dir, "index.html")
 
+            content_html = markdown(content, extras=["break-on-newline"])
             context = make_context_for_page(
-                frontmatter_data, content, section="articles"
+                frontmatter_data, content_html, section="articles"
             )
             write_page(context, "page.html", out_file_path)
 
@@ -162,7 +190,8 @@ class Command(BaseCommand):
             os.makedirs(out_dir, exist_ok=True)
             out_file_path = os.path.join(out_dir, "index.html")
 
-            context = make_context_for_page(frontmatter_data, content, section="blog")
+            content_html = markdown(content, extras=["break-on-newline"])
+            context = make_context_for_page(frontmatter_data, content_html, section="blog")
             write_page(context, "page.html", out_file_path)
 
             slug = os.path.relpath(subdir, article_dir_path).strip("/")
@@ -177,3 +206,38 @@ class Command(BaseCommand):
         }
         out_file_path = os.path.join(OUT_DIR_PATH, BLOG_DIR, "index.html")
         write_page(context, "blog/index.html", out_file_path)
+
+        songs_dir_path = os.path.join(content_path, SONGS_DIR)
+        songs = []
+        for subdir, _, _ in os.walk(songs_dir_path):
+            index_md_path = os.path.join(subdir, "index.md")
+            if not os.path.exists(index_md_path):
+                continue
+            frontmatter_data, content = parse_file(index_md_path)
+
+            notes = []
+            for root, _, files in os.walk(subdir):
+                for file in files:
+                    if file == "index.md" or not file.endswith(".md"):
+                        continue
+                    file_path = os.path.join(root, file)
+                    print(f'{file_path}')
+                    note_frontmatter_data, note_content = parse_file(file_path)
+                    note_content_html = markdown(note_content, extras=["break-on-newline"])
+                    note_context = make_context_for_page(note_frontmatter_data, note_content_html, section="songs")
+                    notes.append(note_context)
+
+            out_dir = os.path.join(OUT_DIR_PATH, os.path.relpath(subdir, content_path))
+            os.makedirs(out_dir, exist_ok=True)
+            out_file_path = os.path.join(out_dir, "index.html")
+
+            content_html = lyrics.render_lyrics(content)
+            context = make_context_for_page(frontmatter_data, content_html, section="songs")
+            context["notes"] = notes
+            write_page(context, "songs/song.html", out_file_path)
+
+            #slug = os.path.relpath(subdir, article_dir_path).strip("/")
+            #songs.append(
+            #    make_context_item_for_post_index(slug, frontmatter_data, content)
+            #)
+        #posts.sort(key=lambda x: x["pub_date"], reverse=True)

@@ -7,8 +7,8 @@ url2: 'https://www.filmweb.pl/film/Ofiarowanie-1986-32143'
 image: notes/ofiarowanie.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/ofiarowanie.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/ofiarowanie.jpg.0x300_q85_upscale.jpg
-image_url: https://kinomuranow.pl/sites/default/files/media_uploaded/obrazy/filmy/ofiarowanie.jpg
-image_author: Sven Nykvist
+image_src_url: https://kinomuranow.pl/sites/default/files/media_uploaded/obrazy/filmy/ofiarowanie.jpg
+image_author: 'Sven Nykvist'
 ---
 
 Utwór inspirowany jest ostatnim filmem **Andrieja Tarkowskiego** pt. _**Ofiarowanie**_. Zrealizowane w Szwecji w 1986 roku dzieło stanowi swego rodzaju duchowy testament twórczy wybitnego rosyjskiego reżysera.

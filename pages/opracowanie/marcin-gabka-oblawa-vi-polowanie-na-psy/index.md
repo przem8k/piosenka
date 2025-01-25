@@ -2,7 +2,7 @@
 title: 'Obława VI: Polowanie na psy'
 author: 'Baltazar'
 pub_date: '2020-10-19 16:41:21.696561+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=j66dciF_b7U'
+youtube_id: 'j66dciF_b7U'
 text_authors:
  - 'marcin-gabka'
 composers:

@@ -3,7 +3,7 @@ title: '***'
 author: 'PrzemekL'
 pub_date: '2014-09-20 16:05:14.109021+00:00'
 disambig: 'Smutno powiewa'
-link_youtube: 'https://www.youtube.com/watch?v=vKQlquTjKF4'
+youtube_id: 'vKQlquTjKF4'
 text_authors:
  - 'lothar-herbst'
 composers:

@@ -2,7 +2,7 @@
 title: 'Traktacik o wyobraźni'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-29 16:03:17.521682+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ZTJ65aNSg7I'
+youtube_id: 'ZTJ65aNSg7I'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

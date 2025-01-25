@@ -2,7 +2,7 @@
 title: 'Piosenka o gwoździach'
 author: 'Zbik'
 pub_date: '2011-10-31 13:15:13.703807+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=WZNVmFL5JFU'
+youtube_id: 'WZNVmFL5JFU'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

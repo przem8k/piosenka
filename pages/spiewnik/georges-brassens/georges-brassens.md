@@ -6,8 +6,8 @@ url1: 'https://fr.wikipedia.org/wiki/Georges_Brassens'
 image: notes/Brassens_TNP_1966_f3.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Brassens_TNP_1966_f3.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Brassens_TNP_1966_f3.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/Category:Georges_Brassens
-image_author: Roger Pic
+image_src_url: https://commons.wikimedia.org/wiki/Category:Georges_Brassens
+image_author: 'Roger Pic'
 ---
 
 Francuski bard, poeta, kompozytor, wykonawca autorskich piosenek podejmujących tematykę społeczno\-obyczajową.

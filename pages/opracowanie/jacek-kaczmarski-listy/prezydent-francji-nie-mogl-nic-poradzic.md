@@ -7,7 +7,7 @@ url2: 'https://www.universalis.fr/evenement/21-octobre-1982-liberation-du-poete-
 image: notes/cuba-2-1024x532.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/cuba-2-1024x532.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/cuba-2-1024x532.jpg.0x300_q85_upscale.jpg
-image_url: https://disidentia.com/armando-valladares-sobrevivir-para-contar-su-peligrosa-historia/
+image_src_url: https://disidentia.com/armando-valladares-sobrevivir-para-contar-su-peligrosa-historia/
 ---
 
 Piosenka jest poświęcona losom kubańskiego poety i działacza na rzecz praw człowieka **Armando Valladaresa**, w momencie powstania utworu \(luty 1982\) więzionego od 22 lat przez reżim Fidela Castro.

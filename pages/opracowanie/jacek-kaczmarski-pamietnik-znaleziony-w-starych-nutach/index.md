@@ -2,7 +2,7 @@
 title: 'Pamiętnik znaleziony w starych nutach'
 author: 'Zbik'
 pub_date: '2018-08-04 16:35:22.316513+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Tv8RsxeAxY0'
+youtube_id: 'Tv8RsxeAxY0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

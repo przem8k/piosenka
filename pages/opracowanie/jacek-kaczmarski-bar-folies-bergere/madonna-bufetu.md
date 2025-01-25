@@ -5,7 +5,7 @@ pub_date: '2020-07-14 17:31:40.355467+00:00'
 image: notes/folies-bergere.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/folies-bergere.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/folies-bergere.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/File:Un_bar_aux
+image_src_url: https://commons.wikimedia.org/wiki/File:Un_bar_aux
 ---
 
 Piosenka jest inspirowana obrazem **Édouarda Maneta**, francuskiego malarza, prekursora impresjonizmu, któremu rozgłos przyniosło kontrowersyjne płótno „Śniadanie na trawie”.

@@ -7,8 +7,8 @@ url2: 'https://en.wikipedia.org/wiki/Yalta_Conference'
 image: notes/Yalta_summit_1945_with_Churchill_Roosevelt_Stalin.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Yalta_summit_1945_with_Churchill_Roosevelt_Stalin.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Yalta_summit_1945_with_Churchill_Roosevelt_Stalin.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/File:Yalta_summit_1945_with_Churchill,_Roosevelt,_Stalin.jpg
-image_author: U.S. National Archives
+image_src_url: https://commons.wikimedia.org/wiki/File:Yalta_summit_1945_with_Churchill,_Roosevelt,_Stalin.jpg
+image_author: 'U.S. National Archives'
 image_license: domena publiczna
 ---
 

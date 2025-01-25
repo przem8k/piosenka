@@ -2,7 +2,7 @@
 title: 'Piosenka o radości życia'
 author: 'Zbik'
 pub_date: '2018-02-25 23:32:12.607311+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=8AOukgR43XE'
+youtube_id: '8AOukgR43XE'
 text_authors:
  - 'wlodzimierz-wysocki'
 composers:

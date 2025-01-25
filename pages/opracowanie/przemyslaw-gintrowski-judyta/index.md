@@ -2,7 +2,7 @@
 title: 'Judyta'
 author: 'PrzemekL'
 pub_date: '2014-09-05 21:32:55.342723+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=pvXSYFJu6ak'
+youtube_id: 'pvXSYFJu6ak'
 text_authors:
  - 'jerzy-czech'
 composers:

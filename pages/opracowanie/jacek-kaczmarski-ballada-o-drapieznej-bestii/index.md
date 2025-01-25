@@ -2,7 +2,7 @@
 title: 'Ballada o drapieżnej bestii'
 author: 'spooky'
 pub_date: '2011-07-27 02:42:55.496162+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=9XDMLBpP7Mg'
+youtube_id: '9XDMLBpP7Mg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

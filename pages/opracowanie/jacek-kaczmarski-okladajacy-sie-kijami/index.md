@@ -2,7 +2,7 @@
 title: 'Okładający się kijami'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-27 09:48:07.098147+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=29YYntX_Vh8'
+youtube_id: '29YYntX_Vh8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

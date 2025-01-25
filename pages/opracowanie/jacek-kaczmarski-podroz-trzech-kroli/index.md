@@ -2,7 +2,7 @@
 title: 'Podróż Trzech Króli'
 author: 'Zbik'
 pub_date: '2011-10-31 12:07:11.451376+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=0aHLPLZ7hl8'
+youtube_id: '0aHLPLZ7hl8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

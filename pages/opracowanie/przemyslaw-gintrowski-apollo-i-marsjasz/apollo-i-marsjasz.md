@@ -7,8 +7,8 @@ url2: 'https://pl.wikipedia.org/wiki/Aulos_(muzyka)'
 image: notes/345.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/345.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/345.jpg.0x300_q85_upscale.jpg
-image_url: https://upload.wikimedia.org/wikipedia/commons/8/8d/Bartolomeo_Manfredi_-_Apollo_and_Marsyas.jpg
-image_author: Bartolomeo Manfredi
+image_src_url: https://upload.wikimedia.org/wikipedia/commons/8/8d/Bartolomeo_Manfredi_-_Apollo_and_Marsyas.jpg
+image_author: 'Bartolomeo Manfredi'
 image_license: Domena publiczna
 ---
 

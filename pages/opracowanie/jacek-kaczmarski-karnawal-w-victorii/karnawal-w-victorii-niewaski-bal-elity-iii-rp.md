@@ -5,7 +5,7 @@ pub_date: '2019-08-08 16:09:49.365379+00:00'
 image: notes/en_magdalenka_walesa_michnik_970.jpeg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/en_magdalenka_walesa_michnik_970.jpeg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/en_magdalenka_walesa_michnik_970.jpeg.0x300_q85_upscale.jpg
-image_url: https://i.wpimg.pl/O/644x412/i.wp.pl/a/f/jpeg/32737/en_magdalenka_walesa_michnik_970.jpeg
+image_src_url: https://i.wpimg.pl/O/644x412/i.wp.pl/a/f/jpeg/32737/en_magdalenka_walesa_michnik_970.jpeg
 ---
 
 Piosenka to satyra wyśmiewająca polską klasę polityczną z okresu przemian ustrojowych. Utwór został zainspirowany  twórczością **Stanisława Grzesiuka** – warszawskiego pieśniarza, nazywanego bardem Czerniakowa. 

@@ -6,7 +6,7 @@ url1: 'https://nowynapis.eu/tygodnik/nr-155/artykul/mow-mi-ach-mow-jacka-kaczmar
 image: notes/fortepian_chopina.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/fortepian_chopina.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/fortepian_chopina.jpg.0x300_q85_upscale.jpg
-image_author: Rękopis wiersza „Fortepian Chopina”
+image_author: 'Rękopis wiersza „Fortepian Chopina”'
 image_license: domena publiczna
 ---
 

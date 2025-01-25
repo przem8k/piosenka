@@ -2,7 +2,7 @@
 title: 'Mysi Raj'
 author: 'Baltazar'
 pub_date: '2020-11-02 20:25:10.263392+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=JuIlXSAps-o'
+youtube_id: 'JuIlXSAps-o'
 capo_fret: 3
 text_authors:
  - 'marcin-gabka'

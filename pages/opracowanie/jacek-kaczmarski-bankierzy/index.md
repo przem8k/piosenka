@@ -2,7 +2,7 @@
 title: 'Bankierzy'
 author: 'Zbik'
 pub_date: '2018-07-29 12:59:28.057248+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=b-gnTuMZu-4'
+youtube_id: 'b-gnTuMZu-4'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

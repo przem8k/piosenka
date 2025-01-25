@@ -6,7 +6,7 @@ url1: 'https://www.jhi.pl/artykuly/malowali-sceny-z-getta-smierc-romana-kramszty
 image: notes/kramsztyk.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/kramsztyk.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/kramsztyk.png.0x300_q85_upscale.jpg
-image_author: Roman Kramsztyk (Autoportret)
+image_author: 'Roman Kramsztyk (Autoportret)'
 image_license: domena publiczna
 ---
 

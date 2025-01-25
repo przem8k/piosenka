@@ -2,7 +2,7 @@
 title: 'Gawęda szlachecko-rzeźnicka o Morawskim'
 author: 'RK'
 pub_date: '2012-04-08 22:00:57.247428+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=mkmS_hUvH1o'
+youtube_id: 'mkmS_hUvH1o'
 text_authors:
  - 'jacek-kowalski'
 composers:

@@ -6,8 +6,8 @@ url1: 'https://en.wikipedia.org/wiki/Jarom%C3%ADr_Nohavica'
 image: notes/nohavica.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/nohavica.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/nohavica.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/Jarom%C3%ADr_Nohavica
-image_author: Mohylek
+image_src_url: https://commons.wikimedia.org/wiki/Jarom%C3%ADr_Nohavica
+image_author: 'Mohylek'
 ---
 
 Czeski pieśniarz, kompozytor, autor i wykonawca piosenek, były mistrz Czech w Scrabble.

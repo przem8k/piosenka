@@ -3,7 +3,7 @@ title: 'Polowanie z helikopterów'
 author: 'Baltazar'
 pub_date: '2020-11-03 18:50:32.062168+00:00'
 original_title: 'Охота с вертолёта'
-link_youtube: 'https://www.youtube.com/watch?v=XYzKq1wRq3M&list=PLHqdwgLnLrnS4dhyHbkGuJYNG2OUldD_K&index=21'
+youtube_id: 'XYzKq1wRq3M&list=PLHqdwgLnLrnS4dhyHbkGuJYNG2OUldD_K&index=21'
 capo_fret: 3
 text_authors:
  - 'wlodzimierz-wysocki'

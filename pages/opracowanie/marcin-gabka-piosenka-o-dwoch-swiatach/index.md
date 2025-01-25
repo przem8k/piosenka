@@ -2,7 +2,7 @@
 title: 'Piosenka o dwóch światach'
 author: 'Baltazar'
 pub_date: '2020-10-19 18:13:58.327678+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=-zlkExRFPMk'
+youtube_id: '-zlkExRFPMk'
 text_authors:
  - 'marcin-gabka'
 composers:

@@ -2,7 +2,7 @@
 title: 'Arka Noego'
 author: 'DX'
 pub_date: '2011-05-12 06:39:30.244270+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=GzxeaC896mU'
+youtube_id: 'GzxeaC896mU'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

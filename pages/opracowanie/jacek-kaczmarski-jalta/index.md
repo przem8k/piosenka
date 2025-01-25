@@ -2,7 +2,7 @@
 title: 'Jałta'
 author: 'DX'
 pub_date: '2011-05-06 23:40:06.437386+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=GqJjiAXnWdQ'
+youtube_id: 'GqJjiAXnWdQ'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

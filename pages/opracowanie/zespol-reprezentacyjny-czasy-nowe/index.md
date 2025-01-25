@@ -3,7 +3,7 @@ title: 'Czasy nowe'
 author: 'DX'
 pub_date: '2011-11-01 01:55:00.936876+00:00'
 original_title: 'The Times They Are a-Changin'
-link_youtube: 'https://www.youtube.com/watch?v=6E0Xw-18fSA'
+youtube_id: '6E0Xw-18fSA'
 text_authors:
  - 'bob-dylan'
 composers:

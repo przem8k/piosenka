@@ -1,24 +1,26 @@
-{% load thumbnail %}
-
 <div class="section">
   <h2 id="{{ note.get_id }}" class="pzt-card-title">{{ note.title }}
-    {% include "components/content_status_span.html" with item=note %}
   </h2>
-  {% if note.image %}
-  {% include "components/thumbnail.html" with img=note.image type="imagethumb" alt="Ilustracja notki" %}
+  {% if note.image_thumb %}
+  <div class="pzt-thumbnail thumbnail-host">
+    <a href="{{ note.image_full }}" class="pzt-lightbox">
+      <img src="{{note.image_thumb}}" />
+    </a>
+  </div>
   {% endif %}
-  {{ note.text_html|safe }}
+
+  {{ note.content_html|safe }}
   <ul class="list-unstyled" style="font-size: small;">
     {% if note.url1 %}<li><span class="glyphicon glyphicon-link"></span> {% include "components/external_link.html" with url=note.url1 %}</li>{% endif %}
     {% if note.url2 %}<li><span class="glyphicon glyphicon-link"></span> {% include "components/external_link.html" with url=note.url2 %}</a></li>{% endif %}
     {% if note.ref1 %}<li><span class="glyphicon glyphicon-book"></span> {{ note.ref1 }}</li>{% endif %}
     {% if note.ref2 %}<li><span class="glyphicon glyphicon-book"></span> {{ note.ref2 }}</li>{% endif %}
-    {% if note.image_author or note.image_url or note.image_license %}
+    {% if note.image_author or note.image_src_url or note.image_license %}
     <li>
       <span class="glyphicon glyphicon-camera"></span>
-      {% if note.image_author %} {{note.image_author}}{% endif %}{% if note.image_url or note.image_license %}, {% endif %}
-      {% if note.image_url %} 
-      {% include "components/external_link.html" with url=note.image_url %}{% if note.image_license %},{% endif %}
+      {% if note.image_author %} {{note.image_author}}{% endif %}{% if note.image_src_url or note.image_license %}, {% endif %}
+      {% if note.image_src_url %} 
+      {% include "components/external_link.html" with url=note.image_src_url %}{% if note.image_license %},{% endif %}
       {% endif %}
       {% if note.image_license %} {{ note.image_license }} {% endif %}
     </li>

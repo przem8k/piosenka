@@ -2,7 +2,7 @@
 title: 'Limeryki o narodach'
 author: 'DX'
 pub_date: '2017-09-18 20:14:45.573494+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=tAyS162QpZY'
+youtube_id: 'tAyS162QpZY'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

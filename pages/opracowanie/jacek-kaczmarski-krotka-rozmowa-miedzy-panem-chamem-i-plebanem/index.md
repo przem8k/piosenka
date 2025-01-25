@@ -2,7 +2,7 @@
 title: 'Krótka rozmowa między Panem, Chamem i Plebanem'
 author: 'DX'
 pub_date: '2011-07-23 14:28:52.027343+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=5XCvJgtfXQs'
+youtube_id: '5XCvJgtfXQs'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

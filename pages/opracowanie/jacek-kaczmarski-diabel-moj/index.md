@@ -2,7 +2,7 @@
 title: 'Diabeł mój'
 author: 'Zbik'
 pub_date: '2018-07-17 16:54:37.407532+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=VJl14UOIKWc'
+youtube_id: 'VJl14UOIKWc'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

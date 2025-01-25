@@ -7,8 +7,8 @@ url2: 'https://fbc.pionier.net.pl/details/nn5cdv1'
 image: notes/Rembrandt_Faust.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Rembrandt_Faust.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Rembrandt_Faust.jpg.0x300_q85_upscale.jpg
-image_url: https://upload.wikimedia.org/wikipedia/commons/6/67/Rembrandt%2C_Faust.jpg
-image_author: Rembrandt van Rijn
+image_src_url: https://upload.wikimedia.org/wikipedia/commons/6/67/Rembrandt%2C_Faust.jpg
+image_author: 'Rembrandt van Rijn'
 ---
 
 Utwór inspirowany jest grafiką holenderskiego, barokowego malarza **Rembrandta van Rĳn** pt. "**Faust**", znaną też pod tytułem: "Uczony w swojej pracowni". Akwaforta powstała w 1652 roku.

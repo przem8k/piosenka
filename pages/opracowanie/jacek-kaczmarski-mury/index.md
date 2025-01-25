@@ -2,7 +2,7 @@
 title: 'Mury'
 author: 'DX'
 pub_date: '2011-07-19 18:55:15.553287+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=-YGS9vhmFS0'
+youtube_id: '-YGS9vhmFS0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Postacie'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 19:50:31.491185+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=JjS3M4wNa74'
+youtube_id: 'JjS3M4wNa74'
 text_authors:
  - 'jerzy-czech'
 composers:

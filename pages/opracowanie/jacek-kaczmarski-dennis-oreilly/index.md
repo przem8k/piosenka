@@ -1,5 +1,5 @@
 ---
-title: 'Dennis O'Reilly'
+title: 'Dennis O''Reilly'
 author: 'PrzemekL'
 pub_date: '2014-09-03 23:58:02.804357+00:00'
 text_authors:

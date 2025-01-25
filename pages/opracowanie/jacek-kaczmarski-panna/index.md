@@ -2,7 +2,7 @@
 title: 'Panna'
 author: 'Zbik'
 pub_date: '2011-05-10 23:39:23.406597+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=KssVd4HRjig'
+youtube_id: 'KssVd4HRjig'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

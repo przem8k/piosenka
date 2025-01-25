@@ -2,7 +2,7 @@
 title: 'Zwątpienie'
 author: 'DX'
 pub_date: '2011-05-07 14:12:25.294713+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=lNzLcgFO9Dg'
+youtube_id: 'lNzLcgFO9Dg'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

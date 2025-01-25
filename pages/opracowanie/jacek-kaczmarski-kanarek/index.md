@@ -2,7 +2,7 @@
 title: 'Kanarek'
 author: 'spooky'
 pub_date: '2012-04-20 01:58:24.924821+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=a2HjQew8eoQ'
+youtube_id: 'a2HjQew8eoQ'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

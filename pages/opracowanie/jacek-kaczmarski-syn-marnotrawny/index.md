@@ -2,7 +2,7 @@
 title: 'Syn marnotrawny'
 author: 'DX'
 pub_date: '2011-05-11 15:42:58.511251+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=OHrPavAbJ7Q'
+youtube_id: 'OHrPavAbJ7Q'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

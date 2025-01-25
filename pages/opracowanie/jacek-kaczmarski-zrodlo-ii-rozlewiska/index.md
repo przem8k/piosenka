@@ -2,7 +2,7 @@
 title: 'Źródło II (Rozlewiska)'
 author: 'Zbik'
 pub_date: '2018-08-31 11:59:15.332457+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=aZABRXf6Y8Q'
+youtube_id: 'aZABRXf6Y8Q'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Wędrówka z cieniem'
 author: 'DX'
 pub_date: '2017-09-06 19:34:10.901415+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Enq5EHFq3T4'
+youtube_id: 'Enq5EHFq3T4'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

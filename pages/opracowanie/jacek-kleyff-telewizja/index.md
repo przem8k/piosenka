@@ -2,7 +2,7 @@
 title: 'Telewizja'
 author: 'Zbik'
 pub_date: '2012-06-12 12:40:07.601263+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=FYtHMyDylik'
+youtube_id: 'FYtHMyDylik'
 text_authors:
  - 'jacek-kleyff'
 composers:

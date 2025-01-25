@@ -2,7 +2,7 @@
 title: 'Podróże Guliwera. Houyhnhnm'
 author: 'Zbik'
 pub_date: '2012-04-23 21:47:52.391505+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=O8FG9aQQVHM'
+youtube_id: 'O8FG9aQQVHM'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

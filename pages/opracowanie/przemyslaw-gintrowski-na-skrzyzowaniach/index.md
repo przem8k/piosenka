@@ -2,7 +2,7 @@
 title: 'Na skrzyżowaniach'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-01 14:55:11.975210+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=U8xGXrJje0w'
+youtube_id: 'U8xGXrJje0w'
 text_authors:
  - 'tomasz-jastrun'
 composers:

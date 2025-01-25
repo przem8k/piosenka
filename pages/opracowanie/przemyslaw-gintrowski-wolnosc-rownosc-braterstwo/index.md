@@ -2,7 +2,7 @@
 title: 'Wolność, Równość, Braterstwo'
 author: 'Pan_Kmicic4'
 pub_date: '2019-07-30 22:25:06.621038+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Qb3X1Fbrqsk'
+youtube_id: 'Qb3X1Fbrqsk'
 text_authors:
  - 'cyprian-kamil-norwid'
 composers:

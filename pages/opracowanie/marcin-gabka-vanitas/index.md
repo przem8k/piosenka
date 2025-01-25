@@ -2,7 +2,7 @@
 title: 'Vanitas'
 author: 'Baltazar'
 pub_date: '2020-10-18 19:28:21.224478+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=FcWv5gzMxsQ'
+youtube_id: 'FcWv5gzMxsQ'
 capo_fret: 2
 text_authors:
  - 'marcin-gabka'

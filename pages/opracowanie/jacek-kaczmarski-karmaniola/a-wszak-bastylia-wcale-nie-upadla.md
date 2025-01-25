@@ -7,7 +7,7 @@ url2: 'https://pl.wikipedia.org/wiki/Rewolucja_francuska'
 image: notes/delacroix.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/delacroix.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/delacroix.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg
+image_src_url: https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg
 image_license: domena publiczna
 ---
 

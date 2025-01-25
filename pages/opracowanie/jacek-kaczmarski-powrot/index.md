@@ -2,7 +2,7 @@
 title: 'Powrót'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-27 12:11:42.662323+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Dn4-tAFdOxY'
+youtube_id: 'Dn4-tAFdOxY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

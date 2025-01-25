@@ -2,7 +2,7 @@
 title: 'Ostatnia mapa Polski'
 author: 'Zbik'
 pub_date: '2011-11-03 18:25:17.533324+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=DRicixy6JzM'
+youtube_id: 'DRicixy6JzM'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

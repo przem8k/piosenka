@@ -2,7 +2,7 @@
 title: 'Scena to dziwna...'
 author: 'RK'
 pub_date: '2012-11-24 12:48:13.603640+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=N8zz6tSXwN0'
+youtube_id: 'N8zz6tSXwN0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

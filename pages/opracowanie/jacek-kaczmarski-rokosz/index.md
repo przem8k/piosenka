@@ -2,7 +2,7 @@
 title: 'Rokosz'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-21 20:25:37.608979+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=sXasr0NxkNI'
+youtube_id: 'sXasr0NxkNI'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

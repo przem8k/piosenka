@@ -2,7 +2,7 @@
 title: 'Brzytwa'
 author: 'Boczuś'
 pub_date: '2016-06-26 20:18:45.443642+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Wq-ZZlaLa9o'
+youtube_id: 'Wq-ZZlaLa9o'
 text_authors:
  - 'pawel-wojcik'
 composers:

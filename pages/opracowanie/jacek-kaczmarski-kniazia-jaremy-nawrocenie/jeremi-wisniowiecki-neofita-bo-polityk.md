@@ -7,8 +7,8 @@ url2: 'https://www.newsweek.pl/wiedza/czarny-pr-kniazia-jeremiego/w29z427'
 image: notes/67277a1cb6912bcd8e210c9912ce1838.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/67277a1cb6912bcd8e210c9912ce1838.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/67277a1cb6912bcd8e210c9912ce1838.jpg.0x300_q85_upscale.jpg
-image_url: https://2.bp.blogspot.com/-RqMnUHqwT3c/WSDXF9dmO6I/AAAAAAAAA00/U8syL45VMaEcmWi42pxrOKZklzzSi7bNwCLcB/s1600/67277a1cb6912bcd8e210c9912ce1838.jpg
-image_author: Grzegorz Kędzierski
+image_src_url: https://2.bp.blogspot.com/-RqMnUHqwT3c/WSDXF9dmO6I/AAAAAAAAA00/U8syL45VMaEcmWi42pxrOKZklzzSi7bNwCLcB/s1600/67277a1cb6912bcd8e210c9912ce1838.jpg
+image_author: 'Grzegorz Kędzierski'
 ---
 
 Piosenka w dość luźny i stronniczy sposób odnosi się do życiorysu XVII\-wiecznego księcia i wojewody ruskiego \- **Jeremiego Wiśniowieckiego**, postaci znanej przede wszystkim jako ojciec króla Polski Michała Korybuta Wiśniowieckiego, jak i bohater "Ogniem i mieczem" \- pierwszej części  _Trylogii_ spod pióra Henryka Sienkiewicza.

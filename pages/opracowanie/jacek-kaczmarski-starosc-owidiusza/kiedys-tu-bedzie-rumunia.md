@@ -5,8 +5,8 @@ pub_date: '2017-05-27 08:25:19.703506+00:00'
 image: notes/ovide-smaller.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/ovide-smaller.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/ovide-smaller.jpg.0x300_q85_upscale.jpg
-image_url: https://en.wikipedia.org/wiki/Ovid_among_the_Scythians
-image_author: Eugène Delacroix, Owidiusz wśród Scytów
+image_src_url: https://en.wikipedia.org/wiki/Ovid_among_the_Scythians
+image_author: 'Eugène Delacroix, Owidiusz wśród Scytów'
 image_license: domena publiczna
 ---
 

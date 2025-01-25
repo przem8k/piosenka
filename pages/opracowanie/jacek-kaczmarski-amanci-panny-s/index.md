@@ -2,7 +2,7 @@
 title: 'Amanci Panny „S”'
 author: 'DX'
 pub_date: '2012-04-25 22:26:05.059063+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=aAO4fant-qk'
+youtube_id: 'aAO4fant-qk'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

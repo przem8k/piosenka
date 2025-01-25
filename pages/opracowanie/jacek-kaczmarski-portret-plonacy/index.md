@@ -2,7 +2,7 @@
 title: 'Portret płonący'
 author: 'Zbik'
 pub_date: '2018-08-03 10:24:44.172782+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Y-nmw01IRPw'
+youtube_id: 'Y-nmw01IRPw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

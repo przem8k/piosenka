@@ -6,8 +6,8 @@ url1: 'https://pl.wikipedia.org/wiki/Aleksy_Awdiejew'
 image: notes/02018_0673_Aleksy_Awdiejew_Bielsko-Biała.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/02018_0673_Aleksy_Awdiejew_Bielsko-Biała.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/02018_0673_Aleksy_Awdiejew_Bielsko-Bia%C5%82a.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/File:02018_0673_Aleksy_Awdiejew,_Bielsko-Bia%C5%82a.jpg
-image_author: Silar
+image_src_url: https://commons.wikimedia.org/wiki/File:02018_0673_Aleksy_Awdiejew,_Bielsko-Bia%C5%82a.jpg
+image_author: 'Silar'
 image_license: Creative Commons Attribution-Share Alike 4.0 Inte
 ---
 

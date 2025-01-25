@@ -2,7 +2,7 @@
 title: 'Dęby'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-06 15:43:32.529417+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Ro_62Qc-99Y'
+youtube_id: 'Ro_62Qc-99Y'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

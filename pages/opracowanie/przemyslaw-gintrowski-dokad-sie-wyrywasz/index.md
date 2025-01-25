@@ -3,7 +3,7 @@ title: '***'
 author: 'reuter'
 pub_date: '2023-07-25 19:04:54.237580+00:00'
 disambig: 'Dokąd się wyrywasz...'
-link_youtube: 'https://www.youtube.com/watch?v=kTIyWv9StkY'
+youtube_id: 'kTIyWv9StkY'
 capo_fret: 1
 text_authors:
  - 'ryszard-krynicki'

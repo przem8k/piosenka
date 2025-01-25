@@ -2,7 +2,7 @@
 title: 'Sara'
 author: 'Zbik'
 pub_date: '2012-06-21 10:52:13.757557+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=I2XJD5cA0zA'
+youtube_id: 'I2XJD5cA0zA'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

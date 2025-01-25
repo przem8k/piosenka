@@ -2,7 +2,7 @@
 title: 'Ballada o spalonej synagodze'
 author: 'Zbik'
 pub_date: '2011-12-29 20:04:55.064494+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=7dRFk_UWwgs'
+youtube_id: '7dRFk_UWwgs'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

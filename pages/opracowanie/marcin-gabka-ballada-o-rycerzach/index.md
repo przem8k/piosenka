@@ -2,7 +2,7 @@
 title: 'Ballada o rycerzach'
 author: 'Baltazar'
 pub_date: '2020-10-24 12:03:04.571967+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ZjeURZEhL0g'
+youtube_id: 'ZjeURZEhL0g'
 capo_fret: 3
 text_authors:
  - 'marcin-gabka'

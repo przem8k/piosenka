@@ -5,7 +5,7 @@ pub_date: '2020-11-10 21:49:02.856104+00:00'
 image: notes/52602505_560282187822862_179337342991990784_n.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/52602505_560282187822862_179337342991990784_n.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/52602505_560282187822862_179337342991990784_n.jpg.0x300_q85_upscale.jpg
-image_author: Marek Kaczkowski
+image_author: 'Marek Kaczkowski'
 ---
 
 Podmiotem utworu jest Sansa Stark, bohaterka cyklu "Pieśń Lodu i Ognia" autorstwa G. R. R. Martina, oraz serialu "Gra o Tron". 

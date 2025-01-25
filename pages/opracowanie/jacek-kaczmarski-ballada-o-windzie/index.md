@@ -2,7 +2,7 @@
 title: 'Ballada o windzie'
 author: 'Zbik'
 pub_date: '2011-10-31 11:26:32.192254+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=rOuR9ZVkaWE'
+youtube_id: 'rOuR9ZVkaWE'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

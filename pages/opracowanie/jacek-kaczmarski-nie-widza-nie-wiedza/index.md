@@ -2,7 +2,7 @@
 title: 'Nie widzą, nie wiedzą'
 author: 'Zbik'
 pub_date: '2018-08-08 12:47:54.231722+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ZLCOdJpG8vY'
+youtube_id: 'ZLCOdJpG8vY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

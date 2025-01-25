@@ -2,7 +2,7 @@
 title: 'Rechot Słowackiego'
 author: 'reuter'
 pub_date: '2017-06-14 18:07:43.922190+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=CbgDBzEse2I'
+youtube_id: 'CbgDBzEse2I'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Piosenka napisana mimochodem'
 author: 'spooky'
 pub_date: '2011-07-23 20:48:16.032423+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Y_clXdF-mZ4'
+youtube_id: 'Y_clXdF-mZ4'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

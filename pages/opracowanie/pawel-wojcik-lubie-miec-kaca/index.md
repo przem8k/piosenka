@@ -2,7 +2,7 @@
 title: 'Lubię mieć kaca'
 author: 'Boczuś'
 pub_date: '2016-05-20 10:54:01.338166+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=NCwRsUdu_ro'
+youtube_id: 'NCwRsUdu_ro'
 text_authors:
  - 'pawel-wojcik'
 composers:

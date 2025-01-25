@@ -2,7 +2,7 @@
 title: 'Kolęda barokowa'
 author: 'RK'
 pub_date: '2012-11-24 13:28:42.638805+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=eXeUbYLSKTA'
+youtube_id: 'eXeUbYLSKTA'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

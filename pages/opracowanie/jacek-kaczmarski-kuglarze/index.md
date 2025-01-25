@@ -2,7 +2,7 @@
 title: 'Kuglarze'
 author: 'DX'
 pub_date: '2015-02-28 17:23:27.418004+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=hR7oFlXgFzo'
+youtube_id: 'hR7oFlXgFzo'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

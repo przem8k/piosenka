@@ -2,7 +2,7 @@
 title: 'Odpowiedź'
 author: 'DX'
 pub_date: '2014-01-11 13:14:25.487163+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=G6yos2F_gAU'
+youtube_id: 'G6yos2F_gAU'
 text_authors:
  - 'zbigniew-herbert'
 composers:

@@ -2,7 +2,7 @@
 title: 'Ambasadorowie'
 author: 'DX'
 pub_date: '2012-04-29 01:26:58.057969+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=kgZLZmXXXbg'
+youtube_id: 'kgZLZmXXXbg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

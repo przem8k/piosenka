@@ -2,7 +2,7 @@
 title: 'Poczekalnia'
 author: 'DX'
 pub_date: '2011-05-10 02:28:29.294554+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=LTC97LojAJI'
+youtube_id: 'LTC97LojAJI'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Epitafium dla Włodzimierza Wysockiego'
 author: 'DX'
 pub_date: '2011-06-04 21:39:06.371992+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=guMyd5c59WY'
+youtube_id: 'guMyd5c59WY'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Wyprawa na Warszawę'
 author: 'RK'
 pub_date: '2012-04-08 22:28:54.185187+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=Gah6zLPTAr4'
+youtube_id: 'Gah6zLPTAr4'
 text_authors:
  - 'jacek-kowalski'
 composers:

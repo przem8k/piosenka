@@ -2,7 +2,7 @@
 title: 'Książę Józef Poniatowski'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-26 19:26:01.605670+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=2caS1xG5edY'
+youtube_id: '2caS1xG5edY'
 text_authors:
  - 'jerzy-czech'
 composers:

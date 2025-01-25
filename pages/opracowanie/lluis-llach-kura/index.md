@@ -3,7 +3,7 @@ title: 'Kura'
 author: 'DX'
 pub_date: '2011-08-16 20:38:39.589517+00:00'
 original_title: 'La gallineta'
-link_youtube: 'https://www.youtube.com/watch?v=JF7PY8uZZr8'
+youtube_id: 'JF7PY8uZZr8'
 text_authors:
  - 'lluis-llach'
 composers:

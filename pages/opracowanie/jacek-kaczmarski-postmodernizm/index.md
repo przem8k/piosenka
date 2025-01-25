@@ -2,7 +2,7 @@
 title: 'Postmodernizm'
 author: 'DX'
 pub_date: '2012-07-11 19:58:56.589138+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=IK7SiKM7kCM'
+youtube_id: 'IK7SiKM7kCM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

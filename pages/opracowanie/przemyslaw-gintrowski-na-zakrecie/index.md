@@ -2,7 +2,7 @@
 title: 'Na zakręcie'
 author: 'reuter'
 pub_date: '2020-05-11 14:32:22.431403+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Mz9r9Y74_Ag'
+youtube_id: 'Mz9r9Y74_Ag'
 text_authors:
  - 'agnieszka-osiecka'
 composers:

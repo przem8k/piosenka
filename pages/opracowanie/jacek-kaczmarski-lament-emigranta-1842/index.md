@@ -3,7 +3,7 @@ title: 'Lament emigranta (1842)'
 author: 'PrzemekL'
 pub_date: '2014-09-03 23:45:54.730663+00:00'
 original_title: 'The Beautiful Land of Australia'
-link_youtube: 'https://www.youtube.com/watch?v=7nhW2mKl1U4'
+youtube_id: '7nhW2mKl1U4'
 text_authors:
  - 'jacek-kaczmarski'
 translators:

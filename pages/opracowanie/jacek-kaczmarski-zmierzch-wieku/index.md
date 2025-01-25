@@ -2,7 +2,7 @@
 title: 'Zmierzch wieku'
 author: 'Zbik'
 pub_date: '2011-10-20 18:37:00.066048+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=n_l-5qlY7ys'
+youtube_id: 'n_l-5qlY7ys'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

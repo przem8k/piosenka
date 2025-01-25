@@ -30,14 +30,7 @@
 
           {{ content_html|safe }}
 
-          {% if author and pub_date %}
-          <hr />
-          <p class="remove-bottom-margin">
-            Dodany
-            {% if pub_date %}<span class="date">{{ pub_date|date:"d.m.Y" }}</span>{% endif %}
-            przez <b>{{ author }}</b>
-          </p>
-          {% endif %}
+          {% include "components/content_foot.html" with action="Dodane" %}
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 title: 'Homel'
 author: 'gary'
 pub_date: '2023-05-15 22:38:58.971285+00:00'
-link_youtube: 'https://youtu.be/r13CSRPym7c'
+youtube_id: 'None'
 text_authors:
  - 'elzbieta-kurylo'
 composers:

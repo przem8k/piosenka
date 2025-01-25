@@ -2,7 +2,7 @@
 title: 'Do Marka Aurelego'
 author: 'DX'
 pub_date: '2011-05-07 13:59:06.037646+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=m77NHc8_EpI'
+youtube_id: 'm77NHc8_EpI'
 text_authors:
  - 'zbigniew-herbert'
 composers:

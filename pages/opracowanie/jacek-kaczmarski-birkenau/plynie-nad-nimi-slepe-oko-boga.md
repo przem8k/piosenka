@@ -7,8 +7,8 @@ ref1: '"Lekcja historii Jacka Kaczmarskiego" Iwona Grabska, Iwona Wasilewska'
 image: notes/094041__nn7Tv94.jpeg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/094041__nn7Tv94.jpeg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/094041__nn7Tv94.jpeg.0x300_q85_upscale.jpg
-image_url: https://www.europeana.eu/portal/pl/record/094041/_nn7Tv94.html
-image_author: Jerzy Krawczyk
+image_src_url: https://www.europeana.eu/portal/pl/record/094041/_nn7Tv94.html
+image_author: 'Jerzy Krawczyk'
 image_license: domena publiczna
 ---
 

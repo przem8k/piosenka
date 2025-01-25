@@ -2,7 +2,7 @@
 title: 'Quasimodo'
 author: 'AŁ'
 pub_date: '2012-06-19 15:08:27.587086+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ilqJMS2uESM'
+youtube_id: 'ilqJMS2uESM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

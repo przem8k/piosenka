@@ -6,8 +6,8 @@ url1: 'https://pl.wikipedia.org/wiki/Obrona_Zbara%C5%BCa'
 image: notes/1623px-Ogniem_i_mieczem_Henryka_Sienkiewicza_-_album_1886_58315384_cropped.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/1623px-Ogniem_i_mieczem_Henryka_Sienkiewicza_-_album_1886_58315384_cropped.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1623px-Ogniem_i_mieczem_Henryka_Sienkiewicza_-_album_1886_58315384_cropped.jpg.0x300_q85_upscale.jpg
-image_url: https://pl.wikipedia.org/wiki/Longinus_Podbipi%C4%
-image_author: Śmierć Podbipięty, Juliusz Kossak
+image_src_url: https://pl.wikipedia.org/wiki/Longinus_Podbipi%C4%
+image_author: 'Śmierć Podbipięty, Juliusz Kossak'
 ---
 
 Longinus Podbipięta herbu Zerwikaptur, fikcyjny bohater powieści historycznej Henryka Sienkiewicza "Ogniem i Mieczem", ginie w trakcie oblężenia zamku w Zbarażu przez połączone siły kozackie i tatarskie w czasie powstania Chmielnickiego, latem 1649 roku.

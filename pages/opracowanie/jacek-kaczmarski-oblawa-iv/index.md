@@ -2,7 +2,7 @@
 title: 'Obława IV'
 author: 'jakubkwa'
 pub_date: '2016-01-26 18:58:16.244445+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=rMMS8Tv7MJs'
+youtube_id: 'rMMS8Tv7MJs'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

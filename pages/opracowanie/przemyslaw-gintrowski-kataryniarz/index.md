@@ -2,7 +2,7 @@
 title: 'Kataryniarz'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-28 10:41:30.664598+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=yMrMCS2ywd4'
+youtube_id: 'yMrMCS2ywd4'
 text_authors:
  - 'jerzy-czech'
 composers:

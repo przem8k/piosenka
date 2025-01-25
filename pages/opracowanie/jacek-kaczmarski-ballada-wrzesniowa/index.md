@@ -2,7 +2,7 @@
 title: 'Ballada wrześniowa'
 author: 'Zbik'
 pub_date: '2018-06-26 10:24:58.420212+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=tu1UKsmXv9s'
+youtube_id: 'tu1UKsmXv9s'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

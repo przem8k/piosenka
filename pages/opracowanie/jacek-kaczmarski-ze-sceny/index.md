@@ -2,7 +2,7 @@
 title: 'Ze sceny'
 author: 'DX'
 pub_date: '2011-06-04 19:29:55.140395+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=fQLNROfjTXA'
+youtube_id: 'fQLNROfjTXA'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

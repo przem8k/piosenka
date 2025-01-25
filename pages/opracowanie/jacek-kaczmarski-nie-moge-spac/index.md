@@ -2,7 +2,7 @@
 title: 'Nie mogę spać'
 author: 'Zbik'
 pub_date: '2018-08-04 16:44:12.536863+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=FbVLQAlSRac'
+youtube_id: 'FbVLQAlSRac'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

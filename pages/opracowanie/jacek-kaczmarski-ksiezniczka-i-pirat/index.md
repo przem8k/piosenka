@@ -2,7 +2,7 @@
 title: 'Księżniczka i Pirat'
 author: 'Zbik'
 pub_date: '2018-08-03 09:57:13.751157+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=fJ4vuzxZhKM'
+youtube_id: 'fJ4vuzxZhKM'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

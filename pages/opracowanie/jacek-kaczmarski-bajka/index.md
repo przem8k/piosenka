@@ -2,7 +2,7 @@
 title: 'Bajka'
 author: 'DX'
 pub_date: '2011-05-07 13:53:33.608255+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=b_6XgrK31lY'
+youtube_id: 'b_6XgrK31lY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

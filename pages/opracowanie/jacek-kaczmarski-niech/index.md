@@ -2,7 +2,7 @@
 title: 'Niech...'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-23 10:19:46.729324+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=_iPDD2kLk_c'
+youtube_id: '_iPDD2kLk_c'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

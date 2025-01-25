@@ -2,7 +2,7 @@
 title: 'Szulerzy'
 author: 'DX'
 pub_date: '2013-05-17 22:10:03.272124+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=2Tqf3a1_PLI'
+youtube_id: '2Tqf3a1_PLI'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

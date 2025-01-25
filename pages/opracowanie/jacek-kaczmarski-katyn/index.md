@@ -2,7 +2,7 @@
 title: 'Katyń'
 author: 'Zbik'
 pub_date: '2018-02-26 10:07:39.523813+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=QBVv7zMlksY'
+youtube_id: 'QBVv7zMlksY'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

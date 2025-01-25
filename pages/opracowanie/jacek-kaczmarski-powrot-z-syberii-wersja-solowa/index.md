@@ -2,7 +2,7 @@
 title: 'Powrót z Syberii (wersja solowa)'
 author: 'Zbik'
 pub_date: '2024-04-06 13:10:25.038228+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=FD3PQ4km4bA'
+youtube_id: 'FD3PQ4km4bA'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

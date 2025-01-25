@@ -4,7 +4,7 @@ author: 'reuter'
 pub_date: '2020-08-11 12:47:34.138325+00:00'
 disambig: 'Lasy ścinacie, głupcy...'
 original_title: 'La guerre'
-link_youtube: 'https://youtu.be/kN1BxIntbIc'
+youtube_id: 'None'
 text_authors:
  - 'jacques-prevert'
 composers:

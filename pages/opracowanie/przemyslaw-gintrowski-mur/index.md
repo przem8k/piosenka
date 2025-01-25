@@ -2,7 +2,7 @@
 title: 'Mur'
 author: 'DX'
 pub_date: '2011-05-31 22:34:21.847223+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=yDB6VlJJbZA'
+youtube_id: 'yDB6VlJJbZA'
 text_authors:
  - 'zbigniew-herbert'
 composers:

@@ -2,7 +2,7 @@
 title: 'Karmaniola'
 author: 'Zbik'
 pub_date: '2012-04-23 22:57:57.876554+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=4ZEjbqrrT1U'
+youtube_id: '4ZEjbqrrT1U'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

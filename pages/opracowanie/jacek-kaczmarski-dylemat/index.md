@@ -2,7 +2,7 @@
 title: 'Dylemat'
 author: 'DX'
 pub_date: '2012-10-15 12:47:39.814989+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=obocyYMgiU8'
+youtube_id: 'obocyYMgiU8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

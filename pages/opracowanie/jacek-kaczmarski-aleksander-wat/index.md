@@ -2,7 +2,7 @@
 title: 'Aleksander Wat'
 author: 'Zbik'
 pub_date: '2011-10-16 15:24:35.903372+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=cyO786KOPMg'
+youtube_id: 'cyO786KOPMg'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

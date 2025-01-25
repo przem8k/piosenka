@@ -2,7 +2,7 @@
 title: 'Mroźny trans metafizyczny'
 author: 'Zbik'
 pub_date: '2011-06-02 17:17:47.552064+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=z7b8IbiJWyo'
+youtube_id: 'z7b8IbiJWyo'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

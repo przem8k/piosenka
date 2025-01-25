@@ -3,7 +3,7 @@ title: 'Pokolenie'
 author: 'Zbik'
 pub_date: '2011-08-30 15:23:33.727707+00:00'
 disambig: '"Spójrz, niewidomy, co za świat..."'
-link_youtube: 'https://www.youtube.com/watch?v=CNgSRJ4ppPU'
+youtube_id: 'CNgSRJ4ppPU'
 capo_fret: 3
 text_authors:
  - 'krzysztof-maria-sieniawski'

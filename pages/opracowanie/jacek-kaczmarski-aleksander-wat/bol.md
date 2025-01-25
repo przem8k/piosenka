@@ -6,7 +6,7 @@ url1: 'http://pl.wikipedia.org/wiki/Aleksander_Wat'
 image: notes/Aleksander_Wat.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Aleksander_Wat.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Aleksander_Wat.jpg.0x300_q85_upscale.jpg
-image_url: https://pl.wikipedia.org/wiki/Aleksander_Wat#/media/File:Aleksander_Wat.jpg
+image_src_url: https://pl.wikipedia.org/wiki/Aleksander_Wat#/media/File:Aleksander_Wat.jpg
 image_license: domena publiczna
 ---
 

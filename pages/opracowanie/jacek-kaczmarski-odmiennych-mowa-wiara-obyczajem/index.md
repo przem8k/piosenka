@@ -2,7 +2,7 @@
 title: 'Odmiennych mową, wiarą, obyczajem...'
 author: 'Zbik'
 pub_date: '2018-08-22 07:44:24.173043+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=VktWm0FoKnY'
+youtube_id: 'VktWm0FoKnY'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

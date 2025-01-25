@@ -2,7 +2,7 @@
 title: 'Hymn wieczoru kawalerskiego'
 author: 'DX'
 pub_date: '2011-05-11 01:11:11.976448+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=qaINls5Ondo'
+youtube_id: 'qaINls5Ondo'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

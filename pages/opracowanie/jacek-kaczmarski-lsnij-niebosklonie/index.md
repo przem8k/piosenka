@@ -2,7 +2,7 @@
 title: 'Lśnij, nieboskłonie...'
 author: 'Zbik'
 pub_date: '2018-09-10 09:52:03.423047+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=yp87P-bGHhg'
+youtube_id: 'yp87P-bGHhg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

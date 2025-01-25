@@ -7,8 +7,8 @@ url2: 'http://mityczne.pl/prokrust/'
 image: notes/Prokrustes.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Prokrustes.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Prokrustes.jpg.0x300_q85_upscale.jpg
-image_url: https://vignette.wikia.nocookie.net/greekmythology/images/e/e1/Prokrustes.jpg/revision/latest?cb=20151107044714
-image_author: nieznany
+image_src_url: https://vignette.wikia.nocookie.net/greekmythology/images/e/e1/Prokrustes.jpg/revision/latest?cb=20151107044714
+image_author: 'nieznany'
 ---
 
 Utwór inspirowany jest historią postaci pochodzącej z mitologii greckiej znanej jako **Prokrust**, występującej także pod imionami **Prokrustes**, **Damastes** lub **Polypemon**.  Był on olbrzymem i synem boga mórz, Posejdona.

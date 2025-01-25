@@ -2,7 +2,7 @@
 title: 'Starzy ludzie w autobusie'
 author: 'jakubkwa'
 pub_date: '2015-06-24 21:19:47.612020+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ED7zjC23wDk'
+youtube_id: 'ED7zjC23wDk'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

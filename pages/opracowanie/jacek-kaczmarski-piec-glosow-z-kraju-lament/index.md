@@ -2,7 +2,7 @@
 title: 'Pięć głosów z Kraju. Lament'
 author: 'Zbik'
 pub_date: '2011-12-29 21:38:39.839328+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=nClubhU7TmE'
+youtube_id: 'nClubhU7TmE'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

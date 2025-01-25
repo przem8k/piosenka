@@ -8,7 +8,7 @@ ref1: 'Jacek Kaczmarski w rozmowie z Jolantą Piątek - Za dużo czerwonego, prz
 image: notes/wolf.jpeg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/wolf.jpeg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/wolf.jpeg.0x300_q85_upscale.jpg
-image_url: https://www.stockvault.net/photo/209073/Wild-Wolf
+image_src_url: https://www.stockvault.net/photo/209073/Wild-Wolf
 image_license: CC0 1.0 Universal (CC0 1.0) Public Domain Dedicati
 ---
 

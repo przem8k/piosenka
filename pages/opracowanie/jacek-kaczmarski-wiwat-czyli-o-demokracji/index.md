@@ -2,7 +2,7 @@
 title: 'Wiwat, czyli o demokracji'
 author: 'Zbik'
 pub_date: '2018-10-24 16:16:00.683755+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=FL39bfujh8c'
+youtube_id: 'FL39bfujh8c'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

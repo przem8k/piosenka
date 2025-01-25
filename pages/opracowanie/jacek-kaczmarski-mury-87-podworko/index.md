@@ -1,9 +1,9 @@
 ---
-title: 'Mury '87'
+title: 'Mury ''87'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-07 19:08:39.836821+00:00'
 disambig: 'Podwórko'
-link_youtube: 'https://www.youtube.com/watch?v=sYf8CgJ8qlY'
+youtube_id: 'sYf8CgJ8qlY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

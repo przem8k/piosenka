@@ -7,8 +7,8 @@ url2: 'https://pl.wikipedia.org/wiki/B%C3%B3jka_na_kije'
 image: notes/Riña_a_garrotazos.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Riña_a_garrotazos.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Ri%C3%B1a_a_garrotazos.jpg.0x300_q85_upscale.jpg
-image_url: https://www.wga.hu/
-image_author: Francisco Goya
+image_src_url: https://www.wga.hu/
+image_author: 'Francisco Goya'
 image_license: Domena publiczna
 ---
 

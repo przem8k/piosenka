@@ -2,7 +2,7 @@
 title: 'Tren spadkobierców'
 author: 'PrzemekL'
 pub_date: '2018-02-16 17:58:40.259302+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=2PGYt5IkXOg'
+youtube_id: '2PGYt5IkXOg'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

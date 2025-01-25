@@ -2,7 +2,7 @@
 title: 'Walc adieu'
 author: 'DX'
 pub_date: '2011-05-07 14:59:41.421445+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=lTNu9X0iE88'
+youtube_id: 'lTNu9X0iE88'
 text_authors:
  - 'leszek-czajkowski'
 composers:

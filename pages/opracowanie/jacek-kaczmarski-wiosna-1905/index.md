@@ -2,7 +2,7 @@
 title: 'Wiosna 1905'
 author: 'DX'
 pub_date: '2017-12-01 20:30:58.337428+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ZWPQKtNqiMQ'
+youtube_id: 'ZWPQKtNqiMQ'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -5,7 +5,7 @@ pub_date: '2017-05-27 08:59:07.425417+00:00'
 image: notes/ŁódzkimDomKultury.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/ŁódzkimDomKultury.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/%C5%81%C3%B3dzkimDomKultury.jpg.0x300_q85_upscale.jpg
-image_url: https://pl.wikipedia.org/wiki/%C5%81%C3%B3dzki_Dom_Kultury
+image_src_url: https://pl.wikipedia.org/wiki/%C5%81%C3%B3dzki_Dom_Kultury
 ---
 
 Inspiracją do powstania utworu było wydarzenie przed koncertem Jacka Kaczmarskiego w Łodzi. Sam artysta tak je opisał w zapowiedzi do piosenki podczas koncertu na XX\-lecie twórczości:

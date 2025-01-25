@@ -2,7 +2,7 @@
 title: 'Karol Levittoux'
 author: 'DX'
 pub_date: '2013-05-14 22:05:58.378636+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1sK-yQAQSDo'
+youtube_id: '1sK-yQAQSDo'
 text_authors:
  - 'jerzy-czech'
 composers:

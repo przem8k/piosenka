@@ -2,7 +2,7 @@
 title: 'Do muzy suplikacja przy ostrzeniu pióra'
 author: 'DX'
 pub_date: '2012-10-02 20:55:06.480295+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ACEKsJkXgjs'
+youtube_id: 'ACEKsJkXgjs'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

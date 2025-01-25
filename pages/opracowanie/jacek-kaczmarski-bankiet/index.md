@@ -2,7 +2,7 @@
 title: 'Bankiet'
 author: 'Zbik'
 pub_date: '2011-12-23 21:00:24.243580+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Nu8odTHHCHw'
+youtube_id: 'Nu8odTHHCHw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

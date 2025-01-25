@@ -2,7 +2,7 @@
 title: 'Sen Katarzyny II'
 author: 'DX'
 pub_date: '2011-05-11 21:55:16.848160+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=vz1Hx5Ne6aU'
+youtube_id: 'vz1Hx5Ne6aU'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

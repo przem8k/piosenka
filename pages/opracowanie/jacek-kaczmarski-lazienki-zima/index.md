@@ -3,7 +3,7 @@ title: 'Łazienki zimą'
 author: 'DX'
 pub_date: '2011-07-24 18:48:23.749587+00:00'
 epigone: True
-link_youtube: 'http://www.youtube.com/watch?v=cohTAaINLEc'
+youtube_id: 'cohTAaINLEc'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

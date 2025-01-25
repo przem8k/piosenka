@@ -2,7 +2,7 @@
 title: 'Powtórka z Odysei'
 author: 'DX'
 pub_date: '2017-06-13 20:55:34.535505+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=cz2VnOOHcmY'
+youtube_id: 'cz2VnOOHcmY'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

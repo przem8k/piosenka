@@ -2,7 +2,7 @@
 title: 'Kołysanka dla Kleopatry'
 author: 'Zbik'
 pub_date: '2012-06-21 10:43:48.691423+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=wgKsttAW9yM'
+youtube_id: 'wgKsttAW9yM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

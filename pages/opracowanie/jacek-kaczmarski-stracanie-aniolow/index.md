@@ -2,7 +2,7 @@
 title: 'Strącanie aniołów'
 author: 'DX'
 pub_date: '2011-07-19 19:01:11.306106+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=klpIaFFMpj0'
+youtube_id: 'klpIaFFMpj0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

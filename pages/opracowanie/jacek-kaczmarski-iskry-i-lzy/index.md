@@ -2,7 +2,7 @@
 title: 'Iskry i łzy (Udręczone oczy wznieś…)'
 author: 'Zbik'
 pub_date: '2018-10-23 09:51:46.233995+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=yVIC9jtO5H0'
+youtube_id: 'yVIC9jtO5H0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

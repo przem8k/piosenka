@@ -2,7 +2,7 @@
 title: 'Pan Cogito o cnocie'
 author: 'Pan_Kmicic4'
 pub_date: '2019-04-09 09:59:03.730204+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=2MUIC8dOU6I'
+youtube_id: '2MUIC8dOU6I'
 text_authors:
  - 'zbigniew-herbert'
 composers:

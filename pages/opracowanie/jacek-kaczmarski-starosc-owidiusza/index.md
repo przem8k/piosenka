@@ -2,7 +2,7 @@
 title: 'Starość Owidiusza'
 author: 'AŁ'
 pub_date: '2012-06-18 16:14:36.329012+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=bSR-ZpeMBBE'
+youtube_id: 'bSR-ZpeMBBE'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

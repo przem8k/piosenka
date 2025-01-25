@@ -214,6 +214,9 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
             )
         else:
             return self.title
+        
+    def get_absolute_url(self):
+        return f'/opracowanie/{self.slug}/'
 
     def get_url_params(self):
         return {"slug": self.slug}

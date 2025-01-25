@@ -3,7 +3,7 @@ title: 'Duch czasu'
 author: 'reuter'
 pub_date: '2018-11-23 11:20:03.432440+00:00'
 disambig: 'Raport z Oblężonego Miasta'
-link_youtube: 'https://www.youtube.com/watch?v=4mI3sXwPZnY'
+youtube_id: '4mI3sXwPZnY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

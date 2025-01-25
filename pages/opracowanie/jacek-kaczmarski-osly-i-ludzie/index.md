@@ -2,7 +2,7 @@
 title: 'Osły i ludzie'
 author: 'DX'
 pub_date: '2016-10-21 14:47:19.872991+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=6GllKJQuLEo'
+youtube_id: '6GllKJQuLEo'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

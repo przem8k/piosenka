@@ -2,7 +2,7 @@
 title: 'Z XVI-wiecznym portretem trumiennym rozmowa'
 author: 'DX'
 pub_date: '2011-08-09 02:10:21.126504+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=dPV-ewUzEoE'
+youtube_id: 'dPV-ewUzEoE'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

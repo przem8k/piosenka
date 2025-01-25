@@ -2,7 +2,7 @@
 title: 'Ciąg dalszy'
 author: 'Zbik'
 pub_date: '2018-07-30 19:56:03.804981+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=n6SjxtqAcDM'
+youtube_id: 'n6SjxtqAcDM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

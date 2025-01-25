@@ -2,7 +2,7 @@
 title: 'Oskarżeni o wierność i cnotę'
 author: 'RK'
 pub_date: '2012-10-25 19:01:19.987785+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=nA8dTsaORaM'
+youtube_id: 'nA8dTsaORaM'
 text_authors:
  - 'andrzej-kolakowski'
 composers:

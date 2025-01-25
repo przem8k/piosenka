@@ -2,7 +2,7 @@
 title: 'Nad uśpioną Galileą...'
 author: 'Zbik'
 pub_date: '2018-08-22 08:46:34.298298+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=OmEo_BHFbBQ'
+youtube_id: 'OmEo_BHFbBQ'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

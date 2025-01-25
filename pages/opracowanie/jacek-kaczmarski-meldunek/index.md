@@ -2,7 +2,7 @@
 title: 'Meldunek'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-16 17:19:13.854940+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=lBmAWVIo79M'
+youtube_id: 'lBmAWVIo79M'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Kolęda ludowa'
 author: 'Zbik'
 pub_date: '2018-08-22 07:58:37.474998+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ZQuHze9IqDw'
+youtube_id: 'ZQuHze9IqDw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

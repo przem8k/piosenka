@@ -2,7 +2,7 @@
 title: 'Iwan Groźny'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-25 11:25:57.352310+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=8w-dTv8pqiY'
+youtube_id: '8w-dTv8pqiY'
 text_authors:
  - 'jerzy-czech'
 composers:

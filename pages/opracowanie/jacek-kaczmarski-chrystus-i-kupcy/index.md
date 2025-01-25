@@ -2,7 +2,7 @@
 title: 'Chrystus i kupcy'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 12:59:19.288359+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=HAUskg_r0tk'
+youtube_id: 'HAUskg_r0tk'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

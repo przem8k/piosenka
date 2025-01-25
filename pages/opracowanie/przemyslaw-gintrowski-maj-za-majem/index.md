@@ -2,7 +2,7 @@
 title: 'Maj za majem...'
 author: 'reuter'
 pub_date: '2020-04-29 14:51:38.081072+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=RgvJXiOmuig'
+youtube_id: 'RgvJXiOmuig'
 text_authors:
  - 'jacek-janczarski'
 composers:

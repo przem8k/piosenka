@@ -2,7 +2,7 @@
 title: 'Pejzaż z szubienicą'
 author: 'Zbik'
 pub_date: '2018-02-26 11:08:37.875402+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=K0l4rHOiSI0'
+youtube_id: 'K0l4rHOiSI0'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

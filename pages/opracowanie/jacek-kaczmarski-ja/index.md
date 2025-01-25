@@ -2,7 +2,7 @@
 title: 'Ja'
 author: 'Zbik'
 pub_date: '2018-07-23 17:18:34.708702+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=O_eYztVDVcw'
+youtube_id: 'O_eYztVDVcw'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

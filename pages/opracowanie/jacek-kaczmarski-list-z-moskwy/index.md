@@ -2,7 +2,7 @@
 title: 'List z Moskwy'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-02 13:59:55.497332+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=qCYa1krByLw'
+youtube_id: 'qCYa1krByLw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

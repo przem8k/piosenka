@@ -2,7 +2,7 @@
 title: 'Apokalipsa w dwóch obrazach'
 author: 'Ewus'
 pub_date: '2011-06-17 08:03:14.297261+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=w4-881oZ2TA'
+youtube_id: 'w4-881oZ2TA'
 capo_fret: 3
 text_authors:
  - 'mariusz-zadura'

@@ -2,7 +2,7 @@
 title: 'Manewry'
 author: 'jakubkwa'
 pub_date: '2015-06-17 18:38:49.405706+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ojw8SwCDZWA'
+youtube_id: 'ojw8SwCDZWA'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

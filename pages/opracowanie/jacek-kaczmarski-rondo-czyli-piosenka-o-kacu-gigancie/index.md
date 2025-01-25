@@ -2,7 +2,7 @@
 title: 'Rondo, czyli piosenka o kacu-gigancie'
 author: 'Zbik'
 pub_date: '2018-08-08 12:17:39.478216+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=JhIMJ8000Js'
+youtube_id: 'JhIMJ8000Js'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

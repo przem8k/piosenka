@@ -2,7 +2,7 @@
 title: 'Sen kochającego psa'
 author: 'Zbik'
 pub_date: '2018-02-26 11:38:23.170608+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=KfsFdds-Yow'
+youtube_id: 'KfsFdds-Yow'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

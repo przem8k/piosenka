@@ -2,7 +2,7 @@
 title: 'Ballada o wesołym miasteczku'
 author: 'Zbik'
 pub_date: '2012-04-12 17:20:04.902710+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=VNMvYeC9zgI'
+youtube_id: 'VNMvYeC9zgI'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Żołnierzom wyklętym'
 author: 'Zbik'
 pub_date: '2012-07-22 23:22:24.231014+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=5tUzxYfZ6hY'
+youtube_id: '5tUzxYfZ6hY'
 text_authors:
  - 'leszek-czajkowski'
 composers:

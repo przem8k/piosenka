@@ -2,7 +2,7 @@
 title: 'Portret zbiorowy w zabytkowym wnętrzu'
 author: 'reuter'
 pub_date: '2017-07-20 18:17:01.463008+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=DN1a2zU2yXY'
+youtube_id: 'DN1a2zU2yXY'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Pochwała człowieka'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-01 13:02:37.477383+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=E4kt13FzMTg'
+youtube_id: 'E4kt13FzMTg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

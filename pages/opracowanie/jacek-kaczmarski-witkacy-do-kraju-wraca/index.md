@@ -2,7 +2,7 @@
 title: 'Witkacy do kraju wraca'
 author: 'Zbik'
 pub_date: '2011-10-31 12:27:45.092443+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1oT8s1y9tEw'
+youtube_id: '1oT8s1y9tEw'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

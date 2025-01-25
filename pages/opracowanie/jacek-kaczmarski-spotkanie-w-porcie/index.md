@@ -2,7 +2,7 @@
 title: 'Spotkanie w porcie'
 author: 'DX'
 pub_date: '2013-12-22 23:05:19.664146+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=0drR7ZojdNk'
+youtube_id: '0drR7ZojdNk'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

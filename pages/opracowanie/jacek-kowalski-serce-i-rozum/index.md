@@ -2,7 +2,7 @@
 title: 'Serce i Rozum'
 author: 'RK'
 pub_date: '2012-04-11 09:44:39.932078+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=JE1aAAoQTfs'
+youtube_id: 'JE1aAAoQTfs'
 text_authors:
  - 'jacek-kowalski'
 composers:

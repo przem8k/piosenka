@@ -2,7 +2,7 @@
 title: 'Krajobraz po uczcie'
 author: 'DX'
 pub_date: '2011-05-11 01:06:54.638490+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=LSa0ZxZRCW8'
+youtube_id: 'LSa0ZxZRCW8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

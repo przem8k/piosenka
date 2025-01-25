@@ -2,7 +2,7 @@
 title: 'Podróże Guliwera. Brobdingnag'
 author: 'Zbik'
 pub_date: '2012-04-23 21:28:35.212058+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=4jzO-LVfDlE'
+youtube_id: '4jzO-LVfDlE'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

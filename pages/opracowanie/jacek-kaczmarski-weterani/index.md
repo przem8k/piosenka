@@ -2,7 +2,7 @@
 title: 'Weterani'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-07 12:10:39.033466+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=3lp9Z4KsG54'
+youtube_id: '3lp9Z4KsG54'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

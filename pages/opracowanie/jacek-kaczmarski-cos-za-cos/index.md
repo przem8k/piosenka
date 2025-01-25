@@ -2,7 +2,7 @@
 title: 'Coś za coś'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-31 18:46:14.763646+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=9U3FO3ofDf0'
+youtube_id: '9U3FO3ofDf0'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

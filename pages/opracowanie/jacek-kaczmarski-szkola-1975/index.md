@@ -4,7 +4,7 @@ author: 'PrzemekL'
 pub_date: '2014-09-03 23:29:46.323755+00:00'
 disambig: '1975'
 original_title: 'What did you learn in school today'
-link_youtube: 'https://www.youtube.com/watch?v=yawQoXVCPv8'
+youtube_id: 'yawQoXVCPv8'
 text_authors:
  - 'jacek-kaczmarski'
 translators:

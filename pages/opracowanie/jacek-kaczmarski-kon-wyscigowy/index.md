@@ -2,7 +2,7 @@
 title: 'Koń wyścigowy'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-01 19:16:50.927532+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=TEFvsLuYXPU'
+youtube_id: 'TEFvsLuYXPU'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

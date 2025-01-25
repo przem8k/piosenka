@@ -2,7 +2,7 @@
 title: 'Optymistyczny horoskop'
 author: 'Zbik'
 pub_date: '2011-10-31 13:32:36.602254+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ghm5ac5cV24'
+youtube_id: 'ghm5ac5cV24'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

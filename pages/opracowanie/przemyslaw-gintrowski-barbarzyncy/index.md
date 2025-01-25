@@ -2,7 +2,7 @@
 title: 'Barbarzyńcy'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-23 19:16:35.084276+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=FlZg0utWqg0'
+youtube_id: 'FlZg0utWqg0'
 text_authors:
  - 'jerzy-czech'
 composers:

@@ -2,7 +2,7 @@
 title: 'Na odejście'
 author: 'Boczuś'
 pub_date: '2016-06-10 11:24:20.278861+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=DgteiG956jI'
+youtube_id: 'DgteiG956jI'
 text_authors:
  - 'pawel-wojcik'
 composers:

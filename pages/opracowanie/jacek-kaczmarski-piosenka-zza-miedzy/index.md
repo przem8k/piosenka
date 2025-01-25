@@ -2,7 +2,7 @@
 title: 'Piosenka zza miedzy'
 author: 'spooky'
 pub_date: '2011-09-15 04:48:35.804839+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=azoV2EozD2U'
+youtube_id: 'azoV2EozD2U'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

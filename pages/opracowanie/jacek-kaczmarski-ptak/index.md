@@ -2,7 +2,7 @@
 title: 'Ptak'
 author: 'PrzemekL'
 pub_date: '2014-09-04 22:31:21.443372+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=SPvRTlvCRbQ'
+youtube_id: 'SPvRTlvCRbQ'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

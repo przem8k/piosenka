@@ -2,7 +2,7 @@
 title: 'Zegar'
 author: 'Pan_Kmicic4'
 pub_date: '2018-08-01 17:28:43.084562+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=UjBK83OLmBg'
+youtube_id: 'UjBK83OLmBg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

@@ -2,7 +2,7 @@
 title: 'Ci wszyscy ludzie'
 author: 'Zbik'
 pub_date: '2018-07-17 17:07:53.508466+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=PG7vaVx2La8'
+youtube_id: 'PG7vaVx2La8'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

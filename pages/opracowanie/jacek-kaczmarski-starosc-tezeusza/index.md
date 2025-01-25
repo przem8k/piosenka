@@ -3,7 +3,7 @@ title: 'Starość Tezeusza'
 author: 'Zbik'
 pub_date: '2024-09-20 16:26:26.877190+00:00'
 epigone: True
-link_youtube: 'https://www.youtube.com/watch?v=UXvmaco1Hq8'
+youtube_id: 'UXvmaco1Hq8'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

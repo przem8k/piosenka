@@ -2,7 +2,7 @@
 title: 'Duch czasu'
 author: 'Zbik'
 pub_date: '2018-07-30 19:45:23.776914+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=74vt6G3Tlp4'
+youtube_id: '74vt6G3Tlp4'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

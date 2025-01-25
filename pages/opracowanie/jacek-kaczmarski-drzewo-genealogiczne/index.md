@@ -2,7 +2,7 @@
 title: 'Drzewo genealogiczne'
 author: 'AŁ'
 pub_date: '2011-10-25 21:15:34.484390+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=GT3jdOvCYpg'
+youtube_id: 'GT3jdOvCYpg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

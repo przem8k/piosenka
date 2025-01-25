@@ -2,7 +2,7 @@
 title: 'Szturm'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-27 10:46:59.051510+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=oNz0mWlXd-Q'
+youtube_id: 'oNz0mWlXd-Q'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

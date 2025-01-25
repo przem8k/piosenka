@@ -2,7 +2,7 @@
 title: 'Obława II'
 author: 'DX'
 pub_date: '2011-05-30 21:27:21.750769+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=kgAhw68mHkg'
+youtube_id: 'kgAhw68mHkg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

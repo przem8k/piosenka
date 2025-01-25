@@ -2,7 +2,7 @@
 title: 'Grzybów dwoistość'
 author: 'Baltazar'
 pub_date: '2020-10-24 17:26:26.072258+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ul_NQY28sD8'
+youtube_id: 'ul_NQY28sD8'
 capo_fret: 4
 text_authors:
  - 'marcin-gabka'

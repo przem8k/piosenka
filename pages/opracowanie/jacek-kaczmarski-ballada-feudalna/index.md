@@ -2,7 +2,7 @@
 title: 'Ballada feudalna'
 author: 'Zbik'
 pub_date: '2011-06-29 10:58:29.972344+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ZbfJ4Bg9AUo'
+youtube_id: 'ZbfJ4Bg9AUo'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

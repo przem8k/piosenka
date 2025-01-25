@@ -3,7 +3,7 @@ title: 'Na stacji Jerzego z Poděbrad'
 author: 'jakubkwa'
 pub_date: '2015-12-07 21:51:51.588010+00:00'
 original_title: 'Stanice Jiřího z Poděbrad'
-link_youtube: 'https://www.youtube.com/watch?v=0ky0O3gbBPA'
+youtube_id: '0ky0O3gbBPA'
 capo_fret: 5
 text_authors:
  - 'jaromir-nohavica'

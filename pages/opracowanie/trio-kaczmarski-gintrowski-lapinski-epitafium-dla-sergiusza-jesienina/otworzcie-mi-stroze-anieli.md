@@ -7,8 +7,8 @@ ref1: 'Kamil Dźwinel, Małgorzata Lisecka: Krzysztof Maria Sieniawski śpiewany
 image: notes/jesienin_i_gorodecki1916.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/jesienin_i_gorodecki1916.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/jesienin_i_gorodecki1916.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/File:1916._%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%95%D1%81%D0%B5%D0%BD%D0%B8%D0%BD_%D0%B8_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D0%B5
-image_author: Jesienin (po lewej) i Siergiej Gorodecki
+image_src_url: https://commons.wikimedia.org/wiki/File:1916._%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%95%D1%81%D0%B5%D0%BD%D0%B8%D0%BD_%D0%B8_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D0%B5
+image_author: 'Jesienin (po lewej) i Siergiej Gorodecki'
 image_license: domena publiczna
 ---
 

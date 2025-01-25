@@ -2,7 +2,7 @@
 title: 'Otruta markiza (Król bal wydał dla swoich dam)'
 author: 'Pan_Kmicic4'
 pub_date: '2019-05-30 17:50:04.011292+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=m7C8nRW-6pg'
+youtube_id: 'm7C8nRW-6pg'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

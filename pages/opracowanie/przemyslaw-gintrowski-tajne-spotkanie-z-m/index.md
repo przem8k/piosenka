@@ -2,7 +2,7 @@
 title: 'Tajne spotkanie z M***'
 author: 'Zbik'
 pub_date: '2011-08-30 15:44:27.708357+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=LPxuoAedfPg'
+youtube_id: 'LPxuoAedfPg'
 text_authors:
  - 'tomasz-jastrun'
 composers:

@@ -2,7 +2,7 @@
 title: 'Sęp'
 author: 'Pan_Kmicic4'
 pub_date: '2019-03-22 18:41:54.696852+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=6-c4Xb2HEQo'
+youtube_id: '6-c4Xb2HEQo'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

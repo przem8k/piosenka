@@ -2,7 +2,7 @@
 title: 'Stworzenie świata'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 09:43:15.966488+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=3Fgedl1ahiY'
+youtube_id: '3Fgedl1ahiY'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

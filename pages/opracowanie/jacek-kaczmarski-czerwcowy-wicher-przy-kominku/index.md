@@ -2,7 +2,7 @@
 title: 'Czerwcowy wicher przy kominku'
 author: 'Zbik'
 pub_date: '2012-04-05 19:48:10.405856+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=DWO81j4y_y8'
+youtube_id: 'DWO81j4y_y8'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

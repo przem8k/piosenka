@@ -2,7 +2,7 @@
 title: 'Cromwell'
 author: 'Zbik'
 pub_date: '2018-07-23 17:02:35.230521+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=ERBV09Rap2k'
+youtube_id: 'ERBV09Rap2k'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

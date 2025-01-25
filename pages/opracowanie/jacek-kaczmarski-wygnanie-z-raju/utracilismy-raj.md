@@ -7,8 +7,8 @@ ref1: 'Księga Rodzaju, rozdział 3'
 image: notes/mob1323.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/mob1323.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/mob1323.jpg.0x300_q85_upscale.jpg
-image_url: http://cyfrowe.mnw.art.pl/dmuseion/docmetadata?id=21513
-image_author: nieznany
+image_src_url: http://cyfrowe.mnw.art.pl/dmuseion/docmetadata?id=21513
+image_author: 'nieznany'
 ---
 
 Utwór inspirowany jest biblijną historią z Księgi Rodzaju \(rozdział 3\),          opisującą wygnanie z raju pierwszych ludzi: Adama i Ewy.

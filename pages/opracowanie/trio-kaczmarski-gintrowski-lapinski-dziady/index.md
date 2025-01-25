@@ -2,7 +2,7 @@
 title: 'Dziady'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-29 14:57:08.466864+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=5Y_OJyMRZH8'
+youtube_id: '5Y_OJyMRZH8'
 text_authors:
  - 'mieczyslaw-jastrun'
 composers:

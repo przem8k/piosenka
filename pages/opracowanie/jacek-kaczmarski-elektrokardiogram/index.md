@@ -2,7 +2,7 @@
 title: 'Elektrokardiogram'
 author: 'Zbik'
 pub_date: '2018-08-22 06:28:33.326281+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=nYBqYTAwvKs'
+youtube_id: 'nYBqYTAwvKs'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

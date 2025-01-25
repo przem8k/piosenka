@@ -2,7 +2,7 @@
 title: 'Kołysanka Króla Artura'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-23 10:53:38.253603+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=Bhkb0MLi-kU'
+youtube_id: 'Bhkb0MLi-kU'
 text_authors:
  - 'jerzy-czech'
 composers:

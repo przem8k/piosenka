@@ -2,7 +2,7 @@
 title: 'Smoleńsk'
 author: 'Baltazar'
 pub_date: '2020-11-10 19:04:10.458794+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=U4XAFmKndoQ'
+youtube_id: 'U4XAFmKndoQ'
 text_authors:
  - 'marcin-gabka'
 composers:

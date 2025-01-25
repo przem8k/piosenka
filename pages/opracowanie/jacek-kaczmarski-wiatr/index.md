@@ -2,7 +2,7 @@
 title: 'Wiatr'
 author: 'Zbik'
 pub_date: '2011-10-20 18:11:09.216818+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=2rf313UQq50'
+youtube_id: '2rf313UQq50'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

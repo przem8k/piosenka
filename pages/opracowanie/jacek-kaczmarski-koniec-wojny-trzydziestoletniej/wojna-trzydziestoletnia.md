@@ -6,7 +6,7 @@ url1: 'https://pl.wikipedia.org/wiki/Wojna_trzydziestoletnia'
 image: notes/Sebastiaan_Vrancx_studio_-_A_landscape_with_travellers_ambushed_outside_a_small_town.jpg
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Sebastiaan_Vrancx_studio_-_A_landscape_with_travellers_ambushed_outside_a_small_town.jpg
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Sebastiaan_Vrancx_studio_-_A_landscape_with_travellers_ambushed_outside_a_small_town.jpg.0x300_q85_upscale.jpg
-image_url: https://commons.wikimedia.org/wiki/File:Sebastiaan_Vrancx_(studio)_-_A_landscape_with_travellers_ambushed_outside_a_small_town.jpg
+image_src_url: https://commons.wikimedia.org/wiki/File:Sebastiaan_Vrancx_(studio)_-_A_landscape_with_travellers_ambushed_outside_a_small_town.jpg
 image_license: domena publiczna
 ---
 

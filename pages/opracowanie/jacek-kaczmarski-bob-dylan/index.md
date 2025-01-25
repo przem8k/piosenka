@@ -2,7 +2,7 @@
 title: 'Bob Dylan'
 author: 'DX'
 pub_date: '2011-10-30 12:56:39.399917+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=1BBJvykyGao'
+youtube_id: '1BBJvykyGao'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

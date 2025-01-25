@@ -6,8 +6,8 @@ url1: 'https://pl.wikipedia.org/wiki/Joanna_d%E2%80%99Arc'
 image: notes/Screenshot_2020-07-12_at_20.15.44.png
 image_full: https://storage.googleapis.com/piosenka-media/media/notes/Screenshot_2020-07-12_at_20.15.44.png
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Screenshot_2020-07-12_at_20.15.44.png.0x300_q85_upscale.png
-image_url: https://commons.wikimedia.org/wiki/File:Lenepveu,_Jeanne_d%27Arc_au_si%C3%A8ge_d%27Orl%C3%A9ans.jpg
-image_author: Eugène Lenepveu
+image_src_url: https://commons.wikimedia.org/wiki/File:Lenepveu,_Jeanne_d%27Arc_au_si%C3%A8ge_d%27Orl%C3%A9ans.jpg
+image_author: 'Eugène Lenepveu'
 image_license: domena publiczna
 ---
 

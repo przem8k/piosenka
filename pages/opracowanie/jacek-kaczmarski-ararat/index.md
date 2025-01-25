@@ -2,7 +2,7 @@
 title: 'Ararat'
 author: 'Zbik'
 pub_date: '2011-12-23 20:50:15.982617+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=j6yHeqQDx9Q'
+youtube_id: 'j6yHeqQDx9Q'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

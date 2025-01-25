@@ -2,7 +2,7 @@
 title: 'Ballada o włosach'
 author: 'Baltazar'
 pub_date: '2020-11-02 20:40:27.385493+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=EHbApZu0hxs'
+youtube_id: 'EHbApZu0hxs'
 text_authors:
  - 'marcin-gabka'
 composers:

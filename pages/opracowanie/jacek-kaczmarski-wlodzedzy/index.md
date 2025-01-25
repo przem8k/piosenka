@@ -2,7 +2,7 @@
 title: 'Włóczędzy'
 author: 'Zbik'
 pub_date: '2012-11-12 13:06:53.641518+00:00'
-link_youtube: 'http://www.youtube.com/watch?v=ZCDFu-lgAC4'
+youtube_id: 'ZCDFu-lgAC4'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

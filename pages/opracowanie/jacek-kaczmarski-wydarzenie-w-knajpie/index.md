@@ -2,7 +2,7 @@
 title: 'Wydarzenie w knajpie'
 author: 'Zbik'
 pub_date: '2018-08-04 16:18:05.536356+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=S5ya5ni3wOU'
+youtube_id: 'S5ya5ni3wOU'
 text_authors:
  - 'wlodzimierz-wysocki'
 composers:

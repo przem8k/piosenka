@@ -2,7 +2,7 @@
 title: 'Casanova – Fellini'
 author: 'Zbik'
 pub_date: '2018-07-17 17:37:42.330204+00:00'
-link_youtube: 'https://www.youtube.com/watch?v=sVNbY624Cmg'
+youtube_id: 'sVNbY624Cmg'
 text_authors:
  - 'jacek-kaczmarski'
 composers:
