@@ -2,12 +2,14 @@
 
 import os
 import datetime
+from unidecode import unidecode
 
 from songs.models import Artist,  ArtistNote, Song, SongNote
 from django.core.management.base import BaseCommand
 from easy_thumbnails.files import get_thumbnailer
 
 from content.trevor import trevor_to_md
+from django.utils.text import slugify
 
 PAGES = ["o-stronie"]
 
@@ -98,6 +100,9 @@ def freeze_song_calendar():
     return f"{frontmatter}\n\n{content}"
 
 
+def slugify_with_unidecode(text):
+    return slugify(unidecode(text))
+
 
 class Command(BaseCommand):
     help = "Freezes the db entities as static pages."
@@ -119,6 +124,16 @@ class Command(BaseCommand):
             content = create_artist_file_content(artist)
             with open(file_path, "w") as file:
                 file.write(content)
+
+            for note in ArtistNote.objects.filter(artist=artist):
+                slug = slugify_with_unidecode(note.title)
+                file_path = os.path.join(item_dir_path, slug + ".md")
+
+                markdown_text = trevor_to_md(note.text_trevor)
+                content = create_file_content(note, markdown_text)
+                with open(file_path, "w") as file:
+                    file.write(content)
+
 
 
         # dir_path = os.path.join(ROOT_PATH, "pages", "artykuly", "historia-w-piosence")
