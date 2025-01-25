@@ -21,10 +21,12 @@ BLOG_DIR_PATH = os.path.join(ROOT_PATH, "pages", "blog")
 
 ARTISTS_DIR_PATH = os.path.join(ROOT_PATH, "pages", "spiewnik")
 
+SONGS_DIR_PATH = os.path.join(ROOT_PATH, "pages", "opracowanie")
+
 PZT_MEDIA_URL = "https://storage.googleapis.com/piosenka-media/media/"
 
 
-def create_file_content(item, markdown_text):
+def create_file_content(item, content):
     frontmatter_lines = ["---"]
     if item.title:
         frontmatter_lines.append(f"title: '{item.title}'")
@@ -32,13 +34,13 @@ def create_file_content(item, markdown_text):
         frontmatter_lines.append(f"author: {item.author}")
     if item.pub_date:
         frontmatter_lines.append(f"pub_date: '{item.pub_date}'")
-    if item.url1:
+    if hasattr(item, "url1") and item.url1:
         frontmatter_lines.append(f"url1: {item.url1}")
-    if item.url2:
+    if hasattr(item, "url2") and item.url2:
         frontmatter_lines.append(f"url2: {item.url2}")
-    if item.ref1:
+    if hasattr(item, "ref1") and item.ref1:
         frontmatter_lines.append(f"ref1: {item.ref1}")
-    if item.ref2:
+    if hasattr(item, "ref2") and item.ref2:
         frontmatter_lines.append(f"ref2: {item.ref2}")
 
     if hasattr(item, "cover_image") and item.cover_image:
@@ -74,7 +76,7 @@ def create_file_content(item, markdown_text):
 
     frontmatter_lines.append("---")
     frontmatter = "\n".join(frontmatter_lines)
-    return f"{frontmatter}\n\n{markdown_text}"
+    return f"{frontmatter}\n\n{content}"
 
 
 def create_artist_file_content(item):
@@ -147,11 +149,6 @@ class Command(BaseCommand):
             os.makedirs(item_dir_path, exist_ok=True)
             file_path = os.path.join(item_dir_path, "index.md")
 
-            # markdown_text = trevor_to_md(post.post_trevor)
-            # if post.more_trevor:
-            #     markdown_text += "\n\n"
-            #     markdown_text += trevor_to_md(post.more_trevor)
-
             content = create_artist_file_content(artist)
             with open(file_path, "w") as file:
                 file.write(content)
@@ -159,7 +156,29 @@ class Command(BaseCommand):
             for note in ArtistNote.objects.filter(artist=artist):
                 slug = slugify_with_unidecode(note.title)
                 file_path = os.path.join(item_dir_path, slug + ".md")
+                print(f"  Adding a note: {slug}")
+                markdown_text = trevor_to_md(note.text_trevor)
+                content = create_file_content(note, markdown_text)
+                with open(file_path, "w") as file:
+                    file.write(content)
 
+        for song in Song.objects.all():
+            # TODO: freeze missing Song attributes, e.g. scores, etc.
+            # TODO: freeze contributions -> links to relevant artists
+            dirname = song.slug
+            print(f"Processing: {song} -> {dirname}")
+            item_dir_path = os.path.join(SONGS_DIR_PATH, dirname)
+            os.makedirs(item_dir_path, exist_ok=True)
+            file_path = os.path.join(item_dir_path, "index.md")
+
+            content = create_file_content(song, song.lyrics)
+            with open(file_path, "w") as file:
+                file.write(content)
+
+            for note in SongNote.objects.filter(song=song):
+                slug = slugify_with_unidecode(note.title)
+                file_path = os.path.join(item_dir_path, slug + ".md")
+                print(f"  Adding a note: {slug}")
                 markdown_text = trevor_to_md(note.text_trevor)
                 content = create_file_content(note, markdown_text)
                 with open(file_path, "w") as file:
