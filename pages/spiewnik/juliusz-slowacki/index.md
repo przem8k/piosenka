@@ -1,0 +1,3 @@
+---
+name: 'Juliusz Słowacki'
+---

@@ -1,0 +1,3 @@
+---
+name: 'Buffy Sainte-Marie'
+---

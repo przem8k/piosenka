@@ -1,0 +1,3 @@
+---
+name: 'Edward Stachura'
+---

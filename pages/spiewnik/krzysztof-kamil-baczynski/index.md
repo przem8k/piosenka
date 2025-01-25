@@ -1,0 +1,3 @@
+---
+name: 'Krzysztof Kamil Baczyński'
+---

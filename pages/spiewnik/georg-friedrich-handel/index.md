@@ -1,0 +1,3 @@
+---
+name: 'Georg Friedrich Händel'
+---

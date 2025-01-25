@@ -1,0 +1,3 @@
+---
+name: 'Cyprian Kamil Norwid'
+---
