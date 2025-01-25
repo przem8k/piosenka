@@ -2,6 +2,8 @@
 title: 'Upadek imperium'
 author: Pan_Kmicic4
 pub_date: '2018-10-12 21:00:43.809264+00:00'
+link_youtube: https://www.youtube.com/watch?v=v6eZIim1IV4
+capo_fret: 2
 ---
 
 #1

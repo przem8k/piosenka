@@ -2,6 +2,8 @@
 title: 'Rogacz'
 author: DX
 pub_date: '2012-06-09 23:02:46.967265+00:00'
+original_title: Le cocu
+link_youtube: http://www.youtube.com/watch?v=ixEbK-ZRWgw
 ---
 
 #zw

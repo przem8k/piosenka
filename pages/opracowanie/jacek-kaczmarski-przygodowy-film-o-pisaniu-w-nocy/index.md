@@ -2,6 +2,11 @@
 title: 'Przygodowy film o pisaniu w nocy'
 author: Zbik
 pub_date: '2018-08-04 15:42:13.076377+00:00'
+link_youtube: https://www.youtube.com/watch?v=cjJgl7EQK7E
+capo_fret: 3
+score1: scores/przygodowy_film_o_pisaniu_w_nocy.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/przygodowy_film_o_pisaniu_w_nocy.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/przygodowy_film_o_pisaniu_w_nocy.png.180x0_q85_upscale.png
 ---
 
 #zwrotka1

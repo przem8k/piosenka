@@ -2,6 +2,11 @@
 title: 'Pieśń o hufcu'
 author: DX
 pub_date: '2011-07-24 19:10:32.965243+00:00'
+link_youtube: https://www.youtube.com/watch?v=rJP0yOwKfHE
+capo_fret: 2
+score1: scores/piesn_o_hufcu.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/piesn_o_hufcu.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/piesn_o_hufcu.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

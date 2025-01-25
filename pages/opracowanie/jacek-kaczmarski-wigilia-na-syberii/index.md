@@ -2,6 +2,13 @@
 title: 'Wigilia na Syberii'
 author: Zbik
 pub_date: '2013-12-18 19:06:41.285176+00:00'
+link_youtube: http://www.youtube.com/watch?v=kidVxZKqpqY
+score1: scores/wigilia_na_syberii.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wigilia_na_syberii.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wigilia_na_syberii.png.180x0_q85_upscale.jpg
+score2: scores/wigilia_na_syberii2.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/wigilia_na_syberii2.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wigilia_na_syberii2.png.180x0_q85_upscale.jpg
 ---
 
 Zasyczał w zimnej ciszy samowar [D A]

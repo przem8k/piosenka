@@ -2,6 +2,7 @@
 title: 'Toasty'
 author: DX
 pub_date: '2012-09-10 04:11:37.383129+00:00'
+link_youtube: https://www.youtube.com/watch?v=she_G7nft3I
 ---
 
 Rozmawiam w knajpie ze ścianą [d A7]

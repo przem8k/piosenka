@@ -2,6 +2,7 @@
 title: 'World Trade Center'
 author: Zbik
 pub_date: '2011-12-19 17:27:38.908673+00:00'
+link_youtube: https://www.youtube.com/watch?v=lpKWh2gnnNQ
 ---
 
 #zw

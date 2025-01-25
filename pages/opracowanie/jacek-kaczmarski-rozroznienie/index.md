@@ -2,6 +2,8 @@
 title: 'Rozróżnienie'
 author: Zbik
 pub_date: '2011-08-30 15:28:45.881660+00:00'
+link_youtube: https://www.youtube.com/watch?v=Bdz0hEuixF0
+capo_fret: 1
 ---
 
 #zwrotka1

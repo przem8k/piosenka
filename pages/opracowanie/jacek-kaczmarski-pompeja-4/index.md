@@ -2,6 +2,10 @@
 title: 'Pompeja'
 author: Alek
 pub_date: '2018-03-17 17:56:24.466603+00:00'
+link_youtube: https://www.youtube.com/watch?v=zowOUuV9z-c
+score1: scores/pompeja_ySKvgO8.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pompeja_ySKvgO8.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pompeja_ySKvgO8.png.180x0_q85_upscale.png
 ---
 
 [e9 e]

@@ -2,6 +2,11 @@
 title: '***'
 author: PrzemekL
 pub_date: '2014-09-20 16:05:14.109021+00:00'
+disambig: Smutno powiewa
+link_youtube: https://www.youtube.com/watch?v=vKQlquTjKF4
+score1: scores/xxx_smutno_powiewa.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/xxx_smutno_powiewa.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/xxx_smutno_powiewa.png.180x0_q85_upscale.jpg
 ---
 
 Smutno powiewa biało-czerwony [a]

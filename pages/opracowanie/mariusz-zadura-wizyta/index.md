@@ -2,6 +2,7 @@
 title: 'Wizyta'
 author: Ewus
 pub_date: '2011-06-17 08:16:19.035300+00:00'
+capo_fret: 3
 ---
 
 #zwrotka

@@ -2,6 +2,11 @@
 title: 'Wykopaliska'
 author: Pan_Kmicic4
 pub_date: '2019-02-10 10:56:52.854260+00:00'
+link_youtube: https://www.youtube.com/watch?v=AwpHp_VmSEs
+capo_fret: 1
+score1: scores/wykopaliska.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wykopaliska.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wykopaliska.png.180x0_q85_upscale.png
 ---
 
 #1

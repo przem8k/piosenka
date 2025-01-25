@@ -2,6 +2,9 @@
 title: 'Polowanie na wilki'
 author: Baltazar
 pub_date: '2020-10-19 17:43:06.965762+00:00'
+original_title: Охота на волков
+link_youtube: https://www.youtube.com/watch?v=L_tB6s8jdQY
+capo_fret: 2
 ---
 
 Naprzód rwę, dech mi uwiązł w szyi	[e a]

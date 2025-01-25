@@ -2,6 +2,7 @@
 title: 'Oblężenie'
 author: Pan_Kmicic4
 pub_date: '2019-03-01 17:47:08.580822+00:00'
+link_youtube: https://www.youtube.com/watch?v=59iOpirD5wA
 ---
 
 #1

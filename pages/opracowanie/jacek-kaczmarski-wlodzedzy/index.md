@@ -2,6 +2,10 @@
 title: 'Włóczędzy'
 author: Zbik
 pub_date: '2012-11-12 13:06:53.641518+00:00'
+link_youtube: http://www.youtube.com/watch?v=ZCDFu-lgAC4
+score1: scores/wloczedzy.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wloczedzy.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wloczedzy.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka1

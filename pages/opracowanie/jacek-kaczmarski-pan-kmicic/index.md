@@ -2,6 +2,11 @@
 title: 'Pan Kmicic'
 author: DX
 pub_date: '2011-05-13 02:05:02.479044+00:00'
+link_youtube: https://www.youtube.com/watch?v=fxY6QwVMzkI
+capo_fret: 2
+score1: scores/pan_kmicic.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pan_kmicic.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pan_kmicic.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

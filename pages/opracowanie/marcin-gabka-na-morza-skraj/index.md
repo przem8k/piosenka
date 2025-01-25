@@ -2,6 +2,7 @@
 title: 'Na morza skraj'
 author: Baltazar
 pub_date: '2020-11-04 16:01:06.108203+00:00'
+link_youtube: https://www.youtube.com/watch?v=HJ1G9BgKzwU
 ---
 
 [e G D e G D]

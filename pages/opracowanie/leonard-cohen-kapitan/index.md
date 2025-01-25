@@ -2,6 +2,8 @@
 title: 'Kapitan'
 author: reuter
 pub_date: '2017-02-13 19:07:30.880203+00:00'
+original_title: The Captain
+link_youtube: https://www.youtube.com/watch?v=epENc6uu7Uc
 ---
 
 #zw

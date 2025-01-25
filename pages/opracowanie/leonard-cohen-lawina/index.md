@@ -2,6 +2,8 @@
 title: 'Lawina'
 author: reuter
 pub_date: '2017-07-20 17:23:26.933146+00:00'
+original_title: Avalanche
+link_youtube: https://www.youtube.com/watch?v=SQe88ybEIe8
 ---
 
 #zw

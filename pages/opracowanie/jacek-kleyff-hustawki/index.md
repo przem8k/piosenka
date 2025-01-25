@@ -2,6 +2,7 @@
 title: 'Huśtawki'
 author: Zbik
 pub_date: '2012-10-15 21:24:20.795540+00:00'
+link_youtube: http://www.youtube.com/watch?v=nMmfE9PkNpA
 ---
 
 #zwrotka

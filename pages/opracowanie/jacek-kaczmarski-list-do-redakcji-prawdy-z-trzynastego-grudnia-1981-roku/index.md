@@ -2,6 +2,11 @@
 title: 'List do redakcji „Prawdy” z trzynastego grudnia 1981 roku'
 author: Pan_Kmicic4
 pub_date: '2018-07-26 06:37:11.584064+00:00'
+link_youtube: https://www.youtube.com/watch?v=1h0bmA2W_n4
+capo_fret: 1
+score1: scores/list_do_redakcji_prawdy.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/list_do_redakcji_prawdy.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/list_do_redakcji_prawdy.png.180x0_q85_upscale.png
 ---
 
 #1

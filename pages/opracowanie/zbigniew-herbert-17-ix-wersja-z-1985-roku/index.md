@@ -2,6 +2,8 @@
 title: '17 IX'
 author: reuter
 pub_date: '2020-04-29 15:42:42.201218+00:00'
+disambig: wersja z 1985 roku
+link_youtube: https://www.youtube.com/watch?v=Lk7k6yv0Apc
 ---
 
 Moja bezbronna ojczyzna przyjmie cię najeźdźco [e h e h]

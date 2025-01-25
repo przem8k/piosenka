@@ -2,6 +2,7 @@
 title: 'Pieśń Konfederatów Barskich'
 author: Pan_Kmicic4
 pub_date: '2019-06-20 16:07:47.380262+00:00'
+link_youtube: https://www.youtube.com/watch?v=6R9Q1V0OROU
 ---
 
 #1

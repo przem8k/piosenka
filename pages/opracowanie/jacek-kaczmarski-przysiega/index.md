@@ -2,6 +2,8 @@
 title: 'Przysięga'
 author: Pan_Kmicic4
 pub_date: '2018-12-23 15:15:40.157987+00:00'
+link_youtube: https://www.youtube.com/watch?v=D25LtzaISMA
+capo_fret: 1
 ---
 
 #1

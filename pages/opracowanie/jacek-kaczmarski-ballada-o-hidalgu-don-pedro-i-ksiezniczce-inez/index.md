@@ -2,6 +2,8 @@
 title: 'Ballada o hidalgu Don Pedro i księżniczce Inez'
 author: DX
 pub_date: '2013-07-30 19:56:38.671130+00:00'
+link_youtube: https://www.youtube.com/watch?v=e138GDr0U68
+capo_fret: 2
 ---
 
 #zw

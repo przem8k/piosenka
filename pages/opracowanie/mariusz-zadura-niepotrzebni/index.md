@@ -2,6 +2,7 @@
 title: 'Niepotrzebni'
 author: Ewus
 pub_date: '2011-06-17 07:57:39.986076+00:00'
+link_youtube: https://www.youtube.com/watch?v=EMaI-aWaWyY
 ---
 
 [h fis G D]

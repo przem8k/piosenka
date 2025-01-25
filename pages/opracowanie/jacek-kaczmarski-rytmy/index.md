@@ -2,6 +2,13 @@
 title: 'Rytmy'
 author: Pan_Kmicic4
 pub_date: '2018-08-07 11:55:22.408365+00:00'
+link_youtube: https://www.youtube.com/watch?v=1o78c7GKqU8
+score1: scores/rytmy1.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/rytmy1.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/rytmy1.png.180x0_q85_upscale.png
+score2: scores/rytmy2.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/rytmy2.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/rytmy2.png.180x0_q85_upscale.png
 ---
 
 #1

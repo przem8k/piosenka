@@ -2,6 +2,10 @@
 title: 'Witkacy do kraju wraca'
 author: Zbik
 pub_date: '2011-10-31 12:27:45.092443+00:00'
+link_youtube: https://www.youtube.com/watch?v=1oT8s1y9tEw
+score1: scores/witkacy_do_kraju_wraca.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/witkacy_do_kraju_wraca.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/witkacy_do_kraju_wraca.png.180x0_q85_upscale.jpg
 ---
 
 #zw

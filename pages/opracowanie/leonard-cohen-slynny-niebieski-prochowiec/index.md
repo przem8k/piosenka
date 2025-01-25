@@ -2,6 +2,8 @@
 title: 'Słynny niebieski prochowiec'
 author: DX
 pub_date: '2016-11-12 16:06:51.044804+00:00'
+original_title: Famous blue raincoat
+link_youtube: https://www.youtube.com/watch?v=CKIcHzE0A3w
 ---
 
 #zw

@@ -2,6 +2,16 @@
 title: 'Poranek'
 author: Pan_Kmicic4
 pub_date: '2018-07-27 18:14:46.667634+00:00'
+link_youtube: https://www.youtube.com/watch?v=DIS08s3oNA8
+score1: scores/poranek01.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/poranek01.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/poranek01.png.180x0_q85_upscale.png
+score2: scores/poranek02.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/poranek02.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/poranek02.png.180x0_q85_upscale.png
+score3: scores/poranek03.png
+score3_full: https://storage.googleapis.com/piosenka-media/media/scores/poranek03.png
+score3_thumb: https://storage.googleapis.com/piosenka-media/media/scores/poranek03.png.180x0_q85_upscale.png
 ---
 
 #1

@@ -2,6 +2,13 @@
 title: 'Zrodził się dzieciaczek...'
 author: Zbik
 pub_date: '2018-10-11 16:47:27.684260+00:00'
+link_youtube: https://www.youtube.com/watch?v=oZLYp-cbShc
+score1: scores/zrodzil_sie_dzieciaczek_01.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zrodzil_sie_dzieciaczek_01.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zrodzil_sie_dzieciaczek_01.png.180x0_q85_upscale.png
+score2: scores/zrodzil_sie_dzieciaczek_02.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/zrodzil_sie_dzieciaczek_02.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zrodzil_sie_dzieciaczek_02.png.180x0_q85_upscale.png
 ---
 
 [h e A h]

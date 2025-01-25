@@ -2,6 +2,11 @@
 title: 'Motywacja'
 author: Pan_Kmicic4
 pub_date: '2018-08-06 16:08:03.092232+00:00'
+disambig: 1997
+link_youtube: https://www.youtube.com/watch?v=eHwWV83JiqY
+score1: scores/motywacja.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/motywacja.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/motywacja.png.180x0_q85_upscale.png
 ---
 
 #1

@@ -2,6 +2,11 @@
 title: 'Linoskoczek'
 author: DX
 pub_date: '2011-05-08 07:10:44.073437+00:00'
+link_youtube: https://www.youtube.com/watch?v=mYIZS5ID-zw
+capo_fret: 2
+score1: scores/linoskoczek.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/linoskoczek.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/linoskoczek.png.180x0_q85_upscale.jpg
 ---
 
 #zw

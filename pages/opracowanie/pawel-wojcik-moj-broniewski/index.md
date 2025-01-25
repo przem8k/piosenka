@@ -2,6 +2,7 @@
 title: 'Mój Broniewski'
 author: Boczuś
 pub_date: '2016-05-19 16:32:16.115528+00:00'
+link_youtube: https://www.youtube.com/watch?v=ko8clPCAV84
 ---
 
 

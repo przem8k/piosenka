@@ -2,6 +2,10 @@
 title: 'Stworzenie świata'
 author: Pan_Kmicic4
 pub_date: '2018-07-24 09:43:15.966488+00:00'
+link_youtube: https://www.youtube.com/watch?v=3Fgedl1ahiY
+score1: scores/stworzenie_swiata.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/stworzenie_swiata.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/stworzenie_swiata.png.180x0_q85_upscale.png
 ---
 
 #1

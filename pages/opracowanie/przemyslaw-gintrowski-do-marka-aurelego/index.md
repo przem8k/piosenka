@@ -2,6 +2,10 @@
 title: 'Do Marka Aurelego'
 author: DX
 pub_date: '2011-05-07 13:59:06.037646+00:00'
+link_youtube: https://www.youtube.com/watch?v=m77NHc8_EpI
+score1: scores/do_marka_aurelego.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/do_marka_aurelego.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/do_marka_aurelego.png.180x0_q85_upscale.jpg
 ---
 
 Dobranoc Marku lampę zgaś i zamknij książkę [G C G a e D]

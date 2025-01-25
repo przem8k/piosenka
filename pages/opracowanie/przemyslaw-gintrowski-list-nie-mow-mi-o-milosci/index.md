@@ -2,6 +2,8 @@
 title: 'List'
 author: Pan_Kmicic4
 pub_date: '2019-04-09 09:38:03.054182+00:00'
+disambig: „Nie mów mi o miłości...”
+link_youtube: https://www.youtube.com/watch?v=rZDg9Y6VYRw
 ---
 
 #1

@@ -2,6 +2,10 @@
 title: 'Ballada o bieli'
 author: Alek
 pub_date: '2016-10-11 17:04:25.383772+00:00'
+link_youtube: https://www.youtube.com/watch?v=9LrEzTkZo2Y
+score1: scores/ballada_o_bieli.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_bieli.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_bieli.png.180x0_q85_upscale.png
 ---
 
 #zw

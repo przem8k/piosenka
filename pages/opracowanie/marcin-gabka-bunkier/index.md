@@ -2,6 +2,7 @@
 title: 'Bunkier'
 author: Baltazar
 pub_date: '2020-11-03 17:56:47.851634+00:00'
+link_youtube: https://www.youtube.com/watch?v=zJ8TvbvSZhY
 ---
 
 #a

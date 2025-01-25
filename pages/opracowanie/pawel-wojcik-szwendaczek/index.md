@@ -2,6 +2,7 @@
 title: 'Szwendaczek'
 author: Boczuś
 pub_date: '2016-06-30 09:41:10.160939+00:00'
+link_youtube: https://www.youtube.com/watch?v=a9go1z165i4
 ---
 
 #zw

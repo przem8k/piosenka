@@ -2,6 +2,8 @@
 title: 'Podziemna armia powraca'
 author: RK
 pub_date: '2013-03-03 19:20:24.615156+00:00'
+link_youtube: http://www.youtube.com/watch?v=P7FjtfTs9pE
+capo_fret: 2
 ---
 
 #zwrotka

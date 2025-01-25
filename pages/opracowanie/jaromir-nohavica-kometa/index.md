@@ -2,6 +2,7 @@
 title: 'Kometa'
 author: DX
 pub_date: '2018-03-26 21:24:20.546133+00:00'
+link_youtube: https://www.youtube.com/watch?v=KRMnDgV9fU0
 ---
 
 #zw

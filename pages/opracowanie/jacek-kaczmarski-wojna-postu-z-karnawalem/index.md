@@ -2,6 +2,10 @@
 title: 'Wojna postu z karnawałem'
 author: DX
 pub_date: '2011-06-05 21:59:07.859179+00:00'
+link_youtube: https://www.youtube.com/watch?v=Ckj0lJHw1pM
+score1: scores/wojna_postu_z_karnawalem.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wojna_postu_z_karnawalem.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wojna_postu_z_karnawalem.png.180x0_q85_upscale.jpg
 ---
 
 #zw1

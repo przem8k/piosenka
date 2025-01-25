@@ -2,6 +2,8 @@
 title: 'Lekcja życia'
 author: PrzemekL
 pub_date: '2015-05-10 14:28:40.402546+00:00'
+disambig: Lufa
+link_youtube: https://www.youtube.com/watch?v=UckrQD3r-TE
 ---
 
 #zw

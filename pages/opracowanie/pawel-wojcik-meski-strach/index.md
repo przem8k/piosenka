@@ -2,6 +2,7 @@
 title: 'Męski strach'
 author: Boczuś
 pub_date: '2016-05-19 15:33:15.141477+00:00'
+link_youtube: https://www.youtube.com/watch?v=PiX147HqiPc
 ---
 
 #zw

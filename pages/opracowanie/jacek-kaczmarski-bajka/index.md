@@ -2,6 +2,10 @@
 title: 'Bajka'
 author: DX
 pub_date: '2011-05-07 13:53:33.608255+00:00'
+link_youtube: https://www.youtube.com/watch?v=b_6XgrK31lY
+score1: scores/bajka.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/bajka.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/bajka.png.180x0_q85_upscale.jpg
 ---
 
 #zw

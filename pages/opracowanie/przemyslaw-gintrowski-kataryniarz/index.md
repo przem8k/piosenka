@@ -2,6 +2,10 @@
 title: 'Kataryniarz'
 author: Pan_Kmicic4
 pub_date: '2018-07-28 10:41:30.664598+00:00'
+link_youtube: https://www.youtube.com/watch?v=yMrMCS2ywd4
+score1: scores/kataryniarz.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kataryniarz.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kataryniarz.png.180x0_q85_upscale.png
 ---
 
 #1

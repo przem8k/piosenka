@@ -2,6 +2,8 @@
 title: 'Pożegnanie'
 author: Ewus
 pub_date: '2011-06-17 07:51:00.216893+00:00'
+link_youtube: https://www.youtube.com/watch?v=L1MpmsRYubg
+capo_fret: 2
 ---
 
 #zwrotka

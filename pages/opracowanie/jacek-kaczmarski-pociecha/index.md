@@ -2,6 +2,8 @@
 title: 'Pociecha'
 author: reuter
 pub_date: '2020-07-14 20:19:43.751723+00:00'
+epigone: True
+capo_fret: 2
 ---
 
 [F C B0 E (a)]

@@ -2,6 +2,11 @@
 title: 'Egzamin'
 author: Zbik
 pub_date: '2018-10-15 10:09:20.923511+00:00'
+link_youtube: https://www.youtube.com/watch?v=IQmRvqhxPlo
+capo_fret: 3
+score1: scores/Egzamin.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Egzamin.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Egzamin.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka1

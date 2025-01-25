@@ -2,6 +2,10 @@
 title: 'Apollo i Marsjasz'
 author: reuter
 pub_date: '2014-09-10 17:53:23.936201+00:00'
+link_youtube: https://www.youtube.com/watch?v=W6BRG77OvIY
+score1: scores/Apollo_i_Marsjasz.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Apollo_i_Marsjasz.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Apollo_i_Marsjasz.png.180x0_q85_upscale.jpg
 ---
 
 właściwy pojedynek [e]

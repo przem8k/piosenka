@@ -2,6 +2,7 @@
 title: 'Psalm zaręczynowy'
 author: reuter
 pub_date: '2014-09-16 16:07:22.314087+00:00'
+link_youtube: https://www.youtube.com/watch?v=wfHZbewvvFU
 ---
 
 #zw

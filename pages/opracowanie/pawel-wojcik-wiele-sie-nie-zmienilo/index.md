@@ -2,6 +2,7 @@
 title: 'Wiele się nie zmieniło'
 author: Boczuś
 pub_date: '2016-05-30 17:21:59.507851+00:00'
+link_youtube: https://www.youtube.com/watch?v=IGS6vOm7HzQ
 ---
 
 #zw1

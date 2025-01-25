@@ -2,6 +2,9 @@
 title: 'Moby Dick'
 author: PrzemekL
 pub_date: '2014-08-31 21:09:24.427742+00:00'
+disambig: wg H. Melville’a
+epigone: True
+link_youtube: https://www.youtube.com/watch?v=cZSw0cN3ntk
 ---
 
 #zw

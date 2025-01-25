@@ -2,6 +2,7 @@
 title: 'Skrzetuski Wielkopolanin'
 author: RK
 pub_date: '2012-04-11 09:30:46.257934+00:00'
+link_youtube: http://www.youtube.com/watch?v=hoVdTYSNA5c
 ---
 
 #zwrotka

@@ -2,6 +2,10 @@
 title: 'Nad spuścizną po przodkach deliberacje'
 author: DX
 pub_date: '2016-08-23 17:15:39.449827+00:00'
+link_youtube: https://www.youtube.com/watch?v=u8Yy2lI_cjA
+score1: scores/nad_spuscizna_po_przodkach_deliberacje.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/nad_spuscizna_po_przodkach_deliberacje.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/nad_spuscizna_po_przodkach_deliberacje.png.180x0_q85_upscale.png
 ---
 
 #zw

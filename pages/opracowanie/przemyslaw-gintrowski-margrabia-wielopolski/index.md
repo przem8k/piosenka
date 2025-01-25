@@ -2,6 +2,11 @@
 title: 'Margrabia Wielopolski'
 author: DX
 pub_date: '2011-07-17 20:34:03.727053+00:00'
+link_youtube: https://www.youtube.com/watch?v=Fsm2XR4NTi8
+capo_fret: 1
+score1: scores/margrabia_wielopolski.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/margrabia_wielopolski.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/margrabia_wielopolski.png.180x0_q85_upscale.jpg
 ---
 
 #zw1

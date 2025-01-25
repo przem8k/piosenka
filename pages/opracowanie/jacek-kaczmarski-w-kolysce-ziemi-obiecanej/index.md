@@ -2,6 +2,10 @@
 title: 'W kołysce Ziemi Obiecanej'
 author: RK
 pub_date: '2012-12-08 18:37:51.959383+00:00'
+link_youtube: https://www.youtube.com/watch?v=NJUK-M_YATc
+score1: scores/w_kolysce_ziemi_obiecanej.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/w_kolysce_ziemi_obiecanej.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/w_kolysce_ziemi_obiecanej.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

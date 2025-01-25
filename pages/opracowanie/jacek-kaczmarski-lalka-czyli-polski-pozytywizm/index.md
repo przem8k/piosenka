@@ -2,6 +2,11 @@
 title: 'Lalka, czyli polski pozytywizm'
 author: PrzemekL
 pub_date: '2014-09-02 23:58:32.263912+00:00'
+link_youtube: https://www.youtube.com/watch?v=Ql_96rrioik
+capo_fret: 3
+score1: scores/lalka.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/lalka.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/lalka.png.180x0_q85_upscale.png
 ---
 
 #z

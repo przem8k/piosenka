@@ -2,6 +2,11 @@
 title: 'Portret zbiorowy we wnętrzu - Dom Opieki'
 author: Zbik
 pub_date: '2012-01-04 19:25:42.434223+00:00'
+link_youtube: https://www.youtube.com/watch?v=1TZzL_9v0FA
+capo_fret: 2
+score1: scores/portret_zbiorowy_we_wnetrzu_-_dom_opieki.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/portret_zbiorowy_we_wnetrzu_-_dom_opieki.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/portret_zbiorowy_we_wnetrzu_-_dom_opieki.png.180x0_q85_upscale.jpg
 ---
 
 B0: x1x020

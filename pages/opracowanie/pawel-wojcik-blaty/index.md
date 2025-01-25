@@ -2,6 +2,8 @@
 title: 'Blaty'
 author: PrzemekL
 pub_date: '2019-05-17 21:20:28.705452+00:00'
+link_youtube: https://www.youtube.com/watch?v=qDTa6j5PQIk
+capo_fret: 2
 ---
 
 #zw

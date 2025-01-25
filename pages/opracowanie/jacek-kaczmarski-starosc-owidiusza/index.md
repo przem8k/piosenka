@@ -2,6 +2,10 @@
 title: 'Starość Owidiusza'
 author: AŁ
 pub_date: '2012-06-18 16:14:36.329012+00:00'
+link_youtube: https://www.youtube.com/watch?v=bSR-ZpeMBBE
+score1: scores/starosc_owidiusza.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/starosc_owidiusza.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/starosc_owidiusza.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka1

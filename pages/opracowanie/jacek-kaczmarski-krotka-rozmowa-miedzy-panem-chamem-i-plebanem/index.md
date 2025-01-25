@@ -2,6 +2,11 @@
 title: 'Krótka rozmowa między Panem, Chamem i Plebanem'
 author: DX
 pub_date: '2011-07-23 14:28:52.027343+00:00'
+link_youtube: https://www.youtube.com/watch?v=5XCvJgtfXQs
+capo_fret: 2
+score1: scores/krotka_rozmowa_miedzy_panem_chamem_i_plebanem.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/krotka_rozmowa_miedzy_panem_chamem_i_plebanem.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/krotka_rozmowa_miedzy_panem_chamem_i_plebanem.png.180x0_q85_upscale.jpg
 ---
 
 #zw

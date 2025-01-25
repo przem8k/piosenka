@@ -2,6 +2,10 @@
 title: 'Wiosna 1905'
 author: DX
 pub_date: '2017-12-01 20:30:58.337428+00:00'
+link_youtube: https://www.youtube.com/watch?v=ZWPQKtNqiMQ
+score1: scores/wiosna_1905.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wiosna_1905.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wiosna_1905.png.180x0_q85_upscale.png
 ---
 
 [g G]

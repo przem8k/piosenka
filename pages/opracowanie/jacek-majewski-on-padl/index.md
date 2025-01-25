@@ -2,6 +2,7 @@
 title: 'On padł'
 author: DX
 pub_date: '2012-02-16 11:34:16.935541+00:00'
+capo_fret: 3
 ---
 
 On padł kopytami szybkimi w bruk wbity [a]

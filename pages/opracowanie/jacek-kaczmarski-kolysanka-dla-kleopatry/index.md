@@ -2,6 +2,13 @@
 title: 'Kołysanka dla Kleopatry'
 author: Zbik
 pub_date: '2012-06-21 10:43:48.691423+00:00'
+link_youtube: http://www.youtube.com/watch?v=wgKsttAW9yM
+score1: scores/kolysanka_dla_kleopatry1.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kolysanka_dla_kleopatry1.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kolysanka_dla_kleopatry1.png.180x0_q85_upscale.jpg
+score2: scores/kolysanka_dla_kleopatry2.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/kolysanka_dla_kleopatry2.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kolysanka_dla_kleopatry2.png.180x0_q85_upscale.jpg
 ---
 
 Na dotyk twój [a2]

@@ -2,6 +2,7 @@
 title: 'Goryl'
 author: DX
 pub_date: '2011-10-17 23:29:30.262328+00:00'
+original_title: Le gorille
 ---
 
 #zw

@@ -2,6 +2,10 @@
 title: 'Autoportret Witkacego'
 author: DX
 pub_date: '2011-05-31 22:27:29.006783+00:00'
+link_youtube: https://www.youtube.com/watch?v=VyXsRzR0ioA
+score1: scores/autoportret_witkacego.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/autoportret_witkacego.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/autoportret_witkacego.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

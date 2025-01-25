@@ -2,6 +2,7 @@
 title: 'Petra Procházková'
 author: DX
 pub_date: '2011-05-09 15:43:00.718749+00:00'
+capo_fret: 2
 ---
 
 #zwrotka

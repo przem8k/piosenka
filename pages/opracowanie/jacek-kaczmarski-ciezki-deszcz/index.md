@@ -2,6 +2,8 @@
 title: 'Ciężki deszcz'
 author: Zbik
 pub_date: '2018-09-10 11:08:24.344664+00:00'
+link_youtube: https://www.youtube.com/watch?v=8UNITzFOLQ0
+capo_fret: 1
 ---
 
 #zwrotka1

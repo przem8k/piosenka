@@ -2,6 +2,7 @@
 title: 'Korek'
 author: spooky
 pub_date: '2013-08-22 05:03:33.379012+00:00'
+capo_fret: 1
 ---
 
 #zw1

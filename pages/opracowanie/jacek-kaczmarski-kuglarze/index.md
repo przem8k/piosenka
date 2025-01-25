@@ -2,6 +2,10 @@
 title: 'Kuglarze'
 author: DX
 pub_date: '2015-02-28 17:23:27.418004+00:00'
+link_youtube: https://www.youtube.com/watch?v=hR7oFlXgFzo
+score1: scores/kuglarze.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kuglarze.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kuglarze.png.180x0_q85_upscale.jpg
 ---
 
 #zw

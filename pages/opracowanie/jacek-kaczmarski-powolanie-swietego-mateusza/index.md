@@ -2,6 +2,8 @@
 title: 'Powołanie świętego Mateusza'
 author: Baltazar
 pub_date: '2020-10-24 19:37:10.579773+00:00'
+epigone: True
+capo_fret: 3
 ---
 
 [E]

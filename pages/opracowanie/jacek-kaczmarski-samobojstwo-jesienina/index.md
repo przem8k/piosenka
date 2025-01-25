@@ -2,6 +2,11 @@
 title: 'Samobójstwo Jesienina'
 author: Pan_Kmicic4
 pub_date: '2018-07-22 08:11:07.360285+00:00'
+link_youtube: https://www.youtube.com/watch?v=Zi9dMUaG5X4
+capo_fret: 1
+score1: scores/samobojstwo_jesienina1.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/samobojstwo_jesienina1.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/samobojstwo_jesienina1.png.180x0_q85_upscale.png
 ---
 
 #lol1

@@ -2,6 +2,10 @@
 title: 'Mur'
 author: DX
 pub_date: '2011-05-31 22:34:21.847223+00:00'
+link_youtube: https://www.youtube.com/watch?v=yDB6VlJJbZA
+score1: scores/mur.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/mur.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/mur.png.180x0_q85_upscale.jpg
 ---
 
 Stoimy pod murem [e]

@@ -2,6 +2,7 @@
 title: 'Galera'
 author: Baltazar
 pub_date: '2020-11-02 21:58:58.919603+00:00'
+epigone: True
 ---
 
 #a

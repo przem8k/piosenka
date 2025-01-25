@@ -2,6 +2,11 @@
 title: 'Wieszanie zdrajców'
 author: DX
 pub_date: '2017-10-12 03:36:46.405364+00:00'
+link_youtube: https://www.youtube.com/watch?v=hHYn2B35CVI
+capo_fret: 1
+score1: scores/wieszanie_zdrajcow.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wieszanie_zdrajcow.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wieszanie_zdrajcow.png.180x0_q85_upscale.png
 ---
 
 #zw1

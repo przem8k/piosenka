@@ -2,6 +2,7 @@
 title: 'Sąd ostateczny'
 author: Baltazar
 pub_date: '2021-01-23 15:58:12.727668+00:00'
+epigone: True
 ---
 
 #a

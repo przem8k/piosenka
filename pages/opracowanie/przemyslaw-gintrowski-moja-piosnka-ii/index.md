@@ -2,6 +2,7 @@
 title: 'Moja piosnka II'
 author: Pan_Kmicic4
 pub_date: '2019-04-01 19:29:45.751862+00:00'
+link_youtube: https://www.youtube.com/watch?v=OBvH_bf5FPQ
 ---
 
 #1

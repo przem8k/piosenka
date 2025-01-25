@@ -2,6 +2,7 @@
 title: 'Za dobry powrót do Itaki (Sufit w celi 11)'
 author: Zbik
 pub_date: '2021-04-05 17:58:51.565578+00:00'
+link_youtube: https://www.youtube.com/watch?v=HD2n3X0JoQg
 ---
 
 [a a6 a7 a6 a]

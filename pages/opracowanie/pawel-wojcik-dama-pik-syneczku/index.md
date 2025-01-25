@@ -2,6 +2,7 @@
 title: 'Dama Pik (Syneczku)'
 author: PrzemekL
 pub_date: '2019-05-21 16:24:16.437845+00:00'
+link_youtube: https://www.youtube.com/watch?v=EKIHsfyMZ4c
 ---
 
 #zw1

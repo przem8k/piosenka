@@ -2,6 +2,7 @@
 title: 'Emigranci'
 author: DX
 pub_date: '2011-08-08 16:32:58.241292+00:00'
+link_youtube: https://www.youtube.com/watch?v=fDhDp5WjxU0
 ---
 
 #zw

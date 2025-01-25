@@ -2,6 +2,10 @@
 title: 'Zegar'
 author: Pan_Kmicic4
 pub_date: '2018-08-01 17:28:43.084562+00:00'
+link_youtube: https://www.youtube.com/watch?v=UjBK83OLmBg
+score1: scores/zegar.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zegar.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zegar.png.180x0_q85_upscale.png
 ---
 
 #1

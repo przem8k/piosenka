@@ -2,6 +2,11 @@
 title: '1788'
 author: DX
 pub_date: '2011-05-07 14:05:33.684435+00:00'
+link_youtube: https://www.youtube.com/watch?v=VtsMVI8Fles
+capo_fret: 3
+score1: scores/1788.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/1788.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/1788.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

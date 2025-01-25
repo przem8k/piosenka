@@ -2,6 +2,7 @@
 title: 'Suzanne'
 author: reuter
 pub_date: '2017-02-13 07:51:12.599598+00:00'
+link_youtube: https://www.youtube.com/watch?v=W7t47RzETOs
 ---
 
 #zwr

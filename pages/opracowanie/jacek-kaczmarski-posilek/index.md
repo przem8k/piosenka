@@ -2,6 +2,7 @@
 title: 'Posiłek'
 author: Pan_Kmicic4
 pub_date: '2018-07-30 18:34:53.736272+00:00'
+link_youtube: https://www.youtube.com/watch?v=bs4tzJ5Di9I
 ---
 
 #1

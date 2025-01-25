@@ -2,6 +2,8 @@
 title: 'Dom'
 author: Zbik
 pub_date: '2018-07-30 17:59:40.937124+00:00'
+link_youtube: https://www.youtube.com/watch?v=v4y1f8QkfLc
+capo_fret: 1
 ---
 
 [G D e]

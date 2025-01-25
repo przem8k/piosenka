@@ -2,6 +2,10 @@
 title: 'Powrót z Syberii'
 author: DX
 pub_date: '2017-12-03 11:11:36.783225+00:00'
+link_youtube: https://www.youtube.com/watch?v=mC5RJLjGTiw
+score1: scores/powrot_z_syberii.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/powrot_z_syberii.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/powrot_z_syberii.png.180x0_q85_upscale.png
 ---
 
 #zw

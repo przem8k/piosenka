@@ -2,6 +2,11 @@
 title: 'Kazimierz Wierzyński'
 author: Zbik
 pub_date: '2012-04-23 22:51:49.984613+00:00'
+link_youtube: https://www.youtube.com/watch?v=gEOTKM8S4y0
+capo_fret: 2
+score1: scores/kazimierz_wierzynski.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kazimierz_wierzynski.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kazimierz_wierzynski.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

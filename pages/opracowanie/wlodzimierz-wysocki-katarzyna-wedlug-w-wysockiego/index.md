@@ -2,6 +2,10 @@
 title: 'Katarzyna'
 author: PrzemekL
 pub_date: '2019-05-17 21:09:11.157967+00:00'
+disambig: według W. Wysockiego
+original_title: Катерина, Катя, Катерина...
+link_youtube: https://www.youtube.com/watch?v=3_PURAJd4WA
+capo_fret: 3
 ---
 
 #zw

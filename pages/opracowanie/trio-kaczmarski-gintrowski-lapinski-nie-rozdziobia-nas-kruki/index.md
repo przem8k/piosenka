@@ -2,6 +2,10 @@
 title: 'Nie rozdziobią nas kruki'
 author: Pan_Kmicic4
 pub_date: '2019-02-24 13:39:15.919772+00:00'
+link_youtube: https://www.youtube.com/watch?v=PFb0AJ_gYXw
+score2: scores/nie_rozdziobia_nas_kruki.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/nie_rozdziobia_nas_kruki.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/nie_rozdziobia_nas_kruki.png.180x0_q85_upscale.png
 ---
 
 #1

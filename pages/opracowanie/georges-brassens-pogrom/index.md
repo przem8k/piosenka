@@ -2,6 +2,8 @@
 title: 'Pogrom'
 author: DX
 pub_date: '2012-06-03 23:56:19.391504+00:00'
+original_title: Hécatombe
+link_youtube: http://www.youtube.com/watch?v=xJrn7wdJK90
 ---
 
 #zw

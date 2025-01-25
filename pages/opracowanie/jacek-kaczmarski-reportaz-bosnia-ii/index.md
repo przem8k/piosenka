@@ -2,6 +2,11 @@
 title: 'Reportaż (Bośnia II)'
 author: Pan_Kmicic4
 pub_date: '2018-07-31 17:06:31.617616+00:00'
+link_youtube: https://www.youtube.com/watch?v=kVWWayM_bzw
+capo_fret: 1
+score1: scores/reportaz.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/reportaz.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/reportaz.png.180x0_q85_upscale.png
 ---
 
 #1

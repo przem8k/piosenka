@@ -2,6 +2,10 @@
 title: 'Damastes z przydomkiem Prokrustes mówi'
 author: reuter
 pub_date: '2018-09-12 00:31:48.611063+00:00'
+link_youtube: https://www.youtube.com/watch?v=XdS297Wr7fA
+score1: scores/damastes.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/damastes.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/damastes.png.180x0_q85_upscale.png
 ---
 
 #zw

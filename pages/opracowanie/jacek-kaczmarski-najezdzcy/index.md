@@ -2,6 +2,7 @@
 title: 'Najeźdźcy'
 author: PrzemekL
 pub_date: '2014-09-04 22:12:59.468868+00:00'
+link_youtube: https://www.youtube.com/watch?v=BZHKMq1VM6o
 ---
 
 #zw

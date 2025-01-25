@@ -2,6 +2,8 @@
 title: 'Pragnienie Adama'
 author: Baltazar
 pub_date: '2020-10-19 18:43:32.433910+00:00'
+epigone: True
+capo_fret: 3
 ---
 
 #zw

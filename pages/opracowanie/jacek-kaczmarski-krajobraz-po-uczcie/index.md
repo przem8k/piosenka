@@ -2,6 +2,10 @@
 title: 'Krajobraz po uczcie'
 author: DX
 pub_date: '2011-05-11 01:06:54.638490+00:00'
+link_youtube: https://www.youtube.com/watch?v=LSa0ZxZRCW8
+score1: scores/krajobraz_po_uczcie.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/krajobraz_po_uczcie.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/krajobraz_po_uczcie.png.180x0_q85_upscale.jpg
 ---
 
 [D D4 D D4]

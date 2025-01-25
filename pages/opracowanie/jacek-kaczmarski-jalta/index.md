@@ -2,6 +2,10 @@
 title: 'Jałta'
 author: DX
 pub_date: '2011-05-06 23:40:06.437386+00:00'
+link_youtube: https://www.youtube.com/watch?v=GqJjiAXnWdQ
+score1: scores/jalta.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/jalta.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/jalta.png.180x0_q85_upscale.jpg
 ---
 
 #zw

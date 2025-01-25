@@ -2,6 +2,10 @@
 title: 'Zostaw w domu broń'
 author: PrzemekL
 pub_date: '2019-07-20 17:55:10.155411+00:00'
+disambig: wg Johnny’ego Casha
+original_title: Don't take your guns to town
+link_youtube: https://www.youtube.com/watch?v=6sh6T2Q9X5A
+capo_fret: 1
 ---
 
 #zw

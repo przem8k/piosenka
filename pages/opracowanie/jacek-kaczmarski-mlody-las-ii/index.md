@@ -2,6 +2,8 @@
 title: 'Młody las II'
 author: Pan_Kmicic4
 pub_date: '2018-10-14 11:23:26.366728+00:00'
+link_youtube: https://www.youtube.com/watch?v=l9VzVpuyKCc
+capo_fret: 3
 ---
 
 #1

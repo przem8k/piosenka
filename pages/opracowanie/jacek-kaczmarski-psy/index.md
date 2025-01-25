@@ -2,6 +2,7 @@
 title: 'Psy'
 author: Pan_Kmicic4
 pub_date: '2018-10-21 18:12:16.434744+00:00'
+link_youtube: https://www.youtube.com/watch?v=5LYBXeFowkc
 ---
 
 #1

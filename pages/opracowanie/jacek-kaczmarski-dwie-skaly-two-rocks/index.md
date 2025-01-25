@@ -2,6 +2,10 @@
 title: 'Dwie Skały'
 author: reuter
 pub_date: '2017-06-14 18:00:17.944575+00:00'
+link_youtube: https://www.youtube.com/watch?v=qsBma7jJsOI
+score1: scores/dwie_skaly.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/dwie_skaly.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/dwie_skaly.png.180x0_q85_upscale.png
 ---
 
 #zw

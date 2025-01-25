@@ -2,6 +2,7 @@
 title: 'Kołysanka pijacka'
 author: gary
 pub_date: '2023-05-17 11:56:51.666394+00:00'
+original_title: Милицейский протокол
 ---
 
 #zw

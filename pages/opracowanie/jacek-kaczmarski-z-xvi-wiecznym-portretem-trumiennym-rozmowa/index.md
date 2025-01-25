@@ -2,6 +2,14 @@
 title: 'Z XVI-wiecznym portretem trumiennym rozmowa'
 author: DX
 pub_date: '2011-08-09 02:10:21.126504+00:00'
+link_youtube: https://www.youtube.com/watch?v=dPV-ewUzEoE
+capo_fret: 3
+score1: scores/z_xvi-wiecznym_portretem_trumiennym_rozmowa.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/z_xvi-wiecznym_portretem_trumiennym_rozmowa.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/z_xvi-wiecznym_portretem_trumiennym_rozmowa.png.180x0_q85_upscale.jpg
+score2: scores/z_xvi-wiecznym_portretem_trumiennym_rozmowa2.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/z_xvi-wiecznym_portretem_trumiennym_rozmowa2.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/z_xvi-wiecznym_portretem_trumiennym_rozmowa2.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

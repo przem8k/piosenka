@@ -2,6 +2,11 @@
 title: 'Pochwała łotrostwa'
 author: Pan_Kmicic4
 pub_date: '2018-07-27 11:35:13.991154+00:00'
+link_youtube: https://www.youtube.com/watch?v=JrDVIOgdEWM
+capo_fret: 1
+score1: scores/pochwala_lotrostwa.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pochwala_lotrostwa.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pochwala_lotrostwa.png.180x0_q85_upscale.png
 ---
 
 #1

@@ -2,6 +2,7 @@
 title: 'Trudno'
 author: DX
 pub_date: '2021-05-02 12:48:52.926661+00:00'
+link_youtube: https://www.youtube.com/watch?v=cm7LnS7li90
 ---
 
 [G D h e]

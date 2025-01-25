@@ -2,6 +2,8 @@
 title: 'Wizyta krewnej z zagranicy'
 author: Pan_Kmicic4
 pub_date: '2018-12-09 12:54:01.939282+00:00'
+link_youtube: https://www.youtube.com/watch?v=2kvC7PGkxyw
+capo_fret: 1
 ---
 
 #1

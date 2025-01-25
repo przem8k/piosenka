@@ -2,6 +2,11 @@
 title: 'Panna'
 author: Zbik
 pub_date: '2011-05-10 23:39:23.406597+00:00'
+link_youtube: https://www.youtube.com/watch?v=KssVd4HRjig
+capo_fret: 1
+score1: scores/panna.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/panna.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/panna.png.180x0_q85_upscale.jpg
 ---
 
 #zw

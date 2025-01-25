@@ -2,6 +2,10 @@
 title: 'Bob Dylan'
 author: DX
 pub_date: '2011-10-30 12:56:39.399917+00:00'
+link_youtube: https://www.youtube.com/watch?v=1BBJvykyGao
+score1: scores/bob_dylan.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/bob_dylan.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/bob_dylan.png.180x0_q85_upscale.jpg
 ---
 
 Ocean w nas śpi [D]

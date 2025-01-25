@@ -2,6 +2,10 @@
 title: 'Winda'
 author: Zbik
 pub_date: '2011-08-30 15:47:07.313961+00:00'
+link_youtube: https://www.youtube.com/watch?v=qalMQ9aoQd4
+score1: scores/winda.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/winda.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/winda.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

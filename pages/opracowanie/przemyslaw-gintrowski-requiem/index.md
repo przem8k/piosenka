@@ -2,6 +2,13 @@
 title: 'Requiem'
 author: Pan_Kmicic4
 pub_date: '2018-08-09 21:29:53.749861+00:00'
+link_youtube: https://www.youtube.com/watch?v=Xe0bzkS1oOU
+score1: scores/requiem_01.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/requiem_01.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/requiem_01.png.180x0_q85_upscale.png
+score2: scores/requiem_02.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/requiem_02.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/requiem_02.png.180x0_q85_upscale.png
 ---
 
 #1

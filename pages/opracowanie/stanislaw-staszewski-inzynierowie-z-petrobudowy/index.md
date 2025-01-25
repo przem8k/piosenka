@@ -2,6 +2,7 @@
 title: 'Inżynierowie z Petrobudowy'
 author: DX
 pub_date: '2016-10-29 18:57:33.985798+00:00'
+link_youtube: https://www.youtube.com/watch?v=JdsoUtQFmqE
 ---
 
 #zw

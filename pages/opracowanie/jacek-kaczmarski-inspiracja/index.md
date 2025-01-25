@@ -2,6 +2,11 @@
 title: 'Inspiracja'
 author: Zbik
 pub_date: '2011-09-25 18:30:03.100441+00:00'
+link_youtube: https://www.youtube.com/watch?v=quX_iU7OWME
+capo_fret: 3
+score1: scores/inspiracja.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/inspiracja.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/inspiracja.png.180x0_q85_upscale.jpg
 ---
 
 #zw

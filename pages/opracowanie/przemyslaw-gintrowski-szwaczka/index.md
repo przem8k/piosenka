@@ -2,6 +2,10 @@
 title: 'Szwaczka'
 author: reuter
 pub_date: '2014-09-10 18:09:00.326867+00:00'
+link_youtube: https://www.youtube.com/watch?v=JNY4ZwVXnuU
+score1: scores/szwaczka_nuty.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/szwaczka_nuty.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/szwaczka_nuty.png.180x0_q85_upscale.jpg
 ---
 
 Od rana pada deszcz

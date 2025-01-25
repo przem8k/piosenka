@@ -2,6 +2,7 @@
 title: 'Bal kreślarzy'
 author: DX
 pub_date: '2015-02-20 18:04:42.065061+00:00'
+link_youtube: https://www.youtube.com/watch?v=YgFT_HRlIc4
 ---
 
 #zw

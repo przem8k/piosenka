@@ -2,6 +2,10 @@
 title: 'Testament '95'
 author: Pan_Kmicic4
 pub_date: '2018-08-01 08:42:23.010467+00:00'
+link_youtube: https://www.youtube.com/watch?v=PM1OfkNDYeQ
+score1: scores/testament.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/testament.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/testament.png.180x0_q85_upscale.png
 ---
 
 #1

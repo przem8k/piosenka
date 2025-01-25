@@ -2,6 +2,10 @@
 title: 'Nie lubię'
 author: DX
 pub_date: '2011-06-04 17:17:55.042314+00:00'
+link_youtube: https://www.youtube.com/watch?v=SMwaMTP8HSQ
+score1: scores/nie_lubie.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/nie_lubie.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/nie_lubie.png.180x0_q85_upscale.jpg
 ---
 
 Nie lubię, gdy mi mówią po imieniu [e]

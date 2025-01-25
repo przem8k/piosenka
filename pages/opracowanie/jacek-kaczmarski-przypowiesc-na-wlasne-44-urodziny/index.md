@@ -2,6 +2,10 @@
 title: 'Przypowieść na własne 44. urodziny'
 author: spooky
 pub_date: '2011-09-10 18:53:18.269782+00:00'
+link_youtube: https://www.youtube.com/watch?v=CK5d1qE4-5E
+score1: scores/przypowiesc_na_wlasne_44_urodziny.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/przypowiesc_na_wlasne_44_urodziny.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/przypowiesc_na_wlasne_44_urodziny.png.180x0_q85_upscale.jpg
 ---
 
 #zw

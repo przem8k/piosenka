@@ -2,6 +2,7 @@
 title: 'Niewolnictwo'
 author: RK
 pub_date: '2012-10-25 19:27:46.670651+00:00'
+link_youtube: https://www.youtube.com/watch?v=otqYM2fHXV8
 ---
 
 #zw

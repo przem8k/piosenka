@@ -2,6 +2,8 @@
 title: 'Ballada szubieniczna'
 author: DX
 pub_date: '2012-04-20 18:29:50.347654+00:00'
+disambig: muz. Jacek Majewski
+capo_fret: 3
 ---
 
 #zw

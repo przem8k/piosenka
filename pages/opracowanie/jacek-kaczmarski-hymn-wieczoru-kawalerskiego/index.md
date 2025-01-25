@@ -2,6 +2,10 @@
 title: 'Hymn wieczoru kawalerskiego'
 author: DX
 pub_date: '2011-05-11 01:11:11.976448+00:00'
+link_youtube: https://www.youtube.com/watch?v=qaINls5Ondo
+score1: scores/hymn_wieczoru_kawalerskiego.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/hymn_wieczoru_kawalerskiego.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/hymn_wieczoru_kawalerskiego.png.180x0_q85_upscale.jpg
 ---
 
 #zw

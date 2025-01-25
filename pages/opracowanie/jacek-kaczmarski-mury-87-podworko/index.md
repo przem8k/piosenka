@@ -2,6 +2,11 @@
 title: 'Mury '87'
 author: Pan_Kmicic4
 pub_date: '2018-08-07 19:08:39.836821+00:00'
+disambig: Podwórko
+link_youtube: https://www.youtube.com/watch?v=sYf8CgJ8qlY
+score1: scores/mury_87_podworko.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/mury_87_podworko.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/mury_87_podworko.png.180x0_q85_upscale.png
 ---
 
 #1

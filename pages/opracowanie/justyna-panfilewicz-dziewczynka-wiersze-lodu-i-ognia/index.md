@@ -2,6 +2,8 @@
 title: 'Dziewczynka'
 author: Baltazar
 pub_date: '2020-10-22 18:19:41.221499+00:00'
+disambig: Wiersze Lodu i Ognia
+link_youtube: https://www.youtube.com/watch?v=rr5a5SAeJkg
 ---
 
 inspirowane "Pieśnią Lodu i Ognia" oraz "Grą o Tron"

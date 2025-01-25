@@ -2,6 +2,7 @@
 title: 'Testament'
 author: PrzemekL
 pub_date: '2014-09-03 23:15:59.284712+00:00'
+original_title: Le Testament
 ---
 
 (wg G. Brassensa)

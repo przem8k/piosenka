@@ -2,6 +2,10 @@
 title: 'Japońska rycina'
 author: Pan_Kmicic4
 pub_date: '2018-07-23 11:20:42.312435+00:00'
+link_youtube: https://www.youtube.com/watch?v=0g9YMtYa5f4
+score1: scores/japonska_rycina.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/japonska_rycina.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/japonska_rycina.png.180x0_q85_upscale.png
 ---
 
 #1

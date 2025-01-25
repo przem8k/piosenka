@@ -2,6 +2,8 @@
 title: 'Przy ołtarzu baru'
 author: Zbik
 pub_date: '2018-10-11 18:34:28.344841+00:00'
+original_title: Last Call
+link_youtube: https://www.youtube.com/watch?v=dzzsSARu_FY
 ---
 
 #zwrotka1

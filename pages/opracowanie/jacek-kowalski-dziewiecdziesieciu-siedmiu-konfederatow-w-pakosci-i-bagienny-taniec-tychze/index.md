@@ -2,6 +2,7 @@
 title: 'Dziewięćdziesięciu siedmiu konfederatów w Pakości i Bagienny taniec tychże'
 author: RK
 pub_date: '2012-04-08 21:50:04.295181+00:00'
+link_youtube: http://www.youtube.com/watch?v=ZWZZvBO-j2Q
 ---
 
 #zwrotka

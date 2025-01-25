@@ -2,6 +2,10 @@
 title: 'Encore, jeszcze raz'
 author: DX
 pub_date: '2017-09-10 12:45:46.368365+00:00'
+link_youtube: https://www.youtube.com/watch?v=nKoqGkB9l3A
+score1: scores/encore.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/encore.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/encore.png.180x0_q85_upscale.png
 ---
 
 #zw

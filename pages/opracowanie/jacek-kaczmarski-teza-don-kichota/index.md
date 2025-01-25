@@ -2,6 +2,11 @@
 title: 'Teza Don Kichota'
 author: DX
 pub_date: '2012-07-22 21:19:16.801757+00:00'
+link_youtube: https://www.youtube.com/watch?v=PP3NDSHrg34
+capo_fret: 1
+score1: scores/teza_don_kichota.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/teza_don_kichota.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/teza_don_kichota.png.180x0_q85_upscale.jpg
 ---
 
 Czoło mi stary garnek studzi [A E]

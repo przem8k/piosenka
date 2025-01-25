@@ -2,6 +2,10 @@
 title: 'Modlitwa o wschodzie słońca'
 author: RK
 pub_date: '2012-12-10 13:04:21.429159+00:00'
+link_youtube: https://www.youtube.com/watch?v=xC16umYvmjE
+score1: scores/modlitwa_o_wschodzie_slonca.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/modlitwa_o_wschodzie_slonca.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/modlitwa_o_wschodzie_slonca.png.180x0_q85_upscale.png
 ---
 
 #zwrotka

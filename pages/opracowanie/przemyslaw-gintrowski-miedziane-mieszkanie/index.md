@@ -2,6 +2,8 @@
 title: 'Miedziane mieszkanie'
 author: Zbik
 pub_date: '2022-12-18 16:24:08.723228+00:00'
+link_youtube: https://www.youtube.com/watch?v=K9NzdNzMi9w
+capo_fret: 1
 ---
 
 #zwrotka

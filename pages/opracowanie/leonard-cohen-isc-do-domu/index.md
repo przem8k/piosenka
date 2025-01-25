@@ -2,6 +2,8 @@
 title: 'Iść do domu'
 author: reuter
 pub_date: '2017-02-12 13:43:10.754588+00:00'
+original_title: Going Home
+link_youtube: https://www.youtube.com/watch?v=Skn_pbUa3fA
 ---
 
 #zw

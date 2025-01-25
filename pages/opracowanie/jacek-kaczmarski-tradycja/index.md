@@ -2,6 +2,13 @@
 title: 'Tradycja'
 author: DX
 pub_date: '2012-03-10 14:14:50.024698+00:00'
+link_youtube: http://www.youtube.com/watch?v=DMrvS8trNsY
+score1: scores/tradycja_1.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/tradycja_1.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/tradycja_1.png.180x0_q85_upscale.jpg
+score2: scores/tradycja_2.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/tradycja_2.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/tradycja_2.png.180x0_q85_upscale.jpg
 ---
 
 Spójrzcie na królów naszych poczet [G C G (C)]

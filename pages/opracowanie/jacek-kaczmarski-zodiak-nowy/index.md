@@ -2,6 +2,8 @@
 title: 'Zodiak nowy'
 author: reuter
 pub_date: '2022-09-26 20:17:33.618410+00:00'
+epigone: True
+link_youtube: https://www.youtube.com/watch?v=qCGvpRDDkuo
 ---
 
 [fis h fis E fis A fis]

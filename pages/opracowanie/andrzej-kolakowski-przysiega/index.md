@@ -2,6 +2,7 @@
 title: 'Przysięga'
 author: RK
 pub_date: '2011-12-19 09:44:00.278898+00:00'
+link_youtube: http://www.youtube.com/watch?v=ar0R5_t8EyU
 ---
 
 #zwrotka

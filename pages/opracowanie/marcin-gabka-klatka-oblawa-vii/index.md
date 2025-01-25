@@ -2,6 +2,7 @@
 title: 'Klatka (Obława VII)'
 author: Baltazar
 pub_date: '2020-11-02 20:52:54.750273+00:00'
+link_youtube: https://www.youtube.com/watch?v=ge1VQMq4C1g
 ---
 
 [a C G a     d E]

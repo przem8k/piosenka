@@ -2,6 +2,14 @@
 title: 'Odmiennych mową, wiarą, obyczajem...'
 author: Zbik
 pub_date: '2018-08-22 07:44:24.173043+00:00'
+link_youtube: https://www.youtube.com/watch?v=VktWm0FoKnY
+capo_fret: 1
+score1: scores/odmiennych_mowa_wiara_e-moll_01.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/odmiennych_mowa_wiara_e-moll_01.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/odmiennych_mowa_wiara_e-moll_01.png.180x0_q85_upscale.png
+score2: scores/odmiennych_mowa_wiara_e-moll_02.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/odmiennych_mowa_wiara_e-moll_02.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/odmiennych_mowa_wiara_e-moll_02.png.180x0_q85_upscale.png
 ---
 
 Odmiennych mową, wiarą, obyczajem [e Fis7/E a/E e]

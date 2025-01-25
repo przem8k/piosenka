@@ -2,6 +2,7 @@
 title: 'Lokalna'
 author: DX
 pub_date: '2012-10-09 22:46:11.462960+00:00'
+link_youtube: http://www.youtube.com/watch?v=K11uzH7Cpmw
 ---
 
 #zw1

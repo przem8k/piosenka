@@ -2,6 +2,8 @@
 title: 'Brat dobry, brat zły'
 author: PrzemekL
 pub_date: '2014-09-01 23:45:19.740684+00:00'
+link_youtube: https://www.youtube.com/watch?v=okrzEIngwTo
+capo_fret: 1
 ---
 
 #zw

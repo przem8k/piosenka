@@ -2,6 +2,8 @@
 title: 'Wywiad z emerytem'
 author: Zbik
 pub_date: '2011-10-16 20:50:43.569870+00:00'
+link_youtube: https://www.youtube.com/watch?v=C2Qw0tKxDgU
+capo_fret: 2
 ---
 
 #zw

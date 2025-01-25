@@ -2,6 +2,8 @@
 title: 'Sny i sny'
 author: reuter
 pub_date: '2014-09-11 21:36:55.520439+00:00'
+epigone: True
+link_youtube: https://www.youtube.com/watch?v=EnstjE97DNM
 ---
 
 #zw

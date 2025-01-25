@@ -2,6 +2,7 @@
 title: 'Urodzinowa'
 author: Boczuś
 pub_date: '2016-05-20 10:28:58.247859+00:00'
+link_youtube: https://www.youtube.com/watch?v=M1tEGxKdVTo
 ---
 
 #zw

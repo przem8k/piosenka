@@ -2,6 +2,10 @@
 title: 'Czerwony autobus'
 author: spooky
 pub_date: '2011-07-28 03:19:40.640638+00:00'
+link_youtube: https://www.youtube.com/watch?v=zeF_q1n0HNY
+score1: scores/czerwony_autobus.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/czerwony_autobus.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/czerwony_autobus.png.180x0_q85_upscale.jpg
 ---
 
 #introzw

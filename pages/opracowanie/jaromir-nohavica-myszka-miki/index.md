@@ -2,6 +2,9 @@
 title: 'Myszka Miki'
 author: RK
 pub_date: '2013-09-09 19:06:00.732364+00:00'
+original_title: Mikymauz
+link_youtube: http://www.youtube.com/watch?v=zSih9efo47Y
+capo_fret: 3
 ---
 
 #zwrotka

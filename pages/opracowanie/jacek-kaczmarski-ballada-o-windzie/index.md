@@ -2,6 +2,11 @@
 title: 'Ballada o windzie'
 author: Zbik
 pub_date: '2011-10-31 11:26:32.192254+00:00'
+link_youtube: https://www.youtube.com/watch?v=rOuR9ZVkaWE
+capo_fret: 1
+score1: scores/ballada_o_windzie.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_windzie.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_windzie.png.180x0_q85_upscale.jpg
 ---
 
 #zwr

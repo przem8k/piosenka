@@ -2,6 +2,7 @@
 title: 'O potrzebie smutku'
 author: RK
 pub_date: '2012-04-08 22:08:42.718010+00:00'
+link_youtube: http://www.youtube.com/watch?v=MtkpEvkzGB0
 ---
 
 #zwrotka

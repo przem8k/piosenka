@@ -2,6 +2,10 @@
 title: 'Optymistyczny horoskop'
 author: Zbik
 pub_date: '2011-10-31 13:32:36.602254+00:00'
+link_youtube: https://www.youtube.com/watch?v=ghm5ac5cV24
+score1: scores/Optymistyczny_horoskop.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Optymistyczny_horoskop.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Optymistyczny_horoskop.png.180x0_q85_upscale.jpg
 ---
 
 #zw1

@@ -2,6 +2,11 @@
 title: 'Tren spadkobierców'
 author: PrzemekL
 pub_date: '2018-02-16 17:58:40.259302+00:00'
+link_youtube: https://www.youtube.com/watch?v=2PGYt5IkXOg
+capo_fret: 2
+score1: scores/Tren_spadkobierców.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Tren_spadkobierców.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Tren_spadkobierc%C3%B3w.png.180x0_q85_upscale.jpg
 ---
 
 #prel

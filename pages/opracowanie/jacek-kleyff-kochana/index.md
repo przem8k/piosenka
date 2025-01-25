@@ -2,6 +2,7 @@
 title: 'Kochana'
 author: Zbik
 pub_date: '2012-06-12 12:04:37.312202+00:00'
+link_youtube: http://www.youtube.com/watch?v=VIR_Ggbku3k
 ---
 
 #zwrotka1

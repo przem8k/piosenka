@@ -2,6 +2,10 @@
 title: 'Zesłanie studentów'
 author: DX
 pub_date: '2017-10-01 16:25:03.096332+00:00'
+link_youtube: https://www.youtube.com/watch?v=5wd_5l0f2C4
+score1: scores/zeslanie_studentow.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zeslanie_studentow.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zeslanie_studentow.png.180x0_q85_upscale.png
 ---
 
 #zw

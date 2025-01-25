@@ -2,6 +2,8 @@
 title: 'Czarna dziura'
 author: Boczuś
 pub_date: '2018-03-18 20:29:57.015466+00:00'
+original_title: Černá jama
+link_youtube: https://www.youtube.com/watch?v=OK6qpvQUKS0
 ---
 
 #zw

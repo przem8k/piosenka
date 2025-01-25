@@ -2,6 +2,11 @@
 title: 'Pana-Rejowe gadanie'
 author: Pan_Kmicic4
 pub_date: '2018-07-26 11:52:29.289365+00:00'
+link_youtube: https://www.youtube.com/watch?v=Zc6LsQlj0po
+capo_fret: 3
+score1: scores/pana_rejowe_gadanie.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pana_rejowe_gadanie.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pana_rejowe_gadanie.png.180x0_q85_upscale.png
 ---
 
 #1

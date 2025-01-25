@@ -2,6 +2,12 @@
 title: 'Pokolenie'
 author: Zbik
 pub_date: '2011-08-30 15:23:33.727707+00:00'
+disambig: "Spójrz, niewidomy, co za świat..."
+link_youtube: https://www.youtube.com/watch?v=CNgSRJ4ppPU
+capo_fret: 3
+score1: scores/pokolenie.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pokolenie.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pokolenie.png.180x0_q85_upscale.jpg
 ---
 
 E5: 022400

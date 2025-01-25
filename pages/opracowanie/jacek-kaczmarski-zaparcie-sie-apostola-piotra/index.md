@@ -2,6 +2,11 @@
 title: 'Zaparcie się apostoła Piotra'
 author: PrzemekL
 pub_date: '2014-09-05 22:20:35.155730+00:00'
+link_youtube: https://www.youtube.com/watch?v=m6Tf7CLNmwc
+capo_fret: 3
+score1: scores/zaparcie_sie_apostola_piotra.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zaparcie_sie_apostola_piotra.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zaparcie_sie_apostola_piotra.png.180x0_q85_upscale.jpg
 ---
 
 (wg obrazu Rembrandta van Rijn)

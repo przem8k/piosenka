@@ -2,6 +2,10 @@
 title: 'Kraj'
 author: DX
 pub_date: '2013-05-14 22:21:01.742549+00:00'
+link_youtube: https://www.youtube.com/watch?v=wFX3pxoDOzA
+score1: scores/kraj.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kraj.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kraj.png.180x0_q85_upscale.jpg
 ---
 
 #zw

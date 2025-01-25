@@ -2,6 +2,13 @@
 title: 'Nie widzą, nie wiedzą'
 author: Zbik
 pub_date: '2018-08-08 12:47:54.231722+00:00'
+link_youtube: https://www.youtube.com/watch?v=ZLCOdJpG8vY
+score1: scores/nie_widza_nie_wiedza_01.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/nie_widza_nie_wiedza_01.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/nie_widza_nie_wiedza_01.png.180x0_q85_upscale.png
+score2: scores/nie_widza_nie_wiedza_02.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/nie_widza_nie_wiedza_02.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/nie_widza_nie_wiedza_02.png.180x0_q85_upscale.png
 ---
 
 [d g6 d]

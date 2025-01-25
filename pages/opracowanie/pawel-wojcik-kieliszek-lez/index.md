@@ -2,6 +2,7 @@
 title: 'Kieliszek łez'
 author: DX
 pub_date: '2013-04-20 12:21:21.832364+00:00'
+capo_fret: 1
 ---
 
 Jeszcze postaw mi kieliszek próżnych łez [e D e]

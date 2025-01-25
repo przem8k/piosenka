@@ -2,6 +2,10 @@
 title: 'Postacie'
 author: Pan_Kmicic4
 pub_date: '2018-07-24 19:50:31.491185+00:00'
+link_youtube: https://www.youtube.com/watch?v=JjS3M4wNa74
+score1: scores/postacie.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/postacie.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/postacie.png.180x0_q85_upscale.png
 ---
 
 #1

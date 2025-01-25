@@ -2,6 +2,11 @@
 title: 'Konfesjonał'
 author: AŁ
 pub_date: '2012-06-19 15:20:39.541966+00:00'
+link_youtube: http://www.youtube.com/watch?v=hpMFsn-b86g
+capo_fret: 1
+score1: scores/konfesjonal.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/konfesjonal.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/konfesjonal.png.180x0_q85_upscale.jpg
 ---
 
 - Niech będzie pochwalony Jezus Chrystus [A]

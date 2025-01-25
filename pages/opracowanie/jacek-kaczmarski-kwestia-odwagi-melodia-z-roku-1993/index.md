@@ -2,6 +2,8 @@
 title: 'Kwestia odwagi'
 author: PrzemekL
 pub_date: '2014-09-03 21:20:10.281590+00:00'
+disambig: melodia z roku 1993
+link_youtube: https://www.youtube.com/watch?v=AeEpb_AhRT8
 ---
 
 To wcale nie jest takie łatwe [a d a]

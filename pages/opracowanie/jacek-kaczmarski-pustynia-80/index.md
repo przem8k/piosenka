@@ -2,6 +2,10 @@
 title: 'Pustynia ’80'
 author: Zbik
 pub_date: '2018-02-28 15:13:22.058589+00:00'
+link_youtube: https://www.youtube.com/watch?v=gSSyob0izi8
+score1: scores/pustynia_80.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pustynia_80.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pustynia_80.png.180x0_q85_upscale.png
 ---
 
 #zwrotka1

@@ -2,6 +2,8 @@
 title: 'Nocny Kamboj'
 author: Pan_Kmicic4
 pub_date: '2019-06-20 19:48:17.481362+00:00'
+link_youtube: https://www.youtube.com/watch?v=uP5ZbMfVTqA
+capo_fret: 1
 ---
 
 Tekst i muzyka: Aktorzy Łódzkiej Szkoły Filmowej, na motywach ścieżki dźwiękowej autorstwa Johna Barry'ego

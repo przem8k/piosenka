@@ -2,6 +2,7 @@
 title: 'Ballada o włosach'
 author: Baltazar
 pub_date: '2020-11-02 20:40:27.385493+00:00'
+link_youtube: https://www.youtube.com/watch?v=EHbApZu0hxs
 ---
 
 Włosy jasną kaskadą kosmyków spływają z głowy, 		[a e a e a]

@@ -2,6 +2,10 @@
 title: 'Lot Ikara'
 author: Pan_Kmicic4
 pub_date: '2018-07-29 15:42:15.504223+00:00'
+link_youtube: https://www.youtube.com/watch?v=ysVDW-WTXR4
+score1: scores/lot_ikara.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/lot_ikara.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/lot_ikara.png.180x0_q85_upscale.png
 ---
 
 [e e/G]

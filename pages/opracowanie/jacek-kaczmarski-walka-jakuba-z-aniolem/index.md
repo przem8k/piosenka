@@ -2,6 +2,11 @@
 title: 'Walka Jakuba z aniołem'
 author: DX
 pub_date: '2016-04-10 16:16:52.788152+00:00'
+link_youtube: https://www.youtube.com/watch?v=dKzGDc5nuYU
+capo_fret: 2
+score1: scores/walka_jakuba_z_aniolem.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/walka_jakuba_z_aniolem.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/walka_jakuba_z_aniolem.png.180x0_q85_upscale.png
 ---
 
 A kiedy walczył Jakub z aniołem [G]

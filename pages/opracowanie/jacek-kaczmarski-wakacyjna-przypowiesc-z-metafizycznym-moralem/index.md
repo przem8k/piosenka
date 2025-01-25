@@ -2,6 +2,10 @@
 title: 'Wakacyjna przypowieść z metafizycznym morałem'
 author: Pan_Kmicic4
 pub_date: '2018-08-02 13:40:41.652080+00:00'
+link_youtube: https://www.youtube.com/watch?v=vtBX3RLqOwk&t=15s
+score1: scores/wakacyjna_przypowiesc.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wakacyjna_przypowiesc.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wakacyjna_przypowiesc.png.180x0_q85_upscale.png
 ---
 
 #1

@@ -2,6 +2,7 @@
 title: 'Nie dorosłem do swych lat'
 author: DX
 pub_date: '2017-05-01 20:16:23.922909+00:00'
+link_youtube: https://www.youtube.com/watch?v=2fl_H66XhYM
 ---
 
 #zw

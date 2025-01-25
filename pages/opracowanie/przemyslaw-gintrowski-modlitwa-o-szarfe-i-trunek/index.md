@@ -2,6 +2,7 @@
 title: 'Modlitwa o szarfę i trunek'
 author: reuter
 pub_date: '2014-09-09 20:59:58.928360+00:00'
+link_youtube: https://www.youtube.com/watch?v=NzZiaxpjTOs
 ---
 
 Daj mi nową, grubą książkę snów [a E a]

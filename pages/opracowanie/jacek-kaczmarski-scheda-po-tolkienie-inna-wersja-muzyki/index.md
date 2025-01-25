@@ -2,6 +2,9 @@
 title: 'Scheda po Tolkienie'
 author: PrzemekL
 pub_date: '2014-09-03 20:50:05.363947+00:00'
+disambig: muz. Przemek Lipski
+epigone: True
+link_youtube: https://www.youtube.com/watch?v=VYeiS39xJtk
 ---
 
 #z1

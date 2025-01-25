@@ -2,6 +2,13 @@
 title: 'Spotkanie w porcie'
 author: DX
 pub_date: '2013-12-22 23:05:19.664146+00:00'
+link_youtube: https://www.youtube.com/watch?v=0drR7ZojdNk
+score1: scores/spotkanie_w_porcie_01.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/spotkanie_w_porcie_01.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/spotkanie_w_porcie_01.png.180x0_q85_upscale.jpg
+score2: scores/spotkanie_w_porcie_02.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/spotkanie_w_porcie_02.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/spotkanie_w_porcie_02.png.180x0_q85_upscale.jpg
 ---
 
 #zw

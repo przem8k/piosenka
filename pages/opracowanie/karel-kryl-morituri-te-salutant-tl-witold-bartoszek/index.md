@@ -2,6 +2,9 @@
 title: 'Morituri te salutant'
 author: DX
 pub_date: '2013-02-22 23:28:01.695400+00:00'
+disambig: tł. Witold Bartoszek
+original_title: Morituri te salutant
+link_youtube: http://www.youtube.com/watch?v=f7ZCpAndDx0
 ---
 
 #zw

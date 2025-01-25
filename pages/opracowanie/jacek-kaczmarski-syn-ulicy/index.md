@@ -2,6 +2,11 @@
 title: 'Syn ulicy'
 author: PrzemekL
 pub_date: '2019-05-07 07:17:46.906690+00:00'
+link_youtube: https://www.youtube.com/watch?v=t472PNWnMg8
+capo_fret: 1
+score1: scores/apasz.jpg
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/apasz.jpg
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/apasz.jpg.180x0_q85_upscale.jpg
 ---
 
 #zw

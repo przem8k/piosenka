@@ -2,6 +2,11 @@
 title: 'Marsz intelektualistów'
 author: Zbik
 pub_date: '2018-08-04 15:25:17.292711+00:00'
+link_youtube: https://www.youtube.com/watch?v=59KYyJ4wzmg
+capo_fret: 2
+score1: scores/marsz_intelektualistow.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/marsz_intelektualistow.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/marsz_intelektualistow.png.180x0_q85_upscale.png
 ---
 
 #zwrotka

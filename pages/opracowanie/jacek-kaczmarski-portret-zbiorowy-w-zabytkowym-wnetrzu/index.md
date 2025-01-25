@@ -2,6 +2,11 @@
 title: 'Portret zbiorowy w zabytkowym wnętrzu'
 author: reuter
 pub_date: '2017-07-20 18:17:01.463008+00:00'
+link_youtube: https://www.youtube.com/watch?v=DN1a2zU2yXY
+capo_fret: 3
+score1: scores/portret_zbiorowy_w_zabytkowym_wnetrzu01.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/portret_zbiorowy_w_zabytkowym_wnetrzu01.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/portret_zbiorowy_w_zabytkowym_wnetrzu01.png.180x0_q85_upscale.png
 ---
 
 Przy dębowym stole siadłszy bokiem [a]

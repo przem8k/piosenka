@@ -2,6 +2,7 @@
 title: 'Bosch (Wędrowiec)'
 author: Zbik
 pub_date: '2012-06-12 11:49:19.614697+00:00'
+link_youtube: http://www.youtube.com/watch?v=3Dm6GljPErE
 ---
 
 #zwrotka

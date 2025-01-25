@@ -2,6 +2,14 @@
 title: 'Kwestia odwagi'
 author: DX
 pub_date: '2011-06-08 19:36:35.423948+00:00'
+disambig: melodia z roku 1998
+link_youtube: http://www.youtube.com/watch?v=9iXC3x2hoLY
+score1: scores/kwestia_odwagi_2-01.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/kwestia_odwagi_2-01.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kwestia_odwagi_2-01.png.180x0_q85_upscale.jpg
+score2: scores/kwestia_odwagi_2-02.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/kwestia_odwagi_2-02.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kwestia_odwagi_2-02.png.180x0_q85_upscale.jpg
 ---
 
 To wcale nie jest takie łatwe [h A D]

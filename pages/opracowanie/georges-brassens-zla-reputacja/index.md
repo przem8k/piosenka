@@ -2,6 +2,9 @@
 title: 'Zła reputacja'
 author: jakubkwa
 pub_date: '2015-12-07 22:06:52.491058+00:00'
+original_title: La mauvaise réputation
+link_youtube: https://www.youtube.com/watch?v=L0Mey2KMaZI
+capo_fret: 3
 ---
 
 #zw

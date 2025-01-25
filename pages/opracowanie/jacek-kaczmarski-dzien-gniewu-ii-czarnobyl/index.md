@@ -2,6 +2,12 @@
 title: 'Dzień gniewu II'
 author: Pan_Kmicic4
 pub_date: '2018-07-28 15:30:14.582579+00:00'
+disambig: Czarnobyl
+link_youtube: https://www.youtube.com/watch?v=vGd1Ug-jZrI
+capo_fret: 2
+score1: scores/dzien_gniewu.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/dzien_gniewu.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/dzien_gniewu.png.180x0_q85_upscale.png
 ---
 
 #1

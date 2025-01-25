@@ -2,6 +2,10 @@
 title: 'Chrystus i kupcy'
 author: Pan_Kmicic4
 pub_date: '2018-07-24 12:59:19.288359+00:00'
+link_youtube: https://www.youtube.com/watch?v=HAUskg_r0tk
+score1: scores/chrystus_i_kupcy.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/chrystus_i_kupcy.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/chrystus_i_kupcy.png.180x0_q85_upscale.png
 ---
 
 #1

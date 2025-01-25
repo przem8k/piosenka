@@ -2,6 +2,11 @@
 title: 'Dęby'
 author: Pan_Kmicic4
 pub_date: '2018-08-06 15:43:32.529417+00:00'
+link_youtube: https://www.youtube.com/watch?v=Ro_62Qc-99Y
+capo_fret: 3
+score1: scores/deby.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/deby.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/deby.png.180x0_q85_upscale.png
 ---
 
 #1

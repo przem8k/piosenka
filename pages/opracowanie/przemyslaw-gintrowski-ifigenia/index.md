@@ -2,6 +2,11 @@
 title: 'Ifigenia'
 author: Pan_Kmicic4
 pub_date: '2018-10-17 20:24:51.794082+00:00'
+link_youtube: https://www.youtube.com/watch?v=spqFXHebv1Q
+capo_fret: 4
+score1: scores/ifigenia.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ifigenia.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ifigenia.png.180x0_q85_upscale.png
 ---
 
 #1

@@ -2,6 +2,8 @@
 title: 'Prośba'
 author: DX
 pub_date: '2016-12-06 21:44:32.096793+00:00'
+disambig: „Mów mi to co dzień...”
+link_youtube: https://www.youtube.com/watch?v=S1OsTo8vDYs
 ---
 
 #zw

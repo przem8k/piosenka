@@ -2,6 +2,7 @@
 title: 'Moskwa–Waszyngton'
 author: DX
 pub_date: '2011-05-24 09:06:36.909192+00:00'
+capo_fret: 4
 ---
 
 Hallo my friend Vladimir! [a]

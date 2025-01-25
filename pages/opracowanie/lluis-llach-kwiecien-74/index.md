@@ -2,6 +2,7 @@
 title: 'Kwiecień '74'
 author: DX
 pub_date: '2011-11-03 23:21:42.693421+00:00'
+link_youtube: https://www.youtube.com/watch?v=Sef76ehUZy4
 ---
 
 #zwrotka

@@ -2,6 +2,7 @@
 title: 'Diana'
 author: RK
 pub_date: '2012-04-08 21:37:37.973195+00:00'
+link_youtube: https://www.youtube.com/watch?v=FsgST4evMHQ
 ---
 
 #zwrotka

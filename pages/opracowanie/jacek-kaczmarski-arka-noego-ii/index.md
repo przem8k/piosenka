@@ -2,6 +2,8 @@
 title: 'Arka Noego II'
 author: Baltazar
 pub_date: '2020-10-18 19:46:09.443411+00:00'
+epigone: True
+capo_fret: 2
 ---
 
 [e C e C e C e C]

@@ -2,6 +2,10 @@
 title: 'Karmaniola'
 author: Zbik
 pub_date: '2012-04-23 22:57:57.876554+00:00'
+link_youtube: https://www.youtube.com/watch?v=4ZEjbqrrT1U
+score1: scores/karmaniola.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/karmaniola.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/karmaniola.png.180x0_q85_upscale.jpg
 ---
 
 [E H E  E H E]

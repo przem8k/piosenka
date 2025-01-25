@@ -2,6 +2,10 @@
 title: 'Ballada o okrzykach'
 author: DX
 pub_date: '2011-12-02 17:37:49.668051+00:00'
+link_youtube: https://www.youtube.com/watch?v=mA3jbTgpIAY
+score1: scores/ballada_o_okrzykach.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_okrzykach.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_okrzykach.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

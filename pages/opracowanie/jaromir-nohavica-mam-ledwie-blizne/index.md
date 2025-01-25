@@ -2,6 +2,8 @@
 title: 'Mam ledwie bliznę'
 author: DX
 pub_date: '2013-08-10 15:47:51.514618+00:00'
+original_title: Mám jizvu na rtu
+link_youtube: http://www.youtube.com/watch?v=Ab4qvDwA6hc
 ---
 
 #zw

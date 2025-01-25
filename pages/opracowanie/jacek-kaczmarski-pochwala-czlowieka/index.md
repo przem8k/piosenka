@@ -2,6 +2,10 @@
 title: 'Pochwała człowieka'
 author: Pan_Kmicic4
 pub_date: '2018-08-01 13:02:37.477383+00:00'
+link_youtube: https://www.youtube.com/watch?v=E4kt13FzMTg
+score1: scores/pochwala_czlowieka.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pochwala_czlowieka.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pochwala_czlowieka.png.180x0_q85_upscale.png
 ---
 
 #1

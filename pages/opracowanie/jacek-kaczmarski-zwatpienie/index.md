@@ -2,6 +2,11 @@
 title: 'Zwątpienie'
 author: DX
 pub_date: '2011-05-07 14:12:25.294713+00:00'
+link_youtube: https://www.youtube.com/watch?v=lNzLcgFO9Dg
+capo_fret: 3
+score1: scores/zwatpienie.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/zwatpienie.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zwatpienie.png.180x0_q85_upscale.jpg
 ---
 
 #zw

@@ -2,6 +2,10 @@
 title: 'Quasimodo'
 author: AŁ
 pub_date: '2012-06-19 15:08:27.587086+00:00'
+link_youtube: https://www.youtube.com/watch?v=ilqJMS2uESM
+score1: scores/quasimodo.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/quasimodo.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/quasimodo.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

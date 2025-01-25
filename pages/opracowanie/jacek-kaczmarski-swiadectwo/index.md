@@ -2,6 +2,10 @@
 title: 'Świadectwo'
 author: DX
 pub_date: '2015-05-24 09:32:54.186230+00:00'
+link_youtube: https://www.youtube.com/watch?v=cThFP8tJvOc
+score1: scores/swiadectwo.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/swiadectwo.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/swiadectwo.png.180x0_q85_upscale.jpg
 ---
 
 #zw

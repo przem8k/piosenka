@@ -2,6 +2,10 @@
 title: 'Ballada o ubocznych skutkach alkoholizmu'
 author: DX
 pub_date: '2011-05-31 22:40:11.254047+00:00'
+link_youtube: https://www.youtube.com/watch?v=VILElHYr0-w
+score1: scores/ballada_o_ubocznych_skutkach_alkoholizmu.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_ubocznych_skutkach_alkoholizmu.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ballada_o_ubocznych_skutkach_alkoholizmu.png.180x0_q85_upscale.jpg
 ---
 
 #zw

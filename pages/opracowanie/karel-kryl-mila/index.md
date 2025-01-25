@@ -2,6 +2,8 @@
 title: 'Miła'
 author: DX
 pub_date: '2015-05-20 21:03:11.536852+00:00'
+original_title: Lásko
+link_youtube: https://www.youtube.com/watch?v=Qb4gQFmwTfQ
 ---
 
 #zw

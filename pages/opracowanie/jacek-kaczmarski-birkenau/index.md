@@ -2,6 +2,10 @@
 title: 'Birkenau'
 author: DX
 pub_date: '2017-10-08 16:50:44.521966+00:00'
+link_youtube: https://www.youtube.com/watch?v=DTZeLN-FhHw
+score1: scores/birkenau.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/birkenau.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/birkenau.png.180x0_q85_upscale.png
 ---
 
 [d B7+ G0]

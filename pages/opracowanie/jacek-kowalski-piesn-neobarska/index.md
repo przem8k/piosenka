@@ -2,6 +2,7 @@
 title: 'Pieśń neobarska'
 author: RK
 pub_date: '2012-04-08 22:14:18.083079+00:00'
+link_youtube: https://www.youtube.com/watch?v=Sgi3gIEnY1A
 ---
 
 #zwrotka

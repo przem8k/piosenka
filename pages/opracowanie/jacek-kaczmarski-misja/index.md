@@ -2,6 +2,10 @@
 title: 'Misja'
 author: Zbik
 pub_date: '2018-02-25 17:24:16.431997+00:00'
+link_youtube: https://www.youtube.com/watch?v=KsasReRVn-Q
+score1: scores/misja.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/misja.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/misja.png.180x0_q85_upscale.png
 ---
 
 Warczą bębny ludożerców na Wyspach Szczęśliwych,[e]

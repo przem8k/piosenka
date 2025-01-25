@@ -2,6 +2,7 @@
 title: 'Prolog'
 author: Pan_Kmicic4
 pub_date: '2018-09-07 14:11:50.049881+00:00'
+link_youtube: https://www.youtube.com/watch?v=-8gZLZPSulE
 ---
 
 #1

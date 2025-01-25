@@ -2,6 +2,7 @@
 title: 'Ubek'
 author: Zbik
 pub_date: '2018-10-25 09:57:24.994248+00:00'
+link_youtube: https://www.youtube.com/watch?v=_uenUtBYXzs
 ---
 
 #zwrotka1

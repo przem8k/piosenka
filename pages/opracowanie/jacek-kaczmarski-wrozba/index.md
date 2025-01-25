@@ -2,6 +2,10 @@
 title: 'Wróżba'
 author: spooky
 pub_date: '2011-11-04 06:06:52.219158+00:00'
+link_youtube: https://www.youtube.com/watch?v=IHioWbchm5g
+score1: scores/wrozba.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wrozba.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wrozba.png.180x0_q85_upscale.jpg
 ---
 
 #zw

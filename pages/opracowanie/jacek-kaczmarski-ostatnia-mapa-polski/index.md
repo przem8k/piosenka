@@ -2,6 +2,11 @@
 title: 'Ostatnia mapa Polski'
 author: Zbik
 pub_date: '2011-11-03 18:25:17.533324+00:00'
+link_youtube: https://www.youtube.com/watch?v=DRicixy6JzM
+capo_fret: 1
+score1: scores/ostatnia_mapa_polski.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ostatnia_mapa_polski.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ostatnia_mapa_polski.png.180x0_q85_upscale.jpg
 ---
 
 Zbłąkany pocisk w namiot sztabu trafił rano [e D e]

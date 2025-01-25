@@ -2,6 +2,11 @@
 title: 'Bieg'
 author: Zbik
 pub_date: '2018-02-25 16:50:32.674379+00:00'
+link_youtube: https://www.youtube.com/watch?v=DIhjJWd2Sb0
+capo_fret: 2
+score1: scores/bieg.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/bieg.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/bieg.png.180x0_q85_upscale.png
 ---
 
 #zwrotka1

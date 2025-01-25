@@ -2,6 +2,7 @@
 title: 'Oddział chorych na raka à la Polonaise A.D. 2002'
 author: DX
 pub_date: '2011-08-08 19:25:13.666749+00:00'
+epigone: True
 ---
 
 Pięciu na jedną salę kładli na Banacha [a]

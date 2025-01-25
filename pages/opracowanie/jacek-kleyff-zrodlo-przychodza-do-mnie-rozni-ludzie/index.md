@@ -2,6 +2,8 @@
 title: 'Źródło'
 author: Zbik
 pub_date: '2012-06-12 13:40:34.180420+00:00'
+disambig: "Przychodzą do mnie różni ludzie..."
+link_youtube: http://www.youtube.com/watch?v=nnjLK18yy4s
 ---
 
 #zwrotka

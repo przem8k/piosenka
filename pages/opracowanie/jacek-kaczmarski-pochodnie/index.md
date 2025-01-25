@@ -2,6 +2,11 @@
 title: 'Pochodnie'
 author: Zbik
 pub_date: '2012-01-13 22:01:15.873311+00:00'
+link_youtube: https://www.youtube.com/watch?v=YiABiSPt4_M
+capo_fret: 4
+score1: scores/pochodnie.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/pochodnie.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pochodnie.png.180x0_q85_upscale.jpg
 ---
 
 #zw1

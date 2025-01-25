@@ -2,6 +2,11 @@
 title: 'Autoportret z psem'
 author: spooky
 pub_date: '2011-10-31 02:18:12.019119+00:00'
+link_youtube: https://www.youtube.com/watch?v=4Q0O2eYV_mg
+capo_fret: 2
+score1: scores/autoportret_z_psem.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/autoportret_z_psem.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/autoportret_z_psem.png.180x0_q85_upscale.jpg
 ---
 
 #ref1

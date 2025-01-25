@@ -2,6 +2,7 @@
 title: 'Czeczenia'
 author: DX
 pub_date: '2011-05-31 22:36:27.113800+00:00'
+link_youtube: https://www.youtube.com/watch?v=R0yVX-0ZaN4
 ---
 
 >[d Cis0 d Cis0 d g A7 d]

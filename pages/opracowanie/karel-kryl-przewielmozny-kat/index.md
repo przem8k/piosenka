@@ -2,6 +2,8 @@
 title: 'Przewielmożny kat'
 author: DX
 pub_date: '2013-04-07 22:15:12.256837+00:00'
+original_title: Veličenstvo kat
+link_youtube: http://www.youtube.com/watch?v=1blnIF3ad9I
 ---
 
 #zw

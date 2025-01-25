@@ -2,6 +2,7 @@
 title: 'Upadek Folwarku Zwierzęcego'
 author: Baltazar
 pub_date: '2020-10-21 17:26:42.185563+00:00'
+link_youtube: https://www.youtube.com/watch?v=j0jpDuQY8gw
 ---
 
 #a

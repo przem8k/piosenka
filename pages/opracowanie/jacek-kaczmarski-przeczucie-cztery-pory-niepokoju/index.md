@@ -2,6 +2,10 @@
 title: 'Przeczucie (Cztery pory niepokoju)'
 author: Zbik
 pub_date: '2018-02-25 17:46:35.361485+00:00'
+link_youtube: https://www.youtube.com/watch?v=4fydufgrbIs
+score1: scores/przeczucie.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/przeczucie.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/przeczucie.png.180x0_q85_upscale.png
 ---
 
 [a d/A a d/A a]

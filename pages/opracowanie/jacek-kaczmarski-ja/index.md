@@ -2,6 +2,11 @@
 title: 'Ja'
 author: Zbik
 pub_date: '2018-07-23 17:18:34.708702+00:00'
+link_youtube: https://www.youtube.com/watch?v=O_eYztVDVcw
+capo_fret: 2
+score1: scores/ja.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ja.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ja.png.180x0_q85_upscale.png
 ---
 
 #zw

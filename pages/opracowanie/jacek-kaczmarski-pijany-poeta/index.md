@@ -2,6 +2,7 @@
 title: 'Pijany poeta'
 author: Zbik
 pub_date: '2012-05-15 13:08:15.990398+00:00'
+link_youtube: https://www.youtube.com/watch?v=hIAc47inayQ
 ---
 
 #zwrotka1

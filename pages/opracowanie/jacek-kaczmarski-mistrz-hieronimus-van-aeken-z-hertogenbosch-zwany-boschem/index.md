@@ -2,6 +2,10 @@
 title: 'Mistrz Hieronimus van Aeken z Hertogenbosch zwany Boschem'
 author: AŁ
 pub_date: '2012-06-19 14:56:50.956316+00:00'
+link_youtube: https://www.youtube.com/watch?v=UvW_SMY6Pig
+score1: scores/hieronim_bosch.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/hieronim_bosch.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/hieronim_bosch.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

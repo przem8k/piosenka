@@ -2,6 +2,7 @@
 title: 'Inka'
 author: Zbik
 pub_date: '2011-12-19 17:16:58.169861+00:00'
+link_youtube: https://www.youtube.com/watch?v=VsmUEzDnIDc
 ---
 
 #zw1

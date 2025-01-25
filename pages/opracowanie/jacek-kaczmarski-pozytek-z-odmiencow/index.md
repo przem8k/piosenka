@@ -2,6 +2,9 @@
 title: 'Pożytek z odmieńców'
 author: DX
 pub_date: '2011-07-18 17:26:49.480255+00:00'
+epigone: True
+link_youtube: http://www.youtube.com/watch?v=qMZK-S7XByA
+capo_fret: 2
 ---
 
 #zw1

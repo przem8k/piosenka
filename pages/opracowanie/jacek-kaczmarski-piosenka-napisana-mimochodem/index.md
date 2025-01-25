@@ -2,6 +2,11 @@
 title: 'Piosenka napisana mimochodem'
 author: spooky
 pub_date: '2011-07-23 20:48:16.032423+00:00'
+link_youtube: https://www.youtube.com/watch?v=Y_clXdF-mZ4
+capo_fret: 1
+score1: scores/piosenka_napisana_mimochodem.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/piosenka_napisana_mimochodem.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/piosenka_napisana_mimochodem.png.180x0_q85_upscale.jpg
 ---
 
 Słońce błyśnie między wschodem a zachodem [a d a (d)]

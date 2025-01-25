@@ -2,6 +2,13 @@
 title: 'Requiem rozbiorowe'
 author: Zbik
 pub_date: '2011-12-31 18:46:52.925513+00:00'
+link_youtube: https://www.youtube.com/watch?v=Pj8_mSnp5yU
+score1: scores/requiem_rozbiorowe1_1.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/requiem_rozbiorowe1_1.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/requiem_rozbiorowe1_1.png.180x0_q85_upscale.jpg
+score2: scores/requiem_rozbiorowe2.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/requiem_rozbiorowe2.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/requiem_rozbiorowe2.png.180x0_q85_upscale.jpg
 ---
 
 #poczatek

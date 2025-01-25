@@ -2,6 +2,10 @@
 title: 'Bal u Pana Boga'
 author: jakubkwa
 pub_date: '2015-08-17 22:51:04.473813+00:00'
+link_youtube: https://www.youtube.com/watch?v=mz2eAkJcmCg
+score1: scores/bal_u_pana_boga_nuty.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/bal_u_pana_boga_nuty.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/bal_u_pana_boga_nuty.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

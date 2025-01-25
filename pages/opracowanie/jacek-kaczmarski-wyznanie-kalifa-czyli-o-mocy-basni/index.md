@@ -2,6 +2,14 @@
 title: 'Wyznanie kalifa, czyli o mocy baśni'
 author: Zbik
 pub_date: '2018-10-15 19:51:44.001064+00:00'
+link_youtube: https://www.youtube.com/watch?v=nJ17pHHXFN0
+capo_fret: 1
+score1: scores/wyznanie_kalifa_01.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wyznanie_kalifa_01.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wyznanie_kalifa_01.png.180x0_q85_upscale.png
+score2: scores/wyznanie_kalifa_02.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/wyznanie_kalifa_02.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wyznanie_kalifa_02.png.180x0_q85_upscale.png
 ---
 
 [F F0 Es0 E]

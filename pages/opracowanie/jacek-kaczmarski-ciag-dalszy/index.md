@@ -2,6 +2,10 @@
 title: 'Ciąg dalszy'
 author: Zbik
 pub_date: '2018-07-30 19:56:03.804981+00:00'
+link_youtube: https://www.youtube.com/watch?v=n6SjxtqAcDM
+score1: scores/ciag_dalszy.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ciag_dalszy.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ciag_dalszy.png.180x0_q85_upscale.png
 ---
 
 #zwrotka1

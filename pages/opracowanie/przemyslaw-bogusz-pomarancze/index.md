@@ -2,6 +2,7 @@
 title: 'Pomarańcze'
 author: DX
 pub_date: '2011-05-09 15:55:25.434180+00:00'
+link_youtube: https://www.youtube.com/watch?v=JQXPqdg10NY
 ---
 
 #zwrotka

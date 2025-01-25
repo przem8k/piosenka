@@ -34,6 +34,17 @@ def create_file_content(item, content):
         frontmatter_lines.append(f"author: {item.author}")
     if item.pub_date:
         frontmatter_lines.append(f"pub_date: '{item.pub_date}'")
+    if hasattr(item, "disambig") and item.disambig:
+        frontmatter_lines.append(f"disambig: {item.disambig}")
+    if hasattr(item, "original_title") and item.original_title:
+        frontmatter_lines.append(f"original_title: {item.original_title}")
+    if hasattr(item, "epigone") and item.epigone:
+        frontmatter_lines.append(f"epigone: {item.epigone}")
+    if hasattr(item, "link_youtube") and item.link_youtube:
+        frontmatter_lines.append(f"link_youtube: {item.link_youtube}")
+    if hasattr(item, "capo_fret") and item.capo_fret:
+        frontmatter_lines.append(f"capo_fret: {item.capo_fret}")
+
     if hasattr(item, "url1") and item.url1:
         frontmatter_lines.append(f"url1: {item.url1}")
     if hasattr(item, "url2") and item.url2:
@@ -42,6 +53,23 @@ def create_file_content(item, content):
         frontmatter_lines.append(f"ref1: {item.ref1}")
     if hasattr(item, "ref2") and item.ref2:
         frontmatter_lines.append(f"ref2: {item.ref2}")
+
+    for score_name in ["score1", "score2", "score3"]:
+        if not hasattr(item, score_name):
+            continue
+
+        score_field = getattr(item, score_name)
+        if not score_field:
+            continue
+
+        frontmatter_lines.append(f"{score_name}: {score_field.name}")
+
+        full_url = PZT_MEDIA_URL + score_field.name
+        frontmatter_lines.append(f"{score_name}_full: {full_url}")
+
+        thumbnailer = get_thumbnailer(score_field)
+        thumbnail = thumbnailer["scorethumb"]
+        frontmatter_lines.append(f"{score_name}_thumb: {thumbnail.url}")
 
     if hasattr(item, "cover_image") and item.cover_image:
         frontmatter_lines.append(f"cover_image: {item.cover_image.name}")
@@ -54,9 +82,10 @@ def create_file_content(item, content):
 
         thumbnail_mini = thumbnailer["coverthumb"]
         frontmatter_lines.append(f"cover_image_thumb_420_210: {thumbnail_mini.url}")
-    if hasattr(item, "cover_credits_trevor") and item.cover_credits_trevor:
-        credits = trevor_to_md(item.cover_credits_trevor)
-        frontmatter_lines.append(f"cover_credits: '{credits}'")
+        if hasattr(item, "cover_credits_trevor") and item.cover_credits_trevor:
+            credits = trevor_to_md(item.cover_credits_trevor)
+            frontmatter_lines.append(f"cover_credits: '{credits}'")
+
     if hasattr(item, "image") and item.image:
         frontmatter_lines.append(f"image: {item.image.name}")
 
@@ -163,7 +192,6 @@ class Command(BaseCommand):
                     file.write(content)
 
         for song in Song.objects.all():
-            # TODO: freeze missing Song attributes, e.g. scores, etc.
             # TODO: freeze contributions -> links to relevant artists
             dirname = song.slug
             print(f"Processing: {song} -> {dirname}")

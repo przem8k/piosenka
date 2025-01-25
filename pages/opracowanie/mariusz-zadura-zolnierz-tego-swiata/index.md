@@ -2,6 +2,7 @@
 title: 'Żołnierz tego świata'
 author: DX
 pub_date: '2011-10-02 18:01:05.543200+00:00'
+original_title: Universal soldier
 ---
 
 #zwrotka

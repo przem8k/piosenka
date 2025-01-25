@@ -2,6 +2,8 @@
 title: 'Skarga dziewcząt uciesznych'
 author: PrzemekL
 pub_date: '2014-09-05 20:48:48.441611+00:00'
+original_title: La complainte des filles de joie
+link_youtube: https://www.youtube.com/watch?v=9aGldXOsMiA
 ---
 
 #zw

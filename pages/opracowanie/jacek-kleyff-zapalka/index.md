@@ -2,6 +2,7 @@
 title: 'Zapałka'
 author: Zbik
 pub_date: '2012-06-12 12:34:17.025183+00:00'
+link_youtube: http://www.youtube.com/watch?v=NQ37AkwJveE
 ---
 
 #zwrotka

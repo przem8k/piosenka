@@ -2,6 +2,8 @@
 title: '„X”'
 author: Pan_Kmicic4
 pub_date: '2018-12-08 13:16:15.762411+00:00'
+link_youtube: https://www.youtube.com/watch?v=bFjGSK-5pw0
+capo_fret: 2
 ---
 
 #1

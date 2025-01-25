@@ -2,6 +2,10 @@
 title: 'Portret płonący'
 author: Zbik
 pub_date: '2018-08-03 10:24:44.172782+00:00'
+link_youtube: https://www.youtube.com/watch?v=Y-nmw01IRPw
+score1: scores/portret_plonacy.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/portret_plonacy.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/portret_plonacy.png.180x0_q85_upscale.png
 ---
 
 [e Fis0 H]

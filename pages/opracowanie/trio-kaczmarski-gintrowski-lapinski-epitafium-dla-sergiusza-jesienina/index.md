@@ -2,6 +2,17 @@
 title: 'Epitafium dla Sergiusza Jesienina'
 author: Zbik
 pub_date: '2011-08-30 15:02:59.640366+00:00'
+link_youtube: http://www.youtube.com/watch?v=5ADwzz-w68I
+capo_fret: 1
+score1: scores/jesienin1.jpg
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/jesienin1.jpg
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/jesienin1.jpg.180x0_q85_upscale.jpg
+score2: scores/jesienin2.jpg
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/jesienin2.jpg
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/jesienin2.jpg.180x0_q85_upscale.jpg
+score3: scores/jesienin3.jpg
+score3_full: https://storage.googleapis.com/piosenka-media/media/scores/jesienin3.jpg
+score3_thumb: https://storage.googleapis.com/piosenka-media/media/scores/jesienin3.jpg.180x0_q85_upscale.jpg
 ---
 
 Wściekła się Wielka Niedźwiedzica [d B0/D]

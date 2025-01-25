@@ -2,6 +2,10 @@
 title: 'Jeszcze dzień'
 author: PrzemekL
 pub_date: '2015-04-10 15:13:48.988140+00:00'
+link_youtube: https://www.youtube.com/watch?v=akJeq9rIqU4
+score1: scores/jeszcze_dzien.jpg
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/jeszcze_dzien.jpg
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/jeszcze_dzien.jpg.180x0_q85_upscale.jpg
 ---
 
 #zw

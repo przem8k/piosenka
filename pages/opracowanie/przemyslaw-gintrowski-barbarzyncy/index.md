@@ -2,6 +2,10 @@
 title: 'Barbarzyńcy'
 author: Pan_Kmicic4
 pub_date: '2018-07-23 19:16:35.084276+00:00'
+link_youtube: https://www.youtube.com/watch?v=FlZg0utWqg0
+score1: scores/barbarzycy.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/barbarzycy.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/barbarzycy.png.180x0_q85_upscale.png
 ---
 
 #1

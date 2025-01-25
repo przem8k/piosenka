@@ -2,6 +2,11 @@
 title: 'Bar w Folies-Bergère'
 author: Zbik
 pub_date: '2011-10-16 15:35:23.768468+00:00'
+link_youtube: https://www.youtube.com/watch?v=lQq63h5eyL8
+capo_fret: 1
+score1: scores/bar_w_folies_bergere.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/bar_w_folies_bergere.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/bar_w_folies_bergere.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka1

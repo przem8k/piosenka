@@ -2,6 +2,10 @@
 title: 'Wydarzenie w knajpie'
 author: Zbik
 pub_date: '2018-08-04 16:18:05.536356+00:00'
+link_youtube: https://www.youtube.com/watch?v=S5ya5ni3wOU
+score1: scores/wydarzenie_w_knajpie.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/wydarzenie_w_knajpie.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wydarzenie_w_knajpie.png.180x0_q85_upscale.png
 ---
 
 #zwrotka

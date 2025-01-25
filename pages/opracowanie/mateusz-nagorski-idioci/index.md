@@ -2,6 +2,7 @@
 title: 'Idioci'
 author: spooky
 pub_date: '2013-01-29 09:58:05.997792+00:00'
+capo_fret: 2
 ---
 
 #zw

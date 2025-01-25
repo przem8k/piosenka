@@ -2,6 +2,11 @@
 title: 'Obława IV'
 author: jakubkwa
 pub_date: '2016-01-26 18:58:16.244445+00:00'
+link_youtube: https://www.youtube.com/watch?v=rMMS8Tv7MJs
+capo_fret: 1
+score1: scores/oblawa_iv.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/oblawa_iv.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/oblawa_iv.png.180x0_q85_upscale.png
 ---
 
 #zw

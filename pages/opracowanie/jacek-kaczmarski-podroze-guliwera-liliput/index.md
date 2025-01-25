@@ -2,6 +2,17 @@
 title: 'Podróże Guliwera. Liliput'
 author: Zbik
 pub_date: '2012-04-23 22:31:43.760533+00:00'
+link_youtube: https://www.youtube.com/watch?v=zfbefw2zjTI
+capo_fret: 2
+score1: scores/liliput1.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/liliput1.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/liliput1.png.180x0_q85_upscale.jpg
+score2: scores/liliput2.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/liliput2.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/liliput2.png.180x0_q85_upscale.jpg
+score3: scores/liliput3.png
+score3_full: https://storage.googleapis.com/piosenka-media/media/scores/liliput3.png
+score3_thumb: https://storage.googleapis.com/piosenka-media/media/scores/liliput3.png.180x0_q85_upscale.jpg
 ---
 
 Jak ciężko żyć wśród małych ludzi [E A E (A)]

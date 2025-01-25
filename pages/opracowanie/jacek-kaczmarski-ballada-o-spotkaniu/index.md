@@ -2,6 +2,8 @@
 title: 'Ballada o spotkaniu'
 author: Zbik
 pub_date: '2018-07-30 17:46:54.625778+00:00'
+link_youtube: https://www.youtube.com/watch?v=YZ9XZBvWWGA
+capo_fret: 1
 ---
 
 #zwrotka1

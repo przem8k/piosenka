@@ -2,6 +2,7 @@
 title: 'Żołnierzom wyklętym'
 author: Zbik
 pub_date: '2012-07-22 23:22:24.231014+00:00'
+link_youtube: http://www.youtube.com/watch?v=5tUzxYfZ6hY
 ---
 
 #zwrotka

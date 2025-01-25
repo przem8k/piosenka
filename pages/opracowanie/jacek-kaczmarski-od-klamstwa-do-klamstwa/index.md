@@ -2,6 +2,8 @@
 title: 'Od kłamstwa do kłamstwa'
 author: Pan_Kmicic4
 pub_date: '2018-10-09 14:55:34.857318+00:00'
+link_youtube: https://www.youtube.com/watch?v=i4OOD8_9hYA
+capo_fret: 2
 ---
 
 #1

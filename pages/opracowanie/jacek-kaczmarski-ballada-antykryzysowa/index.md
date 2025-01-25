@@ -2,6 +2,8 @@
 title: 'Ballada antykryzysowa'
 author: Zbik
 pub_date: '2018-10-24 11:49:46.672860+00:00'
+link_youtube: https://www.youtube.com/watch?v=a-2VX2rqkmw
+capo_fret: 3
 ---
 
 #zwrotka

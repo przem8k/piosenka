@@ -2,6 +2,14 @@
 title: 'Somosierra'
 author: DX
 pub_date: '2011-05-09 23:14:53.606780+00:00'
+link_youtube: https://www.youtube.com/watch?v=G2QiddS2TMs
+capo_fret: 3
+score1: scores/samosierra.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/samosierra.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/samosierra.png.180x0_q85_upscale.jpg
+score2: scores/samosierra2.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/samosierra2.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/samosierra2.png.180x0_q85_upscale.jpg
 ---
 
 [a a a a]

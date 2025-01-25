@@ -2,6 +2,14 @@
 title: 'Upadek Ikara'
 author: Pan_Kmicic4
 pub_date: '2018-09-06 19:05:05.585633+00:00'
+link_youtube: https://www.youtube.com/watch?v=Rx7oTKXZqUw
+capo_fret: 2
+score1: scores/upadek_ikara1.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/upadek_ikara1.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/upadek_ikara1.png.180x0_q85_upscale.png
+score2: scores/upadek_ikara2.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/upadek_ikara2.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/upadek_ikara2.png.180x0_q85_upscale.png
 ---
 
 #1

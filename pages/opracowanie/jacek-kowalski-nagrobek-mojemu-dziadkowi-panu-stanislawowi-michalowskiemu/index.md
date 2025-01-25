@@ -2,6 +2,8 @@
 title: 'Nagrobek mojemu dziadkowi, panu Stanisławowi Michałowskiemu'
 author: Zbik
 pub_date: '2021-11-03 14:58:55.952286+00:00'
+link_youtube: https://www.youtube.com/watch?v=s4kTH-gRy2g
+capo_fret: 3
 ---
 
 #zwrotka

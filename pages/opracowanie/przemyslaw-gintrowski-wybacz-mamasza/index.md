@@ -2,6 +2,7 @@
 title: 'Wybacz, mamasza'
 author: Zbik
 pub_date: '2022-08-30 13:35:49.144253+00:00'
+link_youtube: https://www.youtube.com/watch?v=TPj3jI5Bjio
 ---
 
 Jutro cię wezmę ze szpitalnych sal, [e h7]

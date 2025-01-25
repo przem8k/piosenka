@@ -2,6 +2,13 @@
 title: 'Epitafium dla Sowizdrzała'
 author: DX
 pub_date: '2017-05-14 09:33:15.932859+00:00'
+link_youtube: https://www.youtube.com/watch?v=L5sCm9-FX2Y
+score1: scores/sowizdrzal01.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/sowizdrzal01.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/sowizdrzal01.png.180x0_q85_upscale.png
+score2: scores/sowizdrzal02.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/sowizdrzal02.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/sowizdrzal02.png.180x0_q85_upscale.png
 ---
 
 #narrator

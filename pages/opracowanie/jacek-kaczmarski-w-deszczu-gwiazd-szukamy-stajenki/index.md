@@ -2,6 +2,8 @@
 title: 'W deszczu gwiazd...'
 author: Zbik
 pub_date: '2018-10-11 15:34:25.339015+00:00'
+disambig: Szukamy stajenki
+link_youtube: https://www.youtube.com/watch?v=rF9yleBDaDQ&list=PLvf8sZX2NTQgML5IJEoJAz72ChFWtzvuW
 ---
 
 W deszczu gwiazd nieszczęście – lub Dobra Nowina. [d]

@@ -2,6 +2,7 @@
 title: 'Solidarność'
 author: Zbik
 pub_date: '2011-10-15 21:23:28.096733+00:00'
+link_youtube: http://www.youtube.com/watch?v=KKAqyNcFhRA
 ---
 
 #zw

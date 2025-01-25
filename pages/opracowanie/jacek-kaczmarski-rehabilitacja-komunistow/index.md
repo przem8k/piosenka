@@ -2,6 +2,10 @@
 title: 'Rehabilitacja komunistów'
 author: PrzemekL
 pub_date: '2014-09-04 22:21:26.266343+00:00'
+link_youtube: https://www.youtube.com/watch?v=W0C31lYeiXE
+score1: scores/Rehabilitacja_komunistow.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/Rehabilitacja_komunistow.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Rehabilitacja_komunistow.png.180x0_q85_upscale.jpg
 ---
 
 #zw

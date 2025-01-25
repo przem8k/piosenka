@@ -2,6 +2,8 @@
 title: 'Rozterka'
 author: Zbik
 pub_date: '2018-08-22 09:48:01.598992+00:00'
+link_youtube: https://www.youtube.com/watch?v=j8LfZQHrg7A
+capo_fret: 3
 ---
 
 #zwrotka

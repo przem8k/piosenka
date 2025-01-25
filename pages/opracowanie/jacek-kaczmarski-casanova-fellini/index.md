@@ -2,6 +2,16 @@
 title: 'Casanova – Fellini'
 author: Zbik
 pub_date: '2018-07-17 17:37:42.330204+00:00'
+link_youtube: https://www.youtube.com/watch?v=sVNbY624Cmg
+score1: scores/casanova_-_fellini_1.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/casanova_-_fellini_1.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/casanova_-_fellini_1.png.180x0_q85_upscale.png
+score2: scores/casanova_-_fellini_2.png
+score2_full: https://storage.googleapis.com/piosenka-media/media/scores/casanova_-_fellini_2.png
+score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/casanova_-_fellini_2.png.180x0_q85_upscale.png
+score3: scores/casanova_-_fellini_3.png
+score3_full: https://storage.googleapis.com/piosenka-media/media/scores/casanova_-_fellini_3.png
+score3_thumb: https://storage.googleapis.com/piosenka-media/media/scores/casanova_-_fellini_3.png.180x0_q85_upscale.png
 ---
 
 [E H D A H]

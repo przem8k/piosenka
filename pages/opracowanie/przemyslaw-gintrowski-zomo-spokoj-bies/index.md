@@ -2,6 +2,7 @@
 title: 'Zomo – Spokój – Bies'
 author: reuter
 pub_date: '2014-10-05 21:34:15.974833+00:00'
+link_youtube: https://www.youtube.com/watch?v=v4B9JmmYLZ8
 ---
 
 Powyciągali nieszczęśliwe ludzkie zwierzęta [e D/Fis]

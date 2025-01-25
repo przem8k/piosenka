@@ -2,6 +2,10 @@
 title: 'Epitafium dla Brunona Jasieńskiego'
 author: AŁ
 pub_date: '2012-04-06 16:18:21.594827+00:00'
+link_youtube: https://www.youtube.com/watch?v=Pd69GqxEsdY
+score1: scores/epitafium_dla_brunona_jasienskiego.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/epitafium_dla_brunona_jasienskiego.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/epitafium_dla_brunona_jasienskiego.png.180x0_q85_upscale.jpg
 ---
 
 Europa się wędzi niby łosoś królewski [E A]

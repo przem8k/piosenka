@@ -2,6 +2,7 @@
 title: 'Miś Poldek'
 author: PrzemekL
 pub_date: '2019-10-07 23:21:15.929638+00:00'
+link_youtube: https://www.youtube.com/watch?v=941gaG9LoPo
 ---
 
 [a F d E a F d E]  

@@ -2,6 +2,11 @@
 title: 'Rechot Słowackiego'
 author: reuter
 pub_date: '2017-06-14 18:07:43.922190+00:00'
+link_youtube: https://www.youtube.com/watch?v=CbgDBzEse2I
+capo_fret: 2
+score1: scores/rechot_slowackiego.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/rechot_slowackiego.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/rechot_slowackiego.png.180x0_q85_upscale.png
 ---
 
 #zw

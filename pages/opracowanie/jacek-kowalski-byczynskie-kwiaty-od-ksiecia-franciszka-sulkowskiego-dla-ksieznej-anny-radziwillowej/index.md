@@ -2,6 +2,7 @@
 title: 'Byczyńskie kwiaty od księcia Franciszka Sułkowskiego dla księżnej Anny Radziwiłłowej'
 author: RK
 pub_date: '2012-04-08 21:30:48.088591+00:00'
+link_youtube: http://www.youtube.com/watch?v=95VEN2RRlyA
 ---
 
 #zwrotka

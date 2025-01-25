@@ -2,6 +2,8 @@
 title: 'Marinette'
 author: DX
 pub_date: '2016-05-18 21:52:50.253283+00:00'
+original_title: Marinette
+link_youtube: https://www.youtube.com/watch?v=5gquJuwEupE
 ---
 
 [D D/Dis D/E D/A]

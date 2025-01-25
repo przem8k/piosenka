@@ -2,6 +2,11 @@
 title: 'Rondo, czyli piosenka o kacu-gigancie'
 author: Zbik
 pub_date: '2018-08-08 12:17:39.478216+00:00'
+link_youtube: https://www.youtube.com/watch?v=JhIMJ8000Js
+capo_fret: 3
+score1: scores/rondo.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/rondo.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/rondo.png.180x0_q85_upscale.png
 ---
 
 #zwrotka1

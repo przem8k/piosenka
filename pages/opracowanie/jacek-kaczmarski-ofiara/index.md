@@ -2,6 +2,10 @@
 title: 'Ofiara'
 author: Zbik
 pub_date: '2018-02-25 17:14:44.956483+00:00'
+link_youtube: https://www.youtube.com/watch?v=1ZJ5x-GAuoc
+score1: scores/ofiara.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/ofiara.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/ofiara.png.180x0_q85_upscale.png
 ---
 
 #zwrotka

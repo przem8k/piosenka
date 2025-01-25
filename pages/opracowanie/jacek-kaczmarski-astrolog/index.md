@@ -2,6 +2,11 @@
 title: 'Astrolog'
 author: jakubkwa
 pub_date: '2015-08-17 22:23:43.580788+00:00'
+link_youtube: https://www.youtube.com/watch?v=-COfxlJ-CNE
+capo_fret: 3
+score1: scores/astrolog.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/astrolog.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/astrolog.png.180x0_q85_upscale.jpg
 ---
 
 #zwrotka

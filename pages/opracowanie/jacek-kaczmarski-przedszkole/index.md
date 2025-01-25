@@ -2,6 +2,10 @@
 title: 'Przedszkole'
 author: Pan_Kmicic4
 pub_date: '2018-08-01 19:35:13.171324+00:00'
+link_youtube: https://www.youtube.com/watch?v=zpx-RHpgNms
+score1: scores/przedszkole.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/przedszkole.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/przedszkole.png.180x0_q85_upscale.png
 ---
 
 #1

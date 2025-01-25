@@ -2,6 +2,7 @@
 title: 'Przebudzenie'
 author: Pan_Kmicic4
 pub_date: '2018-10-08 15:12:55.358555+00:00'
+link_youtube: https://www.youtube.com/watch?v=7WxQZDXn78c
 ---
 
 #1

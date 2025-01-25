@@ -2,6 +2,11 @@
 title: 'Martwa natura'
 author: Zbik
 pub_date: '2011-08-30 19:35:59.601163+00:00'
+link_youtube: http://www.youtube.com/watch?v=1FT_IJ6bLiM
+capo_fret: 2
+score1: scores/martwa_natura.png
+score1_full: https://storage.googleapis.com/piosenka-media/media/scores/martwa_natura.png
+score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/martwa_natura.png.180x0_q85_upscale.jpg
 ---
 
 Stół, gdzie podaje się wolę, [a d]
