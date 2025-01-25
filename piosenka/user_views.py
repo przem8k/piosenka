@@ -14,6 +14,7 @@ from django.utils.decorators import method_decorator
 from django.views.generic import TemplateView, View
 from django.views.generic.edit import CreateView, FormView
 
+
 class ResetPassword(PasswordResetView):
     template_name = "reset_password.html"
     success_url = reverse_lazy("index")

@@ -1,15 +1,15 @@
 """Freezes the db entities as static pages."""
 
-import os
 import datetime
+import os
+
+from django.core.management.base import BaseCommand
+from django.utils.text import slugify
+from easy_thumbnails.files import get_thumbnailer
 from unidecode import unidecode
 
-from songs.models import Artist,  ArtistNote, Song, SongNote
-from django.core.management.base import BaseCommand
-from easy_thumbnails.files import get_thumbnailer
-
 from content.trevor import trevor_to_md
-from django.utils.text import slugify
+from songs.models import Artist, ArtistNote, Song, SongNote
 
 PAGES = ["o-stronie"]
 
@@ -32,7 +32,7 @@ def create_file_content(item, markdown_text):
         frontmatter_lines.append(f"author: {item.author}")
     if item.pub_date:
         frontmatter_lines.append(f"pub_date: '{item.pub_date}'")
-    if hasattr(item, 'cover_image') and item.cover_image:
+    if hasattr(item, "cover_image") and item.cover_image:
         frontmatter_lines.append(f"cover_image: {item.cover_image.name}")
         full_url = PZT_MEDIA_URL + item.cover_image.name
         frontmatter_lines.append(f"cover_image_full: {full_url}")
@@ -42,7 +42,7 @@ def create_file_content(item, markdown_text):
         frontmatter_lines.append(f"cover_image_thumb_600_300: {thumbnail_cover.url}")
         thumbnail_mini = thumbnailer["coverthumb"]
         frontmatter_lines.append(f"cover_image_thumb_420_210: {thumbnail_mini.url}")
-    if hasattr(item, 'cover_credits_trevor') and item.cover_credits_trevor:
+    if hasattr(item, "cover_credits_trevor") and item.cover_credits_trevor:
         credits = trevor_to_md(item.cover_credits_trevor)
         frontmatter_lines.append(f"cover_credits: '{credits}'")
 
@@ -50,11 +50,12 @@ def create_file_content(item, markdown_text):
     frontmatter = "\n".join(frontmatter_lines)
     return f"{frontmatter}\n\n{markdown_text}"
 
+
 def create_artist_file_content(item):
     cat_to_str = {
-        Artist.CAT_POLISH: 'POLISH',
-        Artist.CAT_FOREIGN: 'FOREIGN',
-        Artist.CAT_COMMUNITY: 'COMMUNITY',
+        Artist.CAT_POLISH: "POLISH",
+        Artist.CAT_FOREIGN: "FOREIGN",
+        Artist.CAT_COMMUNITY: "COMMUNITY",
     }
 
     frontmatter_lines = ["---"]
@@ -77,8 +78,7 @@ def create_artist_file_content(item):
 
 def freeze_song_calendar():
     notes = (
-        SongNote.objects
-        .filter(date__isnull=False)
+        SongNote.objects.filter(date__isnull=False)
         .exclude(date_description="")
         .order_by("-date")
     )
@@ -92,10 +92,15 @@ def freeze_song_calendar():
     frontmatter_lines.append("---")
     frontmatter = "\n".join(frontmatter_lines)
 
-    content_lines = ['Piosenki wg. daty wydarzenia historycznego które je zainspirowało:', '']
+    content_lines = [
+        "Piosenki wg. daty wydarzenia historycznego które je zainspirowało:",
+        "",
+    ]
     for note in notes:
         song_link = f"[{note.song}]({note.song.get_absolute_url()})"
-        content_lines.append(f' - {note.date.strftime("%d.%m.%Y")}: {song_link}, {note.date_description}')
+        content_lines.append(
+            f' - {note.date.strftime("%d.%m.%Y")}: {song_link}, {note.date_description}'
+        )
     content = "\n".join(content_lines)
     return f"{frontmatter}\n\n{content}"
 
@@ -133,8 +138,6 @@ class Command(BaseCommand):
                 content = create_file_content(note, markdown_text)
                 with open(file_path, "w") as file:
                     file.write(content)
-
-
 
         # dir_path = os.path.join(ROOT_PATH, "pages", "artykuly", "historia-w-piosence")
         # os.makedirs(dir_path, exist_ok=True)

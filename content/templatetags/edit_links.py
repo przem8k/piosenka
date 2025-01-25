@@ -10,8 +10,8 @@ def edit_links(item, user, approve_label, edit_label):
         return ""
 
     elements = []
-    if hasattr(item, 'can_be_approved_by') and item.can_be_approved_by(user):
+    if hasattr(item, "can_be_approved_by") and item.can_be_approved_by(user):
         elements.append('<a href="%s">%s</a>' % (item.get_approve_url(), approve_label))
-    if hasattr(item, 'can_be_edited_by') and item.can_be_edited_by(user):
+    if hasattr(item, "can_be_edited_by") and item.can_be_edited_by(user):
         elements.append('<a href="%s">%s</a>' % (item.get_edit_url(), edit_label))
     return mark_safe(" | ".join(elements))

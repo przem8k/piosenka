@@ -2,12 +2,11 @@ import os
 from datetime import datetime
 
 import yaml
+from bs4 import BeautifulSoup
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.template import Context, Template, loader
 from markdown2 import markdown
-
-from bs4 import BeautifulSoup
 
 PAGES = ["o-stronie"]
 
@@ -54,6 +53,7 @@ def make_context_for_page(frontmatter_data, content_markdown, section=None):
 
     return context_data
 
+
 def make_context_item_for_article_index(slug, frontmatter_data, content_markdown):
     content_html = markdown(content_markdown, extras=["strip"])
     # Extract text, removing all tags
@@ -67,13 +67,14 @@ def make_context_item_for_article_index(slug, frontmatter_data, content_markdown
             lead = lead[:last_space]
         lead += "..."
     res = {
-            "title": frontmatter_data.get("title"),
-            "get_absolute_url": f"/artykuly/{slug}/",
-            "lead_html": lead,
-            "thumb_url": frontmatter_data.get("cover_image_thumb_420_210"),
-            "pub_date": frontmatter_data.get("pub_date"),
-        }
+        "title": frontmatter_data.get("title"),
+        "get_absolute_url": f"/artykuly/{slug}/",
+        "lead_html": lead,
+        "thumb_url": frontmatter_data.get("cover_image_thumb_420_210"),
+        "pub_date": frontmatter_data.get("pub_date"),
+    }
     return res
+
 
 def make_context_item_for_post_index(slug, frontmatter_data, content_markdown):
     content_text = markdown(content_markdown, extras=["strip"])
@@ -86,13 +87,13 @@ def make_context_item_for_post_index(slug, frontmatter_data, content_markdown):
         lead += "..."
         read_more = True
     res = {
-            "title": frontmatter_data.get("title"),
-            "get_absolute_url": f"/blog/{slug}/",
-            "lead_html": lead,
-            "read_more": read_more,
-            "pub_date": frontmatter_data.get("pub_date"),
-            "author": frontmatter_data.get("author"),
-        }
+        "title": frontmatter_data.get("title"),
+        "get_absolute_url": f"/blog/{slug}/",
+        "lead_html": lead,
+        "read_more": read_more,
+        "pub_date": frontmatter_data.get("pub_date"),
+        "author": frontmatter_data.get("author"),
+    }
     return res
 
 
@@ -138,7 +139,9 @@ class Command(BaseCommand):
             write_page(context, "page.html", out_file_path)
 
             slug = os.path.relpath(subdir, article_dir_path).strip("/")
-            articles.append(make_context_item_for_article_index(slug, frontmatter_data, content))
+            articles.append(
+                make_context_item_for_article_index(slug, frontmatter_data, content)
+            )
         articles.sort(key=lambda x: x["pub_date"], reverse=True)
         context = {
             "articles": articles,
@@ -159,13 +162,13 @@ class Command(BaseCommand):
             os.makedirs(out_dir, exist_ok=True)
             out_file_path = os.path.join(out_dir, "index.html")
 
-            context = make_context_for_page(
-                frontmatter_data, content, section="blog"
-            )
+            context = make_context_for_page(frontmatter_data, content, section="blog")
             write_page(context, "page.html", out_file_path)
-            
+
             slug = os.path.relpath(subdir, article_dir_path).strip("/")
-            posts.append(make_context_item_for_post_index(slug, frontmatter_data, content))
+            posts.append(
+                make_context_item_for_post_index(slug, frontmatter_data, content)
+            )
         posts.sort(key=lambda x: x["pub_date"], reverse=True)
         context = {
             "all_posts": posts,

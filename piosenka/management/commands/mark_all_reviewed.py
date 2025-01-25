@@ -1,9 +1,9 @@
 """Marks all items of all content types as reviewed."""
 
 from articles.models import Article
+from blog.models import Post
 from django.core.management.base import BaseCommand
 
-from blog.models import Post
 from songs.models import Artist, ArtistNote, Song, SongNote
 
 
