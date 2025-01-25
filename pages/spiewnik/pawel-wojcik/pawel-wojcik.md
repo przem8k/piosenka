@@ -8,4 +8,4 @@ image_thumb: https://storage.googleapis.com/piosenka-media/media/artists/1352812
 image_author: Radosław Łabarzewski
 ---
 
-Płocki artysta, autor i wykonawca piosenek, laureat nagrody im. Wojciecha Bellona na 48 Festiwalu Piosenki Studenckiej w Krakowie. [Debiutował](http://www.piosenkaztekstem.pl/artykuly/ix\-festiwal\-piosenki\-poetyckiej\-im\-jacka\-kaczmarskiego\-nadzieja/) w 2012 roku na festiwalu im. Jacka Kaczmarskiego w Kołobrzegu piosenką [Toasty](http://www.piosenkaztekstem.pl/opracowanie/pawel\-wojcik\-toasty/).
+Płocki artysta, autor i wykonawca piosenek, laureat nagrody im. Wojciecha Bellona na 48 Festiwalu Piosenki Studenckiej w Krakowie. [Debiutował](/artykuly/ix-festiwal-piosenki-poetyckiej-im-jacka-kaczmarskiego-nadzieja/) w 2012 roku na festiwalu im. Jacka Kaczmarskiego w Kołobrzegu piosenką [Toasty](/opracowanie/pawel-wojcik-toasty/).
