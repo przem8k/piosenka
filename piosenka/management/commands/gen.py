@@ -15,6 +15,7 @@ PAGES = ["o-stronie"]
 ARTICLE_DIR = "artykuly"
 BLOG_DIR = "blog"
 SONGS_DIR = "opracowanie"
+ARTISTS_DIR = "spiewnik"
 
 CONTENT_DIR = "pages"
 OUT_DIR = "out"
@@ -71,6 +72,12 @@ def make_context_for_page(frontmatter_data, content_html, section=None):
         "image_src_url": frontmatter_data.get("image_src_url"),
         "image_author": frontmatter_data.get("image_author"),
         "image_license": frontmatter_data.get("image_license"),
+        # Artist-specific:
+        "name": frontmatter_data.get("name"),
+        "featured": frontmatter_data.get("featured"),
+        "category": frontmatter_data.get("category"),
+        "born_on": frontmatter_data.get("born_on"),
+        "died_on": frontmatter_data.get("died_on"),
     }
 
     if "cover_credits" in frontmatter_data:
@@ -130,6 +137,21 @@ def write_page(context_data, template, out_file):
     with open(out_file, "w") as f:
         f.write(rendered_template)
 
+
+def make_artist_list(artists_by_slug, artist_slugs):
+    ret = []
+    if not artist_slugs:
+        return ret
+
+    for artist_slug in artist_slugs:
+        assert artist_slug in artist_slugs
+        artist = artists_by_slug[artist_slug]
+        ret.append({
+            'name': artist.get("name"),
+            'get_absolute_url': f'/spiewnik/{artist_slug}/',
+            'featured': artist.get("featured"),
+        })
+    return ret
 
 class Command(BaseCommand):
     help = "Generates the static pages."
@@ -194,7 +216,7 @@ class Command(BaseCommand):
             context = make_context_for_page(frontmatter_data, content_html, section="blog")
             write_page(context, "page.html", out_file_path)
 
-            slug = os.path.relpath(subdir, article_dir_path).strip("/")
+            slug = os.path.relpath(subdir, blog_dir_path).strip("/")
             posts.append(
                 make_context_item_for_post_index(slug, frontmatter_data, content)
             )
@@ -206,6 +228,17 @@ class Command(BaseCommand):
         }
         out_file_path = os.path.join(OUT_DIR_PATH, BLOG_DIR, "index.html")
         write_page(context, "blog/index.html", out_file_path)
+
+        artists_dir_path = os.path.join(content_path, ARTISTS_DIR)
+        artists_by_slug = {}
+        songs_by_artist_slug = {}
+        for subdir, _, _ in os.walk(artists_dir_path):
+            index_md_path = os.path.join(subdir, "index.md")
+            if not os.path.exists(index_md_path):
+                continue
+            frontmatter_data, content = parse_file(index_md_path)
+            slug = os.path.relpath(subdir, artists_dir_path).strip("/")
+            artists_by_slug[slug] = make_context_for_page(frontmatter_data, "", section="songs")
 
         songs_dir_path = os.path.join(content_path, SONGS_DIR)
         songs = []
@@ -233,6 +266,10 @@ class Command(BaseCommand):
 
             content_html = lyrics.render_lyrics(content)
             context = make_context_for_page(frontmatter_data, content_html, section="songs")
+            context["text_authors"] = make_artist_list(artists_by_slug, context["text_authors"])
+            context["composers"] = make_artist_list(artists_by_slug, context["composers"])
+            context["translators"] = make_artist_list(artists_by_slug, context["translators"])
+            context["performers"] = make_artist_list(artists_by_slug, context["performers"])
             context["notes"] = notes
             write_page(context, "songs/song.html", out_file_path)
 
@@ -241,3 +278,29 @@ class Command(BaseCommand):
             #    make_context_item_for_post_index(slug, frontmatter_data, content)
             #)
         #posts.sort(key=lambda x: x["pub_date"], reverse=True)
+
+        # for subdir, _, _ in os.walk(artists_dir_path):
+        #     index_md_path = os.path.join(subdir, "index.md")
+        #     if not os.path.exists(index_md_path):
+        #         continue
+        #     frontmatter_data, content = parse_file(index_md_path)
+
+        #     notes = []
+        #     for root, _, files in os.walk(subdir):
+        #         for file in files:
+        #             if file == "index.md" or not file.endswith(".md"):
+        #                 continue
+        #             file_path = os.path.join(root, file)
+        #             print(f'{file_path}')
+        #             note_frontmatter_data, note_content = parse_file(file_path)
+        #             note_content_html = markdown(note_content, extras=["break-on-newline"])
+        #             note_context = make_context_for_page(note_frontmatter_data, note_content_html, section="songs")
+        #             notes.append(note_context)
+        #     out_dir = os.path.join(OUT_DIR_PATH, os.path.relpath(subdir, content_path))
+        #     os.makedirs(out_dir, exist_ok=True)
+        #     out_file_path = os.path.join(out_dir, "index.html")
+
+        #     content_html = lyrics.render_lyrics(content)
+        #     context = make_context_for_page(frontmatter_data, content_html, section="songs")
+        #     context["notes"] = notes
+        #     write_page(context, "songs/artist.html", out_file_path)
