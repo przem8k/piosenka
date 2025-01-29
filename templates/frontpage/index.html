@@ -5,7 +5,28 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      {% include "frontpage/new_posts.html" %}
+      <div class="section">
+        <!-- Featured blog post -->
+        <div class="content">
+          <h2 class="pzt-card-title">
+            {{ post.title }}
+          </h2>
+      
+          {{ post.content_html|safe }}
+          <p>
+            <a href="{{ post.get_absolute_url }}">Komentarze</a>.
+            <a href="/blog/">Więcej postów</a>.
+          </p>
+      
+          <hr />
+          <p class="remove-bottom-margin">
+            Dodany
+            <span class="date">{{ post.pub_date|date:"d.m.Y" }}</span>
+            przez <b>{{ post.author }}</b>
+          </p>
+        </div>
+      </div>
+      
       <div class="section">
         <h2 class="pzt-card-title">Ostatnie komentarze</h2>
           <div id="last-comments"></div>
@@ -16,15 +37,52 @@
       </div>
     </div>
     <div class="col-md-8">
-      {% include "frontpage/carousel.html" %}
+      <div class="section">
+        <div class="thumbnail-host">
+          <a href="{{ article.get_absolute_url }}">
+            <img src="{{ article.thumb_url }}" alt="Ilustracja artykułu {{ article.title }}" class="img-responsive pzt-max-width pzt-article-thumb" />
+            <div class="thumbnail-caption">
+              <p>{{ article.title }}</p>
+              <p>{{ article.lead_html|safe }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-6">
           {% include "frontpage/upcoming_events.html" %}
-          {% include "frontpage/annotation.html" %}
+          <div class="section">
+            <h2 class="pzt-card-title">{{ note.title }}</h2>
+            {% if note.image_thumb %}
+            <div class="pzt-thumbnail thumbnail-host">
+              <img src="{{note.image_thumb}}" />
+            </div>
+            {% endif %}
+            {{ note.content_html|safe }}
+            <p style="text-align: right;"><a href="{{ note.song.get_absolute_url }}">{{ note.song.title }}</a></p>
+          </div>
+          
         </div>
         <div class="col-md-6">
-          {% include "frontpage/new_songs.html" %}
-          {% include "frontpage/new_annotations.html" %}
+          <!-- New songs -->
+          <div class="section">
+            <h2 class="pzt-card-title">Nowe opracowania</h2>
+            <ul class="list-unstyled">
+              {% for song in songs %}
+              <li><a href="{{song.get_absolute_url}}">{{song.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          
+          <div class="section">
+            <h2 class="pzt-card-title">Nowe adnotacje</h2>
+            <ul class="list-unstyled">
+              {% for note in notes %}
+              <li><a href="{{note.get_absolute_url}}">{{note.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -7,6 +7,11 @@ handlers:
   static_dir: static
   secure: always
 
+- url: /
+  static_files: out/index.html
+  upload: out/index.html
+  secure: always
+
 - url: /artykuly/
   static_files: out/artykuly/index.html
   upload: out/artykuly/index.html
@@ -24,6 +29,15 @@ handlers:
 - url: /blog/(.*)/
   static_files: out/blog/\1/index.html
   upload: out/blog/.*/index.html
+
+- url: /spiewnik/
+  static_files: out/spiewnik/index.html
+  upload: out/spiewnik/index.html
+  secure: always
+
+- url: /spiewnik/(.*)/
+  static_files: out/spiewnik/\1/index.html
+  upload: out/spiewnik/.*/index.html
 
 - url: /opracowanie/(.*)/
   static_files: out/opracowanie/\1/index.html

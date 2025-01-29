@@ -13,7 +13,15 @@
     {% for artist in row %}
     <div class="col-md-4">
       <div class="section">
-        {% include "components/thumbnail.html" with img=artist.cover_note.image url=artist.get_absolute_url type="imagethumb" label=artist.name alt="Zdjęcie artysty {{ artist.name }}" %}
+        <a href="{{artist.get_absolute_url}}">
+          <div class="thumbnail-host">
+            <img src="{{artist.image_thumb}}" class="pzt-article-thumb" />
+            <div class="thumbnail-caption">
+              <h2>{{artist.name}}
+              </h2>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
     {% endfor %}
