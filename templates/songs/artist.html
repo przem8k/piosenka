@@ -43,15 +43,6 @@
       {% include "content/note.html" with note=note %}
       {% endfor %}
 
-      {% if user.is_authenticated and artist.get_add_note_url %}
-      <div class="section">
-        <h2 class="pzt-card-title">Dodaj adnotację</h2>
-        <p style="text-align: center">
-        <a href="{{ artist.get_add_note_url }}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
-        </p>
-      </div>
-      {% endif %}
-
       {% if epigone_songs %}
       <div class="section">
         <h2 class="pzt-card-title">Kompozycje epigońskie</h2>

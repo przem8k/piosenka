@@ -88,9 +88,6 @@ class Artist(SlugFieldMixin):
     def get_edit_url(self):
         return urls.reverse("edit_artist", kwargs=self.get_url_params())
 
-    def get_add_note_url(self):
-        return urls.reverse("add_artist_note", kwargs=self.get_url_params())
-
     @overrides(SlugFieldMixin)
     def get_slug_elements(self):
         return [self.name]
@@ -220,11 +217,6 @@ class Song(SlugLogicMixin, url_scheme.ViewEditReviewApprove, ContentItem):
 
     def get_url_params(self):
         return {"slug": self.slug}
-
-    def get_add_note_url(self):
-        if not self.reviewed:
-            return None
-        return urls.reverse("add_song_note", kwargs=self.get_url_params())
 
     def clean(self):
         try:
