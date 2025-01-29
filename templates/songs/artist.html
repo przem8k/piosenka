@@ -26,14 +26,13 @@
         <h2 class="pzt-card-title">Piosenki</h2>
         <ul class="list-unstyled">
           {% for song in songs %}
-          <li><a href="{{ song.get_absolute_url }}">{{ song|truncatechars:50 }}
+          <li><a href="{{ song.get_absolute_url }}">{{ song.title|truncatechars:50 }}
             {% if song.num_notes == 1 %}
             {% include 'components/icon.html' with type='tag' %}
             {% elif song.num_notes > 1 %}
             {% include 'components/icon.html' with type='tags' %}
             {% endif %}
             </a>
-            {% include "components/content_status_span.html" with item=song %}
           </li>
           {% endfor %}
         </ul>
@@ -66,7 +65,6 @@
               {% include 'components/icon.html' with type='tags' %}
               {% endif %}
               </a>
-              {% include "components/content_status_span.html" with item=song %}
             </li>
             {% endfor %}
           </ul>

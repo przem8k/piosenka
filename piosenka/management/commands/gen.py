@@ -55,6 +55,7 @@ def make_context_for_page(frontmatter_data, content_html, section=None):
         "performers": frontmatter_data.get("performers"),
         "capo": frontmatter_data.get("capo_fret"),
         "youtube_id": frontmatter_data.get("youtube_id"),
+        "epigone": frontmatter_data.get("epigone"),
         # Note-specific:
         "url1": frontmatter_data.get("url1"),
         "url2": frontmatter_data.get("url2"),
@@ -146,11 +147,7 @@ def make_artist_list(artists_by_slug, artist_slugs):
     for artist_slug in artist_slugs:
         assert artist_slug in artist_slugs
         artist = artists_by_slug[artist_slug]
-        ret.append({
-            'name': artist.get("name"),
-            'get_absolute_url': f'/spiewnik/{artist_slug}/',
-            'featured': artist.get("featured"),
-        })
+        ret.append(artist)
     return ret
 
 class Command(BaseCommand):
@@ -238,7 +235,9 @@ class Command(BaseCommand):
                 continue
             frontmatter_data, content = parse_file(index_md_path)
             artist_slug = os.path.relpath(subdir, artists_dir_path).strip("/")
-            artists_by_slug[artist_slug] = make_context_for_page(frontmatter_data, "", section="songs")
+            artist = make_context_for_page(frontmatter_data, "", section="songs")
+            artist["get_absolute_url"] = f'/spiewnik/{artist_slug}/'
+            artists_by_slug[artist_slug] = artist
             songs_by_artist_slug[artist_slug] = []
 
         songs_dir_path = os.path.join(content_path, SONGS_DIR)
@@ -248,6 +247,7 @@ class Command(BaseCommand):
             if not os.path.exists(index_md_path):
                 continue
             frontmatter_data, content = parse_file(index_md_path)
+            song_slug = os.path.relpath(subdir, songs_dir_path).strip("/")
 
             notes = []
             for root, _, files in os.walk(subdir):
@@ -267,14 +267,16 @@ class Command(BaseCommand):
 
             content_html = lyrics.render_lyrics(content)
             context = make_context_for_page(frontmatter_data, content_html, section="songs")
+            context["get_absolute_url"] = f'/opracowanie/{song_slug}/'
             artist_slugs = set(
                 (context["text_authors"] if context["text_authors"] else []) +
                 (context["composers"] if context["composers"] else []) +
                 (context["translators"] if context["translators"] else []) +
                 (context["performers"] if context["performers"] else [])
             )
-            for artist_slug in artist_slugs:
-                songs_by_artist_slug[artist_slug].append(context)
+            if not context["epigone"]:
+                for artist_slug in artist_slugs:
+                    songs_by_artist_slug[artist_slug].append(context)
             context["text_authors"] = make_artist_list(artists_by_slug, context["text_authors"])
             context["composers"] = make_artist_list(artists_by_slug, context["composers"])
             context["translators"] = make_artist_list(artists_by_slug, context["translators"])
@@ -321,28 +323,31 @@ class Command(BaseCommand):
         out_file_path = os.path.join(out_dir, "index.html")
         write_page(song_index_context, "songs/index.html", out_file_path)
 
-        # for subdir, _, _ in os.walk(artists_dir_path):
-        #     index_md_path = os.path.join(subdir, "index.md")
-        #     if not os.path.exists(index_md_path):
-        #         continue
-        #     frontmatter_data, content = parse_file(index_md_path)
+        for subdir, _, _ in os.walk(artists_dir_path):
+            index_md_path = os.path.join(subdir, "index.md")
+            if not os.path.exists(index_md_path):
+                continue
+            frontmatter_data, content = parse_file(index_md_path)
+            artist_slug = os.path.relpath(subdir, artists_dir_path).strip("/")
 
-        #     notes = []
-        #     for root, _, files in os.walk(subdir):
-        #         for file in files:
-        #             if file == "index.md" or not file.endswith(".md"):
-        #                 continue
-        #             file_path = os.path.join(root, file)
-        #             print(f'{file_path}')
-        #             note_frontmatter_data, note_content = parse_file(file_path)
-        #             note_content_html = markdown(note_content, extras=["break-on-newline"])
-        #             note_context = make_context_for_page(note_frontmatter_data, note_content_html, section="songs")
-        #             notes.append(note_context)
-        #     out_dir = os.path.join(OUT_DIR_PATH, os.path.relpath(subdir, content_path))
-        #     os.makedirs(out_dir, exist_ok=True)
-        #     out_file_path = os.path.join(out_dir, "index.html")
+            notes = []
+            for root, _, files in os.walk(subdir):
+                for file in files:
+                    if file == "index.md" or not file.endswith(".md"):
+                        continue
+                    file_path = os.path.join(root, file)
+                    print(f'{file_path}')
+                    note_frontmatter_data, note_content = parse_file(file_path)
+                    note_content_html = markdown(note_content, extras=["break-on-newline"])
+                    note_context = make_context_for_page(note_frontmatter_data, note_content_html, section="songs")
+                    notes.append(note_context)
+            out_dir = os.path.join(OUT_DIR_PATH, os.path.relpath(subdir, content_path))
+            os.makedirs(out_dir, exist_ok=True)
+            out_file_path = os.path.join(out_dir, "index.html")
 
-        #     content_html = lyrics.render_lyrics(content)
-        #     context = make_context_for_page(frontmatter_data, content_html, section="songs")
-        #     context["notes"] = notes
-        #     write_page(context, "songs/artist.html", out_file_path)
+            context = make_context_for_page(frontmatter_data, "", section="songs")
+            songs = songs_by_artist_slug[artist_slug]
+            songs.sort(key=lambda x: x["title"])
+            context["songs"] = songs
+            context["notes"] = notes
+            write_page(context, "songs/artist.html", out_file_path)

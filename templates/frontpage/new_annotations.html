@@ -2,7 +2,7 @@
   <h2 class="pzt-card-title">Nowe adnotacje</h2>
   <ul class="list-unstyled">
     {% for annotation in annotations %}
-    <li>{% include "components/content_link.html" with item=annotation %}</li>
+    <li><a href="{{annotation.get_absolute_url}}">{{annotation}}</a></li>
     {% endfor %}
   </ul>
 </div>

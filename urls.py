@@ -9,9 +9,6 @@ import piosenka.views
 admin.autodiscover()
 
 urlpatterns = [
-    # Songbook.
-    re_path(r"^spiewnik/", include("songs.urls_entity")),
-    re_path(r"^adnotacja/", include("songs.urls_annotation")),
     # Other sections.
     re_path(r"^wydarzenia/", include("events.urls")),
     # Site-search index.
