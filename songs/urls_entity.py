@@ -3,8 +3,6 @@ from django.urls import include, re_path
 from songs import views
 
 urlpatterns = [
-    re_path(r"^$", views.IndexView.as_view(), name="songbook"),
-    re_path(r"^dodaj/$", views.AddArtist.as_view(), name="add_artist"),
     re_path(
         r"^(?P<slug>[-\w]+)/",
         include(

@@ -5,7 +5,7 @@
       <ul class="list-unstyled">
         {% for artist in polish %}
         <li>
-          <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
+          <a href="{{ artist.get_absolute_url }}" title="{{artist.name}}">{{ artist.name }}</a>
         </li>
         {% endfor %}
       </ul>
@@ -17,7 +17,7 @@
       <ul class="list-unstyled">
         {% for artist in foreign %}
         <li>
-          <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
+          <a href="{{ artist.get_absolute_url }}" title="{{artist.name}}">{{ artist.name }}</a>
         </li>
         {% endfor %}
       </ul>
@@ -29,7 +29,7 @@
       <ul class="list-unstyled">
         {% for artist in community %}
         <li>
-          <a href="{{ artist.get_absolute_url }}" title="{{artist}}">{{ artist }}</a>
+          <a href="{{ artist.get_absolute_url }}" title="{{artist.name}}">{{ artist.name }}</a>
         </li>
         {% endfor %}
       </ul>

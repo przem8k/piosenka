@@ -237,8 +237,9 @@ class Command(BaseCommand):
             if not os.path.exists(index_md_path):
                 continue
             frontmatter_data, content = parse_file(index_md_path)
-            slug = os.path.relpath(subdir, artists_dir_path).strip("/")
-            artists_by_slug[slug] = make_context_for_page(frontmatter_data, "", section="songs")
+            artist_slug = os.path.relpath(subdir, artists_dir_path).strip("/")
+            artists_by_slug[artist_slug] = make_context_for_page(frontmatter_data, "", section="songs")
+            songs_by_artist_slug[artist_slug] = []
 
         songs_dir_path = os.path.join(content_path, SONGS_DIR)
         songs = []
@@ -266,18 +267,59 @@ class Command(BaseCommand):
 
             content_html = lyrics.render_lyrics(content)
             context = make_context_for_page(frontmatter_data, content_html, section="songs")
+            artist_slugs = set(
+                (context["text_authors"] if context["text_authors"] else []) +
+                (context["composers"] if context["composers"] else []) +
+                (context["translators"] if context["translators"] else []) +
+                (context["performers"] if context["performers"] else [])
+            )
+            for artist_slug in artist_slugs:
+                songs_by_artist_slug[artist_slug].append(context)
             context["text_authors"] = make_artist_list(artists_by_slug, context["text_authors"])
             context["composers"] = make_artist_list(artists_by_slug, context["composers"])
             context["translators"] = make_artist_list(artists_by_slug, context["translators"])
             context["performers"] = make_artist_list(artists_by_slug, context["performers"])
             context["notes"] = notes
+            context["num_notes"] = len(notes)
             write_page(context, "songs/song.html", out_file_path)
 
-            #slug = os.path.relpath(subdir, article_dir_path).strip("/")
-            #songs.append(
-            #    make_context_item_for_post_index(slug, frontmatter_data, content)
-            #)
-        #posts.sort(key=lambda x: x["pub_date"], reverse=True)
+        hero_artists = [
+            artists_by_slug["jacek-kaczmarski"],
+            artists_by_slug["jacek-kaczmarski"],
+            artists_by_slug["jacek-kaczmarski"],
+            artists_by_slug["jacek-kaczmarski"],
+            artists_by_slug["jacek-kaczmarski"],
+            artists_by_slug["jacek-kaczmarski"],
+        ]
+
+        polish_artists = []
+        foreign_artists = []
+        community_artists = []
+        for artist_slug, artist in artists_by_slug.items():
+            if not artist["featured"]:
+                continue
+
+            if artist["category"] == "POLISH":
+                polish_artists.append(artist)
+            elif artist["category"] == "FOREIGN":
+                foreign_artists.append(artist)
+            elif artist["category"] == "COMMUNITY":
+                community_artists.append(artist)
+
+        polish_artists.sort(key=lambda x: x["name"])
+        foreign_artists.sort(key=lambda x: x["name"])
+        community_artists.sort(key=lambda x: x["name"])
+
+        song_index_context = {
+            "hero_artists": hero_artists,
+            "polish": polish_artists,
+            "foreign": foreign_artists,
+            "community": community_artists,
+        }
+        out_dir = os.path.join(OUT_DIR_PATH, ARTISTS_DIR)
+        os.makedirs(out_dir, exist_ok=True)
+        out_file_path = os.path.join(out_dir, "index.html")
+        write_page(song_index_context, "songs/index.html", out_file_path)
 
         # for subdir, _, _ in os.walk(artists_dir_path):
         #     index_md_path = os.path.join(subdir, "index.md")
