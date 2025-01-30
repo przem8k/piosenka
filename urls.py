@@ -9,13 +9,10 @@ import piosenka.views
 admin.autodiscover()
 
 urlpatterns = [
-    # Site-search index.
-    re_path(r"^index/", include("piosenka.index")),
     # Search results.
     re_path(r"^szukaj/", piosenka.views.Search.as_view(), name="search"),
     # Admin and users.
     re_path(r"^admin/", admin.site.urls),
-    re_path(r"^redakcja/", include("piosenka.user_urls")),
 ]
 
 if settings.DEBUG:

@@ -53,6 +53,14 @@ handlers:
   upload: static/images/favicon\.ico
   secure: always
 
+- url: /index/artists.json
+  static_files: out/index/artists.json
+  upload: out/index/artists.json
+
+- url: /index/songs.json
+  static_files: out/index/songs.json
+  upload: out/index/songs.json
+
 # This handler routes all requests not caught above to your main app. It is
 # required when static routes are defined, but can be omitted (along with
 # the entire handlers section) when there are no static files defined.

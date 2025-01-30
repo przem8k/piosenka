@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+import json
 
 import yaml
 from bs4 import BeautifulSoup
@@ -115,7 +116,7 @@ def add_lead(context, content_html, lead_max_len=200):
             lead_html = lead_html[:last_space]
         lead_html += "..."
         read_more = True
-    
+
     context["lead_html"] = lead_html
     context["read_more"] = read_more
 
@@ -167,9 +168,7 @@ def generate_articles():
         os.makedirs(out_dir, exist_ok=True)
         out_file_path = os.path.join(out_dir, "index.html")
 
-        article_context = make_context_for_page(
-            frontmatter_data, section="articles"
-        )
+        article_context = make_context_for_page(frontmatter_data, section="articles")
         content_html = markdown(content, extras=["break-on-newline"])
         article_context["content_html"] = content_html
         article_slug = os.path.relpath(subdir, article_dir_path).strip("/")
@@ -178,9 +177,7 @@ def generate_articles():
         add_lead(article_context, content_html, 200)
 
         write_page(article_context, "page.html", out_file_path)
-        articles.append(
-            article_context
-        )
+        articles.append(article_context)
     articles.sort(key=lambda x: x["pub_date"], reverse=True)
     context = {
         "articles": articles,
@@ -189,6 +186,7 @@ def generate_articles():
     out_file_path = os.path.join(OUT_DIR_PATH, ARTICLE_DIR, "index.html")
     write_page(context, "articles/index.html", out_file_path)
     return articles
+
 
 def generate_posts():
     blog_dir_path = os.path.join(CONTENT_PATH, BLOG_DIR)
@@ -211,9 +209,7 @@ def generate_posts():
         add_lead(post_context, content_html, 500)
 
         write_page(post_context, "page.html", out_file_path)
-        posts.append(
-            post_context
-        )
+        posts.append(post_context)
     posts.sort(key=lambda x: x["pub_date"], reverse=True)
     context = {
         "all_posts": posts,
@@ -224,6 +220,7 @@ def generate_posts():
     write_page(context, "blog/index.html", out_file_path)
     return posts
 
+
 def parse_artists():
     artists_by_slug = {}
     for subdir, _, _ in os.walk(ARTISTS_DIR_PATH):
@@ -233,9 +230,10 @@ def parse_artists():
         frontmatter_data, content = parse_file(index_md_path)
         artist_slug = os.path.relpath(subdir, ARTISTS_DIR_PATH).strip("/")
         artist = make_context_for_page(frontmatter_data, section="songs")
-        artist["get_absolute_url"] = f'/spiewnik/{artist_slug}/'
+        artist["get_absolute_url"] = f"/spiewnik/{artist_slug}/"
         artists_by_slug[artist_slug] = artist
     return artists_by_slug
+
 
 def generate_songs(artists_by_slug):
     songs_by_artist_slug = {}
@@ -257,20 +255,24 @@ def generate_songs(artists_by_slug):
         content_html = lyrics.render_lyrics(content)
         context = make_context_for_page(frontmatter_data, section="songs")
         context["content_html"] = content_html
-        context["get_absolute_url"] = f'/opracowanie/{song_slug}/'
+        context["get_absolute_url"] = f"/opracowanie/{song_slug}/"
         artist_slugs = set(
-            (context["text_authors"] if context["text_authors"] else []) +
-            (context["composers"] if context["composers"] else []) +
-            (context["translators"] if context["translators"] else []) +
-            (context["performers"] if context["performers"] else [])
+            (context["text_authors"] if context["text_authors"] else [])
+            + (context["composers"] if context["composers"] else [])
+            + (context["translators"] if context["translators"] else [])
+            + (context["performers"] if context["performers"] else [])
         )
         for artist_slug in artist_slugs:
             if artist_slug not in songs_by_artist_slug:
                 songs_by_artist_slug[artist_slug] = []
             songs_by_artist_slug[artist_slug].append(context)
-        context["text_authors"] = make_artist_list(artists_by_slug, context["text_authors"])
+        context["text_authors"] = make_artist_list(
+            artists_by_slug, context["text_authors"]
+        )
         context["composers"] = make_artist_list(artists_by_slug, context["composers"])
-        context["translators"] = make_artist_list(artists_by_slug, context["translators"])
+        context["translators"] = make_artist_list(
+            artists_by_slug, context["translators"]
+        )
         context["performers"] = make_artist_list(artists_by_slug, context["performers"])
 
         notes = []
@@ -279,10 +281,12 @@ def generate_songs(artists_by_slug):
                 if file == "index.md" or not file.endswith(".md"):
                     continue
                 file_path = os.path.join(root, file)
-                print(f'{file_path}')
+                print(f"{file_path}")
                 note_frontmatter_data, note_content = parse_file(file_path)
                 note_content_html = markdown(note_content, extras=["break-on-newline"])
-                note_context = make_context_for_page(note_frontmatter_data, section="songs")
+                note_context = make_context_for_page(
+                    note_frontmatter_data, section="songs"
+                )
                 note_context["content_html"] = note_content_html
                 note_context["song"] = context
                 notes.append(note_context)
@@ -295,7 +299,7 @@ def generate_songs(artists_by_slug):
     return songs_by_artist_slug, song_notes
 
 
-def generate_song_index(artists_by_slug):
+def generate_songbook_index(artists_by_slug):
     hero_artists = [
         artists_by_slug["jacek-kaczmarski"],
         artists_by_slug["przemyslaw-gintrowski"],
@@ -348,10 +352,12 @@ def generate_artists(artists_by_slug, songs_by_artist_slug, song_index_context):
                 if file == "index.md" or not file.endswith(".md"):
                     continue
                 file_path = os.path.join(root, file)
-                print(f'{file_path}')
+                print(f"{file_path}")
                 note_frontmatter_data, note_content = parse_file(file_path)
                 note_content_html = markdown(note_content, extras=["break-on-newline"])
-                note_context = make_context_for_page(note_frontmatter_data, section="songs")
+                note_context = make_context_for_page(
+                    note_frontmatter_data, section="songs"
+                )
                 note_context["content_html"] = note_content_html
                 notes.append(note_context)
         out_dir = os.path.join(OUT_DIR_PATH, os.path.relpath(subdir, CONTENT_PATH))
@@ -376,6 +382,43 @@ def generate_artists(artists_by_slug, songs_by_artist_slug, song_index_context):
         artist_context.update(song_index_context)
         write_page(artist_context, "songs/artist.html", out_file_path)
 
+
+def generate_artist_index(artists_by_slug):
+    resp = []
+    for artist_slug, artist in artists_by_slug.items():
+        resp.append(
+            {
+                "name": artist["name"],
+                "value": artist["name"],
+                "tokens": artist["name"].split(),
+                "url": artist["get_absolute_url"],
+            }
+        )
+    out_dir_path = os.path.join(OUT_DIR_PATH, "index")
+    out_file_path = os.path.join(out_dir_path, "artists.json")
+    os.makedirs(out_dir_path, exist_ok=True)
+    with open(out_file_path, "w") as f:
+        json.dump(resp, f, ensure_ascii=False, indent=4)
+
+
+def generate_song_index(all_songs):
+    resp = []
+    for song in all_songs:
+        resp.append(
+            {
+                "name": song["title"],
+                "value": song["title"],
+                "tokens": song["title"].split(),
+                "url": song["get_absolute_url"],
+            }
+        )
+    out_dir_path = os.path.join(OUT_DIR_PATH, "index")
+    out_file_path = os.path.join(out_dir_path, "songs.json")
+    os.makedirs(out_dir_path, exist_ok=True)
+    with open(out_file_path, "w") as f:
+        json.dump(resp, f, ensure_ascii=False, indent=4)
+
+
 class Command(BaseCommand):
     help = "Generates the static pages."
 
@@ -387,8 +430,8 @@ class Command(BaseCommand):
         posts = generate_posts()
         artists_by_slug = parse_artists()
         songs_by_artist_slug, song_notes = generate_songs(artists_by_slug)
-        song_index_context = generate_song_index(artists_by_slug)
-        generate_artists(artists_by_slug, songs_by_artist_slug, song_index_context)
+        songbook_index_context = generate_songbook_index(artists_by_slug)
+        generate_artists(artists_by_slug, songs_by_artist_slug, songbook_index_context)
 
         all_songs = {}
         for artist_songs in songs_by_artist_slug.values():
@@ -409,3 +452,6 @@ class Command(BaseCommand):
 
         out_file_path = os.path.join(OUT_DIR_PATH, "index.html")
         write_page(frontpage_context, "frontpage/index.html", out_file_path)
+
+        generate_artist_index(artists_by_slug)
+        generate_song_index(all_songs)

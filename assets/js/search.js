@@ -2,7 +2,7 @@ $(document).ready(function(){
     var songs = new Bloodhound({
         datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
         queryTokenizer: Bloodhound.tokenizers.whitespace,
-        prefetch: '/index/songs',
+        prefetch: '/index/songs.json',
         limit: 10,
     });
     songs.initialize();
@@ -26,7 +26,7 @@ $(document).ready(function(){
     var artists = new Bloodhound({
         datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
         queryTokenizer: Bloodhound.tokenizers.whitespace,
-        prefetch: '/index/artists',
+        prefetch: '/index/artists.json',
     });
     artists.initialize();
 
