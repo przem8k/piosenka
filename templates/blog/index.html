@@ -20,7 +20,7 @@
           <p><a href="{{ post.get_absolute_url }}">Komentarze</a>.</p>
           {% endif %}
 
-          {% include "components/content_foot.html" with action="Dodany" item=post %}
+          {% include "components/content_foot.html" with pub_date=post.pub_date author=post.author %}
         </div>
       </div>
       {% endfor %}
