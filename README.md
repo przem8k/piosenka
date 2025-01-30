@@ -2,7 +2,7 @@
 
 Kod źródłowy i zawartość strony internetowej [piosenkaztekstem.pl](https://www.piosenkaztekstem.pl).
 
-Zawartość strony znajduje się w plikach Markdown w folderze [pages](pages).
+Zawartość strony znajduje się w plikach Markdown w folderze [pages](pages). Przykładowo, treść piosenki 1788 znajduje się w pliku [pages/opracowanie/jacek-kaczmarski-1788/index.md](https://raw.githubusercontent.com/przem8k/piosenka/refs/heads/main/pages/opracowanie/jacek-kaczmarski-1788/index.md). Adnotacja do piosenki znajduje się w umieszczonym obok pliku [pages/opracowanie/jacek-kaczmarski-1788/rok-1788.md](https://raw.githubusercontent.com/przem8k/piosenka/refs/heads/main/pages/opracowanie/jacek-kaczmarski-1788/rok-1788.md)
 
 Szablony HTML znajdują się w folderze [templates](templates).
 
