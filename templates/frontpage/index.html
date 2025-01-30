@@ -84,7 +84,7 @@
             <h2 class="pzt-card-title">Nowe adnotacje</h2>
             <ul class="list-unstyled">
               {% for note in notes %}
-              <li><a href="{{note.get_absolute_url}}">{{note.title}}</a></li>
+              <li><a href="{{note.song.get_absolute_url}}">{{note.title}}</a></li>
               {% endfor %}
             </ul>
           </div>
