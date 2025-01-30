@@ -119,22 +119,6 @@
       </div>
     </div>
 
-    {% if messages %}
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="alert alert-info messages" role="alert">
-            <ul class="list-unstyled">
-              {% for message in messages %}
-              <li>{{ message }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endif %}
-
     {% block content %} {% endblock content %}
     <div class="footer hidden-print">
       <div class="container">
@@ -158,7 +142,6 @@
     <script src="{% static "js/comments.js" %}"></script>
     <script src="{% static "js/lightbox.js" %}"></script>
     <script src="{% static "js/calendar.js" %}"></script>
-    <script src="{% static "js/messages.js" %}"></script>
     <script src="{% static "js/search.js" %}"></script>
     <script src="{% static "js/song.js" %}"></script>
     <script src="{% static "js/tooltips.js" %}"></script>

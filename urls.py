@@ -1,14 +1,9 @@
 from django.conf import settings
 from django.conf.urls.static import static
-from django.contrib import admin
 from django.urls import include, re_path
 from django.views.generic import TemplateView
 
-admin.autodiscover()
-
 urlpatterns = [
-    # Admin and users.
-    re_path(r"^admin/", admin.site.urls),
 ]
 
 if settings.DEBUG:
