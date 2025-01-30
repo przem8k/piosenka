@@ -17,6 +17,6 @@ _Kiedy miałem osiemnaście lat, pewien młodzieniec, który był moim zwierzchn
 Zobacz też inne piosenki związane z tamtymi wyborami:
 
 - [Polityczne epitafium dla kandydata](https://piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-polityczne\-epitafium\-dla\-kandydata/)
- - [Upadek imperium](https://piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-upadek\-imperium/)
- - [My](https://piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-my/)
- - [Ulotka wyborcza](https://piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-ulotka\-wyborcza/)
+- [Upadek imperium](https://piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-upadek\-imperium/)
+- [My](https://piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-my/)
+- [Ulotka wyborcza](https://piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-ulotka\-wyborcza/)
