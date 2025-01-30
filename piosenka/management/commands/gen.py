@@ -389,6 +389,8 @@ def generate_artists(artists_by_slug, songs_by_artist_slug, song_index_context):
 def generate_artist_index(artists_by_slug):
     resp = []
     for artist_slug, artist in artists_by_slug.items():
+        if not "featured" in artist or not artist["featured"]:
+            continue
         resp.append(
             {
                 "name": artist["name"],
