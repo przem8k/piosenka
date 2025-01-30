@@ -9,7 +9,7 @@ from django.core.management.base import BaseCommand
 from django.template import Context, Template, loader
 from markdown2 import markdown
 
-from songs import lyrics
+from piosenka import lyrics
 
 PAGES = {
     "o-stronie": "page.html",

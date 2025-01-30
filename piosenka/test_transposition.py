@@ -1,6 +1,6 @@
 import doctest
 
-from songs import transpose
+from piosenka import transpose
 
 
 def load_tests(loader, tests, ignore):

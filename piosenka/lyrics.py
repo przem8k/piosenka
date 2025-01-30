@@ -2,7 +2,7 @@
 
 from django.template import Context, loader
 
-from songs.transpose import transpose_lyrics
+from piosenka.transpose import transpose_lyrics
 
 
 class LyricsParserMode:

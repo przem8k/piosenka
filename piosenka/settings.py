@@ -147,9 +147,7 @@ INSTALLED_APPS = (
     "compressor",
     # PzT.
     "base",
-    "songs",
     "piosenka",
-    "content",
 )
 
 THUMBNAIL_ALIASES = {
