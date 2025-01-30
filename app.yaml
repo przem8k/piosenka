@@ -48,6 +48,11 @@ handlers:
   upload: out/o-stronie/index.html
   secure: always
 
+- url: /szukaj/
+  static_files: out/szukaj/index.html
+  upload: out/szukaj/index.html
+  secure: always
+
 - url: /favicon\.ico
   static_files: static/images/favicon.ico
   upload: static/images/favicon\.ico

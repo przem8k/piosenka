@@ -11,7 +11,10 @@ from markdown2 import markdown
 
 from songs import lyrics
 
-PAGES = ["o-stronie"]
+PAGES = {
+    "o-stronie": "page.html",
+    "szukaj": "search.html",
+}
 
 ARTICLE_DIR = "artykuly"
 BLOG_DIR = "blog"
@@ -142,7 +145,7 @@ def make_artist_list(artists_by_slug, artist_slugs):
 
 
 def generate_pages():
-    for page in PAGES:
+    for page, template in PAGES.items():
         src_path = os.path.join(CONTENT_PATH, page, "index.md")
         frontmatter_data, content = parse_file(src_path)
 
@@ -152,7 +155,7 @@ def generate_pages():
 
         context = make_context_for_page(frontmatter_data)
         context["content_html"] = markdown(content, extras=["break-on-newline"])
-        write_page(context, "page.html", out_file_path)
+        write_page(context, template, out_file_path)
 
 
 def generate_articles():

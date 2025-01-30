@@ -4,13 +4,9 @@ from django.contrib import admin
 from django.urls import include, re_path
 from django.views.generic import TemplateView
 
-import piosenka.views
-
 admin.autodiscover()
 
 urlpatterns = [
-    # Search results.
-    re_path(r"^szukaj/", piosenka.views.Search.as_view(), name="search"),
     # Admin and users.
     re_path(r"^admin/", admin.site.urls),
 ]
