@@ -37,6 +37,14 @@ def parse_file(src_path):
             frontmatter_data["pub_date"] = datetime.fromisoformat(
                 frontmatter_data["pub_date"]
             )
+        if "born_on" in frontmatter_data:
+            frontmatter_data["born_on"] = datetime.fromisoformat(
+                frontmatter_data["born_on"]
+            ).date()
+        if "died_on" in frontmatter_data:
+            frontmatter_data["died_on"] = datetime.fromisoformat(
+                frontmatter_data["died_on"]
+            ).date()
         return (frontmatter_data, content)
 
 
@@ -81,6 +89,7 @@ def make_context_for_page(frontmatter_data, section=None):
         "category": frontmatter_data.get("category"),
         "born_on": frontmatter_data.get("born_on"),
         "died_on": frontmatter_data.get("died_on"),
+        "filter_epigone": frontmatter_data.get("died_on"),
     }
 
     if context_data["disambig"]:
@@ -351,7 +360,16 @@ def generate_artists(artists_by_slug, songs_by_artist_slug, song_index_context):
 
         songs = songs_by_artist_slug[artist_slug]
         songs.sort(key=lambda x: x["title"])
-        artist_context["songs"] = songs
+
+        if artist_context["filter_epigone"]:
+            filtered_songs = [song for song in songs if not song.get("epigone")]
+            epigone_songs = [song for song in songs if song.get("epigone")]
+        else:
+            filtered_songs = songs
+            epigone_songs = []
+
+        artist_context["songs"] = filtered_songs
+        artist_context["epigone_songs"] = epigone_songs
 
         notes.sort(key=lambda x: x["pub_date"], reverse=True)
         artist_context["notes"] = notes

@@ -3,22 +3,17 @@
 {% load static %}
 {% load thumbnail %}
 
-{% block title %}Śpiewnik piosenek {{ artist }} - teksty i akordy{% endblock title %}
+{% block title %}Śpiewnik piosenek {{ name }} - teksty i akordy{% endblock title %}
 {% block description %}Śpiewnik zawiera teksty i akordy do piosenek - artysta: {{ artist }}.{% endblock description %}
 
 {% block content %}
 <div class="container">
   <h2 class="remove-top-margin pzt-artist-heading">
-    {{ artist }}
-    {% if user.is_authenticated %}
-    <a href="{{ artist.get_edit_url }}">
-      <small>{% include 'components/icon.html' with type='pencil' %}</small>
-    </a>
-    {% endif %}
+    {{ name }}
   </h2>
   <p class="lifetime">
-    {% if artist.born_on %} ur. <b>{{ artist.born_on }}</b>{% endif %}{% if artist.born_on and artist.died_on %},{% endif %}
-    {% if artist.died_on %} zm. <b>{{ artist.died_on }}</b> {% endif %}
+    {% if born_on %} ur. <b>{{ born_on }}</b>{% endif %}{% if born_on and died_on %},{% endif %}
+    {% if died_on %} zm. <b>{{ died_on }}</b> {% endif %}
   </p>
   <div class="row">
     <div class="col-md-8">
@@ -49,7 +44,7 @@
         <p style="text-align: center">
           <ul class="list-unstyled">
             {% for song in epigone_songs %}
-            <li><a href="{{ song.get_absolute_url }}">{{ song|truncatechars:50 }}
+            <li><a href="{{ song.get_absolute_url }}">{{ song.title }}
               {% if song.num_notes == 1 %}
               {% include 'components/icon.html' with type='tag' %}
               {% elif song.num_notes > 1 %}
