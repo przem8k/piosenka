@@ -6,10 +6,13 @@ async function fetchEvents() {
     const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${CALENDAR_API_KEY}&maxResults=${MAX_EVENTS}&orderBy=startTime&singleEvents=true`;
 
     try {
+        const eventsList = document.getElementById("pzt-upcoming-events");
+        if (!eventsList) {
+            return;
+        }
+
         const response = await fetch(url);
         const data = await response.json();
-
-        const eventsList = document.getElementById("pzt-upcoming-events");
         eventsList.innerHTML = ""; // Clear loading text
 
         if (data.items) {
