@@ -165,35 +165,6 @@ def create_artist_file_content(item):
     return frontmatter
 
 
-def freeze_song_calendar():
-    notes = (
-        SongNote.objects.filter(date__isnull=False)
-        .exclude(date_description="")
-        .order_by("-date")
-    )
-
-    frontmatter_lines = []
-    frontmatter_lines.append("---")
-    frontmatter_lines.append(f"title: 'Historia w piosence'")
-    frontmatter_lines.append(f"author: DX")
-    cur_datetime = datetime.datetime.now(datetime.timezone.utc)
-    frontmatter_lines.append(f"pub_date: '{cur_datetime.isoformat()}'")
-    frontmatter_lines.append("---")
-    frontmatter = "\n".join(frontmatter_lines)
-
-    content_lines = [
-        "Piosenki wg. daty wydarzenia historycznego które je zainspirowało:",
-        "",
-    ]
-    for note in notes:
-        song_link = f"[{note.song}]({note.song.get_absolute_url()})"
-        content_lines.append(
-            f' - {note.date.strftime("%d.%m.%Y")}: {song_link}, {note.date_description}'
-        )
-    content = "\n".join(content_lines)
-    return f"{frontmatter}\n\n{content}"
-
-
 def slugify_with_unidecode(text):
     return slugify(unidecode(text))
 
@@ -224,7 +195,6 @@ class Command(BaseCommand):
                     file.write(content)
 
         for song in Song.objects.all():
-            # TODO: freeze contributions -> links to relevant artists
             dirname = song.slug
             print(f"Processing: {song} -> {dirname}")
             item_dir_path = os.path.join(SONGS_DIR_PATH, dirname)
@@ -243,11 +213,3 @@ class Command(BaseCommand):
                 content = create_file_content(note, markdown_text)
                 with open(file_path, "w") as file:
                     file.write(content)
-
-        # dir_path = os.path.join(ROOT_PATH, "pages", "artykuly", "historia-w-piosence")
-        # os.makedirs(dir_path, exist_ok=True)
-
-        # file_path = os.path.join(dir_path, "index.md")
-        # content = freeze_song_calendar()
-        # with open(file_path, "w") as file:
-        #     file.write(content)
