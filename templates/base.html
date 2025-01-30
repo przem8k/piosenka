@@ -64,35 +64,8 @@
         <ul class="nav navbar-nav">
           <li><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
           <li><a href="/spiewnik/" title="Śpiewnik"><span>Piosenki</span></a></li>
-          <li><a href="/wydarzenia/" title="Wydarzenia"><span>Wydarzenia</span></a></li>
           <li><a href="/artykuly/" title="Artykuły"><span>Artykuły</span></a></li>
           <li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
-
-          <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <span class="glyphicon glyphicon-user"></span>
-            {% if user.is_authenticated %}
-            {{ user }}
-            {% if to_review %}
-            <span class="badge">{{ to_review|length }}</span>
-            {% endif %}
-            {% endif %}
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            {% if user.is_authenticated %}
-            {% if to_review %}
-            <li><a href="{% url 'to_review' %}">Do korekty
-              <span class="badge">{{ to_review|length }}</span>
-            </a></li>
-            {% endif %}
-            <li><a href="{% url 'add_external_event' %}">Dodaj wydarzenie</a></li>
-            <li><a href="{% url 'change_password' %}">Zmień hasło</a></li>
-            <li><a href="{% url 'goodbye' %}"><b>Wyloguj</b></a></li>
-            {% else %}
-            <li><a href="{% url 'hello' %}"><b>Zaloguj</b></a></li>
-            {% endif %}
-          </ul>
-          </li>
         </ul>
         <div class="navbar-right search pzt-expanded-navbar-search">
           <input type="text" class="form-control" placeholder="Jałta, Rublow, Epitafium dla ...">
@@ -184,6 +157,7 @@
 
     <script src="{% static "js/comments.js" %}"></script>
     <script src="{% static "js/lightbox.js" %}"></script>
+    <script src="{% static "js/calendar.js" %}"></script>
     <script src="{% static "js/messages.js" %}"></script>
     <script src="{% static "js/search.js" %}"></script>
     <script src="{% static "js/song.js" %}"></script>

@@ -9,8 +9,6 @@ import piosenka.views
 admin.autodiscover()
 
 urlpatterns = [
-    # Other sections.
-    re_path(r"^wydarzenia/", include("events.urls")),
     # Site-search index.
     re_path(r"^index/", include("piosenka.index")),
     # Search results.

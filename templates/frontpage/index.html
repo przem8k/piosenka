@@ -51,7 +51,12 @@
 
       <div class="row">
         <div class="col-md-6">
-          {% include "frontpage/upcoming_events.html" %}
+          <div class="section">
+            <h2 class="pzt-card-title">Nadchodzące wydarzenia</h2>
+            <ul class="list-unstyled" id="pzt-upcoming-events">
+              <li>...</li>
+            </ul>
+          </div>
           <div class="section">
             <h2 class="pzt-card-title">{{ note.title }}</h2>
             {% if note.image_thumb %}
