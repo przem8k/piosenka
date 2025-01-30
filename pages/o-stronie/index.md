@@ -16,11 +16,13 @@ Autorem wszystkich opracowań nutowych zamieszczonych w [Śpiewniku](/spiewnik) 
 
 ## Jak pomóc
 
-Piosenka z tekstem jest projektem open source, kod źródłowy strony jest dostępny publicznie. Jeśli nieobce Ci jest programowanie aplikacji webowych w i chciałbyś/chciałabyś spróbować swoich sił w pracy nad naszym serwisem, zapraszamy na [stronę projektu](https://github.com/przem8k/piosenka) w serwisie GitHub.
+Piosenka z tekstem jest projektem open source. Kod źródłowy, zarówno jak zawartość strony są dostępne w [publicznym repozytorium](https://github.com/przem8k/piosenka) projektu w serwisie GitHub.
+
+Zapraszamy do nadsyłania poprawek propozycji zmian w formie tak zwanych "pull requestów".
 
 ## Polityka prywatności
 
-Strona nie gromadzi żadnych danych osobowych niezalogowanych użytkowników. Jedyne dane gromadzone przez serwis na temat niezalogowanych użytkowników to zagregowane dane o ruchu na stronie zbierane przy pomocy platformy Google Analytics.
+Strona gromadzi zagregowane dane o ruchu na stronie zbierane przy pomocy platformy Google Analytics.
 
 ## Kontakt
 
