@@ -11,5 +11,5 @@ Nagranie utworu pochodzi z Przeglądu Piosenki Prawdziwej, który odbył się w 
 Zobacz też inne utwory z repertuaru Przemysława Gintrowskiego, które łączą w sobie tekst dwóch wierszy:
 
 - [Szwaczka](https://piosenkaztekstem.pl/opracowanie/przemyslaw\-gintrowski\-szwaczka/)
- - [Przyjaciele, których nie miałem](https://piosenkaztekstem.pl/opracowanie/przemyslaw\-gintrowski\-przyjaciele\-ktorych\-nie\-mialem/)
- - [Epitafium dla Sergiusza Jesienina](https://piosenkaztekstem.pl/opracowanie/trio\-kaczmarski\-gintrowski\-lapinski\-epitafium\-dla\-sergiusza\-jesienina/)
+- [Przyjaciele, których nie miałem](https://piosenkaztekstem.pl/opracowanie/przemyslaw\-gintrowski\-przyjaciele\-ktorych\-nie\-mialem/)
+- [Epitafium dla Sergiusza Jesienina](https://piosenkaztekstem.pl/opracowanie/trio\-kaczmarski\-gintrowski\-lapinski\-epitafium\-dla\-sergiusza\-jesienina/)

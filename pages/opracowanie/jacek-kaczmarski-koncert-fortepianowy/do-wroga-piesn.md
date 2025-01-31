@@ -22,5 +22,5 @@ Iwona Grabska\-Gradzińska zauważa, że da się w nim znaleźć także pewne s�
 Zobacz także inne utwory Kaczmarskiego nawiązujące do Norwida:
 
 - [Odnosimy się](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-odnosimy\-sie/)
- - [Ostatnie dni Norwida](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-ostatnie\-dni\-norwida/)
- - [Parafraza](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-parafraza/)
+- [Ostatnie dni Norwida](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-ostatnie\-dni\-norwida/)
+- [Parafraza](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-parafraza/)

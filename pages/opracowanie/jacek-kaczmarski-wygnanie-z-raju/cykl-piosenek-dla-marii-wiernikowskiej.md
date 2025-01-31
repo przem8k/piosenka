@@ -11,8 +11,8 @@ Piosenka „Wygnanie z raju” jest częścią cyklu piosenek napisanych przez J
 Cykl obejmuje piosenki:
 
 - [Joanna d'Arc](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-joanna\-darc/)
- - [Kasandra](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-kasandra/)
- - [Sen Katarzyny II](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-sen\-katarzyny\-ii/)
- - Wygnanie z raju
+- [Kasandra](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-kasandra/)
+- [Sen Katarzyny II](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-sen\-katarzyny\-ii/)
+- Wygnanie z raju
 
 Ostatecznie Maria Wiernikowska nie włączyła do repertuaru żadnego z utworów: _Ona to wzięła, o uwzględnieniu moich awansów nie było mowy, bo miała wówczas chłopaka, Greka, który o wiele lepiej grał na gitarze, nie mówiąc już o tym, że był przystojniejszy, i zaniosła te piosenki Koniecznemu, ale on powiedział, że są do niczego, w związku z tym nie śpiewała ich i siłą rzeczy, ponieważ mi szkoda było tego materiału, śpiewałem je sam._
