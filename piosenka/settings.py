@@ -117,7 +117,6 @@ INSTALLED_APPS = (
     "easy_thumbnails",
     "compressor",
     # PzT.
-    "base",
     "piosenka",
 )
 
