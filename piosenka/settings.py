@@ -11,16 +11,6 @@ if os.getenv("GAE_APPLICATION", None) or os.getenv("RELEASE", None):
     # have ALLOWED_HOSTS = ['*'] when the app is deployed.
     ALLOWED_HOSTS = ["*"]
 
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql_psycopg2",
-            "NAME": os.getenv("PIOSENKA_DB_NAME"),
-            "USER": os.getenv("PIOSENKA_DB_USER"),
-            "PASSWORD": os.getenv("PIOSENKA_DB_PASSWORD"),
-            "HOST": os.getenv("PIOSENKA_DB_HOST"),
-        }
-    }
-
     SECRET_KEY = os.getenv("PIOSENKA_SECRET_KEY")
 
     import google.cloud.logging
@@ -28,39 +18,22 @@ if os.getenv("GAE_APPLICATION", None) or os.getenv("RELEASE", None):
     client = google.cloud.logging.Client()
     client.get_default_handler()
     client.setup_logging()
-
-    EMAIL_BACKEND = "anymail.backends.mailjet.EmailBackend"
-    ANYMAIL = {
-        "MAILJET_API_KEY": os.getenv("PIOSENKA_MAILJET_API_KEY"),
-        "MAILJET_SECRET_KEY": os.getenv("PIOSENKA_MAILJET_API_SECRET"),
-    }
 else:
     DEBUG = True
-    if os.getenv("PROXY_TO_PROD"):
-        DATABASES = {
-            "default": {
-                "ENGINE": "django.db.backends.postgresql",
-                "HOST": "127.0.0.1",
-                "PORT": "5432",
-                "NAME": os.getenv("PIOSENKA_DB_NAME"),
-                "USER": os.getenv("PIOSENKA_DB_USER"),
-                "PASSWORD": os.getenv("PIOSENKA_DB_PASSWORD"),
-            }
-        }
-    else:
-        # local sqllite file
-        DATABASES = {
-            "default": {
-                "ENGINE": "django.db.backends.sqlite3",
-                "NAME": "piosenka.db",
-            }
-        }
+
     SECRET_KEY = "piosenka-local-dev-not-really-secret"
 
     MEDIA_ROOT = os.path.join(PROJECT_PATH, "site_media")
 
     EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
     EMAIL_FILE_PATH = "/tmp/django-emails"
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "piosenka.db",
+    }
+}
 
 DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
 GS_BUCKET_NAME = "piosenka-media"
