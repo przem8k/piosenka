@@ -10,8 +10,8 @@ image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/trio.jpg.
 Zespół poetycko\-kompozytorsko\-wykonawczy, w skład którego wchodzili:
 
 - **[Jacek Kaczmarski](https://www.piosenkaztekstem.pl/spiewnik/jacek\-kaczmarski/)** – jako autor tekstów, kompozytor i wykonawca \(gitara klasyczna, śpiew\)
- - **[Przemysław Gintrowski](https://www.piosenkaztekstem.pl/spiewnik/przemyslaw\-gintrowski/)** – jako kompozytor i wykonawca \(gitara klasyczna, śpiew\)
- - **[Zbigniew Łapiński](https://www.piosenkaztekstem.pl/spiewnik/zbigniew\-lapinski/)** – jako kompozytor i wykonawca \(fortepian, śpiew\)
+- **[Przemysław Gintrowski](https://www.piosenkaztekstem.pl/spiewnik/przemyslaw\-gintrowski/)** – jako kompozytor i wykonawca \(gitara klasyczna, śpiew\)
+- **[Zbigniew Łapiński](https://www.piosenkaztekstem.pl/spiewnik/zbigniew\-lapinski/)** – jako kompozytor i wykonawca \(fortepian, śpiew\)
 
 Trio zadebiutowało w roku 1979 programem Mury, złożonym z piosenek do tekstów Jacka Kaczmarskiego, Zbigniewa Herberta, Krzysztofa Marii Sieniawskiego i Mieczysława Jastruna. Program wykonywany na scenach studenckich i kabaretowych w całej Polsce został w roku 1980 zarejestrowany i wydany jako płyta pod tym samym tytułem. Tymczasem tytułowa piosenka programu, [Mury](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-mury/), stała się nieformalnym hymnem rodzącego się ruchu Solidarności.
 
