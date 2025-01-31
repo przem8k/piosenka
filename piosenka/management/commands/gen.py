@@ -460,6 +460,10 @@ class Command(BaseCommand):
             "article": articles[0],
         }
 
+        private_gen_vars_path = os.path.join(ROOT_PATH, "private_gen_vars.yaml")
+        with open(private_gen_vars_path, "r") as file:
+            private_gen_vars = yaml.safe_load(file)
+        frontpage_context["calendar_api_key"] = private_gen_vars["calendar_api_key"]
         out_file_path = os.path.join(OUT_DIR_PATH, "index.html")
         write_page(frontpage_context, "frontpage/index.html", out_file_path)
 
