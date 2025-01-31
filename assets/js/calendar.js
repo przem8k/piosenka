@@ -19,21 +19,21 @@ async function fetchEvents() {
             data.items.forEach(event => {
                 const li = document.createElement("li");
 
-                const eventTitle = event.summary || "No Title";
+                const eventTitle = event.summary || "Wydarzenie";
                 const eventDate = event.start.dateTime || event.start.date;
                 const eventLink = event.htmlLink;
 
                 const eventDateFormatted = new Date(eventDate).toLocaleDateString('en-GB').replace(/\//g, '.');
-                const eventLocation = event.location || "No Location";
+                const eventLocation = event.location || "";
                 li.innerHTML = `<span class="glyphicon glyphicon-calendar"></span> ${eventDateFormatted}, <b>${eventLocation}</b> <a href="${eventLink}" target="_blank">${eventTitle}</a>`;
                 eventsList.appendChild(li);
             });
         } else {
-            eventsList.innerHTML = "<li>No upcoming events found.</li>";
+            eventsList.innerHTML = "<li>Brak nadchodzących wydarzeń.</li>";
         }
     } catch (error) {
         console.error("Error fetching events:", error);
-        document.getElementById("pzt-upcoming-events").innerHTML = "<li>Error loading events.</li>";
+        document.getElementById("pzt-upcoming-events").innerHTML = "<li>Wystąpił błąd.</li>";
     }
 }
 

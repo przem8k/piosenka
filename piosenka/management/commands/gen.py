@@ -94,6 +94,8 @@ def make_context_for_page(frontmatter_data, section=None):
         "born_on": frontmatter_data.get("born_on"),
         "died_on": frontmatter_data.get("died_on"),
         "filter_epigone": frontmatter_data.get("died_on"),
+        # Article-specific:
+        "lead": frontmatter_data.get("lead"),
     }
 
     if context_data["disambig"]:
@@ -177,7 +179,11 @@ def generate_articles():
         article_slug = os.path.relpath(subdir, article_dir_path).strip("/")
         article_context["get_absolute_url"] = f"/artykuly/{article_slug}/"
         article_context["thumb_url"] = frontmatter_data.get("cover_image_thumb_420_210")
-        add_lead(article_context, content_html, 200)
+
+        if article_context["lead"]:
+            article_context["lead_html"] = markdown(article_context["lead"])
+        else:
+            add_lead(article_context, content_html, 200)
 
         write_page(article_context, "page.html", out_file_path)
         articles.append(article_context)
@@ -242,7 +248,6 @@ def generate_songs(artists_by_slug):
     songs_by_artist_slug = {}
 
     songs_dir_path = os.path.join(CONTENT_PATH, SONGS_DIR)
-    songs = []
     song_notes = []
     for subdir, _, _ in os.walk(songs_dir_path):
         index_md_path = os.path.join(subdir, "index.md")

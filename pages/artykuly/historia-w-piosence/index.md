@@ -2,6 +2,7 @@
 title: 'Historia w piosence'
 author: DX
 pub_date: '2025-01-19T15:21:57.425799+00:00'
+lead: 'Zestawienie piosenek inspirowanych wydarzeniami historycznymi. Rewolucje, protesty, bitwy, deklaracje, wzloty i upadki; widziane przez szkiełko piosenki literackiej.'
 cover_image_full: https://storage.googleapis.com/piosenka-media/media/notes/stanczyk_1.jpg
 cover_image_thumb_600_300: https://storage.googleapis.com/piosenka-media/media/notes/stanczyk_1.jpg.0x300_q85_upscale.jpg
 cover_image_thumb_420_210: https://storage.googleapis.com/piosenka-media/media/notes/stanczyk_1.jpg.0x300_q85_upscale.jpg
