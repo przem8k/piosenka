@@ -52,6 +52,30 @@ def parse_file(src_path):
         return (frontmatter_data, content)
 
 
+CAPO_TO_ROMAN = [
+    "",
+    "I",
+    "II",
+    "III",
+    "IV",
+    "V",
+    "VI",
+    "VII",
+    "VIII",
+    "IX",
+    "X",
+    "XI",
+    "XII",
+]
+
+
+def capo_to_roman(capo_fret):
+    if capo_fret:
+        return CAPO_TO_ROMAN[capo_fret]
+    else:
+        return None
+
+
 def make_context_for_page(frontmatter_data, section=None):
     context_data = {
         "title": frontmatter_data.get("title"),
@@ -67,7 +91,7 @@ def make_context_for_page(frontmatter_data, section=None):
         "composers": frontmatter_data.get("composers"),
         "translators": frontmatter_data.get("translators"),
         "performers": frontmatter_data.get("performers"),
-        "capo": frontmatter_data.get("capo_fret"),
+        "capo_fret": capo_to_roman(frontmatter_data.get("capo_fret")),
         "youtube_id": frontmatter_data.get("youtube_id"),
         "epigone": frontmatter_data.get("epigone"),
         # Note-specific:
