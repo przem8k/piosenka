@@ -2,7 +2,8 @@ const CALENDAR_ID = "783da56c0eb669182662debbda9deac997e1348cd94ad6e42ff6f697854
 const MAX_EVENTS = 10;
 
 async function fetchEvents() {
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${CALENDAR_API_KEY}&maxResults=${MAX_EVENTS}&orderBy=startTime&singleEvents=true`;
+    const now = new Date().toISOString();
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${CALENDAR_API_KEY}&maxResults=${MAX_EVENTS}&orderBy=startTime&singleEvents=true&timeMin=${now}`;
 
     try {
         const eventsList = document.getElementById("pzt-upcoming-events");
