@@ -14,6 +14,7 @@ score1: scores/rycerze_okraglego_stolu.png
 score1_full: https://storage.googleapis.com/piosenka-media/media/scores/rycerze_okraglego_stolu.png
 score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/rycerze_okraglego_stolu.png.180x0_q85_upscale.jpg
 ---
+         [h]
 
 #zw
 Noc bez gwiazd nad Camelotem [e C e C]
@@ -26,8 +27,8 @@ Ruchu ust niewarta - duma [Fis e Fis e]
 - Dogmat - woła się na psa [e C Fis h]
 
 #ref
->Ale przyszłość w ślepych gwiazdach [G D]
->Spokój - trumna tylko da [G D]
+>Ale przyszłość w ślepych gwiazdach [g D]
+>Spokój - trumna tylko da [g D]
 >Więc możliwość jeszcze - każda [h fis]
 >Prawo do istnienia ma [A h]
 
