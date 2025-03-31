@@ -33,9 +33,9 @@ Bezmyślnym – odpuszczenie [H7/dis e]
 Stojącym – rozpacz wśród bezdroży [a e]
 Klęczącym – namaszczenie [H7/dis e (Fis)]
 
-Samotnym – prosty szlak w niepamięć [h h h h Fis Fis h h]
+Samotnym – prosty szlak w niepamięć [h Fis h Fis h Fis h h]
 Publicznym – chwile blasku [Fis Fis Fis Fis h h h (Fis)]
-Widzącym – zamieć, zamieć, zamieć… [h h h h Fis Fis h h]
+Widzącym – zamieć, zamieć, zamieć… [h Fis h Fis h Fis h h]
 Słyszącym – trzask oklasków [Fis Fis Fis Fis h h h h]
 
 Potężnym – jeszcze pud potęgi [e h]
