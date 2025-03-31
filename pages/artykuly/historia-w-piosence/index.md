@@ -16,7 +16,7 @@ Wśród zgromadzonych na Piosence z tekstem piosenek nie brakuje utworów inspir
 >
 > Zbigniew Herbert – [Raport z oblężonego miasta](/opracowanie/przemyslaw-gintrowski-raport-z-oblezonego-miasta/)
 
-Poniżej prezentujemy zestawienie piosenek w kolejności chronologicznej wg. daty wydarzenia które je zainspirowało.
+Poniżej prezentujemy zestawienie piosenek w kolejności chronologicznej wg daty wydarzenia, które je zainspirowało.
 
  - 29.11.2017: [Panie Generale](/opracowanie/michal-kaczmarczyk-panie-generale/), samobójstwo Slobodana Praljaka
  - 07.10.2006: [List do pani Anny](/opracowanie/przemyslaw-bogusz-list-do-pani-anny/), zabójstwo Anny Politkowskiej
