@@ -12,12 +12,6 @@ if os.getenv("GAE_APPLICATION", None) or os.getenv("RELEASE", None):
     ALLOWED_HOSTS = ["*"]
 
     SECRET_KEY = os.getenv("PIOSENKA_SECRET_KEY")
-
-    import google.cloud.logging
-
-    client = google.cloud.logging.Client()
-    client.get_default_handler()
-    client.setup_logging()
 else:
     DEBUG = True
 
