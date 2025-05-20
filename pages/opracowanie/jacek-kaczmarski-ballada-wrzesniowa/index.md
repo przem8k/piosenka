@@ -52,7 +52,7 @@ I Chrystus – z kulą w tyle głowy.
 >Nieprzeliczone dzieci Soso,
 >Niezwyciężony miot Hitlera.
 >Nieprzeliczone dzieci Soso,
-Niezwyciężony miot Hitlera.
+>Niezwyciężony miot Hitlera.
 
 @zwrotka1
 Już starty z map wersalski bękart,
