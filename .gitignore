@@ -20,3 +20,5 @@ out
 .virtualenv
 .env
 .vscode
+*.egg-info/
+build/
