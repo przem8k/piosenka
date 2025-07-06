@@ -11,6 +11,7 @@ dependencies = [
     "django-storages==1.14",
     "google-cloud-storage==2.7.0",
     "pyyaml>=6.0.2",
+    "bs4>=0.0.2",
 ]
 
 [tool.setuptools.packages.find]
