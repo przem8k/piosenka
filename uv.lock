@@ -292,6 +292,15 @@ wheels = [
 ]
 
 [[package]]
+name = "markdown2"
+version = "2.5.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/44/52/d7dcc6284d59edb8301b8400435fbb4926a9b0f13a12b5cbaf3a4a54bb7b/markdown2-2.5.3.tar.gz", hash = "sha256:4d502953a4633408b0ab3ec503c5d6984d1b14307e32b325ec7d16ea57524895", size = 141676 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/84/37/0a13c83ccf5365b8e08ea572dfbc04b8cb87cadd359b2451a567f5248878/markdown2-2.5.3-py3-none-any.whl", hash = "sha256:a8ebb7e84b8519c37bf7382b3db600f1798a22c245bfd754a1f87ca8d7ea63b3", size = 48550 },
+]
+
+[[package]]
 name = "pillow"
 version = "11.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -370,6 +379,7 @@ dependencies = [
     { name = "easy-thumbnails" },
     { name = "google-cloud-storage" },
     { name = "markdown" },
+    { name = "markdown2" },
     { name = "pyyaml" },
     { name = "unidecode" },
 ]
@@ -384,6 +394,7 @@ requires-dist = [
     { name = "easy-thumbnails", specifier = "==2.8.5" },
     { name = "google-cloud-storage", specifier = "==2.7.0" },
     { name = "markdown", specifier = "==3.2.2" },
+    { name = "markdown2", specifier = ">=2.5.3" },
     { name = "pyyaml", specifier = ">=6.0.2" },
     { name = "unidecode", specifier = "==0.4.17" },
 ]
