@@ -14,6 +14,30 @@ Zapraszamy do nadsyłania poprawek w formie pull requestów!
 
 ## Przydatne komendy
 
+### Zarządzanie zależnościami (dependencies)
+
+Projekt używa `uv` do zarządzania pomocniczymi bibliotekami potrzebnymi do wygenerwania strony. Aby je zainstalować i załadować:
+
+1. Utwórz wirtualne środowisko:
+
+```bash
+uv venv
+```
+
+2. Aktywuj wirtualne środowisko:
+
+```bash
+source .venv/bin/activate
+```
+
+3. Zainstaluj zależności:
+
+```bash
+uv sync
+```
+
+### Generowanie strony i uruchamianie serwera
+
 Pomocniczy skrypt [build.sh](build.sh) pozwala wygenerować stronę jedną komendą.
 
 Aby zobaczyć wygenerowane lokalnie pliki z poprawnie ładującymi się stylami, warto uruchomić lokalny server:

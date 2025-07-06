@@ -1,0 +1,21 @@
+[project]
+name = "piosenka"
+version = "0.1.0"
+dependencies = [
+    "Django==4.2.17",
+    "Markdown==3.2.2",
+    "bleach==5.0.1",
+    "easy-thumbnails==2.8.5",
+    "Unidecode==0.04.17",
+    "django-compressor==4.4",
+    "django-storages==1.14",
+    "google-cloud-storage==2.7.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["piosenka*"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
