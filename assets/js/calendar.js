@@ -1,5 +1,5 @@
 const CALENDAR_ID = "783da56c0eb669182662debbda9deac997e1348cd94ad6e42ff6f697854b9e8a@group.calendar.google.com";
-const MAX_EVENTS = 10;
+const MAX_EVENTS = 25;
 
 async function fetchEvents() {
     const now = new Date().toISOString();
