@@ -29,7 +29,7 @@ jobs:
         run: uv run python manage.py test
 
       - name: Build site
-        run: uv run ./build.sh
+        run: uv run bash build.sh
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
