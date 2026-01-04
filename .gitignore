@@ -22,3 +22,5 @@ out
 .vscode
 *.egg-info/
 build/
+.firebaserc
+.firebase
