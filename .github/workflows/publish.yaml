@@ -25,6 +25,12 @@ jobs:
       - name: Install Python dependencies
         run: uv sync
 
+      - name: Create private config file
+        run: |
+          cat > private_gen_vars.yaml << EOF
+          calendar_api_key: ${{ secrets.CALENDAR_API_KEY }}
+          EOF
+
       - name: Run tests
         run: uv run python manage.py test
 
