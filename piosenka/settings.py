@@ -45,7 +45,7 @@ USE_I18N = True
 USE_L10N = True
 
 # Where static files are served from by the dev server.
-STATIC_ROOT = os.path.join(PROJECT_PATH, "static")
+STATIC_ROOT = os.path.join(PROJECT_PATH, "out", "static")
 
 # URL prefix used for static files, in development and in production.
 STATIC_URL = "/static/"
