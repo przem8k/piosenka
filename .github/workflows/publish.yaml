@@ -48,5 +48,4 @@ jobs:
       - name: Publish to Firebase
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          FIREBASE_PROJECT: piosenka-site
-        run: firebase deploy --token "$FIREBASE_TOKEN"
+        run: firebase deploy --project piosenka-site --token "$FIREBASE_TOKEN"
