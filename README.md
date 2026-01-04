@@ -47,3 +47,7 @@ python manage.py runserver
 ```
 
 Po uruchomieniu serwera, lokalnie wygenerowana wersja strony jest dostępna pod adresem http://localhost:8000/
+
+## Publikacja
+
+Zawartość strony jest automatycznie generowana i publikowana do Firebase Hosting po każdej zmianie (push) w gałęzi `main` na GitHubie. Proces publikacji jest zdefiniowany w pliku [.github/workflows/publish.yaml](.github/workflows/publish.yaml)
