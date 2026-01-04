@@ -1,5 +1,4 @@
 set -e
-rm -rf static
 rm -rf out
 mkdir out
 python manage.py compress --force
