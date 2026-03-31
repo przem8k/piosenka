@@ -229,6 +229,26 @@ h2 {
   text-align: center;
 }
 
+.artist-songs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.artist-songs-header .pzt-card-title {
+  margin: 0;
+}
+
+.artist-random-song {
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
 /* frontpage */
 
 .pzt-social-button {
