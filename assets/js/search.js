@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var songs = new Bloodhound({
-        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        datumTokenizer: Bloodhound.tokenizers.obj.nonword('value'),
+        queryTokenizer: Bloodhound.tokenizers.nonword,
         prefetch: '/index/songs.json',
         limit: 10,
     });
@@ -24,8 +24,8 @@ $(document).ready(function(){
     };
 
     var artists = new Bloodhound({
-        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        datumTokenizer: Bloodhound.tokenizers.obj.nonword('value'),
+        queryTokenizer: Bloodhound.tokenizers.nonword,
         prefetch: '/index/artists.json',
     });
     artists.initialize();
