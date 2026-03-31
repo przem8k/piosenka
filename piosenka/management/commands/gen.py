@@ -388,6 +388,7 @@ POLISH_ORDER = str.maketrans({
 
 def polish_sort_key(song):
     text = song["title"]
+    # Removes leading non-word chars: '„Obym się mylił”' -> 'Obym się mylił”'
     text_clean = re.sub(r'^[\s\W]+', '', text, flags=re.UNICODE)
     return text_clean.lower().translate(POLISH_ORDER)
 
