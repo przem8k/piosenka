@@ -8,6 +8,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.template import Context, Template, loader
 from markdown2 import markdown
+import re
 
 from piosenka import lyrics
 
@@ -379,6 +380,17 @@ def generate_songbook_index(artists_by_slug):
     write_page(song_index_context, "songs/index.html", out_file_path)
     return song_index_context
 
+POLISH_ORDER = str.maketrans({
+    'a': 'a0', 'ą': 'a1', 'c': 'c0', 'ć': 'c1', 'e': 'e0', 'ę': 'e1',
+    'l': 'l0', 'ł': 'l1', 'n': 'n0', 'ń': 'n1', 'o': 'o0', 'ó': 'o1',
+    's': 's0', 'ś': 's1', 'z': 'z0', 'ź': 'z1', 'ż': 'z2',
+})
+
+def polish_sort_key(song):
+    text = song["title"]
+    # Removes leading non-word chars: '„Obym się mylił”' -> 'Obym się mylił”'
+    text_clean = re.sub(r'^[\s\W]+', '', text, flags=re.UNICODE)
+    return text_clean.lower().translate(POLISH_ORDER)
 
 def generate_artists(artists_by_slug, songs_by_artist_slug, song_index_context):
     for artist_slug, artist_context in artists_by_slug.items():
@@ -413,6 +425,9 @@ def generate_artists(artists_by_slug, songs_by_artist_slug, song_index_context):
         else:
             filtered_songs = songs
             epigone_songs = []
+
+        epigone_songs = sorted(epigone_songs, key=polish_sort_key)
+        filtered_songs = sorted(filtered_songs, key=polish_sort_key)
 
         artist_context["songs"] = filtered_songs
         artist_context["epigone_songs"] = epigone_songs
