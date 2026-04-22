@@ -248,4 +248,62 @@ h2 {
     margin-left: 10px;
 }
 
-/* ... */
+/* dark theme button */
+
+.navbar-theme-toggle {
+    background: none;
+    border: none;
+    color: #d0cec9;
+    vertical-align: top;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.navbar-theme-toggle:hover {
+    color: #ffffff;
+}
+
+.navbar-theme-toggle svg {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+.pzt-expanded-navbar-search .navbar-theme-toggle {
+    margin-top: 8px;
+}
+
+.pzt-collapsed-theme-toggle {
+    display: inline-block;
+}
+
+@media (min-width: 992px) {
+    .pzt-collapsed-theme-toggle {
+        display: none;
+    }
+}
+
+.pzt-expanded-theme-toggle {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .pzt-expanded-theme-toggle {
+        display: inline-block;
+    }
+}
+
+/* fit dark theme button and search when JS is disabled */
+
+@media (min-width: 992px) {
+    .pzt-expanded-navbar-search .form-control {
+        max-width: 450px;
+        display: inline-block;
+    }
+}
+
+/* add zebra stripe for lyrics when wrapped (zebra.js) */
+
+.lyrics.zebra table tr:nth-child(even) {
+      background-color: rgba(0, 0, 0, 0.05);
+}
