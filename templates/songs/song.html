@@ -79,6 +79,16 @@
                     <span class="glyphicon glyphicon-question-sign"></span>
                   </span>
                 </div>
+                
+                <div class="gadget-row">
+                  <button type="button" class="btn btn-default btn-sm autoscroll-toggle" >
+                    <span class="glyphicon glyphicon-forward" title="autoscroll"></span>
+                  </button>
+                  <span data-toggle="tooltip" data-placement="right" title="Przewijaj tekst." class="tip">
+                    <span class="glyphicon glyphicon-question-sign"></span>
+                  </span>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -149,4 +159,23 @@
   </div>
   {% include "base/rows/disqus.html" with disqus_id=song.slug %}
 </div>
+
+<div class="autoscroll-bar hidden-print">
+  <button class="btn btn-sm btn-primary autoscroll-pause" title="Pauza">
+    <span class="glyphicon glyphicon-pause"></span>
+  </button>
+  <div class="autoscroll-bar__center">
+    <button class="btn btn-sm btn-default autoscroll-slower" title="Wolniej">
+      <span class="glyphicon glyphicon-minus"></span>
+    </button>
+    <span class="autoscroll-speed">Tempo: 6</span>
+    <button class="btn btn-sm btn-default autoscroll-faster" title="Szybciej">
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+  </div>
+  <button class="btn btn-sm btn-default autoscroll-close" title="Wyłącz">
+    <span class="glyphicon glyphicon-remove"></span>
+  </button>
+</div>
+
 {% endblock content %}
