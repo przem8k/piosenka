@@ -2,6 +2,7 @@
 
 {% load static %}
 {% load thumbnail %}
+{% load compress %}
 
 {% block title %}Śpiewnik piosenek {{ name }} - teksty i akordy{% endblock title %}
 {% block description %}Śpiewnik zawiera teksty i akordy do piosenek - artysta: {{ artist }}.{% endblock description %}
@@ -67,12 +68,7 @@
 {% endblock content %}
 
 {% block extra-scripts %}
-<script>
-  function randomSong() {
-    var links = document.querySelectorAll('#song-list a');
-    if (links.length === 0) return;
-    var idx = Math.floor(Math.random() * links.length);
-    window.location.href = links[idx].href;
-  }
-</script>
+{% compress js %}
+<script src="{% static "js/random.js" %}"></script>
+{% endcompress %}
 {% endblock extra-scripts %}
