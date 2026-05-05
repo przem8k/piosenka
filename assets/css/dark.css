@@ -1,0 +1,158 @@
+[data-theme="dark"] {
+
+    /* body */
+    body {
+        background: #171614;
+        color: #d0cec9;
+    }
+
+    /* links */
+    a {
+        color: #5aaddb;
+    }
+
+    a:hover,
+    a:active {
+        color: #7ec5e8;
+    }
+
+    /* header, footer, navbar */
+    .header {
+        background: #252320;
+        border-bottom-color: #383532;
+    }
+
+    .footer {
+        background: #252320;
+        border-top-color: #383532;
+    }
+
+    .underline {
+        border-bottom-color: #383532;
+    }
+
+    hr {
+        border-top-color: #383532;
+    }
+
+    .navbar-inverse {
+        background-color: #171614;
+        border-color: #383532;
+    }
+
+    .navbar img {
+        filter: brightness(0.8);
+    }
+
+    /* search */
+    .navbar input[type="text"] {
+        background-color: #424040;
+        border: 1px solid #4e4c49;
+        color: #d0cec9;
+    }
+
+    .navbar input[type="text"]:focus {
+        /*background-color: #32302d;*/
+        background-color: #424040;
+        border-color: #5aaddb;
+        color: #ffffff;
+    }
+
+    .navbar input[type="text"]::placeholder {
+        color: #a6a49e;
+    }
+
+    .navbar .search .tt-dropdown-menu,
+    .navbar .search .tt-menu {
+        background-color: #2b2a27;
+        border-color: #4e4c49;
+        box-shadow: 0 8px 18px 10px rgba(0, 0, 0, 0.65);
+        border-radius: 4px;
+    }
+
+    .navbar .search .tt-suggestion:hover {
+        background-color: #1a6d9c;
+        color: #ffffff;
+    }
+
+    .navbar .search .dataset-header {
+        color: #8a8885;
+        border-bottom: 1px solid #4e4c49;
+        padding-bottom: 4px;
+    }
+
+
+    /* cards and sections */
+    .section {
+        background-color: #232220;
+        border-color: #353330;
+    }
+
+    .pzt-card-title {
+        color: #e07070;
+    }
+
+
+    /* buttons */
+    .btn-default {
+        background-color: #2b2a27;
+        border-color: #4a4845;
+        color: #c8c6c1;
+    }
+    .btn-default:hover,
+    .btn-default:focus {
+        background-color: #34322f;
+        border-color: #5a5856;
+        color: #e0deda;
+    }
+    .btn-default:active {
+        background-color: #1e1d1b;
+    }
+
+    .btn-primary {
+        background-color: #1a6d9c;
+        border-color: #155d85;
+        color: #ffffff;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #1f80b8;
+        border-color: #1a6d9c;
+        color: #ffffff;
+    }
+
+    .btn-default[disabled] {
+        background-color: #1e1d1b;
+        border-color: #383532;
+        color: #5a5855;
+        opacity: 0.65;
+    }
+
+
+    /* fb and disqus plugins */
+    #disqus_thread {
+        filter: brightness(0.9);
+    }
+
+    .pzt-social-button {
+        opacity: 0.85;
+        filter: contrast(0.9) brightness(0.85);
+        transition: opacity 0.3s ease;
+    }
+
+    .pzt-social-button:hover {
+        opacity: 1;
+        filter: none;
+    }
+
+    /* selection */
+    ::selection {
+        background: rgba(90, 173, 219, 0.30);
+        color: #ffffff;
+    }
+
+    /* zebra stripe */
+    .lyrics.zebra table tr:nth-child(even) {
+        background-color: #161616;
+    }
+}
