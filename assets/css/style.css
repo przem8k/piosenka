@@ -1,11 +1,34 @@
+/* Restore the typography and link colors the pre-migration site used.
+   BS5 reboot ships system-ui at 16px / 1.5 with #0d6efd links; the
+   legacy look was Ubuntu (Helvetica fallback) at 14px / 1.428 with
+   #428bca links. */
+:root {
+    --bs-body-font-family: Ubuntu, Helvetica, Arial, sans-serif;
+    --bs-body-font-size: 14px;
+    --bs-body-line-height: 1.428571429;
+    --bs-body-color: #333;
+    --bs-link-color: #428bca;
+    --bs-link-hover-color: #2a6496;
+    --bs-link-color-rgb: 66, 139, 202;
+    --bs-link-hover-color-rgb: 42, 100, 150;
+}
+
 body {
     background: url("../images/patterns/groovepaper.png");
 }
 
 @media screen {
     body {
-        padding-top: 41px;
+        /* Clear the fixed navbar. Navbar is shrunk to ~50px below. */
+        padding-top: 50px;
     }
+}
+
+/* Cap container width to BS3's xl. BS5 adds an xxl breakpoint that
+   widens the container to 1320px on large monitors, which makes the
+   site look more spread out than the legacy layout intended. */
+.container {
+    max-width: 1170px;
 }
 
 p, .section p {
@@ -46,38 +69,101 @@ h2 {
     padding-left: 20px;
 }
 
-.navbar .site-nav {
+.pzt .navbar {
+    /* BS5 defaults are taller than BS3; pin to the prod height. */
+    --bs-navbar-padding-y: 0.25rem;
+    /* BS5 sets nav-link padding-x to 0.5rem (8px) inside .navbar-expand-*,
+       which packs links closer than prod. BS3 used 15px. */
+    --bs-navbar-nav-link-padding-x: 15px;
+    background-color: #212121;
+    min-height: 50px;
+}
+
+.pzt .navbar-brand {
+    /* No padding so the logo image sits flush against the container edge.
+       Keep margin-right so there's breathing room between the logo and
+       the nav links (BS3's prod look had ~15-20px gap there). */
     padding: 0;
+    margin: 0 1rem 0 0;
 }
 
-.navbar-header {
-    display: flex;
+.pzt .navbar > .container {
+    flex-wrap: nowrap;
 }
 
+@media (max-width: 991.98px) {
+    .pzt .navbar > .container {
+        flex-wrap: wrap;
+    }
+    /* Ensure the collapse drawer ends up on its own row below the bar */
+    .pzt .navbar > .container > .navbar-collapse {
+        flex-basis: 100%;
+    }
+}
+
+.pzt .navbar .nav-link {
+    color: #d0cec9;
+}
+
+.pzt .navbar .nav-link:hover,
+.pzt .navbar .nav-link:focus {
+    color: #ffffff;
+}
+
+/* Match the original navbar input look on dark background */
+.pzt .navbar input[type="search"],
+.pzt .navbar input[type="text"] {
+    height: 34px;
+    padding: 6px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: 14px;
+}
+
+.pzt .navbar input::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+/* Search slot inside the collapsed (mobile) navbar row */
 .pzt-collapsed-navbar-search {
-    display: inline;
-    flex-grow: 1;
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0 8px;
+}
+
+.pzt-collapsed-navbar-search input {
+    min-width: 0;
+    width: 100%;
 }
 
 @media (min-width: 992px) {
+    /* On desktop, search lives inside the expanded collapse, not in the
+       always-visible row. */
     .pzt-collapsed-navbar-search {
         display: none;
     }
 }
 
+/* Search slot inside the expanded (desktop) collapse */
 .pzt-expanded-navbar-search {
     display: none;
 }
 
 @media (min-width: 992px) {
     .pzt-expanded-navbar-search {
-        display: block;
-        flex-grow: 1;
-        text-align: right;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex: 1 1 auto;
+        justify-content: flex-end;
     }
 
-    .site-nav {
-        display: flex !important;
+    /* Cap the search input itself (not the slot) so the input stays the
+       same prod size, right-aligned within the navbar. */
+    .pzt-expanded-navbar-search .form-control {
+        max-width: 450px;
     }
 }
 
@@ -103,12 +189,17 @@ h2 {
 .header {
     border-bottom: 1px solid #BBB;
     background: url("../images/patterns/paper.png");
+    /* Padding rather than h2 margin-top so the spacing doesn't collapse
+       into the body's navbar-clearance padding. */
+    padding-top: 20px;
     margin: 0 0 20px 0;
 }
 
 .header h1, .header h2 {
     font-weight: bold;
     text-align: left;
+    margin-bottom: 10px;
+    line-height: 22px;
 }
 
 .footer {
@@ -182,6 +273,45 @@ h2 {
     border-top: none;
 }
 
+/* Restore BS3 button palette. BS5 ships btn-primary as #0d6efd and
+   btn-secondary as gray #6c757d; BS3 used #428bca and white #fff. */
+.btn-primary {
+    --bs-btn-bg: #428bca;
+    --bs-btn-border-color: #357ebd;
+    --bs-btn-hover-bg: #3276b1;
+    --bs-btn-hover-border-color: #285e8e;
+    --bs-btn-active-bg: #285e8e;
+    --bs-btn-active-border-color: #204d74;
+    --bs-btn-disabled-bg: #428bca;
+    --bs-btn-disabled-border-color: #357ebd;
+}
+
+.btn-secondary {
+    --bs-btn-bg: #fff;
+    --bs-btn-color: #333;
+    --bs-btn-border-color: #ccc;
+    --bs-btn-hover-bg: #e6e6e6;
+    --bs-btn-hover-color: #333;
+    --bs-btn-hover-border-color: #adadad;
+    --bs-btn-active-bg: #d4d4d4;
+    --bs-btn-active-color: #333;
+    --bs-btn-active-border-color: #8c8c8c;
+    --bs-btn-disabled-bg: #fff;
+    --bs-btn-disabled-color: #333;
+    --bs-btn-disabled-border-color: #ccc;
+}
+
+/* BS5 dropped `well`; keep our links unchanged otherwise */
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+
 .section .content h2 small {
     font-size: 14px;
 }
@@ -216,7 +346,9 @@ h2 {
 /* blockquoute */
 
 .lead-quote {
-    padding-top: 20px;
+    /* No padding-top — let the quote align with the h2 in the sibling
+       column. With the heading margins now zeroed, the prod's 20px
+       offset put the quote visibly lower than the title. */
 }
 
 /* forms */
@@ -323,9 +455,10 @@ h2 {
     background: none;
     border: none;
     color: #d0cec9;
-    vertical-align: top;
+    vertical-align: middle;
     cursor: pointer;
     transition: color 0.2s ease;
+    padding: 4px 6px;
 }
 
 .navbar-theme-toggle:hover {
@@ -338,12 +471,9 @@ h2 {
     vertical-align: middle;
 }
 
-.pzt-expanded-navbar-search .navbar-theme-toggle {
-    margin-top: 8px;
-}
-
 .pzt-collapsed-theme-toggle {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 }
 
 @media (min-width: 992px) {
@@ -358,16 +488,7 @@ h2 {
 
 @media (min-width: 992px) {
     .pzt-expanded-theme-toggle {
-        display: inline-block;
-    }
-}
-
-/* fit dark theme button and search when JS is disabled */
-
-@media (min-width: 992px) {
-    .pzt-expanded-navbar-search .form-control {
-        max-width: 450px;
-        display: inline-block;
+        display: inline-flex;
     }
 }
 
