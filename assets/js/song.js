@@ -6,59 +6,80 @@ var GadgetStateEnum = {
 let gadgetState = GadgetStateEnum.CHORDS_ON;
 let transposition = 0;
 
+function $$(selector) {
+    return document.querySelectorAll(selector);
+}
+
+function setDisabled(selector, disabled) {
+    $$(selector).forEach(el => { el.disabled = disabled; });
+}
+
+function setActive(selector, active) {
+    $$(selector).forEach(el => {
+        el.classList.toggle("btn-primary", active);
+        el.classList.toggle("btn-secondary", !active);
+    });
+}
+
+function setVisible(selector, visible, displayWhenVisible) {
+    const value = visible ? (displayWhenVisible || "") : "none";
+    $$(selector).forEach(el => { el.style.display = value; });
+}
+
+function onClick(selector, handler) {
+    $$(selector).forEach(el => el.addEventListener("click", handler));
+}
+
 function enableTransposition() {
-    $(".trans-up-trigger").prop('disabled', false);
-    $(".trans-home-trigger").prop('disabled', false);
-    $(".trans-down-trigger").prop('disabled', false);
+    setDisabled(".trans-up-trigger, .trans-home-trigger, .trans-down-trigger", false);
 }
 
 function disableTransposition() {
-    $(".trans-up-trigger").prop('disabled', true);
-    $(".trans-home-trigger").prop('disabled', true);
-    $(".trans-down-trigger").prop('disabled', true);
+    setDisabled(".trans-up-trigger, .trans-home-trigger, .trans-down-trigger", true);
 }
 
 function applyState() {
-    $(".chords-trigger").removeClass("btn-primary");
-    $(".chords-trigger").addClass("btn-default");
+    setActive(".chords-trigger", false);
     if (gadgetState == GadgetStateEnum.CHORDS_ON) {
-        $(".chord-section").show();
-        $(".chords-normal-trigger").addClass("btn-primary").removeClass("btn-default");
+        setVisible(".chord-section", true);
+        setActive(".chords-normal-trigger", true);
         enableTransposition();
     } else if (gadgetState == GadgetStateEnum.CHORDS_OFF) {
-        $(".chord-section").hide();
-        $(".chords-none-trigger").addClass("btn-primary").removeClass("btn-default");
+        setVisible(".chord-section", false);
+        setActive(".chords-none-trigger", true);
         disableTransposition();
     }
 }
 
 function transpose() {
     for (let i = 0; i <= 11; i++) {
-        $(`.chords-t${i}`).hide();
+        setVisible(`.chords-t${i}`, false);
     }
-    $(`.chords-t${transposition}`).show();
+    // .chords-tN spans have `display: none` in CSS by default, so showing
+    // them needs an explicit visible value rather than "".
+    setVisible(`.chords-t${transposition}`, true, "inline");
     applyState();
 }
 
-$(document).ready(function(){
-    $(".chords-normal-trigger").click(function() {
+document.addEventListener("DOMContentLoaded", function() {
+    onClick(".chords-normal-trigger", () => {
         gadgetState = GadgetStateEnum.CHORDS_ON;
         applyState();
     });
-    $(".chords-none-trigger").click(function() {
+    onClick(".chords-none-trigger", () => {
         gadgetState = GadgetStateEnum.CHORDS_OFF;
         applyState();
     });
 
-    $(".trans-up-trigger").click(function() {
+    onClick(".trans-up-trigger", () => {
         transposition = (transposition + 1) % 12;
         transpose();
     });
-    $(".trans-home-trigger").click(function() {
+    onClick(".trans-home-trigger", () => {
         transposition = 0;
         transpose();
     });
-    $(".trans-down-trigger").click(function() {
+    onClick(".trans-down-trigger", () => {
         transposition = (transposition + 11) % 12;
         transpose();
     });
