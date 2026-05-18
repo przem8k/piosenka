@@ -1,0 +1,104 @@
+name: Deploy preview channel
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+    inputs:
+      channel_id:
+        description: 'Preview channel name (URL slug). Defaults to branch name.'
+        required: false
+      expires:
+        description: 'Channel expiration (e.g. 1h, 7d, 30d)'
+        required: false
+        default: '7d'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  deploy-preview:
+    name: Build and deploy preview
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.pull_request.draft == false &&
+       github.event.pull_request.head.repo.full_name == github.repository)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up environment and build site
+        uses: ./.github/actions/setup-and-build
+        with:
+          calendar_api_key: ${{ secrets.CALENDAR_API_KEY }}
+
+      - name: Compute channel id
+        id: channel
+        run: |
+          INPUT_ID="${{ github.event.inputs.channel_id }}"
+          if [ -n "$INPUT_ID" ]; then
+            RAW="$INPUT_ID"
+          elif [ -n "${{ github.head_ref }}" ]; then
+            RAW="${{ github.head_ref }}"
+          else
+            RAW="${{ github.ref_name }}"
+          fi
+          # Firebase channel ids: lowercase letters, digits, hyphens, underscores; max 63 chars.
+          SAFE=$(echo "$RAW" | tr '[:upper:]' '[:lower:]' | tr -c 'a-z0-9_-' '-' | cut -c1-63)
+          echo "id=$SAFE" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Firebase preview channel
+        id: deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: |
+          OUTPUT=$(firebase hosting:channel:deploy "${{ steps.channel.outputs.id }}" \
+            --project piosenka-site \
+            --token "$FIREBASE_TOKEN" \
+            --expires "${{ github.event.inputs.expires || '7d' }}" \
+            --json)
+          echo "$OUTPUT"
+          URL=$(echo "$OUTPUT" | jq -r '.result | to_entries[0].value.url')
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+
+      - name: Post preview link as PR comment
+        if: steps.deploy.outputs.url != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          BRANCH: ${{ github.head_ref || github.ref_name }}
+          URL: ${{ steps.deploy.outputs.url }}
+          EXPIRES: ${{ github.event.inputs.expires || '7d' }}
+        run: |
+          if [ -n "$PR_NUMBER" ]; then
+            PR="$PR_NUMBER"
+          else
+            PR=$(gh pr list --repo "$REPO" --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
+          fi
+          if [ -z "$PR" ]; then
+            echo "No open PR for branch $BRANCH; skipping comment."
+            exit 0
+          fi
+
+          MARKER="<!-- firebase-preview-channel -->"
+          BODY="$MARKER
+          Preview channel deployed for \`$BRANCH\`:
+
+          $URL
+
+          (expires in $EXPIRES; pushing more commits to this branch refreshes the preview)"
+
+          EXISTING=$(gh api "repos/$REPO/issues/$PR/comments" \
+            --jq "[.[] | select(.body | startswith(\"$MARKER\"))][0].id // empty")
+
+          if [ -n "$EXISTING" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$EXISTING" -f body="$BODY" > /dev/null
+            echo "Updated existing preview comment on PR #$PR"
+          else
+            gh pr comment "$PR" --repo "$REPO" --body "$BODY"
+            echo "Posted new preview comment on PR #$PR"
+          fi
