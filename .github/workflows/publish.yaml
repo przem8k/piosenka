@@ -14,36 +14,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up environment and build site
+        uses: ./.github/actions/setup-and-build
         with:
-          python-version: '3.11'
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v4
-
-      - name: Install Python dependencies
-        run: uv sync
-
-      - name: Create private config file
-        run: |
-          cat > private_gen_vars.yaml << EOF
           calendar_api_key: ${{ secrets.CALENDAR_API_KEY }}
-          EOF
-
-      - name: Run tests
-        run: uv run python manage.py test
-
-      - name: Build site
-        run: uv run bash build.sh
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install Firebase CLI
-        run: npm install -g firebase-tools
 
       - name: Publish to Firebase
         env:
