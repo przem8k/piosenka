@@ -24,6 +24,15 @@
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
+
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Piosenka z tekstem" />
+    <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}" />
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static "images/icon-192.png" %}" />
+    <link rel="icon" type="image/png" sizes="512x512" href="{% static "images/icon-512.png" %}" />
     {% compress js %}
     <script src="{% static "js/dark-init.js" %}"></script>
     {% endcompress %}
@@ -147,6 +156,15 @@
     {% endcompress %}
 
     {% block extra-scripts %}{% endblock extra-scripts %}
+
+    {% comment %}
+      sw-register.js is intentionally outside {% compress js %}: it
+      must stay reachable at a stable URL so the SW update path keeps
+      working when we change cache versions. If you bundle it into
+      static/CACHE/output.<hash>.js, an older SW serving the previous
+      hash can leave clients stuck on stale registration logic.
+    {% endcomment %}
+    <script src="{% static "js/sw-register.js" %}"></script>
 
     <!-- FB -->
     <div id="fb-root"></div>
