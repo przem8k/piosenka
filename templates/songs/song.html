@@ -51,18 +51,18 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="song-gadget hidden-print">
+              <div class="song-gadget d-print-none">
                 <div class="gadget-row">
-                  <button type="button" class="btn btn-sm btn-default trans-up-trigger">
+                  <button type="button" class="btn btn-sm btn-secondary trans-up-trigger">
                     <span class="glyphicon glyphicon-arrow-up" title="półton w górę"></span>
                   </button>
-                  <button type="button" class="btn btn-sm btn-default trans-home-trigger">
+                  <button type="button" class="btn btn-sm btn-secondary trans-home-trigger">
                     <span class="glyphicon glyphicon-home" title="zapis oryginalny"></span>
                   </button>
-                  <button type="button" class="btn btn-sm btn-default trans-down-trigger">
+                  <button type="button" class="btn btn-sm btn-secondary trans-down-trigger">
                     <span class="glyphicon glyphicon-arrow-down" title="półton w dół"></span>
                   </button>
-                  <span data-toggle="tooltip" data-placement="right" title="Transponuj
+                  <span data-bs-toggle="tooltip" data-bs-placement="right" title="Transponuj
                   akordy w górę lub w dół." class="tip">
                     <span class="glyphicon glyphicon-question-sign"></span>
                   </span>
@@ -72,19 +72,19 @@
                   <button type="button" class="btn btn-primary btn-sm chords-trigger chords-normal-trigger">
                     <span class="glyphicon glyphicon-music" title="wyświetl akordy"></span>
                   </button>
-                  <button type="button" class="btn btn-default btn-sm chords-trigger chords-none-trigger">
+                  <button type="button" class="btn btn-secondary btn-sm chords-trigger chords-none-trigger">
                     <span class="glyphicon glyphicon-font" title="tylko tekst"></span>
                   </button>
-                  <span data-toggle="tooltip" data-placement="right" title="Wyświetl lub ukryj akordy." class="tip">
+                  <span data-bs-toggle="tooltip" data-bs-placement="right" title="Wyświetl lub ukryj akordy." class="tip">
                     <span class="glyphicon glyphicon-question-sign"></span>
                   </span>
                 </div>
                 
                 <div class="gadget-row">
-                  <button type="button" class="btn btn-default btn-sm autoscroll-toggle" >
+                  <button type="button" class="btn btn-secondary btn-sm autoscroll-toggle" >
                     <span class="glyphicon glyphicon-forward" title="autoscroll"></span>
                   </button>
-                  <span data-toggle="tooltip" data-placement="right" title="Przewijaj tekst." class="tip">
+                  <span data-bs-toggle="tooltip" data-bs-placement="right" title="Przewijaj tekst." class="tip">
                     <span class="glyphicon glyphicon-question-sign"></span>
                   </span>
                 </div>
@@ -104,7 +104,7 @@
       </div>
     </div>
 
-    <div class="col-md-4 hidden-print">
+    <div class="col-md-4 d-print-none">
       <!--
       <div class="section">
         <h2 class="pzt-card-title">Zrzutka na serwery 2025</h2>
@@ -160,20 +160,20 @@
   {% include "base/rows/disqus.html" with disqus_id=song.slug %}
 </div>
 
-<div class="autoscroll-bar hidden-print">
+<div class="autoscroll-bar d-print-none">
   <button class="btn btn-sm btn-primary autoscroll-pause" title="Pauza">
     <span class="glyphicon glyphicon-pause"></span>
   </button>
   <div class="autoscroll-bar__center">
-    <button class="btn btn-sm btn-default autoscroll-slower" title="Wolniej">
+    <button class="btn btn-sm btn-secondary autoscroll-slower" title="Wolniej">
       <span class="glyphicon glyphicon-minus"></span>
     </button>
     <span class="autoscroll-speed">Tempo: 6</span>
-    <button class="btn btn-sm btn-default autoscroll-faster" title="Szybciej">
+    <button class="btn btn-sm btn-secondary autoscroll-faster" title="Szybciej">
       <span class="glyphicon glyphicon-plus"></span>
     </button>
   </div>
-  <button class="btn btn-sm btn-default autoscroll-close" title="Wyłącz">
+  <button class="btn btn-sm btn-secondary autoscroll-close" title="Wyłącz">
     <span class="glyphicon glyphicon-remove"></span>
   </button>
 </div>

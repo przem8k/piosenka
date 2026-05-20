@@ -59,8 +59,12 @@
     font-size: 14px;
 }
 
+/* BS3 styled `blockquote small` as block + gray; BS5 reboot dropped this. */
 .lyrics small, .container blockquote small {
+    display: block;
     font-size: 85%;
+    line-height: 1.428571429;
+    color: #999;
 }
 
 .lyrics .paragraph {

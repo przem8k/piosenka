@@ -35,50 +35,33 @@
         border-top-color: #383532;
     }
 
-    .navbar-inverse {
+    .pzt .navbar {
         background-color: #171614;
         border-color: #383532;
     }
 
-    .navbar img {
+    .pzt .navbar img {
         filter: brightness(0.8);
     }
 
     /* search */
-    .navbar input[type="text"] {
+    .pzt .navbar input[type="search"],
+    .pzt .navbar input[type="text"] {
         background-color: #424040;
         border: 1px solid #4e4c49;
         color: #d0cec9;
     }
 
-    .navbar input[type="text"]:focus {
-        /*background-color: #32302d;*/
+    .pzt .navbar input[type="search"]:focus,
+    .pzt .navbar input[type="text"]:focus {
         background-color: #424040;
         border-color: #5aaddb;
         color: #ffffff;
     }
 
-    .navbar input[type="text"]::placeholder {
+    .pzt .navbar input[type="search"]::placeholder,
+    .pzt .navbar input[type="text"]::placeholder {
         color: #a6a49e;
-    }
-
-    .navbar .search .tt-dropdown-menu,
-    .navbar .search .tt-menu {
-        background-color: #2b2a27;
-        border-color: #4e4c49;
-        box-shadow: 0 8px 18px 10px rgba(0, 0, 0, 0.65);
-        border-radius: 4px;
-    }
-
-    .navbar .search .tt-suggestion:hover {
-        background-color: #1a6d9c;
-        color: #ffffff;
-    }
-
-    .navbar .search .dataset-header {
-        color: #8a8885;
-        border-bottom: 1px solid #4e4c49;
-        padding-bottom: 4px;
     }
 
 
@@ -93,19 +76,19 @@
     }
 
 
-    /* buttons */
-    .btn-default {
+    /* buttons (BS5: btn-secondary replaces btn-default) */
+    .btn-secondary {
         background-color: #2b2a27;
         border-color: #4a4845;
         color: #c8c6c1;
     }
-    .btn-default:hover,
-    .btn-default:focus {
+    .btn-secondary:hover,
+    .btn-secondary:focus {
         background-color: #34322f;
         border-color: #5a5856;
         color: #e0deda;
     }
-    .btn-default:active {
+    .btn-secondary:active {
         background-color: #1e1d1b;
     }
 
@@ -121,7 +104,8 @@
         color: #ffffff;
     }
 
-    .btn-default[disabled] {
+    .btn-secondary[disabled],
+    .btn-secondary:disabled {
         background-color: #1e1d1b;
         border-color: #383532;
         color: #5a5855;
@@ -129,11 +113,12 @@
     }
 
 
-    /* fb and disqus plugins */
+    /* disqus plugin */
     #disqus_thread {
         filter: brightness(0.9);
     }
 
+    /* fb social button: soften on idle, restore on hover */
     .pzt-social-button {
         opacity: 0.85;
         filter: contrast(0.9) brightness(0.85);
