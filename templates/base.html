@@ -47,6 +47,7 @@
     <link href="{% static "css/song.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "css/dark.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/install-prompt.css" %}" rel="stylesheet" type="text/css" />
     {% endcompress %}
 
     {% block extra-css %}{% endblock extra-css %}
@@ -153,17 +154,20 @@
     <script src="{% static "js/dark.js" %}"></script>
     <script src="{% static "js/zebra.js" %}"></script>
     <script src="{% static "js/autoscroll.js" %}"></script>
+    <script src="{% static "js/install-prompt.js" %}"></script>
     {% endcompress %}
 
     {% block extra-scripts %}{% endblock extra-scripts %}
 
-    {% comment %}
-      sw-register.js is intentionally outside {% compress js %}: it
-      must stay reachable at a stable URL so the SW update path keeps
-      working when we change cache versions. If you bundle it into
-      static/CACHE/output.<hash>.js, an older SW serving the previous
-      hash can leave clients stuck on stale registration logic.
-    {% endcomment %}
+    <template id="pzt-install-banner-tpl">
+      <div id="pzt-install-banner" role="dialog" aria-label="Zainstaluj aplikację">
+        <div class="pzt-install-text"></div>
+        <button type="button" class="pzt-install-action" hidden>Zainstaluj</button>
+        <button type="button" class="pzt-install-close" aria-label="Zamknij">&times;</button>
+      </div>
+    </template>
+
+    {# Loaded outside {% compress js %} so its URL stays stable across cache-version bumps. #}
     <script src="{% static "js/sw-register.js" %}"></script>
 
     <!-- FB -->
