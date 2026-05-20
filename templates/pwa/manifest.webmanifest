@@ -1,0 +1,48 @@
+{% load static %}{
+  "name": "Piosenka z tekstem",
+  "short_name": "Piosenka z tekstem",
+  "description": "Śpiewnik piosenki literackiej, wydarzenia, refleksje",
+  "lang": "pl",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#212121",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "{% static 'images/icon-192.png' %}",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{% static 'images/icon-512.png' %}",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{% static 'images/icon-maskable-512.png' %}",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Szukaj",
+      "short_name": "Szukaj",
+      "url": "/szukaj/",
+      "icons": [{"src": "{% static 'images/icon-192.png' %}", "sizes": "192x192", "type": "image/png"}]
+    },
+    {
+      "name": "Śpiewnik",
+      "short_name": "Śpiewnik",
+      "url": "/spiewnik/",
+      "icons": [{"src": "{% static 'images/icon-192.png' %}", "sizes": "192x192", "type": "image/png"}]
+    }
+  ]
+}

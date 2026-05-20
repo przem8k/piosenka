@@ -1,0 +1,53 @@
+name: Set up environment and build site
+description: |
+  Install Python and Node tooling, run tests, build the static site
+  into out/, and install the Firebase CLI so the caller can deploy.
+
+inputs:
+  calendar_api_key:
+    description: Google Calendar API key embedded in the frontpage at build time.
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v4
+
+    - name: Install Python dependencies
+      shell: bash
+      run: uv sync
+
+    - name: Create private config file
+      shell: bash
+      run: |
+        cat > private_gen_vars.yaml << EOF
+        calendar_api_key: ${{ inputs.calendar_api_key }}
+        EOF
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install Node dependencies
+      shell: bash
+      run: npm install
+
+    - name: Run tests
+      shell: bash
+      run: uv run python manage.py test
+
+    - name: Build site
+      shell: bash
+      run: uv run bash build.sh
+
+    - name: Install Firebase CLI
+      shell: bash
+      run: npm install -g firebase-tools

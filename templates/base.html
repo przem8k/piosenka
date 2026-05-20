@@ -16,12 +16,23 @@
 
     <title>{% block title %}Piosenka z tekstem{% endblock title %}</title>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#212121" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">
     <meta name="robots" content="index,follow" />
     <meta name="description" content="{% block description %}Śpiewnik piosenki literackiej, wydarzenia, refleksje{% endblock description %}" />
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
+
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Piosenka z tekstem" />
+    <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}" />
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static "images/icon-192.png" %}" />
+    <link rel="icon" type="image/png" sizes="512x512" href="{% static "images/icon-512.png" %}" />
     {% compress js %}
     <script src="{% static "js/dark-init.js" %}"></script>
     {% endcompress %}
@@ -36,6 +47,7 @@
     <link href="{% static "css/song.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "css/dark.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/install-prompt.css" %}" rel="stylesheet" type="text/css" />
     {% endcompress %}
 
     {% block extra-css %}{% endblock extra-css %}
@@ -142,9 +154,21 @@
     <script src="{% static "js/dark.js" %}"></script>
     <script src="{% static "js/zebra.js" %}"></script>
     <script src="{% static "js/autoscroll.js" %}"></script>
+    <script src="{% static "js/install-prompt.js" %}"></script>
     {% endcompress %}
 
     {% block extra-scripts %}{% endblock extra-scripts %}
+
+    <template id="pzt-install-banner-tpl">
+      <div id="pzt-install-banner" role="dialog" aria-label="Zainstaluj aplikację">
+        <div class="pzt-install-text"></div>
+        <button type="button" class="pzt-install-action" hidden>Zainstaluj</button>
+        <button type="button" class="pzt-install-close" aria-label="Zamknij">&times;</button>
+      </div>
+    </template>
+
+    {# Loaded outside {% compress js %} so its URL stays stable across cache-version bumps. #}
+    <script src="{% static "js/sw-register.js" %}"></script>
 
     <!-- FB -->
     <div id="fb-root"></div>
