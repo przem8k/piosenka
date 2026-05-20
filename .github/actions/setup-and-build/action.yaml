@@ -30,6 +30,16 @@ runs:
         calendar_api_key: ${{ inputs.calendar_api_key }}
         EOF
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install Node dependencies
+      shell: bash
+      run: npm install
+
     - name: Run tests
       shell: bash
       run: uv run python manage.py test
@@ -37,11 +47,6 @@ runs:
     - name: Build site
       shell: bash
       run: uv run bash build.sh
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
 
     - name: Install Firebase CLI
       shell: bash
