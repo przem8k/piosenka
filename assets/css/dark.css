@@ -37,7 +37,7 @@
 
     .pzt .navbar {
         background-color: #171614;
-        border-color: #383532;
+        border-bottom: 1px solid #383532;
     }
 
     .pzt .navbar img {
