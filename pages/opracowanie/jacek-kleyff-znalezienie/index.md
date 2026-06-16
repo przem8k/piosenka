@@ -17,31 +17,37 @@ performers:
 [d e a]
 [d e a]
 
+#zwrotka
 Tyle, ile tu dojrzały jestem już, [C G]
 to tyle sobie mówię: „Znajdź [e a]
 przełęcz i za nią ciągnij wóz, [C G]
 ciągnij przez świata kraj!”. [e a]
 
+@zwrotka
 Kraina wnika tu w krainę ciągle
 i czasem nie wiem, co jest co…
 Tak czuję się jak duch w siodle,
 leczy pytam: „Kto tu pan, kto koń?”.
 
+@zwrotka
 Podobno bóg ujeżdża światy,
 jak swoje konie pan –
 i owies ma, i tęgie baty,
 gdyż ma do koni żal.
 
+@zwrotka
 Tyle, ile tu dojrzały jestem już,
 to tyle sobie mówię: „Znajdź
 przełęcz i za nią ciągnij wóz,
 ciągnij przez świata kraj!”.
 
+@zwrotka
 Kraina wnika tu w krainę ciągle
 i czasem nie wiem, co jest co…
 Tak czuję się jak duch w siodle,
 leczy pytam: „Kto tu pan, kto koń?”.
 
+@zwrotka
 Wytchnienie często myli się z oddechem
 i czasem świat to jeden bat,
 tylko kopyta słodkim echem
