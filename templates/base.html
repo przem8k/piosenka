@@ -13,6 +13,23 @@
 
       gtag('config', 'G-PWGKYXKHWD');
     </script>
+    <script>
+      // Surface uncaught errors + promise rejections to GA — we have no
+      // other client-side telemetry, so this is how breakage in the wild
+      // gets back to us.
+      window.addEventListener("error", function (e) {
+        if (window.gtag) gtag("event", "js_error", {
+          description: ((e && e.message) || "error") + " @ "
+            + ((e && e.filename) || "") + ":" + ((e && e.lineno) || 0),
+        });
+      });
+      window.addEventListener("unhandledrejection", function (e) {
+        var r = e && e.reason;
+        if (window.gtag) gtag("event", "js_unhandledrejection", {
+          description: String((r && r.message) || r || "rejection"),
+        });
+      });
+    </script>
 
     <title>{% block title %}Piosenka z tekstem{% endblock title %}</title>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />

@@ -6,8 +6,8 @@ import {
   createHandlerBoundToURL,
   cleanupOutdatedCaches,
 } from "workbox-precaching";
-import { registerRoute, setCatchHandler } from "workbox-routing";
-import { StaleWhileRevalidate, NetworkFirst } from "workbox-strategies";
+import { registerRoute, setCatchHandler, NavigationRoute } from "workbox-routing";
+import { StaleWhileRevalidate, NetworkFirst, NetworkOnly } from "workbox-strategies";
 import { ExpirationPlugin } from "workbox-expiration";
 import { CacheableResponsePlugin } from "workbox-cacheable-response";
 
@@ -101,6 +101,14 @@ registerRoute(
     plugins: [CACHEABLE_OK, expire(300, 90)],
   })
 );
+
+// Catch-all for any other same-origin navigation we have no specific rule
+// for: hit the network, and when that fails offline the catch handler
+// below serves offline.html. Without this, a navigation that matches no
+// route bypasses Workbox entirely and the offline fallback never runs —
+// on iOS that shows up as a dead tap (nothing happens) rather than the
+// offline page. Registered last so the specific routes above win first.
+registerRoute(new NavigationRoute(new NetworkOnly()));
 
 // ---------------------------------------------------------------- update flow
 

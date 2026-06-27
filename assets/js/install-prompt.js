@@ -16,6 +16,10 @@
   var DISMISS_DAYS = 30;
   var BANNER_ID = "pzt-install-banner";
 
+  function track(name, params) {
+    if (window.gtag) window.gtag("event", name, params || {});
+  }
+
   function dismissedRecently() {
     try {
       var ts = parseInt(localStorage.getItem(STORAGE_KEY) || "", 10);
@@ -82,7 +86,14 @@
     return banner;
   }
 
+  if (isStandalone()) track("pwa_launch_standalone");
   if (isStandalone() || dismissedRecently()) return;
+
+  // Fired when the user completes installation (platforms that support
+  // it) — lets us measure real installs, not just prompts shown.
+  window.addEventListener("appinstalled", function () {
+    track("pwa_installed");
+  });
 
   // ---- native (Chrome / Edge / Android Chrome) ----
   var deferredPrompt = null;
@@ -97,17 +108,21 @@
         if (!deferredPrompt) { banner.remove(); return; }
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then(function (choice) {
+          var outcome = choice && choice.outcome;
+          track(outcome === "accepted" ? "pwa_install_accepted"
+                                       : "pwa_install_dismissed");
           // Only suppress future banners if the user declined. On accept
           // the app becomes standalone (isStandalone() hides the banner);
           // recording a dismissal would also keep it hidden for 30 days
           // if they later uninstall.
-          if (choice && choice.outcome === "dismissed") recordDismiss();
+          if (outcome === "dismissed") recordDismiss();
         }).finally(function () {
           deferredPrompt = null;
           banner.remove();
         });
       },
     });
+    track("pwa_install_prompt_shown");
   });
 
   // ---- iOS Safari (no programmatic install API) ----
