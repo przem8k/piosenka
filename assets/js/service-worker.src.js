@@ -71,6 +71,15 @@ const isSameOriginNavigation = (request, url) =>
 cleanupOutdatedCaches();
 precacheAndRoute(self.__WB_MANIFEST);
 
+// TEMP (squash before merge): expose this SW's build via a fetch so the
+// footer can read it reliably (iOS WebKit is flaky delivering postMessage
+// replies from a service worker). An old SW without this route lets the
+// request fall through to a 404, which is itself the "stale SW" signal.
+registerRoute(
+  ({ url }) => url.pathname === "/__sw-build__",
+  () => new Response(BUILD_ID, { headers: { "content-type": "text/plain" } })
+);
+
 // ---------------------------------------------------------------- runtime caches
 
 // Song / artist / article / blog pages. A page you've already opened is
@@ -137,12 +146,6 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(self.clients.claim());
 });
 
-// TEMP (squash before merge): answer the footer's build query.
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "GET_BUILD" && event.ports[0]) {
-    event.ports[0].postMessage({ build: BUILD_ID });
-  }
-});
 
 // ---------------------------------------------------------------- offline fallback
 

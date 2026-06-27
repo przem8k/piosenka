@@ -172,26 +172,28 @@
         var state = document.getElementById("pzt-sw-state");
         if (!out) return;
         if (!("serviceWorker" in navigator)) { out.textContent = "nieobsługiwany"; return; }
-        function ask(sw, controlling) {
-          var ch = new MessageChannel();
-          var done = false;
-          ch.port1.onmessage = function (e) {
-            done = true;
-            var b = (e.data && e.data.build) || "?";
-            out.textContent = b + (controlling ? "" : " (nie kontroluje — odśwież)");
-            if (state) state.textContent = (b === serverBuild) ? "✓ aktualny" : "⚠ stary — odśwież";
-          };
-          sw.postMessage({ type: "GET_BUILD" }, [ch.port2]);
-          setTimeout(function () { if (!done) out.textContent = "brak odpowiedzi"; }, 2000);
+        function show(b) {
+          out.textContent = b;
+          if (state) state.textContent = (b === serverBuild) ? "✓ aktualny" : "⚠ stary — odśwież";
         }
-        // reg.active sees the SW even before it controls this page (first
-        // load); controller is null until the SW claims the client.
-        navigator.serviceWorker.ready.then(function (reg) {
-          var sw = navigator.serviceWorker.controller || (reg && reg.active);
-          if (sw) ask(sw, !!navigator.serviceWorker.controller);
-          else out.textContent = "brak active";
-        }).catch(function () { out.textContent = "brak rejestracji"; });
-        setTimeout(function () { if (out.textContent === "…") out.textContent = "rejestruję…"; }, 4000);
+        // Ask the SW for its build via a fetch it intercepts (reliable on
+        // iOS, unlike postMessage). Works once the SW controls the page; on
+        // the first load it isn't controlling yet, so retry when it claims.
+        function probe() {
+          return fetch("/__sw-build__", { cache: "no-store" })
+            .then(function (r) { return r.ok ? r.text() : null; })
+            .then(function (b) { if (b) { show(b); return true; } return false; })
+            .catch(function () { return false; });
+        }
+        probe().then(function (ok) {
+          if (ok) return;
+          if (navigator.serviceWorker.controller == null) {
+            out.textContent = "rejestruję… (odśwież za chwilę)";
+            navigator.serviceWorker.addEventListener("controllerchange", function () { probe(); });
+          } else {
+            out.textContent = "stary SW (brak /__sw-build__)";
+          }
+        });
       })();
     </script>
 
