@@ -171,19 +171,27 @@
         var out = document.getElementById("pzt-sw-build");
         var state = document.getElementById("pzt-sw-state");
         if (!out) return;
-        if (!("serviceWorker" in navigator) || !navigator.serviceWorker.controller) {
-          out.textContent = "brak"; return;
+        if (!("serviceWorker" in navigator)) { out.textContent = "nieobsługiwany"; return; }
+        function ask(sw, controlling) {
+          var ch = new MessageChannel();
+          var done = false;
+          ch.port1.onmessage = function (e) {
+            done = true;
+            var b = (e.data && e.data.build) || "?";
+            out.textContent = b + (controlling ? "" : " (nie kontroluje — odśwież)");
+            if (state) state.textContent = (b === serverBuild) ? "✓ aktualny" : "⚠ stary — odśwież";
+          };
+          sw.postMessage({ type: "GET_BUILD" }, [ch.port2]);
+          setTimeout(function () { if (!done) out.textContent = "brak odpowiedzi"; }, 2000);
         }
-        var ch = new MessageChannel();
-        var done = false;
-        ch.port1.onmessage = function (e) {
-          done = true;
-          var sw = (e.data && e.data.build) || "?";
-          out.textContent = sw;
-          if (state) state.textContent = (sw === serverBuild) ? "✓ aktualny" : "⚠ stary — odśwież";
-        };
-        navigator.serviceWorker.controller.postMessage({ type: "GET_BUILD" }, [ch.port2]);
-        setTimeout(function () { if (!done) out.textContent = "brak odpowiedzi"; }, 1500);
+        // reg.active sees the SW even before it controls this page (first
+        // load); controller is null until the SW claims the client.
+        navigator.serviceWorker.ready.then(function (reg) {
+          var sw = navigator.serviceWorker.controller || (reg && reg.active);
+          if (sw) ask(sw, !!navigator.serviceWorker.controller);
+          else out.textContent = "brak active";
+        }).catch(function () { out.textContent = "brak rejestracji"; });
+        setTimeout(function () { if (out.textContent === "…") out.textContent = "rejestruję…"; }, 4000);
       })();
     </script>
 
