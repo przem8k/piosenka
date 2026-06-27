@@ -24,3 +24,8 @@ out
 build/
 .firebaserc
 .firebase
+.claude/
+.venv/
+tools/
+.cache/
+assets/css/output.css

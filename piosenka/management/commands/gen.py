@@ -152,6 +152,9 @@ def add_lead(context, content_html, lead_max_len=200):
 
 
 def write_page(context_data, template, out_file):
+    # TEMP (squash before merge): expose the build id to every page so the
+    # footer can show which build is live and whether the SW is stale.
+    context_data = {"build_id": os.environ.get("BUILD_ID", "dev"), **context_data}
     template = loader.get_template(template)
     rendered_template = template.render(context_data)
 
@@ -177,6 +180,17 @@ def generate_404_page():
     }
     out_file_path = os.path.join(OUT_DIR_PATH, "404.html")
     write_page(context, "404.html", out_file_path)
+
+
+def generate_pwa_manifest():
+    out_file_path = os.path.join(OUT_DIR_PATH, "manifest.webmanifest")
+    write_page({}, "pwa/manifest.webmanifest", out_file_path)
+
+
+def generate_pwa_offline_page():
+    context = {"user_data": {"is_logged_in": False}}
+    out_file_path = os.path.join(OUT_DIR_PATH, "offline.html")
+    write_page(context, "offline.html", out_file_path)
 
 
 def generate_pages():
@@ -482,6 +496,8 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         generate_pages()
         generate_404_page()
+        generate_pwa_manifest()
+        generate_pwa_offline_page()
 
         articles = generate_articles()
         articles.sort(key=lambda x: x["pub_date"], reverse=True)

@@ -13,15 +13,43 @@
 
       gtag('config', 'G-PWGKYXKHWD');
     </script>
+    <script>
+      // Surface uncaught errors + promise rejections to GA — we have no
+      // other client-side telemetry, so this is how breakage in the wild
+      // gets back to us.
+      window.addEventListener("error", function (e) {
+        if (window.gtag) gtag("event", "js_error", {
+          description: ((e && e.message) || "error") + " @ "
+            + ((e && e.filename) || "") + ":" + ((e && e.lineno) || 0),
+        });
+      });
+      window.addEventListener("unhandledrejection", function (e) {
+        var r = e && e.reason;
+        if (window.gtag) gtag("event", "js_unhandledrejection", {
+          description: String((r && r.message) || r || "rejection"),
+        });
+      });
+    </script>
 
     <title>{% block title %}Piosenka z tekstem{% endblock title %}</title>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#212121" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">
     <meta name="robots" content="index,follow" />
     <meta name="description" content="{% block description %}Śpiewnik piosenki literackiej, wydarzenia, refleksje{% endblock description %}" />
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{% static "images/favicon.ico" %}" />
+
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Piosenka z tekstem" />
+    <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}" />
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static "images/icon-192.png" %}" />
+    <link rel="icon" type="image/png" sizes="512x512" href="{% static "images/icon-512.png" %}" />
     {% compress js %}
     <script src="{% static "js/dark-init.js" %}"></script>
     {% endcompress %}
@@ -36,6 +64,7 @@
     <link href="{% static "css/song.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "css/dark.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/install-prompt.css" %}" rel="stylesheet" type="text/css" />
     {% endcompress %}
 
     {% block extra-css %}{% endblock extra-css %}
@@ -124,10 +153,49 @@
         <div class="row">
           <div class="col-md-12 pzt-footer-content">
             © 2011-2026 Piosenka z tekstem
+            {# TEMP (squash before merge): build/SW version stamp for debugging PWA updates #}
+            <div style="margin-top:8px;font-size:14px;opacity:.75">
+              build <code id="pzt-build">{{ build_id }}</code>
+              · SW <code id="pzt-sw-build">…</code>
+              <span id="pzt-sw-state"></span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    {# TEMP (squash before merge): show the running SW's build next to the page build #}
+    <script>
+      (function () {
+        var serverBuild = "{{ build_id|escapejs }}";
+        var out = document.getElementById("pzt-sw-build");
+        var state = document.getElementById("pzt-sw-state");
+        if (!out) return;
+        if (!("serviceWorker" in navigator)) { out.textContent = "nieobsługiwany"; return; }
+        function show(b) {
+          out.textContent = b;
+          if (state) state.textContent = (b === serverBuild) ? "✓ aktualny" : "⚠ stary — odśwież";
+        }
+        // Ask the SW for its build via a fetch it intercepts (reliable on
+        // iOS, unlike postMessage). Works once the SW controls the page; on
+        // the first load it isn't controlling yet, so retry when it claims.
+        function probe() {
+          return fetch("/__sw-build__", { cache: "no-store" })
+            .then(function (r) { return r.ok ? r.text() : null; })
+            .then(function (b) { if (b) { show(b); return true; } return false; })
+            .catch(function () { return false; });
+        }
+        probe().then(function (ok) {
+          if (ok) return;
+          if (navigator.serviceWorker.controller == null) {
+            out.textContent = "rejestruję… (odśwież za chwilę)";
+            navigator.serviceWorker.addEventListener("controllerchange", function () { probe(); });
+          } else {
+            out.textContent = "stary SW (brak /__sw-build__)";
+          }
+        });
+      })();
+    </script>
 
     {% compress js %}
     <script src="{% static "third_party/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
@@ -142,9 +210,24 @@
     <script src="{% static "js/dark.js" %}"></script>
     <script src="{% static "js/zebra.js" %}"></script>
     <script src="{% static "js/autoscroll.js" %}"></script>
+    <script src="{% static "js/install-prompt.js" %}"></script>
     {% endcompress %}
 
     {% block extra-scripts %}{% endblock extra-scripts %}
+
+    <template id="pzt-install-banner-tpl">
+      <div id="pzt-install-banner" role="dialog" aria-label="Zainstaluj aplikację">
+        <div class="pzt-install-text">
+          <span class="pzt-install-text-native" hidden>Zainstaluj jako aplikację na telefonie / tablecie</span>
+          <span class="pzt-install-text-ios" hidden>Zainstaluj jako aplikację na telefonie / tablecie:<br>dotknij <span class="pzt-install-share" aria-hidden="true"></span> <strong>Udostępnij</strong>, a potem <strong>+ Do ekranu głównego</strong>.</span>
+        </div>
+        <button type="button" class="pzt-install-action" hidden>Zainstaluj</button>
+        <button type="button" class="pzt-install-close" aria-label="Zamknij">&times;</button>
+      </div>
+    </template>
+
+    {# Loaded outside {% compress js %} so its URL stays stable across cache-version bumps. #}
+    <script src="{% static "js/sw-register.js" %}"></script>
 
     <!-- FB -->
     <div id="fb-root"></div>
