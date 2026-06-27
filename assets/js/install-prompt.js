@@ -19,7 +19,11 @@
   function dismissedRecently() {
     try {
       var ts = parseInt(localStorage.getItem(STORAGE_KEY) || "", 10);
-      return ts && Date.now() - ts < DISMISS_DAYS * 86400000;
+      if (!Number.isFinite(ts)) return false;
+      // age < 0 means a future-dated timestamp (clock moved back, or a
+      // corrupt value) — treat as not-dismissed so the banner can show.
+      var age = Date.now() - ts;
+      return age >= 0 && age < DISMISS_DAYS * 86400000;
     } catch (e) {
       return false;
     }

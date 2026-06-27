@@ -11,6 +11,29 @@ import { StaleWhileRevalidate, NetworkFirst } from "workbox-strategies";
 import { ExpirationPlugin } from "workbox-expiration";
 import { CacheableResponsePlugin } from "workbox-cacheable-response";
 
+// ---------------------------------------------------------------- known limitations
+//
+// Revisit when we next expand offline support (e.g. client-side song
+// rendering) — the model may change enough that these dissolve.
+//
+//  1. App-shell skew after a deploy. HTML pages are runtime-cached
+//     (StaleWhileRevalidate) and reference hashed CSS/JS that live in the
+//     precache. A deploy installs new hashes and evicts the old ones, but
+//     a page already in the html-pages cache still points at the old
+//     hash. Opened offline before its background revalidation, it renders
+//     unstyled (the subresource 404s; only navigations get the offline
+//     fallback). Self-heals on the next online visit.
+//  2. Django values mirrored by hand. HTML_SECTIONS and MEDIA_HOST /
+//     MEDIA_PATH_PREFIX below duplicate gen.py's URL sections and
+//     settings.py's GCS location. This SW is a static esbuild bundle and
+//     can't read Django settings, so a change there silently desyncs it
+//     (a new section isn't runtime-cached; a moved bucket isn't cached)
+//     with no build error. Fix when needed by emitting a generated config
+//     from gen.py, or guard with a test.
+//
+// (Icons are likewise produced by a manual script CI doesn't run — see
+// scripts/generate-icons.js.)
+
 // ---------------------------------------------------------------- config
 
 const DAY = 60 * 60 * 24;
