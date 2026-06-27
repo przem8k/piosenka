@@ -152,6 +152,9 @@ def add_lead(context, content_html, lead_max_len=200):
 
 
 def write_page(context_data, template, out_file):
+    # TEMP (squash before merge): expose the build id to every page so the
+    # footer can show which build is live and whether the SW is stale.
+    context_data = {"build_id": os.environ.get("BUILD_ID", "dev"), **context_data}
     template = loader.get_template(template)
     rendered_template = template.render(context_data)
 

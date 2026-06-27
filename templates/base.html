@@ -153,10 +153,39 @@
         <div class="row">
           <div class="col-md-12 pzt-footer-content">
             © 2011-2026 Piosenka z tekstem
+            {# TEMP (squash before merge): build/SW version stamp for debugging PWA updates #}
+            <div style="margin-top:8px;font-size:14px;opacity:.75">
+              build <code id="pzt-build">{{ build_id }}</code>
+              · SW <code id="pzt-sw-build">…</code>
+              <span id="pzt-sw-state"></span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    {# TEMP (squash before merge): show the running SW's build next to the page build #}
+    <script>
+      (function () {
+        var serverBuild = "{{ build_id|escapejs }}";
+        var out = document.getElementById("pzt-sw-build");
+        var state = document.getElementById("pzt-sw-state");
+        if (!out) return;
+        if (!("serviceWorker" in navigator) || !navigator.serviceWorker.controller) {
+          out.textContent = "brak"; return;
+        }
+        var ch = new MessageChannel();
+        var done = false;
+        ch.port1.onmessage = function (e) {
+          done = true;
+          var sw = (e.data && e.data.build) || "?";
+          out.textContent = sw;
+          if (state) state.textContent = (sw === serverBuild) ? "✓ aktualny" : "⚠ stary — odśwież";
+        };
+        navigator.serviceWorker.controller.postMessage({ type: "GET_BUILD" }, [ch.port2]);
+        setTimeout(function () { if (!done) out.textContent = "brak odpowiedzi"; }, 1500);
+      })();
+    </script>
 
     {% compress js %}
     <script src="{% static "third_party/bootstrap/js/bootstrap.bundle.min.js" %}"></script>

@@ -32,6 +32,11 @@ async function main() {
     minify: true,
     sourcemap: false,
     logLevel: "warning",
+    // TEMP (squash before merge): stamp the build id into the SW so the
+    // footer can show whether the running SW is the latest build.
+    define: {
+      __BUILD_ID__: JSON.stringify(process.env.BUILD_ID || "dev"),
+    },
   });
 
   const result = await injectManifest({

@@ -38,6 +38,10 @@ import { CacheableResponsePlugin } from "workbox-cacheable-response";
 
 const DAY = 60 * 60 * 24;
 
+// TEMP (squash before merge): build id stamped in by esbuild, reported to
+// the page so the footer can show whether this SW is the latest build.
+const BUILD_ID = typeof __BUILD_ID__ === "string" ? __BUILD_ID__ : "dev";
+
 // Top-level URL prefixes that own HTML pages. Mirrors the directories
 // gen.py writes under out/. Add a section here when gen.py grows a
 // new top-level URL space.
@@ -69,21 +73,33 @@ precacheAndRoute(self.__WB_MANIFEST);
 
 // ---------------------------------------------------------------- runtime caches
 
-// Song / artist / article / blog pages. Network-first so online visits
-// are always fresh; once visited they keep working offline from cache.
-// The network timeout is critical: an iOS standalone PWA does NOT always
-// fail an offline fetch promptly, so without a cap a tap to an unvisited
-// page (e.g. a search result) hangs forever with no way back. On timeout
-// we serve the cached page if visited, else the catch handler's
-// offline.html.
+// Song / artist / article / blog pages. A page you've already opened is
+// served instantly from cache and refreshed in the background; a page you
+// haven't opened tries the network with a hard 3s timeout, then falls
+// back to the catch handler's offline.html. The timeout only ever fires
+// on iOS standalone, where an offline fetch can hang instead of failing —
+// elsewhere fetch rejects in milliseconds and the cap is never reached.
+// (Cache-first read on top of NetworkFirst so saved pages stay instant
+// offline; NetworkFirst alone would make every offline read wait 3s.)
+const pageStrategy = new NetworkFirst({
+  cacheName: "html-pages",
+  networkTimeoutSeconds: 3,
+  plugins: [CACHEABLE_OK, expire(500, 30)],
+});
 registerRoute(
   ({ request, url }) =>
     isSameOriginNavigation(request, url) && HTML_SECTIONS.test(url.pathname),
-  new NetworkFirst({
-    cacheName: "html-pages",
-    networkTimeoutSeconds: 3,
-    plugins: [CACHEABLE_OK, expire(500, 30)],
-  })
+  async (params) => {
+    const cache = await caches.open("html-pages");
+    const cached = await cache.match(params.request);
+    if (cached) {
+      // Refresh in the background; the strategy's own timeout keeps this
+      // bounded so it can't leak a hung fetch.
+      params.event.waitUntil(pageStrategy.handle(params).catch(() => {}));
+      return cached;
+    }
+    return pageStrategy.handle(params);
+  }
 );
 
 // The homepage and the other index pages are in the precache (see the
@@ -119,6 +135,13 @@ registerRoute(new NavigationRoute(new NetworkOnly({ networkTimeoutSeconds: 3 }))
 self.skipWaiting();
 self.addEventListener("activate", (event) => {
   event.waitUntil(self.clients.claim());
+});
+
+// TEMP (squash before merge): answer the footer's build query.
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "GET_BUILD" && event.ports[0]) {
+    event.ports[0].postMessage({ build: BUILD_ID });
+  }
 });
 
 // ---------------------------------------------------------------- offline fallback
