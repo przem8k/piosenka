@@ -161,7 +161,10 @@
 
     <template id="pzt-install-banner-tpl">
       <div id="pzt-install-banner" role="dialog" aria-label="Zainstaluj aplikację">
-        <div class="pzt-install-text"></div>
+        <div class="pzt-install-text">
+          <span class="pzt-install-text-native" hidden>Zainstaluj jako aplikację</span>
+          <span class="pzt-install-text-ios" hidden>Zainstaluj jako aplikację: dotknij <span class="pzt-install-share" aria-hidden="true"></span> <strong>Udostępnij</strong>, a potem <strong>Dodaj do ekranu początkowego</strong>.</span>
+        </div>
         <button type="button" class="pzt-install-action" hidden>Zainstaluj</button>
         <button type="button" class="pzt-install-close" aria-label="Zamknij">&times;</button>
       </div>

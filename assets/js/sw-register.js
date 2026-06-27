@@ -14,8 +14,12 @@
     navigator.serviceWorker
       .register("/service-worker.js", { scope: "/" })
       .catch(function (err) {
-        // SW failure shouldn't break the page. Logged for diagnosis.
+        // SW failure shouldn't break the page; log + report (GA, already
+        // loaded) so we hear about it without any extra dependency.
         console.warn("Service worker registration failed:", err);
+        if (window.gtag) {
+          gtag("event", "sw_register_failed", { description: String(err) });
+        }
       });
   });
 })();

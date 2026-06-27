@@ -70,7 +70,6 @@ async function main() {
       "static/js/**",
       "static/css/{comments,dark,lightbox,search,song,style,output}.css",
     ],
-    maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
   });
 
   // Drop the intermediate bundled file so it doesn't get deployed.

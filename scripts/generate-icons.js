@@ -34,7 +34,7 @@ async function buildIcon(size, padRatio, filename, { alpha = true } = {}) {
 async function main() {
   await buildIcon(192, 1.0, "icon-192.png");          // any
   await buildIcon(512, 1.0, "icon-512.png");          // any
-  await buildIcon(512, 0.72, "icon-maskable-512.png"); // maskable safe zone
+  await buildIcon(512, 0.85, "icon-maskable-512.png"); // maskable safe zone
   await buildIcon(180, 1.0, "apple-touch-icon.png");  // iOS home screen
 }
 

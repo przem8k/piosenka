@@ -41,14 +41,22 @@
       && !/CriOS|FxiOS|EdgiOS/.test(ua);
   }
 
-  // Clone the install-banner template, fill in the text and optional
-  // action button, wire up close, append to the page.
+  // Touch devices (phones / tablets). Desktop Chrome already offers an
+  // address-bar install icon, so we skip the banner there.
+  function isTouchDevice() {
+    return !!(window.matchMedia && window.matchMedia("(pointer: coarse)").matches);
+  }
+
+  // Clone the install-banner template, reveal the text variant for this
+  // platform and the optional action button, wire up close, append to
+  // the page. All copy lives in the template (base.html), not here.
   function showBanner(opts) {
     if (document.getElementById(BANNER_ID)) return;
     var tpl = document.getElementById("pzt-install-banner-tpl");
     if (!tpl) return;
     var banner = tpl.content.cloneNode(true).firstElementChild;
-    banner.querySelector(".pzt-install-text").innerHTML = opts.text;
+    var text = banner.querySelector(".pzt-install-text-" + opts.variant);
+    if (text) text.hidden = false;
 
     var action = banner.querySelector(".pzt-install-action");
     if (opts.onAction) {
@@ -71,15 +79,11 @@
   var deferredPrompt = null;
   window.addEventListener("beforeinstallprompt", function (e) {
     if (isStandalone() || dismissedRecently()) return;
-    // Skip desktop: those users have Chrome's address-bar install
-    // icon already and don't need an extra banner. `pointer: coarse`
-    // catches phones/tablets without depending on viewport width
-    // (narrow desktop windows shouldn't trigger this).
-    if (!window.matchMedia("(pointer: coarse)").matches) return;
+    if (!isTouchDevice()) return;
     e.preventDefault();
     deferredPrompt = e;
     showBanner({
-      text: "<strong>Zainstaluj aplikację</strong> — szybsze otwieranie, działa bez internetu.",
+      variant: "native",
       onAction: function (banner) {
         if (!deferredPrompt) { banner.remove(); return; }
         deferredPrompt.prompt();
@@ -96,12 +100,7 @@
   if (isIosSafari()) {
     var scheduleIosBanner = function () {
       setTimeout(function () {
-        showBanner({
-          text: 'Zainstaluj jako aplikację: dotknij '
-              + '<span class="pzt-install-share" aria-hidden="true"></span> '
-              + '<strong>Udostępnij</strong>, a potem '
-              + '<strong>Dodaj do ekranu początkowego</strong>.',
-        });
+        showBanner({ variant: "ios" });
       }, 1200);
     };
     if (document.readyState === "complete") scheduleIosBanner();
