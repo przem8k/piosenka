@@ -6,8 +6,8 @@ import {
   createHandlerBoundToURL,
   cleanupOutdatedCaches,
 } from "workbox-precaching";
-import { registerRoute, setCatchHandler, NavigationRoute } from "workbox-routing";
-import { StaleWhileRevalidate, NetworkFirst, NetworkOnly } from "workbox-strategies";
+import { registerRoute, setCatchHandler } from "workbox-routing";
+import { StaleWhileRevalidate } from "workbox-strategies";
 import { ExpirationPlugin } from "workbox-expiration";
 import { CacheableResponsePlugin } from "workbox-cacheable-response";
 
@@ -17,7 +17,7 @@ import { CacheableResponsePlugin } from "workbox-cacheable-response";
 // rendering) — the model may change enough that these dissolve.
 //
 //  1. App-shell skew after a deploy. Non-precached pages are cached as
-//     you visit them (NetworkFirst) and reference hashed CSS/JS from the
+//     you visit them (cache-first) and reference hashed CSS/JS from the
 //     precache. A deploy installs new hashes and evicts the old ones, so a
 //     page still in the html-pages cache points at an old hash. Viewed
 //     OFFLINE after a deploy it can render unstyled (the subresource
@@ -66,6 +66,35 @@ function expire(maxEntries, days) {
 const isSameOriginNavigation = (request, url) =>
   request.mode === "navigate" && url.origin === self.location.origin;
 
+const HTML_CACHE = "html-pages";
+const NET_TIMEOUT_MS = 3000;
+
+// Bound a fetch with our own timer. iOS standalone PWAs don't reject a
+// dead fetch promptly, and Workbox's networkTimeoutSeconds did not
+// reliably fire there — so an offline navigation to an uncached page hung
+// instead of falling through to offline.html. Racing fetch against an
+// explicit setTimeout fixes it (and is a no-op where fetch already fails
+// fast, i.e. every other browser).
+function fetchWithTimeout(request, ms) {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error("network timeout")), ms);
+    fetch(request).then(
+      (resp) => { clearTimeout(timer); resolve(resp); },
+      (err) => { clearTimeout(timer); reject(err); }
+    );
+  });
+}
+
+// FIFO-trim a runtime cache to a max entry count (we manage html-pages by
+// hand now rather than through ExpirationPlugin).
+async function trimCache(cacheName, maxEntries) {
+  const cache = await caches.open(cacheName);
+  const keys = await cache.keys();
+  for (const key of keys.slice(0, keys.length - maxEntries)) {
+    await cache.delete(key);
+  }
+}
+
 // ---------------------------------------------------------------- precache
 
 cleanupOutdatedCaches();
@@ -82,32 +111,40 @@ registerRoute(
 
 // ---------------------------------------------------------------- runtime caches
 
-// Song / artist / article / blog pages. A page you've already opened is
-// served instantly from cache and refreshed in the background; a page you
-// haven't opened tries the network with a hard 3s timeout, then falls
-// back to the catch handler's offline.html. The timeout only ever fires
-// on iOS standalone, where an offline fetch can hang instead of failing —
-// elsewhere fetch rejects in milliseconds and the cap is never reached.
-// (Cache-first read on top of NetworkFirst so saved pages stay instant
-// offline; NetworkFirst alone would make every offline read wait 3s.)
-const pageStrategy = new NetworkFirst({
-  cacheName: "html-pages",
-  networkTimeoutSeconds: 3,
-  plugins: [CACHEABLE_OK, expire(500, 30)],
-});
+// Song / artist / article / blog pages. Cache-first: a page you've opened
+// loads instantly from cache (refreshed in the background); a page you
+// haven't opened tries the network with our hard timeout, then falls
+// through to the catch handler's offline.html. The explicit timeout is
+// what keeps an offline tap from hanging on iOS standalone.
 registerRoute(
   ({ request, url }) =>
     isSameOriginNavigation(request, url) && HTML_SECTIONS.test(url.pathname),
-  async (params) => {
-    const cache = await caches.open("html-pages");
-    const cached = await cache.match(params.request);
+  async ({ request, event }) => {
+    const cache = await caches.open(HTML_CACHE);
+    const cached = await cache.match(request);
     if (cached) {
-      // Refresh in the background; the strategy's own timeout keeps this
-      // bounded so it can't leak a hung fetch.
-      params.event.waitUntil(pageStrategy.handle(params).catch(() => {}));
+      event.waitUntil(
+        fetchWithTimeout(request, NET_TIMEOUT_MS)
+          .then((resp) => {
+            if (resp && resp.ok) {
+              return cache
+                .put(request, resp.clone())
+                .then(() => trimCache(HTML_CACHE, 500));
+            }
+          })
+          .catch(() => {})
+      );
       return cached;
     }
-    return pageStrategy.handle(params);
+    // Cache miss: bounded network. If it rejects (offline / timeout) the
+    // catch handler serves offline.html.
+    const resp = await fetchWithTimeout(request, NET_TIMEOUT_MS);
+    if (resp && resp.ok) {
+      event.waitUntil(
+        cache.put(request, resp.clone()).then(() => trimCache(HTML_CACHE, 500))
+      );
+    }
+    return resp;
   }
 );
 
@@ -127,12 +164,14 @@ registerRoute(
 );
 
 // Catch-all for any other same-origin navigation we have no specific rule
-// for: hit the network, and when that fails offline the catch handler
-// below serves offline.html. Without this, a navigation that matches no
-// route bypasses Workbox entirely and the offline fallback never runs —
-// on iOS that shows up as a dead tap (nothing happens) rather than the
-// offline page. Registered last so the specific routes above win first.
-registerRoute(new NavigationRoute(new NetworkOnly({ networkTimeoutSeconds: 3 })));
+// for (a path outside HTML_SECTIONS): bounded network, then the catch
+// handler's offline.html. Without this, a navigation that matches no route
+// bypasses Workbox and the offline fallback never runs. Registered last so
+// the specific routes above win first.
+registerRoute(
+  ({ request, url }) => isSameOriginNavigation(request, url),
+  async ({ request }) => fetchWithTimeout(request, NET_TIMEOUT_MS)
+);
 
 // ---------------------------------------------------------------- update flow
 
