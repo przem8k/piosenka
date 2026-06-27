@@ -20,6 +20,19 @@
     if (window.gtag) window.gtag("event", name, params || {});
   }
 
+  // Once we know the app is installed (the appinstalled event, or we're
+  // running standalone) remember it and stop offering the banner for
+  // good. Note: on iOS the installed app and Safari have separate
+  // storage, so this only suppresses the banner where they share it
+  // (Android / desktop).
+  var INSTALLED_KEY = "pzt_installed";
+  function markInstalled() {
+    try { localStorage.setItem(INSTALLED_KEY, "1"); } catch (e) {}
+  }
+  function isInstalled() {
+    try { return localStorage.getItem(INSTALLED_KEY) === "1"; } catch (e) { return false; }
+  }
+
   function dismissedRecently() {
     try {
       var ts = parseInt(localStorage.getItem(STORAGE_KEY) || "", 10);
@@ -86,12 +99,17 @@
     return banner;
   }
 
-  if (isStandalone()) track("pwa_launch_standalone");
-  if (isStandalone() || dismissedRecently()) return;
+  if (isStandalone()) {
+    markInstalled();
+    track("pwa_launch_standalone");
+  }
+  if (isStandalone() || isInstalled() || dismissedRecently()) return;
 
   // Fired when the user completes installation (platforms that support
-  // it) — lets us measure real installs, not just prompts shown.
+  // it). Remember it so the banner never nags again, and measure real
+  // installs (not just prompts shown).
   window.addEventListener("appinstalled", function () {
+    markInstalled();
     track("pwa_installed");
   });
 

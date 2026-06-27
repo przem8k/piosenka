@@ -7,7 +7,7 @@ import {
   cleanupOutdatedCaches,
 } from "workbox-precaching";
 import { registerRoute, setCatchHandler, NavigationRoute } from "workbox-routing";
-import { StaleWhileRevalidate, NetworkFirst, NetworkOnly } from "workbox-strategies";
+import { StaleWhileRevalidate, NetworkOnly } from "workbox-strategies";
 import { ExpirationPlugin } from "workbox-expiration";
 import { CacheableResponsePlugin } from "workbox-cacheable-response";
 
@@ -80,17 +80,10 @@ registerRoute(
   })
 );
 
-// Homepage: changes more often than song pages, so prefer the network
-// with a short timeout before falling back to the last cached copy.
-registerRoute(
-  ({ request, url }) =>
-    isSameOriginNavigation(request, url) && url.pathname === "/",
-  new NetworkFirst({
-    cacheName: "homepage",
-    networkTimeoutSeconds: 4,
-    plugins: [CACHEABLE_OK, expire(1, 7)],
-  })
-);
+// The homepage and the other index pages are in the precache (see the
+// navigation shell in build-sw.js), so they are served from there and
+// the installed app launches offline. Individual song / artist / article
+// / blog pages fall through to the StaleWhileRevalidate route above.
 
 // Cover images + score thumbs served from GCS.
 registerRoute(

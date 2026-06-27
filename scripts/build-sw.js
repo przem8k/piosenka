@@ -55,6 +55,16 @@ async function main() {
       "static/images/apple-touch-icon.png",
       "static/images/favicon.ico",
       "static/images/feather_40.png",
+      // Navigation shell — the entry / index pages, so the installed app
+      // launches offline (start_url "/") and the song list + search are
+      // reachable without a connection from the first visit. Individual
+      // songs / artists stay cache-on-visit (too many to precache).
+      "index.html",
+      "spiewnik/index.html",
+      "szukaj/index.html",
+      "artykuly/index.html",
+      "blog/index.html",
+      "o-stronie/index.html",
       // Search index — precached so search works offline from the
       // first visit (~200 KB today, the primary entry point for the site).
       "index/*.json",
