@@ -7,7 +7,7 @@ import {
   cleanupOutdatedCaches,
 } from "workbox-precaching";
 import { registerRoute, setCatchHandler, NavigationRoute } from "workbox-routing";
-import { StaleWhileRevalidate, NetworkOnly } from "workbox-strategies";
+import { StaleWhileRevalidate, NetworkFirst, NetworkOnly } from "workbox-strategies";
 import { ExpirationPlugin } from "workbox-expiration";
 import { CacheableResponsePlugin } from "workbox-cacheable-response";
 
@@ -16,13 +16,13 @@ import { CacheableResponsePlugin } from "workbox-cacheable-response";
 // Revisit when we next expand offline support (e.g. client-side song
 // rendering) — the model may change enough that these dissolve.
 //
-//  1. App-shell skew after a deploy. HTML pages are runtime-cached
-//     (StaleWhileRevalidate) and reference hashed CSS/JS that live in the
-//     precache. A deploy installs new hashes and evicts the old ones, but
-//     a page already in the html-pages cache still points at the old
-//     hash. Opened offline before its background revalidation, it renders
-//     unstyled (the subresource 404s; only navigations get the offline
-//     fallback). Self-heals on the next online visit.
+//  1. App-shell skew after a deploy. Non-precached pages are cached as
+//     you visit them (NetworkFirst) and reference hashed CSS/JS from the
+//     precache. A deploy installs new hashes and evicts the old ones, so a
+//     page still in the html-pages cache points at an old hash. Viewed
+//     OFFLINE after a deploy it can render unstyled (the subresource
+//     404s; only navigations get the offline fallback). Online it
+//     refetches fresh, so it self-heals.
 //  2. Django values mirrored by hand. HTML_SECTIONS and MEDIA_HOST /
 //     MEDIA_PATH_PREFIX below duplicate gen.py's URL sections and
 //     settings.py's GCS location. This SW is a static esbuild bundle and
@@ -69,13 +69,19 @@ precacheAndRoute(self.__WB_MANIFEST);
 
 // ---------------------------------------------------------------- runtime caches
 
-// Song / artist / article / blog pages. Once visited they keep working
-// offline; Workbox refreshes them in the background on revisit.
+// Song / artist / article / blog pages. Network-first so online visits
+// are always fresh; once visited they keep working offline from cache.
+// The network timeout is critical: an iOS standalone PWA does NOT always
+// fail an offline fetch promptly, so without a cap a tap to an unvisited
+// page (e.g. a search result) hangs forever with no way back. On timeout
+// we serve the cached page if visited, else the catch handler's
+// offline.html.
 registerRoute(
   ({ request, url }) =>
     isSameOriginNavigation(request, url) && HTML_SECTIONS.test(url.pathname),
-  new StaleWhileRevalidate({
+  new NetworkFirst({
     cacheName: "html-pages",
+    networkTimeoutSeconds: 3,
     plugins: [CACHEABLE_OK, expire(500, 30)],
   })
 );
@@ -101,7 +107,7 @@ registerRoute(
 // route bypasses Workbox entirely and the offline fallback never runs —
 // on iOS that shows up as a dead tap (nothing happens) rather than the
 // offline page. Registered last so the specific routes above win first.
-registerRoute(new NavigationRoute(new NetworkOnly()));
+registerRoute(new NavigationRoute(new NetworkOnly({ networkTimeoutSeconds: 3 })));
 
 // ---------------------------------------------------------------- update flow
 
