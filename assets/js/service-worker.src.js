@@ -152,9 +152,13 @@ self.addEventListener("activate", (event) => {
 // When a navigation request fails and no cache entry exists, serve the
 // precached offline page instead of the browser's default offline error.
 const offlineFallback = createHandlerBoundToURL("/offline.html");
-setCatchHandler(async ({ request }) => {
-  if (request.mode === "navigate") {
-    return offlineFallback({ request });
+setCatchHandler(async (options) => {
+  // Pass the full handler options (including `event`) — the precache
+  // handler needs them to serve offline.html. Passing only { request }
+  // left it unable to respond, so a failed navigation rendered blank
+  // instead of the offline page.
+  if (options.request.mode === "navigate") {
+    return offlineFallback(options);
   }
   return Response.error();
 });
