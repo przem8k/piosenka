@@ -27,14 +27,14 @@ body {
 @media screen {
     body {
         /* Clear the fixed navbar (~50px) + iOS safe-area on top. */
-        padding-top: calc(50px + env(safe-area-inset-top));
+        padding-top: calc(50px + env(safe-area-inset-top, 0px));
     }
 }
 
 /* Honor iOS notch on the fixed navbar so its content clears the safe area.
    Added to existing --bs-navbar-padding-y (0.25rem) rather than replacing. */
 .pzt .navbar.fixed-top {
-    padding-top: calc(0.25rem + env(safe-area-inset-top));
+    padding-top: calc(0.25rem + env(safe-area-inset-top, 0px));
 }
 
 /* Suppress 300ms tap delay and the iOS double-tap-to-zoom gesture on

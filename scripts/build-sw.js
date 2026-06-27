@@ -39,22 +39,22 @@ async function main() {
     swDest: OUT,
     globDirectory: path.join(ROOT, "out"),
     globPatterns: [
-      // App shell: the django-compress bundles HTML actually loads.
+      // App shell: django-compress concatenates every CSS/JS the HTML
+      // links (third-party + per-feature) into these hashed bundles, so
+      // the individual source files are never requested in production.
       "static/CACHE/**/*.{js,css}",
-      "static/css/install-prompt.css",
-      // Third-party CSS/JS bundled into the same compress block.
-      "static/third_party/bootstrap/css/bootstrap.min.css",
-      "static/third_party/bootstrap/js/bootstrap.bundle.min.js",
-      "static/third_party/glyphicons/**/*.{css,woff,woff2,ttf,eot,svg}",
-      "static/third_party/luminous/luminous.min.js",
-      "static/third_party/luminous/luminous-basic.min.css",
-      // App icons + favicons.
+      // Glyphicons fonts are pulled by url() from the bundled CSS, so
+      // they are NOT inside the CACHE bundle. Modern browsers load woff;
+      // ttf is the fallback (eot/svg only matter to engines that can't
+      // run a service worker anyway).
+      "static/third_party/glyphicons/**/*.{woff,ttf}",
+      // Icons the pages actually reference: navbar logo, favicon, PWA.
       "static/images/icon-192.png",
       "static/images/icon-512.png",
       "static/images/icon-maskable-512.png",
       "static/images/apple-touch-icon.png",
-      "static/images/favicon*.png",
-      "static/images/feather*.png",
+      "static/images/favicon.ico",
+      "static/images/feather_40.png",
       // Search index — precached so search works offline from the
       // first visit (~200 KB today, the primary entry point for the site).
       "index/*.json",
@@ -65,24 +65,28 @@ async function main() {
       "**/node_modules/**",
       "**/*.map",
       "_service-worker.bundled.js",
-      // Individual unbundled JS / per-feature CSS — django-compress
-      // already bundled them into static/CACHE/*, which is what HTML loads.
-      "static/js/**",
-      "static/css/{comments,dark,lightbox,search,song,style,output}.css",
     ],
   });
 
   // Drop the intermediate bundled file so it doesn't get deployed.
   require("fs").unlinkSync(BUNDLED);
 
+  // injectManifest only WARNS (and still exits 0) when a globPattern
+  // matches no files. That would silently ship a service worker missing
+  // a precache entry, so fail the build instead and let CI catch it.
+  if (result.warnings.length) {
+    console.error("Service worker precache warnings:\n" + result.warnings.join("\n"));
+    throw new Error(
+      `injectManifest produced ${result.warnings.length} warning(s) ` +
+        `(likely a globPattern that matched no files). Failing the build.`
+    );
+  }
+
   console.log(
     `Service worker written to ${path.relative(ROOT, OUT)} ` +
       `(precaching ${result.count} URLs, ` +
       `${(result.size / 1024 / 1024).toFixed(2)} MB).`
   );
-  if (result.warnings.length) {
-    console.warn("Warnings:", result.warnings);
-  }
 }
 
 main().catch((err) => {

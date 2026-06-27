@@ -36,7 +36,12 @@
 
   function isIosSafari() {
     var ua = window.navigator.userAgent;
-    return /iPhone|iPad|iPod/.test(ua)
+    // iPadOS 13+ Safari reports a "Macintosh" desktop UA; a touch point
+    // count > 1 distinguishes it from a real Mac. Then exclude the
+    // non-Safari iOS browsers, which tag themselves (CriOS/FxiOS/EdgiOS).
+    var isIos = /iPhone|iPad|iPod/.test(ua)
+      || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    return isIos
       && /WebKit/.test(ua)
       && !/CriOS|FxiOS|EdgiOS/.test(ua);
   }
@@ -87,10 +92,15 @@
       onAction: function (banner) {
         if (!deferredPrompt) { banner.remove(); return; }
         deferredPrompt.prompt();
-        deferredPrompt.userChoice.finally(function () {
+        deferredPrompt.userChoice.then(function (choice) {
+          // Only suppress future banners if the user declined. On accept
+          // the app becomes standalone (isStandalone() hides the banner);
+          // recording a dismissal would also keep it hidden for 30 days
+          // if they later uninstall.
+          if (choice && choice.outcome === "dismissed") recordDismiss();
+        }).finally(function () {
           deferredPrompt = null;
           banner.remove();
-          recordDismiss();
         });
       },
     });
