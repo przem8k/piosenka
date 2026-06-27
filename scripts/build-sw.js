@@ -56,12 +56,14 @@ async function main() {
       "static/images/favicon.ico",
       "static/images/feather_40.png",
       // Navigation shell — the entry / index pages, so the installed app
-      // launches offline (start_url "/") and the song list + search are
+      // launches offline (start_url "/") and the main sections are
       // reachable without a connection from the first visit. Individual
       // songs / artists stay cache-on-visit (too many to precache).
+      // /szukaj/ is intentionally absent: it's a Google Custom Search
+      // page (online only). Offline search is the header autocomplete,
+      // which runs off the precached index/*.json below.
       "index.html",
       "spiewnik/index.html",
-      "szukaj/index.html",
       "artykuly/index.html",
       "blog/index.html",
       "o-stronie/index.html",
