@@ -16,11 +16,11 @@ Piosenka jest poświęcona konferencji jałtańskiej – drugiej z trzech konfer
 
 Trzej przywódcy biorący udział w szczycie to:
 
-- **Józef Stalin**, przewodniczący ZSRR, w piosence określany jako „góral” za sprawą pochodzenia – Stalin urodził się w Gori, u podnóża gruzińskiego Kaukazu
+ - **Józef Stalin**, przewodniczący ZSRR, w piosence określany jako „góral” za sprawą pochodzenia – Stalin urodził się w Gori, u podnóża gruzińskiego Kaukazu
  - **Winston Churchill**, premier Wielkiej Brytanii, w piosence określany jako „lew Albionu” – polityk nazywany był „lwem” za sprawą gniewnego usposobienia, odwagi i miłości do zwierząt. Albion to z kolei dawna nazwa Wielkiej Brytanii
  - **Franklin D. Roosevelt**, prezydent Stanów Zjednoczonych, w piosence określany jako „kaleka” – Roosevelt cierpiał na problemy zdrowotne i w czasie konferencji poruszał się na wózku inwalidzkim
 
-Konferencja jałtańska miała szczególnie poważne konsekwencje dla powojennej przyszłości Polski; przekreślała szanse na niepodległość i przesądzała o statusie kraju jako państwa satelickiego w strefie wpływów ZSRR. 
+Konferencja jałtańska miała szczególnie poważne konsekwencje dla powojennej przyszłości Polski; przekreślała szanse na niepodległość i przesądzała o statusie kraju jako państwa satelickiego w strefie wpływów ZSRR.
 
 Stalin zobowiązał się do zorganizowania w Polsce wolnych wyborów \(_potem niech rządzą się, jak chcą_\) i wspierania budowy silnej i niezależnej powojennej państwowości Polskiej, co Churchill przyjął za dobrą monetę \(_ja wierzę w szczerość słów Stalina_\) – historia pokazała, że chodziło o „wolne wybory” i „niezależność” na warunkach Stalina.
 

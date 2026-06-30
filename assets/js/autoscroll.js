@@ -16,6 +16,7 @@
   let rafId = null;
   let lastTimestamp = null;
   let exactScrollY = 0; //stores exact calculated scroll position
+  let optimalYTSpeed = null; 
 
   //DOM elements
   const toggleBtn = document.querySelector('.autoscroll-toggle');
@@ -26,6 +27,7 @@
   const fasterBtn = document.querySelector('.autoscroll-faster');
   const closeBtn = document.querySelector('.autoscroll-close');
   const content = document.querySelector('.lyrics-content');
+  const ytIframe = document.querySelector('iframe[src*="youtube.com"]');
 
   if (!toggleBtn || !bar || !content) {
     return;
@@ -131,7 +133,13 @@
   function enableAutoscroll() {
     autoscrollEnabled = true;
     autoscrollRunning = true;
-    autoscrollSpeed   = SPEED_DEFAULT;
+    
+    if (optimalYTSpeed !== null) {
+      autoscrollSpeed = optimalYTSpeed;
+    } else {
+      autoscrollSpeed = SPEED_DEFAULT;
+    }
+    
     bar.classList.add('autoscroll-bar--visible');
     positionBar();
     updateToggleBtn();
@@ -167,6 +175,55 @@
     lastTimestamp = null; 
     exactScrollY = window.scrollY;
   }
+
+  //set an approximate scroll speed for a song based on its height and embedded YT video duration (if available)
+  function initYouTubeIntegration() {
+    if (!ytIframe) return;
+
+    //load the YouTube IFrame API
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    //called automatically by YT API when ready
+    window.onYouTubeIframeAPIReady = function() {
+      new YT.Player(ytIframe, {
+        events: {
+          'onReady': function(event) {
+            const duration = event.target.getDuration();
+            if (!duration || duration <= 0) return;
+
+            //lyrics container height
+            const totalDistance = content.getBoundingClientRect().height;
+                        
+            //calculate optimal speed based on video duration
+            const basePixelsPerSecond = (1000 / TICK) * BASE;
+            const exactSpeed = totalDistance / (duration * basePixelsPerSecond);
+            const integerPart = Math.floor(exactSpeed);
+            const fractionalPart = exactSpeed - integerPart;
+            
+            //round up if fractional part >= 0.15 (instead of default 0.5; it's usually better to err on the high side here)
+            let calculatedSpeed;
+            if (fractionalPart >= 0.15) {
+                calculatedSpeed = integerPart + 1;
+            }
+            else {
+                calculatedSpeed = integerPart;
+            }
+
+            optimalYTSpeed = Math.min(SPEED_MAX, Math.max(SPEED_MIN, calculatedSpeed));
+            
+            if (autoscrollRunning) {
+                changeSpeed(optimalYTSpeed - autoscrollSpeed);
+            }
+          }
+        }
+      });
+    };
+  }
+
+  initYouTubeIntegration();
 
   //events
   toggleBtn.addEventListener('click', function () {

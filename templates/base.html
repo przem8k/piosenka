@@ -26,7 +26,8 @@
     <script src="{% static "js/dark-init.js" %}"></script>
     {% endcompress %}
     {% compress css %}
-    <link href="{% static "third_party/bootstrap/css/bootstrap.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "third_party/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "third_party/glyphicons/glyphicons.css" %}" rel="stylesheet" type="text/css" />
     <link href="{% static "third_party/luminous/luminous-basic.min.css" %}" rel="stylesheet" type="text/css" />
 
     <link href="{% static "css/comments.css" %}" rel="stylesheet" type="text/css" />
@@ -41,47 +42,39 @@
   </head>
 
   <body class="pzt">
-    <nav class="navbar navbar-inverse navbar-fixed-top hidden-print">
+    <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg d-print-none" data-bs-theme="dark">
     <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-
-        <a href="/" title="Strona główna"><img src="{% static "images/feather_40.png" %}" alt="Logo: białe pióro na czarnym tle"/></a>
-        <div class="search pzt-collapsed-navbar-search">
-          <input type="text" class="form-control" placeholder="Jałta, Rublow, Epitafium dla...">
-        </div>
-        <button id="theme-toggle-collapsed" type="button" class="navbar-theme-toggle pzt-collapsed-theme-toggle" title="Ciemny/jasny tryb">
-           <span class="theme-icon"></span>
-        </button>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+      <a href="/" title="Strona główna" class="navbar-brand">
+        <img src="{% static "images/feather_40.png" %}" alt="Logo: białe pióro na czarnym tle"/>
+      </a>
+      <div class="search pzt-collapsed-navbar-search">
+        <input type="search" class="form-control" placeholder="Jałta, Rublow, Epitafium dla...">
       </div>
+      <button id="theme-toggle-collapsed" type="button" class="navbar-theme-toggle pzt-collapsed-theme-toggle" title="Ciemny/jasny tryb">
+         <span class="theme-icon"></span>
+      </button>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#pzt-navbar-collapse" aria-controls="pzt-navbar-collapse" aria-expanded="false" aria-label="Otwórz menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <div class="collapse navbar-collapse navbar-ex1-collapse site-nav">
-
-
-        <ul class="nav navbar-nav">
-          <li><a href="/" title="Strona główna"><span>Strona główna</span></a></li>
-          <li><a href="/spiewnik/" title="Śpiewnik"><span>Piosenki</span></a></li>
-          <li><a href="/artykuly/" title="Artykuły"><span>Artykuły</span></a></li>
-          <li><a href="/o-stronie/" title="O stronie"><span>O stronie</span></a></li>
+      <div class="collapse navbar-collapse site-nav" id="pzt-navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="/" title="Strona główna">Strona główna</a></li>
+          <li class="nav-item"><a class="nav-link" href="/spiewnik/" title="Śpiewnik">Piosenki</a></li>
+          <li class="nav-item"><a class="nav-link" href="/artykuly/" title="Artykuły">Artykuły</a></li>
+          <li class="nav-item"><a class="nav-link" href="/o-stronie/" title="O stronie">O stronie</a></li>
         </ul>
-        <div class="navbar-right search pzt-expanded-navbar-search">
+        <div class="search pzt-expanded-navbar-search">
           <button id="theme-toggle-expanded" type="button" class="navbar-theme-toggle pzt-expanded-theme-toggle" title="Ciemny/jasny tryb">
              <span class="theme-icon"></span>
           </button>
-          <input type="text" class="form-control" placeholder="Jałta, Rublow, Epitafium dla...">
+          <input type="search" class="form-control" placeholder="Jałta, Rublow, Epitafium dla...">
         </div>
       </div>
-
     </div>
     </nav>
 
-    <div class="header hidden-print">
+    <div class="header d-print-none">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -126,7 +119,7 @@
     </div>
 
     {% block content %} {% endblock content %}
-    <div class="footer hidden-print">
+    <div class="footer d-print-none">
       <div class="container">
         <div class="row">
           <div class="col-md-12 pzt-footer-content">
@@ -137,9 +130,7 @@
     </div>
 
     {% compress js %}
-    <script src="{% static "third_party/jquery/jquery-2.1.1.js" %}"></script>
-    <script src="{% static "third_party/typeahead/typeahead-0.10.4.js" %}"></script>
-    <script src="{% static "third_party/bootstrap/js/bootstrap.js" %}"></script>
+    <script src="{% static "third_party/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
     <script src="{% static "third_party/luminous/luminous.min.js" %}"></script>
 
     <script src="{% static "js/comments.js" %}"></script>

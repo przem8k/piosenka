@@ -1,5 +1,5 @@
 ---
 name: 'Marcin Gąbka'
 featured: 'True'
-category: 'COMMUNITY'
+category: 'POLISH'
 ---

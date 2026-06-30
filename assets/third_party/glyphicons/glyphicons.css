@@ -1,0 +1,43 @@
+/* Glyphicons Halflings — standalone subset.
+ * Only the icons actually used in templates and scripts are included.
+ * Font files: Bootstrap 3.3 Glyphicons Halflings (MIT).
+ */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-plus:before          { content: "\2b"; }
+.glyphicon-minus:before         { content: "\2212"; }
+.glyphicon-music:before         { content: "\e002"; }
+.glyphicon-remove:before        { content: "\e014"; }
+.glyphicon-home:before          { content: "\e021"; }
+.glyphicon-book:before          { content: "\e043"; }
+.glyphicon-camera:before        { content: "\e046"; }
+.glyphicon-font:before          { content: "\e047"; }
+.glyphicon-play:before          { content: "\e072"; }
+.glyphicon-pause:before         { content: "\e073"; }
+.glyphicon-forward:before       { content: "\e075"; }
+.glyphicon-question-sign:before { content: "\e085"; }
+.glyphicon-arrow-up:before      { content: "\e093"; }
+.glyphicon-arrow-down:before    { content: "\e094"; }
+.glyphicon-calendar:before      { content: "\e109"; }
+.glyphicon-link:before          { content: "\e144"; }
+.glyphicon-new-window:before    { content: "\e164"; }
+.glyphicon-tag:before           { content: "\e041"; }
+.glyphicon-tags:before           { content: "\e042"; }
