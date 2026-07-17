@@ -13,6 +13,7 @@
 }
 
 .glyphicon {
+  vertical-align: middle;
   display: inline-block;
   font-family: 'Glyphicons Halflings';
   font-style: normal;
