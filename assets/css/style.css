@@ -102,6 +102,9 @@ h2 {
     .pzt .navbar > .container {
         flex-wrap: wrap;
     }
+    .pzt .navbar-brand {
+        margin-right: 8px;
+    }
     /* Ensure the collapse drawer ends up on its own row below the bar */
     .pzt .navbar > .container > .navbar-collapse {
         flex-basis: 100%;
@@ -285,10 +288,7 @@ h2 {
 }
 
 /* Restore BS3 button palette. BS5 ships btn-primary as #0d6efd and
-   btn-secondary as gray #6c757d; BS3 used #428bca and white #fff.
-   btn-secondary is declared first so .btn-primary wins via source order
-   when both classes are present on the same element (autoscroll.js
-   toggles btn-primary on top of an existing btn-secondary). */
+   btn-secondary as gray #6c757d; BS3 used #428bca and white #fff. */
 .btn-secondary {
     --bs-btn-bg: #fff;
     --bs-btn-color: #333;
@@ -485,6 +485,7 @@ a:hover, a:focus {
 .pzt-collapsed-theme-toggle {
     display: inline-flex;
     align-items: center;
+    margin-right: 8px;
 }
 
 @media (min-width: 992px) {

@@ -56,6 +56,7 @@
 
   function updateToggleBtn() {
     toggleBtn.classList.toggle('btn-primary', autoscrollEnabled);
+    toggleBtn.classList.toggle('btn-secondary', !autoscrollEnabled);
   }
 
   //move the bar to the right column for desktop and fill width for mobile
