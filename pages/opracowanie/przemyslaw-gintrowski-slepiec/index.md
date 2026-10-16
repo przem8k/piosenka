@@ -2,7 +2,6 @@
 title: 'Ślepiec'
 author: 'reuter'
 pub_date: '2015-02-20 19:59:33.138318+00:00'
-youtube_id: 'None'
 capo_fret: 1
 composers:
  - 'przemyslaw-gintrowski'
