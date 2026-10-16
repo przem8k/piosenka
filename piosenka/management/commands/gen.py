@@ -77,6 +77,21 @@ def capo_to_roman(capo_fret):
         return None
 
 
+# Video id with optional start time in seconds, e.g. "QhWbu3J0ZUU?t=123" or "QhWbu3J0ZUU&t=123s"
+YOUTUBE_RE = re.compile(r"([\w-]+)(?:[?&]t=(\d+)s?(?=&|$))?")
+
+def parse_youtube(value):
+    # Splits a youtube_id optionally followed by ?t=seconds into (id, start)
+    match = YOUTUBE_RE.match(str(value or ""))
+    if not match:
+        return value, None
+
+    video_id, start = match.groups()
+    if start:
+        return video_id, int(start)
+    return video_id, None
+
+
 def make_context_for_page(frontmatter_data, section=None):
     context_data = {
         "title": frontmatter_data.get("title"),
@@ -93,7 +108,6 @@ def make_context_for_page(frontmatter_data, section=None):
         "translators": frontmatter_data.get("translators"),
         "performers": frontmatter_data.get("performers"),
         "capo_fret": capo_to_roman(frontmatter_data.get("capo_fret")),
-        "youtube_id": frontmatter_data.get("youtube_id"),
         "epigone": frontmatter_data.get("epigone"),
         # Note-specific:
         "url1": frontmatter_data.get("url1"),
@@ -122,6 +136,10 @@ def make_context_for_page(frontmatter_data, section=None):
         # Article-specific:
         "lead": frontmatter_data.get("lead"),
     }
+
+    context_data["youtube_id"], context_data["youtube_start"] = parse_youtube(
+        frontmatter_data.get("youtube_id")
+    )
 
     if context_data["disambig"]:
         context_data["title"] += f" ({context_data['disambig']})"

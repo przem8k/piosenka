@@ -3,7 +3,6 @@ title: 'Marsylia'
 author: 'gary'
 pub_date: '2023-05-15 23:21:19.819998+00:00'
 original_title: 'Стою я раз на стреме...'
-youtube_id: 'None'
 text_authors:
  - 'achill-lewinton'
 translators:

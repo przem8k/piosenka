@@ -192,6 +192,7 @@
       new YT.Player(ytIframe, {
         events: {
           'onReady': function(event) {
+            if (new URL(ytIframe.src).searchParams.has('start')) return;
             const duration = event.target.getDuration();
             if (!duration || duration <= 0) return;
 

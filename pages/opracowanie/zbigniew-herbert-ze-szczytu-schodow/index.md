@@ -2,7 +2,7 @@
 title: 'Ze szczytu schodów'
 author: 'reuter'
 pub_date: '2020-05-25 20:28:50.949979+00:00'
-youtube_id: 'W0ngZmbYysg'
+youtube_id: 'N9zd2e0nz-4?t=785'
 text_authors:
  - 'zbigniew-herbert'
 composers:
