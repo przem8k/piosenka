@@ -47,7 +47,7 @@ Za obietnice i nadzieje.
 
 #zw2
 Ja prosty człowiek — cóż mi skarga? [e]
-Kadzą mi albo palcem grożą. [a H7
+Kadzą mi albo palcem grożą. [a H7]
 Każdy swój krzyż przez życie targa [e]
 A jeszcze kamień mu dołożą. [a H7]
 >Dźwignę, to dobrze, nie — to nie: [C G D]

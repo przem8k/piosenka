@@ -25,7 +25,7 @@ Furda nam przegniłe dno!
 
 >O-ho, ho, o-ho, ho! [a F]
 >Furda nam przegniłe dno! [G e a]
->O-ho, ho, o-ho, ho! [a F}
+>O-ho, ho, o-ho, ho! [a F]
 >Furda nam przegniłe dno! [G e a]
 
 >Furda wiry! Furda skały! [a F]
@@ -47,7 +47,7 @@ Wkręci się go w ziemską oś!
 
 >O-ho, ho, o-ho, ho! [a F]
 >Wkręci się go w ziemską oś! [G e a]
->O-ho, ho, o-ho, ho! [a F
+>O-ho, ho, o-ho, ho! [a F]
 >Wkręci się go w ziemską oś! [G e a]
 
 >Furda wiry! Furda skały! [a F]
@@ -71,7 +71,7 @@ Poszedł cały kram na dno.
 
 >O-ho, ho, o-ho, ho! [a F]
 >Poszedł cały kram na dno. [G e a]
->O-ho, ho, o-ho, ho! [a F
+>O-ho, ho, o-ho, ho! [a F]
 >Poszedł cały kram na dno. [G e a]
 
 >Galerników diabli wzięli [a F]
