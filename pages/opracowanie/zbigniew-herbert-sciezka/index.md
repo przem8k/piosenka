@@ -2,7 +2,7 @@
 title: 'Ścieżka'
 author: 'Pan_Kmicic4'
 pub_date: '2019-03-18 20:27:35.917509+00:00'
-youtube_id: 'k1KfMvsVKSs'
+youtube_id: 'gONurXfsm0Y'
 capo_fret: 4
 text_authors:
  - 'zbigniew-herbert'

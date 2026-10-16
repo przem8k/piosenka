@@ -2,7 +2,7 @@
 title: 'Pieśń rodu Napiwonów'
 author: 'Zbik'
 pub_date: '2022-04-12 14:16:30.976588+00:00'
-youtube_id: 'k3BkLT2YsrI'
+youtube_id: 'gNpNQ1bCQAo'
 text_authors:
  - 'jacek-kowalski'
 composers:

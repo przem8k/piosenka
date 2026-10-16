@@ -3,7 +3,7 @@ title: 'Ewa śpi'
 author: 'spooky'
 pub_date: '2014-01-04 03:56:56.108143+00:00'
 epigone: True
-youtube_id: 'y5kZeEysEgc'
+youtube_id: 'rg6jZp2DqSw'
 capo_fret: 1
 text_authors:
  - 'jacek-kaczmarski'

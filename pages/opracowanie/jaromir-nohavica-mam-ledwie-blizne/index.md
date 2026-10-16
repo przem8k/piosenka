@@ -3,7 +3,7 @@ title: 'Mam ledwie bliznę'
 author: 'DX'
 pub_date: '2013-08-10 15:47:51.514618+00:00'
 original_title: 'Mám jizvu na rtu'
-youtube_id: 'Ab4qvDwA6hc'
+youtube_id: 'FxQ4qK_6vyI'
 text_authors:
  - 'jaromir-nohavica'
 composers:

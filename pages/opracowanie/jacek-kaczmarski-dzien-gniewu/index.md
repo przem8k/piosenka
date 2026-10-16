@@ -2,7 +2,7 @@
 title: 'Dzień gniewu'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-28 15:37:27.532334+00:00'
-youtube_id: 'B3B5nIgTEAw'
+youtube_id: 'wChDoBzK-KM'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

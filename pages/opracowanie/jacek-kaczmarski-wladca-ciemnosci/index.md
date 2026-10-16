@@ -2,7 +2,7 @@
 title: 'Władca Ciemności'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 10:13:17.588338+00:00'
-youtube_id: 'UAXMVNKTIVU'
+youtube_id: 'ObeSblSDj4M'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

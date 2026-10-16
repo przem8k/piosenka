@@ -2,7 +2,7 @@
 title: 'Hymn'
 author: 'RK'
 pub_date: '2012-10-25 20:05:03.606479+00:00'
-youtube_id: '9RENqvw5rjs'
+youtube_id: 'k8ClH3kyee4'
 capo_fret: 3
 text_authors:
  - 'jacek-kaczmarski'

@@ -2,7 +2,7 @@
 title: 'Bajka ruska'
 author: 'reuter'
 pub_date: '2019-02-09 14:06:15.779729+00:00'
-youtube_id: 'd5ex1PQGLBc'
+youtube_id: '0CV2WwZWn2I'
 text_authors:
  - 'zbigniew-herbert'
 composers:

@@ -2,7 +2,7 @@
 title: 'Powrót sentymentalnej Panny S.'
 author: 'DX'
 pub_date: '2016-04-16 11:52:01.870385+00:00'
-youtube_id: 'orvFUMnFKmI'
+youtube_id: 'osGj7kIVjJ0'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'
