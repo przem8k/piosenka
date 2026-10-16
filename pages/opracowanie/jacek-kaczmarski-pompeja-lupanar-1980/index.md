@@ -11,19 +11,22 @@ composers:
 performers:
  - 'jacek-kaczmarski'
 ---
+a: 007550
+g6add9: x05330
+D6add9: x09770
 
 #1
-Lupanar, w którym sprzedajemy za bezcen swoje ciała [ a a4 ]
-Klientów ściąga z wszystkich okolicznych wsi i miast [ a a4 ]
-Żyjemy z cudzych żądz i wstydów [ a a4 ]
-Których się żadna z nas nie bała [ a a4 ]
-Choć przecież jest kobietą każda z nas [ a D/A a ( D/A ) ]
+Lupanar, w którym sprzedajemy za bezcen swoje ciała [ a g6add9 ]
+Klientów ściąga z wszystkich okolicznych wsi i miast [ a g6add9 ]
+Żyjemy z cudzych żądz i wstydów [ a g6add9 ]
+Których się żadna z nas nie bała [ a g6add9 ]
+Choć przecież jest kobietą każda z nas [ a D6add9 a ( D6add9 ) ]
 
 #2
->Pompeja! Pompeja! [ a D/A a D/A ]
->Dla wszystkich, co płacą, otwarte nasze drzwi! [ a a4 a a4 ]
->Rozkoszy nowych wabi was nadzieja! [ a a4 a a4 ]
->Tu, skąd wydostać się nie może nikt. [ a a4 a ( a4 ) ]
+>Pompeja! Pompeja! [ a D6add9 a D6add9 ]
+>Dla wszystkich, co płacą, otwarte nasze drzwi! [ a g6add9 a g6add9 ]
+>Rozkoszy nowych wabi was nadzieja [ a g6add9 a g6add9 ]
+>Tu, skąd wydostać się nie może nikt [ a g6add9 a ( g6add9 ) ]
 
 @1
 Arena, z której sprzedajemy za bezcen swe istnienia
@@ -34,7 +37,7 @@ Choć przecież jest mężczyzną każdy z nas
 
 @2
 >Pompeja! Pompeja!
->Dla wszystkich, co płacą, otwarte skrzydła bram!
+>Dla wszystkich, co płacą, otwarte skrzydła bram
 >Rozkoszy nowych wabi was nadzieja!
 >Tu, gdzie w oklaskach przyjdzie zginąć nam
 
@@ -47,7 +50,7 @@ Choć przecież jest człowiekiem każdy z nas
 
 @2
 >Pompeja! Pompeja!
->U boku gladiatora hetera szczęście śni!
+>U boku gladiatora hetera szczęście śni
 >Tak para naszych czasów ślub zawiera
 >Na jedną noc i na niepewne dni
 
@@ -60,6 +63,6 @@ Dopóki ktoś nam nie odbierze ciał
 
 @2
 >Pompejo! Pompejo!
->Ty perło Imperium w ścieku jego miast!
+>Ty perło Imperium w ścieku jego miast
 >Przy życiu będziesz trzymać się nadzieją
 >Dopóki będzie żył ostatni z nas
