@@ -1,0 +1,101 @@
+#pzt-install-banner {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    /* Lift above the iOS home-indicator + any other safe-area inset
+       on the bottom. Falls back to plain 12px on browsers without env(). */
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: #1d1d1d;
+    color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+    font-family: Ubuntu, sans-serif;
+    font-size: 14px;
+    line-height: 1.35;
+    animation: pzt-install-slide-up 280ms ease-out;
+}
+
+@keyframes pzt-install-slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+}
+
+#pzt-install-banner .pzt-install-text {
+    flex: 1;
+    min-width: 0;
+}
+
+#pzt-install-banner strong {
+    font-weight: 600;
+}
+
+#pzt-install-banner .pzt-install-action {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    background: #fff;
+    color: #1d1d1d;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    min-height: 36px;
+}
+
+#pzt-install-banner .pzt-install-action:hover,
+#pzt-install-banner .pzt-install-action:focus {
+    background: #e9e9e9;
+}
+
+#pzt-install-banner .pzt-install-close {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 4px;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+}
+
+#pzt-install-banner .pzt-install-close:hover,
+#pzt-install-banner .pzt-install-close:focus {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* iOS share-icon glyph (visual cue, decorative). */
+#pzt-install-banner .pzt-install-share {
+    display: inline-block;
+    width: 14px;
+    height: 18px;
+    vertical-align: -3px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 18' fill='none' stroke='%23f4f4f4' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M7 1v11M3.5 4.5L7 1l3.5 3.5'/><path d='M2 8H1v8h12V8h-1'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media print {
+    #pzt-install-banner { display: none; }
+}
+
+/* Tighter on very small screens — keep it from eating song lyrics. */
+@media (max-width: 360px) {
+    #pzt-install-banner {
+        padding: 10px 12px;
+        font-size: 13px;
+        gap: 8px;
+    }
+    #pzt-install-banner .pzt-install-action {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
+

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Brak połączenia – Piosenka z tekstem{% endblock %}
+{% block description %}Strona, której szukasz, nie jest dostępna offline.{% endblock description %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="section">
+        <h2 class="pzt-card-title">Jesteś offline</h2>
+        <p>Ta strona nie została jeszcze zapisana w pamięci aplikacji,
+        a w tej chwili nie ma połączenia z siecią.</p>
+        <p>Możesz:</p>
+        <ul>
+          <li>Otworzyć <a href="/spiewnik/">śpiewnik</a> i wybrać piosenkę,
+              której tekst już oglądałaś/oglądałeś — zapisane piosenki
+              działają bez sieci.</li>
+          <li>Skorzystać z wyszukiwarki w pasku u góry — jej indeks
+              jest zapisany lokalnie i działa offline.</li>
+          <li>Spróbować ponownie, gdy wrócisz do zasięgu:
+              <a href="javascript:location.reload()">odśwież stronę</a>.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+{% endblock content %}
