@@ -3,7 +3,7 @@ title: 'K... podła ty'
 author: 'DX'
 pub_date: '2012-06-04 02:11:59.970368+00:00'
 original_title: 'P... de toi'
-youtube_id: 'v2qMV5vFwHg'
+youtube_id: 'EtW_KPBZxC0'
 text_authors:
  - 'georges-brassens'
 composers:

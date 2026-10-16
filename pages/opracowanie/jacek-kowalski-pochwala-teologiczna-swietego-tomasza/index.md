@@ -2,7 +2,7 @@
 title: 'Pochwała teologiczna Świętego Tomasza'
 author: 'Zbik'
 pub_date: '2020-05-20 10:15:02.903158+00:00'
-youtube_id: 'w5Al7y2d9Q0'
+youtube_id: 'jz35T2AS2zM'
 text_authors:
  - 'jacek-kowalski'
 composers:

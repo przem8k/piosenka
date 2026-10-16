@@ -2,7 +2,7 @@
 title: 'Guziki'
 author: 'DX'
 pub_date: '2014-01-06 21:40:29.331093+00:00'
-youtube_id: 'jT2wutSM2OA'
+youtube_id: 'm7tCENzh7Hs'
 text_authors:
  - 'zbigniew-herbert'
 composers:

@@ -2,7 +2,7 @@
 title: 'Chory na wyobraźnię'
 author: 'Ewus'
 pub_date: '2011-06-17 08:04:58.785015+00:00'
-youtube_id: 'E83npELCDRU'
+youtube_id: 'm_qCL6naSbY'
 capo_fret: 2
 text_authors:
  - 'mariusz-zadura'

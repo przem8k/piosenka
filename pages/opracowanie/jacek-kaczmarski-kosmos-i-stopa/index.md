@@ -3,7 +3,7 @@ title: 'Kosmos i stopa'
 author: 'spooky'
 pub_date: '2013-12-22 22:33:13.465526+00:00'
 epigone: True
-youtube_id: 'tFeGdnzj2Rw'
+youtube_id: 'OQee9851Q34'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

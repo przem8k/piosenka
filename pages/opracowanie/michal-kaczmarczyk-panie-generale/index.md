@@ -2,7 +2,7 @@
 title: 'Panie Generale'
 author: 'reuter'
 pub_date: '2018-07-17 19:55:56.768669+00:00'
-youtube_id: 'gA5IRhWcXCc'
+youtube_id: 'nRYq1x1vLL0'
 capo_fret: 2
 text_authors:
  - 'michal-kaczmarczyk'

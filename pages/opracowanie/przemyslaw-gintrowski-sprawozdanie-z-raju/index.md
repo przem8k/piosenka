@@ -2,7 +2,7 @@
 title: 'Sprawozdanie z raju'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-24 13:31:03.899994+00:00'
-youtube_id: 'BYSnuSNtvxg'
+youtube_id: 'YNUBohKcRaE'
 text_authors:
  - 'zbigniew-herbert'
 composers:

@@ -2,7 +2,7 @@
 title: 'Pusty Raj'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-28 12:59:59.209631+00:00'
-youtube_id: 'hu-ZXZPFAEA'
+youtube_id: 'P0GNIRoHils'
 text_authors:
  - 'jacek-kaczmarski'
 composers:

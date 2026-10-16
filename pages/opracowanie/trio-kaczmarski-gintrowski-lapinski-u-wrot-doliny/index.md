@@ -2,7 +2,7 @@
 title: 'U wrót doliny'
 author: 'Pan_Kmicic4'
 pub_date: '2018-07-22 10:15:40.584548+00:00'
-youtube_id: 'Y_jQLRSHvMo'
+youtube_id: '-MXUlQoVi0k'
 text_authors:
  - 'zbigniew-herbert'
 composers:

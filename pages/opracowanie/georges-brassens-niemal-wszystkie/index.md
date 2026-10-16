@@ -3,7 +3,7 @@ title: 'Niemal wszystkie'
 author: 'DX'
 pub_date: '2012-04-21 14:49:55.608077+00:00'
 original_title: 'Quatre vingt quinze pour cent'
-youtube_id: 'ZrLFgDOaSIQ'
+youtube_id: 'x-blHAbaS4E'
 text_authors:
  - 'georges-brassens'
 composers:
