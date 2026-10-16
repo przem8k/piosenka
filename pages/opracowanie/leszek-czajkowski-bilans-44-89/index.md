@@ -2,6 +2,7 @@
 title: 'Bilans ''44 - ''89'
 author: 'RK'
 pub_date: '2011-12-22 22:15:59.274157+00:00'
+youtube_id: 'Gl3CzJQAFQk?t=1418'
 text_authors:
  - 'leszek-czajkowski'
 composers:

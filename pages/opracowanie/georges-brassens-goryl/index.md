@@ -2,6 +2,7 @@
 title: 'Goryl'
 author: 'DX'
 pub_date: '2011-10-17 23:29:30.262328+00:00'
+youtube_id: '0Py6sI2pCp8'
 original_title: 'Le gorille'
 text_authors:
  - 'georges-brassens'

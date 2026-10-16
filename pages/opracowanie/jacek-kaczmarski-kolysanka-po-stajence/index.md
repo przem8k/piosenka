@@ -2,6 +2,7 @@
 title: 'Kołysanka'
 author: 'RK'
 pub_date: '2012-11-24 13:44:51.782492+00:00'
+youtube_id: 'UfXtiQSQ1tg'
 disambig: '„Po stajence...”'
 text_authors:
  - 'jacek-kaczmarski'

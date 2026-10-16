@@ -2,6 +2,7 @@
 title: 'Pięciolatka'
 author: 'Ewus'
 pub_date: '2011-06-17 08:17:05.008739+00:00'
+youtube_id: 'HvYaLvh7cUg'
 text_authors:
  - 'mariusz-zadura'
 composers:

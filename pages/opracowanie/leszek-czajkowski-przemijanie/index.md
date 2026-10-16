@@ -2,6 +2,7 @@
 title: 'Przemijanie'
 author: 'Zbik'
 pub_date: '2011-10-16 18:13:43.436885+00:00'
+youtube_id: 'Enyp4p2X55I?t=1067'
 capo_fret: 2
 text_authors:
  - 'leszek-czajkowski'

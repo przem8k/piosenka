@@ -2,6 +2,7 @@
 title: 'Epigoński wirus'
 author: 'reuter'
 pub_date: '2023-05-22 21:52:27.768369+00:00'
+youtube_id: 'VNLbYNfWgcA'
 epigone: True
 capo_fret: 2
 text_authors:
