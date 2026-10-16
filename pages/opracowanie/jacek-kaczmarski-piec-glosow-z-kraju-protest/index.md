@@ -2,6 +2,7 @@
 title: 'Pięć głosów z Kraju. Protest'
 author: 'Zbik'
 pub_date: '2011-12-30 20:21:55.579611+00:00'
+youtube_id: 'GgT-uZFDAJU'
 capo_fret: 2
 text_authors:
  - 'jacek-kaczmarski'

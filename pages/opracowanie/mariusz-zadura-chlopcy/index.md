@@ -2,6 +2,7 @@
 title: 'Chłopcy'
 author: 'Ewus'
 pub_date: '2011-06-17 08:15:24.210439+00:00'
+youtube_id: '_zBnRAkh67U'
 text_authors:
  - 'mariusz-zadura'
 composers:

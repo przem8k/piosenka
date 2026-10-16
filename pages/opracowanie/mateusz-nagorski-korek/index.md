@@ -2,6 +2,7 @@
 title: 'Korek'
 author: 'spooky'
 pub_date: '2013-08-22 05:03:33.379012+00:00'
+youtube_id: 'dfOOLTnHJQQ'
 capo_fret: 1
 text_authors:
  - 'michal-zablocki'

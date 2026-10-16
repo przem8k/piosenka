@@ -2,6 +2,7 @@
 title: 'Niepewność'
 author: 'Ewus'
 pub_date: '2011-06-17 08:08:22.765487+00:00'
+youtube_id: 'SXWDjB8B9jY'
 text_authors:
  - 'mariusz-zadura'
 composers:

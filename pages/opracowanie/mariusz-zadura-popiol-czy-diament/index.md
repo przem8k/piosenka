@@ -2,6 +2,7 @@
 title: 'Popiół czy diament?'
 author: 'Ewus'
 pub_date: '2011-06-17 08:07:28.155283+00:00'
+youtube_id: 'gqvjkxJ7o6E'
 text_authors:
  - 'mariusz-zadura'
  - 'cyprian-kamil-norwid'

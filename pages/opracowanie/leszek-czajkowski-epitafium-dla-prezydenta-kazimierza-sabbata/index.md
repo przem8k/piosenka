@@ -2,6 +2,7 @@
 title: 'Epitafium dla prezydenta Kazimierza Sabbata'
 author: 'Zbik'
 pub_date: '2011-06-28 17:28:41.768360+00:00'
+youtube_id: 'QQv8DF5KDbI?t=1397'
 text_authors:
  - 'leszek-czajkowski'
 composers:

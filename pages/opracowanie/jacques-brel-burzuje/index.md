@@ -2,6 +2,7 @@
 title: 'Burżuje'
 author: 'gary'
 pub_date: '2023-07-16 21:35:31.760298+00:00'
+youtube_id: '_2ed5YEqz7Y'
 original_title: 'Les Bourgeois'
 text_authors:
  - 'jacques-brel'

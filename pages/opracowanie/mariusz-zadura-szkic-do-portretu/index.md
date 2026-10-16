@@ -2,6 +2,7 @@
 title: 'Szkic do portretu'
 author: 'Ewus'
 pub_date: '2011-06-17 08:01:03.225647+00:00'
+youtube_id: 'Tyjbhq3iGyE'
 text_authors:
  - 'mariusz-zadura'
 composers:

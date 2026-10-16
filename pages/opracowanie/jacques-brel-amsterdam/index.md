@@ -2,6 +2,7 @@
 title: 'Amsterdam'
 author: 'DX'
 pub_date: '2012-08-22 21:37:48.665968+00:00'
+youtube_id: 'ZVXzvYxdyvQ'
 text_authors:
  - 'jacques-brel'
 composers:

@@ -2,6 +2,7 @@
 title: 'Do Pana'
 author: 'Ewus'
 pub_date: '2011-06-17 08:19:46.626173+00:00'
+youtube_id: 'jhTimafRHK4'
 text_authors:
  - 'mariusz-zadura'
 composers:

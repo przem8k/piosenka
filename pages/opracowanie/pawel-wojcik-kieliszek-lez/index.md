@@ -2,6 +2,7 @@
 title: 'Kieliszek łez'
 author: 'DX'
 pub_date: '2013-04-20 12:21:21.832364+00:00'
+youtube_id: '69pQ5ZJaPfQ'
 capo_fret: 1
 text_authors:
  - 'pawel-wojcik'

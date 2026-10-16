@@ -2,6 +2,7 @@
 title: 'Scheda po Tolkienie'
 author: 'spooky'
 pub_date: '2013-03-25 15:40:55.270203+00:00'
+youtube_id: 'gz3Ab5MXgok'
 disambig: 'muz. Mateusz Nagórski'
 epigone: True
 capo_fret: 2

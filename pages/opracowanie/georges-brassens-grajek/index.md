@@ -2,6 +2,7 @@
 title: 'Grajek'
 author: 'spooky'
 pub_date: '2012-04-27 12:36:58.179273+00:00'
+youtube_id: 'ldNs9KgzJb8'
 original_title: 'Le Petit Joueur de Fluteau'
 capo_fret: 1
 text_authors:

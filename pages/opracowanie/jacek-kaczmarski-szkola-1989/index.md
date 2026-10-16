@@ -2,6 +2,7 @@
 title: 'Szkoła'
 author: 'PrzemekL'
 pub_date: '2014-09-04 18:37:00.250470+00:00'
+youtube_id: 'ZWwcmaB_xt8'
 disambig: '1989'
 text_authors:
  - 'jacek-kaczmarski'

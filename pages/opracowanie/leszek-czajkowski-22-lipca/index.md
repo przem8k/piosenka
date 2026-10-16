@@ -2,6 +2,7 @@
 title: '22 lipca'
 author: 'Zbik'
 pub_date: '2011-10-15 21:33:01.363485+00:00'
+youtube_id: 'dPbAd-DM26k'
 capo_fret: 2
 text_authors:
  - 'leszek-czajkowski'
