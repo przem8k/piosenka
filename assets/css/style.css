@@ -402,6 +402,25 @@ a:hover, a:focus {
   white-space: nowrap;
 }
 
+.artist-random-dice {
+  background: none;
+  border: none;
+  padding: 0 0 0 4px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.artist-random-dice svg {
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: -0.1em;
+}
+
+.artist-random-dice:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
 /* frontpage */
 
 .pzt-social-button {
