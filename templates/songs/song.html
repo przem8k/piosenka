@@ -1,6 +1,7 @@
 {% extends "songs/base.html" %}
 {% load static %}
 {% load thumbnail %}
+{% load compress %}
 
 {% block title %}{{ title }} - tekst i akordy{% endblock title %}
 {% block description %}Opracowanie piosenki {{ song.title }} w śpiewniku Piosenki z tekstem{% endblock description %}
@@ -179,3 +180,9 @@
 </div>
 
 {% endblock content %}
+
+{% block extra-scripts %}
+{% compress js %}
+<script src="{% static "js/random.js" %}"></script>
+{% endcompress %}
+{% endblock extra-scripts %}

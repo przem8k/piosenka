@@ -431,6 +431,7 @@ def generate_artists(artists_by_slug, songs_by_artist_slug, song_index_context):
 
         artist_context["songs"] = filtered_songs
         artist_context["epigone_songs"] = epigone_songs
+        generate_artist_song_index(artist_slug, filtered_songs)
 
         notes.sort(key=lambda x: x["pub_date"], reverse=True)
         artist_context["notes"] = notes
@@ -456,6 +457,15 @@ def generate_artist_index(artists_by_slug):
     os.makedirs(out_dir_path, exist_ok=True)
     with open(out_file_path, "w") as f:
         json.dump(resp, f, ensure_ascii=False, indent=4)
+
+
+def generate_artist_song_index(artist_slug, songs):
+    # Generates JSONs with song paths of one artist, used by the random song dice on song pages.
+    out_dir_path = os.path.join(OUT_DIR_PATH, "index", "artists")
+    out_file_path = os.path.join(out_dir_path, f"{artist_slug}.json")
+    os.makedirs(out_dir_path, exist_ok=True)
+    with open(out_file_path, "w") as f:
+        json.dump([song["get_absolute_url"] for song in songs], f)
 
 
 def generate_song_index(all_songs):
