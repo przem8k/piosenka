@@ -18,7 +18,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kon_wys
 #1
 Za chwilę start wielkiego biegu za miliony. [ d H0 A7 ]
 – Więc doczekałem się nareszcie swego dnia! [ d H0 A7 ]
-Chrypną głośniki: Czarny Koń, dżokej w czerwonym [ g ]
+Chrypną głośniki: „Czarny Koń, dżokej w czerwonym!”. [ g ]
 – To dżokej mój, a Czarny Koń – to właśnie ja! [ B A7 ]
 Nie na mnie skierowane publiczności oczy, [ d H0 A7 ]
 Na mnie nie stawiał nikt, pisano o mnie źle, [ d H0 A7 ]
@@ -42,7 +42,7 @@ Ja tu dla siebie biegnę, nie z niczyjej łaski,
 I – co potrafię – zaraz wszystkim wam pokażę!
 Znikają z obu stron chorągwie, twarze, godła,
 Ja czuję tor i tylko tor i kopyt takt,
-Więc jeden ruch! – i wylatuje dżokej z siodła [ g d ]
+Więc jeden ruch! – i wylatuje dżokej z siodła, [ g d ]
 I z pyska znika mi wędzidła słony smak!
 
 @2

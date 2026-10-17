@@ -34,12 +34,12 @@ Normalni.
 
 @zwrotka2
 >I piasek ulgi – cudzej – nas przysypie,
->Że oczy piorunami już nie łzawią.
+>Że oczy piorunami już – nie łzawią.
 >W domu żałoby goście też się bawią –
 >Na stypie.
 
 @zwrotka1
 I piasek ulgi – cudzej – nas przysypie,
-Że oczy piorunami już nie łzawią.
+Że oczy piorunami już – nie łzawią.
 W domu żałoby goście też się bawią –
 Na stypie.

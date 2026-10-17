@@ -18,8 +18,8 @@ score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/koniec_
 ---
 
 #1
-– Wydzieraliśmy oczy palcami – Tak jest! [ H e ]
-– Przegryzaliśmy gardła zębami – Tak jest! [ H e ]
+– Wydzieraliśmy oczy palcami! – Tak jest! [ H e ]
+– Przegryzaliśmy gardła zębami! – Tak jest! [ H e ]
 – Przez trzydzieści lat bez wytchnienia [ a ]
 Zabijaliśmy w sobie sumienia! – Tak jest! [ H e ]
 
@@ -54,7 +54,7 @@ I o co w tym wszystkim chodziło. [ d d/F E4 E ( a a6/Fis H7 ) ]
 – O wieczny spór o sens życia! – Tak jest! [ H e ]
 
 #6
-Jakiś mnich, zwisając z gałęzi [ F7+ e7 ]
+Jakiś mnich, zwisając z gałęzi, [ F7+ e7 ]
 Patrzy na nich z wyrzutem i rzęzi: [ F7+ H4 H7 ]
 
 #7
@@ -64,13 +64,13 @@ Pochowajcie urazy i zwłoki [ D e ]
 I dojrzyjcie do nowej epoki… [ a a6/Fis H4 H7 ]
 
 #8
-– Wydzieraliśmy oczy palcami – Tak jest! [ H e ]
-– Przegryzaliśmy gardła zębami – Tak jest! [ H e ]
+– Wydzieraliśmy oczy palcami! – Tak jest! [ H e ]
+– Przegryzaliśmy gardła zębami! – Tak jest! [ H e ]
 – Przez trzydzieści lat bez wytchnienia [ a ]
 Zabijaliśmy w sobie sumienia! – Tak jest! [ H e ]
 
 #9
-– Teraz, gdy stygną stosy ofiarne [ a ]
+– Teraz, gdy stygną stosy ofiarne, [ a ]
 Chcesz, by to wszystko poszło na marne? [ H ( a h e ) ]
 
 #10

@@ -27,7 +27,7 @@ Wydajność pracy stale wzrasta i niezależna jest od rasy,
 Chociaż na wszystkich frontach robót wciąż najwytrwalsi są Germanie.
 
 #2
-Wszyscy zdajemy sobie sprawę ile dla państwa trud nasz waży, [ C G C Dis F C ]
+Wszyscy zdajemy sobie sprawę, ile dla państwa trud nasz waży, [ C G C Dis F C ]
 Dzięki któremu staną gmachy, co świat zadziwią swym ogromem: [ D A D F Dis F D ]
 Place, ulice, proste drogi, łuki tryumfalne dla cesarzy, [ E H E D A E ]
 Porty, świątynie i posągi, gospody i publiczne domy. [ G D F C D d ]

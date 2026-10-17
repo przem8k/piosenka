@@ -36,11 +36,11 @@ Nie wskażę, gdzie która ze stron świata leży – [ F C G d ]
 Mądremu to na nic, głupi nie uwierzy. [ F C0 d a ( a ) ]
 
 #4
-Załatwię najwyżej osobiste sprawy [ A d ( A d ) ]
+Załatwię najwyżej osobiste sprawy, [ A d ( A d ) ]
 Tak, by nie potępić, ale i nie zbawić. [ G C ( G C ) ]
 
 #5
-By z klęsk, rozczarowań, żalów obmyć myśli. [ d a ( d a ) ]
+By z klęsk, rozczarowań, żalów obmyć myśli, [ d a ( d a ) ]
 Otrząsnąć ze zwycięstw i z krzywd je oczyścić. [ A0 Fis0 E7 Fis0 ( E7 ) ]
 
 @2
@@ -52,5 +52,5 @@ By móc się podzielić swoim niepokojem
 Z kimś, kto tak się boi przyznać: ja się boję!
 
 @3
-By to, co słabością, bólem i kalectwem
+By to, co słabością, bólem i kalectwem,
 Stało się modlitwą, światłem i świadectwem.

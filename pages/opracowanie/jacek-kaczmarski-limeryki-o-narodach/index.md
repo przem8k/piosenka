@@ -38,14 +38,14 @@ Położył u stóp – Irlandczyka.
 
 @zw
 Raz Francuz sąsiada miał, co był z Somalii,
-W Tuluzie mieszkali i pastis pijali.
+W Tuluzie mieszkali i pastis pijali,
 Lecz wnet się przekonał
-Potomek Dantona
+Potomek Dantona,
 Że druh jego łeb ma ze stali.
 
 @zw
 Nie mieli pretensji koledzy Francuza,
-Że przepić nie umiał czarnego łobuza.
+Że przepić nie umiał czarnego łobuza,
 Lecz rzekli: Mon ami,
 Jak pić chcesz – to z nami!
 Bo nie dla przybłędów Tuluza!
@@ -66,9 +66,9 @@ Spójrz w lustro, wszak skośne masz oczy!
 
 @zw
 Cóż z sercem złamanym uczynić na świecie?
-Więc poszedł do wojska i śnił o odwecie.
+Więc poszedł do wojska i śnił o odwecie,
 Lecz – losu ironio! –
-Brak wojny z Japonią
+Brak wojny z Japonią,
 Do mnichów więc strzela w Tybecie!
 
 @ref
@@ -87,9 +87,9 @@ W polityce mądre nad wyraz.
 
 @zw
 Lecz słoń Singaleza – Tamilów sympatyk –
-Zwykł noc mu po nocy wykradać granaty,
+Zwykł noc mu po nocy wykradać granaty
 I pojął Singalez,
-Że musi, choć z żalem
+Że musi, choć z żalem,
 Sympatie swe spisać na straty.
 
 @ref
@@ -100,17 +100,17 @@ Sympatie swe spisać na straty.
 >Narody, narody, narody!
 
 @zw
-Był też Palestyńczyk, co z Żydem się bratał
-W przyjaźni tej widząc nadzieję dla świata,
-Strzelając do niego
-Powtarzał: Kolego,
+Był też Palestyńczyk, co z Żydem się bratał,
+W przyjaźni tej widząc nadzieję dla świata.
+Strzelając do niego,
+Powtarzał: kolego,
 Ta krew nas połączy na lata.
 
 @zw
 Lecz w takiej przyjaźni nie widział Żyd cnoty,
 Bo nie miał ochoty na nowe Golgoty,
 Więc rzekł – przyjacielu,
-My tu, w Izraelu
+My tu, w Izraelu,
 Nie mamy dla ciebie roboty!
 
 @ref
@@ -123,7 +123,7 @@ Nie mamy dla ciebie roboty!
 @zw
 Libijczyk, choć żony miał trzy, muzułmanki,
 Czadyjkę sprowadził do swojej lepianki
-I rzekł: Dla przykładu
+I rzekł – dla przykładu
 Dam ja z tobą czadu –
 I brał ją – wieczory i ranki.
 
@@ -142,9 +142,9 @@ Ci, których wychował Kadafi.
 >Narody, narody, narody!
 
 @zw
-Bez tchu w herbaciarni wypiwszy pięć herbat
+Bez tchu w herbaciarni wypiwszy pięć herbat,
 Albańczyk zapałał miłością do Serba,
-Lecz Serb, po Śliwowi-
+Lecz Serb, po śliwowi-
 Cy – Albańczykowi
 Na zębach wypisał swój herbarz.
 
@@ -205,14 +205,14 @@ Lecz przecież go w końcu zwolniono!
 >Narody, narody, narody!
 
 @zw
-Ci wszyscy o których tak długo tu mendzę
+Ci wszyscy, o których tak długo tu mendzę,
 Co dzień się widują na forum OeNZet
 I skarżą się wzajem
 Na ludy i kraje,
 Nie skarżąc się jednak na nędzę.
 
 @zw
-Bo mają do siebie już to kuluary
+Bo mają do siebie już to kuluary,
 Gdzie naród z narodem się chwyta za bary,
 Że nie o to chodzi,
 Kto komu gdzie szkodzi,
@@ -226,14 +226,14 @@ Lecz o to – po ile dolary.
 >Narody, narody, narody!
 
 @zw
-Był Polak-patriota, co przy wódki skrzynce
+Był Polak patriota, co przy wódki skrzynce
 Zawierał przyjaźni pakt z Ukraińcem.
 Od słowa do słowa
-Dotarli do Lwowa
+Dotarli do Lwowa,
 Ścierając się jak dwa odyńce.
 
 @zw
-Gdy bić się skończyli, trafili za kraty
+Gdy bić się skończyli, trafili za kraty,
 Podarłszy w pamięci doniosłe traktaty:
 Bo gdy przyjdzie czas –
 Wy nas, a my was!
@@ -247,7 +247,7 @@ Po brzuchach! – i: budem rezaty!
 >Narody, narody, narody!
 
 @ref
->Ach gdybyż narodów na świecie nie było,
+>Ach, gdybyż narodów na świecie nie było,
 >Jak nam by się wtedy szczęśliwie tu żyło!
 >Dla dobra człowieka, dla szczęścia ludzkości
 >Złączonej w potężnym uścisku miłości,

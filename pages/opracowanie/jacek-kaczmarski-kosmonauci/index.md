@@ -16,8 +16,8 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kosmona
 
 #zwrotka1
 Posadzili na fotelach miękkich nas [a]
-I pasami do nich ciała przywiązali [a B]
-I zamknęli nad głowami szczelny właz [B]
+I pasami do nich ciała przywiązali, [a B]
+I zamknęli nad głowami szczelny właz, [B]
 I od zewnątrz śruby w nim pozakręcali. [B a]
 Hełmy głowy nam wessały jak pijawki [a]
 I oddzielił nas od świata brzuch potwora – [a B]
@@ -25,11 +25,11 @@ Jeśli słychać coś, to to, co jest w słuchawkach, [B]
 Jeśli widać coś, to to w telewizorach. [B a]
 
 #zwrotka2
-W cichą ciemną przestrzeń nieba wystrzelili nas [B a]
+W cichą, ciemną przestrzeń nieba wystrzelili nas [B a]
 I patrzyli, póki się nie upewnili, że [B E F (E)]
 
 #zwrotka3
-My próżni, w stanie nieważkości, [a]
+My w próżni, w stanie nieważkości, [a]
 Gdzie z opóźnieniem nas dochodzą głosy z Ziemi, [a B]
 Gdzie w normie humor dobry, w normie mdłości, [B]
 W normie powolność, mózgu niedokrwienie. [B a]
@@ -49,7 +49,7 @@ Naszym wielkim celem jest, ogólnie biorąc,
 KONSEKWENTNA KONTYNUACJA PROGRAMU!
 
 @zwrotka2
-Cicha ciemna przestrzeń nieba nas otacza
+Cicha, ciemna przestrzeń nieba nas otacza
 I nikt z nas na razie nie rozpacza, że
 
 @zwrotka3

@@ -23,7 +23,7 @@ A tyle było rąk, [a]
 Które ze wszystkich stron [F] 
 Podtrzymać miały – wiszar. [H7 (G D e e D e)]
 
-Komu się chce iść w trop [G D e]
+Komu się chce iść w trop, [G D e]
 By znaleźć i ukarać winnych, [e D e]
 Gdy się zawalił strop [G D e]
 Na głowy silnych i bezsilnych; [e D e]

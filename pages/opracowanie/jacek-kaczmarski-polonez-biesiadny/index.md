@@ -53,7 +53,7 @@ Niewierzący są czerwoni.
 @zwrotka2
 >Ale wara od purpury,
 >Bo polecą z ciebie wióry!
->– Wiór nie towar, ni zasługa –
+>– Wiór nie towar ni zasługa –
 >Każdy tu wariata struga. [G7 C (G7)]
 
 @zwrotka1

@@ -22,7 +22,7 @@ Gwiazdy drżą Księżniczce w oczach, [a F Fis0]
 W pustym zamku sowa krzyczy. [a F Fis0 E a]
 
 #zwrotka2
-On zza mórz przyzywa burze [C E0]
+On zza mórz przyzywa burze, [C E0]
 By mu szlak kreśliły w toni, [d d/F]
 Ona wdycha z linii dłoni [G7/F G7]
 Bukiet tęsknot i odurzeń. [a E]
@@ -32,7 +32,7 @@ On zza mórz przyzywa burze. [a Fis0 E a]
 >Z niewiadomych oddali [E a]
 >Płynie fala ku fali; [E a]
 >Czy ją spotka, czy minie [A7 d]
->W ciemnych wirów gęstwinie. [a Fis0 E a]
+>W ciemnych wirów gęstwinie? [a Fis0 E a]
 
 @zwrotka1
 Sztorm go rzuca na wybrzeże,
@@ -48,9 +48,9 @@ Lecz jej serce jest z płomienia.
 Tętnią ściany i sklepienia.
 
 @zwrotka3
->Fala z falą się zderza
+>Fala z falą się zderza,
 >Poszukując przymierza;
->Czy je znajdą – splątane
+>Czy je znajdą – splątane,
 >Czy rozprysną się w pianę?
 
 @zwrotka1
@@ -68,7 +68,7 @@ Usypiają o poranku.
 
 @zwrotka3
 >Fala wtapia się w falę
->I zapada w oddale,
+>I zapada w oddale;
 >Czy wśród burz i kipieli
 >Nic ich już nie rozdzieli?
 
