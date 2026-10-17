@@ -33,7 +33,7 @@ Ciemnoskóry Melchior stoi, [H e]
 A Jezusek już się stara [A]
 Capnąć brodę Baltazara. [A]
   >Kto to widział, kto to słyszał? [D G]
-  >Niepojęte to nowiny - [D G]
+  >Niepojęte to nowiny – [D G]
   >Korzą się u stóp dzieciny [H e]
   >Broda, Zbroja, Mądrość łysa! [A4 A A7 D]
 
@@ -76,7 +76,7 @@ Obok w pozłocistej zbroi
 Ciemnoskóry Melchior stoi,
 A Jezusek już się stara
 Capnąć brodę Baltazara.
-  >Ale główkę wciąż odwraca
+  >Ale główkę wciąż odwraca,
   >Gdzie dar prosty, sercu miły,
-  >Który przed nim położyły -
+  >Który przed nim położyły –
   >Dobroć, skromność, ciężka praca.

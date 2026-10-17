@@ -16,9 +16,9 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/sep.png
 ---
 
 #1
-Wśród podnieconych, w środku, ale w cieniu [a D/A ]
-Jak sęp zgarbiony – i łysy i siwy [ a D/A ]
-Siedzi mąż stanu w czujnym zamyśleniu [ a g6/A ]
+Wśród podnieconych, w środku, ale w cieniu, [a D/A ]
+Jak sęp zgarbiony – i łysy, i siwy – [ a D/A ]
+Siedzi mąż stanu w czujnym zamyśleniu, [ a g6/A ]
 Akurat syty – zatem dobrotliwy. [ a D/A ]
 
 #2

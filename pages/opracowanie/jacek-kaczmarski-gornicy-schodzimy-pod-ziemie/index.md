@@ -23,7 +23,7 @@ Na ziemi żyć się nie da [ a/d a ]
 
 @1
 Schodzimy pod ziemię
-Na dzień na miesiąc rok
+Na dzień, na miesiąc, rok
 Schodzimy pod ziemię
 Tam nie ma się jak sprzedać
 
@@ -31,7 +31,7 @@ Tam nie ma się jak sprzedać
 Schodzimy pod ziemię
 W niej broń i w niej sto dróg
 Schodzimy pod ziemię
-U hełmów lamp mgławice
+W u hełmów lamp mgławice
 
 @1
 Schodzimy pod ziemię
@@ -49,7 +49,7 @@ O nasze walczyć życie
 Schodzimy pod ziemię
 W ukrytych nurtów las
 Schodzimy pod ziemię
-Kto został – wie czym płaci
+Kto został – wie, czym płaci
 
 @1
 Schodzimy pod ziemię
@@ -65,12 +65,12 @@ Za zmianą schodzi zmiana
 
 @1
 Schodzimy pod ziemię
-Nie płaczcie! jest jak jest
+Nie płaczcie: jest jak jest
 Schodzimy pod ziemię
 Żywi wyjdą z rana
 
 @1
->Nie windą gdzie komisarz tkwi
+>Nie windą, gdzie komisarz tkwi
 >Z nabitym ruskim karabinem
 >Strzeżonych nam nie trzeba drzwi
 >Ziemia niejedną ma szczelinę
@@ -78,9 +78,9 @@ Schodzimy pod ziemię
 @1
 >I wtedy szychta się rozpocznie
 >Wtedy dopiero plan przekroczym
->Gdy ruszą elektrownie stocznie
+>Gdy ruszą elektrownie, stocznie
 >I ślepi przejrzą znów na oczy
 
 #2
-Schodzimy pod ziemię... [ a/E (a/dis) ]
-Schodzimy pod ziemię... [ a/d (a) ]
+Schodzimy pod ziemię [ a/E (a/dis) ]
+Schodzimy pod ziemię [ a/d (a) ]

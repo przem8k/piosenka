@@ -15,7 +15,7 @@ performers:
 #zwrotka1
 Pojechałem na wakacje do Warszawy, [a]
 Przecież rzecznik rządu sam zaprosił mnie; [a E]
-„Pojedź, sprawdź, za tobą ruszy kto ciekawy” – [E]
+„Pojedź, sprawdź, za tobą ruszy, kto ciekawy” – [E]
 Powiedzieli mi koledzy z RWE. [E a (E)]
 
 #zwrotka2
@@ -31,7 +31,7 @@ Dawna miłość bukiet mi wcisnęła w dłonie,
 Szepcząc: „Dobrze cię zobaczyć jeszcze raz”.
 
 @zwrotka2
->Opłacili pokój mi w hotelu „Forum”,
+>Opłacili pokój mi w hotelu Forum,
 >Bym realia kraju skonfrontować mógł;
 >Pokój z kolorowym był telewizorem
 >Oraz z barkiem, w którym trunków było w bród.
@@ -58,7 +58,7 @@ Setka czystej smakowała już nie tak.
 >Zobaczyłem też, jak metro się buduje,
 >Bohatersko drążąc miasto wszerz i wzdłuż;
 >Nie ma co, Warszawa wreszcie wstaje z ruin
->I stolicy europejskość jest tuż tuż.
+>I stolicy europejskość jest tuż-tuż.
 
 @zwrotka1
 Cały czas towarzyszyło mi trzech panów,
@@ -69,7 +69,7 @@ Za prowokację wina spadłaby na rząd.
 @zwrotka2
 >Dawna miłość umilała wolne chwile,
 >Mówiąc: „Gdybyś został, to cofniemy czas”;
->Lecz, niestety, nie wiem czemu – ni przez chwilę
+>Lecz – niestety, nie wiem czemu – ni przez chwilę
 >Nie myślałem, żeby zacząć jeszcze raz.
 
 @zwrotka1

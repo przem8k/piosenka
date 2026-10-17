@@ -17,14 +17,14 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/dzieci_
 
 #zwrotka
 Żyły przecież dzieci Hioba bogobojnie i dostatnio [a d d/F a]
-Siedmiu synów jak te sosny siedem córek jak te brzozy [d6 a E7]
+Siedmiu synów jak te sosny, siedem córek jak te brzozy [d6 a E7]
 Szanowały swego ojca i kochały swoją matkę [a d d/F a]
-Żyły w zgodzie z każdym przykazaniem bożym [d6 E]
+Żyły w zgodzie z każdym przykazaniem Bożym [d6 E]
 A tej nocy błysk i grom [a d]
 Runął ich bezpieczny dom [a d/A]
 I na głowy spadł lawiną głazów grad [a d/A C d a]
 Dnia nie ujrzy więcej już [a d]
-Siedem sosen siedem brzóz [a d/A] 
+Siedem sosen, siedem brzóz [a d/A] 
 Jednej nocy cały las utracił świat [a d/A C d a (G)]
 
 #refren
@@ -33,17 +33,17 @@ Jednej nocy cały las utracił świat [a d/A C d a (G)]
 >Która każe ufać w dobra tryumf nad złem [F E]
 >Za lojalność i pokorę [C G]
 >I za łask minioną porę [C G]
->Za niewiarę w świat za progiem który jest [a/C F E]
+>Za niewiarę w świat za progiem, który jest [a/C F E]
 >Za ten zakład diabła z Bogiem [F E]
 >Czyj silniejszy będzie ogień [F E]
->Dzieci Hioba Dzieci Hioba [a C]
+>Dzieci Hioba, Dzieci Hioba [a C]
 >Idzie kres [G a]
 
 @zwrotka
 Żyły przecież dzieci Hioba na nadzieję w przyszłość rodu
-Siedmiu synów jak te miecze siedem córek jak te róże
+Siedmiu synów jak te miecze, siedem córek jak te róże
 Nie zaznały w swoim życiu smaku krwi ni smaku głodu
-I kto tylko żył szczęśliwy los im wróżył
+I kto tylko żył, szczęśliwy los im wróżył
 A tej nocy grom i błysk
 Śpiących pozamieniał w nic
 Boży świt oglądał już dymiący gruz
@@ -54,11 +54,11 @@ Bogobojny lament Hioba w niebo niósł
 @refren
 >Za ten zakład Boga z biesem
 >W zgodzie z waszym interesem
->Choć ostrzega was jak może zmysłów pięć
+>Choć ostrzega was, jak może, zmysłów pięć
 >Za ten zakład Boga z czartem
 >O kolejną dziejów kartę
->I za kija końce oba za zwykłego życia chęć
->Za to czego nie ujrzycie
+>I za kija końce oba, za zwykłego życia chęć
+>Za to, czego nie ujrzycie
 >Bo się wam odbierze życie
->Dzieci Hioba Dzieci Hioba
+>Dzieci Hioba, Dzieci Hioba
 >Idzie śmierć

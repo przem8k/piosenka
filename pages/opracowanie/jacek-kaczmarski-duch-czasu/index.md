@@ -16,24 +16,24 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/duch_cz
 ---
 
 #zwrotka1
-Którzy myśleli... [a]
-Którzy myśleli... [a]
-Którzy myśleli, że się Go oswoi [C]
+Którzy myśleli… [a]
+Którzy myśleli… [a]
+Którzy myśleli, że się Go oswoi – [C]
 Ci się najłatwiej oswoić Mu dali: [G]
 Przynętę przełknął, z piszczałek rozbroił, [a]
 Pogonił batem po okrągłej sali. [e a]
 
 @zwrotka1
-Którzy myśleli... 
-Którzy myśleli...
-Którzy myśleli, że się Go oszuka
+Którzy myśleli, 
+Którzy myśleli,
+Którzy myśleli, że się Go oszuka –
 Ani spostrzegli, a już oszukani.
-Nie raczył nawet do ich drzwi zapukać
+Nie raczył nawet do ich drzwi zapukać,
 Żeby uściskać dłonie z kajdankami.
 
 #zwrotka2
->Którzy myśleli... [a]
->Którzy myśleli... [a]
+>Którzy myśleli… [a]
+>Którzy myśleli… [a]
 >Którzy myśleli, że się Go uprosi – [E7]
 >Dziś proszą jego oficjalne cienie. [a]
 >On dla nich – Ucho, więc pokora w głosie; [A7 d]
@@ -42,20 +42,20 @@ Nie raczył nawet do ich drzwi zapukać
 >Przydrożne kamienie. [F E]
 
 @zwrotka1
-Którzy myśleli...
-Którzy myśleli...
+Którzy myśleli…
+Którzy myśleli…
 Którzy myśleli, że podobni Jemu,
 Nagle podobni są tylko do siebie.
 Twarze wszechmocnych, którzy chcieli nie móc,
 Jak zmięte ścierki użyte w potrzebie. [F e a]
 
-Którzy myśleli... [a]
-Którzy myśleli... [a]
-Którzy myśleli, że się Go pokona [E7]
+Którzy myśleli… [a]
+Którzy myśleli… [a]
+Którzy myśleli, że się Go pokona, [E7]
 Dziś zamieszkują piekła i kurhany. [a]
-Dopóki z gwiazd ich ostatnia nie skona [A7 d]
+Dopóki z gwiazd ich ostatnia nie skona, [A7 d]
 Kres Jego władzy jest gdzieś zapisany. [F e a]
 
-Którzy myśleli... [a]
-Którzy myśleli... [a]
-Którzy myśleli... [a]
+Którzy myśleli… [a]
+Którzy myśleli… [a]
+Którzy myśleli… [a]
