@@ -41,7 +41,7 @@ Namyślają się gorzko, [C]
 
 @zwrotka1
 O, nie tak było drzewiej!
-A jak było - nikt nie wie,
+A jak było – nikt nie wie,
 >Bo nie wszystkie się jawią sekrety,
 Kiedy chodzi o miłość,
 Polityczną zawiłość
@@ -51,7 +51,7 @@ Polityczną zawiłość
 Tu wieszcz Adam dni szereg
 Spędził w piekle rozterek;
 >Czy powstańcze zasilić ma jatki,
-Czy - gdy żądza się perli
+Czy – gdy żądza się perli
 W romantycznej scenerii –
 >Wybrać raczej ramiona mężatki.
 
@@ -117,9 +117,9 @@ Gdy rozterka ta sama
 >Zamiast w walce – wyżywa się w piosnkach?
 Więc sumienie najszczersze
 Dyktowało mi wiersze,
->Których temat: „Pochwała łotrostwa” [ G C ( A7) ]
+>Których temat: „Pochwała łotrostwa”. [ G C ( A7) ]
 
 #3
 Więc sumienie najszczersze [ d ]
 Dyktowało mi wiersze, [ a ]
->Których temat: „Pochwała łotrostwa” [ d E7 a ]
+>Których temat: „Pochwała łotrostwa”. [ d E7 a ]

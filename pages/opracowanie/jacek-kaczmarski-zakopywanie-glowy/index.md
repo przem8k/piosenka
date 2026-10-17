@@ -44,7 +44,7 @@ Ostrze ją bezimienne przetnie
 W radosnym wrzawy żywych requiem. [ C B0 H e ( e ) ]
 
 #5
-Tak wspominamy Średniowiecze… [ a H B a ]
+Tak wspominamy średniowiecze… [ a H B a ]
 Dzisiaj kolejny zginął Czeczen. [ F Dis0 E a ( E7 ) ]
 
 @5

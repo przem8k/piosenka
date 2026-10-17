@@ -14,11 +14,11 @@ performers:
 ---
 
 #zw
-Dziki to kraj i strach nim wędrować [e G D C]
-Mądry się boi, gdy jest czego bać się [e G D C]
-Nie ma jak życia i trzosu zachować [e G D C]
+Dziki to kraj i strach nim wędrować, [e G D C]
+Mądry się boi, gdy jest czego bać się. [e G D C]
+Nie ma jak życia i trzosu zachować, [e G D C]
 Kiedy złoczyńcy prawem są na trakcie. [e G D e]
-Dzikie ich twarze i mowa zwierzęca [a e a e]
+Dzikie ich twarze i mowa zwierzęca, [a e a e]
 Dusz śladu w ślepiach długo by tu szukać; [e G D C]
 Znęca się ten, nad kim życie się znęca, [a e a e]
 A zamęczyć człowieka – nie sztuka. [G D/Fis e (a H7)]
@@ -28,7 +28,7 @@ A zamęczyć człowieka – nie sztuka. [G D/Fis e (a H7)]
 >Głupiec czyn widzi, a mędrzec – przyczynę – [A E A H]
 >Czar to jakowyś, czar na służbie zbrodni [cis Gis cis A]
 >Ludzi odmienił, odmienił krainę. [E A H E]
->Drzemią tu dusze i oliwne gaje [cis Gis cis Gis]
+>Drzemią tu dusze i oliwne gaje, [cis Gis cis Gis]
 >Winnic nasiona i wiedza uprawy – [A H E H]
 >Lecz budząc się – człowiek człowiekiem się staje, [cis Gis cis H]
 >A obudzić go – powód do sławy. [E H E (H E)]
@@ -45,16 +45,16 @@ Ja tam dla sławy bym licha nie budził. [cis gis cis]
 @zw
 Nędzny to kraj, nie pożywi wędrowca,
 Skóra nań pęka wyschnięta ze szczętem;
-Po co nam błądzić wkoło po manowcach
-Co i przez Boga i ludzi przeklęte?
+Po co nam błądzić wkoło po manowcach,
+Co i przez Boga, i ludzi przeklęte?
 Stęka czworonóg i człowiek się męczy
-W słońcu, co niszczy a nie opromienia.
+W słońcu, co niszczy, a nie opromienia.
 Gdzie nie ma deszczu, tam nie ma i tęczy –
 Wrót nadziei w niebieskich sklepieniach.
 
 @ref
 >Bogaty to kraj, bo skarby ukrywa
->W nędznej skorupie co słabych zniechęca;
+>W nędznej skorupie, co słabych zniechęca;
 >Błądzi, kto próby błądzeniem nazywa
 >I drogowskazom swe losy poświęca.
 >Spękanej ziemi słońce wyrwie złoto,
@@ -66,7 +66,7 @@ Wrót nadziei w niebieskich sklepieniach.
 Nie zaspokoję tym światłem pragnienia.
 
 @donkichot
->Być wciąż spragnionym – to nektar istnienia
+>Być wciąż spragnionym – to nektar istnienia.
 
 @przejscie
 >

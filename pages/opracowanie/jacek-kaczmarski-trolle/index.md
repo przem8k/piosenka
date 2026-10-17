@@ -38,9 +38,9 @@ Głos się prawie dobywa z żywych głębin skały, [Ges b]
 Stopy nasze znów czują wilgoć młodej trawy, [b Es0 b]
 Zmysły znów odbierają to, co kiedyś znały! [Es0 b Ges F b]
 
-Jeszcze dzień a ruszymy, by krypt kruszyć wrota [h]
+Jeszcze dzień, a ruszymy, by krypt kruszyć wrota [h]
 I uwalniać spod ziemi Bogów Ociemniałych. [G h]
-Drugie słońce pojawi się w planet obrotach [h B0 h]
+Drugie słońce pojawi się w planet obrotach, [h B0 h]
 By ożywić zastygłych i ogrzać skostniałych. [B0 h G Fis h]
 
 Jeśli nie – zostaniemy jak pomniki mroku, [h]

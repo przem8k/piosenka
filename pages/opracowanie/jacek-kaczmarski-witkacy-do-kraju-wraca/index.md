@@ -15,19 +15,19 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/witkacy
 ---
 
 #zw
-Takie życie po śmierci, jak za życia od dziecka, [a]
-A samobójcy spokoju nie znają - wieść niesie [G C]
+Takie życie po śmierci jak za życia od dziecka, [a]
+A samobójcy spokoju nie znają – wieść niesie. [G C]
 Już pół wieku prawie zżera mnie ziemia sowiecka, [d G C]
 Chociaż żyły otworzyłem na polskim Polesiu. [d E7]
 Już pół wieku prawie zżera mnie ziemia sowiecka, [d G C]
 Chociaż żyły otworzyłem na polskim Polesiu. [d E7 a]
 
 @zw
-Każdy spotka tego diabła, którego się boi -
-Resztki po mnie kołchoźnik bronuje, jak umie,
-A świat odkrywa na nowo wciąż dramaty moje
+Każdy spotka tego diabła, którego się boi –
+Resztki po mnie kołchoźnik bronuje jak umie,
+A świat odkrywa na nowo wciąż dramaty moje,
 Śmiejąc się z nich do rozpuku, zamiast je zrozumieć.
-A świat odkrywa na nowo wciąż dramaty moje
+A świat odkrywa na nowo wciąż dramaty moje,
 Śmiejąc się z nich do rozpuku, zamiast je zrozumieć.
 
 #ref
@@ -36,7 +36,7 @@ A świat odkrywa na nowo wciąż dramaty moje
 >Ogarnia niepokój [D A]
 >Czerwone Robaki. [H7 E7]
 >Póki trupów było w bród, [A E]
->Żyło im się tu, jak z nut. [D A]
+>Żyło im się tu jak z nut, [D A]
 >Ale potem zwykły głód [D A]
 >Dał się im we znaki. [E7 a]
 
@@ -50,11 +50,21 @@ Prowadziła już w Moskwie pomyślne rozmowy.
 
 @zw
 Jeżeli mnie już czerwony czerwonemu sprzeda
-I ożyję dla hecy na narodowej tacy -
-To już nigdy więcej głosu z siebie nie dam
-By byle kto wycierał sobie gębę - Witkacym.
-To już nigdy więcej głosu z siebie nie dam
-By byle kto wycierał sobie gębę - Witkacym.
+I ożyję dla hecy na narodowej tacy –
+To już nigdy więcej głosu z siebie nie dam,
+By byle kto wycierał sobie gębę – Witkacym.
+To już nigdy więcej głosu z siebie nie dam,
+By byle kto wycierał sobie gębę – Witkacym.
+
+@ref
+>Ale w Zakopanem
+>Z góralem nad ranem
+>Zupełnie pijany
+>Wyjdę w Tatry
+>I w kiszek mych umyśle
+>Wyrażę się ściśle,
+>A myśl swoją wyślę
+>Na cztery wiatry. [ E7 A ]
 
 @ref
 >Ale w Zakopanem

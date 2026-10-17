@@ -39,7 +39,7 @@ Szukasz raju [ e ]
 Na rozstajach wypatrując śladu gór [ a ]
 Szukasz raju [ e ]
 Szukasz raju [ e ]
-Opasuje ziemię tropów twoich sznur… [ a ( e a e h e h ) ]
+Opasuje Ziemię tropów twoich sznur… [ a ( e a e h e h ) ]
 
 @1
 Sam też mogę żyć

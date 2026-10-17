@@ -25,12 +25,12 @@ Pychy się wyzbyć. [E (E4 E)]
 Grobowce Piękna – kosztowne artyzmy,
 Których wieczności wzór – Piramid stałość –
 Na dusze kładą tylko plamę białą
-Jak bandaż kłamstwa, co owija blizny
+Jak bandaż kłamstwa, co owija blizny,
 By nie bolało.
 
 #zwrotka2
->A nad Sekwaną pochylona gałąź [a a/H a/C a/D E]
->Żywa – pod blaskiem corocznej siwizny [a a/H a/C a/D E]
+>A nad Sekwaną pochylona gałąź, [a a/H a/C a/D E]
+>Żywa – pod blaskiem corocznej siwizny. [a a/H a/C a/D E]
 >Wspomina drzewo układane w pryzmy, [C G]
 >Gdy Templariuszy Król spalał wspaniałość [C d]
 >W czas wielkiej schizmy. [E (E4 E)]

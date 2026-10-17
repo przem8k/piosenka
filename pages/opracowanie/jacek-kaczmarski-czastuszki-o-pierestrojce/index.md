@@ -15,61 +15,71 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/czastus
 ---
 
 #zw
-Odrodzenie państwa w drodze [A E]
-Już nie grozi nam agonia [H E]
+Odrodzenie państwa w drodze! [A E]
+Już nie grozi nam agonia! [H E]
 Wspólnie się radują srodze [A E]
-Litwa, Łotwa i Estonia [H E]
+Litwa, Łotwa i Estonia. [H E]
 
 #ref
->Oj ra! Oj ra! Rodina Sowieckaja! [A E H E]
->Oj ra! Oj ra! Rodina Sowieckaja! [A E H E]
+>Oj ra! Oj ra! Rodina Sowietskaja! [A E H E]
+>Oj ra! Oj ra! Rodina Sowietskaja! [A E H E]
 
 @zw
-Pierestrojka szlaki mości
-Do osiągnięć i honorów
+Pieriestrojka szlaki mości
+Do osiągnięć i honorów!
 Nie posiada się z radości
-Ukraina i Białoruś
+Ukraina i Białoruś.
 
 @ref
->Oj ra! Oj ra! Rodina Sowieckaja!
->Oj ra! Oj ra! Rodina Sowieckaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!
 
 @zw
 Ekonomia rusza z posad
-I oblicze życia zmienia
+I oblicze życia zmienia!
 Z entuzjazmem w mocnych głosach
-Śpiewa Gruzja i Armenia
+Śpiewa Gruzja i Armenia.
 
 @ref
->Oj ra! Oj ra! Rodina Sowieckaja!
->Oj ra! Oj ra! Rodina Sowieckaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!
 
 @zw
 Jawność oczy nam odsłania
-I w umysłach cuda sprawia
+I w umysłach cuda sprawia!
 Już do nóg się za to kłania
-Azerbejdżan i Mołdawia
+Azerbejdżan i Mołdawia.
 
 @ref
->Oj ra! Oj ra! Rodina Sowieckaja!
->Oj ra! Oj ra! Rodina Sowieckaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!
 
 @zw
-Wspólny trud, to wspólne dzieło
-Partykularyzmom - basta
+Wspólny trud, to wspólne dzieło!
+Partykularyzmom – basta!
 Marszem więc wkraczają w przełom
-Tadżykistan i Kazachstan
+Tadżykistan i Kazachstan.
 
 @ref
->Oj ra! Oj ra! Rodina Sowieckaja!
->Oj ra! Oj ra! Rodina Sowieckaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!
 
 @zw
-Zbudujemy kraj nad kraje
-Tylko zechciej chcieć - i potraf
-Jak za cara Mikołaja
-Jak za cara Piotra
+Zbudujemy kraj nad kraje!
+Tylko zechciej chcieć – i potraf!
+Jak za cara Mikołaja!
+Jak za cara Piotra!
+
+@zw
+Zbudujemy kraj nad kraje!
+Tylko zechciej chcieć – i potraf!
+Jak za cara Mikołaja!
+Jak za cara Piotra!
 
 @ref
->Oj ra! Oj ra! Rodina Sowieckaja!
->Oj ra! Oj ra! Rodina Sowieckaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!
+
+@ref
+>Oj ra! Oj ra! Rodina Sowietskaja!
+>Oj ra! Oj ra! Rodina Sowietskaja!

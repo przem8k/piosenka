@@ -24,7 +24,7 @@ Pan się rodzi w Nazarecie! [D h G A D]
 @zwrotka1
 Niech, kto żyw, koszulę wdzieje 
 I podąża do Betlejem,
-Tam na sianku, wśród bydlątek
+Tam na sianku, wśród bydlątek,
 Życie boski ma początek.
 Życie boski ma początek.
 
@@ -44,11 +44,11 @@ Rzymskiej mocy posąg lity [d A]
 Jeszcze światłem lśni – odbitym, [d A]
 Lecz nie pojmą zimne bryły, [d g A]
 Że bezsilna – władza siły, [d g A]
-Że bezsilna – władza siły. [d B A d]
+Że bezsilna – władza siły: [d B A d]
 
 Bez legionów, twierdz i złota [D A]
 Świat odmieni Król Żywota, [D A]
-Pan oraczy i pasterzy [D A]
+Pan oraczy i pasterzy, [D A]
 Co w człowieka świętość wierzy. [D A]
 Co w człowieka świętość wierzy. [D h G A D]
 
@@ -67,7 +67,7 @@ Co w człowieka świętość wierzy. [D h G A D]
 Na bezdroża, uroczyska [d A]
 Gwiazda jak drogowskaz błyska: [d A]
 Poprowadzi w kraj nieznany [d g A]
-Trzy królewskie karawany, [d g A]
+Trzy królewskie karawany. [d g A]
 Trzy królewskie karawany. [d B A d]
 
 I w zdumione zajrzy twarze, [D A]

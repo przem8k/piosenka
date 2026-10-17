@@ -15,7 +15,7 @@ performers:
 #zwrotka
 Niejeden z nas położył łeb [a]
 Za sprawę dobrą albo złą, [F]
-By królem mógł być byle kiep [F]
+By królem mógł być byle kiep, [F]
 A ślina się mieszała z krwią. [a]
 Tyle się złachmaniło dusz [h]
 Za sens istotny – kto jest – kto, [c]
@@ -63,7 +63,7 @@ By błędem się odciskał błąd,
 By złem się odciskało – zło.
 Taki czy inny zwiśnie stryk,
 Zatańczy frajer, mędrzec, Żyd
-I nie zrozumie nigdy nikt
+I nie zrozumie nigdy nikt,
 Skąd duma w skrusze, w pysze – wstyd.
  
 @refren
