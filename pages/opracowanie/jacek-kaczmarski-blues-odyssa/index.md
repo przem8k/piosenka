@@ -15,9 +15,9 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/blues_o
 ---
 
 #1
-Jestem lump. Zgaś to światło. Jaki diabeł cię przysłał. [ C G7 ]
-Muszę oczy otworzyć, a już spałem, jak dziecko. [ G7 a ]
-Dokąd jadę – przed siebie. Nie widziałeś Odyssa? [ f C ]
+Jestem lump. Zgaś to światło. Jaki diabeł cię przysłał? [ C G7 ]
+Muszę oczy otworzyć, a już spałem jak dziecko. [ G7 a ]
+Dokąd jadę? Przed siebie. Nie widziałeś Odyssa? [ f C ]
 Jeśli chcesz, to powtórzę ci to samo po grecku. [ G7 C ( f C ) ]
 
 #2
@@ -25,7 +25,7 @@ Jeśli chcesz, to powtórzę ci to samo po grecku. [ G7 C ( f C ) ]
 
 #3
 Dziwisz się, że tak mówię? W środku nocy mnie budzisz [ C7 f ]
-Z walizami, z gitarą… Kto ty jesteś, Segovia? [ B7 Dis7+ ]
+Z walizami, z gitarą… Kto ty jesteś? Segovia? [ B7 Dis7+ ]
 Myślisz sobie – włóczęga. Jestem lump, mówią ludzie. [ gis Dis ]
 Co mnie ludzie obchodzą. Głowę mam jak na głowniach. [ F0 G7 c ]
 
@@ -36,7 +36,7 @@ W końcu jestem w podróży. Te podróże mi służą.
 Znają mnie boczne tory. Jak każdego – na tarczy.
 
 #4
-Nie patrz w bok, patrz się na mnie. Widzę, że ci nieswojo [ C G7 ]
+Nie patrz w bok, patrz się na mnie. Widzę, że ci nieswojo. [ C G7 ]
 Ale wszedłeś, to siedź tu. Nie wypada inaczej. [ G7 a ]
 Nie bój się, ja nie biję. Dzieci mnie się nie boją. [ f C ]
 Tylko matki się brzydzą. I nie dziwię się raczej… [ G7 C ]
@@ -44,7 +44,7 @@ Tylko matki się brzydzą. I nie dziwię się raczej… [ G7 C ]
 @3
 Więc chcesz zostać Segovią? Życzę miłej katorgi.
 Dziewięćdziesiąt lat z ręki nie wypuszczał gitary.
-Piszesz wiersze? A po co? Czy nie starczy nam Norwid.
+Piszesz wiersze? A po co? Czy nie starczy nam Norwid?
 Kamizelka niewąska. Chwytasz życie za bary.
 
 @3
@@ -72,4 +72,4 @@ Dajże spokój, nie trzeba. Na co mi ta waluta?
 O – niebieski Moniuszko… Dobra, oddam w Itace…
 
 @2
-Stasu doso to eos stin Itaka [ G7 C ]
+Stasu doso to eos stin Itaka. [ G7 C ]

@@ -34,37 +34,37 @@ Dymią kuźnie i warsztaty, lecz nie pracą, a – skargami,
 Że nie taka jak przed laty łaska Twoja nad hufcami:
 
 @ref
->Siły grożą Ci nieczyste.
+>– Siły grożą Ci nieczyste.
 >Daj nam wsławić się, o Chryste!
 >Kalwin, Litwin nam ubliża!
 >Dźwigniem ciężar Krzyża!
 
 @zw
-Załam ręce Matko Boska; upadają obyczaje,
+Załam ręce, Matko Boska; upadają obyczaje,
 Nie pomogła modłom chłosta – młodzież w szranki ciała staje.
 W nędzy gzi się krew gorąca, bez sumienia, bez oddechu,
 Po czym z własnych trzewi strząsa niedojrzały owoc grzechu.
 
 @ref
->– Co zbawienie nam, czy piekło!
+>– Co zbawienie nam czy piekło!
 >Byle życie nie uciekło!
 >Jeszcze będzie czas umierać!
 >Żyjmy tu i teraz!
 
 #highzw
-Grzmijcie gniewem, Wszyscy Święci – handel lud zalewa Boży, [fis A]
+Grzmijcie gniewem Wszyscy Święci – handel lud zalewa Boży, [fis A]
 Obce kupce i klienci w złote wabią go obroże. [E Cis7]
 Liczy chciwy Żyd i Niemiec dziś, po ile polska czystość; [fis A]
-Kupi dusze, kupi ziemie – i zostawi pośmiewisko… [E Cis7]
+Kupi dusze, kupi ziemie i zostawi pośmiewisko… [E Cis7]
 
 #highref
->Co nam hańba, gdy talary [fis Cis7 fis]
+>– Co nam hańba, gdy talary [fis Cis7 fis]
 >Mają lepszy kurs od wiary! [A E]
 >Wymienimy na walutę [Cis7 fis]
 >Honor i pokutę! [D fis Cis7]
 
 @highref
->Co nam hańba, gdy talary
+>– Co nam hańba, gdy talary
 >Mają lepszy kurs od wiary!
 >Wymienimy na walutę
 >Honor i pokutę!
@@ -73,7 +73,7 @@ Jeden naród, tyle kwestii! Wszystkich naraz – nie wysłuchasz! – [fis A]
 Zadumali się Niebiescy w imię Ojca, Syna, Ducha… [E Cis7]
 
 @highref
->Co nam hańba, gdy talary
+>– Co nam hańba, gdy talary
 >Mają lepszy kurs od wiary!
 >Wymienimy na walutę
 >Honor i pokutę! [D Cis7 fis h fis]

@@ -18,6 +18,8 @@ score2_full: https://storage.googleapis.com/piosenka-media/media/scores/kwestia_
 score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kwestia_odwagi_2-02.png.180x0_q85_upscale.jpg
 ---
 
+[h4 h]
+
 To wcale nie jest takie łatwe [h A D]
 Odłożyć dumną broń odmowy, [G A h]
 Buntu rozpaczy szybką szablę, [G A D]

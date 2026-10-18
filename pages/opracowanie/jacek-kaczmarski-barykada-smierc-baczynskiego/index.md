@@ -38,7 +38,7 @@ Okręt nabiera krwi. [H7 E7 a]
 @zwrotka
 Map popalonych czarne ptaki
 Krążą dokoła gniazd bocianich,
-Z których nikt nie zawoła: – Ziemia! –
+Z których nikt nie zawoła: „Ziemia!” –
 By zerwać nas ze snu.
 Inne dziś nas prowadzą znaki,
 My już dla świata – niewidzialni –

@@ -68,16 +68,16 @@ Skrzydlaty i nagi, wśród światła okruszyn,
 W igrzyska wpatruję się boże;
 Ich uczty i walki – jak trucht karaluszy,
 Ich Parnas – labirynt na korze…
-Nie widzą mnie, krążąc wokoło jak słońca
-– Mgławicą nieludzkich lic –
+Nie widzą mnie, krążąc wokoło jak słońca –
+Mgławicą nieludzkich lic –
 Aż któryś mnie żarem niechcący potrąca
 I zrzuca bezwiednie – w nic. [ C H7 e ]
 
 @2
 >Na ciemnym tle nieba wypalam ślad jasny,
->Mój ślad – już ostatni, przelotny, lecz własny
->I spadam kometą, chwilowym płomieniem
->Być może spełniając tym czyjeś marzenie [ e C e ]
+>Mój ślad – już ostatni, przelotny, lecz własny,
+>I spadam kometą, chwilowym płomieniem,
+>Być może spełniając tym czyjeś marzenie, [ e C e ]
 
 @3
 >I lecę wśród cisz –

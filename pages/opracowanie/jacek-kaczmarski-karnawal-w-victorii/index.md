@@ -18,10 +18,10 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/karnawa
 
 
 #2
-W knajpie „Victoria” [ C ( G7 ) ]
+W knajpie Victoria [ C ( G7 ) ]
 Dziś euforia: [ C ( G7 ) ]
 Gra mandolina i waltornia, [ C A7 d ]
-Na bal się pcha za falą fala [ G7 ]
+Na bal się pcha za falą fala – [ G7 ]
 Już pełna sala, [ G7 ]
 Gdzie gala trwa. [ G7 C ]
 
@@ -59,7 +59,7 @@ Pociecha fest!
 
 @2
 A Tadzio „Piorun”
-– Człowiek honoru –
+(Człowiek honoru)
 Trzyma się z dala od kiziorów;
 Tadzio myślówę ma jak brzytew
 I w świecie przy tem
@@ -76,8 +76,8 @@ W napadzie grać?
 @2
 Kudłaty Józek
 Git ciągnie wózek:
-W niejeden zakręt trafił z luzem,
-Jak zagra z Lechem w lewe karty
+W niejeden zakręt trafił z luzem;
+Jak zagra z Lechem w lewe karty,
 To na bok żarty –
 Uparta brać!
 
@@ -85,14 +85,14 @@ Uparta brać!
 Ten już przypruty,
 Tamten opluty,
 Temu się przepalają druty –
-Ów pyta damę głosem grząskim
-„Czy masz podwiązki?”
-– Niewąski bal!
+Ów pyta damę głosem grząskim:
+– Czy masz podwiązki? –
+Niewąski bal!
 
 @2
 A Miecio „Żużel”
 Pieczenie w rurze
-Gasi, jak strażak na dyżurze –
+Gasi jak strażak na dyżurze –
 Niewdzięczna jego rola krecia:
 Kto wkurzył Miecia –
 Odleciał w dal.
@@ -106,9 +106,9 @@ I przyszłość jasna –
 Stać nas na gest! [ G7 C ( A7 ) ]
 
 #3
-W knajpie „Victoria” [ D ( A7 ) ]
+W knajpie Victoria [ D ( A7 ) ]
 Trwa euforia – [ D ( A7 ) ]
 Oto wykuwa się historia! [ D H7 e ]
 Każdy w niej robi za figurę –  [ A7 ]
-Kto zna kulturę [ A7 ]
+Kto zna kulturę, [ A7 ]
 Ten górą jest! [ A7 D ( G D ) ]

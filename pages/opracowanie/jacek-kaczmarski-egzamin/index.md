@@ -17,46 +17,46 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Egzamin
 
 #zwrotka1
 Czterdzieści lat z nas robicie [D0 a]
-Zdrajców na srebro pazernych [D0 a]
-A teraz – jawnie i skrycie [D0 a]
-Mówicie nam – bądźcie wierni! [D0 a E7]
+Zdrajców na srebro pazernych, [D0 a]
+A teraz – jawnie i skrycie – [D0 a]
+Mówicie nam: „Bądźcie wierni!”. [D0 a E7]
 
 @zwrotka1
 Czterdzieści lat wszelkie prawa
-Dłoń prawodawcy dławi
-A gdy zdrętwiała w brawach
-Mówicie nam – bądźcie prawi!
+Dłoń prawodawcy dławi,
+A gdy zdrętwiała w brawach,
+Mówicie nam: „Bądźcie prawi!”.
 
 #zwrotka2
 >Czterdzieści lat nasze siły [E7]
->Trawi wasz sąd nieomylny [a]
->A teraz – gigantom byłym [E7]
->Mówicie nam – bądźcie silni! [a E7 a]
+>Trawi wasz sąd nieomylny, [a]
+>A teraz – gigantom byłym – [E7]
+>Mówicie nam: „Bądźcie silni!”. [a E7 a]
 
 @zwrotka1
-Czterdzieści lat nas uczono
-Kiep ten co w prawdę wierzy
+Czterdzieści lat nas uczono:
+Kiep ten, co w prawdę wierzy;
 A teraz głosem Katona
-Mówicie nam – bądźcie szczerzy!
+Mówicie nam: „Bądźcie szczerzy!”.
 
 @zwrotka1
 Czterdziestu lat rytm wydzwania
-Zegar porywów i kaźni
+Zegar porywów i kaźni;
 Wy nam bez chwili wahania
-Mówicie – bądźcie rozważni!
+Mówicie: „Bądźcie rozważni!”.
 
 @zwrotka2
->Niejeden z nas ziemię gryzie
->Inni choć młodzi – już siwi
->A wy szykując nam krzyże
->Mówicie – bądźcie cierpliwi!
+>Niejeden z nas ziemię gryzie,
+>Inni – choć młodzi – już siwi,
+>A wy, stawiając nam krzyże,
+>Mówicie: „Bądźcie cierpliwi!”.
 
-A my – uczniowie leniwi [E7]
-By was wysłuchać – niepilni [a]
-Jednak jesteśmy cierpliwi [E7]
-Wierni rozważni i silni [a]
-I choć nikt z was w to nie wierzy [a D0]
-Jesteśmy prawi i szczerzy [a D0]
+A my – uczniowie leniwi – [E7]
+By was wysłuchać – niepilni, [a]
+Jednak jesteśmy cierpliwi, [E7]
+Wierni, rozważni i silni. [a]
+I choć nikt z was w to nie wierzy, [a D0]
+Jesteśmy prawi i szczerzy, [a D0]
 Lecz z cnót tych już nie przed wami [E7 a]
 Będziemy zdawać egzamin! [E7 a]
 Lecz z cnót tych już nie przed wami [E7 a]
