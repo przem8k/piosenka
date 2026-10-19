@@ -13,7 +13,7 @@ performers:
 ---
 
 #zw
-Nie kuś mnie jabłkiem żeberko ty moje – [C a C a]
+Nie kuś mnie jabłkiem, żeberko Ty moje – [C a C a]
 Nie zakazano nam przecież kielicha, [C a C G]
 Który otwiera ukryte podwoje [d C G]
 Raju, gdzie zaraz szybciej się oddycha. [a G F e a]
@@ -37,9 +37,9 @@ Z wielkiej na Twoją niewinność ochoty.
 [d C G a G F G a]
 
 @zw
-Więc nie kuś jabłkiem moje ty żeberko,
+Więc nie kuś jabłkiem, moje Ty żeberko,
 Bo kielich woli Twój spragniony piechur.
-Kochaj go, kiedy łyka chłód i cierpkość
+Kochaj go, kiedy łyka chłód i cierpkość,
 Za jego grzechy i – pomimo grzechów.
 
 [d C G]

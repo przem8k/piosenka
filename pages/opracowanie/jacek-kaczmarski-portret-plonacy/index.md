@@ -22,7 +22,7 @@ Gdy przybojem grzmi ocean, [H7 e C a H]
 Jakbyś nie powstała jeszcze, [e B0]
 A już prawie przeminęła. [H7 e C a H]
 
-Kształt twój, niemal nieuchwytny [B0 H7]
+Kształt twój, niemal nieuchwytny, [B0 H7]
 Żarzy się obrysem mroku; [Fis0 B0 H7]
 Stoisz niema, jak wykrzyknik, [e C]
 Który uwiązł w gardle grzmotu. [a C H7 e]

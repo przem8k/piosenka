@@ -45,10 +45,10 @@ Lękliwe groźby, naiwne przechwałki. [D H H7]
 Krew, któż wie czyja, przyschnięta do dłoni, [e Fis7/E a6/E e]
 Nogi ucieczce skłonne i pogoni. [e Fis7/E a6/E H7]
 
-Dusze, jak zbite psy na wątłej smyczy, [e E a/E F]
+Dusze jak zbite psy na wątłej smyczy, [e E a/E F]
 Wywar wściekłości, krzywdy i goryczy. [e Fis7/E a6/E H7 e]
 
-Ale wraz z brzaskiem dalej szliśmy razem, [H E H]
+Ale wraz z brzaskiem dalej szliśmy razem [H E H]
 Niewysłowionym budzeni nakazem. [H E H]
 
 Silniejsi nawet słabszych podpierali, [D G D]

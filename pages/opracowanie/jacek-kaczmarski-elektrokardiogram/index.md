@@ -17,10 +17,10 @@ Nauczono nas rozsądku, lekcja trwała parę lat. [a]
 Już nam nikt za życia nie obieca raju! [a E]
 Znów jesteśmy na początku, a w majątku – kilka dat [E]
 Tworzy dzieje nieistniejącego kraju. [E a]
-Tylko ludzie – mali ludzie – którzy też chcą przecież żyć [a]
+Tylko ludzie – mali ludzie – którzy też chcą przecież żyć, [a]
 W sny spychają niepraktyczne swe fantazje. [A7 d]
 Nić owija nasze serca, które – żeby jeszcze bić – [d a]
-Historyczną znowu muszą mieć okazję! [F E a]
+Historyczną muszą znowu mieć okazję! [F E a]
 
 >Ale za to w głowach ład trafną miarą mierzy świat, [d a d a]
 >Wie, co stracił, a co ma, z czego stworzyć coś się da [d]
@@ -36,13 +36,13 @@ Aż zakipi w nas gar wrzątku i naukę trafia szlag.
 Skąd ten żar, którego nie da się wystudzić?
 Znów jesteśmy na początku, a w majątku – kilka dat
 Tworzy dziejów przyszłych kształt – tych samych ludzi!
-Właśnie ludzie – wielcy ludzie – którzy też chcą przecież żyć
+Właśnie ludzie – wielcy ludzie – którzy też chcą przecież żyć,
 W życie zamieniają senne majaczenia –
 Serca same z siebie biją, pęka niewidzialna nić,
 Zwłaszcza że nie mają nic już do stracenia!
 
 >Ale za to w głowach szum, głów nieprzeliczony tłum [d a d a]
->Wie, że to z zegarem gra, więc zdobywa co się da [d]
+>Wie, że to z zegarem gra, więc zdobywa, co się da [d]
 >Tymczasem – [E]
 >Z euforią i bez tchu, sny bez snów – więc też bez snu, [d C d a]
 >Ze szczęśliwym błyskiem łzy, a gdy trzeba, nawet z krwi [d]

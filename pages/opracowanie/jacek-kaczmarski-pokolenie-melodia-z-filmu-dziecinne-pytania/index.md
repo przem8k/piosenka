@@ -27,7 +27,7 @@ I nie zagramy przedstawienia.
 
 #2
 Grę swoją wygra każdy z nas [ a e a ]
-I sam odbędzie tryumf za trzech... [ a e F ]
+I sam odbędzie tryumf za trzech… [ a e F ]
 A jaki będzie po nas płacz, [ a G6 ]
 A jaki będzie po nas śmiech, [ a G6 ]
 Jaka zostanie po nas świętość, [ a G6 ]

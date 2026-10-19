@@ -27,7 +27,7 @@ Nikt nie wywoła nas stąd [a d (C)]
 #refren
 >Gdzie łajdak pokaja się szczerze [F C d]
 >Gdzie złodziej odda swój łup [g F C]
->Gdzie ktoś zanim powie: „nie wierzę” [F A B g]
+>Gdzie ktoś, zanim powie: „nie wierzę” [F A B g]
 >Świętemu upadnie do stóp [F C d (C)]
 
 @refren
@@ -41,7 +41,7 @@ Otuleni w swoją obecność
 Czując w ustach wspomnienia smak
 Nie dbajmy o świadomą konieczność
 Co w twarze sypie nam mak
-Noc jest jedna a świt jest po nocy
+Noc jest jedna, a świt jest po nocy
 Pod zamkniętą powieką trwa blask
 I nikomu nie zabraknie pomocy
 Dopóki nie zabraknie mu nas
@@ -58,7 +58,7 @@ Dopóki nie zabraknie mu nas
 >Gdzie dziecko bezpiecznie zrodzone
 >Siądzie obok jagnięcia i lwa [F C d]
 
-Ktoś powie to senne marzenie [d]
+Ktoś powie: „to senne marzenie” [d]
 Nie ma nic prawdziwszego od snu [g6]
 Więc w obecność swą otuleni [d]
 Wspólnie wyśnijmy go tu [a d]
