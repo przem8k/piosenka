@@ -22,7 +22,7 @@ W dodatku w ramach tego samego systemu! [ E7 a ]
 
 #2
 Jak już pewnie wiesz – nie ma tu co pić. [ a ]
-Wyobrażasz sobie jak nas wszystkich trzęsie – [ A7 d ]
+Wyobrażasz sobie, jak nas wszystkich trzęsie? [ A7 d ]
 Bez znieczulenia – jak tu można żyć? – [ d a ]
 Woła każdy zmysł, każdy nerw i mięsień. [ E7 a ]
 Bez znieczulenia – jak tu można żyć? – [ d a ]

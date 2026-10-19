@@ -26,7 +26,7 @@ Farsa łotrzykowska. [ G7 C ]
 >Żółci nie wyparska. [ G7 c ]
 
 @1
-Ten tego opuszcza.
+Ten tego opuszcza,
 Ów breszy trzy po trzy,
 Szczuje i poduszcza
 Na łotrzyka łotrzyk.
@@ -52,13 +52,13 @@ Blady za uszami.
 @1
 Ballady niewarta
 Dintojra łotrowska;
-Do cnaś już wytarta
+Do cnaś już wytarta,
 Komedio Nieboska!
 
 @2
 >Nieboska Komedio,
 >Wytartaś już do cna.
->Bredź, brednio za brednią,
+>Bredź, brednio, za brednią,
 >Niemocy wszechmocna!
 
 @1

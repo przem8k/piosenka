@@ -29,12 +29,12 @@ Gasną subtelne odcienie milczenia
 Grzmot fajerwerków tłumi światła strunę
 
 @zw1
-Odpływasz w płaski wizerunek rycin,
-Który umiałeś być Panem Cogito,
+Odpływasz w płaski wizerunek rycin
+Który umiałeś być Panem Cogito
 Miastem, pamięcią i śladem na śniegu
 
 @zw1
-Więc jakiż z Ciebie partner dla nas — żywych
+Więc jakiż z Ciebie partner dla nas – żywych
 Niezakończonych, więc jeszcze wszechmocnych
 Nienasyconych piołunem zdobyczy?
 
@@ -46,7 +46,7 @@ Każdy dla siebie, każdy podług siebie [ C G0 H7 e (H7/Fis)]
 #zw3
 Tak się zbroimy Twoim arsenałem [C G0]
 Przeciwko sobie i przeciwko Tobie [a e]
-Bo tylu nas przecież jest — a spadek jeden [C a H7 e   (H7 e H7)]
+Bo tylu nas przecież jest – a spadek jeden [C a H7 e   (H7 e H7)]
 
 @zw1
 Zsiwiałe drzewo z korą krwi Marsjasza
@@ -59,9 +59,9 @@ Ale potrafi współczuć i rozumieć
 Przyjmie służbę w sztabach prokonsulów
 
 #zw4
-Co ulepione — będzie potrzaskane [e H7/Fis H7]
-Co ukochane — spłynie w zapomnienie [e H7/Fis H7]
-Co da się pożreć — zostanie pożarte [e E0 H7 e (H7/Fis)]
+Co ulepione – będzie potrzaskane [e H7/Fis H7]
+Co ukochane – spłynie w zapomnienie [e H7/Fis H7]
+Co da się pożreć – zostanie pożarte [e E0 H7 e (H7/Fis)]
 
 #zw5
 Tylko żurawia krzyk trwogi nad ranem [e e/G a H7]

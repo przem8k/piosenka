@@ -16,7 +16,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/marsz_i
 ---
 
 #zwrotka
-Jestem postacią na wskroś tragiczną [e]
+Jestem postacią na wskroś tragiczną – [e]
 Najtrudniejszegom dokonał wyboru: [e]
 Między obozem dla nieprawomyślnych [e]
 A honorami i łaską dworu. [e]
@@ -28,8 +28,8 @@ I nosić mundur, ale po trochu
 Co tylko można – trzeba ocalić!
 
 @zwrotka
-Inni odeszli. Łatwa decyzja
-Zwłaszcza, że nikt ich o nią nie pytał,
+Inni odeszli. Łatwa decyzja,
+Zwłaszcza że nikt ich o nią nie pytał,
 Lecz trudno – tego wymaga Ojczyzna,
 Rzecz niepodzielna i jednolita.
 
@@ -41,7 +41,7 @@ I zadepczemy groby, gdy każą!
 
 @zwrotka
 Niech nikt mi kartą praw nie wywija,
-Gdy chcę mam prawo piętnować Żyda!
+Gdy chcę, mam prawo piętnować Żyda!
 Żołnierz jest po to, żeby zabijać,
 Nawet gdy rozkaz sam sobie wyda.
 
@@ -66,5 +66,5 @@ I syna twarz w plutonie, co strzela!
 @zwrotka
 A kiedy wszystko do ładu wróci –
 W szafach należne miejsce mundurom,
-Snów filozofów młodzież się uczy
+Snów filozofów młodzież się uczy,
 A ręka zmienia pałkę na pióro…

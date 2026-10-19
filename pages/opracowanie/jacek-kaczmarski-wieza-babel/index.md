@@ -49,7 +49,7 @@ Dorównać nam przez chwilę [ A G A ( A G ) ]
 @3
 >Odbiorę bratu brata język
 >I koniec zgody. Tłumiąc głos
->Będę się zdradzać, śledzić, kumać
+>Będą się zdradzać, śledzić, kumać
 >Na mnie polegać, we mnie wierzyć
 >Wszak to ich los i duma
 

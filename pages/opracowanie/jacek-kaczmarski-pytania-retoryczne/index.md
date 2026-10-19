@@ -28,7 +28,7 @@ Cóż pozostaje? [ f b C7 f ( b C7 ) ]
 Tak wierzymy w miłość, kiedy się pojawi,
 Życie snem nasyci i przed jawą zbawi,
 A trwaniu ruch nada wzniosłym niepokojem.
-Jednak kochać – znaczy połączyć się z lustrem
+Jednak kochać – znaczy połączyć się z lustrem,
 Które przecież zniknie i zostawi pustkę,
 Jakiej nie wypełni żadna noc we dwoje.
 Choć – jeśli miłości już wierzyć nie umiem –

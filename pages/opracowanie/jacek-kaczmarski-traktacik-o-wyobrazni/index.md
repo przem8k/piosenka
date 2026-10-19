@@ -37,7 +37,7 @@ Wiedza, co dzieje się dokoła,
 Czemu Bóg milczy, Otchłań woła.
 
 @3
->Ci, kiedy im się zadrżeć zdarzy
+>Ci, kiedy im się zadrżeć zdarzy,
 >Liczą na księży lub lekarzy.
 >Żyją szczęśliwi, niepoważni –
 >Zbawienny uwiąd wyobraźni.
@@ -49,7 +49,7 @@ Zaklęciom, czarom i loteriom,
 Z obrzędem i śmiertelnie serio.
 
 @3
->Nic to, że co dzień się kaleczą
+>Nic to, że co dzień się kaleczą,
 >Bo ich nadzieje sobie przeczą:
 >Największa bzdura ich nie drażni –
 >Zbawienny uwiąd wyobraźni.
@@ -57,7 +57,7 @@ Z obrzędem i śmiertelnie serio.
 @2
 A jeszcze inni – pojęć gracze –
 Bawią się odwracaniem znaczeń
-I, niezliczone czerniąc strony,
+I niezliczone czerniąc strony,
 Stawiają domki z kart znaczonych.
 
 @3
@@ -73,7 +73,7 @@ Gdzie z ruin, fresków i witraży
 Sylabizują – co się zdarzy.
 
 @3
->Wiedzą, czego nie wiedzą, durnie
+>Wiedzą, czego nie wiedzą, durnie,
 >Więc cierpią dumnie, żyją chmurnie,
 >Płoną na mrozie, marzną w łaźni –
 >Wolni więźniowie wyobraźni. [ g A7 ( A g B A d B0 A d B0 A ) ]

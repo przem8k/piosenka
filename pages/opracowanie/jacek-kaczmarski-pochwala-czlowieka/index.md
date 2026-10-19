@@ -22,7 +22,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pochwal
 Z krzyżowych wypraw przywożą herezje [ d A7 d ( B0 ) ]
 Z zamorskich rejsów – szkorbut i syfilis [ d C F ]
 Na ból istnienia wdychają poezję [ C0 g ]
-Kiedy przerasta ich to co odkryli [ d A7 ]
+Kiedy przerasta ich to, co odkryli [ d A7 ]
 
 @2
 Budują miasta na pobojowiskach
@@ -39,7 +39,7 @@ I byle rafa okręty roztrzaska
 @2
 Strażnika ognia uwiedzie Pandora
 I świętokradztwo pomszczą faraoni
-Rozpaczą dzisiaj co nadzieją wczoraj
+Rozpaczą dzisiaj, co nadzieją wczoraj
 Nie jest wymysłem klątwa, co skarb chroni
 
 @2
@@ -48,7 +48,6 @@ A z główki maku truciznę wycisną
 Z czaszek pradziadów amulet na szyi
 A w głowach – tajfun bezsennych umysłów
 
-@3
 >Gloria… [ d B0 ]
 >Gloria… [ A d ]
 >Gloria… [ d B0 ]
@@ -60,7 +59,11 @@ Zniszczą – odtworzą, zbudują – połamią
 Gdy skrzydła światła przypną już do ramion –
 Poniosą w kosmos genialne bestialstwo
 
-@3
+>Gloria… [ d B0 ]
+>Gloria… [ A d ]
+>Gloria… [ d B0 ]
+>Gloria… [ A d ]
+
 >Gloria… [ d B0 ]
 >Gloria… [ A d ]
 >Gloria… [ d B0 ]
