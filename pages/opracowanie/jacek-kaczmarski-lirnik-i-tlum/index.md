@@ -47,7 +47,7 @@ Nic nie wiedzą ludzie, więc pytają Dziada:
 
 @zwrotka1
 Skończył ślepy lirnik, co zostało – wypił,
-Poszedł w swoją drogę przez popiół i śnieg
+Poszedł w swoją drogę przez popiół i śnieg.
 I pytają ludzie: – Wróż to czy polityk?
 Wariat czy poeta? Czy to wieszcz, czy szpieg?
 

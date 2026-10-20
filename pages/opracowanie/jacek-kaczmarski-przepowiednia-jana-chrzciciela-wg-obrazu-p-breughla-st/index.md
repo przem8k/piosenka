@@ -20,7 +20,7 @@ Na wzgórzu stary las nad miastem, [C A7]
 Nad uchodzącą w niebo rzeką, [d Es0]
 W półmroku barwną skrył hałastrę. [E7]
 Pątnik z kosturem, grabarz, rebe, [a]
-Modniś przy mieczu, mnich-spowiednik – [C]
+Modniś przy mieczu, mnich – spowiednik – [C]
 Tłoczą się jak najbliżej siebie, [d]
 Żeby wysłuchać przepowiedni. [E7]
 
@@ -41,8 +41,8 @@ Ten satysfakcję czuje mściwą,
 Ów już nad biegiem świata płacze.
 
 @ref1
->Świecą twarze, jak liście,
->Spadające pomału
+>Świecą twarze, jak liście
+>Spadające pomału,
 >I błyskają świetliście,
 >Nim zbutwieją na całun.
 

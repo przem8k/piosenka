@@ -50,7 +50,7 @@ Zapuszczają głęboko pod ziemię.
 @a1
 Katabas kirchę wznosi
 Nie dla nas, a dla Pana.
-Więc jakby sam się prosił
+Więc jakby sam się prosił,
 By z glana kapelana.
 
 @a2
@@ -60,7 +60,7 @@ Błogosławieni ślepi
 I ci, co widzą w mroku.
 
 @a3
-Nawet drzewa rosną w ciemnościach
+Nawet drzewa rosną w ciemnościach,
 W dupie mają – na czyich kościach.
 
 @a1
@@ -76,5 +76,5 @@ Błogosławieni sztywni
 I ci, co żyją z czadem.
 
 @a3
-Nawet drzewa próchnieją przedwcześnie
+Nawet drzewa próchnieją przedwcześnie,
 A przecież istnieją – bezgrzesznie.

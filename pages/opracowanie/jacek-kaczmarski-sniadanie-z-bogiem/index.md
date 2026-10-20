@@ -24,39 +24,39 @@ Siłą perswazji i zachęty. [ g A d ]
 
 #2
 Mój Bóg nie stworzył świata w tydzień. [ A d ]
-Robota mu niesporo idzie, [ g F ]
+Robota Mu niesporo idzie, [ g F ]
 Ciągle się myli i przeklina; [ Cis0 H0 A ]
 Grzebiąc w szczegółach – gubi wątek, [ g B d ]
-Nie wie gdzie koniec, gdzie początek [ g B d ]
+Nie wie, gdzie koniec, gdzie początek, [ g B d ]
 I sarka, że to moja wina. [ g B A7 d ]
 
 #3
->Wciąż mu nie dość [ g ]
+>Wciąż Mu nie dość [ g ]
 >Zmylonych dróg – [ Cis0 d ]
 >Uparty gość [ F0 ]
 >Mój Bóg. [ A d ]
 
 @3
->Wciąż mu nie dość
+>Wciąż Mu nie dość
 >Zmylonych dróg –
 >Uparty gość
 >Mój Bóg.
 
 @1
 Częściej bezradny niż zaradny,
-Okazji nie przepuści żadnej
+Okazji nie przepuści żadnej,
 By w ból się wtrącić czyjejś duszy.
 Z rozsądkiem zawsze ma na pieńku,
 Lecz nie potrafi machnąć ręką,
 Nie umie ramionami wzruszyć.
 
 @2
-Gdziekolwiek w świecie coś się święci
+Gdziekolwiek w świecie coś się święci,
 Tam, jak cierń w pięcie, On się wkręci –
 Nieustający ostry dyżur.
 Oddaje wieczność dla tej chwili,
 Gdy nad kimś czule się pochyli,
-Chociaż go zdrowo łupie w krzyżu.
+Chociaż Go zdrowo łupie w krzyżu.
 
 @3
 >Na do drzwi stuk
@@ -74,7 +74,7 @@ Chociaż go zdrowo łupie w krzyżu.
 Ma żal do swych niebiańskich Braci,
 Że słono każą sobie płacić
 Za swą do łask i kar gotowość,
-Ale podziwia także dość ich
+Ale podziwia także dość Ich
 Za wszechmoc, za brak wątpliwości
 I za nieludzką pomysłowość. [ g d ]
 
@@ -88,19 +88,19 @@ Więc byle bydlę Go wykiwa.
 
 @3
 >A każdy dług
->Zwala go z nóg –
+>Zwala Go z nóg –
 >Swój własny wróg
 >Mój Bóg.
 
 @3
 >A każdy dług
->Zwala go z nóg –
+>Zwala Go z nóg –
 >Swój własny wróg
 >Mój Bóg.
 
 @1
 Nie dziw, że czasem już nie zdzierży!
-Pić zacznie, jakby żył w oberży
+Pić zacznie, jakby żył w oberży,
 I w cielesnościach się zatraca…
 Szukam Go wtedy po melinach
 I sam podsuwam rano klina,
@@ -108,11 +108,11 @@ Bo On szaleje – ja mam kaca. [ g d ]
 
 @2
 Więc kiwa głową przy śniadaniu
-Cichy jak wstyd, jak myślnik w zdaniu
+Cichy jak wstyd, jak myślnik w zdaniu,
 Co prawd najprostszych nie uniesie –
 Że się za oknem czai ciemność, [ B g d ]
 Że musi umrzeć razem ze mną, [ B g d ]
-A mimo to tak żyć mu chce się! [B g A7 d]
+A mimo to tak żyć Mu chce się! [B g A7 d]
 
 @3
 >Nie leje łez
