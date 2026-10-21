@@ -16,9 +16,9 @@ performers:
 
 #zw
 Ja, z pojedynczej celi, wzrok [fis]
-Na gwiazdy nocą kładę [h fis]
-Z boku przewracam się na bok [E fis]
-Znak nie nadchodzi żaden [A fis]
+Na gwiazdy nocą kładę, [h fis]
+Z boku przewracam się na bok, [E fis]
+Znak nie nadchodzi żaden. [A fis]
 
 @zw
 Wtem Mleczna Droga w Rzekę Krwi
@@ -28,26 +28,26 @@ I oto z Koziorożcem Byk
 
 #ref1
 >Wodnika Rak pełznący dnem [G]
->Za krtań się schwycić stara [G fis]
+>Za krtań się schwycić stara, [G fis]
 >A środkiem nurtu z zimnym łbem [G]
->Zarżnięty płynie Baran [G Cis7]
+>Zarżnięty płynie Baran. [G Cis7]
 
 #ref2
 >Zgwałconej Panny cichy szloch [G]
->O sprawiedliwość błaga [G fis]
->Lecz ta się w gwiezdny sypie proch [e]
->Bo Strzelec rządzi Wagą [e Fis]
+>O sprawiedliwość błaga, [G fis]
+>Lecz ta się w gwiezdny sypie proch, [e]
+>Bo Strzelec rządzi Wagą. [e Fis]
 
 @zw
-Pożera zdechłe Ryby Lew
+Pożera zdechłe Ryby Lew,
 A Skorpion Lwa zabija,
 Bliźniaczą brat przelewa krew,
 A wina – jest niczyja.
 
 @zw
 W przestrzeniach tylko chorał sfer
-Zodiakom innym śpiewa,
-Hiena węszy świeży żer,
+Zodiakom innym śpiewa
+I Hiena węszy świeży żer,
 A Małpa się zaśmiewa.
 
 @ref1
@@ -59,10 +59,10 @@ A Małpa się zaśmiewa.
 @ref2
 >My sobie dani – a nasz czas
 >Odmierza krok klawisza;
->Już przesłuchali kogoś z nas
->Za ścianą, w niebie – cisza
+>Już przesłuchali kogoś z nas:
+>Za ścianą, w niebie – cisza.
 
->Już przesłuchali kogoś z nas [e]
->Za ścianą, w niebie – cisza... [e Fis]
+>Już przesłuchali kogoś z nas: [e]
+>Za ścianą, w niebie – cisza. [e Fis]
 
 [fis h fis]

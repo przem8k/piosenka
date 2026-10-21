@@ -17,11 +17,13 @@ Czytam listy z Polski w parszywych kopertach [a]
 Pouszlachetnianych znaczkami z El Grekiem. [H0]
 Zanim je rozerwę – w tajny szyfr się wwiercam, [E]
 Niezauważony przez cło i bezpiekę: [a]
-Ten brudnozielony, albo bladożółty [A7]
+Ten brudnozielony albo bladożółty [A7]
 Stos niby-papieru, a w nim słów oferta [d]
 Przygnieciona wizją poszczególnych piekieł, [G7]
 Więcej mi mówi niż bibuł pełne półki, [C]
 Niż filatelistów łakome bibułki, [E]
+Bo to jest – polskością napęczniała – ścierka. [a F a (F)]
+Bo to jest – polskością napęczniała – ścierka. [a F a (F)]
 Bo to jest – polskością napęczniała – ścierka. [a F a]
 
 @zwrotka
@@ -35,6 +37,8 @@ Spółdzielnia Inwalidów, co wyrabia wkłady,
 Oświadcza, że planu wyrobić się nie da
 I lepsza śmierć chroma niż kaleka sprzedaż,
 Bo krew, jak tusz w piórze, zawsze ścieka na dół.
+Bo krew, jak tusz w piórze, zawsze ścieka na dół.
+Bo krew, jak tusz w piórze, zawsze ścieka na dół.
 
 @zwrotka
 Na dole jest – piszą – nas sześćdziesiąt procent,
@@ -45,7 +49,9 @@ Lecz kto sobie głowę posypie popiołem
 Za nakazem szczerych własnej duszy ocen?
 Kto, octem karmiony, dokona wyboru
 Między wątłym wieszczem a silnym matołem,
-Który chce jedynie, aby bić mu czołem
+Który chce jedynie, aby bić mu czołem,
+Ubijając przy tym ukryte w nim moce?
+Ubijając przy tym ukryte w nim moce?
 Ubijając przy tym ukryte w nim moce?
 
 @zwrotka
@@ -59,6 +65,8 @@ Więc jest myśl o bycie tych, którzy wytrwali,
 Pracując w niewoli od zmierzchu do świtu,
 W ustach tytoniowy mając smak przesytu,
 Po którym nic nie ma – jak to zwykle w raju.
+Po którym nic nie ma – jak to zwykle w raju.
+Po którym nic nie ma – jak to zwykle w raju.
 
 @zwrotka
 Stary aktor mówi, że żyje w teatrze,
@@ -71,17 +79,21 @@ Bo jest dzięki temu w przyszłości czas przeszły! –
 Ale mało kogo dzisiaj to obchodzi,
 Skoro teraźniejszość bezlitośnie zwodzi,
 A przyszłość, jeżeli da już znać o sobie – to kracze.
+A przyszłość, jeżeli da już znać o sobie – to kracze.
+A przyszłość, jeżeli da już znać o sobie – to kracze.
 
 @zwrotka
 Wybitny reżyser, kiedy go zapytać
 O filmu znaczenie w ojczyźnie poetów,
 Powie, że w pytaniu jest naiwność syta
-Ślepych kinomanów, lub pustych estetów.
+Ślepych kinomanów lub pustych estetów.
 Świat jeszcze się głębią moralną zachwyci,
 Bo zwykł się zachwycać tym, co trochę zgrzyta,
-Pochlebiony faktem, że coś zgrzyta – nie tu
+Pochlebiony faktem, że coś zgrzyta – nie tu;
 Ale ci, o których film mówić chce życiu,
 Nie pragną potwierdzeń, że gniją w powiciu –
+Im przynajmniej ekran bajką ma zakwitać.
+Im przynajmniej ekran bajką ma zakwitać.
 Im przynajmniej ekran bajką ma zakwitać.
 
 @zwrotka
@@ -95,10 +107,12 @@ Co śledzi, czy pisze dobrze – czyli ładnie.
 Ci znów, co się z prawdą jakoś uporają,
 Gotowi są opluć – i też rację mają,
 Że po co im twórczość, co wróży nieszczęście!
+Że po co im twórczość, co wróży nieszczęście!
+Że po co im twórczość, co wróży nieszczęście!
 
 @zwrotka
 Pisze rolnik z Bieszczad, gdzie kiedyś śpiewałem
-W świetlicy przy piecu pieśń o Kasandrze,
+W świetlicy przy piecu pieśni o Kasandrze,
 Że się moje słowa dawno stały ciałem
 I sił już nie starcza, żeby z losem zadrzeć.
 Bo ziemia nie rodzi przecież dla rodzenia,
@@ -106,6 +120,8 @@ Co ma rosnąć – rośnie wszak na Bożą chwałę,
 A tu nie ma po co już sięgać w zanadrze:
 Puste spichrze, chwast się polami rozplenia
 I nie brzmią szczerością słowa dziękczynienia,
+Bo „choć nic nie wziąłem, to nic też nie dałem”.
+Bo „choć nic nie wziąłem, to nic też nie dałem”.
 Bo „choć nic nie wziąłem, to nic też nie dałem”.
 
 @zwrotka
@@ -119,32 +135,43 @@ Nocnej zmiany próżno czekającej świtu.
 Drażni ich marzyciel, nie przekona praktyk
 I prezydent Stanów nic im nie załatwi,
 Więc klną, by przynajmniej mieć co w liście wysłać.
+Więc klną, by przynajmniej mieć co w liście wysłać.
+Więc klną, by przynajmniej mieć co w liście wysłać.
 
 @zwrotka
-Już „Człowiek z marmuru”, „Kordian” ani „Dziady”
+Już Człowiek z marmuru, Kordian ani Dziady
 Nie wskażą nikomu drogi w labiryntach.
-Echu się odbija „Marsz Pierwszej Brygady”,
-„Kompleks polski” przekąską do przechyłu z gwinta.
+Echu się odbija Marsz Pierwszej Brygady,
+Kompleks polski przekąską do przechyłu z gwinta.
 Jakby zakaz nawozem był życia i sztuki
 (Tej łatwej teorii są liczne przykłady):
 Carom zawdzięczamy narodowe święta,
 Komunistom – wiedzę o nich samych, póki
 Sołżenicyn, patrząc w Vermoncie na buki,
 Udziela za darmo wolnemu światu rady.
+Udziela za darmo wolnemu światu rady.
+Udziela za darmo wolnemu światu rady.
 
-@zwrotka
-Wreszcie o komunizm zawadziła ręka:
-Skąd dzisiaj zawistne stresy komunistów?
-Mając siłę – czego mieliby się lękać?
-Paru grubych żartów? Bezsilnych wymysłów?
-Zapomina często specjalistów rzesza,
-Że ideologią walki – ich piosenka,
-Muszą więc mieć wroga, dla myśli i zmysłów:
-– Jednak coś znaczymy – zdają się pocieszać –
-Jeżeli w tym kraju chcą nas jeszcze wieszać! –
-I taka jest zwykle listów z Polski pointa.
+#zwrotka2
+Wreszcie o komunizm zawadziła ręka: [a]
+Skąd dzisiaj zawistne stresy komunistów? [H0]
+Mając siłę – czego mieliby się lękać? [E]
+Paru grubych żartów? Bezsilnych wymysłów? [a]
+Zapomina często specjalistów rzesza, [A7]
+Że ideologią walki – ich piosenka, [d]
+Muszą więc mieć wroga dla myśli i zmysłu: [G7]
+– Jednak coś znaczymy – zdają się pocieszać – [C]
+Jeżeli w tym kraju chcą nas jeszcze wieszać! – [E]
+I taka jest zwykle listów z Polski pointa. [a F a]
 
-@zwrotka
+#powt
+– Jednak coś znaczymy – zdają się pocieszać – [C]
+Jeżeli w tym kraju chcą nas jeszcze wieszać! – [E]
+I taka jest zwykle listów z Polski pointa. [a F a (F)]
+I taka jest zwykle listów z Polski pointa. [a F a (F)]
+I taka jest zwykle listów z Polski pointa. [a F a]
+
+@zwrotka2
 Cóż na nie odpisać ma emigrant, śpiewak,
 Co widział w swym życiu zaledwie wycinki
 Zła, niegodziwości, poniżeń i zniewag
@@ -154,4 +181,11 @@ Wie tylko to – z książek, bo przeczytał parę –
 Żeby pozostawić krwawe upominki.
 I pomimo ofiar, co jak świat są stare,
 Lub dzięki nim właśnie – jest miejsce na wiarę,
+Że kiedyś się o tym będzie tylko – śpiewać.
+
+@powt
+I pomimo ofiar, co jak świat są stare,
+Lub dzięki nim właśnie – jest miejsce na wiarę,
+Że kiedyś się o tym będzie tylko – śpiewać.
+Że kiedyś się o tym będzie tylko – śpiewać.
 Że kiedyś się o tym będzie tylko – śpiewać.

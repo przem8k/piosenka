@@ -29,7 +29,7 @@ Rozlewiska… [C B0 H (e e9 H)]
 
 @zwrotka
 Duszny upał się szerzy, w przerażonym powietrzu
-Krążą chmury żarłocznych owadów;
+Krążą chmary żarłocznych owadów;
 Nie odnaleźć tu brzegów ni obszarów nie zmierzyć,
 Tylko wdychać opary rozkładu!
 Ani wody źródlanej nie odnaleźć czystości,
@@ -57,7 +57,7 @@ Więc za dźwiękiem, pod prąd rzeki mętnej, zgubionej [a e]
 Trzeba czołgać się, pełznąć i płynąć, [a e]
 Bo tylko się – źródło – nie zmienia. [C B0 H]
 
-Bije wodą przeczystą, [a]
+Bije wodą przeczystą [a]
 Z głębin ziemi zrodzoną [e]
 I żyje wciąż wbrew [e a]
 Rozlewiskom… [C B0 H (e)]

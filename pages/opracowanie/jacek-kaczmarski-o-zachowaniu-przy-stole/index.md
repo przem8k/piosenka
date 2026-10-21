@@ -35,7 +35,7 @@ Zaczym pracę podjęła Dejanira nieczuła,
 Szyjąc giezła śmiertelne rzeszom Herkulesów – na stos.
 Na żałobno-rubasznym więc ucztujem brokacie,
 Gdy ze słomy zza cholew dobywamy swych łych!
-Może nie tak jak drzewiej –nie obficiej, bogaciej,
+Może nie tak jak drzewiej – nie obficiej, bogaciej,
 Lecz – na swoim sięgamy do kielichów i mich!
 
 @zw

@@ -16,13 +16,13 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/niech.p
 
 #lol1
 Krwią niech szafuje – kto krew ma na zbyciu, [ f c ]
-Krzyk niech podnosi – kto zapomniał mowy. [ f c ]
+Krzyk niech podnosi – kto zapomniał mowy, [ f c ]
 Zniszczeń niech żąda – kto w sobie ma nicość, [ g d ]
 Niech głową w mur bije – komu nie żal głowy. [ g d ]
 
 #lol2
 Forsą niech szasta – kto się w forsie tarza, [ a e ]
-Obietnicami – kto słowo ma za nic. [ a e ]
+Obietnicami – kto słowo ma za nic, [ a e ]
 Klątwy niech ciska – kto nie czci ołtarza, [ F F0 a ]
 Niech bluźni, kto żadnych nie uznaje granic. [ E E7 a ]
 Klątwy niech ciska – kto nie czci ołtarza, [ F F0 a ]
