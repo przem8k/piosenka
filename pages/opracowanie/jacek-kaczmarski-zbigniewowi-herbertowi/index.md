@@ -21,7 +21,7 @@ Akwarium ryb egzotycznych [ e C ]
 wzdętych okiem epoki [ e C ]
 Kurz na skórze rąk – [ a F ]
 sproszkowane diamenty [ a F ]
-Dobrowolna cykuta, [ e C ]
+Dobrowolna cykuta [ e C ]
 kulturalny narkotyk [ e C ]
 
 @lol1
@@ -44,7 +44,7 @@ chciałbym się jeszcze pohuśtać
 Dialektyki sznur szorstki
 kusząco stęka na haku
 Ale idealistom
-pisane łoże Prokrusta
+pisane Łoże Prokrusta
 Dostojna faza skargi
 pokora potęgi smaku
 
@@ -75,14 +75,14 @@ która nikogo nie wzrusza
 [ e/h  e/c  e/d   e/c  e/h ]
 
 @lol1
-Tak więc oswajam śmierć:
+Tak więc oswajam śmierć
 Carycę Czerń Miłosierną
 Zastrzyk Wystrzał lub Gaz
 Wybuch w Europy okopie
 Pozostawiam po sobie
 moją przysięgę na wierność
 Liniom dłoni składaną
-przez obcinany paznokieć 
+przez odcinany paznokieć 
 #d6
 
 [ e/h  e/c  e/d   e/c  e/h ]

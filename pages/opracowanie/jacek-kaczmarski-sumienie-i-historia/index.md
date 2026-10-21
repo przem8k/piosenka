@@ -24,17 +24,17 @@ Nieśmiałe modły spod nawału danin. [e a G]
 Snów grzechy upychają pod poduchę, [Fis0 e]
 Sumienia – w depozycie na plebanii. [B0 H7 e ( e H)]
 
-To z nich się biorą tryumfalni kaprale [e B0 H7]
-To z nich się biorą tryumfalni kaprale [e B0 H7]
+To z nich się biorą tryumfalni kaprale. [e B0 H7]
+To z nich się biorą tryumfalni kaprale. [e B0 H7]
 
 Względności prawd sumienni dociekacze – [e a H]
-Wszelkich nowinek najemcy karni [e a G]
+Wszelkich nowinek najemnicy karni [e a G]
 
-Przenoszą słowa nad granicę znaczeń, [Fis0 e]
+Przenoszą słowa nad granicą znaczeń, [Fis0 e]
 Sumienia – prosto z pralni do kawiarni. [B0 H7 e ( e H)]
 
-To z nich się biorą tryumfalni kaprale [e B0 H7]
-To z nich się biorą tryumfalni kaprale [e B0 H7]
+To z nich się biorą tryumfalni kaprale. [e B0 H7]
+To z nich się biorą tryumfalni kaprale. [e B0 H7]
 
 Ci kryształowi tak, że przezroczyści, [E a]
 Oślepiający, gdy już błysną światu – [D G]
@@ -42,8 +42,8 @@ Oślepiający, gdy już błysną światu – [D G]
 W łańcuchy zasad zakuwają myśli, [C Fis]
 Sumienia – w sejfach na szyfry dogmatów. [a H7 (H)]
 
-To z nich się biorą tryumfalni kaprale [e B0 H7]
-To z nich się biorą tryumfalni kaprale [e B0 H7]
+To z nich się biorą tryumfalni kaprale. [e B0 H7]
+To z nich się biorą tryumfalni kaprale. [e B0 H7]
 
 To z nich się biorą tryumfalni kaprale – [E a]
 Gorliwie podli, bezwstydnie potworni. [B0 e]
