@@ -1,5 +1,5 @@
 ---
-title: '"Pokrewieństwo" z Jakubem Jasińskim'
+title: '„Pokrewieństwo” z Jakubem Jasińskim'
 author: 'Adam Leszkiewicz'
 pub_date: '2016-06-19 20:13:58.277030+00:00'
 url1: 'http://www.wielcy.pl'
@@ -14,7 +14,7 @@ _co za Kościuszki szyj chciał biskupów, magnatów,_
 _ach, czyżbym po nim przejął jakobiński nietakt_
 _i czci brak dla błękitnej krwi i purpuratów_”.
 
-Kaczmarski powołuje się tu na rzekome pokrewieństwo z Jakubem Jasińskim; w wywiadzie\-rzece "Pożegnanie barda" tak komentował ten fragment: „Kiedy było wiadomo, że interesuję się historią i piszę piosenki o historii, to krewni krewnych wyszukali mi jakieś parantele – właśnie przez babcię Strejlauową – z Jakubem Jasińskim. Tak więc te akurat słowa piosenki Drzewo genealogiczne są prawdziwe…".
+Kaczmarski powołuje się tu na rzekome pokrewieństwo z Jakubem Jasińskim; w wywiadzie\-rzece „Pożegnanie barda” tak komentował ten fragment: „Kiedy było wiadomo, że interesuję się historią i piszę piosenki o historii, to krewni krewnych wyszukali mi jakieś parantele – właśnie przez babcię Strejlauową – z Jakubem Jasińskim. Tak więc te akurat słowa piosenki Drzewo genealogiczne są prawdziwe…”.
 
 Jednak według „Wielkiej Genealogii Minakowskiego” Jakub Jasiński nie był krewnym Jacka Kaczmarskiego: nie ma mowy o byciu „przodkiem”,„spokrewnieniu”, ani genetycznym „przejmowaniu” czegokolwiek; poeci byli natomiast bardzo dalekimi powinowatymi – zresztą nie przez babcię ze strony ojca, ale przez rodzinę ciotki, Bogny Kaczmarskiej. Konkretnie: Jakub Jasiński był bratem bratowej praprapradziadka szwagra wujka \(pociota\) Jacka Kaczmarskiego.
 

@@ -24,6 +24,6 @@ Konferencja jałtańska miała szczególnie poważne konsekwencje dla powojennej
 
 Stalin zobowiązał się do zorganizowania w Polsce wolnych wyborów \(_potem niech rządzą się, jak chcą_\) i wspierania budowy silnej i niezależnej powojennej państwowości Polskiej, co Churchill przyjął za dobrą monetę \(_ja wierzę w szczerość słów Stalina_\) – historia pokazała, że chodziło o „wolne wybory” i „niezależność” na warunkach Stalina.
 
-Naiwność Churchilla jest krytykowana jako zdrada polskich interesów, szczególnie bolesna ze względu na zaangażowanie polskich żołnierzy  w ostateczne zwycięstwo na hitlerowskimi Niemcami, czy to w przypadku polskich lotników dywizjonu 303 \(walczących przecież u boku brytyjskich żołnierzy\), czy oddziałów armii Generała Andersa.
+Naiwność Churchilla jest krytykowana jako zdrada polskich interesów, szczególnie bolesna ze względu na zaangażowanie polskich żołnierzy w ostateczne zwycięstwo na hitlerowskimi Niemcami, czy to w przypadku polskich lotników dywizjonu 303 \(walczących przecież u boku brytyjskich żołnierzy\), czy oddziałów armii Generała Andersa.
 
 Wymowa piosenki jest ironiczna – Kaczmarski broni dorobku Jałty przy użyciu nieudolnych i nieszczerych argumentów Zachodu. Koniec końców, błądzić jest rzeczą ludzką \(_tylko ofiary się nie mylą – i tak rozumieć trzeba Jałtę!_\).

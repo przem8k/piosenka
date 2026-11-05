@@ -1,5 +1,5 @@
 ---
-title: 'Obraz - piosenka - wybory'
+title: 'Obraz – piosenka – wybory'
 author: 'DX'
 pub_date: '2017-09-06 19:28:00.805551+00:00'
 url1: 'https://pl.wikipedia.org/wiki/Wybory_prezydenckie_w_Polsce_w_1990_roku'

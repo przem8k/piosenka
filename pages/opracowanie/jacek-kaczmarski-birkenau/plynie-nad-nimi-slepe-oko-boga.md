@@ -12,12 +12,12 @@ image_author: 'Jerzy Krawczyk'
 image_license: domena publiczna
 ---
 
-Utwór inspirowany jest obrazem  **Jerzego Krawczyka** pt. **"Birkenau"**. 
+Utwór inspirowany jest obrazem **Jerzego Krawczyka** pt. **„Birkenau”**. 
 Powstałe w 1961 roku dzieło przedstawia krajobraz nazistowskiego obozu koncentracyjnego.
 
- W niepokojącej i mrocznej scenerii widać biegnące ku horyzontowi tory kolejowe, wzdłuż których ustawione są sześcienne bloki \- prawdopodobnie obozowe baraki, a całość wieńczy widoczny w oddali czerwony komin krematoryjny. Autor obrazu co prawda nigdy nie był więźniem w Brzezince, ale poznał piekło obozowego koszmaru będąc tuż po klęsce kampanii wrześniowej jeńcem obozu w Dortmundzie, co pozwoliło przełożyć mu swoje ciężkie doświadczenia na realia największego w historii niemieckiego obozu zagłady.
+ W niepokojącej i mrocznej scenerii widać biegnące ku horyzontowi tory kolejowe, wzdłuż których ustawione są sześcienne bloki – prawdopodobnie obozowe baraki, a całość wieńczy widoczny w oddali czerwony komin krematoryjny. Autor obrazu co prawda nigdy nie był więźniem w Brzezince, ale poznał piekło obozowego koszmaru będąc tuż po klęsce kampanii wrześniowej jeńcem obozu w Dortmundzie, co pozwoliło przełożyć mu swoje ciężkie doświadczenia na realia największego w historii niemieckiego obozu zagłady.
 
-**Auschwitz\-Birkenau** było kompleksem obozów koncentracyjnych mających siedzibę w małopolskim Oświęcimiu \(niem. _Auschwitz_\). Właśnie tam w 1940 powstał pierwszy obóz, w którym na początku więziono więźniów politycznych przede wszystkim z Polski. Drugi obóz utworzono w 1941 roku w oddalonej o kilometr od Oświęcimia Brzezince \(niem. _Birkenau_\), na  rozkaz Heinricha Himmlera. KL Birkenau miało służyć **ostatecznemu rozwiązaniu kwestii żydowskiej**;  obóz posiadał specjalnie zaprojektowane zespoły komór gazowych wraz z krematoriami. Żydów masowo transportowanych do Brzezinki, poddawano dokładnej selekcji i wydzielano ich albo do ciężkiej pracy przymusowej, albo kierowano ich bezpośrednio do komór gazowych. 
+**Auschwitz\-Birkenau** było kompleksem obozów koncentracyjnych mających siedzibę w małopolskim Oświęcimiu \(niem. _Auschwitz_\). Właśnie tam w 1940 powstał pierwszy obóz, w którym na początku więziono więźniów politycznych przede wszystkim z Polski. Drugi obóz utworzono w 1941 roku w oddalonej o kilometr od Oświęcimia Brzezince \(niem. _Birkenau_\), na rozkaz Heinricha Himmlera. KL Birkenau miało służyć **ostatecznemu rozwiązaniu kwestii żydowskiej**; obóz posiadał specjalnie zaprojektowane zespoły komór gazowych wraz z krematoriami. Żydów masowo transportowanych do Brzezinki, poddawano dokładnej selekcji i wydzielano ich albo do ciężkiej pracy przymusowej, albo kierowano ich bezpośrednio do komór gazowych. 
 
 W obliczu pogarszającej się sytuacji Niemiec na froncie wschodnim w 1944 rozpoczęto przygotowania do likwidacji obozu. Część więźniów ewakuowano w głąb Rzeszy, palono dokumenty, wysadzano krematoria. Ostatecznie 27 stycznia 1945 Armia Czerwona wkroczyła do Oświęcimia, wyzwalając tym samym obóz.
 

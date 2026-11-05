@@ -18,4 +18,4 @@ Trzy lata później, w 1988 roku, sprowadzono z Ukrainy trumnę z rzekomymi szcz
 
 Autentyczność sprowadzonych do Polski zwłok wzbudzała wątpliwości. Sam Kaczmarski w utworze [Rymowanka zza grobu, czyli piosenka nie bez racji z racji ekshumacji](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-rymowanka\-zza\-grobu\-czyli\-piosenka\-nie\-bez\-racji\-z\-racji\-ekshumacji/) \(1989\) sugerował żartobliwie, że tak naprawdę do Zakopanego zwieziono nie szczątki Witkacego, a leżącego z nim w zbiorowej mogile Kozaka.
 
-W  roku 1994 powołano komisję mającą zbadać okoliczności i efekty sprowadzenia zwłok, która za zgodą rodziny Witkiewiczów dokonała ponownej ekshumacji i badań szczątków przywiezionych z kresów. Antropolog Tadeusz Rogalski jednoznacznie stwierdził, że kości należały do **młodej kobiety** w wieku 25–30 lat.
+W roku 1994 powołano komisję mającą zbadać okoliczności i efekty sprowadzenia zwłok, która za zgodą rodziny Witkiewiczów dokonała ponownej ekshumacji i badań szczątków przywiezionych z kresów. Antropolog Tadeusz Rogalski jednoznacznie stwierdził, że kości należały do **młodej kobiety** w wieku 25–30 lat.

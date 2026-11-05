@@ -14,7 +14,7 @@ Utwór został napisany w 1995 roku jako podsumowanie pobytu Kaczmarskiego w zab
 
 Wspomniana wyżej klasycystyczna willa została zbudowana w 1797 roku dla regenta grodzko\-poznańskiego Andrzeja Gorzeńskiego. Pierwszy właściciel pałacu należał do masonerii, dlatego też we wnętrzu można odnaleźć sporo elementów wolnomularskich \(_Gdzie masońskie fartuszki i młotki_\).
 
-W 1831 roku w pałacu zatrzymał się Adam Mickiewicz, podróżujący \(nieśpiesznie\) do Królestwa Polskiego, gdzie miał zamiar dołączyć do Powstania listopadowego. W międzyczasie pod przybranym nazwiskiem zwiedzał Wielkopolskę i wdał się w głośny romans z Konstancją Łubieńską. Ostatecznie poeta nie dotarł do powstania przed jego upadkiem, opuścił Polskę i  – jak miało się okazać – już nigdy do niej nie powrócił. Dziś w pałacu w Śmiełowie mieści się Muzeum Adama Mickiewicza, będące oddziałem Muzeum Narodowego w Poznaniu.
+W 1831 roku w pałacu zatrzymał się Adam Mickiewicz, podróżujący \(nieśpiesznie\) do Królestwa Polskiego, gdzie miał zamiar dołączyć do Powstania listopadowego. W międzyczasie pod przybranym nazwiskiem zwiedzał Wielkopolskę i wdał się w głośny romans z Konstancją Łubieńską. Ostatecznie poeta nie dotarł do powstania przed jego upadkiem, opuścił Polskę i – jak miało się okazać – już nigdy do niej nie powrócił. Dziś w pałacu w Śmiełowie mieści się Muzeum Adama Mickiewicza, będące oddziałem Muzeum Narodowego w Poznaniu.
 
 Piosenka _Czaty Śmiełowskie_ jest pastiszem twórczości Mickiewicza \(którego rozterki Kaczmarski odczytywał jako analogiczne do swoich własnych\), nawiązującym formą do ballady „Czaty”_:_
 

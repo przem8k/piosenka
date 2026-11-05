@@ -8,6 +8,6 @@ image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/52602505_
 image_author: 'Marek Kaczkowski'
 ---
 
-Podmiotem utworu jest Sansa Stark, bohaterka cyklu "Pieśń Lodu i Ognia" autorstwa G. R. R. Martina, oraz serialu "Gra o Tron". 
+Podmiotem utworu jest Sansa Stark, bohaterka cyklu „Pieśń Lodu i Ognia” autorstwa G.R.R. Martina, oraz serialu „Gra o Tron”. 
 \[spoiler alert\]
-Urodzona w Winterfell, stolicy surowej Północy, młoda Lady ląduje w Królewskiej Przystani, gdzie zmuszona jest skonfrontować swoje romantyczne wyobrażenia o życiu z brutalną rzeczywistością: po ścięciu publicznym jej ojca, jako zakładniczka królowej, zaręczona z okrutnym księciem, ostatecznie wydana zostaje za karła Tyriona. Ocalona zostaje przez lorda Baelisha , który również wykorzystując ją do własnych interesów ponownie wydaje ją za mąż, tym razem za psychopatę Boltona. Pozbawiona wszystkich nadziei bohaterka ucieka i decyduje się wziąć sprawy w swoje ręce, odnajdując własną tożsamość, odzyskując rodowe dziedzictwo i likwidując swoich wrogów.
+Urodzona w Winterfell, stolicy surowej Północy, młoda Lady ląduje w Królewskiej Przystani, gdzie zmuszona jest skonfrontować swoje romantyczne wyobrażenia o życiu z brutalną rzeczywistością: po ścięciu publicznym jej ojca, jako zakładniczka królowej, zaręczona z okrutnym księciem, ostatecznie wydana zostaje za karła Tyriona. Ocalona zostaje przez lorda Baelisha, który również wykorzystując ją do własnych interesów ponownie wydaje ją za mąż, tym razem za psychopatę Boltona. Pozbawiona wszystkich nadziei bohaterka ucieka i decyduje się wziąć sprawy w swoje ręce, odnajdując własną tożsamość, odzyskując rodowe dziedzictwo i likwidując swoich wrogów.

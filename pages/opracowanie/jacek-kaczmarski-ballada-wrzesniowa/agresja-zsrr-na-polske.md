@@ -12,4 +12,4 @@ image_license: domena publiczna
 
 Piosenka jest poświęcona zbrojnej napaści wojsk ZSRR, które 17 września 1939 wkroczyły do Polski atakując osłabione trwającą obroną przed hitlerowskimi Niemcami wojska polskie – bez formalnego wypowiedzenia wojny.
 
-W wielu miejscowościach na wschodnich rubieżach kraju doszło do inspirowanych przez wojska sowieckie mordów na ludności polskiej – w zachowanej odezwie  dowódca Frontu Ukraińskiego Armii Czerwonej pisał: _Bronią, kosami, widłami i siekierami bij swoich odwiecznych wrogów – polskich panów_.
+W wielu miejscowościach na wschodnich rubieżach kraju doszło do inspirowanych przez wojska sowieckie mordów na ludności polskiej – w zachowanej odezwie dowódca Frontu Ukraińskiego Armii Czerwonej pisał: _Bronią, kosami, widłami i siekierami bij swoich odwiecznych wrogów – polskich panów_.

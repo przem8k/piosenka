@@ -1,5 +1,5 @@
 ---
-title: 'Raz w Polsce bard naród wolności chciał uczyć...'
+title: 'Raz w Polsce bard naród wolności chciał uczyć…'
 author: 'DX'
 pub_date: '2020-08-05 20:53:41.556928+00:00'
 url1: 'http://www.kwartetproforma.com/?pl_limeryki-o-narodach-%E2%80%94-aneks,34'
@@ -20,4 +20,4 @@ _Lecz naród powtarza piosenki bezmyślnie |_
 _Po Wielkim Potopie więc słońce nie błyśnie |_
 _Bo Arka gotowa |_
 _Skończona budowa |_
-_Lecz łódź stoi wciąż na mieliźnie..._
+_Lecz łódź stoi wciąż na mieliźnie…_

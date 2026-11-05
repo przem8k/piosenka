@@ -10,7 +10,7 @@ Piosenka „Wygnanie z raju” jest częścią cyklu piosenek napisanych przez J
 
 Cykl obejmuje piosenki:
 
-- [Joanna d'Arc](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-joanna\-darc/)
+- [Joanna d’Arc](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-joanna\-darc/)
 - [Kasandra](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-kasandra/)
 - [Sen Katarzyny II](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-sen\-katarzyny\-ii/)
 - Wygnanie z raju

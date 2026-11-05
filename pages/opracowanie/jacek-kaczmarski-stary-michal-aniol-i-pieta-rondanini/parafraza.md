@@ -9,11 +9,11 @@ url2: 'http://www.nuovorinascimento.org/n-rinasc/didattic/html/delbianc/michel-5
 Wartą odnotowania ciekawostką jest sparafrazowanie w tym utworze wiersza samego Michała Anioła \(Kaczmarski nawiązuje do niego również w wierszu Wenecka kurtyzana chwali portret Pietra Aretina pędzla Tycjana\).
 
 W oryginale: 
-"Che giova voler far tanti bambocci,
-se m'han condotto al fin, come colui
-che passo il mar e poi affogo ne' mocci?",
+„Che giova voler far tanti bambocci,
+se m’han condotto al fin, come colui
+che passo il mar e poi affogo ne’ mocci?”,
 
 w tłumaczeniu Leopolda Staffa:
-"Po cóż lepiłem lalki, gdy kres czyha
+„Po cóż lepiłem lalki, gdy kres czyha
 Na mnie, jakiego doznał człek, co w sile
-Przebywszy morze, potem w bagnie zdycha."
+Przebywszy morze, potem w bagnie zdycha.”

@@ -15,4 +15,4 @@ Piosenka inspirowana jest obrazem, którego autorstwo powszechnie jest przypisyw
 
 Na obrazie uwieczniony został moment upadku Ikara, którego niemalże niewidoczną nogę możemy zauważyć w prawym dolnym rogu kompozycji. W głębi widać rozległą zatokę morską z płynącymi statkami pod żaglami. Tragedia młodzieńca zdaje się być niezauważona przez otoczenie; chłop na pierwszym planie orze pole, poniżej pasterz pasie owce, a rybak łowi ryby, nie zdając sobie sprawy z dramatu jaki miał miejsce chwilę wcześniej. 
 
-Mityczna historia posłużyła autorowi do ukazania kruchości życia, nieuchronności śmierci i obojętności świata na los jednostki, a tematyka ta świetnie  wpasowała się w przekaz programu Jacka Kaczmarskiego _Mimochodem_, który wieńczyła pieśń na podstawie płótna Bruegla.
+Mityczna historia posłużyła autorowi do ukazania kruchości życia, nieuchronności śmierci i obojętności świata na los jednostki, a tematyka ta świetnie wpasowała się w przekaz programu Jacka Kaczmarskiego _Mimochodem_, który wieńczyła pieśń na podstawie płótna Bruegla.

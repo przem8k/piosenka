@@ -9,7 +9,7 @@ image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/Evstafiev-afghan-apc-passes-russian.jpg.0x300_q85_upscale.jpg
 ---
 
-Pierwszy wers piosenki nawiązuje do powieści poetyckiej "Konrad Wallenrod" pióra Adama Mickiewicza, w którym Powieść Wajdeloty rozpoczyna się słowami: 
+Pierwszy wers piosenki nawiązuje do powieści poetyckiej „Konrad Wallenrod” pióra Adama Mickiewicza, w którym Powieść Wajdeloty rozpoczyna się słowami: 
 
 _Skąd Litwini wracali? – Z nocnej wracali wycieczki,_
 _Wieźli łupy bogate, w zamkach i cerkwiach zdobyte._

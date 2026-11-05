@@ -8,4 +8,4 @@ image_full: https://storage.googleapis.com/piosenka-media/media/notes/Albrecht_A
 image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/Albrecht_Altdorfer_-_Schlacht_bei_Issus.jpg.0x300_q85_upscale.jpg
 ---
 
-Piosenka inspirowana jest obrazem niemieckiego malarza **Albrechta Altdorfera**. Powstałe w 1529 roku olejne płótno przedstawia zwycięstwo Aleksandra Wielkiego nad perskim królem Dariuszem III w  333 roku p.n.e. Spektakularne ujęcie historycznej bitwy było odczytywane jako możliwe nawiązanie do współczesnego malarzowi konfliktu Europy z imperium ottomańskim.
+Piosenka inspirowana jest obrazem niemieckiego malarza **Albrechta Altdorfera**. Powstałe w 1529 roku olejne płótno przedstawia zwycięstwo Aleksandra Wielkiego nad perskim królem Dariuszem III w 333 roku p.n.e. Spektakularne ujęcie historycznej bitwy było odczytywane jako możliwe nawiązanie do współczesnego malarzowi konfliktu Europy z imperium ottomańskim.

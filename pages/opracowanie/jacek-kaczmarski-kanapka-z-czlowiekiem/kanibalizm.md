@@ -9,6 +9,6 @@ image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/kanibaliz
 
 Piosenka inspirowana jest obrazem **Bronisława Linkego** z 1951 roku.
 
-Obraz przedstawia człowieka śpiącego na kanapce unoszonej do ust przez dużo większą postać, która lada moment wbije zęby w przekąskę. W przeciwieństwie do wiersza Kaczmarskiego, na płótnie ofiara "giganta" nie jest świadoma zagrożenia; śpi na kanapce przykryta plastrem cebuli.
+Obraz przedstawia człowieka śpiącego na kanapce unoszonej do ust przez dużo większą postać, która lada moment wbije zęby w przekąskę. W przeciwieństwie do wiersza Kaczmarskiego, na płótnie ofiara „giganta” nie jest świadoma zagrożenia; śpi na kanapce przykryta plastrem cebuli.
 
-Obraz nie pozostawia również wątpliwości co do tożsamości jedzącej kanapkę postaci – to również człowiek! Obraz wpisuje się więc w temat "człowiek człowiekowi wilkiem", który w piosence pozostaje w sferze domysłów.
+Obraz nie pozostawia również wątpliwości co do tożsamości jedzącej kanapkę postaci – to również człowiek! Obraz wpisuje się więc w temat „człowiek człowiekowi wilkiem”, który w piosence pozostaje w sferze domysłów.

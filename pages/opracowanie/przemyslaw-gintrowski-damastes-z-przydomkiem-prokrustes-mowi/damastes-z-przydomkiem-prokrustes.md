@@ -11,7 +11,7 @@ image_src_url: https://vignette.wikia.nocookie.net/greekmythology/images/e/e1/Pr
 image_author: 'nieznany'
 ---
 
-Utwór inspirowany jest historią postaci pochodzącej z mitologii greckiej znanej jako **Prokrust**, występującej także pod imionami **Prokrustes**, **Damastes** lub **Polypemon**.  Był on olbrzymem i synem boga mórz, Posejdona.
+Utwór inspirowany jest historią postaci pochodzącej z mitologii greckiej znanej jako **Prokrust**, występującej także pod imionami **Prokrustes**, **Damastes** lub **Polypemon**. Był on olbrzymem i synem boga mórz, Posejdona.
 
 Prokrust mieszkał przy drodze między Atenami a Megarą, gdzie ubrany w wilczą skórę i z maczugą w ręku oczekiwał zmęczonych podróżnych i wędrowców**.** Swoje przyszłe ofiary zapraszał do mieszkania, gdzie oferował nocleg w jednym z **dwóch łóżek**. Wysokie osoby kładł do krótkiego łoża, a wystające kończyny niczego nieświadomych nieszczęśników odpiłowywał**.** Natomiast ludzi niskich umieszczał w dużym łożu i naciągał ich ciała. Kres jego makabrycznym zbrodniom położył powracający do ojczyzny heros **Tezeusz**, który najpierw zabił syna Prokrusta, Sinesa, a następnie pozbawił życia Damastesa, postępując z nim tak samo jak rozbójnik ze swymi ofiarami.
 

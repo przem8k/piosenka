@@ -5,9 +5,9 @@ pub_date: '2020-07-12 11:08:32.141977+00:00'
 ref1: 'Rozmowa Jacka Kaczmarskiego z Jolantą Piątek „Za dużo czerwonego”, miesięcznik literacki „Odra”, numery 481–484'
 ---
 
-Piosenka „Joanna d'Arc” jest częścią cyklu piosenek napisanych przez Jacka Kaczmarskiego w 1978 dla **Marii Wiernikowskiej** – wtedy piosenkarki scen studenckich, później dziennikarki – z którą rok wcześniej Kaczmarski ex aequo wygrał Studencki Festiwal Piosenki w Krakowie. Powstały w ten sposób piosenki:
+Piosenka „Joanna d’Arc” jest częścią cyklu piosenek napisanych przez Jacka Kaczmarskiego w 1978 dla **Marii Wiernikowskiej** – wtedy piosenkarki scen studenckich, później dziennikarki – z którą rok wcześniej Kaczmarski ex aequo wygrał Studencki Festiwal Piosenki w Krakowie. Powstały w ten sposób piosenki:
 
-- Joanna d'Arc
+- Joanna d’Arc
 - [Kasandra](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-kasandra/)
 - [Sen Katarzyny II](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-sen\-katarzyny\-ii/)
 - [Wygnanie z raju](https://www.piosenkaztekstem.pl/opracowanie/jacek\-kaczmarski\-wygnanie\-z\-raju/).

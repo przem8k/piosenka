@@ -10,8 +10,8 @@ image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/Husarz1.jpg.0x300_q85_upscale.jpg
 ---
 
-Łacińskie zawołanie  _eques polonus sum!_ kończące ostatnią zwrotkę piosenki znaczy "jestem polskim szlachcicem" lub "jestem polskim jeźdźcem".
+Łacińskie zawołanie _eques polonus sum!_ kończące ostatnią zwrotkę piosenki znaczy „jestem polskim szlachcicem” lub „jestem polskim jeźdźcem”.
 
-Na istniejących nagraniach  autor śpiewa jednak _**equus** polonus sum \-_ co należałoby przetłumaczyć jako "jestem polskim koniem", co mogło być zarówno pomyłką autora \(żyjącego w czasach, w których przecież _nie znamy już łaciny_\), jak i zamierzoną przez autora pomyłką podmiotu lirycznego.
+Na istniejących nagraniach autor śpiewa jednak _**equus** polonus sum –_ co należałoby przetłumaczyć jako „jestem polskim koniem”, co mogło być zarówno pomyłką autora \(żyjącego w czasach, w których przecież _nie znamy już łaciny_\), jak i zamierzoną przez autora pomyłką podmiotu lirycznego.
 
-Antologia poezji Jacka Kaczmarskiego w wydaniu z roku 2012 zmienia pisownię "konną" z wcześniejszych wydań na wersję "z jeźdźcem", rozstrzygając wątpliwość na rzecz pomyłki autora.
+Antologia poezji Jacka Kaczmarskiego w wydaniu z roku 2012 zmienia pisownię „konną” z wcześniejszych wydań na wersję „z jeźdźcem”, rozstrzygając wątpliwość na rzecz pomyłki autora.

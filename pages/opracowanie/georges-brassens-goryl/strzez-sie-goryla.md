@@ -11,4 +11,4 @@ image_src_url: http://maxpixel.freegreatpicture.com/
 
 Rubaszna piosenka [Brassensa](https://www.piosenkaztekstem.pl/spiewnik/georges\-brassens/) była zbyt rubaszna jak na standardy francuskich mediów początku lat 50. i przez pierwsze trzy lata od jej wydania nie była emitowana na falach radiowych.
 
-Utwór odczytywany jest często jako głos sprzeciwu wobec kary śmierci,  przeciwko której autor występował wielokrotnie, choć sam zainteresowany przyznawał, że w przypadku tej akurat piosenki nie było to jego świadomym zamysłem. Na marginesie odnotujmy, że kara śmierci została ostatecznie zniesiona we Francji 9 października 1981 \- równo dwadzieścia dni przed śmiercią Brassensa.
+Utwór odczytywany jest często jako głos sprzeciwu wobec kary śmierci, przeciwko której autor występował wielokrotnie, choć sam zainteresowany przyznawał, że w przypadku tej akurat piosenki nie było to jego świadomym zamysłem. Na marginesie odnotujmy, że kara śmierci została ostatecznie zniesiona we Francji 9 października 1981 – równo dwadzieścia dni przed śmiercią Brassensa.

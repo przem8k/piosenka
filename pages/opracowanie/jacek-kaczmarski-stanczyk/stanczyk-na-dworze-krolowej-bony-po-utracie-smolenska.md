@@ -12,6 +12,6 @@ Piosenka jest inspirowana namalowanym w 1862 roku obrazem **Jana Matejki**.
 
 Płótno przedstawia **Stańczyka** – nadwornego błazna i doradcę kolejnych królów Polski od Jana Olbrachta po Zygmunta II Augusta i alegoryczny archetyp zatroskanego patrioty – w zadumie obok listu donoszącego o kapitulacji twierdzy Smoleńsk wobec wojsk Wielkiego Księstwa Moskiewskiego. Na dalszym planie widać dworską zabawę i symboliczną kometę, zwiastującą nadchodzący upadek kraju.
 
-Chronologia wydarzeń jest traktowana przez malarza dość liberalnie \- w rzeczywistości królowa Bona została koronowana na Królową Polski w roku 1518, cztery lata po upadku Smoleńska.
+Chronologia wydarzeń jest traktowana przez malarza dość liberalnie – w rzeczywistości królowa Bona została koronowana na Królową Polski w roku 1518, cztery lata po upadku Smoleńska.
 
-Podobnie jak w innych obrazach Matejki przedstawiających Stańczyka \("Hołd pruski", "Zawieszenie dzwonu Zygmunta"\), twarz błazna jest autoportretem samego malarza.
+Podobnie jak w innych obrazach Matejki przedstawiających Stańczyka \(„Hołd pruski”, „Zawieszenie dzwonu Zygmunta”\), twarz błazna jest autoportretem samego malarza.

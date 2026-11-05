@@ -10,8 +10,8 @@ image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotation
 
 Piosenka, napisana w drugiej połowie lat sześćdziesiątych w Paryżu, zawiera spolszczone słowa pochodzące z francuskiego języka ulicy:
 
-- **baniola** \- \(fr. bagnole\) \- potocznie: samochód, fura
- - **flik** \- \(fr. flic\) \- potocznie: policjant, glina
+- **baniola** – \(fr. bagnole\) – potocznie: samochód, fura
+ - **flik** – \(fr. flic\) – potocznie: policjant, glina
 
 Określenie „tygrys do baku” nawiązuje natomiast do kampanii reklamowej koncernu paliwowego Esso z roku 1965 pod hasłem „Mettez un tigre dans votre moteur” \(włóż tygrysa do silnika\).
 

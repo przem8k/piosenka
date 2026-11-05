@@ -10,9 +10,9 @@ image_src_url: https://pl.wikipedia.org/wiki/Longinus_Podbipi%C4%
 image_author: 'Śmierć Podbipięty, Juliusz Kossak'
 ---
 
-Longinus Podbipięta herbu Zerwikaptur, fikcyjny bohater powieści historycznej Henryka Sienkiewicza "Ogniem i Mieczem", ginie w trakcie oblężenia zamku w Zbarażu przez połączone siły kozackie i tatarskie w czasie powstania Chmielnickiego, latem 1649 roku.
+Longinus Podbipięta herbu Zerwikaptur, fikcyjny bohater powieści historycznej Henryka Sienkiewicza „Ogniem i Mieczem”, ginie w trakcie oblężenia zamku w Zbarażu przez połączone siły kozackie i tatarskie w czasie powstania Chmielnickiego, latem 1649 roku.
 
-Bohater próbuje ukradkiem wymknąć się z oblężenia, aby donieść królowi Janowi Kazimierzowi o trudnej sytuacji obleganych. Zauważony przez kozackich wartowników, ginie pod gradem strzał. Kozacy przymocowują jęgo zwłoki do jednej z maszyn oblężniczych, gdzie dostrzega je Pan Zagłoba, krzycząc "Krwi! Krwi!".
+Bohater próbuje ukradkiem wymknąć się z oblężenia, aby donieść królowi Janowi Kazimierzowi o trudnej sytuacji obleganych. Zauważony przez kozackich wartowników, ginie pod gradem strzał. Kozacy przymocowują jęgo zwłoki do jednej z maszyn oblężniczych, gdzie dostrzega je Pan Zagłoba, krzycząc „Krwi! Krwi!”.
 
 W piosence wybrzmiewa ironiczna krytyka gloryfikacji przemocy i uproszczonego obrazu patriotyzmu przedstawionego przez Sienkiewicza:
 

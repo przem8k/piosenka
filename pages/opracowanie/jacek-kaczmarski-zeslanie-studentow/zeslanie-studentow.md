@@ -15,7 +15,7 @@ Obraz nawiązuje do wywózki na Sybir grupy gimnazjalistów żmudzkich w 1823 ro
 _Widziałem ich:_ –_za każdym z bagnetem szły warty,_ 
 _Małe chłopcy, znędzniałe, wszyscy jak rekruci_ 
 _Z golonymi głowami;_ – _na nogach okuci._ 
-_Biedne chłopcy! \- najmłodszy, dziesięć lat, nieboże,_ 
+_Biedne chłopcy! – najmłodszy, dziesięć lat, nieboże,_ 
 _Skarżył się, że łańcucha podźwignąć nie może;_
 
 Obraz przedstawia najprawdopodobniej pośredni etap zsyłki – zrezygnowani, pozostawieni własnym myślom uczniowie czekają na dalszą część podróży na wschód.

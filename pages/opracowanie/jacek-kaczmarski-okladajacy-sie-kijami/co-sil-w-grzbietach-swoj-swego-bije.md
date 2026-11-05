@@ -14,7 +14,7 @@ image_license: Domena publiczna
 
 Piosenka inspirowana jest obrazem hiszpańskiego malarza okresu romantyzmu **Francisca Goi** pt. **„Bójka na kije”**.
 
-Obraz przedstawia dwóch mężczyzn walczących ze sobą kijami w odosobnionym miejscu. Przeciwnicy zakopani są po kolana w błocie tak, że żaden z nich nie może uciec – brutalny pojedynek zakończy się najpewniej śmiercią jednego z nich.  Tradycja rozstrzygania w ten sposób sporów przypisywana jest różnym regionom Hiszpanii. Sam obraz odczytywany jest jako metafora bratobójczej walki, być może nawiązująca do współczesnych malarzowi starć w latach 1820–1823 \(trzylecie liberalne\) pomiędzy absolutystami, popierającymi Ferdynanda VII i liberałami opowiadającymi się za postępową konstytucją.
+Obraz przedstawia dwóch mężczyzn walczących ze sobą kijami w odosobnionym miejscu. Przeciwnicy zakopani są po kolana w błocie tak, że żaden z nich nie może uciec – brutalny pojedynek zakończy się najpewniej śmiercią jednego z nich. Tradycja rozstrzygania w ten sposób sporów przypisywana jest różnym regionom Hiszpanii. Sam obraz odczytywany jest jako metafora bratobójczej walki, być może nawiązująca do współczesnych malarzowi starć w latach 1820–1823 \(trzylecie liberalne\) pomiędzy absolutystami, popierającymi Ferdynanda VII i liberałami opowiadającymi się za postępową konstytucją.
 
 Dzieło zostało namalowane bezpośrednio na ścianie domu artysty, w ramach cyklu 14 malowideł nazywanego mianem _czarnych obrazów_, w mroczny sposób komentujących sytuację ówczesnej Hiszpanii. Kilkadziesiąt lat później malarz Salvador Martinez Cubells przeniósł obrazy na płótna, które obecnie znajdują się w zbiorach madryckiego Muzeum del Prado.
 

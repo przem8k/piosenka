@@ -9,4 +9,4 @@ image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/Tygodnik_Solidarnosc_1981_lipiec.jpg.0x300_q85_upscale.jpg
 ---
 
-Napisana w 1982 roku piosenka jest czytelnym komentarzem do historii pierwszej **Solidarności**, od powstania na bazie komitetów strajkowych sierpnia 1980 \(_Szczególnie kiedy w pierwszym akcie / w tej scenie z długowłosym chłopcem / i młodym w kasku robotnikiem_\) do jej delegalizacji  wraz z wprowadzeniem stanu wojennego o północy 13 grudnia 1981.
+Napisana w 1982 roku piosenka jest czytelnym komentarzem do historii pierwszej **Solidarności**, od powstania na bazie komitetów strajkowych sierpnia 1980 \(_Szczególnie kiedy w pierwszym akcie / w tej scenie z długowłosym chłopcem / i młodym w kasku robotnikiem_\) do jej delegalizacji wraz z wprowadzeniem stanu wojennego o północy 13 grudnia 1981.

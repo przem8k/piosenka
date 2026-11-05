@@ -10,6 +10,6 @@ image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/praljak.j
 image_src_url: https://pl.wikipedia.org/wiki/Plik:Slobodan_Praljak_(2013).jpg
 ---
 
-Piosenka powstała po samobójczej śmierci chorwackiego generała Slobodana Praljaka, skazanego 29 listopada 2017 roku przez haski  Międzynarodowy Trybunał Karny dla byłej Jugosławii na 20 lat więzienia za zbrodnie wojenne popełnione we wschodnim Mostarze w czasie wojny w Bośni i Hercegowinie.
+Piosenka powstała po samobójczej śmierci chorwackiego generała Slobodana Praljaka, skazanego 29 listopada 2017 roku przez haski Międzynarodowy Trybunał Karny dla byłej Jugosławii na 20 lat więzienia za zbrodnie wojenne popełnione we wschodnim Mostarze w czasie wojny w Bośni i Hercegowinie.
 
-Po usłyszeniu werdyktu odrzucającego apelację 72\-letni generał powiedział "Slobodan Praljak nie jest zbrodniarzem wojennym, z pogardą odrzucam wasz wyrok", a następnie na oczach osób obecnych w sali sądowej i tysięcy telewidzów oglądających proces na żywo wyjął małą butelkę i wypił jej zawartość. Jak się okazało, był to roztwór cyjanku potasu. Proces przerwano, a odeskortowany do szpitala Praljak zmarł kilka godzin później.
+Po usłyszeniu werdyktu odrzucającego apelację 72\-letni generał powiedział „Slobodan Praljak nie jest zbrodniarzem wojennym, z pogardą odrzucam wasz wyrok”, a następnie na oczach osób obecnych w sali sądowej i tysięcy telewidzów oglądających proces na żywo wyjął małą butelkę i wypił jej zawartość. Jak się okazało, był to roztwór cyjanku potasu. Proces przerwano, a odeskortowany do szpitala Praljak zmarł kilka godzin później.

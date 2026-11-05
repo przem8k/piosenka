@@ -12,6 +12,6 @@ image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotation
 
 Staropolski obrzęd pogrzebowy był bardzo rozbudowany i składał się z wielu elementów. Jednym z nich było balsamowanie ciała zmarłych i wkładanie do trumny z okienkiem, by uczestnicy żałobnej ceremonii mogli zdążyć ujrzeć zmarłego po raz ostatni.
 
-Gdy nie było okienka, malowano portret nieboszczyka, który nie posiadał żadnych upiększeń. Jeśli więc szlachcic za życia miał syfilityczny nos albo obcięte w walce ucho \- takim widziano go na portrecie.
+Gdy nie było okienka, malowano portret nieboszczyka, który nie posiadał żadnych upiększeń. Jeśli więc szlachcic za życia miał syfilityczny nos albo obcięte w walce ucho – takim widziano go na portrecie.
 
 Należy dodać, że była to tradycja wyłącznie polska, niespotykana w świecie, doskonale wpisująca się w barokowe zainteresowanie tematem śmierci. Dzięki niej jednak przetrwała do naszych czasów cała galeria wizerunków szlachty polskiej.

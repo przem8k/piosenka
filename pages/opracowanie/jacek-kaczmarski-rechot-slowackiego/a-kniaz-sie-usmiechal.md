@@ -14,6 +14,6 @@ Kniaź Jur Heretyk, który pojawia się w piosence dwukrotnie, to nikt inny jak 
 
 A kim jest „wampir od polskiej krwi tłusty”, siedzący w Pałacu Namiestnikowskim? Chodzi o **Aleksandra Kwaśniewskiego**, a poświęcona mu dość złośliwa zwrotka jest zwięzłą oceną pierwszej kadencji \(1995–2000\) byłego prezydenta RP.
 
-„_\(...\) były akcje młodej prawicy, określające Kwaśniewskiego jako Kwasulę. To mi się podobało. Wydawało mi się, że to jest takie poczucie humoru bliskie Majorowi, Pomarańczowej Alternatywie, ale zauważyłem, że zostało to przyjęte bardzo serio przez szerokie środowiska: prezydent jako spadkobierca ugrupowania komunistycznego wysysa krew z polskiego narodu. No ale to jest taki niezwykły wampir, dosyć, powiedzmy sobie, dbający o ciepły wizerunek. I stąd ten łagodny wampir, który paradoksalnie dba o wizerunek człowieka, który raczej oddałby krew, niż wyssał_”
+„_\(…\) były akcje młodej prawicy, określające Kwaśniewskiego jako Kwasulę. To mi się podobało. Wydawało mi się, że to jest takie poczucie humoru bliskie Majorowi, Pomarańczowej Alternatywie, ale zauważyłem, że zostało to przyjęte bardzo serio przez szerokie środowiska: prezydent jako spadkobierca ugrupowania komunistycznego wysysa krew z polskiego narodu. No ale to jest taki niezwykły wampir, dosyć, powiedzmy sobie, dbający o ciepły wizerunek. I stąd ten łagodny wampir, który paradoksalnie dba o wizerunek człowieka, który raczej oddałby krew, niż wyssał_”
 
 – Jacek Kaczmarski w rozmowie z Krzysztofem Skowrońskim w Radiu Zet, 2001

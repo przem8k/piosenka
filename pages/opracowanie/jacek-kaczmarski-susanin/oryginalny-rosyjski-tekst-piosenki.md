@@ -5,7 +5,7 @@ pub_date: '2018-11-25 16:37:06.793050+00:00'
 url1: 'https://ru.wikisource.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD_%D0%A1%D1%83%D1%81%D0%B0%D0%BD%D0%B8%D0%BD_(%D0%A0%D1%8B%D0%BB%D0%B5%D0%B5%D0%B2)?fbclid=IwAR3YYe6WdBW8r80Q_DYm_o1o-NPBlCUBROhm8S3tLZDxDYz12wyZ2'
 ---
 
-Kaczmarskiemu zdarzało się wykonywać oryginalną \(rosyjską\) wersję piosenki na nieoficjalnych występach. Zachowało się np. jej [nagranie](https://www.youtube.com/watch?v=BLQ2Mg\_D9qk) z 2 lipca roku 1983 z klubu "Nasza Wiosna" w Paryżu.
+Kaczmarskiemu zdarzało się wykonywać oryginalną \(rosyjską\) wersję piosenki na nieoficjalnych występach. Zachowało się np. jej [nagranie](https://www.youtube.com/watch?v=BLQ2Mg\_D9qk) z 2 lipca roku 1983 z klubu „Nasza Wiosna” w Paryżu.
 
 Сусанин |
 
@@ -30,4 +30,4 @@ Kaczmarskiemu zdarzało się wykonywać oryginalną \(rosyjską\) wersję piosen
 Ударила вьюга, мы сбились с пути, |
 Проклятым Ляхам пути не найти. |
 
-Piosenka jest najprawdopodobniej oparta o wiersz rosyjskiego poety, dekabrysty Kondratija Fiedorowicza Rylejewa \(1795\-1826\). Pełen tekst można znaleźć pod linkiem poniżej.
+Piosenka jest najprawdopodobniej oparta o wiersz rosyjskiego poety, dekabrysty Kondratija Fiedorowicza Rylejewa \(1795–1826\). Pełen tekst można znaleźć pod linkiem poniżej.

@@ -14,4 +14,4 @@ Płótno przedstawia heroiczną szarżę polskich szwoleżerów służących w a
 
 Dziś nie wiadomo czy Napoleon faktycznie liczył na zdobycie wąwozu przy pomocy lekkiej jazdy, czy też jedynie chciał rozpoznać bojem pozycje hiszpańskie. Rzucony do ataku polski szwadron zatrzymał się jednak dopiero 2500 metrów dalej, po zdobyciu w 8 minut wszystkich baterii hiszpańskich.
 
-Wg legendy szarża Polaków miała dać początek francuskiemu powiedzeniu "pijany jak Polak" \(fr. _saoul comme un Polonais_\). Francuski generał miał powiedzieć przed bitwą, że tylko pijany odważyłby się na szturm w górę wąwozu. Po szarży Polaków, Napoleon miał na to odeprzeć: "chciałbym, żeby wszyscy moi żołnierze byli tak pijani".
+Wg legendy szarża Polaków miała dać początek francuskiemu powiedzeniu „pijany jak Polak” \(fr. _saoul comme un Polonais_\). Francuski generał miał powiedzieć przed bitwą, że tylko pijany odważyłby się na szturm w górę wąwozu. Po szarży Polaków, Napoleon miał na to odeprzeć: „chciałbym, żeby wszyscy moi żołnierze byli tak pijani”.

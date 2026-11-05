@@ -10,4 +10,4 @@ image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotation
 
 Utwór nawiązuje do pożaru w szpitalu psychiatrycznym w Górnej Grupie w nocy z 31 października na 1 listopada 1980. W pożarze zginęło 55 spośród 319 pacjentów, w tym wielu którzy, zamknięci od zewnątrz w pokojach, nie mogli opuścić płonącego budynku.
 
-Piosence dodatkowej wymowy dodał stan wojenny \("Stanął w ogniu nasz wielki dom"\), choć została napisana jeszcze przed jego wprowadzeniem.
+Piosence dodatkowej wymowy dodał stan wojenny \(„Stanął w ogniu nasz wielki dom”\), choć została napisana jeszcze przed jego wprowadzeniem.

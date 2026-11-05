@@ -18,7 +18,7 @@ Księga Judyty opowiada o najeździe wojsk asyryjskich na Izrael, który niedawn
 
 Pod osłoną nocy odważna niewiasta przedostała się do obozu wroga wraz ze swoją niewolnicą. Gdy Judyta stanęła przed obliczem Holofernesa, dowódca zakochał się w kobiecie; oczarowany jej urodą zabrał ją do swojego namiotu, w którym przebywali razem przez trzy dni. Czwartego dnia Holofernes wystawił wielką ucztę, na której się upił. Judyta wykorzystała okazję i pozbawiła go życia, **ucinając mu głowę**: 
 
-_\[4\] I odeszli wszyscy od \[Holofernesa\], a w sypialni nie pozostał nikt od najmniejszego do największego. Wtedy Judyta przystąpiła do jego łoża \(...\) \[6\] I podeszła do słupa nad łożem przy głowie Holofernesa, zdjęła jego miecz ze słupa, \[7\] a zbliżywszy się do łoża ujęła go za włosy i rzekła: «Daj mi siłę w tym dniu, Panie, Boże Izraela!» \[8\] I uderzyła go dwukrotnie z całej siły w kark, i odcięła głowę._ 
+_\[4\] I odeszli wszyscy od \[Holofernesa\], a w sypialni nie pozostał nikt od najmniejszego do największego. Wtedy Judyta przystąpiła do jego łoża \(…\) \[6\] I podeszła do słupa nad łożem przy głowie Holofernesa, zdjęła jego miecz ze słupa, \[7\] a zbliżywszy się do łoża ujęła go za włosy i rzekła: «Daj mi siłę w tym dniu, Panie, Boże Izraela!» \[8\] I uderzyła go dwukrotnie z całej siły w kark, i odcięła głowę._ 
 
 Po zabiciu wodza najeźdźców Judyta schowała jego głowę w koszu i powróciła ze swą niewolnicą do Betulii. O świcie wywieszono głowę na murach miasta. Gdy ujrzało ją wojsko asyryjskie, uciekło w popłochu, a Izraelici rzucili się w pogoń za agresorami i ich rozgromili, kończąc tym samym wojnę.
 

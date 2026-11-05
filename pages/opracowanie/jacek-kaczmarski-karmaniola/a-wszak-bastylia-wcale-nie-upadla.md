@@ -1,5 +1,5 @@
 ---
-title: 'A wszak Bastylia wcale nie upadła...'
+title: 'A wszak Bastylia wcale nie upadła…'
 author: 'DX'
 pub_date: '2018-08-12 17:39:14.155911+00:00'
 url1: 'https://pl.wikipedia.org/wiki/Karmaniola'

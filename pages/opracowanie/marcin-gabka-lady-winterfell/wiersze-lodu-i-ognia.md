@@ -9,4 +9,4 @@ image_src_url: http://www.wierszeloduiognia.pl/
 image_author: 'Marek Kaczkowski'
 ---
 
-Tekst utworu zaczerpnięty jest z tomiku Marka Kaczkowskiego "Wiersze Lodu i Ognia", łączącym inspiracje sagą G. R. R. Martina, oraz styl poetycki Jacka Kaczmarskiego.
+Tekst utworu zaczerpnięty jest z tomiku Marka Kaczkowskiego „Wiersze Lodu i Ognia”, łączącym inspiracje sagą G. R. R. Martina, oraz styl poetycki Jacka Kaczmarskiego.

@@ -14,15 +14,15 @@ image_license: domena publiczna
 
 Utwór jest próbą zbiorczego spojrzenia na twórczość i życiorys żyjącego w latach 1746–1828 wybitnego hiszpańskiego malarza i grafika – **Francisca José de Goi y Lucientesa.**
 
-Goya od najmłodszych lat wykazywał talent plastyczny. Po dwukrotnym odrzuceniu jego kandydatury  do Królewskiej Akademii Sztuk Pięknych w Madrycie, młody artysta wyjechał studiować we Włoszech, gdzie spędził rok. Po powrocie do kraju ożenił się z siostrą braci Bayeu, trójki wpływowych aragońskich malarzy, z których najstarszy, Francesco, był dawnym mistrzem Goi. 
+Goya od najmłodszych lat wykazywał talent plastyczny. Po dwukrotnym odrzuceniu jego kandydatury do Królewskiej Akademii Sztuk Pięknych w Madrycie, młody artysta wyjechał studiować we Włoszech, gdzie spędził rok. Po powrocie do kraju ożenił się z siostrą braci Bayeu, trójki wpływowych aragońskich malarzy, z których najstarszy, Francesco, był dawnym mistrzem Goi. 
 
 Właśnie dzięki protekcji szwagra obiecujący malarz w 1775 roku trafił na hiszpański **dwór królewski**, gdzie tworzył obrazy, na podstawie których tkano gobeliny. Na początku lat 80. XVIII wieku Goya został objęty mecenatem znamienitych hiszpańskich rodów; wsławił się wtedy jako utalentowany portrecista. Szybko piął się po szczeblach kariery i w 1789 roku uzyskał tytuł malarza nadwornego nowej pary królewskiej – Karola IV i Marii Ludwiki Parmeńskiej.
 
-Jesienią 1792 roku, Goya poważnie **zachorował** – prawie rok walczył ze śmiercią, paraliżem i ślepotą.  Doszedł do zdrowia tylko częściowo; pozostał głuchy do końca życia. 
+Jesienią 1792 roku, Goya poważnie **zachorował** – prawie rok walczył ze śmiercią, paraliżem i ślepotą. Doszedł do zdrowia tylko częściowo; pozostał głuchy do końca życia. 
 
 Malarz utrzymał posadę nadwornego malarza przez kolejne dekady, pomimo choroby i zawirowań historii – kolejno abdykacji królewskiej pary w 1808 roku na rzecz Józefa Bonaparte \(w tym okresie powstał cykl grafik _Okropności wojny_ obrazujący głód i cierpienie wywołane okupacją Hiszpanii przez wojska napoleońskie\), upadku Napoleona i objęcia władzy przez Ferdynanda VII.
 
-Goya opuścił Madryt dopiero w 1819 –  nabył położoną na obrzeżach miasta posiadłość nazywaną później Domem Głuchego, gdzie po zażegnaniu nawrotu dolegliwości choroby stworzył słynny cykl 14 pesymistycznych malowideł nazywanych _Czarnymi obrazami._ W 1824 artysta wyemigrował do Bordeaux we Francji, gdzie tworzył swoje ostatnie prace; ze względu na fatalny wzrok używał przy ich tworzeniu  szkła powiększającego. Francisco Goya 2 kwietnia 1828 doznał wylewu, po którym zapadł w śpiączkę i zmarł w nocy z 15 na 16 kwietnia 1828 roku w wieku 82 lat.
+Goya opuścił Madryt dopiero w 1819 – nabył położoną na obrzeżach miasta posiadłość nazywaną później Domem Głuchego, gdzie po zażegnaniu nawrotu dolegliwości choroby stworzył słynny cykl 14 pesymistycznych malowideł nazywanych _Czarnymi obrazami._ W 1824 artysta wyemigrował do Bordeaux we Francji, gdzie tworzył swoje ostatnie prace; ze względu na fatalny wzrok używał przy ich tworzeniu szkła powiększającego. Francisco Goya 2 kwietnia 1828 doznał wylewu, po którym zapadł w śpiączkę i zmarł w nocy z 15 na 16 kwietnia 1828 roku w wieku 82 lat.
 
 Utwór Kaczmarskiego pełen jest nawiązań do twórczości i życia Goi. Oto niektóre z nich:
 

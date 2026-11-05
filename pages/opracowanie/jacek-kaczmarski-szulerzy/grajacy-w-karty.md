@@ -8,7 +8,7 @@ image_thumb: https://storage.googleapis.com/piosenka-media/media/notes/1200px-Ca
 image_src_url: https://pl.wikipedia.org/wiki/Graj%C4%85cy_w_karty_(obraz_Caravaggia)
 ---
 
-Piosenka została zainspirowana obrazem włoskiego artysty barokowego **Caravaggia** namalowanym  pod koniec XVI wieku.
+Piosenka została zainspirowana obrazem włoskiego artysty barokowego **Caravaggia** namalowanym pod koniec XVI wieku.
 
 Płótno w języku polskim nazywane „Grający w karty” lub „Szulerzy” przedstawia trzy postaci: grającego w karty młodzieńca\-ofiarę, jego przeciwnika\-szulera wyciągającego z tylnej kieszeni dodatkowe karty, oraz stojącego z tyłu wspólnika ukradkiem zaglądającego do kart w ręku ofiary i pokazującego na palcach ich zawartość.
 

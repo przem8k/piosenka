@@ -10,9 +10,9 @@ image_src_url: http://www.ulicazabkowska.pl/galeria-zdjec/zabkowska-dawniej
 
 Staszewski używa w piosence określeń charakterystycznych dla gwary warszawskiego półświatka lat 60.:
 
-- sikory \- zegarki
- -     sak \- rozpięta na obręczach sieć na ryby, w przenośni: okrążenie
- -     balet \- zabawa
- -     meta \- melina, mieszkanie
- -     niebieska szklanka \- światła milicyjnego radiowozu
- -     blacharnia \- milicja
+- sikory – zegarki
+- sak – rozpięta na obręczach sieć na ryby, w przenośni: okrążenie
+- balet – zabawa
+- meta – melina, mieszkanie
+- niebieska szklanka – światła milicyjnego radiowozu
+- blacharnia – milicja

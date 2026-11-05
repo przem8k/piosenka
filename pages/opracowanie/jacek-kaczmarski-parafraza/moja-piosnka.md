@@ -9,4 +9,4 @@ image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/1280px-Gr%C3%B3bNorwida.jpg.0x300_q85_upscale.jpg
 ---
 
-Utwór nawiązuje do wiersza **Cypriana Kamila Norwida "Moja piosnka"**, z którego zapożycza układ rymów. Pierwszy wers u Jacka Kaczmarskiego \("Dobrze, dobrze \- wszędzie i zawsze"\) stoi w antytezie do pierwszego wiersza utworu Norwida: "Źle, źle zawsze i wszędzie". Co ciekawe, nie jest to wszak parafraza.
+Utwór nawiązuje do wiersza **Cypriana Kamila Norwida „Moja piosnka”**, z którego zapożycza układ rymów. Pierwszy wers u Jacka Kaczmarskiego \(„Dobrze, dobrze – wszędzie i zawsze”\) stoi w antytezie do pierwszego wiersza utworu Norwida: „Źle, źle zawsze i wszędzie”. Co ciekawe, nie jest to wszak parafraza.

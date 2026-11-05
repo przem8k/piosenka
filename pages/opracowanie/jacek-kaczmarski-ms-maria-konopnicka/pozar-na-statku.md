@@ -8,7 +8,7 @@ image_full: https://storage.googleapis.com/piosenka-media/media/song_annotations
 image_thumb: https://storage.googleapis.com/piosenka-media/media/song_annotations/800px-Ms_Konopnicka_tablica.JPG.0x300_q85_upscale.jpg
 ---
 
-Data 13 grudnia kojarzy się większości Polaków z wprowadzeniem Stanu Wojennego w 1981 roku. Dokładnie 20 lat wcześniej miało miejsce inne, tragiczne wydarzenie: pożar statku MS Maria Konopnicka, w trakcie prac wykończeniowych w Stoczni Gdańskiej. Wybuch pożaru uwięził wewnątrz kadłuba 21 stoczniowców \- dyrekcja stoczni nie zdecydowała się na czas podjąć próby wypalenia otworu w kadłubie, i wszyscy uwięzieni zginęli w wyniku uduszenia.
+Data 13 grudnia kojarzy się większości Polaków z wprowadzeniem Stanu Wojennego w 1981 roku. Dokładnie 20 lat wcześniej miało miejsce inne, tragiczne wydarzenie: pożar statku MS Maria Konopnicka, w trakcie prac wykończeniowych w Stoczni Gdańskiej. Wybuch pożaru uwięził wewnątrz kadłuba 21 stoczniowców – dyrekcja stoczni nie zdecydowała się na czas podjąć próby wypalenia otworu w kadłubie, i wszyscy uwięzieni zginęli w wyniku uduszenia.
 
 Statek miał być przeznaczony dla ZSRR, co do dziś napędza spekulacje o politycznym motywie zwłoki w podjęciu decyzji o akcji ratunkowej. Oficjalne śledztwo w 1962 roku nie stwierdziło zaniedbań ze strony dyrekcji. W następstwie tragedii na budowanych statkach oznacza się miejsce w którym w razie potrzeby można bezpiecznie wypalić przejście ewakuacyjne na.
 

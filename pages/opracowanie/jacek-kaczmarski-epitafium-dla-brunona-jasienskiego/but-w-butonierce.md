@@ -12,7 +12,7 @@ image_author: 'Tommy Jantarek'
 image_license: domena publiczna
 ---
 
-Futuryzm był  nurtem literackim z początku XX wieku [głoszącym](https://pl.wikipedia.org/wiki/Futuryzm) „praktykę energii i zuchwałość”:  _Dotąd literatura wychwalała pełen zadumy bezwład, ekstazę i sen, my zaś chcemy sławić agresywny ruch, gorączkową bezsenność, gimnastyczny krok, ryzykowny skok, policzkowanie i cios pięścią_ \([Manifest futuryzmu](https://pl.wikipedia.org/wiki/Manifest\_futuryzmu)\).
+Futuryzm był nurtem literackim z początku XX wieku [głoszącym](https://pl.wikipedia.org/wiki/Futuryzm) „praktykę energii i zuchwałość”: _Dotąd literatura wychwalała pełen zadumy bezwład, ekstazę i sen, my zaś chcemy sławić agresywny ruch, gorączkową bezsenność, gimnastyczny krok, ryzykowny skok, policzkowanie i cios pięścią_ \([Manifest futuryzmu](https://pl.wikipedia.org/wiki/Manifest\_futuryzmu)\).
 
 Bruno Jasieński był współtwórcą polskiej gałęzi futuryzmu – tytułowy wiersz jego tomiku, „But w butonierce”, wyraża charakterystyczną dla ruchu zuchwałość:
 

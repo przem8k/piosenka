@@ -15,7 +15,7 @@ W twórczości Kaczmarskiego można znaleźć wiele przykładów posługiwania s
 _Ty, prawd promienie wziąwszy za sztylety,|_
 _Śmiesz jeszcze mniemać, żeś wódz, żeś generał!|_
 _O niewolniku, stój, cofaj bagnety!|_
-_Dopókiż będę za ciebie umierał?..._
+_Dopókiż będę za ciebie umierał?…_
 
 Iwona Grabska\-Gradzińska zauważa, że da się w nim znaleźć także pewne słowa klucze \(generał, Rosja, niemoc\), natomiast obraz gry na fortepianie – oraz późniejsze zniszczenie instrumentu – to nawiązania do innego wiersza Norwida, „Fortepianu Chopina”.
 
