@@ -30,7 +30,7 @@ A Jej zaprzeczyć - to tortura. [E a]
 #zw3
 Tak horrendalna bzdura jest w nas: [G7 C]
 Zbroja z gazety, kieł bez pyska, [G7 C]
-Że łeb się nam pochyla nisko [A7 d]
+Że łeb się sam pochyla nisko [A7 d]
 Przed nakazami, których nie zna. [H7 E]
 
 @zw1
