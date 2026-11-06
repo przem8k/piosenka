@@ -311,9 +311,13 @@ def generate_songs(artists_by_slug):
         os.makedirs(out_dir, exist_ok=True)
         out_file_path = os.path.join(out_dir, "index.html")
 
-        content_html = lyrics.render_lyrics(content)
+        try:
+            content_html, has_chord_positions = lyrics.render_lyrics(content, song_slug)
+        except SyntaxError as e:
+            raise SyntaxError(f"{song_slug}: {e}") from e
         context = make_context_for_page(frontmatter_data, section="songs")
         context["content_html"] = content_html
+        context["has_chord_positions"] = has_chord_positions
         context["get_absolute_url"] = f"/opracowanie/{song_slug}/"
         artist_slugs = set(
             (context["text_authors"] if context["text_authors"] else [])

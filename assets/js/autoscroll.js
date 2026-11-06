@@ -16,7 +16,7 @@
   let rafId = null;
   let lastTimestamp = null;
   let exactScrollY = 0; //stores exact calculated scroll position
-  let optimalYTSpeed = null; 
+  let ytDuration = null; //video duration in s, set when YT player is ready
 
   //DOM elements
   const toggleBtn = document.querySelector('.autoscroll-toggle');
@@ -131,12 +131,34 @@
     lastTimestamp = null;
   }
 
+  //optimal speed for the video duration and current lyrics height (changes with the chords view)
+  function getOptimalYTSpeed() {
+    //lyrics container height
+    const totalDistance = content.getBoundingClientRect().height;
+
+    const basePixelsPerSecond = (1000 / TICK) * BASE;
+    const exactSpeed = totalDistance / (ytDuration * basePixelsPerSecond);
+    const integerPart = Math.floor(exactSpeed);
+    const fractionalPart = exactSpeed - integerPart;
+
+    //round up if fractional part >= 0.15 (instead of default 0.5; it's usually better to err on the high side here)
+    let calculatedSpeed;
+    if (fractionalPart >= 0.15) {
+        calculatedSpeed = integerPart + 1;
+    }
+    else {
+        calculatedSpeed = integerPart;
+    }
+
+    return Math.min(SPEED_MAX, Math.max(SPEED_MIN, calculatedSpeed));
+  }
+
   function enableAutoscroll() {
     autoscrollEnabled = true;
     autoscrollRunning = true;
     
-    if (optimalYTSpeed !== null) {
-      autoscrollSpeed = optimalYTSpeed;
+    if (ytDuration !== null) {
+      autoscrollSpeed = getOptimalYTSpeed();
     } else {
       autoscrollSpeed = SPEED_DEFAULT;
     }
@@ -196,28 +218,9 @@
             const duration = event.target.getDuration();
             if (!duration || duration <= 0) return;
 
-            //lyrics container height
-            const totalDistance = content.getBoundingClientRect().height;
-                        
-            //calculate optimal speed based on video duration
-            const basePixelsPerSecond = (1000 / TICK) * BASE;
-            const exactSpeed = totalDistance / (duration * basePixelsPerSecond);
-            const integerPart = Math.floor(exactSpeed);
-            const fractionalPart = exactSpeed - integerPart;
-            
-            //round up if fractional part >= 0.15 (instead of default 0.5; it's usually better to err on the high side here)
-            let calculatedSpeed;
-            if (fractionalPart >= 0.15) {
-                calculatedSpeed = integerPart + 1;
-            }
-            else {
-                calculatedSpeed = integerPart;
-            }
-
-            optimalYTSpeed = Math.min(SPEED_MAX, Math.max(SPEED_MIN, calculatedSpeed));
-            
+            ytDuration = duration;
             if (autoscrollRunning) {
-                changeSpeed(optimalYTSpeed - autoscrollSpeed);
+                changeSpeed(getOptimalYTSpeed() - autoscrollSpeed);
             }
           }
         }

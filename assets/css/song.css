@@ -76,3 +76,63 @@
         page-break-inside: avoid;
     }
 }
+
+/* chords above the text (songs with ^ marks), filled in by song.js */
+
+.lyrics .ch {
+    position: relative;
+}
+
+/* empty mark raised above the text, makes room for the chord only in lines that have one
+   (1.35em fits the Ubuntu font) */
+.chords-above .ch {
+    vertical-align: 1.35em;
+    line-height: 1.2;
+}
+
+.chords-above .ch::before {
+    content: attr(data-c);
+    position: absolute;
+    bottom: 0;
+    left: var(--shift, 0);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* chords at the end take real width, so they wrap with the text */
+.chords-above .ch.tail {
+    display: inline-block;
+    margin-left: .5em;
+}
+
+.chords-above .ch.tail::before {
+    position: static;
+}
+
+/* icons of the chords view buttons, used like glyphicons: <span class="glyphicon icon-..."> */
+
+.icon-chords-right, .icon-chords-above, .icon-text-only {
+    /* drawn at 18px, but negative margins make it take 14px like a glyphicon,
+       so the buttons keep their size */
+    width: calc(18em / 14);
+    height: calc(18em / 14);
+    margin: calc(-2em / 14);
+    background-color: currentColor;
+    -webkit-mask: center / contain no-repeat;
+    mask: center / contain no-repeat;
+}
+
+.icon-chords-right {
+    -webkit-mask-image: url("../images/icons/chords-right.svg");
+    mask-image: url("../images/icons/chords-right.svg");
+}
+
+.icon-chords-above {
+    -webkit-mask-image: url("../images/icons/chords-above.svg");
+    mask-image: url("../images/icons/chords-above.svg");
+}
+
+.icon-text-only {
+    -webkit-mask-image: url("../images/icons/text-only.svg");
+    mask-image: url("../images/icons/text-only.svg");
+}

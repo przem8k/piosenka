@@ -15,65 +15,65 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/oblawa.
 ---
 
 #zw
-Skulony w jakiejś ciemnej jamie smaczniem sobie spał [a C G C]
-I spały małe wilczki dwa - zupełnie ślepe jeszcze [F E]
-Wtem stary wilk przewodnik co życie dobrze znał [a C G C]
-Łeb podniósł warknął groźnie aż mną szarpnęły dreszcze [F E]
-Poczułem nagle wokół siebie nienawistną woń [a F E a]
-Woń która tłumi wszelki spokój zrywa wszystkie sny [F E]
-Z daleka ktoś gdzieś krzyknął nagle krótki rozkaz: „goń” [a F E a]
-I z czterech stron wypadły na nas cztery gończe psy! [F E]
+Sku^lony w jakiejś ^ciemnej jamie ^smaczniem sobie ^spał [a C G C]
+I ^spały małe wilczki dwa - zu^pełnie ślepe jeszcze [F E]
+Wtem ^stary wilk prze^wodnik co ^życie dobrze ^znał [a C G C]
+Łeb ^podniósł warknął groźnie aż ^mną szarpnęły dreszcze [F E]
+Po^czułem nagle ^wokół siebie ^nienawistną ^woń [a F E a]
+Woń ^która tłumi wszelki spokój ^zrywa wszystkie sny [F E]
+Z da^leka ktoś gdzieś ^krzyknął nagle ^krótki rozkaz: ^„goń” [a F E a]
+I z ^czterech stron wypadły na nas ^cztery gończe psy! [F E]
 
 #ref
->Obława! Obława! Na młode wilki obława! [a C G C]
->Te dzikie, zapalczywe, w gęstym lesie wychowane! [F E]
->Krąg w śniegu wydeptany! W tym kręgu plama krwawa! [a C G C]
->Ciała wilcze kłami gończych psów szarpane! [F E a]
+>O^bława! O^bława! Na ^młode wilki o^bława! [a C G C]
+>Te ^dzikie, zapalczywe, w gęstym ^lesie wychowane! [F E]
+>Krąg ^w śniegu wydep^tany! W tym ^kręgu plama ^krwawa! [a C G C]
+>Ciała ^wilcze kłami ^gończych psów szar^pane! [F E a]
 
 @zw
-Ten który rzucił na mnie się niewiele szczęścia miał
-Bo wypadł prosto mi na kły i krew trysnęła z rany
-Gdym teraz - ile w łapach sił - przed siebie prosto rwał
-Ujrzałem małe wilczki dwa na strzępy rozszarpane!
-Zginęły ślepe, ufne tak, puszyste kłębki dwa
-Bezradne na tym świecie złym, nie wiedząc kto je zdławił
-I zginie także stary wilk choć życie dobrze zna
-Bo z trzema naraz walczy psami i z ran trzech naraz krwawi!
+Ten ^który rzucił ^na mnie się nie^wiele szczęścia ^miał
+Bo ^wypadł prosto mi na kły i ^krew trysnęła z rany
+Gdym ^teraz - ile w ^łapach sił - przed ^siebie prosto ^rwał
+Uj^rzałem małe wilczki dwa na ^strzępy rozszarpane!
+Zgi^nęły ślepe, ^ufne tak, pu^szyste kłębki ^dwa
+Bez^radne na tym świecie złym, nie ^wiedząc kto je zdławił
+I ^zginie także ^stary wilk choć ^życie dobrze ^zna
+Bo z ^trzema naraz walczy psami i ^z ran trzech naraz krwawi!
 
 @ref
->Obława! Obława! Na młode wilki obława!
->Te dzikie, zapalczywe, w gęstym lesie wychowane!
->Krąg w śniegu wydeptany! W tym kręgu plama krwawa!
->Ciała wilcze kłami gończych psów szarpane!
+>O^bława! O^bława! Na ^młode wilki o^bława!
+>Te ^dzikie, zapalczywe, w gęstym ^lesie wychowane!
+>Krąg ^w śniegu wydep^tany! W tym ^kręgu plama ^krwawa!
+>Ciała ^wilcze kłami ^gończych psów szar^pane!
 
 @zw
-Wypadłem na otwartą przestrzeń pianę z pyska tocząc
-Lecz tutaj też ze wszystkich stron zła mnie otacza woń!
-A myśliwemu co mnie dojrzał już się śmieją oczy
-I ręka pewna, niezawodna, podnosi w górę broń!
-Rzucam się w bok, na oślep gnam aż ziemia spod łap tryska
-I wtedy pada pierwszy strzał co kark mi rozszarpuje
-Pędzę, słyszę jak on klnie! Krew mi płynie z pyska
-On strzela po raz drugi - lecz teraz już pudłuje!
+Wy^padłem na ot^wartą przestrzeń ^pianę z pyska ^tocząc
+Lecz ^tutaj też ze wszystkich stron ^zła mnie otacza woń!
+A myśli^wemu co mnie ^dojrzał ^już się śmieją ^oczy
+I ^ręka pewna, niezawodna, pod^nosi w górę broń!
+^Rzucam się w bok, na ^oślep gnam aż ^ziemia spod łap ^tryska
+I ^wtedy pada pierwszy strzał co ^kark mi rozszarpuje
+^Pędzę, słyszę ^jak on klnie! ^Krew mi płynie z ^pyska
+On ^strzela po raz drugi - lecz ^teraz już pudłuje!
 
 @ref
->Obława! Obława! Na młode wilki obława!
->Te dzikie, zapalczywe, w gęstym lesie wychowane!
->Krąg w śniegu wydeptany! W tym kręgu plama krwawa!
->Ciała wilcze kłami gończych psów szarpane!
+>O^bława! O^bława! Na ^młode wilki o^bława!
+>Te ^dzikie, zapalczywe, w gęstym ^lesie wychowane!
+>Krąg w ^śniegu wydep^tany! W tym ^kręgu plama ^krwawa!
+>Ciała ^wilcze kłami ^gończych psów szar^pane!
 
 @zw
-Wyrwałem się z obławy tej schowałem w obcy las
-Lecz ile szczęścia miałem w tym to każdy chyba przyzna
-Leżałem w śniegu jak nieżywy długi długi czas
-Po strzale zaś na zawsze mi została krwawa blizna!
-Lecz nie skończyła się obława i nie śpią gończe psy
-I giną ciągle wilki młode na całym wielkim świecie
-Nie dajcie z siebie zedrzeć skór! Brońcie się i wy!
-O, bracia wilcy! Brońcie się nim wszyscy wyginiecie!
+Wyr^wałem się z o^bławy tej scho^wałem w obcy ^las
+Lecz ^ile szczęścia miałem w tym to ^każdy chyba przyzna
+Le^żałem w śniegu ^jak nieżywy ^długi długi ^czas
+Po ^strzale zaś na zawsze mi zos^tała krwawa blizna!
+Lecz ^nie skończyła ^się obława i ^nie śpią gończe ^psy
+I ^giną ciągle wilki młode na ^całym wielkim świecie
+Nie ^dajcie z siebie ^zedrzeć skór! ^Brońcie się i ^wy!
+O, ^bracia wilcy! Brońcie się nim ^wszyscy wyginiecie!
 
 @ref
->Obława! Obława! Na młode wilki obława!
->Te dzikie, zapalczywe, w gęstym lesie wychowane!
->Krąg w śniegu wydeptany! W tym kręgu plama krwawa!
->Ciała wilcze kłami gończych psów szarpane!
+>O^bława! O^bława! Na ^młode wilki o^bława!
+>Te ^dzikie, zapalczywe, w gęstym ^lesie wychowane!
+>Krąg ^w śniegu wydep^tany! W tym ^kręgu plama ^krwawa!
+>Ciała ^wilcze kłami ^gończych psów szar^pane!
