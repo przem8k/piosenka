@@ -71,6 +71,12 @@
     margin-bottom: 16px;
 }
 
+/* empty line between verses when copying the text */
+.paragraph-break {
+    height: 0;
+    overflow: hidden;
+}
+
 @media print {
     .lyrics .paragraph {
         page-break-inside: avoid;
