@@ -16,110 +16,110 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/czaty_s
 ---
 
 #zwrotka1
-Wiele dworków, majątków, [C]
-Ogrodowych zakątków [E7]
->Wielkopolskie hołubią równiny; [F C]
-Ale rzec się ośmielę, [d H0]
-Że przełożysz niewiele [E a]
->Nad uroki śmiełowskiej dziedziny. [d E7 a]
+Wiele ^dworków, majątków, [C]
+Ogro^dowych zakątków [E7]
+>Wielko^polskie hołubią rów^niny; [F C]
+Ale ^rzec się oś^mielę, [d H0]
+Że prze^łożysz nie^wiele [E a]
+>Nad u^roki śmie^łowskiej dzie^dziny. [d E7 a]
 
 #zwrotka2
-Gdzie dygoce Jarocin [F]
-Od rockowych wypocin, [C]
->Żerków w dawnej świetności się chowa – [E F (A7)]
-Czy się zmierzcha, czy dnieje – [d]
-Śmiełów śmiało jaśnieje [a]
->Jak stracona w murawie podkowa. [G C]
+Gdzie dy^goce Jarocin [F]
+Od ro^ckowych wypocin, [C]
+>Żerków w ^dawnej świetności się ^chowa – [E F (A7)]
+Czy się ^zmierzcha, czy dnieje – [d]
+Śmiełów ^śmiało jaśnieje [a]
+>Jak stra^cona w murawie pod^kowa. [G C]
 
 #zwrotka3
-Gdzie ten koń, co ją stracił? [f]
-Gdzie ziemianie bogaci, [C]
->Gdzie masońskie fartuszki i młotki? [a E]
-Kustosz z żoną kustoszką [F]
-Namyślają się gorzko, [C]
->Skąd na remont pałacu wziąć środki. [d E7 a]
+Gdzie ten ^koń, co ją stracił? [f]
+Gdzie zie^mianie bogaci, [C]
+>Gdzie ma^sońskie fartuszki i ^młotki? [a E]
+Kustosz z ^żoną kustoszką [F]
+Namyś^lają się gorzko, [C]
+>Skąd na ^remont pa^łacu wziąć ^środki. [d E7 a]
 
 @zwrotka1
-O, nie tak było drzewiej!
-A jak było - nikt nie wie,
->Bo nie wszystkie się jawią sekrety,
-Kiedy chodzi o miłość,
-Polityczną zawiłość
->I poetę pod wpływem kobiety.
+O, nie ^tak było drzewiej!
+A jak ^było - nikt nie wie,
+>Bo nie ^wszystkie się jawią sek^rety,
+Kiedy ^chodzi o ^miłość,
+Poli^tyczną za^wiłość
+>I po^etę pod ^wpływem ko^biety.
 
 @zwrotka2
-Tu wieszcz Adam dni szereg
-Spędził w piekle rozterek;
->Czy powstańcze zasilić ma jatki,
-Czy - gdy żądza się perli
-W romantycznej scenerii –
->Wybrać raczej ramiona mężatki.
+Tu wieszcz ^Adam dni szereg
+Spędził w ^piekle rozterek;
+>Czy po^wstańcze zasilić ma ^jatki,
+Czy - gdy ^żądza się perli
+W roman^tycznej scenerii –
+>Wybrać ^raczej ramiona mę^żatki.
 
 @zwrotka3
-Tam reduty, potyczki,
-Bem, Prądzyński, Chłopicki,
->Tam krwiożercze Moskali są rzesze;
-Ona tu, niedaleczko,
-Ot, przejażdżka nad rzeczką –
->Serce, drżyj! W Budziszewku włos czesze.
+Tam re^duty, potyczki,
+Bem, Prą^dzyński, Chłopicki,
+>Tam krwio^żercze Moskali są ^rzesze;
+Ona ^tu, niedaleczko,
+Ot, prze^jażdżka nad rzeczką –
+>Serce, ^drżyj! W Budzi^szewku włos ^czesze.
 
 @zwrotka1
-A spod grzywki niesfornej
-Zerka oczko przekorne,
->Kuszą wargi czerwieńsze od wina;
-Jeszcze niżej – o nieba!
-Wszystko jest, co potrzeba,
->A do tego i mąż – poczciwina.
+A spod ^grzywki niesfornej
+Zerka ^oczko przekorne,
+>Kuszą ^wargi czerwieńsze od ^wina;
+Jeszcze ^niżej – o ^nieba!
+Wszystko ^jest, co po^trzeba,
+>A do ^tego i ^mąż – poczci^wina.
 
 @zwrotka2
-Trudny wybór. Nie dla niej;
-Legło w gruzach powstanie
->I legł wieszcz – pod najsłodszym z ciężarów.
-A wyrzuty sumienia
-W patriotycznych skrył pieniach,
->Za co wdzięczny do dziś jest mu naród.
+Trudny ^wybór. Nie dla niej;
+Legło w ^gruzach powstanie
+>I legł ^wieszcz – pod najsłodszym z cię^żarów.
+A wy^rzuty sumienia
+W patrio^tycznych skrył pieniach,
+>Za co ^wdzięczny do dziś jest mu ^naród.
 
 @zwrotka3
-Wiele jeszcze przed wieszczem
-I uniesień, i nieszczęść:
->Szlak do Turcji przez Prusy i Francję;
-Wieszczył, grzeszył i święcił,
-Lecz zachował w pamięci
->Biały Śmiełów, srebrzystą Konstancję.
+Wiele ^jeszcze przed wieszczem
+I u^niesień, i nieszczęść:
+>Szlak do ^Turcji przez Prusy i ^Francję;
+Wieszczył, ^grzeszył i święcił,
+Lecz za^chował w pamięci
+>Biały ^Śmiełów, sreb^rzystą Kon^stancję.
 
 @zwrotka1
-Ach, i ja tu uciekłem,
-Gdy utarczki przewlekłe
->Obalały gabinet Pawlaka,
-By nie Sejm mieć za oknem,
-Ale łąki podmokłe,
->Lip gałęzie w jemiołach i ptakach.
+Ach, i ^ja tu uciekłem,
+Gdy u^tarczki przewlekłe
+>Oba^lały gabinet Paw^laka,
+By nie ^Sejm mieć za ^oknem,
+Ale ^łąki pod^mokłe,
+>Lip ga^łęzie w je^miołach i ^ptakach.
 
 @zwrotka2
-Tam skandale i grandy,
-Tam odchodzi Falandysz,
->Tam Namiestnik swój geniusz tłumaczy –
-Tu najwyżej doleci
-Z pegeeru naprzeciw
->Woń gnojówki lub tęskny zew klaczy.
+Tam skan^dale i grandy,
+Tam od^chodzi Falandysz,
+>Tam Na^miestnik swój geniusz tłu^maczy –
+Tu naj^wyżej doleci
+Z pege^eru naprzeciw
+>Woń gno^jówki lub tęskny zew ^klaczy.
 
 @zwrotka3
-Łotr – kto skrył się w Śmiełowie,
-Gdy wichury dziejowe
->Rozszarpują ojczyznę na łokcie!
-Kto ucieka od strapień
-Tu, gdzie nocą w drzwi drapie
->Wiatr gałęzią – kochanki paznokciem…
+Łotr – kto ^skrył się w Śmiełowie,
+Gdy wi^chury dziejowe
+>Rozszar^pują ojczyznę na ^łokcie!
+Kto u^cieka od strapień
+Tu, gdzie ^nocą w drzwi drapie
+>Wiatr ga^łęzią – ko^chanki paz^nokciem…
 
 @zwrotka2
-Lecz jak gromić Adama,
-Gdy rozterka ta sama
->Zamiast w walce – wyżywa się w piosnkach?
-Więc sumienie najszczersze
-Dyktowało mi wiersze,
->Których temat: „Pochwała łotrostwa” [ G C ( A7) ]
+Lecz jak ^gromić Adama,
+Gdy roz^terka ta sama
+>Zamiast w ^walce – wyżywa się w ^piosnkach?
+Więc su^mienie najszczersze
+Dykto^wało mi wiersze,
+>Których ^temat: „Pochwała łot^rostwa” [ G C ( A7) ]
 
 #3
-Więc sumienie najszczersze [ d ]
-Dyktowało mi wiersze, [ a ]
->Których temat: „Pochwała łotrostwa” [ d E7 a ]
+Więc su^mienie najszczersze [ d ]
+Dykto^wało mi wiersze, [ a ]
+>Których ^temat: „Poch^wała łot^rostwa” [ d E7 a ]
