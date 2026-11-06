@@ -10,6 +10,8 @@ Szablony HTML znajdują się w folderze [templates](templates).
 
 Pliki strony w formacie gotowym do publikacji są generowane na podstawie plików Markdown i szablonów przy pomocy programu [gen.py](piosenka/management/commands/gen.py).
 
+Zapraszamy do nadsyłania poprawek w formie pull requestów!
+
 ## Składnia opracowania piosenki
 
 Opracowanie piosenki to plik `pages/opracowanie/<piosenka>/index.md`. Pod nagłówkiem (między liniami `---`) jest tekst z akordami, np. fragment „Obławy”:
@@ -62,8 +64,6 @@ Bo ^wypadł prosto mi na kły i ^krew trysnęła z rany
 - Liczba `^` w linii musi być równa liczbie akordów (poza akordami przejściowymi). Inaczej strona nie zbuduje się poprawnie, a komunikat wskaże niepoprawnie zapisaną piosenkę i problematyczne linie. Numer linii liczy się od początku tekstu piosenki, nie od początku pliku.
 - `^` trzeba wstawić we wszystkich liniach z tekstem i akordami. Jeśli w części linii ich brakuje, generator wypisze ostrzeżenie, a piosenka będzie dostępna tylko w zwykłym widoku.
 - Na stronie domyślny jest zwykły widok. Wybór trybu przeglądarka zapamiętuje w local storage. Jeżeli zostanie wybrany tryb „akordy nad tekstem”, a dana piosenka będzie miała w opracowaniu wstawione znaczniki, to będzie wyświetlał się ten tryb.
-
-Zapraszamy do nadsyłania poprawek w formie pull requestów!
 
 ## Przydatne komendy
 
