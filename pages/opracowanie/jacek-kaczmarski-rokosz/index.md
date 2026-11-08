@@ -16,8 +16,8 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/rokosz.
 ---
 
 #lol1
-– Dosyć mamy tego, co było, [ d B d ]
-– Panowie szlachta! W górę czuby [ B d ]
+– Dosyć mamy tego, co było! [ d B d ]
+– Panowie szlachta! W górę czuby! [ B d ]
 – Nie da dobrocią się – to siłą [ C ]
 Strzec przed hetmanem praw swych zguby! [ B A7 ]
 – Furda podpisy i układy! [ d B d ]
@@ -48,17 +48,17 @@ Pospolita Rzecz! [ E A7 ]
 >Świetliste bastiony. [ d/A a d]
 >Niech diabelskim wynalazkom [ d g d ]
 >Bije ciemny świat pokłony, [ d g d ]
->Nas czekają z bożą łaską [ F g ]
->Niedoczesne trony [ d/A a d ]
+>Nas czekają z Bożą łaską [ F g ]
+>Niedoczesne trony. [ d/A a d ]
 
 @lol1
-– Dosyć mamy tego co jest!
+– Dosyć mamy tego, co jest!
 – Panowie szlachta! Do pałaszy!
-– Starczy po gardle ostrza gest
+– Starczy po gardle ostrza gest,
 A kundel kanclerz się wystraszy!
-– Furda odezwy, sądy, pozwy,
+– Furda odezwy, sądy, pozwy!
 – Łżą płaczki, żeśmy rokoszanie!
-– Ich matactw my ofiarne kozły
+– Ich matactw my ofiarne kozły!
 Padnie kraj, jeśli nas nie stanie!
 
 @lol2
@@ -84,17 +84,17 @@ Pospolita Rzecz!
 >Świetliste bastiony.
 >Niech diabelskim wynalazkom
 >Bije ciemny świat pokłony,
->Nas czekają z bożą łaską
->Niedoczesne trony
+>Nas czekają z Bożą łaską
+>Niedoczesne trony.
 
 @lol1
 – Dosyć mamy tego, co będzie!
 – Panowie szlachta! Po buławy!
 – Niech jeden z nas na tronie siędzie
 I weźmie w ręce nasze sprawy!
-– Uniesiem razem władzy ciężar
+– Uniesiem razem władzy ciężar,
 W zamian ojczyzny skarbiąc miłość!
-Wiedział nasz pradziad jak zwyciężać,
+Wiedział nasz pradziad, jak zwyciężać,
 Niech zatem będzie tak, jak było!
 
 @lol2
@@ -118,7 +118,7 @@ Pospolita Rzecz!
 >Niemce, Szwedy, Angielczyki –
 >Nie nauczą nas pokory
 >Czarcie ich praktyki!
->Niechaj słucha się litery
+>Niechaj słucha się litery,
 >Kto się nie ma za człowieka,
 >Nas za wiarę w zapał szczery
->Wiekuistość czeka
+>Wiekuistość czeka!

@@ -31,7 +31,7 @@ A mnie się to życie podoba! [ g C d ]
 >Wiedzieć o tym nie chcą ludzie. [ A g6/B A ]
 
 @1
-– Właśnie, ludzie. Niech pan pomyśli
+– Właśnie, ludzie. Niech pan pomyśli:
 Starczy im prawdziwych przepaści,
 A najgorsze – jeszcze się przyśni;
 W cierpieniu – wszyscy są właśni.
@@ -66,7 +66,7 @@ Pan przeczy człowieczej miłości!
 – Właśnie, Bóg. Pan Boga nie lubi,
 Ale mówi, że wciąż Go szuka.
 W pańskich trwogach można się zgubić;
-Pojąć sztukę pańską, to sztuka.
+Pojąć sztukę pańską to sztuka.
 Pan publicznie z losem się czubi:
 Jaka z tego dla nas nauka?
 

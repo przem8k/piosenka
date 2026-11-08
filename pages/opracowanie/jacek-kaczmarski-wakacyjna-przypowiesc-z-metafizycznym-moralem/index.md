@@ -20,7 +20,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wakacyj
 [D A E7 A D A E7 A ]
 
 #1
-Zrywamy się przed świtem [ A ]
+Zrywamy się przed świtem, [ A ]
 Nie myśląc o śniadaniu; [ E7 A ]
 Milczący, źli, a przy tym [ A ]
 Zupełnie niewyspani. [ E7 A ( A7 ) ]
@@ -28,16 +28,16 @@ Zupełnie niewyspani. [ E7 A ( A7 ) ]
 #2
 >Okrągły księżyc drwi z nas [ D ]
 >Jak puste dno butelki; [ Dis0 H E ]
->Lecz nam to nie pierwszyzna [ A ]
+>Lecz nam to nie pierwszyzna – [ A ]
 >Idziemy po muszelki. [ E7 A ]
->Lecz nam to nie pierwszyzna [ A ]
+>Lecz nam to nie pierwszyzna – [ A ]
 >Idziemy po muszelki. [ E7 A ( F ) ]
 
 #3
 Szlak wiedzie brzegiem morza [ B ]
 Na zachód – w kołdrze mroku, [ F7 B ]
 Więc z tyłu pełznie zorza [ B ]
-Cierpliwie krok po kroku. [ F7 B ( B7 ) ]
+Cierpliwie, krok po kroku. [ F7 B ( B7 ) ]
 
 #4
 >Na piasku rosną cienie [ Dis ]
@@ -49,7 +49,7 @@ Cierpliwie krok po kroku. [ F7 B ( B7 ) ]
 
 #5
 Muszelki – rzecz nietrwała, [ H ]
-Po prawdzie nic nie warta, [ Fis7 H ]
+Po prawdzie nic niewarta, [ Fis7 H ]
 Ale córeczka chciała – [ H ]
 Córeczka jest uparta. [ Fis7 H ( H7 ) ]
 
@@ -98,9 +98,9 @@ Muszelek – na lekarstwo! [ A7 D ( D7 )]
 #10
 >Nie w naszej widać mocy [ G ]
 >Odnaleźć skarb tak wielki! [ Gis0 E A ]
->Na skórze, w chłodzie nocy [ D ]
+>Na skórze, w chłodzie nocy, [ D ]
 >Pęcznieją nam bąbelki. [ A7 D ]
->Na skórze, w chłodzie nocy [ D ]
+>Na skórze, w chłodzie nocy, [ D ]
 >Pęcznieją nam bąbelki. [ A7 D ]
 
 #11
@@ -112,9 +112,9 @@ Jutro ci pójdzie lepiej! [ E7 A ]
 #12
 >Los żaden nas nie zmoże, [ D ]
 >Choć przeszkód pełen wszelkich! [ Dis0 H E ]
->Chwała Ci dobry Boże [ D A ]
+>Chwała Ci, dobry Boże, [ D A ]
 >Za drogę po muszelki! [ E7 A ]
->Chwała Ci dobry Boże [ D A ]
+>Chwała Ci, dobry Boże, [ D A ]
 >Za drogę po muszelki! [ E7 A ]
->Chwała Ci dobry Boże [ D A ]
+>Chwała Ci, dobry Boże, [ D A ]
 >Za drogę po muszelki! [ E7 A D A ]

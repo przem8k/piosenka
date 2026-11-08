@@ -32,7 +32,7 @@ Jej tatuś jeździł w tajnych misjach do Paryża, [a]
 Skąd rękawiczek i pachnideł słał jej w bród, [A7 d]
 Czym swej wierności Matce Rosji nie ubliżał, [d a]
 Bo wzorem Lwa Tołstoja kochał prosty lud. [E7 a]
-Paryski atłas cudnie lśnił na smukłych dłoniach [A d]
+Paryski atłas cudnie lśnił na smukłych dłoniach, [A d]
 Gdy malowała akwarelą sielskie błonia [H E7]
 Princessa Donia. [E7 a]
 
@@ -54,11 +54,11 @@ To jedna z tych niewyjaśnionych nigdy spraw. [a E]
 Zapewne książę bawił znów na delegacji, [E7]
 A córka z pędzlem w dłoni kwitła pośród traw. [E7 a]
 Ditko się zbliżył, żeby zajrzeć jej w obrazek [ d ]
-(Najpierw poczuła, nim dostrzegła na tle pól [ H E7 ]
+(Najpierw poczuła, nim dostrzegła na tle pól, [ H E7 ]
 I zgrabnym noskiem powściągnęła swą odrazę – [ A d ]
-Wszak tatuś mówił jej by kochać ziemi sól). [ a H E7 a ]
+Wszak tatuś mówił jej, by kochać ziemi sól). [ a H E7 a ]
 Nieszczęsny speszył się, bo myślał niezbyt szybko, [A d]
-Więc jej zaśpiewał – tak jak umiał – z lekką chrypką [H E7]
+Więc jej zaśpiewał – tak, jak umiał – z lekką chrypką [H E7]
 Parobek Ditko: [E7 a (G7)]
 
 #ref
@@ -83,7 +83,7 @@ To z obcych nauk wszak wynikło całe zło!
 Z zachodnich mędrków żaden jej nie uświadomił,
 Że imię Ditko znaczy Diabeł – tylko to! [H E7 a]
 Nie żałowała tej niewiedzy – ot, ironia!
-Wdychając Ditki woń siarczystą jak amoniak
+Wdychając Ditka woń siarczystą jak amoniak
 Diablessa Donia…
 
 Gdy wyszła na jaw mezaliansu konsekwencja,  [d]
@@ -129,7 +129,7 @@ W samotne noce rozmyślała z twarzą w dłoniach, [ A d ]
 Co też z jej Diabłem zrobić mógł Czerwony Młyn… [ a H E7 a ]
 I nagle zjawił się – jak nagle kiedyś zniknął [A d]
 Sterany bies – ze srebrną na policzku nitką, [H E7]
-I z nią zaśpiewał – tak jak umiał – z lekką chrypką [d a]
+I z nią zaśpiewał – tak, jak umiał – z lekką chrypką [d a]
 Emigrant Ditko… [E7 a (G7)]
 
 @ref

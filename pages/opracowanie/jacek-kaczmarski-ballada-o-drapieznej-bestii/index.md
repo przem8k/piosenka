@@ -21,7 +21,7 @@ Wszyscy ludzie siedzą cichuteńko jak trusie – [E F E]
 Treser wkłada głowę w paszczę lwa. [F E]
 Ha, ha! Ha, ha! [F E]
 Głowę w paszczę lwa. [F G F E]
-Ha ha! Ha ha! [F E]
+Ha, ha! Ha, ha! [F E]
 Treser wkłada głowę w paszczę lwa. [F G F E]
 
 @zw
@@ -32,7 +32,7 @@ Bestia przecież drapieżna aż strach!
 Ach, ach! Ach, ach!
 Drapieżna aż strach.
 Ach, ach! Ach, ach!
-Bestia przecież drapieżna aż strach.
+Bestia przecież drapieżna aż strach!
 
 @zw
 Zaś po każdym spektaklu lew zamyśla się srodze:
