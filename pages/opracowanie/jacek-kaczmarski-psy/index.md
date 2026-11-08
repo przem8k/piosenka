@@ -29,7 +29,7 @@ Nad jedzeniem roje much.
 Ile ich tu – nikt nie zliczy,
 Skąd się wzięły – nikt nie zgadnie.
 Na podwórzu, na ulicy
-Psy się gryzą gdzie popadnie!
+Psy się gryzą, gdzie popadnie!
 
 #2
 >Niech się szarpią, niech się gryzą! [ d a ]

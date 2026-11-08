@@ -14,28 +14,28 @@ performers:
 ---
 
 #zw
-Ten okręt kościołem jest czarnym [a E a]
+Ten okręt kościołem jest czarnym, [a E a]
 Ahab ma bliznę na gębie. [a G C]
-Za nami, przed nami — głębie: [d C]
-Karnym śmierć — i bezkarnym. [a E a]
+Za nami, przed nami – głębie: [d C]
+Karnym śmierć – i bezkarnym. [a E a]
 
 @zw
-Ten okręt — czerwoną kaplicą	
+Ten okręt – czerwoną kaplicą	
 Buntu praktycznej załogi.
-Za nami, przed nami nicość:
-Śmierć tchórzom — i tym bez trwogi.
+Za nami, przed nami – nicość:
+Śmierć tchórzom – i tym bez trwogi.
 
 @zw
-Ten okręt jest żółtą zarazą
+Ten okręt jest żółtą zarazą,
 Przynętą dla chętnych wstrętu.
-Za nami, przed nami lawa
+Za nami, przed nami – lawa:
 Śmierć diamentów i mętów.
 
 @zw
 Ten okręt jest białym widmem
 Z czarną blizną przypadku.
-Gdy fala się nad nim wydmie —
-Trumna — szalupą świadków.
+Gdy fala się nad nim wydmie –
+Trumna – szalupą świadków.
 
 @zw
 Ten okręt nie ma koloru

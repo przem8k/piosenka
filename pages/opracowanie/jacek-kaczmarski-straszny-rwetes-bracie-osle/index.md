@@ -30,7 +30,7 @@ Kiwa osioł łbem z wigorem, [Cis0 e]
 Aż mu pchły spadają z uszu. [Cis0 H7 e]
 
 >Patrzcie, ludy, jakie cudy, [C G]
->Słyszcie wołka i osiołka, [D e]
+>Słyszcie wołka i osiołka – [D e]
 >Człeczym głosem nad swym losem [C G]
 >Rozprawia żywiołka! [a6/Fis H4 H7 (e A/Cis D H/Dis)]
 >Rozprawia żywiołka! [e C7 H7]
@@ -48,7 +48,7 @@ Osioł nos zagłębił w żłobie.
 Jeśli ma coś na wątrobie!
 
 >Patrzcie, ludy, jakie cudy, [C G]
->Słyszcie wołka i osiołka, [D e]
+>Słyszcie wołka i osiołka – [D e]
 >Człeczym głosem nad swym losem [C G]
 >Rozprawia żywiołka! [a6/Fis H4 H7 (e A/Cis D H/Dis)]
 >Rozprawia żywiołka! [e C7 H7 (f B/D Es C/E)]
@@ -65,7 +65,7 @@ Ciebie zarżną na kotlety, [D0 f]
 Mnie zaprzęgną do kierata. [D0 C7 f]
 
 >Patrzcie, ludy, jakie cudy, [Des As]
->Słyszcie wołka i osiołka, [Es f]
+>Słyszcie wołka i osiołka – [Es f]
 >Człeczym głosem nad swym losem [Des As]
 >Rozprawia żywiołka! [b6/G C4 C7]
 

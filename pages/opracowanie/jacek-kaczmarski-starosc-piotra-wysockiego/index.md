@@ -15,41 +15,41 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Starosc
 ---
 
 #zw
- Czasem mówi jak człowiek [G A G]
-Rękę poda uśmiechnie się uprzejmie [G A G]
+ Czasem mówi jak człowiek, [G A G]
+Rękę poda, uśmiechnie się uprzejmie; [G A G]
 A czasem błyśnie szaleństwem spod powiek [G D e D]
-I wtedy ma w oczach Syberię [G D e]
+I wtedy ma w oczach Syberię. [G D e]
 Nocą pali światła w oknach [G D e]
-I krzyczy (matki straszą nim dzieci) [G D e]
-Generale Sowiński reduta od krwi mokra [G D e h]
+I krzyczy (matki straszą nim dzieci). [G D e]
+– Generale Sowiński, reduta od krwi mokra, [G D e h]
 Niech pan nas Bogu poleci! [G A H]
 
 #ref
-- Nie wychodźcie z obozu [e h]
-Wybiją was jak kaczki - [e h (G A G)]
+– Nie wychodźcie z obozu, [e h]
+Wybiją was jak kaczki – [e h (G A G)]
 
 @zw
-Cały się kurczy i marszczy
-Kiedy się musi meldować co miesiąc
+Cały się kurczy i marszczy,
+Kiedy się musi meldować co miesiąc;
 Po dwudziestu sześciu latach carscy
-W obłęd powstańca nie wierzą
+W obłęd powstańca nie wierzą.
 Trzema ciosami zrąbał drzewo
-I śmiał się - to masło nie pień -
-Rąbaliśmy z tymi co zostali w śniegach
-Pnie zmarznięte na kamień
+I śmiał się – to masło, nie pień;
+Rąbaliśmy z tymi, co zostali w śniegach,
+Pnie zmarznięte na kamień.
 
 @ref
-- Generale Sowiński,
-Dlaczego cię nie widzę -
+– Generale Sowiński,
+Dlaczego cię nie widzę –
 
 #zw2
 Chodzi chyłkiem po Warce [G A  G]
-I zagląda nagle ludziom w oczy [G A G]
-Jakby w każdym widział wroga albo zdrajcę [G D e D]
-Widmo bezsennych nocy [G D e]
-- Ich głosy generale są o krok [G D e]
-Ich głosy generale są o krok [G D e]
-- Śmieje się Moskal nade mną pochylony [ G D e]
-Śmieje się Moskal nade mną pochylony [G D e]
-- Już po walce generale już po walce [G D e h]
-Ten okop jest stracony [G A e]
+I zagląda nagle ludziom w oczy, [G A G]
+Jakby w każdym widział wroga albo zdrajcę – [G D e D]
+Widmo bezsennych nocy. [G D e]
+– Ich głosy, generale, są o krok, [G D e]
+Ich głosy, generale, są o krok. [G D e]
+– Śmieje się Moskal nade mną pochylony, [ G D e]
+Śmieje się Moskal nade mną pochylony. [G D e]
+– Już po walce, generale, już po walce; [G D e h]
+Ten okop jest stracony. [G A e]

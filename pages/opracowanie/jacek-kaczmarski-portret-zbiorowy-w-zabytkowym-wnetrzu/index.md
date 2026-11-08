@@ -31,7 +31,7 @@ Głosy nam hartował ostrzał wraży. [a B a]
 Z plebejskością bardzo nam do twarzy. [d B E a]
 
 W zabytkowym wnętrzu, wśród sztandarów, [d a]
-Atrybutów odzyskanych – godni [d a]
+Atrybutów odzyskanych – godni, [d a]
 Pozujemy – szczerzy i swobodni, szczerzy i swobodni [H0]
 Kondotierzy przemienieni w Panów. [E F E]
 
@@ -48,7 +48,7 @@ Macie niepodległość! My – profity! [d B E]
 Zadrżą okna od żołnierskiej pieśni; [a F a]
 Po żołnierskiej zadrżą od kościelnej! [a F a]
 Pana Boga my na piersiach nieśli, [d Es d Es d] 
-Żeby z waszych oczu zetrzeć bielmo! [d B E a]
+Żeby z waszych oczu zedrzeć bielmo! [d B E a]
 
 Patrzcie! Krew uderza nam do głowy, [d a] 
 Od sztandarów całowania wrząca! [d a]

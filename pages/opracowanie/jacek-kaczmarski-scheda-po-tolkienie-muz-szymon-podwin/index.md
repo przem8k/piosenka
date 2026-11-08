@@ -21,7 +21,7 @@ performers:
 
 Kowale trudu i obłudy, [e D G D]
 Złotnicy zła, szlifierze zysku [a D e]
-Myśl nazywają córką nudy [e D G D]
+Myśl nazywają córką nudy, [e D G D]
 Choć są więźniami swych pomysłów, [a D e]
 Wycisną wszystko z ziemskiej grudy – [G D a e]
 Przewrotne, chciwe krasnoludy. [G D G (D)]
@@ -47,7 +47,7 @@ Skargi – na strzępy słów podarte; [a E a (E)]
 Tylko by tarły się i żarły [d E]
 Okrutne, nieszczęśliwe karły. [d E]
 W ochrypłych obracają gardłach [e D G D]
-Skargi — na strzępy słów podarte. [a D e (D C D)]   
+Skargi – na strzępy słów podarte. [a D e (D C D)]   
 [a D e]
 
 Przejrzyste dla tych, którzy nie śnią, [e D G a]

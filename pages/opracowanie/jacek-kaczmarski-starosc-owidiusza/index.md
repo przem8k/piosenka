@@ -36,7 +36,7 @@ Iść będzie i nie dojdzie pismo Augusta z łaską. [h fis G A D]
 Z dala od dworu i tłumu – cóż to za cena wygnania? [D A D]
 Mówiłem wszak sam – nad poezją władza nie może mieć władzy. [D A D]
 Cyrku w pustelnię zamiana spokój jednak odbiera, [D G D]
-Bo pyszniej drażnić Cesarza niż kupcom za opał kadzić.  [h fis G A D]
+Bo pyszniej drażnić Cesarza, niż kupcom za opał kadzić.  [h fis G A D]
 
 @zwrotka3
 >Rzymu mego kolumny! Wróg z murów was powydziera

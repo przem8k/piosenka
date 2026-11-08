@@ -20,7 +20,7 @@ Stwórca trawi na długich spacerach [ d B0 d (e ) ]
 Nocą leży na chmurnym posłaniu [ f B0 f ]
 Jasność własna sen mu odbiera [ f b C A7 d ]
 Swoich praw się uczy na pamięć [ d B0 d ]
-Sam ich musi przestrzegać by trwały [ d B0 d ( e ) ]
+Sam ich musi przestrzegać, by trwały [ d B0 d ( e ) ]
 W pustym raju niebo jak kamień [ f B0 f ]
 Pusty raj jest dla Stwórcy za mały [ f b C A7 d ( E7 ) ]
 

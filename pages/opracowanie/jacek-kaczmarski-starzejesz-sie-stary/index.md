@@ -28,7 +28,7 @@ Bliskości stosu i trzosu. [H7 e]
 
 @zwrotka1
 Z dnia na dzień trzos nagle się pustką zaśmieje
-I popiół rozwieje się stosu
+I popiół rozwieje się stosu,
 A nam pozostaną młodzieńcze nadzieje
 Jak głos zwęglających się osób.
 
@@ -39,9 +39,9 @@ Jak głos zwęglających się osób.
 >Ale los nut – losem Głosu!
 
 #powtorzenie
->Starzejesz się, stary – i ja się starzeję: [C E7]
+>Starzejesz się, stary – i ja się starzeję, [C E7]
 >Ale los nut – losem Głosu! [a H7 e]
 
 @powtorzenie
->Starzejesz się, stary – i ja się starzeję:
+>Starzejesz się, stary – i ja się starzeję,
 >Ale los nut – losem Głosu!

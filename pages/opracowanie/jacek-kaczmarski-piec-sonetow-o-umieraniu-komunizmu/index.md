@@ -27,7 +27,7 @@ Nad ludźmi – wierząc szczerze, że nad światem; [ C G ]
 I grzebał szczodrą łapką po kieszeniach, [ F E ]
 Bo wszystkie grzechy mają swą opłatę… [ C H7 ( H7) ]
 Opłatą miał mu być pokuty kierat. [ e A7 ]
-Więc, kiedy będzie komunizm umierał – [ e A7 ]
+Więc kiedy będzie komunizm umierał – [ e A7 ]
 Zali opłata starczy na opłatek? [ C H7 e ]
 
 II
@@ -37,7 +37,7 @@ Czy – kiedy umrze – będą płakać po nim
 Ci tylko, którzy zań za życia zmarli?
 Czy w tych, co z objęć jego się wydarli,
 Karłem się jakimś odrodzi po zgonie?
-Nawet jeżeli płód ten się poroni –
+Nawet jeżeli ten płód się poroni –
 Mogą zachować go ludzie „normalni”
 I przetrwa w słoju jak człowiecze strzępy,
 Którymi karmił swe eksperymenty
@@ -61,7 +61,7 @@ Chce kartezjańska Europa wierzyć,
 Że jest skazańca wolą – żyć lub nie żyć,
 A ziemię wszędzie użyźniają kości
 Tych, co nie mieli – woli możliwości.
-Więc, jeśli śmierć ta ma się tak rozszerzyć,
+Więc jeśli śmierć ta ma się tak rozszerzyć,
 Że będzie ślepym, oszalałym katem,
 Co szczodrą rzezią żegna się ze światem –
 Kto ma powitać ją i przy tym – przeżyć?

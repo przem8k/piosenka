@@ -34,7 +34,7 @@ Postawiłem po sto gram, niech Negr widzi, że gest mam – [A D]
 Jemu przecież w Ameryce ciężko jest. [A E7 A]
 
 #bridge
-On tymczasem mówi – Stany Zjednoczone [E7 A]
+On tymczasem mówi: – Stany Zjednoczone [E7 A]
 To największe państwo z wszystkich świata państw; [E7 A]
 W bankach złota ma zasoby niezliczone, [E7 A]
 Chcesz z nim zacząć, to już nie masz żadnych szans. [E7 A (E A)]
@@ -54,7 +54,7 @@ I na światły wywód mój odpowiedź dał:
 
 @bridge
 – U nas jest na głowę po dwa samochody,
-Zbudowaliśmy największy świata gmach,
+Zbudowaliśmy najwyższy świata gmach,
 Nasza demokracja daje nam swobody,
 Których oczekuje cały świat we łzach.
 

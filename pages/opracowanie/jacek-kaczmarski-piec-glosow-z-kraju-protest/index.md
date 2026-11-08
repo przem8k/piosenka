@@ -18,32 +18,32 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/protest
 #zw1
 Nie ja niszczyłem kraj, nie ja [a]
 Będę go teraz budował. [a E]
-A nawet gdybym - co to da, [E]
+A nawet gdybym – co to da, [E]
 Nie dam się nabrać na słowa. [E a]
-Widziałem, jak mój ojciec żył [a]
-Co całe życie pracował [A7 d]
-Aż umarł żyć nie mając sił [d a]
-Nie było za co pochować [E a]
-Aż umarł żyć nie mając sił [d a]
-Nie było za co pochować [E a]
+Widziałem, jak mój ojciec żył, [a]
+Co całe życie pracował, [A7 d]
+Aż umarł – żyć nie mając sił. [d a]
+Nie było za co pochować. [E a]
+Aż umarł – żyć nie mając sił. [d a]
+Nie było za co pochować. [E a]
 
 @zw1
-Do czynu niech się rwie, kto chce -
-Syzyfów tutaj nie braknie
-Więc nabierajcie ich, nie mnie
-Na Polskę naszych pragnień
-Moje pragnienia - moja rzecz
-Nie w sercu mi się gnieżdżą
-Mówcie mi - zostań, mówcie - precz
-A ja i tak wyjeżdżam
-Mówcie mi - zostań, mówcie - precz
-A ja i tak wyjeżdżam
+Do czynu niech się rwie, kto chce –
+Syzyfów tutaj nie braknie,
+Więc nabierajcie ich, nie mnie,
+Na Polskę naszych pragnień.
+Moje pragnienia – moja rzecz.
+Nie w sercu mi się gnieżdżą.
+Mówcie mi – zostań, mówcie – precz,
+A ja i tak wyjeżdżam.
+Mówcie mi – zostań, mówcie – precz,
+A ja i tak wyjeżdżam.
 
-Na nogi stanę pracą rąk [a]
-Bez Boga i przypadku [a E]
-A pomoc stamtąd ludziom stąd [E]
-- Odliczę od podatku. [E a]
-Na nogi stanę pracą rąk [a]
-Bez Boga i przypadku [A7 d]
-A pomoc stamtąd ludziom stąd [d a]
-- Odliczę od podatku. [E a]
+Na nogi stanę pracą rąk – [a]
+Bez Boga i przypadku, [a E]
+A pomoc stamtąd ludziom stąd – [E]
+Odliczę od podatku. [E a]
+Na nogi stanę pracą rąk – [a]
+Bez Boga i przypadku, [A7 d]
+A pomoc stamtąd ludziom stąd – [d a]
+Odliczę od podatku. [E a]

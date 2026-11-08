@@ -50,7 +50,7 @@ A wszystko warczy, pieni się i pryska,
 Lecz najmniejszego nie zamoczy listka.
 
 @zw
-Więc nie pytając nawet o przyczynę
+Więc nie pytając nawet o przyczynę,
 Już wszyscy razem weszliśmy w szczelinę.
 Idziemy rzędem wzdłuż krwistych otchłani –
 Zlęknięci, dumni, zdumieni, znękani.
@@ -63,20 +63,20 @@ I nim coś powie – bezszelestnie znika.
 
 >Czyśmy za wolno szli, czy pobłądzili, [ a E ]
 >Czy iść przestali we zwątpienia chwili, [ a E ]
->Czy wszystko złudą było czy omamem [ C G ]
->I tylko w myślach weszliśmy w tę bramę – [ C G ]
+>Czy wszystko złudą było, czy omamem [ C G ]
+>I tylko w myślach weszliśmy w tę bramę, [ C G ]
 >Nie wiem i nie wie chyba nikt na świecie, [ C F ]
 >Choć wszyscy wszystko oglądali przecież. [C G C]
 
 >Dość, że się toniom w pionie stać znudziło, [ a E ]
 >W chwil kilka mokrą szmatą nas przykryło [ a E ]
->I ciężkiej ciszy przytrzasnęły drzwi [ C G ]
+>I ciężkiej ciszy przytrzasnęły drzwi, [ C G ]
 >Jakby nas wchłonął kubeł pełen krwi! [ a E E7 a ]
 >Chyba na zawsze będzie już schowana [C F]
 >Pod wodą nasza Ziemia Obiecana. [C G C]
 
 @zw
-Patrzyli żywi z czerwonej mogiły
+Patrzyli żywi z czerwonej mogiły,
 Jak do swych dziejów ludy odchodziły.
 Mówiono teraz: I widzicie sami,
 Jakie są skutki żartów z żywiołami.
@@ -85,4 +85,4 @@ Jakie są skutki żartów z żywiołami.
 A ci z ustami, oczami pod wodą,
 Choć odpowiedzieć by chcieli – nie mogą;
 Mnie na nieznane brzegi wyrzuciło…
-I stąd ta piosenka, której by nie było! [ C G a ]
+Stąd ta piosenka, której by nie było! [ C G a ]

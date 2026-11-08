@@ -19,30 +19,30 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/piosenk
 Tak jest w nas bzdura horrendalna, [a E a]
 Która nam karmi wspólną duszę – [a E]
 Nie prosi chcieć, lecz każe musieć, [E]
-Bowiem Jedyna i - Zapalna. [E7 a (E)]
+Bowiem Jedyna i – Zapalna. [E7 a (E)]
 
 #zw2
 Tak jest w nas horrendalna bzdura [a E a]
 Z podpisem sfałszowanym Boga – [A7 d]
-Że nie uklęknąć przed nią - trwoga, [d a]
-A Jej zaprzeczyć - to tortura. [E a]
+Że nie uklęknąć przed nią – trwoga, [d a]
+A Jej zaprzeczyć – to tortura. [E a]
 
 #zw3
 Tak horrendalna bzdura jest w nas: [G7 C]
 Zbroja z gazety, kieł bez pyska, [G7 C]
-Że łeb się nam pochyla nisko [A7 d]
+Że łeb się sam pochyla nisko [A7 d]
 Przed nakazami, których nie zna. [H7 E]
 
 @zw1
 Wolny od wiary wspólnej – wraży
 Wszystkiemu, co jest niedoczute,
-Z dłońmi, co wciąż gwoździami skłute -
+Z dłońmi, co wciąż gwoździami skłute –
 Złotych nie musi mieć ołtarzy.
 
 @zw2
 Wolny od wiary wspólnej – wraży
 Wszystkiemu, co jest niedoczute,
-Z dłońmi, co wciąż gwoździami skłute -
+Z dłońmi, co wciąż gwoździami skłute –
 Złotych nie musi mieć ołtarzy.
 
 @zw3

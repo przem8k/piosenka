@@ -15,27 +15,27 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Potepie
 
 #zw
 Rzecz to powszechna dosyć [a]
-W heterogennych sferach [a]
-Że jemu coś się wznosi, [d]
-A jej się coś otwiera. [a]
->Czy temu winien Księżyc, [E]
->Czy tym się żywią dzieje - [E]
->Że jemu coś się pręży, [a]
->A jej coś wilgotnieje? [a]
+W heterogennych sferach, [a]
+Że Jemu coś się wznosi, [d]
+A Jej się coś otwiera. [a]
+>Czy temu winien księżyc, [E]
+>Czy tym się żywią dzieje – [E]
+>Że Jemu coś się pręży, [a]
+>A Jej coś wilgotnieje? [a]
 
 #zw2
 Choć może dość niesmacznie [d7]
-Zagłębiać się w te treści - [d7]
-Kiedy już on z nią zacznie [E7]
-- Ona go w sobie zmieści. [E7]
->I krzycząc wniebogłosy [F]
->W ud go pochwyci kleszcze... [C0 E]
+Zagłębiać się w te treści – [d7]
+Kiedy już On z nią zacznie, [E7]
+Ona go w sobie zmieści [E7]
+>I krzycząc wniebogłosy, [F]
+>W ud go pochwyci kleszcze… [C0 E]
 >On wkrótce ma już dosyć, [a]
->A ona wciąż chce jeszcze. [F E7 a (E)]
+>A Ona wciąż chce jeszcze. [F E7 a (E)]
 
 @zw
 We wstydzie potem brodzi
-I On i Ona - troszkę,
+I On, i Ona – troszkę,
 Bo przecież nie uchodzi
 Znać na tym świecie rozkosz.
 >Bo kiedy raz jej już się
@@ -45,20 +45,20 @@ Znać na tym świecie rozkosz.
 
 @zw2
 A świat ten, wszyscy wiedzą,
-Nie dla rozkoszy stworzon -
+Nie dla rozkoszy stworzon –
 Bo jest wieczności miedzą,
-Uprzężą i obrożą.
+Uprzężą i obrożą,
 >Kieratem i wędzidłem,
-> Nieodkupioną męką -
+> Nieodkupioną męką –
 >Wiedz o tym, gdy w malignie
 >Po rozkosz sięgniesz ręką.
 
 @zw
 Poznałem ten dylemat
-I nieraz w nocy krzyczę -
+I nieraz w nocy krzyczę –
 Gdy sił na rozkosz nie mam,
 Na wieczność już nie liczę.
->Lecz żyć z nadzieją - znośnie, [F]
->I na nią chwile trwonię - [C0 E]
+>Lecz żyć z nadzieją – znośnie, [F]
+>I na nią chwile trwonię – [C0 E]
 >Że we mnie coś urośnie [a]
 >I znów mnie coś pochłonie! [F E7 a (E)]
