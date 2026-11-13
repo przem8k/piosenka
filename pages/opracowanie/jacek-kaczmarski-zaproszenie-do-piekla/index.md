@@ -45,7 +45,7 @@ Byle wiedzieć kiedy.
 
 @1
 Gdy mówił, wzrok miał jak gracz przy ruletce,
-Co wolno mu stawiać na co chce – za dwóch.
-Jednego tylko nie powie – Ja nie chcę!
+Co wolno mu stawiać, na co chce – za dwóch.
+Jednego tylko nie powie: „Ja nie chcę!” –
 Gdy krupier, kręcąc kołem, 
 puszcza kulę w ruch! [ F e a ( a D7) ]

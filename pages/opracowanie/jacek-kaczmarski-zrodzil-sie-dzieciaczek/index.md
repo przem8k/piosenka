@@ -25,7 +25,7 @@ Ale w nocy płacze, [G C]
 Bo wokoło wrzawa. [Fis Fis7]
 Budzą Go pielgrzymi [h e]
 Śpiewy radosnymi, [A D]
-Budzą Trzej Królowie [e h]
+Budzą Trzej Królowie, [e h]
 Głaszcząc Go po głowie. [Fis7 h (e h Fis)] 
 
 #zwrotka2
@@ -40,7 +40,7 @@ Zaśnij bezbronnie, zaśnij beztrosko, [gis cis gis E0 Dis]
  [h e A h]
 @zwrotka1
 Ledwie się narodził
-I fiknął nóżkami
+I fiknął nóżkami,
 Tłum się z prośbą schodzi:
 – Zmiłuj się nad nami.
 Nieś radosne wieści,
@@ -63,12 +63,12 @@ Nie śpi Jezus mały,
 W ciemnych oczach łezka,
 Ciąży wszechświat cały
 W rączynach oseska.
-Ledwie się obudził
-Już żyje dla ludzi
+Ledwie się obudził,
+Już żyje dla ludzi;
 Życiem – Darem Bożym –
 Już ofiarę złożył.
 
-– Przytul się do mnie Ty mój, a już nie mój [H E H Fis]
+– Przytul się do mnie, Ty mój, a już nie mój, [H E H Fis]
 Poświęć chwil kilka sercu biednemu [H E H Fis]
 Zbolałej rodzicielki – rodzicielki. [gis Dis E Fis H]
 Pamiętaj o niej, zbawiając tłumy, [H E H Fis]

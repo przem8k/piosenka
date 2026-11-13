@@ -19,7 +19,7 @@ performers:
 Upadek imperium – strona w podręczniku, [ a E a d ]
 A w każdej czcionce stu dusz hekatomba, [ a E F E a ( E a ) ]
 Podczas gdy autorów zwycięstwa – bez liku [ a E a d ]
-I sama siebie tworzy nowa Fronda.  [ a E F E a ( A7 ) ]
+I samą siebie tworzy nowa Fronda.  [ a E F E a ( A7 ) ]
 
 #3
 Zwycięzcy – wśród ruin, jak to zwykle bywa, [ d A d G ]

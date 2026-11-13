@@ -15,9 +15,9 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/wiatr.p
 ---
 
 #zw
-Siedzimy nad mapami [a]
+Siedzimy nad mapami, [a]
 Gdy ktoś otwiera drzwi [a C]
-I wino mapy krwawi [F G C G]
+I wino mapy plami [F G C G]
 Plamami krwi. [F]
 Plamami krwi. [F e]
 Plamami krwi. [e (a)]
@@ -25,14 +25,14 @@ Plamami krwi. [e (a)]
 @zw
 Czy przewrócony kielich
 Ma splamić plan i ład?
-Czy ktoś się z nas ośmieli
+Czy ktoś z nas się ośmieli
 Oskarżyć wiatr?
 Oskarżyć wiatr?
 Oskarżyć wiatr?
 
 Więc trwamy w zawierusze – [a C]
-Chór wichru, to nasz Krzyż – [G C]
+Chór wichru to nasz Krzyż – [G C]
 Spod rąk mkną map arkusze: [F G C G]
-Marzenia cisz... [F]
-Marzenia cisz... [F e]
-Marzenia cisz... [e]
+Marzenia cisz… [F]
+Marzenia cisz… [F e]
+Marzenia cisz… [e]

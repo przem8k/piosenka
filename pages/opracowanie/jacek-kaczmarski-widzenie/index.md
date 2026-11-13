@@ -43,17 +43,17 @@ Siedzi normalny człowiek.
 @zwrotka2
 >I mówi to, co mówił,
 >Wcale nie boi się tego.
->I myśli to, co myślał
+>I myśli to, co myślał,
 >I nie ma w tym nic złego.
 
 @zwrotka1
-I widzę drogę w kres
+I widzę drogę w kres,
 Za koło horyzontu,
 Nie dziwiąc się, że tak jest,
 Jak powinno być od początku.
 Więc chwyta mnie jeden – z Nich
 I w oczy drwiąco patrzy:
-– Obudź się no, te – psych!
+– Obudź się, no, te – psych!
 I daje mi zastrzyk.
 
 @zwrotka2

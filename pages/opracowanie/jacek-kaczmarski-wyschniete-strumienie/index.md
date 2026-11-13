@@ -31,15 +31,15 @@ A nad nią błękitne po chmurach wspomnienie – [ Cis Gis ]
 Rozedrgana spiekota, ulewne płomienie. [ F b Fis7 ]
 
 #3
-Po tej zardzewiałej ziemi ludzie pokrzywdzeni [ h Fis7 ]
+Po tej zardzewiałej ziemi ludzie pokrzywdzeni, [ h Fis7 ]
 Zabłąkani w koleinach wyschniętych strumieni [ Fis7 h ]
-Wydłubują strzępy sierści, kości i diamenty [ D A ]
+Wydłubują strzępy sierści, kości i diamenty, [ D A ]
 Majacząc na słońcu, śniąc chłodne odmęty. [ Fis h ]
-Wydłubują strzępy sierści, kości i diamenty [ D A ]
+Wydłubują strzępy sierści, kości i diamenty, [ D A ]
 Majacząc na słońcu, śniąc chłodne odmęty. [ Fis h G7 ]
 
 #4 
-Majaczące plemię spragnione krynicy [ c G7 ]
+Majaczące plemię – spragnione krynicy, [ c G7 ]
 Zbrojne w kości przodków – tłucze się i krzyczy. [ G7 c ]
 Wściekła kłótnia wstrząsa niebiosa hałasem: [ Dis B ]
 Czy Bóg – czy rozsądek ma być ich kompasem? [ G c ]
@@ -54,7 +54,7 @@ Tarirarira… [ cis Gis7 ]
 
 #6
 Przez siebie uwielbieni i znienawidzeni [ d A7 ]
-Depczą mylne szlaki wyschniętych strumieni [ A7 d ]
-Z tą prawdą tak niemiłą i świętym i łotrom: [ F C ]
+Depczą mylne szlaki wyschniętych strumieni. [ A7 d ]
+Z tą prawdą tak niemiłą i świętym, i łotrom: [ F C ]
 Bóg sprawił, że wciąż idą… [ A7 ]
-Rozsądek – że dotrą! [ d A d ]
+Rozsądek – że dotrą? [ d A d ]

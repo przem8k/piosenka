@@ -51,7 +51,7 @@ We wrzawie wyłonią się z nich?
 
 @zwrotka
 Jak długo w miłości
-Wytrzyma lud prosty
+Wytrzyma lud prosty,
 Nim krzywda znów wsączy nienawiść do krwi,
 Nim hymn jakiś wzniosły
 Żelaza wyostrzy
