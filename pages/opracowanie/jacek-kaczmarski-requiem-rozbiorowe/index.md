@@ -36,7 +36,7 @@ Jeśli grzmiące obrzędy bezcześci,
 Jeśli babrze się w szczątkach wstydliwych –
 To nie po to, by mieć
 Nośny temat do pieśni,
-Lecz by wstyd – był ostrogą – dla żywych
+Lecz by wstyd – był ostrogą – dla żywych.
 
 Na śniadaniu u Carycy [e]
 Sutą dzieli się potrawę; [e]
@@ -45,7 +45,7 @@ Komu jaki kęs i skrawek. [a]
 Temu galicyjski połeć, [H7]
 Temu – wielkopolski gryz; [H7]
 Monarchini żre nad stołem [e]
-Schab „Polonia à la russe”. [H7]
+Schab Polonia à la russe. [H7]
 
 #diesirae
 >Nie przystroi się garnirem, [a e]
@@ -98,7 +98,7 @@ Niewymienialną na żadną walutę. [G D]
 >Requiem. [D e]
 
 @spijcie
-Śpijcie spokojnie – zdradzeni, zsyłani,
+Śpijcie spokojnie – zdradzani, zsyłani,
 Mięso eposów skomlące o sens;
 Straceńcy, stróże niewidzialnych granic
 Powyznaczanych majestatem klęsk.
@@ -119,7 +119,7 @@ Hetmańskich buław, biskupich pierścieni.
 Nikt wam już dzisiaj nie pohańbi mogił;
 Sąd ostateczny odległy, niepewny,
 Nieprzeliczone zapomnienia drogi,
-Bóg dobrotliwy, człowiek – krótko gniewny.
+Bóg dobrotliwy, człowiek – krótkogniewny.
 
 @requiem
 >Śpijcie – znów poza dobrem, poza złem –
@@ -195,12 +195,12 @@ Lacrimosa, lacrimosa.
 
 @niemamy
 >Nie mamy snów – lecz majaki,
->Nie mamy myśli – lecz szał,
+>Nie mamy myśli – lecz szał.
 >Dlatego los byle jaki,
 >Dlatego głos łka, jak łkał.
 
 @lacrimosa
-Tym – złote zboża, tym – ostrze noża.
+Tym – złote zboża, tym – ostrze noża,
 Tym – szlak po płozach, tym – szlam bezdroża,
 Tym – łaska boża, tym – trwożna groza –
 Lacrimosa, lacrimosa.
@@ -208,5 +208,5 @@ Lacrimosa, lacrimosa.
 @niemamy
 >Nie mamy wiary, lecz złudy,
 >Za dzieje nasze – zbiór klechd.
->Dlatego trwać będą trudy
+>Dlatego trwać będą trudy,
 >Nasz własny płacz i z nas śmiech.
