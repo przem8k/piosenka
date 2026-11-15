@@ -24,12 +24,12 @@ Prowadzimy wykopaliska. [ a e ( e7 ) ]
 @1
 Pochyleni nad ziarnkiem piasku
 Za nic mamy mroczne nieboskłony.
-Wczoraj, zanim jeszcze słońce zgasło,
+Wczoraj, zanim jeszcze słońce zaszło,
 Zobaczyliśmy Oko Ikony.
 
 @1
 Jutro twarz jej ujrzymy zapewne.
-Dziś, na byłej świątyni dziedzińcu
+Dziś, na byłej świątyni dziedzińcu,
 Przy ogniskach nucimy rzewnie
 Zapomnianą pieśń barbarzyńców. [ a e ( e ) ]
 
@@ -46,7 +46,7 @@ I twierdzimy z uporem dziecięcym,
 Że nie śmierć to, a Zmartwychwstanie.
 
 @1
-Na kolanach przez dni i tygodnie
-Przed nikomu nie znanym świętym
+Na kolanach – przez dni i tygodnie,
+Przed nikomu nieznanym świętym –
 Upieramy się nadal łagodnie,
 Że nie gruzy to, lecz – fundamenty. [ a e ]

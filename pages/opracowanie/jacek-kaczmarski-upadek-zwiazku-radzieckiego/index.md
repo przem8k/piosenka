@@ -17,22 +17,23 @@ E+: 032110
 Korab klasztoru po Wigrach żegluje [a]
 Nucą na drutach jaskółki beztroskie [a d6 a]
 Syn żyłkę plącze, okoń haczyk czuje [B]
-Za widnokręgiem ma miejsce pucz w Moskwie [F0 E+ E]
+Za widnokręgiem ma miejsce pucz w Moskwie. [F0 E+ E]
 
 @zwrotka1
 Pompka pod stopą warczy, ponton rośnie
-Kaczka gderliwie poszukuje kacząt,
+Kaczka gderliwie poszukuje kacząt
 Pokrzywa maki obrasta miłośnie
-Świat wyczekuje co zrobi Gorbaczow.
+Świat wyczekuje, co zrobi Gorbaczow.
 
 #zwrotka2
 >Grzyby z robaków czyści gospodyni [Cis0 d]
 >Łeb kurczakowi gospodarz ucina [Dis0 a/E]
 >Na myśl o uczcie kot się w koprze ślini [d a]
->Cała nadzieja w postawie Jelcyna [E E/F E E/F E E/F E E/F]
+>Cała nadzieja w postawie Jelcyna. [E E/F E E/F E E/F E E/F]
+>Cała nadzieja… [E E/F E E/F]
 
 @zwrotka1
-Marsz po zakupy wśród trzcin, tną komary
+Marsz po zakupy wzdłuż trzcin, tną komary
 W sklepie jest szkocka whisky, nie ma jajek
 Szeleszczą ptasim rejwachem szuwary
 Kreml obejmuje wyblakły Janajew.
@@ -48,12 +49,13 @@ Mieszkańcy Moskwy wznoszą barykady.
 >Suszą się w słońcu po pysznej kąpieli
 >Za lasem śpiewy, dźwięki pijatyki
 >Czołgiści strzelać do ludzi nie chcieli.
+>Czołgiści strzelać nie chcieli…
 
 @zwrotka1
 Wód mrok przecina błyszczek na szczupaka
 Dudni łabędzi lot nad samą wodą
 Księżyc siwieje w łysinie rybaka
-Pucz się załamał, pod sąd winnych wiodą
+Pucz się załamał, pod sąd winnych wiodą.
 
 @zwrotka1
 Z wygasłych ognisk pełzną strużki dymu
@@ -64,4 +66,6 @@ W łeb sobie strzela minister z marszałkiem.
 >Dni siedem szybko nad jeziorem zbiegło [Cis0 d]
 >Łabędź gniazd strzeże i szczupak poluje [Dis0 a/E]
 >Za miedzą Litwa ma swą niepodległość [d a]
->I ja się jakoś niepodległy czuję [E a]
+>I ja się jakoś niepodległy czuję. [E a]
+>Za miedzą Litwa ma swą niepodległość [d a]
+>I ja się jakoś niepodległy czuję. [E a]

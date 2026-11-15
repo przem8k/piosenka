@@ -19,25 +19,37 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pejzaz_
 [a B a]
 
 #zwrotka
-Na wzgórzu Kaźni wznoszą się Trzy Krzyże [a B a B]
-Łotrów – w bród. Chętnych do ofiary – mało [a B a]
-Dwa – puste, a na środkowym, najwyżej [a B a B]
-Zawsze zobaczyć można czyjeś ciało [a B E7 a]
+Na Wzgórzu Kaźni wznoszą się Trzy Krzyże. [a B a B]
+Łotrów – w bród. Chętnych do ofiary – mało. [a B a]
+Dwa – puste, a na środkowym, najwyżej, [a B a B]
+Zawsze zobaczyć można czyjeś ciało. [a B E7 a]
+Dwa – puste, a na środkowym, najwyżej, [a B a B]
+Zawsze zobaczyć można czyjeś ciało… [a B E7 a]
+
+Pies chciwie słone ostrze włóczni liże, [a B a B]
+Na bębnach w kości grają stróże ładu. [a B a]
+Słońce się łukiem stacza coraz niżej, [a B a B]
+Cienie po ziemi przechodzą bez śladu. [a B E7 a]
+Słońce się łukiem stacza coraz niżej, [a B a B]
+Cienie po ziemi przechodzą bez śladu. [a B a]
 
 @zwrotka
-Pies chciwie słone ostrze włóczni liże
-Na bębnach w kości grają stróże ładu
-Słońce się łukiem stacza coraz niżej
-Cienie po ziemi przechodzą bez śladu
+Słychać w oddali szum stolicy pszczeli, [a B a B]
+Kości na bębnie warczą, żołdak beknie [a B a]
+I niewidoczni patrzą skądś Anieli, [a B a B]
+Jak rzeka krwi strużką przez Imperia cieknie. [a B a]
+I niewidoczni patrzą skądś Anieli, [a B a B]
+Jak rzeka krwi strużką przez Imperia cieknie. [a B a]
 
 @zwrotka
-Słychać w oddali szum stolicy pszczeli
-Kości na bębnie warczą, żołdak beknie
-I niewidoczni patrzą skądś Anieli
-Jak rzeka krwi strużką przez Imperia cieknie [a B a]
+Łotrów w bród, chętnych do ofiary – mało. [a B a B]
+Na Wzgórzu Kaźni wznoszą się Trzy Krzyże. [a B a]
+Dwa – puste, a na środkowym, najwyżej, [a B a B]
+Zawsze zobaczyć można czyjeś ciało… [a B E7 a]
 
-@zwrotka
-Łotrów w bród, chętnych do ofiary – mało
-Na Wzgórzu Kaźni wznoszą się Trzy Krzyże
-Dwa – puste, a na środkowym, najwyżej
-Zawsze zobaczyć można czyjeś ciało
+Łotrów – w bród, chętnych do ofiary – mało. [a B a B]
+Na Wzgórzu Kaźni wznoszą się Trzy Krzyże. [a B a]
+Dwa – puste, a na środkowym, najwyżej, [a B a B a]
+Zawsze zobaczyć można czyjeś ciało… [a B E7 a]
+Zawsze zobaczyć można czyjeś ciało… [a B E7 a]
+Zawsze zobaczyć można czyjeś ciało… [a B E7 a]

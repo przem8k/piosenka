@@ -71,7 +71,7 @@ Nie jest cnotą ni hańbą wstyd z podartych gaci,
 Ani ból – zasługa, ani świat – kołyska.
 Sprawiedliwość niebieska od królewskiej inna:
 To cierpieniem nagrodzi, to bogactwem stoczy.
-Opatrzności wyroki, jak po deszczu – rynna:
+Opatrzności wyroki jak po deszczu – rynna:
 Kto jeno w niebo patrzy – tego i zamoczy.
 
 @3

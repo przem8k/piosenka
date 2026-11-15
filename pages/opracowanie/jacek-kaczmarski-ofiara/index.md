@@ -31,7 +31,7 @@ Na głos – nam nieznany – ze znanych przestworzy,
 By rzec, że stało się – To! To! [d6 E7 a]
 
 @zwrotka
-Co wtedy mam robić na drewnianym ganku,
+Co wtedy mam robić na drewnianym ganku
 Z brwią troski, w krawacie – i nad filiżanką
 Z bezwzględnym fusem na dnie?
 Jak dziecko ocalić? Ma chore migdałki,
@@ -74,7 +74,7 @@ Z życia, co warte – brać! Brać! [d6 E7 a]
 Ach, płacz był i krzyki, i desek jęk w żarze,
 Po czym mnie biali gonili lekarze –
 Za lęk, za przestrogę, za ból…
-Niech spali się dom, zanim świat się wypali –
+– Niech spali się dom, zanim świat się wypali –
 Wołałem, gdy ręce mi sprawnie wiązali,
 Wywiązując się z ról, ze swych ról. [d6 E7 a]
 
@@ -84,4 +84,8 @@ Dziś musi z gałązki tej – krzywe być drzewo,
 Lecz drzewo! Dla ludzi – strach! [d6 E7 a]
 Bo światłem to tylko – co nam prosto w oczy!
 Człowiekiem – co człowiek krwi swojej utoczy –
+Plus Leonardo i Bach. [d6 E7 a]
+
+Bo światłem to tylko – co nam prosto w oczy! [a]
+Człowiekiem – co człowiek krwi swojej utoczy – [a]
 Plus Leonardo i Bach. [d6 E7 a]

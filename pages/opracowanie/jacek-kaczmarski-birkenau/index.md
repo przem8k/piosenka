@@ -25,7 +25,7 @@ Tłuste obłoki słodkich swądów zwoje [g6 a4 a]
 
 @zw
 Skrzętni palacze gdzieś się zapodziali
-Wystygły ruszta popiół tuli glina
+Wystygły ruszta, popiół tuli glina
 I w bezcielesnym milczeniu umarli
 Słuchają jęków głodnego komina
 

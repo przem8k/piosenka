@@ -34,7 +34,7 @@ Wszak prawda – jest autoportretem.
 
 @1
 Patrzył na jego różne twarze
-Madryt i Nowy Jork i Wiedeń
+Madryt i Nowy Jork, i Wiedeń,
 A on był Żyd warszawski jeden
 Lecz przede wszystkim był malarzem.
 
@@ -46,7 +46,7 @@ I nie wyjechał już z Warszawy.
 
 @1
 Patrzył na jego różne twarze
-Madryt i Nowy Jork i Wiedeń
+Madryt i Nowy Jork, i Wiedeń,
 A on był Żyd warszawski jeden
 Lecz przede wszystkim był malarzem.
 
@@ -153,8 +153,8 @@ Gdy mi ogryzek kredki podał.
 @1
 On wiarą w świat już się nie łudził
 Znał Nowe Jorki i Paryże.
-Wiedząc, że śmierć jest coraz bliżej
-Rzekł Rysuj ludzi.
+Wiedząc, że śmierć jest coraz bliżej,
+Rzekł: Rysuj ludzi.
 
 @1
 A Kramsztyk umrzeć ma na schodach.
@@ -164,10 +164,10 @@ Gdy mi ogryzek kredki podał.
 
 On wiarą w świat już się nie łudził [ c ]
 Znał Nowe Jorki i Paryże. [ c ]
-Wiedząc, że śmierć jest coraz bliżej [ G7 ]
-Rzekł Rysuj ludzi. [ G7 ]
+Wiedząc, że śmierć jest coraz bliżej, [ G7 ]
+Rzekł: Rysuj ludzi. [ G7 ]
 
 Jeszcze ostatni skarb ocala, [ h ]
 Gdy mi ogryzek kredki podał. [ h ]
-Wiedząc, że śmierć jest coraz bliżej [ Fis7 ]
-Rzekł Rysuj ludzi. [ Fis7 ]
+Wiedząc, że śmierć jest coraz bliżej, [ Fis7 ]
+Rzekł: Rysuj ludzi. [ Fis7 ]

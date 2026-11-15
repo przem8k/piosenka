@@ -18,8 +18,8 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/kazimie
 #zwrotka
 Kielich pór roku zgłębiając wielekroć [e h]
 Można dotrzeć do Stanów Zjednoczonych Duszy [C h e]
-Kiedy sprzeczności się ze sobą zetkną [e h]
-Jedno jeszcze pragnienie nieodmiennie suszy: [C h e (E7)]
+Kiedy sprzeczności ze sobą się zetkną [e h]
+Jedno jeszcze pragnienie nieodmiennie suszy [C h e (E7)]
 Zgubić za sobą ból gorycz i żal [a H C (a)]
 W ostatnim skoku w nieskończoną dal [e h e (E7)]
 Zgubić za sobą ból gorycz i żal [a H C (a)]
@@ -36,13 +36,13 @@ Opaść w zaświecie jak świetlisty szal
 W ostatnim skoku w nieskończoną dal
 
 @zwrotka
-Zaświat wygląda jak przedświat dziecięcy:
-Jeśli wojna to tylko - z błękitem - zieleni
-Popłoch - jedynie słonecznych zajęcy
-Jeśli stronnictw rozgrywki - to stronnictw strumieni
-Jeśli ofiara - to z wiatru i fal
+Zaświat wygląda jak przedświat dziecięcy
+Jeśli wojna, to tylko – z błękitem – zieleni
+Popłoch – jedynie – słonecznych zajęcy
+Jeśli stronnictw rozgrywki – to stronnictw strumieni
+A jeśli ofiara – to z wiatru i fal
 W ostatnim skoku w nieskończoną dal
-Jeśli ofiara - to z wiatru i fal
+A jeśli ofiara – to z wiatru i fal
 W ostatnim skoku w nieskończoną dal
 
 @zwrotka
@@ -56,11 +56,11 @@ I nikt nie pojmie szeptu ciemnych sal
 W ostatnim skoku w nieskończoną dal
 
 @zwrotka
-Zaświat to przecież - Kresy naszych marzeń
-- Rajów utraconych w dzieciństwie rubieże
+Zaświat to przecież – Kresy naszych marzeń –
+Rajów utraconych w dzieciństwie – rubieże
 Gdzie z kapeluszem w ręku mówią Twarze
-- Miło znów Pana ujrzeć Panie Kazimierzu!
+– Miło znów Pana ujrzeć Panie Kazimierzu!
 Gdzie uroczyście trwa najświętsza z gal
-W ostatnim skoku w nieskończoną dal...
+W ostatnim skoku w nieskończoną dal…
 Gdzie uroczyście trwa najświętsza z gal
-W ostatnim skoku w nieskończoną dal...
+W ostatnim skoku w nieskończoną dal…

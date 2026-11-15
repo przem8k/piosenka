@@ -24,7 +24,7 @@ Choć przecież jest kobietą każda z nas [ a D6add9 a ( D6add9 ) ]
 
 #2
 >Pompeja! Pompeja! [ a D6add9 a D6add9 ]
->Dla wszystkich, co płacą, otwarte nasze drzwi! [ a g6add9 a g6add9 ]
+>Dla wszystkich, co płacą, otwarte nasze drzwi [ a g6add9 a g6add9 ]
 >Rozkoszy nowych wabi was nadzieja [ a g6add9 a g6add9 ]
 >Tu, skąd wydostać się nie może nikt [ a g6add9 a ( g6add9 ) ]
 
@@ -38,7 +38,7 @@ Choć przecież jest mężczyzną każdy z nas
 @2
 >Pompeja! Pompeja!
 >Dla wszystkich, co płacą, otwarte skrzydła bram
->Rozkoszy nowych wabi was nadzieja!
+>Rozkoszy nowych wabi was nadzieja
 >Tu, gdzie w oklaskach przyjdzie zginąć nam
 
 @1

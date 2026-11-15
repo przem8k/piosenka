@@ -63,7 +63,7 @@ Gdy na rzecznika go weźmie Kadafi.
 @2
 I sącząc kumys w rządowej jurcie
 Lub terrorystów szkoląc w Tripoli,
-Znów będzie w głównych wydarzeń nurcie
+Znów będzie w głównym wydarzeń nurcie
 I śmieszyć będzie go – co dziś boli.
-Znów będzie w głównych wydarzeń nurcie
+Znów będzie w głównym wydarzeń nurcie
 I śmieszyć będzie go – co dziś boli.

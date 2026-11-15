@@ -25,7 +25,7 @@ Ugościmy starszych braci. [ H7 e ( e/G) ]
 @2
 Odbierzemy nasze trupy,
 Pochowamy w ziemi naszej,
-Przeliczymy skrzętnie krupy
+Przeliczymy skrzętnie krupy,
 Żeby było co dać na mszę. [ H7 e ]
 
 #3
@@ -72,8 +72,8 @@ Po tygodniu ciężkiej pracy.
 
 @2
 I ogarnie myśl nad miską
-Obszar ludowego państwa
-I znów pięści się zacisną
+Obszar ludowego państwa –
+I znów pięści się zacisną –
 I nie uwierzymy w kłamstwa. [ H7 e ]
 
 #4

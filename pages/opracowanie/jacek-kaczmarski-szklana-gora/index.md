@@ -16,7 +16,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/Szklana
 ---
 
 Zyska sławę, królem będzie, [e G]
-Kto na szklaną górę wejdzie. [a e]
+Kto na Szklaną Górę wejdzie. [a e]
 
 Kto zdobędzie szczyt w błękicie, [e G]
 Będzie tym, kto jest na szczycie. [a e]
@@ -24,11 +24,11 @@ Będzie tym, kto jest na szczycie. [a e]
 >Lecz choć wielu kusi wejście, [a G]
 >Jeden tylko ma tam miejsce. [F e]
 
->A że przecież Góra — Szklana, [a G]
->Więc dla wielu — niewidzialna. [F e]
+>A że przecież Góra – Szklana, [a G]
+>Więc dla wielu – niewidzialna. [F e]
 
->A że przecież Góra — Szklana, [e a]
->Więc dla wielu — niewidzialna. [C a e]
+>A że przecież Góra – Szklana, [e a]
+>Więc dla wielu – niewidzialna. [C a e]
 
 Nawet tym, co na jej zboczach, [e G]
 Szczyt się nie odbija w oczach. [a e]
@@ -55,10 +55,10 @@ Nie wie, że już był na szczycie. [a e]
 >Za tych, którzy padli niżej. [F e]
 
 >Po czym u ich boku spocznie [a G]
->U stóp góry niewidocznej. [F e]
+>U stóp Góry niewidocznej. [F e]
 
-Zyska sławę, królem będzie [e G]
-Kto na szklaną górę wejdzie… [a e]
+Zyska sławę, królem będzie, [e G]
+Kto na Szklaną Górę wejdzie… [a e]
 
-Zyska sławę, królem będzie [e a]
-Kto na szklaną górę wejdzie… [C a e]
+Zyska sławę, królem będzie, [e a]
+Kto na Szklaną Górę wejdzie. [C a e]

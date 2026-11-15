@@ -17,7 +17,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/koleda_
 [(D)]
 #zwrotka1
 Toczyła się, toczyła [G D]
-Po niebie gwiazdeczka [G D]
+Po niebie gwiazdeczka, [G D]
 Aż zaprowadziła [C G]
 Nas do Dzieciąteczka. [A D]
 
@@ -28,14 +28,14 @@ W wesołej gębuli [C G]
 Bystre oczko mruga. [D7 G (H)]
 
 #refren1
->Oczko Pana wszystko widzi [e H]
->Rączka Pana błogosławi [e H]
->Pan nagości się nie wstydzi [C G]
+>Oczko Pana wszystko widzi, [e H]
+>Rączka Pana błogosławi; [e H]
+>Pan nagości się nie wstydzi, [C G]
 >Pysznych sobie szat nie sprawi. [A D]
 
 #refren2
->Ciało Pana maluteńkie [e H]
->Dusza Pana – wieczna siła, [C G]
+>Ciało Pana maluteńkie, [e H]
+>Dusza Pana – wieczna siła; [C G]
 >Umiłujmy tę mateńkę, [C G]
 >Co Go porodziła. [a H e (C G)]
 >Co Go porodziła. [a H e]
@@ -43,25 +43,25 @@ Bystre oczko mruga. [D7 G (H)]
 [(D)]
 @zwrotka1
 Kotłują się i straszą
-Nad ziemią wichrzyska
+Nad ziemią wichrzyska,
 Ledwie nie zagaszą
 W izdebce ogniska.
 
 @zwrotka2
-Mać kołysze synka
-Ojciec grzeje strawę
+Mać kołysze synka,
+Ojciec grzeje strawę,
 Wichrzy się czuprynka
 Na główce sennawej.
 
 @refren1
->Oczko Pana wszystko widzi
->Rączka Pana błogosławi
->Pan nagości się nie wstydzi
+>Oczko Pana wszystko widzi,
+>Rączka Pana błogosławi;
+>Pan nagości się nie wstydzi,
 >Pysznych sobie szat nie sprawi.
 
 @refren2
->Ciało Pana maluteńkie
->Dusza Pana – wieczna siła,
+>Ciało Pana maluteńkie,
+>Dusza Pana – wieczna siła;
 >Umiłujmy tę mateńkę,
 >Co Go porodziła.
 >Co Go porodziła.
@@ -80,13 +80,13 @@ A nad świętym czołem
 Kółeczko złociste.
 
 @refren1
->Oczko Pana wszystko widzi
->Rączka Pana błogosławi
->Pan nagości się nie wstydzi
+>Oczko Pana wszystko widzi,
+>Rączka Pana błogosławi;
+>Pan nagości się nie wstydzi,
 >Pysznych sobie szat nie sprawi.
 
->Ciało Pana maluteńkie
->Dusza Pana – wieczna siła,
+>Ciało Pana maluteńkie,
+>Dusza Pana – wieczna siła;
 >Umiłujmy tę mateńkę,
 >Co Go porodziła.
 >Co Go porodziła. [D7 G]

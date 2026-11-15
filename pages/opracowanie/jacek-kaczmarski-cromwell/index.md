@@ -16,7 +16,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/cromwel
 
 #zw1
 Idą na Londyn! Idą purytanie! [e]
-Siłą ich czystość czyli lęk przed grzechem. [e]
+Siłą ich czystość, czyli lęk przed grzechem. [e]
 Lęk rodzi wściekłość, a wściekłość – powstanie; [e]
 Idą pokonać chrześcijan – chrześcijanie. [e]
 Mgłą dysząc zamiast oddechem. [C D E]

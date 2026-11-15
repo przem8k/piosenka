@@ -16,9 +16,9 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/zabic_k
 ---
 
 #1
-Kota schwytaliśmy w kącie śmietnika [ e C h e ]
-Łeb mu wcisnąłem w mokrą grudę żwiru [ e C h e ]
-Dziesięcioletni mój przyjaciel Świrus [ G a ]
+Kota schwytaliśmy w kącie śmietnika. [ e C h e ]
+Łeb mu wcisnąłem w mokrą grudę żwiru, [ e C h e ]
+Dziesięcioletni mój przyjaciel Świrus, [ G a ]
 Wstrzymując oddech – użył scyzoryka. [ C h ]
 
 #2
@@ -28,14 +28,14 @@ Rozwarła się pod ostrzem kocia pierś [ G D ]
 W łysiny płuc i śliski kiszek wir. [ h e ]
  
 #3
-Wiotczał pod dłonią protest żywych sił [ B0 e ]
+Wiotczał pod dłonią protest żywych sił, [ B0 e ]
 Łomotał w sercu zachwycony lęk, [ B0 e ]
 Aż o żywotach kota dziewięciu przesąd pękł [ C G ]
 W cynobry nerwów i błękity żył. [ a G a ]
 
 @1
 Takie wspomnienie nić pamięci mota.
-Świrus chirurgiem został, znanym w kraju
+Świrus chirurgiem został, znanym w kraju,
 I wie, gdzie życia kończy się istota;
 Ja piszę wiersze o śmierci Rodzaju… [ C A0 ]
 

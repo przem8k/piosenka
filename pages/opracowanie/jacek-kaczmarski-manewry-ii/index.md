@@ -22,7 +22,7 @@ Z obietnicami siedmiu nieb [ d a ]
 Ksiądz do okopów naszych zszedł. [ F E7 a ]
  
 #2
-Ale co robić ma, gdzie iść [ a ]
+Ale co robić ma, gdzie iść, [ a ]
 Komend i poligonów syn! [ a E ]
 Dlaczego wierzyć ma, że dziś [ E E7 ]
 Oczyści go z wczorajszych win! [ E7 a ]
@@ -38,21 +38,21 @@ Wspomnienie oficerskich razów
 Podsuwa słodki zemsty smak…
 Ale o zemstę nawet – troska
 Rozpływa się wśród snów i słów,
-Że – przebaczenie – łaska boska
+Że – przebaczenie – łaska Boska
 Przyniesie tłumom błędnych głów. [ F E7 a ]
 
 @2
 Więc jeszcze dzień i jeszcze noc
 I przed kolejną nocą trwoga,
 Że znów z okopów wrzaśnie moc:
-Dajcie nam wroga! Chcemy wroga!
-Karmiły kłamstwa nas i strach
+„Dajcie nam wroga! Chcemy wroga!”.
+Karmiły kłamstwa nas i strach,
 A – w prawdzie – nieład jest i głód!
 Być czyimś wrogiem – to nasz fach!
 Dajcie nam wroga! Gdzie jest wróg?! [ F E7 a ]
 
 #3
-Codziennie więc – ostatni raz [ a ( d a d ) ]
+Codziennie więc – ostatni raz – [ a ( d a d ) ]
 Wolno rozmawiać, palić, pić, [ a d ]
 Zanim potwierdzi nowy czas, [ d a ]
 Że – nienawidzić – znaczy: żyć! [ F E7 a ( E7 a ) ]

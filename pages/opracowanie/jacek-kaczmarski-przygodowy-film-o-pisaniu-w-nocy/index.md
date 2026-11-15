@@ -30,8 +30,8 @@ Kończy się zapas fantazji w manierce,
 Strach, że utraci się trop, drąży serce,
 Mapa po przodkach szarpana w rozterce –
 Biała jak czoło wśród nocy.
-I niesłyszalne za dnia zewsząd dźwięki,
-Szepty i śmiechy, wołania i jęki
+I niesłyszalne za dnia zewsząd dźwięki –
+Szepty i śmiechy, wołania i jęki –
 Już i tak drżącej wstrzymują ruch ręki
 I znikąd, znikąd pomocy.
 
@@ -69,7 +69,7 @@ Okna się nagle wyłania.
 >Rubens bezmyślnie przegląda się w lustrze, [a]
 >Złej reprodukcji więc drwiny odpuszczę [E7]
 >Swego odkrycia ciekawy… [a F E7]
->Patrzę na zdobycz człowieczych pokoleń [a]
+>Patrzę na zdobycz człowieczych pokoleń, [a]
 >Czując, jak pot mi się rzęsi na czole, [F]
 >Bo widzę po całonocnym mozole [E7]
 >Mapę kolejnej wyprawy. [a E7 a]

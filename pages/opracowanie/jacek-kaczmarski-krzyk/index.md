@@ -56,7 +56,7 @@ Po której wszyscy inni iść w milczeniu mogą…
 
 @2
 Krzyczę, krzyczę, krzyczę, krzyczę wniebogłosy!
-A! Ktoś chwyta, woła – stój!
+A! Ktoś chwyta, woła: „Stój!”.
 Lecz wiem, że już nadchodzi czas,
 Gdy będzie musiał każdy z was
 Uznać ten krzyk, ten krzyk, ten krzyk z mych niemych ust [ e Fis ]

@@ -15,7 +15,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/przyczy
 ---
 
 #1
-Zabił święty Jerzy smoka [ B C d ]
+Zabił święty Jerzy smoka, [ B C d ]
 W płaszcz z atłasu wytarł miecz. [ B C A7 ]
 Czarna zdobi go posoka: [ B F d ]
 Smocza śmierć – rycerska rzecz. [ g B A ]
@@ -46,18 +46,18 @@ Co nie śpiewałby tych słów:
 >Święty Jerzy! Święty Jerzy!
 >Gadzi zewłok w prochu leży,
 >Dla robactwa żer i pleśni.
->Zabić smoka los ci kazał
+>Zabić smoka los ci kazał,
 >Byś się znalazł na ołtarzach,
 >Ale to nie koniec pieśni!
 
 @1
 Wszędzie swą postawił stopę,
 Wszędzie dowiózł gadzi swąd.
-Pokrył świat swym świętym tropem
+Pokrył świat swym świętym tropem,
 Aż posiwiał, schudł i zwiądł.
 A z rozprutej sakwy ronił
 Krok po kroku kieł za kłem
-I odrastał smoczy pomiot
+I odrastał smoczy pomiot,
 Z tryumfu dobra drwiąc nad złem.
 
 @2

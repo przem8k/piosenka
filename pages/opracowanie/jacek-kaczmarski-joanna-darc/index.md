@@ -15,13 +15,13 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/joanna_
 ---
 
 #ref
->Joanno, szykuj się na śmierć. [e D a G a G a]
->Joanno, szykuj się na śmierć. [e G a G a G a]
+>– Joanno, szykuj się na śmierć. [e D a G a G a]
+>– Joanno, szykuj się na śmierć. [e G a G a G a]
 
 #zw
-Dlaczego śmiercią mnie straszycie? [D0 F0 Es0 D0]
+– Dlaczego śmiercią mnie straszycie? [D0 F0 Es0 D0]
 Wszystko najgorsze już poza mną – [a]
-Dni rozstrzygnięte na torturach, [F]
+Dni rozciągnięte na torturach, [F]
 Śmierć moim wybawieniem nazwą. [H a H7]
 Krew, pot i łzy, co ze mnie uszły, [e]
 Ciało zsuszyły na pergamin, [a]
@@ -31,11 +31,11 @@ Nad bladym światem pogrzebowo, [C a e]
 Bo kłamstwem żyje wasze słowo. [A a e]
 
 @ref
->Joanno, szykuj się na potępienie.
->Joanno, szykuj się na potępienie.
+>– Joanno, szykuj się na potępienie.
+>– Joanno, szykuj się na potępienie.
 
 @zw
-Dlaczego piekłem mnie straszycie?
+– Dlaczego piekłem mnie straszycie?
 Wszystko najgorsze już poza mną –
 Piekło zostawiam za plecami,
 Na których waszych rąk są ślady.
@@ -47,11 +47,11 @@ Gorszego ognia Bóg nie wznieci
 Niż ten spod palców jego dzieci.
 
 @ref
->Joanno, szykuj się na zapomnienie.
->Joanno, szykuj się na zapomnienie.
+>– Joanno, szykuj się na zapomnienie.
+>– Joanno, szykuj się na zapomnienie.
 
 @zw
-Czemu niebytem mnie straszycie?
+– Czemu niebytem mnie straszycie?
 Przecież mój niebyt już poza mną –
 I sami w ciele mym rzeźbicie
 Mój pomnik – kijem, ogniem, stalą.
@@ -59,6 +59,6 @@ Niech krzyknę: „Ludzie! Chcą mnie spalić!” –
 To tysiąc głośno się zaśmieje,
 A drugi tysiąc mnie ocali.
 Płonąc, zostaję jak nadzieja –
-Joanna w krwi niewinnej, w łzach.
+Joanną w krwi niewinnej, w łzach.
 #zw1
 Inkwizytorzy, szykujcie się na strach! [A a E]

@@ -18,7 +18,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/teodyce
 Łotr umarł tak, jak żył: [ d ]
 Nóż wciąż mu w karku tkwił, [ B ]
 Gdy do Bram Nieba stukał. [ A d ]
-Otworzył Święty Piotr [ d ]
+Otworzył święty Piotr. [ d ]
 – Ty przecież jesteś łotr, [ B ]
 Więc czego tutaj szukasz? [ A d ]
 
@@ -27,11 +27,11 @@ Więc czego tutaj szukasz? [ A d ]
 Z grzeszników składa się [ g ]
 Cały nasz ludzki Kościół. [ C A ]
 Zerwany wiatrem liść – [ g ]
-Już nie wiem dokąd iść. [ d ]
+Już nie wiem, dokąd iść. [ d ]
 Może byś mnie ugościł? [ A d ]
 
 @1
-Rzekł Święty Piotr – no cóż,
+Rzekł święty Piotr: – No cóż,
 Wyciągnę ci ten nóż
 I wchodź, duszyczko płocha.
 Nie takim tu jak ty
@@ -42,7 +42,7 @@ Bo Pan Bóg wszystkich kocha.
 Spoczywa łotr wśród chmur
 Na materacu z piór,
 Koi go lira tkliwa…
-Wtem widzi, że tuż, tuż
+Wtem widzi, że tuż-tuż
 Ów, co mu w kark wbił nóż –
 Też rajskich dóbr zażywa.
 
@@ -57,7 +57,7 @@ Czy Raj to, czy melina?
 @2
 Klucznik mu na to rzekł:
 – Czyśćcowy życia bieg
-Przepełnił się cierpieniem.
+Przepełnił się cierpieniem,
 Więc choć odtrącić mógł,
 Wolał was dobry Bóg
 Skazać na – Przebaczenie…

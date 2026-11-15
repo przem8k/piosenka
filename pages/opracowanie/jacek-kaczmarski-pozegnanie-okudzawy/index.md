@@ -33,62 +33,66 @@ Na tyle wigilijne karpie [a H]
 >I nic nie pozostało [A7 d]
 >Prócz tego, co nucicie! [G C E]
 >To wcale nie jest mało [a H]
->Tak - żegnać - całe życie. [E a]
+>Tak – żegnać – całe życie. [E a]
 >To wcale nie jest mało [a H]
->Tak - żegnać - całe życie. [E a]
+>Tak – żegnać – całe życie. [E a]
 
 @zw
-Na ile przetrwa - co odchodzi
-Nabite na Historii hak -
+Na ile przetrwa – co odchodzi
+Nabite na Historii hak –
 Na tyle zauważą młodzi,
 Że nagle czegoś jest im brak.
 Na ile ufa młody dureń
-W niewyczerpany zapas lat -
+W niewyczerpany zapas lat –
 Na tyle mu bezbronną skórę
-Tnie raz po raz bezwzględny bat
+Tnie raz po raz bezwzględny bat.
 
 @ref
->Piosenka pożegnania -
+>Piosenka pożegnania –
 >Piosenką jest utraty;
->Żegnałem ludzi i zdania -
+>Żegnałem ludzi i zdania –
 >Traciłem całe światy.
 >I nic nie pozostało
 >Prócz tego, co nucicie!
 >To wcale nie jest mało
->Tak - żegnać - całe życie.
+>Tak – żegnać – całe życie.
 >To wcale nie jest mało
->Tak - żegnać - całe życie.
+>Tak – żegnać – całe życie.
 
 @zw
 Na ile zdolny jest do krzyku
-W obronie innych każdy z nas -
+W obronie innych każdy z nas –
 Na tyle trwa ten kraj pomników,
 Strumieniem podmywany głaz.
 Na ile skory do ofiary
-Jest ten, co bluźnił, łgał i kradł -
+Jest ten, co bluźnił, łgał i kradł –
 Na tyle wierzy człowiek stary
-W to, że ocali własny świat...
+W to, że ocali własny świat…
 
 @ref
->Piosenka pożegnania -
+>Piosenka pożegnania –
 >Piosenką jest utraty;
->Żegnałem ludzi i zdania -
+>Żegnałem ludzi i zdania –
 >Traciłem całe światy.
 >I nic nie pozostało
 >Prócz tego, co nucicie!
 >To wcale nie jest mało
->Tak - żegnać - całe życie.
+>Tak – żegnać – całe życie.
 >To wcale nie jest mało
->Tak - żegnać - całe życie.
+>Tak – żegnać – całe życie.
 
 #koniec
 Ach, świat przebrzmiałych dźwięków [A7 d]
 Jakąż melodię wiódł! [G C E7]
 Już jej nie wskrzesisz ręką, [a H7]
-Już nie ma tamtych nut... [E a]
+Już nie ma tamtych nut… [E a]
+Już jej nie wskrzesisz ręką, [a H7]
+Już nie ma tamtych nut… [E a]
 
 @koniec
-Ach, z tego, czego już nie ma
+Ach, z tego, czego już nie ma,
 Jakiż by mógł być świat!
-Ale to inny temat -
-Nam już nie starczy lat...
+Ale to inny temat –
+Nam już nie starczy lat…
+Ale to inny temat –
+Nam już nie starczy lat…

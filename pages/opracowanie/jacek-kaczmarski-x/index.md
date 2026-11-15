@@ -13,7 +13,7 @@ performers:
 ---
 
 #1
-Dziesięć lat ma syn Pawlaka [ d d/F d d/F ]
+Dziesięć lat ma syn Pawlaka, [ d d/F d d/F ]
 Tyleż ma Wałęsa więcej –  [ E A7 ]
 Już nie bachor na plakatach, [ d d/F d d/F ]
 Już nie za kratami ręce. [ E A7 ]
@@ -69,7 +69,7 @@ Mają myśli tchnąć i czyny:
 @2
 >Dziesięć to jest liczba święta,
 >„X” – łaciński znak: to wszystko.
->Mylić hasła i – Pojęcia
+>Mylić hasła i – Pojęcia –
 >Ludzkim czynem – ludzką myślą.
 
 @3

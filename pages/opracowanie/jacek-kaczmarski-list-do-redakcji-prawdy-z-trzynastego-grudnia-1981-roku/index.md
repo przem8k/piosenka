@@ -64,9 +64,9 @@ W Dierżynskogo ojczyźnie
 Bezkarni parę lat?!
 Solidarność w socjalizmie?
 Tego nie widział świat.
-Te wszystkie nasze dary
-Braterską zwodząc dłoń
-Sprzedali za dolary
+Te wszystkie nasze dary,
+Braterską zwodząc dłoń,
+Sprzedali za dolary,
 Kupili za to broń.
 
 #2
@@ -75,11 +75,11 @@ Podszepty wrogich ust [ a E ]
 I ciężko szkalowali [ E ]
 Sowietskij nasz Sojuz. [ E a ]
 Żołnierzy Krasnoj Armii [ A7 ]
-Nie został żaden grób! [ A7 d ]
+Nie został żaden grób [ A7 d ]
 I wisiał na latarni [ d a ]
 Jeden przy drugim – trup. [ E7 a ]
 I zanim ich generał [ d ]
-Nareszcie wziął za pysk [ d a ]
+Nareszcie wziął za pysk, [ d a ]
 Co krok do ludzi strzelał [ E7 ]
 Kontrriewolucjonist! [ E7 a ]
 

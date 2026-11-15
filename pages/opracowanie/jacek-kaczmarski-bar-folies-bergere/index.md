@@ -16,7 +16,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/bar_w_f
 ---
 
 #zwrotka1
-Na co patrzysz, madonno bufetu [e a e] 
+Na co patrzysz, madonno bufetu, [e a e] 
 Znad ołtarza kieliszków i flaszek? [e a e]
 Czy oślepia cię światło kinkietów, [C e]
 Czy ogłusza cię gwar głosów naszych? [Fis7 H7]
@@ -31,8 +31,8 @@ A ty patrzysz jak patrzy się w pustkę. [H7 e]
 Tuż przy tobie szampany wszak stoją.
 Pstryk – i gejzer wesela wytryska,
 Lecz ty wiesz, że wesele nie twoje
-I nie twój błysk lśniącego kieliszka.
-Przestań patrzeć jak patrzy się w ścianę,
+I nie twój błysk mokrego kieliszka.
+Przestań patrzeć, jak patrzy się w ścianę,
 Rusz się, śmiej się lub płacz – wszystko jedno.
 Od stolika pijany wstanę,
 Anegdotkę opowiem ci świetną.
@@ -51,7 +51,7 @@ I zapatrzyć się, myśląc o domu.
 Umiesz tylko rozlewać wino
 I zapatrzyć się, myśląc o domu.
 
-Myślisz sobie: „Co on chce ode mnie?” [e F e]
+Myślisz sobie: „Co ten chce ode mnie?” [e F e]
 I bezbarwne łzą oczy podchodzą, [F e]
 A ja może się z tobą ożenię, [B e]
 Nieszczęśliwe się dzieci urodzą. [H7 e]

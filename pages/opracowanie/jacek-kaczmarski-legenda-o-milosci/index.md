@@ -21,7 +21,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/legenda
 
 #2
 On ją dostrzegł nagle, ona go dojrzała [ e C0 ]
-I świat im zniknął z oczu, jak z dmuchawca puszek. [ C0 e C H7 ( H6 ) ]
+I świat im zniknął z oczu jak z dmuchawca puszek. [ C0 e C H7 ( H6 ) ]
 Ciało – jak powietrza – zapragnęło ciała [ e C0 ]
 I czujnie się jęły obwąchiwać dusze. [ Dis0 H7 e E7 ]
 
@@ -41,7 +41,7 @@ Los – szyderczym szyfrem, astrologią wrażeń. [ a H0 E7 ]
 
 @2
 Aż wręczył jej tulipan: prężny, łebski, gładki,
-Purpurą nabrzmiały, jak płonącym mrokiem.
+Purpurą nabrzmiały jak płonącym mrokiem.
 A ona na to róży rozchyliła płatki,
 By spłynęły po nich życionośne soki.
 
@@ -70,7 +70,7 @@ Nocą przy kominku strzegli paleniska.
 >Żadne nie wiedziało, że tylko przez chwilę…
 
 @4
-On ją zaczął zdradzać, choćby i w marzeniach,
+On ją zaczął zdradzać – choćby i w marzeniach,
 Ona drżała – czując cudzych oczu dotyk…
 Czas im siebie skąpił na wspólne olśnienia,
 W bitwy się zmieniały codzienne kłopoty.
@@ -83,7 +83,7 @@ W bitwy się zmieniały codzienne kłopoty.
 I dopadł ich spokój. Ani się spostrzegli –
 Już grzali zziębłe stopy, choć wygasł kominek.
 I jeszcze z nawyku stare kłótnie wiedli,
-Gdzie miłość błądziła, jak zbędny przecinek.
+Gdzie miłość błądziła jak zbędny przecinek.
 
 @3
 >Tyle niespełnienia i przesytu tyle!

@@ -14,7 +14,7 @@ performers:
 
 #zwrotka
 Żywioł się rzuca na zapory [a E a G]
-I każdy chce być świadkiem cudu [C E a (E)]
+I każdy chce być świadkiem cudu, [C E a (E)]
 Jak rzeki – drwiąc ze starych koryt – [a E a G]
 Niosą jesienną Wiosnę Ludów. [C E a (G)]
 Radości płacz i bicie w dzwony – [C G C G]
@@ -39,7 +39,7 @@ Patrzą na Zachód ze swych zagród
 Głodni Azjaci i Słowianie,
 Czekając za cierpienia – nagród,
 Które ma Bóg Wolności dla nich.
-Jadą na zachód osadnicy
+Jadą na Zachód osadnicy
 Wozami swoich martwych dziadków
 Do europejskiej, do winnicy,
 Gdzie czeka na nich Bóg Dostatku…
@@ -64,7 +64,7 @@ Za tych, co tego nie dożyli.
 Choć przecież troszczą się mężowie
 W czterech europejskich ścianach,
 Co robić, by ogarnąć mrowie
-Wędrownych plemion Dżyngis-Chana.
+Wędrownych plemion Dżyngis-chana.
  
 @refren
 >Mówią, że chiński Rok to Smoka
@@ -79,7 +79,7 @@ Wędrownych plemion Dżyngis-Chana.
 >Wszak jest początek w każdym końcu! [H E a]
  
 Żywioł się rzuca na zapory [a E a G]
-I każdy chce być świadkiem cudu [C E a (E)]
+I każdy chce być świadkiem cudu, [C E a (E)]
 Jak rzeki – drwiąc ze starych koryt – [a G C G]
 Niosą jesienną Wiosnę Ludów. [C G C E]
  

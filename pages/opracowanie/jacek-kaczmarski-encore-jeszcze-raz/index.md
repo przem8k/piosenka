@@ -16,7 +16,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/encore.
 ---
 
 #zw
-Mam wszystko, czego może chcieć uczciwy człowiek [a d a]
+Mam wszystko, czego może chcieć uczciwy człowiek – [a d a]
 Światopogląd, wykształcenie, młodość, zdrowie, [a d C]
 Rodzinę, która kocha mnie, dwie, trzy kobiety, [F a]
 Gitarę, psa i oficerskie epolety! [E7 F E7]
@@ -40,7 +40,7 @@ Dali tu stertę starych futer i człowieka,
 Ażeby był i nie wiadomo na co czekał!
 Więc przypuszczenia snuję, liczę sęki w ścianach,
 Czasem przekłuję końcem szpady karakana,
-W oku mam błysk! (Od knota co się w lampie żarzy)
+W oku mam błysk! (Od knota, co się w lampie żarzy).
 Czerwony odcisk dłoni na podpartej twarzy!
 
 @ref
@@ -73,7 +73,7 @@ Jak gdybym kiedyś swoje życie przeżył już…
 Więc jem i śpię, pies śledzi wszystkie moje ruchy.
 Gdy piję, powiem czasem coś, on wtedy słucha.
 I widzę w oknie, zamiast zimy, lampę, psa
-I oficera, który pije tak jak ja!
+I oficera, który pije tak, jak ja!
 Nic nie ma za tą ścianą z wielkich ciemnych belek,
 Nad stropem nazbyt niskim, by skorzystać z szelek!
 Nic we mnie, prócz do świata żalu dziecięcego,

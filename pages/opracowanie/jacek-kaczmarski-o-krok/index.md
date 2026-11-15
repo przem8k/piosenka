@@ -17,7 +17,6 @@ score2_full: https://storage.googleapis.com/piosenka-media/media/scores/O_krok_0
 score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/O_krok_02.png.180x0_q85_upscale.jpg
 ---
 
-Dagmarze
 
 O krok od źródła konają z pragnienia. [a E a]
 O krok od piekła szaleją z rozkoszy. [C d E]
@@ -42,7 +41,7 @@ O krok od życia śnią minione kaźnie. [G a H7]
 Gromadzą księgi o krok od pożogi. [C E7 a (C)]
 O krok od klęski czują się najraźniej. [e H7 e (E7)]
 
-Tak przez godzinę, dzień, miesiąc, rok [a E7 a]
+Tak przez godzinę, dzień, miesiąc, rok, [a E7 a]
 Aż zrobią ten jeden nieuchronny krok. [C d E]
-Tak przez godzinę, dzień, miesiąc, rok [F A7 d (F)]
+Tak przez godzinę, dzień, miesiąc, rok, [F A7 d (F)]
 Aż zrobią ten jeden nieuchronny krok. [a E7 a]

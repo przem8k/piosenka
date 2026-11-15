@@ -18,9 +18,9 @@ Zamknięto gród na nieokreślony czas [ a F a ]
 I ogłoszono, że twierdza się nie podda! [ F E ]
 
 #2
-Na mur załoga dostęp tylko ma. [ a d a ]
+Na mury dostęp załoga tylko ma. [ a d a ]
 Zgniłym cywilom tam niedostępna droga, [ a d a ]
-Więc nikt nie wiedział o co idzie gra, [ a d a ]
+Więc nikt nie wiedział, o co idzie gra, [ a d a ]
 Bo większość z nas nie widziała nawet wroga. [ F E ]
 
 #3
@@ -38,7 +38,7 @@ Staje się stare to, co było młode.
 @2
 Nic nam nie grozi już, lecz nie otwarto bram
 I już nieważne – czy był wróg, czy nie było –
-Bo dla nas targ i z rozrywkami kram
+Bo dla nas targ i z rozrywkami kram,
 I śmiech, że co innego nam się śniło!
 
 @3

@@ -34,7 +34,7 @@ Codzienne modły więc zanoszę do Niej,
 By ocaliła nas – przed nami.
 
 @zw
-Nami, co toną, tonąc, innych topią,
+Nami, co toną, tonąc innych topią,
 Co marzą – innym odmawiając marzeń,
 Co z głową w pętli – jeszcze nogą kopią,
 By ślad zostawić na kopniętej twarzy.

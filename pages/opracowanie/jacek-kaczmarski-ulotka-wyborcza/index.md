@@ -34,13 +34,13 @@ Klucze do bramy nam pochował.
 @zwrotka2
 >Aż się zaczęło robić marnie
 >I dochodziło już do bitki,
->Gdy, okradając nam spiżarnię,
+>Gdy okradając nam spiżarnię,
 >Bezwartościowe dawał kwitki.
 >Bezwartościowe dawał kwitki.
 
 @zwrotka1
 I kłamał, całe lata kłamał,
-Aż bojąc się o własną skórę
+Aż bojąc się o własną skórę,
 Zrobił raz w nocy na nas zamach,
 Wprowadził w domu dyktaturę.
 

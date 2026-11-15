@@ -42,7 +42,7 @@ Bośmy bankierzy, a nie mnisi. [f/C f G]
 >Serca kusi ochota, [d a]
 >By skorzystać ze złota, [d a]
 >Lecz niech toczy się, niech innych toczy… [d6/A E4 (E)]
->Niech innych toczy. [E a]
+>Niech innych toczy… [E a]
 
 @zwrotka1
 Jesteśmy wszak pośrednikami
@@ -69,7 +69,7 @@ Od Jego dzieła pankreacji…
 >Ale Jego agenci
 >Wiedzą, jak się świat kręci
 >I jak wszystko zapłacić – niczym.
->Zapłacić niczym.
+>Zapłacić – niczym.
 
 @zwrotka1
 Oby na zawsze miejsce znaleźć

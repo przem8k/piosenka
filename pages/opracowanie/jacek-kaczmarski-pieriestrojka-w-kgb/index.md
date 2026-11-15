@@ -82,9 +82,9 @@ I zapomni o przeszłości
 
 >W ciemnym niebie gwiazdy świecą, [G D]
 >Mrok Matuszki duszę wymiótł. [G D]
->Wani łzy po twarzy lecą [G D (A7)]
+>Wani łzy po twarzy lecą – [G D (A7)]
 
 >W ciemnym niebie gwiazdy świecą, [g d]
 >Mrok Matuszki duszę wymiótł. [g d]
->Wani łzy po twarzy lecą [g d]
+>Wani łzy po twarzy lecą – [g d]
 >Ale to – od dymu. [D A D]

@@ -12,8 +12,8 @@ performers:
 ---
 
 #1
-Tej księgi do końca już czytać nie muszę [ E ]
-Choć większa ode mnie i ledwo w połowie [ a9 ]
+Tej księgi do końca już czytać nie muszę, [ E ]
+Choć większa ode mnie i ledwo w połowie. [ a9 ]
 Ogromne oburącz przewracam arkusze – [ E ]
 Ostatnią stronicę bez trudu dopowiem. [ a9 ]
 
@@ -24,7 +24,7 @@ Nic dla was nie musi oznaczać mój starczy
 Wzrok z twarzy od dziecka zmarszczonej – 
 
 #ref
->Jam karzeł, jam karzeł, jam karzeł jam karzeł [ E a9 E a9 ]
+>Jam karzeł, jam karzeł, jam karzeł, jam karzeł. [ E a9 E a9 ]
 
 @1
 Gnom zły i złośliwy, świat widzę ponuro,

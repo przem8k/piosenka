@@ -20,13 +20,13 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/dzielni
 
 #lol2
 W dzielnicy żebraków, pod murem klasztoru, [ e h ]
-Za zamkiem, gdzie miejskiej nie ujrzysz już straży [ G A H H7 ]
+Za zamkiem, gdzie miejskiej nie ujrzysz już straży, [ G A H H7 ]
 Aż huczy od gorzkich oskarżeń i sporów [ e D ]
 Przeciwko Królowi Nędzarzy. [ a C h7 e ( h e h )  ]
 
 @lol2
-Ma nędza swą godność, lecz nią się nie najesz,
-I więcej coś w ustach mieć chcesz, prócz nadziei,
+Ma nędza swą godność, lecz nią się nie najesz
+I więcej coś w ustach mieć chcesz prócz nadziei,
 Wybrano więc króla, a on – powiadają –
 Okazał się królem złodziei. [  a C h7 e ( h e C7) ]
 
@@ -37,8 +37,8 @@ Więc mówić się zwykło już głośno o zdradzie [ f Dis ]
 Idei godności żebraczej. [ b Cis c7 f  ( c f c ) ]
 
 #lol4
-A król wszak szlachetną miał myśl, by pogodzić [ Cis f ]
-I jednych i drugich, choć w walkach zajadli; [ H0 g C7 ]
+A Król wszak szlachetną miał myśl, by pogodzić [ Cis f ]
+I jednych, i drugich, choć w walkach zajadli; [ H0 g C7 ]
 Lecz zanim spłodzoną ideę urodził – [ f Dis ]
 Złodzieje nędzarzy okradli. [ b Cis c7 f ( c f c ) ]
 

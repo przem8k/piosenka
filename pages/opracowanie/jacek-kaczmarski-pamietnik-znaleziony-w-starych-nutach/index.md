@@ -26,7 +26,7 @@ Gdzie mnie zabrali? [e]
 
 #zwrotka2
 Wtem nade mną staje ktoś, [e]
-Ma łagodny miękki głos, [e]
+Ma łagodny miękki głos. [e]
 – Pobłogosław – mówi – los, [E]
 Będzie ci dobrze! [a]
 Tu ci dadzą jeść i pić, [a e]
@@ -69,8 +69,8 @@ Jakiś magnat weźmie go
 Jako solistę.
 
 >I stoimy na galerii – chór kastratów, [a e]
->Płynie nasz łagodny śpiew pochwalny śpiew! [H e (E7)]
->– Laudatur – śpiewamy – laudatur! [a e]
+>Płynie nasz łagodny śpiew, pochwalny śpiew! [H e (E7)]
+>– Laudatur – śpiewamy – laudatur! – [a e]
 >Głos nasz równo i szeroko niesie się… [H7 e (E7)]
->– Laudatur – śpiewamy – laudatur! [a e]
+>– Laudatur – śpiewamy – laudatur! – [a e]
 >Głos nasz równo i szeroko niesie się… [e H7 e (a e)]

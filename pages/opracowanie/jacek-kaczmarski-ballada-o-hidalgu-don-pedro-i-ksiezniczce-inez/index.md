@@ -15,7 +15,7 @@ performers:
 #zw
 Ona nic o nim nie wiedziała, [a]
 Z tęsknoty do niej ściskał żal go. [a E]
-Księżniczka imię Inez miała, [E7]
+Księżniczka imię Inés miała, [E7]
 A on don Pedro był – hidalgo. [E7 a]
 – Ach, wezmę ja wierzchowca mego, [a]
 W piękności co rywala nie ma; [a E]
@@ -37,7 +37,7 @@ Twój koń zielone ma kopyta!”. [E7 a (A7)]
 @zw
 – Na nic kopyta, nikną w trawie!
 Koń łeb powinien mieć zielony!
-Gdy zachwyt Inez nad nim zdławi,
+Gdy zachwyt Inés nad nim zdławi,
 Wkrótce zostanie moją żoną.
 Ach, myśli ta – śmiałości daj mi,
 By czyny dorównały chęciom! –
@@ -45,7 +45,7 @@ Tak się don Pedro modlił w stajni,
 Ujmując w zieleń łeb zwierzęcia.
 – Okna księżniczki się rozewrą
 Na oścież wizjom siedmiu nieb
-I krzyknie Inez: „Ach, don Pedro!
+I krzyknie Inés: „Ach, don Pedro!
 Twój rumak ma zielony łeb!”.
 >Ja na to, nie przestając gnać:
 >„Tak, ale ja chcę z tobą spać!”.
@@ -65,7 +65,7 @@ Gdy jego hidalgowe ciało
 Myśl nagła na hidalga spada. –
 Gdy tym jej do mnie nie przekonam,
 Ach, biada mi! Ach, biada, biada!
-Niech okna Inez się rozewrą
+Niech okna Inés się rozewrą
 I niech w zachwycie złoży dłonie;
 Niech krzyknie do mnie: „Ach, don Pedro!
 Wszak ty masz zielonego konia!”.

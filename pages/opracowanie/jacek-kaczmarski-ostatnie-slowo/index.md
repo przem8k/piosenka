@@ -19,17 +19,17 @@ performers:
 >Który bez rozgrzeszenia zmarł! [F G a]
 
 #a
-Nie doceniłem darów bożych, [E F E]
+Nie doceniłem darów Bożych, [E F E]
 Tylkom nazywał je i brał; [E F G F E]
 Nie znałem lęku, co by trwożył [E F E]
 I ku doskonałości gnał. [E F G F E]
-Nie znałem więc słodyczy szczęścia [a F a]
+Nie znałem więc słodyczy szczęścia, [a F a]
 Gdy się pokona taki lęk. [d F0 E]
-Chodziłem po najprostszych ścieżkach [a F a]
+Chodziłem po najprostszych ścieżkach, [a F a]
 Zbijając bąki ścichapęk. [d F0 E]
 Nie znałem bowiem gniewu, siły, [a F a]
 Ciekawość nie budziła mnie. [F G a]
-Świat szczodry dla mnie był i miły [F G a]
+Świat szczodry dla mnie był i miły, [F G a]
 Ten sam na jawie i we śnie. [G e a]
 
 @ref
@@ -39,21 +39,21 @@ Ten sam na jawie i we śnie. [G e a]
 >Który bez rozgrzeszenia zmarł!
 
 @a
-Żony wychować nie umiałem
+Żony wychować nie umiałem,
 Więc winić tu nie mogę jej,
-Lecz, jeśli pojąć coś zdołałem
+Lecz jeśli pojąć coś zdołałem
 Z mych dni – to tylko dzięki niej.
 Mój syn mordercą brata stał się,
 Czym ściągnął hańbę na nasz byt;
 Do zbrodni nawet przyznać bał się
 I skazał nas na ból i wstyd.
-Więc w tym ostatnim słowie czuję
+Więc w tym ostatnim słowie czuję,
 Że żaden sens mój żywot ma:
 Jeśli na piekło zasługuje
 Ktokolwiek z nas – to tylko ja.
 
 @ref
 >Najwyższy Sądzie – ja nie biadam.
->Nie straszny topór mi ni sznur.
+>Niestraszny topór mi ni sznur.
 >Nazwiska nie mam. Imię – Adam.
 >Praojciec ludzi. Klęski wzór.

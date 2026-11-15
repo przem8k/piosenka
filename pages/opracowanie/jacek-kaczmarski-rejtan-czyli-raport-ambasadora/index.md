@@ -12,7 +12,7 @@ performers:
 ---
 
 #zw1
-Wasze wieliczestwo, na wstępie śpieszę donieść: [a E]
+Wasze wieliczestwo, na wstępie spieszę donieść: [a E]
 Akt podpisany i po naszej myśli brzmi. [a E]
 Zgodnie z układem wyłom w Litwie i Koronie [a E]
 Stał się dziś faktem, czemu nie zaprzeczy nikt. [a E (A7)]
@@ -39,12 +39,12 @@ Inni zdobyli się na litościwą łzę.
 Tyle hałasu trudno sobie wyobrazić!
 Wzniesione ręce, z głów powyrywany kłak,
 Ksiądz Prymas siedział bokiem, nie widziałem twarzy,
-Evidemment, nie było mu to wszystko w smak.
+Evidemment nie było mu to wszystko w smak.
 
 Ponińskij wezwał straż – to łajdak jakich mało, [d g d]
 Do dalszych spraw polecam z czystym sercem go, [d g d]
 Branickij twarz przy wszystkich dłońmi zakrył całą, [d E]
-Szczęsnyj-Potockij był zupełnie comme il faut. [d E a (E)]
+Szczęsnyj Potockij był zupełnie comme il faut. [d E a (E)]
 
 @zw1
 I tylko jeden szlachcic stary wyszedł z sali,
@@ -54,14 +54,14 @@ To też Potockij! (Ale całkiem autre chose).
 
 @zw2
 Tak à propos, jedna z dwóch dam mi przydzielonych
-Z niesmakiem odwróciła się wołając – Fu!
+Z niesmakiem odwróciła się, wołając: – Fu!
 Niech ekscelencja spojrzy jaki owłosiony!
 (Co było zresztą szczerą prawdą, entre nous).
 
 @zw1
 Wszyscy krzyczeli, nie pojąłem ani słowa.
 Autorytetu władza nie ma tu za grosz,
-I bez gwarancji nadal dwór ten finansować
+I bez gwarancji nadal dwór ten finansować,
 To może znaczyć dla nas zbyt wysoki koszt.
 
 Tuż obok loży, gdzie wśród dam zająłem miejsce, [a E]
@@ -70,7 +70,7 @@ Trójbarwną wstążkę w czapce wzniósł i szablę w pięści – [a E a]
 Zachodnich myśli wpływu niewątpliwy ślad! [d E a (A7)]
 
 @zw2
-Tak, przy okazji – portret Waszej Wysokości 
+Tak przy okazji – portret Waszej Wysokości 
 Tam wisi, gdzie powiesić poleciłem go,
 Lecz z zachowania tam obecnych można wnosić,
 Że się nie cieszy wcale należytą czcią.
@@ -83,7 +83,7 @@ Kiedy ten mnisi lis Kołłątaj judził go.
 
 @zw2
 W tym zamieszaniu spadły pisma i układy.
-– Zdrajcy! – krzyczano, lecz do kogo, trudno rzec.
+„Zdrajcy!” – krzyczano, lecz do kogo, trudno rzec.
 Polityk przecież w ogóle nie zna słowa „zdrada”,
 A politycznych obyczajów trzeba strzec.
 
@@ -93,7 +93,7 @@ Rozgrywka z nimi to nie żadna polityka, [a E]
 To wychowanie dzieci, biorąc rzecz en masse. [a E]
 
 @zw2
-Dlatego radzę: nim ochłoną ze zdumienia
+Dlatego radzę: Nim ochłoną ze zdumienia,
 Tą drogą dalej iść, nie grozi niczym to;
 Wygrać, co da się wygrać! Rzecz nie bez znaczenia,
 Zanim nastąpi europejskie qui pro quo!

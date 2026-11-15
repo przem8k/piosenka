@@ -44,7 +44,7 @@ Bo patos tu nie mieszka
 Bo tu nie mieszka szczęście
 Bo droga stąd – donikąd
 A wrócić masz tą ścieżką
-Z żyjącą Eurydyką.
+Z żyjącą Eurydyką
 
 @2
 >A ty masz dźwięków pięknem

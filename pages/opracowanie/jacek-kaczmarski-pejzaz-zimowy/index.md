@@ -26,7 +26,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/pejzaz_
 #2
 Ludzie dobrzy, ludzie normalni, [ e ]
 Pracujący nad dobrobytem, [ a ]
-W ciepłe rzeczy przezornie ubrani [ a ]
+W ciepłe rzeczy przezornie ubrani, [ a ]
 Przez otchłanie lodem przykryte [ e ]
 Prześlizgują się dziarscy, rumiani. [ a e ]
 
@@ -50,8 +50,8 @@ Frajda trwa. [ a e ]
 >Ponurzy anieli codziennej ślizgawki.
 
 @2
-Ludzie słabi, ludzie bezradni
-Odstający w tłumie łyżwiarzy
+Ludzie słabi, ludzie bezradni,
+Odstający w tłumie łyżwiarzy,
 Piruetem na mroźnej zapadni
 Ocalają barwy swych twarzy;
 Niewidoczni, nieważni, niezgrabni.
@@ -59,9 +59,9 @@ Niewidoczni, nieważni, niezgrabni.
 @2
 Ludzie wielcy – ludzie nadludzie,
 Co pojęli Kosmos i Boga,
-W rozśnieżonej się puszą tancbudzie
-Na ułomnych wsparłszy się nogach
-Krok mylących na lodzie, na złudzie.
+W rozśnieżonej się puszą tancbudzie,
+Na ułomnych wsparłszy się nogach;
+Krok mylących na lodzie, na złudzie;
 
 @3
 Zgrzyta łyżwa, trzeszczy przyszła kra…

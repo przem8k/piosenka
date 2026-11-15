@@ -54,7 +54,7 @@ Tak po prostu wszak nie zjedzą mnie!
 >Bronię się co sił! Wtem trzask i mrok mnie skrył! [h]
 
 @zw
-Masło świetne, chleb wspaniały
+– Masło świetne, chleb wspaniały
 Człowiek z lekka był zgorzkniały
 Masło świetne, chleb wspaniały
 Człowiek z lekka był zgorzkniały

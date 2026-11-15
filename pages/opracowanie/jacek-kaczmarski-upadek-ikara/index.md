@@ -82,9 +82,9 @@ Fala dźwiga tors żaglowca,
 Drzewa – w górę, rzeki – w dół.
 Nad urwiskiem gnie się gałąź,
 Znieruchomiał na niej ptak:
-Ptasim wzrokiem objął całość
+Ptasim wzrokiem objął całość,
 Lecz – nie pojął jej i tak.
-Ptasim wzrokiem objął całość
+Ptasim wzrokiem objął całość,
 Lecz – nie pojął jej i tak.
 
 

@@ -41,7 +41,7 @@ Namyś^lają się gorzko, [C]
 
 @zwrotka1
 O, nie ^tak było drzewiej!
-A jak ^było - nikt nie wie,
+A jak ^było – nikt nie wie,
 >Bo nie ^wszystkie się jawią sek^rety,
 Kiedy ^chodzi o ^miłość,
 Poli^tyczną za^wiłość
@@ -51,7 +51,7 @@ Poli^tyczną za^wiłość
 Tu wieszcz ^Adam dni szereg
 Spędził w ^piekle rozterek;
 >Czy po^wstańcze zasilić ma ^jatki,
-Czy - gdy ^żądza się perli
+Czy – gdy ^żądza się perli
 W roman^tycznej scenerii –
 >Wybrać ^raczej ramiona mę^żatki.
 
@@ -117,9 +117,9 @@ Gdy roz^terka ta sama
 >Zamiast w ^walce – wyżywa się w ^piosnkach?
 Więc su^mienie najszczersze
 Dykto^wało mi wiersze,
->Których ^temat: „Pochwała łot^rostwa” [ G C ( A7) ]
+>Których ^temat: „Pochwała łot^rostwa”. [ G C ( A7) ]
 
 #3
 Więc su^mienie najszczersze [ d ]
 Dykto^wało mi wiersze, [ a ]
->Których ^temat: „Poch^wała łot^rostwa” [ d E7 a ]
+>Których ^temat: „Poch^wała łot^rostwa”. [ d E7 a ]

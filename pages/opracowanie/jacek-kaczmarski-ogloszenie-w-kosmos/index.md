@@ -17,10 +17,10 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/oglosze
 
 #1
 W całym Kosmosie swą obecność [ a E7 a ( E7 ) ]
-Oddam za ziemię niebezpieczną. [ a Fis0 ]
+Oddam za Ziemię niebezpieczną. [ a Fis0 ]
 
 #2
-Odstąpię ziemię z jej bogactwem  [ E7 F ]
+Odstąpię Ziemię z jej bogactwem  [ E7 F ]
 Za myśli jasne, choć niełatwe. [ a E7 a ( a E7 a E7 ) ]
 
 @1

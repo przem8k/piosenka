@@ -41,7 +41,7 @@ Szkielet doktora Mengele –
 Nieżywy kat.
 
 #4
-Bo przecież to jedynie jest po trupie ślad [ a e ]
+Bo przecież to jedynie jest po trupie – ślad. [ a e ]
 Szkielet doktora Mengele – [ H7 ]
 Nieżywy kat. [ H7 e ]
 

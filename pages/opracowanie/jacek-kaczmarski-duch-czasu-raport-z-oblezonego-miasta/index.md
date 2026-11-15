@@ -12,14 +12,14 @@ performers:
  - 'przemyslaw-gintrowski'
 ---
 
-Którzy myśleli, że się Go oswoi [d]
+Którzy myśleli, że się Go oswoi – [d]
 Ci się najłatwiej oswoić Mu dali: [d]
 Przynętę przełknął, z piszczałek rozbroił, [B C F]
 Pogonił batem po okrągłej sali. [Gis G C (A7)]
 
-Którzy myśleli, że się Go oszuka [d]
+Którzy myśleli, że się Go oszuka – [d]
 Ani spostrzegli, a już oszukani. [d]
-Nie raczył nawet do ich drzwi zapukać [B C F]
+Nie raczył nawet do ich drzwi zapukać, [B C F]
 Żeby uściskać dłonie z kajdankami. [g A d (B7)]
 
 Którzy myśleli, że się Go uprosi – [dis]
@@ -32,7 +32,7 @@ Nagle podobni są tylko do siebie. [dis]
 Twarze wszechmocnych, którzy chcieli nie móc, [H Cis Fis]
 Jak zmięte ścierki użyte w potrzebie. [gis B dis (H7)]
 
-Którzy myśleli, że się Go pokona [e]
+Którzy myśleli, że się Go pokona, [e]
 Dziś zamieszkują piekła i kurhany. [e]
-Dopóki z gwiazd ich ostatnia nie skona [C D G e]
+Dopóki z gwiazd ich ostatnia nie skona, [C D G e]
 Kres Jego władzy jest gdzieś zapisany. [H7 C H7 e]

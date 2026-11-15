@@ -25,7 +25,7 @@ Ale rozniosło się po mieście, [A7 d]
 Więc się zaczęli schodzić gapie, [a E7]
 choć bilet mógł kosztować słono. [E7 a]
 Przyszliśmy my – jej wielbiciele, [A7 d]
-Już przerzedzeni, postarzali [d a]
+Już przerzedzeni, postarzali, [d a]
 I po raz pierwszy znów po latach [a E7]
 Niektórzy z nas się spotykali; [E7 a]
 A ona była trochę inna, [A7 d]
@@ -39,22 +39,22 @@ Ci z biletami darmowymi,
 Żeby znów ściągnąć ją ze sceny
 I żeby poszła razem z nimi –
 Poderwaliśmy się w obronie,
-Choć nie mówiła ani słowa
+Choć nie mówiła ani słowa,
 I zażądaliśmy spektaklu,
 I grać zaczęła go od nowa.
 Nie było w nim już tej radości
 I zaszły w nim widoczne zmiany –
 Pojęliśmy, że nowy dramat
 Dopiero będzie napisany,
-Ale i tak się stało jasne
+Ale i tak się stało jasne,
 Jak jej nam bardzo było brak,
 Gdy ją zagłuszać jęli wrzaskiem
 Ci, którym było to nie w smak.
 
 @zw
 Niespodziewanie nam pomogli
-Jej nowi wielbiciele młodzi
-Wielbiący ją, jak starą gwiazdę,
+Jej nowi wielbiciele młodzi,
+Wielbiący ją jak starą gwiazdę,
 Co zamiast spadać – nagle wschodzi.
 I na ramionach ją ponieśli
 Z tą siłą, której nam nie stało,

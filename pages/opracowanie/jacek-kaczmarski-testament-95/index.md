@@ -27,7 +27,7 @@ Za mną już liczba chrystusowa [ D A ]
 Ofiarnym kozłom przypisana, [ h G A D ]
 Kiedy niewinna spada głowa [ D A ]
 Za cudze grzechy – czyli za nas, [ fis E7 A]
-By z życia się wymknąwszy sideł [ G H7 e g ]
+By z życia się wymknąwszy sideł, [ G H7 e g ]
 Uschnąć w relikwię wśród kadzideł. [ D A D ]
 
 #2
@@ -35,7 +35,7 @@ Przede mną dziesięć lat niepewnych, [ h Fis ]
 Gdy każdy zmierzch mężczyznę miażdży, [ a e ]
 Od wewnątrz pośpiech szarpie gniewny, [ Cis0 h ]
 A z nieba mu znikają gwiazdy. [ F0 Fis ]
-Który to przetrwa ten – dożyje [ e A Fis h ]
+Który to przetrwa, ten – dożyje [ e A Fis h ]
 Zaszczytu, że sędziwie zgnije. [ g D A D ]
 
 #3
@@ -51,7 +51,7 @@ Patrzono na mnie przez soczewki
 Miłości, złości, interesu,
 Przeinaczano moje śpiewki,
 By się stawały tym, czym nie są.
-Tak używano mnie w potrzebie
+Tak używano mnie w potrzebie –
 Aż dziw, że jeszcze mam ciut siebie.
 
 @4
@@ -79,10 +79,10 @@ Więc nim się zrobi krótkie spięcie –
 „Kocham cię” – piszę w testamencie.
 
 @1
-Także synowi memu, Kosmie
+Także synowi memu, Kosmie,
 Niewiele mam do zapisania.
-Nie wiem co będzie, gdy dorośnie:
-Czy zada cios mi, czy pytania
+Nie wiem, co będzie, gdy dorośnie:
+Czy zada cios mi, czy pytania;
 I próżno mi się dzisiaj biedzić,
 Czy znajdę na nie odpowiedzi.
 
@@ -120,10 +120,10 @@ Wciąż okładają się współcześni.
 
 @4
 Ja z nimi nic wspólnego nie mam
-(To znaczy z ludźmi, nie z pieśniami)
+(To znaczy z ludźmi, nie z pieśniami).
 Niech sobie znajdą własny temat
 I niech go wyśpiewają sami.
-Inaczej zdradzą wielbiciele
+Inaczej zdradzą wielbiciele,
 Że nie pojęli ze mnie wiele.
 
 @2
@@ -138,30 +138,30 @@ Rozeszliśmy się bez melodii.
 W ten czas tak marny, hałaśliwy,
 Gdy szybki efekt myśl połyka,
 Chóralne plączą się porywy,
-Muzyka wszelka w zgiełku znika.
-Lecz, chociaż z nieuchronnym smutkiem,
+Muzyka wszelka w zgiełku znika;
+Lecz chociaż z nieuchronnym smutkiem,
 Każdy niech swoją nuci nutkę.
 
 @4
 O, nie samotne to nucenie!
 Ani obejrzy się pustelnik –
 Zjawią się wielcy ocaleni
-Z historii rusztów i popielnic
-By szydzić wprzód a potem kusić
+Z historii rusztów i popielnic,
+By szydzić wprzód, a potem kusić
 I do sprostania im przymusić.
 
 @2
-Bo nie przypadkiem przeszli czyściec
+Bo nie przypadkiem przeszli czyściec –
 Odsiani z mód wartkiego ścieku
-Po to by istnieć (a nie błyszczeć)
+Po to, by istnieć (a nie błyszczeć)
 I wieść dysputę o człowieku.
 W przepyszne wciągną cię katusze
 Nie byle jakie łby i dusze.
 
 @3
-Dyskusja z nimi więc jest czysta.
+Dyskusja z nimi więc jest czysta –
 Podstępna tylko z naszej strony.
-Czym grozi nam antagonista
+Czym grozi nam antagonista,
 Co przed wiekami pogrzebiony?
 A dodam jeszcze myśl, że i my
 Niedługo już będziemy z nimi.
@@ -169,7 +169,7 @@ Niedługo już będziemy z nimi.
 @4
 To samo pod rozwagę daję
 Kochankom moim bez wyjątku:
-Jakże do syta tym się najeść
+Jakże do syta tym się najeść,
 Co końcem było od początku?
 Imion rozkoszy więc nie podam,
 Bo życia mało, czasu szkoda.
@@ -179,13 +179,13 @@ Dlatego też się kończyć godzi.
 Nie wiem, czy jeszcze co napiszę,
 Lecz tylem już wierszydeł spłodził,
 Że jest czym okpić po mnie ciszę.
-Zwłaszcza że póki słońce świeci
+Zwłaszcza że póki słońce świeci,
 Wciąż będą rodzić się poeci.
 
 @3
-Jak ja bezczelni i bezradni
+Jak ja bezczelni i bezradni,
 Spragnieni grzechu i spowiedzi
 I jedną nogą już w zapadni,
-Dociekający co w nich siedzi,
+Dociekający, co w nich siedzi,
 Co wciąż nieuchronności przeczy, [ G H7 C0 e ]
 Że może życie jest do rzeczy. [ D A G g D ]

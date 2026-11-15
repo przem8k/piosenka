@@ -12,8 +12,8 @@ performers:
  - 'jacek-kaczmarski'
 ---
 
-Otworzyli nam nasz cyrk – z pełną pompą, z pełnym szpanem [e H e H e]
-I wołają – tańczta teraz na linie tak, jak chceta! [e C H]
+Otworzyli nam nasz cyrk – z pełną pompą, z pełnym szpanem – [e H e H e]
+I wołają – tańczta teraz na linie, tak jak chceta! [e C H]
 Program ustalony już, numery są wybrane [e H e H e H e]
 I recenzję wasza własna wystawi wam gazeta! [C H e]
 
@@ -24,12 +24,12 @@ I recenzję wasza własna wystawi wam gazeta! [C H e]
 
 A my na to: proszę bardzo! I zaraz za drabinkę [e H e H e]
 Pod kopułę namiotu dawaj wspinać się z godnością! [C H]
-Wtem tchu nam w piersiach nagle brak i ktoś podwędził linkę [e H e H e]
+Wtem tchu nam w piersiach nagle brak i ktoś podwędził linkę, [e H e H e]
 I jak tu iść w powietrzu przed wierną publicznością?! [C H e]
 
 >Ten i ów próbuje jednak i oczywiście spada – [a e a e]
 >Zrozumieć jednak trzeba go – w tym nie ma jego winy, [C H]
->A prawdę mówiąc jeszcze nie zagraża mu zagłada, [a e a e]
+>A, prawdę mówiąc, jeszcze nie zagraża mu zagłada, [a e a e]
 >Bo w dole tyle trocin – tam tylko już trociny… [C B0 (H)]
 
 Lecz tak nie może przecież być, orkiestra się zaśmiewa, [e H e H e]

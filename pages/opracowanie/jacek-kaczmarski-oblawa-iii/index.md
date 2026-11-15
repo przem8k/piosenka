@@ -25,7 +25,7 @@ Poczułem łup – do ziemi głodny pysk przytykam – [F0]
 Wtem straszny ból i stokroć odeń gorszy trzask! [F0 a]
 
 #ref
->Strzeżcie się wilki! Strzeżcie się przynęty! [a]
+>– Strzeżcie się wilki! Strzeżcie się przynęty! [a]
 >Strzeżcie się wilki! Strzeżcie ludzkiej łaski! [a]
 >Zastawił na was wróg zawzięty potrzaski! [F E7 a]
 
@@ -40,12 +40,12 @@ To z jego marnie zginę rąk, jak zwierzę ginie!
 Dostanę pałką w łeb, nim warknąć będę mógł!
 
 @ref
->Strzeżcie się wilki! Strzeżcie się przynęty!
+>– Strzeżcie się wilki! Strzeżcie się przynęty!
 >Strzeżcie się wilki! Strzeżcie ludzkiej łaski!
 >Zastawił na was wróg zawzięty potrzaski!
 
 @zw
-Żałosny koniec, śmierć haniebna – nie dla wilka
+Żałosny koniec, śmierć haniebna – nie dla wilka,
 Niech królik mdleje w pętli, czeka na swój los!
 Moja pieśń życia jeszcze dla mnie nie zamilkła!
 Niejedna przestrzeń jeszcze mój usłyszy głos!
@@ -55,7 +55,7 @@ Już pęka kość i własnej krwi mam pełne żuchwy…
 Jednym szarpnięciem się uwalniam, żeby żyć!
 
 @ref
->Strzeżcie się wilki! Strzeżcie się przynęty!
+>– Strzeżcie się wilki! Strzeżcie się przynęty!
 >Strzeżcie się wilki! Strzeżcie ludzkiej łaski!
 >Zastawił na was wróg zawzięty potrzaski!
 
@@ -70,6 +70,6 @@ Przez zęby mówi: – Oto jest wilk wolny! –
 Kiedy na śniegu ujrzy ślady trojga łap!
 
 @ref
->Strzeżcie się wilki! Strzeżcie się przynęty!
+>– Strzeżcie się wilki! Strzeżcie się przynęty!
 >Strzeżcie się wilki! Strzeżcie ludzkiej łaski!
 >Zastawił na was wróg zawzięty potrzaski!

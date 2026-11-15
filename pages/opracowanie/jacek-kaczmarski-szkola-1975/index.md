@@ -21,13 +21,13 @@ W szkole, synku mój? [C G7 C]
 
 #z2
 Uczyli mnie dzisiaj, ojcze mój [C F C]
-— Policjant to przyjaciel twój, [F C]
+– Policjant to przyjaciel twój, [F C]
 Że sprawiedliwości końca brak, [C F C]
 Że pocisk to wolności ptak. [F C]
 
 #ref
 Tego uczyli w szkole mnie, [C]
-Tego uczyli dziś [C G7 C]
+Tego uczyli dziś. [C G7 C]
 
 @z1
 Czego uczyli ciebie dziś
@@ -43,7 +43,7 @@ A rząd nasz to mądrości wzór.
 
 @ref
 >Tego uczyli w szkole mnie,
->Tego uczyli dziś
+>Tego uczyli dziś.
 
 @z1
 Czego uczyli ciebie dziś
@@ -53,13 +53,13 @@ W szkole, synku mój?
 
 @z2
 Uczyli dzisiaj w szkole mnie,
-Że wszystkim jest dobrze, nigdy źle
+Że wszystkim jest dobrze, nigdy źle.
 Rządzący to najlepsi z nas,
 Więc będziem ich wybierać raz po raz.
 
 @ref
 >Tego uczyli w szkole mnie,
->Tego uczyli dziś
+>Tego uczyli dziś.
 
 @z1
 Czego uczyli ciebie dziś
@@ -75,4 +75,4 @@ I kiedyś i ja chwycę szansę mą.
 
 @ref
 >Tego uczyli w szkole mnie,
->Tego uczyli dziś
+>Tego uczyli dziś.

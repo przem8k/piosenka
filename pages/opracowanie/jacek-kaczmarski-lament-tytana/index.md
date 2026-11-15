@@ -46,12 +46,12 @@ A ci – na los jego – ślepi!
 >Wciągają czapki na uszy. [a H7 e]
 
 @zwrotka1
-Wspomną go jeszcze snując swe mity
+Wspomną go jeszcze, snując swe mity
 (Tak, jakby dawno już nie żył) –
 Że do kaukaskich szczytów przybity,
 Lecz przecież kto w to uwierzy?
 Że go zastąpi w męce banity
-Jakiś półczłowiek, półzwierzę,
+Jakiś pół człowiek, pół zwierzę,
 Któremu, w życiu pragnień wyzbytym,
 Na niczym już nie zależy.
 

@@ -21,7 +21,7 @@ Do waszych uszu nie dociera. [A]
 To on jest dzielny, mądry, twardy – [h]
 Ja tylko – wariat, degenerat. [E]
 On jest sól ziemi i kość z kości, [fis]
-Nosiciel nieobjętych dążeń... [D]
+Nosiciel nieobjętych dążeń… [D]
 A ja – w monoklu śmieć ludzkości, [h]
 Zdeklasowany, chory książę. [A]
 
@@ -55,7 +55,7 @@ Mało pozycji mu – premiera!
 Rzecznicy salonowej tłuszczy
 Unoszą brwi: – To wielki człowiek!
 Ja krzyczę: – Cham to! Cham griaduszczij! –
-- Lecz przecież mam nierówno w głowie.
+Lecz przecież mam nierówno w głowie.
 
 @ref
 >Więc śmiech piskliwy we mnie wzbiera

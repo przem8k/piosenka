@@ -22,9 +22,9 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/przyjac
 #2
 Żyło raz przyjaciół dwóch,  [ a ]
 Jeden mieli smak i słuch [ a ]
-I na świat patrzyli takim samym wzrokiem. [ a E ]
+I na świat patrzyli takim samym wzrokiem, [ a E ]
 A na świecie wojna trwała, [ a ]
-Wojna ludzi rozdzielała. [ a ]
+Wojna ludzi rozdzielała, [ a ]
 Oni cało szli przed siebie równym krokiem. [ E a ]
 
 @2
@@ -37,25 +37,25 @@ A po łaźniach raźniej, kiedy razem pili.
 
 #3
 W tym ich mały dramat tkwił: [ a ]
-Jeden pił i drugi pił; [ a ]
-Lali w gardła co popadło równocześnie. [ a E7 ]
-Lecz choć razem zakąszali, [ E7 ]
-W jednej chwili przechylali – [ E7 ]
+Jeden pił i drugi pił, [ a ]
+Lali w gardła co popadło, równocześnie, [ a E7 ]
+Lecz choć razem wypijali, [ E7 ]
+W jednej chwili przekąszali – [ E7 ]
 Jeden później się upijał, drugi wcześniej. [ E7 a ( E ) ]
 
 @2
 Któryś z nich zobaczył raz
 Słup, na który zaraz wlazł –
-Milczą dzieje czy był trzeźwy czy pijany.
+Milczą dzieje, czy był trzeźwy, czy pijany.
 Wtem krzyk straszny przyjaciela:
 Złaź! Zobaczą i zestrzelą!
-Gdzie i po co?! Na dół złaź! Na boskie rany!
+Gdzie i po co?! Na dół złaź! Na Boskie Rany!
 
 @3
 Czemu zaraz mam być trup?
 To jest bardzo dobry słup,
 Żeby móc poszerzyć sobie horyzonty!
-Patrzę w górę i na boki
+Patrzę w górę i na boki,
 I niekiepskie mam widoki,
 A poza tym sięgam wzrokiem ponad fronty!
 

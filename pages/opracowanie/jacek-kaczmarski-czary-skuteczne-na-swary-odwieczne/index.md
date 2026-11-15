@@ -18,7 +18,7 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/czary_s
 #1
 Wielkie jest na czary zapotrzebowanie [ e F e ]
 W czasach niespokojnych królestwa bez stosów. [ e F e ]
-Wierzy w nie lud prosty, wierzą pretorianie [ D G D ]
+Wierzy w nie lud prosty, wierzą pretorianie, [ D G D ]
 Rymując formuły na odmianę losu [ D G Fis H7  ]
 I na pozbywanie się [ a ]
 Strapień i osób. [ D e ]
@@ -28,7 +28,7 @@ Strapień i osób. [ D e ]
 >Podobieństwa niechybnego, [ e/G e9/Fis e/G e ]
 >Na niej szpilą jego imię [ e9/Fis e/G a ]
 >Wypisz wraz z imieniem Złego. [ e/G e9/Fis e/G e ]
->Zaczem nocą spal w kominie [ a e ]
+>Zaczem nocą spal w kominie, [ a e ]
 >A w męczarniach wróg twój zginie. [ a e ]
 
 #3
@@ -37,10 +37,10 @@ Strapień i osób. [ D e ]
 
 @1
 Słychać z ust dostojnych hasła i zaklęcia,
-Goreją złe oczy rzucając uroki
-A zauroczeni nie mają pojęcia
-Że już ostateczne zapadły wyroki,
-Ścięty łeb kurczęcia
+Goreją złe oczy, rzucając uroki,
+A zauroczeni nie mają pojęcia,
+Że już ostateczne zapadły wyroki.
+Ścięty łeb kurczęcia,
 A ciało – w podskoki.
 
 @2
@@ -66,10 +66,10 @@ Cuda to czy czary,
 #4
 >Grosz ostatni żebrakowi [ f f9/G f/Gis b ]
 >Zabierz, daj czarownikowi [ f/Gis f9/G f/Gis f ]
->I się brzmieniem zaklęć odurz [  f f9/G f/Gis b  ]
+>I się brzmieniem zaklęć odurz, [  f f9/G f/Gis b  ]
 >Zaczem głowę workiem owiń [ f/Gis f9/G f/Gis f ]
->I z wysokich rzuć się schodów [ b f ]
->To nie zaznasz więcej głodu. [ b f ]
+>I z wysokich rzuć się schodów, [ b f ]
+>A nie zaznasz więcej głodu. [ b f ]
 
 #5
 >Jak nie wierzysz – to się módl, [ Dis Gis Dis Gis Dis ]

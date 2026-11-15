@@ -49,7 +49,7 @@ Teraz wszędzie jest już tak samo
 
 @1
 I unoszą się nad nim ptaki
-Kto tam mówi że każdy tu więźniem
+Kto tam mówi, że każdy tu więźniem
 Wolny lot – komu zbrzydły robaki
 Ale kto usiądzie – ugrzęźnie!
 
@@ -60,7 +60,7 @@ Ale kto usiądzie – ugrzęźnie!
 >Muł
 
 @1
-Wieją wiatry schnie muł na kamień
+Wieją wiatry, schnie muł na kamień
 Po szczelinach kiełkuje coś znowu
 Ale z ziemi się nie wyłamie
 Nim wyrośnie – znów przyjdzie powódź

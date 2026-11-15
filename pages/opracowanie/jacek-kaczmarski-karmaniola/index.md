@@ -29,7 +29,7 @@ I nikt królewskiej nie zażądał głowy. [E Gis cis A E H E]
 [E H E  E H E]
 
 @zwrotka
-Lud wszystko zna – jałmużnę post i chłostę,
+Lud wszystko zna – jałmużnę, post i chłostę,
 I w wasze oczy spojrzy bez zmrużenia.
 A nikt nie mierzy latarń ludzkim wzrostem,
 Na szafotach rosną krzyże przebaczenia.

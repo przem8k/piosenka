@@ -43,7 +43,7 @@ I nocą zimniejsze bywały baraki.
 
 @1
 Co dzień swoją przyszłość czytał w dwóch kamykach:
-Czarny – wschód, biały – to w Polsce zostanie.
+Czarny – Wschód, biały – to w Polsce zostanie.
 Potrząsał je w dłoni i oczy zamykał –
 Takeśmy się razem znaleźli w Riazaniu.
 

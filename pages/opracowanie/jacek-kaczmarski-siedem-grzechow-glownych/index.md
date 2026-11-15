@@ -20,13 +20,13 @@ score2_thumb: https://storage.googleapis.com/piosenka-media/media/scores/siedem_
 #zw1
 Wielkich upadków więcej widzieliśmy niż wzlotów, [fis G A G fis]
 Byliśmy oczywiście na uczcie Baltazara, [fis G A G fis]
-Uczyliśmy się mowy zwycięskich Wizygotów [e fis G fis e]
+Uczyliśmy się mowy zwycięskich Wizygotów, [e fis G fis e]
 Na służbie ostatniego przepiwszy żołd Cezara. [fis G A G fis]
 
 @zw1
 Przeżyliśmy Rolanda, by świadczyć śmierć Karola,
 Pozostałościom mocarstw nie oczekiwać łaski.
-Razem z Ludwikiem Świętym widząc się w aureolach
+Razem z Ludwikiem Świętym widząc się w aureolach,
 Wyrzygiwaliśmy krew w jerozolimskie piaski.
 
 @zw1
@@ -43,14 +43,14 @@ I demokracja kwitnie, dojrzewa i przemija…
 >Bandzioch domaga się płynów i straw do przesytu, [G D a C e]
 >Wabi rozkoszne lenistwo do łóż z aksamitu, [G D a C e]
 >Gniew zrywa ze snu i groźbą na oślep wywija, [C G a]
->A zazdrość nie wie, co sen i po cichu zabija. [G D a C e]
+>A zazdrość nie wie, co sen, i po cichu zabija. [G D a C e]
 
 #ref2
->Tak zbrojni w moce, na które nie ma lekarstwa [G D e]
+>Tak zbrojni w moce, na które nie ma lekarstwa, [G D e]
 >Stawiamy nadal i obalamy mocarstwa. [G D e]
 
-Każdemu więc z imperiów bezsprzecznie zasłużeni [e fis G A e]
-My – ludzie pióra, miecza lub zajęczego lęku [G A h A h]
+Każdemu więc z imperiów bezsprzecznie zasłużeni; [e fis G A e]
+My – ludzie pióra, miecza lub zajęczego lęku – [G A h A h]
 Jesteśmy grabarzami swych własnych dzieł stworzenia, [D C h C a]
 Zajęczym lękiem niszcząc je, mieczem lub piosenką. [C h a h G]
 
@@ -72,7 +72,7 @@ Bo wiemy, że na pewno je w końcu usłyszymy… [a G fis G e]
 >Bandzioch domaga się płynów i straw do przesytu,
 >Wabi rozkoszne lenistwo do łóż z aksamitu,
 >Gniew zrywa ze snu i groźbą na oślep wywija,
->A zazdrość nie wie, co sen i po cichu zabija.
+>A zazdrość nie wie, co sen, i po cichu zabija.
 
->Tak zbrojni w moce, na które nie ma lekarstwa [C G a]
+>Tak zbrojni w moce, na które nie ma lekarstwa, [C G a]
 >Będziemy nadal stawiać i zwalać mocarstwa. [G D e]

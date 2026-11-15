@@ -18,7 +18,7 @@ performers:
 
 #2
 Z punktu widzenia trupa Kozaka, [ a E a E ]
-Który w dniu śmierci miał zęby w porządku [ a E a E ]
+Który w dniu śmierci miał zęby w porządku, [ a E a E ]
 Jest wszystko jedno – jaka znów draka [ a E a E ]
 Grób mu rozgrzebie w ramach obrządku. [ a E e a ( a )  ]
 
@@ -29,7 +29,7 @@ Więc cóż on na to, kiedy zmartwychwstał [ a E a E ]
 Na Witkacego los pogrobowy? [ a E e a ( E a ) ]
 
 #4
->Cała filozofia [ a E ]
+>Cała filozofia, [ a E ]
 >Co żądała ofiar – [ a e ]
 >Spadła w wieczności czeluście; [ a G a ]
 >I jak tu wierzyć,  [ a E ]
@@ -46,7 +46,7 @@ Nawet i wtedy, gdy robak mu mózg zjadł.
 Nie każdy Kozak doczeka świty
 Konsulów, którzy „się nie wyprą go”!
 Byle się odbył cmentarny mityng
-I transport prochów przez firmę RONGO.
+I transport prochów przez firmę BONGO.
 
 @4
 >Jedna w tym uciecha,

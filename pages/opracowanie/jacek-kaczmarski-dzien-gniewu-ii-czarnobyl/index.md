@@ -23,15 +23,15 @@ Nie przeraża i nie boli [ G7 ]
 Pełzająca śmierć pod progiem. [ C ]
 
 @1
-Wokół studni, na podwórku
-Mokre buzie roześmiane,
+Wokół studni na podwórku
+Mokre buzie roześmiane;
 Dziecko kijem goni kółko,
 Ono też jest zabijane.
 
 #2
-Na poddaszu, przy lunecie [ a ]
+Na poddaszu przy lunecie [ a ]
 Siwobrody gnie się mędrzec, [ F ]
-Tropi prawdy we wszechświecie, [ G ]
+Tropi prawdy we wszechświecie – [ G ]
 I on też zabity będzie. [ C ]
 
 @1
@@ -53,7 +53,7 @@ Już nie trzeba iść na wojnę,
 Żeby stawić czoła śmierci.
 
 @1
-Żyć wystarczy jak się żyło,
+Żyć wystarczy, jak się żyło,
 Modlić się o święty spokój,
 Kopać grządki, kochać miłość,
 Nic nie wiedząc o wyroku.
@@ -61,7 +61,7 @@ Nic nie wiedząc o wyroku.
 @2
 Trzeba się ubierać ciepło,
 Jeść z umiarem, ważyć słowo,
-Dbać by życie nie uciekło,
+Dbać, by życie nie uciekło,
 Zanim się nie umrze zdrowo.
 
 @1
@@ -79,7 +79,7 @@ Zawsze przyjdą i wywiozą.
 @2
 Zabijają ich, nie wiedząc,
 Że ich właśnie zabijają,
-Zabijają śpiąc i jedząc,
+Zabijają, śpiąc i jedząc,
 Patrząc, słysząc, nie pytając.
 
 @1

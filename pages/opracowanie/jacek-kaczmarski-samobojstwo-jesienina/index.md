@@ -26,16 +26,16 @@ Jak każda twarz martwa wygląda, niestety. [ a E7 a ]
 @lol1
 Śmierć jakakolwiek – to zrządzenie boskie,
 Lecz w Związku Radzieckim pismem wielbić Rosję
-To w latach dwudziestych igranie ze zgonem,
+To w latach dwudziestych – igranie ze zgonem,
 Gdy płomienie nadziei stawały się płonne,
-Najcichsze słowo mogło zrodzić zemstę
+Najcichsze słowo mogło zrodzić zemstę,
 A sam fakt życia stawał się przestępstwem.
 
 @lol1
 Więc przypuszczenie myśl nieufną biesi:
 Może Jesienin sam się nie powiesił…
-Nim sakwojaż w paski pociął miast powroza
-Ręką – potem białą – jak rosyjska brzoza
+Nim sakwojaż w paski pociął miast powroza,
+Ręką – potem białą jak rosyjska brzoza –
 Nim sprawdził, czy wytrzyma ciężar tak ogromny
 Decyzji – mówią, że już był nieprzytomny.
 

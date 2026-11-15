@@ -16,7 +16,7 @@ performers:
 Po wielkiej wojnie wszystkich [ F C d ]
 Gdy świat sam siebie złupił [ B G C ]
 Na krwawym targowisku [ F C d ]
-Czekamy kto nas kupi [ B G C ] 
+Czekamy, kto nas kupi [ B G C ] 
 Najlepszych z nas wybili [ B A d ]
 A reszcie mało trzeba [ C F C d ]
 Zbyt dużośmy przeżyli [ B D7 g ]
@@ -29,8 +29,8 @@ Możemy stąd wypatrzeć
 Ruiny naszych świątyń
 Na placu pośród ruin
 Krzyżują się poglądy
-Szczekają beczą plują
-Psy owce i wielbłądy [B F C F (D) ]
+Szczekają, beczą, plują
+Psy, owce i wielbłądy [B F C F (D) ]
 
 #2
 Na dachach naszych domów [ G D e]

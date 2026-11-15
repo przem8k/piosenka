@@ -20,7 +20,7 @@ Błysk biseksualnych bielizn, [a E]
 Płodzą uniwersytety [C G]
 Permisywizm i ateizm. [E a]
 W spisku cyrkla i fartucha [d a]
-(Zamiast maski - okulary) [E a]
+(Zamiast maski – okulary) [E a]
 Chrześcijańskiego dusi ducha [F C]
 Szatan pychy i niewiary. [Fis0 E]
 
@@ -49,7 +49,7 @@ Chcą się zbawić tu i teraz.
 @zw1
 Chorych łudzą, głodnych mnożą,
 Koronują złotogłowiem,
-Przekłamują wolę bożą
+Przekłamują wolę Bożą
 Swym strzelistym pustosłowiem.
 Wielbią krzyże i kajdany,
 Nędza dla nich wielkość znaczy;
@@ -64,11 +64,11 @@ Kroją święty strój rozpaczy.
 
 #zw2
 Unicestwić, pozarzynać, [b F]
-Wobec śmierci się nie wahać [b F]
+Wobec śmierci się nie wahać, [b F]
 Biorąc z sobą poganina [Cis Gis]
-W wielkim hołdzie dla Allacha. [F b]
+W wielkim hołdzie dla Allaha. [F b]
 By pijane rozpasanie [dis b]
-Wieczność trwało w tamtym świecie - [F b]
+Wieczność trwało w tamtym świecie – [F b]
 Trup z hurysą na kolanie [Fis Cis]
 Prorokowi służył przecież! [G0 F]
 
@@ -92,4 +92,4 @@ W zakład z własnym nieistnieniem. [Gis0 Fis]
 >W kwestie mroczne i ogromne [h Fis]
 >Słodka świata treść wycieka: [Fis7 h H7]
 >Wszystko wina to człowieka, [e Gis0 h]
->Że o Bogu tutaj już nie wspomnę... [Gis0 Fis h]
+>Że o Bogu tutaj już nie wspomnę… [Gis0 Fis h]

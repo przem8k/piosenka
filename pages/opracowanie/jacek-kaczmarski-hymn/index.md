@@ -20,15 +20,15 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/hymn.pn
 [ e F F F/g F/g a/c a/h a ]
 
 #zw
-Kto w twierdzy wyrósł po co mu ogrody		[ e a a a/h a/c a/d a/c a/h a a/h ]
-Kto krew ma w oczach nie zniesie błękitu		[ e a a a/h a/c a/d a/c a/h a a/h]
+Kto w twierdzy wyrósł, po co mu ogrody		[ e a a a/h a/c a/d a/c a/h a a/h ]
+Kto krew ma w oczach, nie zniesie błękitu		[ e a a a/h a/c a/d a/c a/h a a/h]
 Sytość zabije nawykłych do głodu			[F e C a e]
 Myśl upodlona nie dźwignie zaszczytów		[F e C a e]
 
 @zw
 Kto się ukrywał szczuty i tropiony
 Nigdy nie będzie umiał stanąć prosto
-Zawsze pod murem zawsze pochylony
+Zawsze pod murem, zawsze pochylony
 Chyba że nagle uwierzy w swą boskość
 
 #ref
@@ -39,7 +39,7 @@ A teraz jednym z tysięcy uśmiechów			[C D e]
 
 @ref
 Z ran zadawanych kto krzyczał w agonii
-Na męki dając ciało by myśl pieścić
+Na męki dając ciało, by myśl pieścić
 Nie widzi sensu w nauce harmonii
 Ani nie umie śpiewać o tym pieśni
 
@@ -47,10 +47,10 @@ Ani nie umie śpiewać o tym pieśni
 Kto świat opuścił w zastanej postaci
 Ten nie zaśpiewa hymnu dziękczynienia
 Choćby i przez to miał zbawienie stracić
-Nie ma o nie ma zadośćuczynienia
+Nie ma, o nie ma zadośćuczynienia
 
 @zw
 Nie dla wiwatów człowiekowi dłonie
-Nie dla nagrody przykazania boże
+Nie dla nagrody przykazania Boże
 Bo każdy oddech w walce ma swój koniec
 Walka o duszę końca mieć nie może

@@ -24,49 +24,49 @@ I dekolt z czarnej żorżety. [a E7 a (E7)]
   (Na palcach krwawe lakiery), [a E7 F]
   Z wypiętym zachętą biustem [C0 C]
   Staje przy szosie E-4. [G7 C (G7 C G7)]
->Jakby to Owid ułożył, [f C]
->W sekretach płci obeznany - [a E]
+>Jakby to Owid ułożył [f C]
+>W sekretach płci obeznany – [a E]
 >Cudowne metamorfozy! [F C]
 >Nieustające przemiany! [d E a]
 
 @zw
 Długo nie czeka księgowa.
-Na widok jej staje mercedes,
+Na widok jej staje… mercedes,
 Maszyna mruczy zmysłowo.
-Za kierownicą - pan Edek.
+Za kierownicą – pan Edek.
   Założył garnitur w prążki,
   Zegarek ma od Cartiera,
-  Skarpetki zaś - na podwiązki:
+  Skarpetki zaś – na podwiązki:
   Tak się notariusz ubiera!
->Jakby to Owid ułożył,
->W sekretach płci obeznany -
+>Jakby to Owid ułożył
+>W sekretach płci obeznany –
 >Cudowne metamorfozy!
 >Nieustające przemiany!
 
 @zw
 Wstępna gra słów: Co? Za ile?
-Znaj grzesznych usług pokusę...
-Księgowa, paląc dunhille
+Znaj grzesznych usług pokusę…
+Księgowa, paląc dunhille,
 Odjeżdża w dal z notariuszem.
-  Noc będzie trwać aż do rana
-  By spełnić żądze ogromne -
+  Noc będzie trwać aż do rana,
+  By spełnić żądze ogromne –
   Ona w nim kocha Newmana,
   On w niej posiada Madonnę.
->Jakby to Owid ułożył,
->W sekretach płci obeznany -
+>Jakby to Owid ułożył
+>W sekretach płci obeznany –
 >Cudowne metamorfozy!
 >Nieustające przemiany!
 
 @zw
-On nie wie kto zacz - Don Juan,
-Ona - kim była Aspazja,
-Lecz każde miało - co snuło
+On nie wie, kto zacz – Don Juan,
+Ona – kim była Aspazja,
+Lecz każde miało – co snuło
 W swych najwstydliwszych fantazjach.
   Gdy już od siebie odpadli,
-  Świt płukał szosę E-4...
-  Przez chwilę byli w Arkadii
+  Świt płukał szosę E-4…
+  Przez chwilę byli w Arkadii;
   Co z sobą począć im teraz?
 >Jakby to Owid ułożył
 >W pułapkach płci obeznany:
 >Ulotne metamorfozy!
->I nie bezkarne przemiany!
+>I niebezkarne przemiany!

@@ -15,13 +15,13 @@ performers:
 #1
 Przyjechała bez prezentów, bez pieniędzy, [ C a G C ]
 Żeby poczuć się jak w domu – w kraju nędzy. [ C F G C7 ]
-Przyjechała tu po latach, do swej siostry i do brata, [ F C ]
-Którzy, jak słyszała, właśnie wyszli z twierdzy. [ a F G C ( C a G C ) ]
+Przyjechała tu, po latach, do swej siostry i do brata, [ F C ]
+Którzy jak słyszała, właśnie wyszli z twierdzy. [ a F G C ( C a G C ) ]
 
 @1
-Młodszy brat – Kompromis – nie wyglądał zdrowo
+Młodszy brat – Kompromis – nie wyglądał zdrowo,
 Jakby bał się, że ktoś złapie go za słowo.
-W czas sukcesów i kryzysu nikt nie lubi kompromisów
+W czas sukcesów i kryzysu nikt nie lubi kompromisów,
 Samo imię starczy, by zapłacić głową.
 
 @1
@@ -43,8 +43,8 @@ Starsza siostra sztorcowała swego brata,
 Tchórz bez karku, mięczak, lada co, brat swata!
 
 @1
-Dojść nie mogła więc po czyjej stronie racja
-Siostra-gość, uboga krewna – Demokracja.
+Dojść nie mogła więc, po czyjej stronie racja,
+Siostra-gość, uboga krewna – Demokracja,
 Więc się pocieszała, smutna, świadek w bezustannych kłótniach –
 Przecież jestem tutaj tylko na wakacjach!
 

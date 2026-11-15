@@ -16,13 +16,23 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/martwa_
 ---
 
 Stół, gdzie podaje się wolę, [a d]
-Nad którym króluje chęć; [G7 C]
-Martwa natura na stole - [a d]
+Na którym króluje chęć; [G7 C]
+Martwa Natura na stole – [a d]
+Cytryna, kołacz i ryby rtęć. [E7 a]
+
+Stół, gdzie podaje się wolę, [a d]
+Na którym króluje chęć; [G7 C]
+Martwa Natura na stole – [a d]
 Cytryna, kołacz i ryby rtęć. [E7 a]
 
 Sens życia w prostym symbolu: [C d]
 Czerń, zmysł, stół, kwas i błysk. [G7 C]
-Po prostu - życie na stole, [a d]
+Po prostu – życie na stole, [a d]
+Cytryna, kołacz i rybi pysk. [G7 C]
+
+Sens życia w prostym symbolu: [C d]
+Czerń, zmysł, stół, kwas i błysk. [G7 C]
+Po prostu – życie na stole, [a d]
 Cytryna, kołacz i rybi pysk. [G7 C]
 
 Jest także zamiar, co boli, [a d]

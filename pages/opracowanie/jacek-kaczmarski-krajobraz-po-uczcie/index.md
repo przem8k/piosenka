@@ -80,7 +80,7 @@ Pogrążyła go w chaos oraz stan zniszczenia;
 Pieczołowitość nasza na nic się nie przyda –
 Świadczymy z całą rzetelnością Naszego Imienia”.
 
-Nie ogryźli kości, nie dopili wina… [D G D G D]
+Nie ogryźli kości, nie dopili wina, [D G D G D]
 Resztek jedzenia szuka pies pod stołem… [D h G A D]
-Nie ogryźli kości, nie dopili wina… [D G D G D]
-Resztek jedzenia szuka pies pod stołem… [D h G A D]
+Nie ogryźli kości, nie dopili wina, [D G D G D]
+Resztek jedzenia szuka pies pod stołem. [D h G A D]

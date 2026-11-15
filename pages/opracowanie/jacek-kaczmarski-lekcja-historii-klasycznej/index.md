@@ -21,10 +21,10 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/lekcja_
 >Ave Caesar morituri te salutant! [E H E (A E H E)]
 
 @akordy
-Nad Europą twardy krok legionów grzmi
-Nieunikniony wróży koniec republiki
-Gniją wzgórza galijskie w pomieszanej krwi
-A Juliusz Cezar pisze swoje pamiętniki
+Nad Europą twardy krok legionów grzmi –
+Nieunikniony wróży koniec republiki;
+Gniją wzgórza galijskie w pomieszanej krwi,
+A Juliusz Cezar pisze swoje pamiętniki.
 
 @akordy
 >Gallia est omnis divisa in partes tres
@@ -33,10 +33,10 @@ A Juliusz Cezar pisze swoje pamiętniki
 >Ave Caesar morituri te salutant!
 
 @akordy
-Pozwól Cezarze gdy zdobędziemy cały świat
-Gwałcić rabować sycić wszelkie pożądania
-Proste prośby żołnierzy te same są od lat
-A Juliusz Cezar milcząc zabaw nie zabrania
+Pozwól, Cezarze – gdy zdobędziemy cały świat –
+Gwałcić, rabować, sycić wszelkie pożądania.
+Proste prośby żołnierzy te same są od lat,
+A Juliusz Cezar – milcząc – zabaw nie zabrania.
 
 @akordy
 >Gallia est omnis divisa in partes tres
@@ -45,9 +45,9 @@ A Juliusz Cezar milcząc zabaw nie zabrania
 >Ave Caesar morituri te salutant!
 
 @akordy
-Cywilizuje podbite narody nowy ład
-Rosną krzyże przy drogach od Renu do Nilu
-Skargą krzykiem i płaczem rozbrzmiewa cały świat
+Cywilizuje podbite narody nowy ład,
+Rosną krzyże przy drogach od Renu do Nilu,
+Skargą, krzykiem i płaczem rozbrzmiewa cały świat,
 A Juliusz Cezar ćwiczy lapidarność stylu!
 
 @akordy

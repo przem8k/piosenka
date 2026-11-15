@@ -18,10 +18,10 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/reporta
 #1
 Plan amerykański z matką oszalałą. [ A ]
 W przebitce grób dziecka. Odnalazła ciało. [ h ]
-Zbliżenie na czerep. Wściekły krzyk – To nie ten! [ fis ]
-Ten ma jasne włoski, mój syn był brunetem! [ F ]
-Zbliżenie na czerep. Wściekły krzyk – To nie ten! [ A ]
-Ten ma jasne włoski, mój syn był brunetem! [ h ]
+Zbliżenie na czerep. Wściekły krzyk: „To nie ten! [ fis ]
+Ten ma jasne włoski, mój syn był brunetem!”. [ F ]
+Zbliżenie na czerep. Wściekły krzyk: „To nie ten! [ A ]
+Ten ma jasne włoski, mój syn był brunetem!”. [ h ]
 Złorzeczy żołnierzom. Sceny ludzkiej męki [ fis ]
 Z ich dynamiką dziką lepiej kręcić z ręki. [ F d A ( A ) ]
 
@@ -38,7 +38,7 @@ Słuchają kaset z głosem sąsiada i wroga:
 „Właśnie rżnę ci żonę! O śmierć prosi Boga.
 Słuchają kaset z głosem sąsiada i wroga:
 „Właśnie rżnę ci żonę! O śmierć prosi Boga.
-Zabiję cię, bracie! Córkę ci zgwałciłem!”
+Zabiję cię, bracie! Córkę ci zgwałciłem!”.
 Słuchają bez końca. Wściekłość daje siłę.
 
 @2
@@ -53,7 +53,7 @@ Jedwabista lufa tuli się do dłoni. [ h ]
 – Ty z kamerą, ja z gnatem. Wojna jest dla żywych. [ fis ]
 Dopiero na wojnie człowiek jest szczęśliwy. [ F d A ( A ) ]
 Lekarz, muzykolog, chłop i nauczyciel: [ A ]
-„Zginąć za ojczyznę – to dopiero życie!” [ h ]
+„Zginąć za ojczyznę – to dopiero życie!”. [ h ]
 Pozują do ujęć oddziałem-rodziną; [ fis ]
 Trupy obojętnym nurtem rzeki płyną. [ F d A ( A ) ]
 

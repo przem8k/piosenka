@@ -23,12 +23,12 @@ Skrócony kurs geografii [c g c]
 @zw
 Śpi – kto spać może po drodze
 Trudnej jak lekcja historii
-Na wielkiej pustej podłodze
+Na wielkiej, pustej podłodze
 Egzamin wstępny katorgi
 
 @zw
 Najmłodszy w mapę jak w okno
-Patrzy sczytując litery
+Patrzy, sczytując litery
 Układa drogę powrotną
 Przez białe wiorsty papieru
 
@@ -39,13 +39,13 @@ Jak by tu ojcu pokazać
 Naganne ze sprawowania
 
 @zw
-Ten ściągnął buty tarł palce
+Ten ściągnął buty, tarł palce
 Ten nogą zdrętwiałą kołysze
 Ten jeszcze myśli o walce
 Ten Odyseję już pisze
 
 @zw
 Szynele o wyrok za duże
-Kij co z wilgoci poczerniał
-Książki tobołki podróżne
+Kij, co z wilgoci poczerniał
+Książki, tobołki podróżne
 Pod wielką mapą Imperium

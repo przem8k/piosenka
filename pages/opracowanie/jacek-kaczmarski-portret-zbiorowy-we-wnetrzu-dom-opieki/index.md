@@ -61,7 +61,7 @@ Wzywając kolejnego na zasłużone łono.
 
 Kapłanki dyscypliny bez odstępstw, bez wyjątków [e a h]
 Pilnują nas bez przerwy żółtymi powiekami, [e a h]
-Byśmy – nieobliczalni, skąpani jak we wrzątku [C G]
+Byśmy – nieobliczalni, skąpani jak we wrzątku, [C G]
 Znów – życiem nienażarci – nie stali się chłopcami [a e]
 I świata nie zaczęli urządzać od początku. [G D a h]
 I świata nie zaczęli urządzać od początku. [C G a C h e]

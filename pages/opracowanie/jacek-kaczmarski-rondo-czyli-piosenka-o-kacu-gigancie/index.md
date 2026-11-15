@@ -61,7 +61,7 @@ Trzecie trzysta się zbierałem na wysiłek,
 >Kiedy wstałem – puste było moje piekło;
 >Śladu gości, uczt i wrzawy już nie słychać…
 >Tysiąc lat minęło w końcu – jak się rzekło,
->Więc najwyższy czas wyskoczyć na kielicha.
+>Więc najwyższy czas – wyskoczyć na kielicha.
 
 @zwrotka1
 Tydzień z hakiem dobrze było mi na świecie,

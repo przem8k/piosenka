@@ -62,7 +62,7 @@ By, kiedy wierni proszą – Boże zbaw! –
 Móc Mu pokazać, co z mej zrobił twarzy.
 
 @zw
-Więc patrzą na mnie, chociaż kapłan grzmi
+Więc patrzą na mnie, chociaż kapłan grzmi,
 Żeśmy jedynie niepoprawnym stadem,
 Bom namacalnym przecież jest przykładem,
 Że jest nieprawdą ich chóralne – my!
@@ -79,7 +79,7 @@ Bom namacalnym przecież jest przykładem,
 Nie jestem sam. Odmiennych nas jest w bród!
 Wciąż otorbionych wstrętem i respektem.
 Bóg dał z kalectwem pokusę nam – i głód,
-By się związać w pokręconych sektę.
+By się zawiązać w pokręconych sektę.
 
 @zw
 Partia Potworków! Rząd zatrutej krwi!

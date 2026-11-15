@@ -21,43 +21,43 @@ Prężny i młody, prężny i młody [E7]
 Obrazoburczy, obrazoburczy [a]
 Z prawem do pytań, z prawem do pytań [A7] 
 Stawianych z mocą! Stawianych z mocą! [d]
-Kwieciem rozkwita! Kwieciem rozkwita! [H]
+Kwieciem zakwita! Kwieciem zakwita! [H]
 Rośnie owocem! [E7]
-Odżywczym żarem [a G]
+Ożywczym żarem [a G]
 Gorącej krwi! [C d]
-To niby my. To niby my [a]
-To niby my. To niby my [e]
-To niby my [a]
+To niby my. To niby my. [a]
+To niby my. To niby my. [e]
+To niby my. [a]
 
 #refren
 >Furda, chłam, blaga, pic bez granic! [a d H E7]
->My - to Niezarejestrowani! [F E7]
->My - to Niezarejestrowani! [F E7]
->My - to Niezarejestrowani! [F E7]
+>My – to Niezarejestrowani! [F E7]
+>My – to Niezarejestrowani! [F E7]
+>My – to Niezarejestrowani! [F E7]
 
 @zwrotka
 Prowokatorzy! Prowokatorzy! 
 Elementy! Elementy! 
 Szczeniackie pozy, szczeniackie pozy
-Z zachodu wzięte! Z zachodu wzięte!
+Z Zachodu wzięte! Z Zachodu wzięte!
 Bezmyślne akty, bezmyślne akty 
 Brzemienne w skutki! Brzemienne w skutki! 
 Manipulacji, manipulacji
 Pomiot i wódki! 
 Ręka z kamieniem 
-I żądza krwi 
-To niby my. To niby my
-To niby my. To niby my 
-To niby my
+I żądza krwi – 
+To niby my. To niby my.
+To niby my. To niby my. 
+To niby my.
 
 @refren
->Chwalcie, czy plujcie, partia z wami!
->My - to Niezarejestrowani!
->My - to Niezarejestrowani!
->My - to Niezarejestrowani!
+>Chwalcie czy plujcie, partia z wami!
+>My – to Niezarejestrowani!
+>My – to Niezarejestrowani!
+>My – to Niezarejestrowani!
 
 I przyszłość jest nam dobrze znana! [a d H E7]
 Zarejestrują nas! [F E7]
 Zarejestrują nas! [F E7]
 Zarejestrują nas! [F E7]
-- Organa [a]
+– Organa. [a]
