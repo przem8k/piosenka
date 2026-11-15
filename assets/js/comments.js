@@ -1,3 +1,11 @@
+// Disqus escapes these five characters in raw_message. Decoding them in one
+// pass restores the text exactly as typed (e.g. "&amp;quot;" -> "&quot;").
+var ENTITIES = { quot: '"', amp: "&", lt: "<", gt: ">", "#x27": "'" };
+
+function decodeEntities(s) {
+  return s.replace(/&(quot|amp|lt|gt|#x27);/g, function(m, name) { return ENTITIES[name]; });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   var max_length = 200;
   var commentDiv = document.getElementById("last-comments");
@@ -5,7 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (res.code === 0) {
       for (var i = 0, len = res.response.length; i < len; i++) {
         var post = res.response[i];
-        var content = post.raw_message.length < max_length ? post.raw_message : post.raw_message.substring(0, max_length) + " (...)";
+        // raw_message contains entities like &quot;. Decode before truncating.
+        var raw = decodeEntities(post.raw_message);
+        var content = raw.length < max_length ? raw : raw.substring(0, max_length) + " (...)";
         // Build DOM nodes instead of concatenating into innerHTML — Disqus
         // post fields come from public user input and may contain HTML.
         var wrapper = document.createElement("div");

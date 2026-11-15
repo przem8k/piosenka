@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 18 18"
+   version="1.1"
+   id="svg14">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs18" />
+  <!-- Chords to the right of the text. Letters: Ubuntu Bold, Ubuntu Font Licence 1.0. -->
+  <rect
+     x="0"
+     y="1.25"
+     width="10"
+     height="2"
+     id="rect2" />
+  <rect
+     x="0"
+     y="6"
+     width="10"
+     height="2"
+     id="rect4" />
+  <rect
+     x="0"
+     y="10.65"
+     width="10"
+     height="2"
+     id="rect6" />
+  <rect
+     x="0"
+     y="15.15"
+     width="7"
+     height="2"
+     id="rect8" />
+  <path
+     d="m 15.387069,5.8210586 q 0.24,0 0.456,0 0.216,-0.012 0.348,-0.036 v -1.224 q -0.108,-0.024 -0.3,-0.036 -0.192,-0.024 -0.348,-0.024 -0.228,0 -0.432,0.024 -0.204,0.024 -0.348,0.108 -0.156,0.072 -0.24,0.204 -0.084,0.12 -0.084,0.324 0,0.372 0.252,0.516 0.252,0.144 0.696,0.144 z m -0.132,-4.704 q 0.72,0 1.188,0.168 0.48,0.156 0.768,0.456 0.276,0.3 0.396,0.732 0.12,0.432 0.12,0.972 v 3.348 q -0.348,0.072 -0.96,0.168 -0.612,0.108 -1.488,0.108 -0.552,0 -0.996,-0.096 -0.456,-0.096 -0.78,-0.324 -0.324,-0.216 -0.492,-0.576 -0.168,-0.36 -0.168,-0.876 0,-0.492 0.192,-0.84 0.204,-0.348 0.54,-0.552 0.336,-0.204 0.768,-0.3 0.432,-0.084 0.888,-0.084 0.312,0 0.564,0.024 0.24,0.024 0.396,0.072 v -0.156 q 0,-0.408 -0.252,-0.66 -0.252,-0.24 -0.864,-0.24 -0.408,0 -0.816,0.06 -0.396,0.06 -0.684,0.168 l -0.204,-1.296 q 0.132,-0.048 0.348,-0.096 0.204,-0.048 0.456,-0.084 0.252,-0.036 0.528,-0.072 0.276,-0.024 0.552,-0.024 z"
+     id="path10"
+     style="stroke-width:1.2" />
+  <path
+     d="M 12.651702,17.283009 V 9.7950104 h 5.052 v 1.4159986 h -3.372 v 1.476 h 3 v 1.38 h -3 v 1.8 h 3.624 v 1.416 z"
+     id="path12"
+     style="stroke-width:1.2" />
+</svg>
