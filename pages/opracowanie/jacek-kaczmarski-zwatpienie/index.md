@@ -24,13 +24,13 @@ Kogo pogodzą, a komu dogodzą. [fis E7]
 @zw
 Na co się jeszcze obrażać w ojczyźnie
 Przeobrażonych i poobrażanych,
-Gdzie, jeśli ktoś cię przez przypadek liźnie –
+Gdzie jeśli ktoś cię przez przypadek liźnie –
 To, by otworzyć – nie zaleczyć – rany.
 
 #ref
 >Czego na Boga pragnąć móc nad Wisłą, [A d]
 >Co nie jest jeszcze marzeniem spragnionych? [A d]
->Fatamorgana – nazywa się „przyszłość” [C G]
+>Fatamorgana – nazywa się „przyszłość”, [C G]
 >Źródła w oazach – strute lub strzeżone. [F E7 A]
 
 @zw
@@ -40,7 +40,7 @@ Gdy się nienawiść brzydzi tym, co widzi
 I w bezsilności – nudzi, a nie dławi.
 
 @zw
-Na co się skarżyć wśród prawnuków Skargi,
+Z kim porozmawiać wśród prawnuków Skargi,
 Dla których słowa, nie myśl – to rozmowa?
 O chórze marzą roztrzepane wargi
 Internowane w gadających głowach.
@@ -52,7 +52,7 @@ Internowane w gadających głowach.
 >Trzeba udzielać hurtem rozgrzeszenia?
 
 @zw
-Komu dać miłość w cieniu Jasnej Góry
+Komu dać miłość w cieniu Jasnej Góry,
 Gdzie wszyscy tak ukochani boleśnie,
 Że blizny wiary są bliznami skóry,
 Próbując żywym przyswoić nieszczęście.
@@ -78,5 +78,11 @@ A dusza warczy, gdy widzi sztandary.
 @zw
 Jak żyć w tylekroć zdobytym Muzeum,
 Gdzie nieżyjący życia się trzymają,
-Wbrew rozsądkowi śpiewając „Te Deum”,
-By nas coś wreszcie obeszło w tym kraju.
+Wbrew rozsądkowi śpiewając Te Deum,
+By ich coś wreszcie obeszło w tym kraju.
+
+@ref
+>Jak żyć w tylekroć zdobytym Muzeum,
+>Gdzie nieżyjący życia się trzymają,
+>Wbrew rozsądkowi śpiewając Te Deum,
+>By ich coś wreszcie obeszło w tym kraju.

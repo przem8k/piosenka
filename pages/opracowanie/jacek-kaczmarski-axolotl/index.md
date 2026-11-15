@@ -54,8 +54,8 @@ jestem w zasadzie wszystkożerny,
 nieskłonny wskutek postu skonać;
 
 @ref
-> bez końca umiem trwać w bezruchu
-> wsparty łapkami na otchłaniach
+> bez końca umiem trwać w bezruchu,
+> wsparty łapkami na otchłaniach,
 > podobny do mitycznych duchów,
 > bez których niewart sen – posłania.
 
@@ -66,8 +66,8 @@ nieskłonny wskutek postu skonać;
 > I nie wiem tylko – czemu ginę.
 
 @ref
-> bez końca umiem trwać w bezruchu
-> wsparty łapkami na otchłaniach
+> bez końca umiem trwać w bezruchu,
+> wsparty łapkami na otchłaniach,
 > podobny do mitycznych duchów,
 > bez których niewart sen – posłania.
 

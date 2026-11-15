@@ -20,14 +20,14 @@ Jesteś stworzony tylko po to – [A D A]
 Na obłąkany mułu głód. [fis D A E A]
 
 #zwrotka2
-Nie będziesz miał spokoju dotąd [A D A]
+Nie będziesz miał spokoju dotąd, [A D A]
 Aż nie ustanie wszelki ruch. [fis D A H (E)]
 Potrafisz żyć tylko martwotą – [A D A]
 Stąd bezruch Twój – i nagły trucht. [fis D fis E A]
 
 #zwrotka3
 >Zgubi Cię panika, wiesz o tym, [fis Cis]
->Lecz nie wiesz jak pokonać ją. [h Cis]
+>Lecz nie wiesz, jak pokonać ją. [h Cis]
 >I na nic nie masz tak ochoty, [D A]
 >Jak na głębiny czarny ziąb. [fis h fis E A]
 
@@ -44,7 +44,7 @@ Siła się umie w słabym skryć.
 
 @zwrotka3
 >Przyjaciół nie masz, mieć nie będziesz,
->Z wrogów najgorszych – to Ty sam.
+>Z wrogów najgorszy – to Ty sam.
 >Niebezpieczeństwa szukasz wszędzie,
 >Tylko nie tam, gdzie jest – nie tam.
 
@@ -62,7 +62,7 @@ Nie wierzysz w nieśmiertelność dusz.
 
 @zwrotka3
 >Pancerz Cię chroni i zabija,
->Czując go myślisz – czuję świat.
+>Czując go, myślisz: „czuję świat”.
 >A świat tymczasem Cię omija;
 >Ubogi jest Twój sens i ład.
 
@@ -79,7 +79,7 @@ Nieznaną barwę mają głębie,
 A Ty znasz tylko mętny brud.
 
 @zwrotka3
->Kiedy już znajdziesz się we wrzątku
+>Kiedy już znajdziesz się we wrzątku,
 >Na mgnienie myśli mając czas –
 >To powiesz sobie: „Od początku
 >Tak chciałbym pożyć jeszcze raz!”.

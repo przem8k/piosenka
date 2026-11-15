@@ -40,7 +40,7 @@ Parę miłych zamieniam z kimś zdań. [e H7 e]
 >Przy mnie też stał taki jeden – całkiem blisko – [E a]
 >Dziką siłę mięśni czuło się pod skórą… [Fis7 H7]
 >Choć na dźwięk każdego słowa kłaniał mi się jak mógł nisko – [e a]
->Patrzył z góry. Patrzył z góry. [e H7 e]
+>Patrzył z góry. Patrzył na mnie z góry. [e H7 e]
 
 @zw1
 Północ! Śpiewy pijane, chór z pełnymi ustami,
