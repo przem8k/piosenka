@@ -41,7 +41,7 @@ Poza bezmiar człowieczej udręki.
 Więc rozważnie odważni, z grymasem cierpienia [E A H E]
 W pełen znaczeń zbroimy się spokój. [E A H]
 A jak brzmią w naszych ustach wymowne milczenia, [E A H E]
-A jak lśnią nam niechciane łzy w oku! [E A H E]
+A jak lśnią nam niechciane łzy w oku! [E A H]
 Wszak spełniły się nasze proroctwa i wróżby! [Gis cis A]
 Patrzcie! Żywi, a już między mity! [E A H E]
 Z wynajętych cokołów, w gwarze głupim i próżnym, [Gis cis A]
