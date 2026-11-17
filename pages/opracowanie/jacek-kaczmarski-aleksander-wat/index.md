@@ -16,71 +16,71 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/aleksan
 ---
 
 #zwrotka
-Zmęczony Piorun – wzrok Parsifala [a F G a F G]
-(Biały od żaru kazachskich pól) [C F C F C]
-Oświetlił owal Świętego Graala – [a F G a F G]
-Krwi Boskiej Kielich – Mądrość i Ból. [C F C F C]
+^Zmęczony ^Pio^run – ^wzrok Parsi^fa^la [a F G a F G]
+^(Biały od ^żaru ka^zach^skich ^pól) [C F C F C]
+^Oświetlił ^o^wal ^Świętego ^Graa^la – [a F G a F G]
+^Krwi Boskiej ^Kielich – ^Mąd^rość i ^Ból. [C F C F C]
 
 #refren
->Wiecznej się poddał wiedzy katordze [F C]
->Uczeń Merlina – tułaczy Żyd. [F G e a]
->I grał mu Bacha księżyc po drodze, [F C]
->I szły z nim wierne, więzienne wszy. [d E7 a E7 a]
->I grał mu Bacha księżyc po drodze, [F C]
->I szły z nim wierne, więzienne wszy. [d E7 a E7 a]
+>^Wiecznej się poddał ^wiedzy katordze [F C]
+>^Uczeń Mer^lina ^– tułaczy ^Żyd. [F G e a]
+>^I grał mu Bacha ^księżyc po drodze, [F C]
+>I ^szły z nim ^wierne, wię^zien^ne ^wszy. [d E7 a E7 a]
+>^I grał mu Bacha ^księżyc po drodze, [F C]
+>I ^szły z nim ^wierne, wię^zien^ne ^wszy. [d E7 a E7 a]
 
 @zwrotka
-Szesnastoletni kałmuk marksista
-Girlandy z uszu rzucał na stół,
-Doby odmierzał piwniczny wystrzał
-I chleb łamany z prowokiem na pół.
+^Szesnasto^let^ni ^kałmuk mar^ksis^ta
+^Girlandy z ^uszu ^rzucał ^na ^stół,
+^Doby od^mie^rzał ^piwniczny ^wy^strzał
+I ^chleb ła^many z pro^wokiem ^na ^pół.
 
 @refren
->I wszystkie śmierci były mu dane,
->Ciało drążyła mu każda z kul –
->Sól czasu sypał w otwartą ranę
->Apostoł wszystkich wiar świata – Ból.
->Sól czasu sypał w otwartą ranę
->Apostoł wszystkich wiar świata – Ból.
+>^I wszystkie śmierci ^były mu dane,
+>^Ciało drą^żyła mu ^każda z ^kul –
+>^Sól czasu sypał w ot^wartą ranę
+>A^postoł ^wszystkich wiar ^świa^ta – ^Ból.
+>^Sól czasu sypał w ot^wartą ranę
+>A^postoł ^wszystkich wiar ^świa^ta – ^Ból.
 
 @zwrotka
-Za kalejdoskop białych salonów,
-Za romans z Heglem w Belle époque –
-Knuty bydlęcych na Wschód wagonów,
-Pod Krzyżem z Chleba ciężki krok.
+^Za kalej^dos^kop ^białych sa^lo^nów,
+^Za romans z ^Heglem w ^Belle ^é^poque –
+^Knuty byd^lę^cych na ^Wschód wa^go^nów,
+^Pod Krzyżem z ^Chleba ^cięż^ki ^krok.
 
 @refren
->Z czaszek przyjaciół kapie narkotyk
->Sławy, szaleństwa, strachu i zdrad
->Przez mały, okrągły Historii dotyk,
->Który zaciera za sobą ślad.
->Przez mały, okrągły Historii dotyk,
->Który zaciera za sobą ślad.
+>Z ^czaszek przyjaciół ^kapie narkotyk
+>^Sławy, sza^leństwa, ^strachu i ^zdrad
+>Przez ^mały, okrągły His^torii dotyk,
+>^Który za^ciera za ^so^bą ^ślad.
+>Przez ^mały, okrągły His^torii dotyk,
+>Któ^ry za^ciera za ^so^bą ^ślad.
 
 @zwrotka
-Ciała przyjaciół – warstewka ziemi,
-Pod którą mrowi się trupi ul.
-I śni się wielki Sen o Kamieniu,
-I zrywa ze snu prawdziwy Ból.
+^Ciała przy^ja^ciół – ^warstewka ^zie^mi,
+^Pod którą ^mrowi się ^tru^pi ^ul.
+I ^śni się ^wiel^ki ^Sen o Ka^mie^niu,
+I ^zrywa ^ze snu ^praw^dziwy ^Ból.
 
 @refren
->Miłość. Tak, Miłość. Sztuka. Tak, Sztuka,
->Lecz Ból, co na pół przecina twarz…
->Nikt już Świętego Graala nie szuka
->I nikt nie broni Wyniosłych Baszt.
->Nikt już Świętego Graala nie szuka
->I nikt nie broni Wyniosłych Baszt.
+>^Miłość. Tak, Miłość. ^Sztuka. Tak, Sztuka,
+>Lecz ^Ból, co na ^pół prze^cina ^twarz…
+>^Nikt już Świętego ^Graala nie szuka
+>I ^nikt nie ^broni Wy^nios^łych ^Baszt.
+>^Nikt już Świętego ^Graala nie szuka
+>I ^nikt nie ^broni Wy^nios^łych ^Baszt.
 
 @zwrotka
-Woń cytrusowa słońc Kalifornii,
-W drgających iskrach paryska noc.
-Moi umarli milczą pokornie,
-Na ziemi Tarcza moja – mój koc.
+^Woń cytru^so^wa ^słońc Kali^for^nii,
+W ^drgających ^iskrach pa^rys^ka ^noc.
+^Moi u^mar^li ^milczą po^kor^nie,
+^Na ziemi ^Tarcza ^mo^ja – mój ^koc.
 
 @refren
->Zmęczony Piorun – wzrok Parsifala
->(Światło gasnące z dwóch białych kul)
->Ogląda owal Świętego Graala –
->I Ból zamienia się w Moc.
->Ogląda owal Świętego Graala –
->I w Moc zamienia się Ból. [d E7 a]
+>^Zmęczony Piorun – ^wzrok Parsifala
+>^(Światło gas^nące z ^dwóch białych ^kul)
+>^Ogląda owal ^Świętego Graala –
+>I ^Ból za^mienia się w ^Moc. [d E7 a]
+>^Ogląda owal ^Świętego Graala –
+>I w ^Moc za^mienia się ^Ból. [d E7 a]

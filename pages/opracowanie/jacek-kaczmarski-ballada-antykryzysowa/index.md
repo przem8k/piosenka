@@ -13,79 +13,79 @@ performers:
 ---
 
 #zwrotka
-Mnie żaden kryzys nie dotyczy – [C]
-Sprzedaję piwo na ulicy. [a]
-Mam klientelę – całe miasto, [F]
-Sprzedaję piwo przed trzynastą. [E]
+^Mnie żaden kryzys nie dotyczy – [C]
+^Sprzedaję piwo na ulicy. [a]
+^Mam klientelę – całe miasto, [F]
+^Sprzedaję piwo przed trzynastą. [E]
 
 @zwrotka
-I nikt nie może zrobić nic mi,
-W dwa dni wyborczej prohibicji
-Strzeliłem tygodniową kasę,
-Bo ludzie są na browar łase.
+^I nikt nie może zrobić nic mi,
+W dwa ^dni wyborczej prohibicji
+^Strzeliłem tygodniową kasę,
+^Bo ludzie są na browar łase.
 
 #refren
->Każdemu wolno wypić piwko [G]
->W jasne wiosenne przedpołudnie, [a]
->Gdy trzepie człeka pod przykrywką [F]
->I język klei się paskudnie. [F E a]
+>^Każdemu wolno wypić piwko [G]
+>^W jasne wiosenne przedpołudnie, [a]
+>Gdy ^trzepie człeka pod przykrywką [F]
+>I ^język ^klei się pas^kudnie. [F E a]
 
 @zwrotka
-Na tym polega wolny rynek:
-Róg Marszałkowskiej i wyszynek.
-Kto chce – kupuje, bo go suszy.
-Konsumpcja w miejscu. Kto mnie ruszy?
+^Na tym polega wolny rynek:
+^Róg Marszałkowskiej i wyszynek.
+Kto ^chce – kupuje, bo go suszy.
+Kon^sumpcja w miejscu. Kto mnie ruszy?
 
 @zwrotka
-Ja nieuczony, lecz wśród gości
-Miewałem już znakomitości.
-Zwłaszcza sportowcy i aktorzy –
-Widziałem ich w telewizorze.
+^Ja nieuczony, lecz wśród gości
+^Miewałem już znakomitości.
+^Zwłaszcza sportowcy i aktorzy –
+^Widziałem ich w telewizorze.
 
 @refren
->Każdemu wolno wypić piwko
->W jasne wiosenne przedpołudnie,
->Gdy trzepie człeka pod przykrywką
->I język klei się paskudnie.
+>^Każdemu wolno wypić piwko
+>W ^jasne wiosenne przedpołudnie,
+>Gdy ^trzepie człeka pod przykrywką
+>I ^język ^klei się pas^kudnie.
 
 @zwrotka
-Mówią – to piwko to na sprzedaż?
-Jak spragnionemu ulgi nie dasz?
-Pięć kafli, kapsel, ciepły murek,
-Rozmowa, browar i ogórek.
+^Mówią – to piwko to na sprzedaż?
+^Jak spragnionemu ulgi nie dasz?
+Pięć ^kafli, kapsel, ciepły murek,
+^Rozmowa, browar i ogórek.
 
 @zwrotka
-Czasem się gorszy jakieś wapno,
-Gdy chłopcy ostrym słowem chlapną.
-Częściej powstaniec spyta chytry –
-Nie masz pan aby gdzie pół litry?
+^Czasem się gorszy jakieś wapno,
+Gdy ^chłopcy ostrym słowem chlapną.
+^Częściej powstaniec spyta chytry –
+^Nie masz pan aby gdzie pół litry?
 
 @refren
->Każdemu wolno wypić piwko
->W jasne wiosenne przedpołudnie,
->Gdy trzepie człeka pod przykrywką
->I język klei się paskudnie.
+>^Każdemu wolno wypić piwko
+>W ^jasne wiosenne przedpołudnie,
+>Gdy ^trzepie człeka pod przykrywką
+>I ^język ^klei się pas^kudnie.
 
 @zwrotka
-W tym wieku – mówię – o tej porze?
-Dopiero ranne wstają zorze.
-Lecz nie bój nic, znajdziemy leki.
-Czekaj pan w bramie od apteki.
+W tym ^wieku – mówię – o tej porze?
+^Dopiero ranne wstają zorze.
+Lecz ^nie bój nic, znajdziemy leki.
+^Czekaj pan w bramie od apteki.
 
 @zwrotka
-Geszeft od rana idzie spory.
-Nie skapnie milion – jestem chory.
-Skapnie – na nocną starczy akcję –
-Więc cenię naszą demokrację.
+^Geszeft od rana idzie spory.
+Nie ^skapnie milion – jestem chory.
+^Skapnie – na nocną starczy akcję –
+^Więc cenię naszą demokrację.
 
 @refren
->Każdemu wolno wypić piwko
->W jasne wiosenne przedpołudnie,
->Gdy trzepie człeka pod przykrywką
->I język klei się paskudnie.
+>^Każdemu wolno wypić piwko
+>W ^jasne wiosenne przedpołudnie,
+>Gdy ^trzepie człeka pod przykrywką
+>I ^język ^klei się pas^kudnie.
 
 @refren
->Każdemu wolno wypić piwko
->W jasne wiosenne przedpołudnie,
->Gdy trzepie człeka pod przykrywką [F E]
->I język klei się paskudnie. [E a]
+>^Każdemu wolno wypić piwko
+>W ^jasne wiosenne przedpołudnie,
+>Gdy ^trzepie człeka pod przy^krywką [F E]
+>I ^język klei się pas^kudnie. [E a]
