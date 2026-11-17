@@ -15,61 +15,61 @@ score1_thumb: https://storage.googleapis.com/piosenka-media/media/scores/blues_o
 ---
 
 #1
-Jestem lump. Zgaś to światło. Jaki diabeł cię przysłał? [ C G7 ]
-Muszę oczy otworzyć, a już spałem jak dziecko. [ G7 a ]
-Dokąd jadę? Przed siebie. Nie widziałeś Odyssa? [ f C ]
-Jeśli chcesz, to powtórzę ci to samo po grecku. [ G7 C ( f C ) ]
+Jestem ^lump. Zgaś to światło. Jaki diabeł cię ^przysłał? [ C G7 ]
+^Muszę oczy otworzyć, a już spałem jak ^dziecko. [ G7 a ]
+Dokąd ^jadę? Przed siebie. Nie widziałeś O^dyssa? [ f C ]
+Jeśli ^chcesz, to powtórzę ci to samo po ^grecku. [ G7 C ( f C ) ]
 
 #2
->Pu pao brosta mu den ton ides ton Odyssea. [ G7 C ]
+>Pu pa^o brosta mu den ton ides ton Odysse^a. [ G7 C ]
 
 #3
-Dziwisz się, że tak mówię? W środku nocy mnie budzisz [ C7 f ]
-Z walizami, z gitarą… Kto ty jesteś? Segovia? [ B7 Dis7+ ]
-Myślisz sobie – włóczęga. Jestem lump, mówią ludzie. [ gis Dis ]
-Co mnie ludzie obchodzą. Głowę mam jak na głowniach. [ F0 G7 c ]
+Dziwisz ^się, że tak mówię? W środku nocy mnie ^budzisz [ C7 f ]
+Z wali^zami, z gitarą… Kto ty jesteś? Se^govia? [ B7 Dis7+ ]
+Myślisz ^sobie – włóczęga. Jestem lump, mówią ^ludzie. [ gis Dis ]
+Co mnie ^ludzie obchodzą. Głowę ^mam jak na ^głowniach. [ F0 G7 c ]
 
 @3
-Czyżby myśli bolały? Ja już piję niedużo.
-Jeszcze trochę zostało. Nie częstuję, nie starczy.
-W końcu jestem w podróży. Te podróże mi służą.
-Znają mnie boczne tory. Jak każdego – na tarczy.
+Czyżby ^myśli bolały? Ja już piję nie^dużo.
+Jeszcze ^trochę zostało. Nie częstuję, nie ^starczy.
+W końcu ^jestem w podróży. Te podróże mi ^służą.
+Znają ^mnie boczne tory. Jak każ^dego – na ^tarczy.
 
 #4
-Nie patrz w bok, patrz się na mnie. Widzę, że ci nieswojo. [ C G7 ]
-Ale wszedłeś, to siedź tu. Nie wypada inaczej. [ G7 a ]
-Nie bój się, ja nie biję. Dzieci mnie się nie boją. [ f C ]
-Tylko matki się brzydzą. I nie dziwię się raczej… [ G7 C ]
+Nie patrz w ^bok, patrz się na mnie. Widzę, że ci nie^swojo. [ C G7 ]
+Ale ^wszedłeś, to siedź tu. Nie wypada i^naczej. [ G7 a ]
+^Nie bój się, ja nie biję. Dzieci mnie się nie ^boją. [ f C ]
+Tylko ^matki się brzydzą. I nie dziwię się ^raczej… [ G7 C ]
 
 @3
-Więc chcesz zostać Segovią? Życzę miłej katorgi.
-Dziewięćdziesiąt lat z ręki nie wypuszczał gitary.
-Piszesz wiersze? A po co? Czy nie starczy nam Norwid?
-Kamizelka niewąska. Chwytasz życie za bary.
+Więc chcesz ^zostać Segovią? Życzę miłej ka^torgi.
+Dziewięć^dziesiąt lat z ręki nie wypuszczał gi^tary.
+Piszesz ^wiersze? A po co? Czy nie starczy nam ^Norwid?
+Kami^zelka niewąska. Chwytasz ^życie za ^bary.
 
 @3
-Wszystkie miejsca zajęte! To jest przedział służbowy.
-Gdzie się tłuczesz po nocy z zasmarkanym bachorem?!
-Tutaj ja z Telemachem mamy ważne rozmowy.
-Zawsze znajdzie się ktoś, kto się znajdzie nie w porę.
+Wszystkie ^miejsca zajęte! To jest przedział służ^bowy.
+Gdzie się ^tłuczesz po nocy z zasmarkanym ba^chorem?!
+Tutaj ^ja z Telemachem mamy ważne roz^mowy.
+Zawsze ^znajdzie się ktoś, kto się ^znajdzie nie w ^porę.
 
 @4
-Ja się myję, a cuchnę. Trudno myć się kikutem.
-Tramwaj. Wiele lat temu. Zimą myć się niezdrowo.
-Po co ja ci to mówię? Słowa, dźwięki wyplute.
-Złóż poemat, Norwidzie. Zagraj Requiem, Segovio.
+Ja się ^myję, a cuchnę. Trudno myć się ki^kutem.
+^Tramwaj. Wiele lat temu. Zimą myć się nie^zdrowo.
+^Po co ja ci to mówię? Słowa, dźwięki wy^plute.
+Złóż po^emat, Norwidzie. Zagraj ^Requiem, Segovio.
 
 @3
-Miałem dłoń, nie mam dłoni. Miałem duszę – już nie mam.
-Czysta potrzeb redukcja. Co niezbędne – to w grobie.
-Ale o mnie nie mówmy. Nieciekawy to temat.
-Ty masz wszystko przed sobą. Opowiadaj o sobie.
+Miałem ^dłoń, nie mam dłoni. Miałem duszę – już ^nie mam.
+Czysta ^potrzeb redukcja. Co niezbędne – to w ^grobie.
+Ale ^o mnie nie mówmy. Nieciekawy to ^temat.
+Ty masz ^wszystko przed sobą. Opo^wiadaj o ^sobie.
 
 @1
-Zdaje się, że przysnąłem. Gdzie jesteśmy? Znów tutaj.
-Musi tu być sklep nocny. Pójdę, sprawdzę i wracam.
-Dajże spokój, nie trzeba. Na co mi ta waluta?
-O – niebieski Moniuszko… Dobra, oddam w Itace…
+Zdaje ^się, że przysnąłem. Gdzie jesteśmy? Znów ^tutaj.
+^Musi tu być sklep nocny. Pójdę, sprawdzę i ^wracam.
+Dajże ^spokój, nie trzeba. Na co mi ta wa^luta?
+O – nie^bieski Moniuszko… Dobra, oddam w I^tace…
 
 @2
-Stasu doso to eos stin Itaka. [ G7 C ]
+Stasu ^doso to eos stin Ita^ka. [ G7 C ]
